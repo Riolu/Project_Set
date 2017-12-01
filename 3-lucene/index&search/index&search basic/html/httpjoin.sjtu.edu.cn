@@ -1,0 +1,1592 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	上海交通大学人才招聘网
+</title><link href="content/css.css" rel="stylesheet" type="text/css" /><link type="text/css" href="/jQuery UI/themes/smoothness/jquery.ui.all.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="js/sAlert.js" language="javascript" charset="gb2312"></script>
+
+    <script type="text/javascript" src="/jQuery UI/jquery-1.4.2.min.js"></script>
+
+    <script type="text/javascript" src="/jQuery UI/ui/jquery.ui.widget.min.js"></script>
+
+    <script type="text/javascript" src="/jQuery UI/ui/jquery.ui.tabs.min.js"></script>
+
+    <style type="text/css">
+        .code
+        {
+            background-image: url(code.jpg);
+            font-family: Arial;
+            font-style: italic;
+            color: Red;
+            border: 0;
+            padding: 2px 3px;
+            letter-spacing: 3px;
+            font-weight: bolder;
+        }
+        .unchanged
+        {
+            border: 0;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var code; //在全局 定义验证码   
+        function createCode() {
+            code = "";
+            var codeLength = 4; //验证码的长度
+            var checkCode = document.getElementById("checkCode");
+            var hiddenYZM = document.getElementById("hiddenYZM");
+            var selectChar = new Array(9, 2, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'J', 'K', 'K', 'M', 'N', 'M', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //所有候选组成验证码的字符，当然也可以用中文的   
+
+
+            for (var i = 0; i < codeLength; i++) {
+
+
+                var charIndex = Math.floor(Math.random() * 36);
+                code += selectChar[charIndex];
+
+
+            }
+            //       alert(code);   
+            if (checkCode) {
+                checkCode.className = "code";
+                checkCode.value = code;
+                hiddenYZM.value = code;
+            }
+
+        }
+
+        function showNewWindows() {
+            var url = "/Client/ChangePwd.aspx";
+            window.open(url, "ModalChild", "dependent=yes,Top=150,Left=300,Width=600,Height=320,status=no,help=no,menubar=no,resizable:yes,location=no,toolbar=no,scroll=yes");
+        }
+
+
+        $(function() {
+            $("#tabs").tabs();
+            $("#tabs_top_1").tabs();
+        });
+        
+        
+         
+    
+
+    </script>
+
+    <style type="text/css">
+        .style1
+        {
+            height: 25px;
+            width: 68px;
+        }
+        .style2
+        {
+            width: 48px;
+        }
+    </style>
+</head>
+<body onload="createCode()">
+    <form name="form1" method="post" action="default.aspx" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'btnLogin')" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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oi3kv6Hmga/lhoXlrrnliIbmnpDmioDmnK/lm73lrrblt6XnqIvlrp7pqozlrqQk5pyq5p2l5aqS5L2T572R57uc5Y2P5ZCM5Yib5paw5Lit5b+DG+adkOaWmeenkeWtpuS4juW3peeoi+WtpumZojPmnZDmlpnliJvmlrDnoJTnqbbmiYDvvIjlubPph47mnZDmlpnliJvmlrDnoJTnqbbvvIkJ5pWw5a2m57O7EueJqeeQhuS4juWkqeaWh+ezuxZJRlNB5Y2P5ZCM5Yib5paw5Lit5b+DGOeUn+WRveenkeWtpuaKgOacr+WtpumZohjnlJ/nianljLvlrablt6XnqIvlrabpmaIM5Lq65paH5a2m6ZmiIeenkeWtpuWPsuS4juenkeWtpuaWh+WMlueglOeptumZohLljJblrabljJblt6XlrabpmaIb5a6J5rOw57uP5rWO5LiO566h55CG5a2m6ZmiG+WbvemZheS4juWFrOWFseS6i+WKoeWtpumZog/lpJblm73or63lrabpmaIV5Yac5Lia5LiO55Sf54mp5a2m6ZmiGOaWsOWGnOadkeWPkeWxleeglOeptumZohvnjq/looPnp5HlrabkuI7lt6XnqIvlrabpmaIJ6I2v5a2m6ZmiD+WHr+WOn+azleWtpumZohXlqpLkvZPkuI7orr7orqHlrabpmaIq5aqS5L2T5paH5YyW5LiO56S+5Lya5Y+R5bGV6auY562J56CU56m26ZmiEue7p+e7reaVmeiCsuWtpumZohXpqazlhYvmgJ3kuLvkuYnlrabpmaIM6Ie06L+c5a2m6ZmiCeS9k+iCsuezuw/nu7zlkIjkvZPogrLppoYh5be06buO6auY56eR5Y2T6LaK5bel56iL5biI5a2m6ZmiNOS4iua1t+S6pOWkpy3ljZfliqDlt57lpKflrabmlofljJbliJvmhI/kuqfkuJrlrabpmaI/5p2Q5paZ56eR5a2m5LiO5bel56iL5a2m6Zmi5aGR5oCn5oiQ5b2i5oqA5pyv5LiO6KOF5aSH56CU56m26ZmiEua1t+WkluaVmeiCsuWtpumZognlm77kuabppoYe5b6u57qz57Gz56eR5a2m5oqA5pyv56CU56m26ZmiFemrmOetieaVmeiCsueglOeptumZohXkuK3nvo7nianmtYHnoJTnqbbpmaIY5Lit5qyn5Zu96ZmF5bel5ZWG5a2m6ZmiEuWbvemZheaVmeiCsuWtpumZohXlr4bopb/moLnogZTlkIjlrabpmaIY5LiK5rW36auY57qn6YeR6J6N5a2m6ZmiDOWIm+S4muWtpumZohLnvZHnu5zkv6Hmga/kuK3lv4MS5pWZ6IKy5oqA5pyv5Lit5b+DCeaho+ahiOmmhhLliIbmnpDmtYvor5XkuK3lv4MJ5Ye654mI56S+GOS6pOWkp+esrOS6jOmZhOWxnuS4reWtphLlt6XnqIvorq3nu4PkuK3lv4MM57qz57Gz5Lit5b+DL+iIquepuuiIquWkqeWtpumZoijnqbrlpKnnp5HlrabmioDmnK/noJTnqbbpmaIpG+ezu+e7n+eUn+eJqeWMu+WtpueglOeptumZohXkurrmlofoibrmnK/noJTnqbbpmaIb5YWI6L+b5Lqn5Lia5oqA5pyv56CU56m26ZmiFeiHqueEtuenkeWtpueglOeptumZoiHmtbfmtIvmsLTkuIvlt6XnqIvnp5HlrabnoJTnqbbpmaIS6ZKx5a2m5qOu5Zu+5Lmm6aaGEuaVmeWtpuWPkeWxleS4reW/gw/mhZXor77noJTnqbbpmaIY5pWw5o2u56eR5a2m56CU56m25Lit5b+DD+WFmuWnlOWKnuWFrOWupBXlhZrjgIHmoKHlj7LnoJTnqbblrqQP5YWa5aeU57uE57uH6YOoBue6quWnlA/lhZrlp5TlrqPkvKDpg6gS5b2x6KeG5paH5YyW5Lit5b+DLOWtpuaMh+WnlOOAgeWbouWnlCjlkKvlrabnlJ/lpITjgIHkurrmrabpg6gpGOeUn+a0u+WbreWMuueuoeeQhuS4reW/gw/lt6XkvJrlpoflp5TkvJoY5pS56Z2p5LiO5Y+R5bGV56CU56m25a6kD+WFmuWnlOe7n+aImOmDqBvkv6Hmga/lronlhajnrqHnkIblip7lhazlrqQP5qCh6ZW/5Yqe5YWs5a6kHuagoemVv+WKnuWFrOWupOazleW+i+S6i+WKoeWupCTmoKHplb/lip7lhazlrqTljLvlt6Xnu5PlkIjlip7lhazlrqQe5qCh6ZW/5Yqe5YWs5a6k6am75Lqs5Yqe5LqL5aSEIeW+kOaxh+agoeWMuue7vOWQiOeuoeeQhuWKnuWF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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=YDWcTRwPfTzbY56lEJpwPYNlZqXRIPH86PnrYSAI_9hG2wIWXEsWRI_FPKselC_DSDlMGAWWwqX0lVTQuLG9DP_jXGM1&amp;t=635589723467565191" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=4IUaPDKNVK4wF6aXlhB9GAlMtuHDkL_GO3uTe7167frNx3CTV3lwR7XYRpjZ7yJa8UPU92y7JQbD7ov-20GpAQ6MHOI1&amp;t=635589723467565191" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWiAEClNvU0wwC7vDL9wECsriekwwCpZK+tQcCw9XbhwMCruOJtQ0CgtyHhgwChsWdsg8CyaH+0AkCqLnU1AEC7ZnJjA0CnYrtkgYC3qqahQkC9oW5nAUCnYrpkQYCnYrVkAYC/5LyzAICrsuw6AsCnYrdlgYCrNak1QQC5uTgoQgCy/+OzgICrNas2wQCnYqBqwYCy//K3gICnYqNqgYC/5K+qQUC4o3tkgYC4o3pkQYC4o3VkAYC4o3RlwYC4o3dlgYC4o2RhAwC4o3ZlQYC4o3FlAYC4o2NqgYCw4rhkwYCpOWMuAgCw4rpkQYCw4rVkAYCw4rRlwYCpOX4owgCpOXU2AECw4rZlQYCw4rFlAYCpOWotwgCheX0vggCoIrVkAYCoIrRlwYCoIrdlgYCheX4owgC7v+GyAICoIrZlQYCoIrFlAYCoIqBqwYCoIqNqgYC6uWMuAgCz/yqxQIC0NfI0wQCta7W+A4Cnrn0hQMCxOqxvw8CgYvtkgYC6uWIvwgC0Ne00QQCnrnwhAMCxOq9vg8C+dD8+AQCwquahQkCgYvpkQYC6uX0vggCz/ySywIC0New0AQCta7e/g4Cy+WMuAgCy+XU8g4CrPyqxQICsdfI0wQCmq7W+A4Cl66+sQ8C/7j0hQMC/7ikkAYCwJOSkgUCpeqxvw8C3tDw+QQCo6uehgkCqOKMuAgCqOLArwYCqOKo4AQCqOKEnQwCqOLwugUCjf2qxQICltTI0wQC+67W+A4C+67yoAUC3Ln0hQMC3LngoggC3Lnc3wECoZCSkgUCiuuxvw8Ciuut1AQCv9Hw+QQCv9HslgwCgKiehgkCx4vtkgYCqOKIvwgCjf2WxAICltS00QQCltSgjgwC+67S/w4Ciuu9vg8Cv9H8+AQCx4vpkQYCqOL0vggCjf2SywIC+67e/g4C3Ln8iwMCoZCakAUCiuu5vQ8Cv9H4/wQCjf223AICtYzhkwYCs7r0hQMCjLr0hQMCmozhkwYCjMHphAUCg66D6QkCgq6D6QkCga6D6QkCgK6D6QkChcHphAUCi67D6gkCiK7D6gkCia7D6gkCpZ/z7goCwM2GuQdU6iJUs8R40GjoKGwZR1rHOqTbkw==" />
+</div>
+    
+
+<link type="text/css" rel="Stylesheet" href="../content/css.css" />
+
+<script type="text/javascript" language="javascript">
+    function rightclick(){
+    
+    parent.document.frames['main'].document.location="WebMain.aspx?name=1";
+    }
+    
+    
+function pload()
+{
+	document.getElementById("txKey").value = "请输入关键字";
+
+}
+function otpwdclick()
+{
+	document.getElementById("out").visiable=false;
+}
+
+function imgClose(oImg) {
+    var o = document.getElementById("picDiv");
+    if (o.style.display == "none") {
+        o.style.display = "block";
+        oImg.src = "/images/delete.gif";
+    }
+    else {
+        o.style.display = "none";
+        oImg.src = "/images/select.gif";
+    }
+}
+   
+function AddFavorite(sURL, sTitle)
+{
+    try
+    {
+        window.external.addFavorite(sURL, sTitle);
+    }
+    catch (e)
+    {
+        try
+        {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        }
+        catch (e)
+        {
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+function SetHome(obj,vrl){
+        try{
+                obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+                if(window.netscape) {
+                        try {
+                                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                        }
+                        catch (e) {
+                                alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                        }
+                        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                        prefs.setCharPref('browser.startup.homepage',vrl);
+                 }
+        }
+}
+</script>
+
+<!--20100121 add by pyq-->
+
+<div id="menu">
+    <ul class="nav">
+        <li><a href="../Default.aspx">首页</a></li>
+    
+    
+    
+        <li ><a href="../Browse.aspx?name=1">特别岗位招聘</a></li>
+        <li><a href="../Browse.aspx?name=2">教师及科研人员</a></li>
+        <li><a href="../ZPSpecialList.aspx?name=1">博士后</a></li>
+        <li><a href="../Browse.aspx?name=4">教学辅助人员</a></li>
+        <li><a href="../Browse.aspx?name=3">管理人员</a></li>
+        <li><a href="../Browse.aspx?name=5">专职科研、文员</a></li>
+        <li><a href="../ZPSpecialList.aspx?name=3">其他人员</a></li>
+        <li><a href="../ZPSpecialList.aspx?name=2">附属单位</a></li>
+        <li><a href="../Browse.aspx?name=6">幼儿教师和工勤人员</a></li>
+    
+        <li style="margin-top:4px ;background: right top no-repeat;"> <img src="/images/delete.gif"  onclick="imgClose(this)" style="cursor:pointer;"/></li>
+    </ul>
+</div>
+
+<div class="top" id ="picDiv">
+    <div class="top_right">
+        <a href="#"  style=" color: #A3322D;" onclick="parent.document.location='http://www.sjtu.edu.cn';">交大主页</a>
+        <a href="#" style=" color: #A3322D;" onclick="parent.document.location='http://hr.sjtu.edu.cn/';">人事主页</a>
+         <a  style=" color: #A3322D;" href="http://rsc2.sjtu.edu.cn/">管理入口</a>
+    </div>
+</div>
+<!--20100121 end-->
+
+    
+<link type="text/css" rel="Stylesheet" href="../content/css.css" />
+
+
+    <!--头部结束-->
+    <!--20100121 add by pyq-->
+    <div id="container">
+        <div id="left">
+            <div class="border">
+                <div class="title">
+                    <div class="span">
+                        最新招聘<img src="images/new.jpg" width="26" height="10" /></div>
+                    
+                </div>
+                <div class="content">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td valign="top">
+                                
+                                        <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                            <tr>
+                                                <td width="12" class="arrow">
+                                                </td>
+                                                <td width="355">
+                                                    <div style="width: 338px;" class="hidden">
+                                                        <a target="_blank" href="Admin/QsPreview.aspx?qsid=9215dbef2a334133ba939e669bf76c94" title='上海交大-巴黎高科卓越工程师学院办公室招聘启事'>
+                                                            上海交大-巴黎高科卓越工程师学院办公室招聘启事
+                                                        </a>
+                                                        <div style="width: 228px;" class="hidden">
+                                                </td>
+                                                <td>
+                                                    巴黎高科卓越工程师学院</a>
+                                                </td>
+                                                <td align="right">
+                                                    2015.10.28-
+                                                    2015.11.28
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    
+                                        <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                            <tr>
+                                                <td width="12" class="arrow">
+                                                </td>
+                                                <td width="355">
+                                                    <div style="width: 338px;" class="hidden">
+                                                        <a target="_blank" href="Admin/QsPreview.aspx?qsid=42fda9b8df1d42ec936ccd6cfd7dc20b" title='上海交通大学电院智能探测重点实验室招聘工程师'>
+                                                            上海交通大学电院智能探测重点实验室招聘工程师
+                                                        </a>
+                                                        <div style="width: 228px;" class="hidden">
+                                                </td>
+                                                <td>
+                                                    电子信息与电气工程学院</a>
+                                                </td>
+                                                <td align="right">
+                                                    2015.10.27-
+                                                    2015.11.27
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    
+                                        <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                            <tr>
+                                                <td width="12" class="arrow">
+                                                </td>
+                                                <td width="355">
+                                                    <div style="width: 338px;" class="hidden">
+                                                        <a target="_blank" href="Admin/QsPreview.aspx?qsid=58b15ba8f22f41b0a176b942ba621550" title='材料科学与工程学院招聘专职科研人员'>
+                                                            材料科学与工程学院招聘专职科研人员
+                                                        </a>
+                                                        <div style="width: 228px;" class="hidden">
+                                                </td>
+                                                <td>
+                                                    材料科学与工程学院</a>
+                                                </td>
+                                                <td align="right">
+                                                    2015.10.27-
+                                                    2015.11.15
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    
+                                        <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                            <tr>
+                                                <td width="12" class="arrow">
+                                                </td>
+                                                <td width="355">
+                                                    <div style="width: 338px;" class="hidden">
+                                                        <a target="_blank" href="Admin/QsPreview.aspx?qsid=f5533bf3518740679fc1e45d7d51691d" title='研究生院招聘文员'>
+                                                            研究生院招聘文员
+                                                        </a>
+                                                        <div style="width: 228px;" class="hidden">
+                                                </td>
+                                                <td>
+                                                    研究生院</a>
+                                                </td>
+                                                <td align="right">
+                                                    2015.10.27-
+                                                    2015.11.15
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    
+                                        <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                            <tr>
+                                                <td width="12" class="arrow">
+                                                </td>
+                                                <td width="355">
+                                                    <div style="width: 338px;" class="hidden">
+                                                        <a target="_blank" href="Admin/QsPreview.aspx?qsid=f4c34581a23b46959d8324a68c68f7ae" title='材料科学与工程学院招聘项目聘用人员'>
+                                                            材料科学与工程学院招聘项目聘用人员
+                                                        </a>
+                                                        <div style="width: 228px;" class="hidden">
+                                                </td>
+                                                <td>
+                                                    材料科学与工程学院</a>
+                                                </td>
+                                                <td align="right">
+                                                    2015.10.27-
+                                                    2015.11.27
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                     <div class="more">
+                        <a href="Browse.aspx?name=0">more&gt;&gt;</a></div>
+                
+            </div>
+            <div class="border">
+                <div id="tabs">
+                    <ul>
+                        <li style="width: 132px;"><a href="#tab_jsjkyry">教师及科研人员</a></li>
+                        <li style="width: 125px;"><a href="#tab_lstd">特别岗位招聘</a></li>
+                         <li style="width: 135px;"><a href="#tab_jxfzry">教学辅助人员</a></li>
+                        <li style="width: 135px;"><a href="#zzky">专职科研(教学)招聘</a></li>
+                        <li style="width: 132px;"><a href="#tab_bshzp">博士后人员招聘</a></li>
+                     
+                    </ul>
+                    <div class="tab" id="tab_jsjkyry">
+                      
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    
+                                    <td valign="top">
+                                        
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=a9bb2431e0a347e188a9b52ef8fb7048" title='安泰经济与管理学院招聘专职思政教师'>
+                                                                    安泰经济与管理学院招聘专职思政教师</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            安泰经济与管理学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.15-
+                                                            2015.12.31
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=d22174d892054d3e881c24fb54d7fd54" title='电子信息与电气工程学院电气工程系招聘讲师'>
+                                                                    电子信息与电气工程学院电气工程系招聘讲师</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            电子信息与电气工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.10-
+                                                            2015.11.10
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=7a6552b8888347d8a801547af235f600" title='自动化系讲师招聘启事'>
+                                                                    自动化系讲师招聘启事</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            电子信息与电气工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.09-
+                                                            2015.11.09
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=a3aebfbcf61c44cdae03859e2ecb69c4" title='电子信息与电气工程学院未来媒体网络协同创新中心招聘讲师'>
+                                                                    电子信息与电气工程学院未来媒体网络协同创新中心招聘讲师</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            电子信息与电气工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.09-
+                                                            2015.11.09
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=9176e4eba7d7413da0374e41a4595a0f" title='环境科学与工程学院环境管理方向招聘教师'>
+                                                                    环境科学与工程学院环境管理方向招聘教师</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            环境科学与工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.08-
+                                                            2015.11.08
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                          <div class="title">
+                            <div class="more">
+                                <a href="Browse.aspx?name=2">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    <div class="tab" id="tab_lstd">
+                        
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                   
+                                    <td valign="top">
+                                        <!--特别岗位招聘-->
+                                        
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="title">
+                            <div class="more">
+                                <a href="Browse.aspx?name=1">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    <div class="tab" id="tab_jxfzry">
+                        
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                   
+                                    <td valign="top">
+                                        
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=42fda9b8df1d42ec936ccd6cfd7dc20b" title='上海交通大学电院智能探测重点实验室招聘工程师'>
+                                                                    上海交通大学电院智能探测重点实验室招聘工程师</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            电子信息与电气工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.27-
+                                                            2015.11.27
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=5001d949f9314059a3b94a81f8855e77" title='机械与动力工程学院核电材料腐蚀实验室招聘项目管理助理'>
+                                                                    机械与动力工程学院核电材料腐蚀实验室招聘项目管理助理</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            机械与动力工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.22-
+                                                            2015.11.22
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=e0a3c526d8d149f2b75543157bb17b72" title='上海交通大学电院北斗导航与位置服务重点实验室招聘启事'>
+                                                                    上海交通大学电院北斗导航与位置服务重点实验室招聘启事</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            电子信息与电气工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.21-
+                                                            2015.11.21
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=1bb311411f4d4b1f80a0afc70631902b" title='环境科学与工程学院课题组招聘科研助理'>
+                                                                    环境科学与工程学院课题组招聘科研助理</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            环境科学与工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.19-
+                                                            2015.11.19
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=ab9ff0d2863c4b6faf57b080f239c0fb" title='网络信息中心招聘用户支持人员'>
+                                                                    网络信息中心招聘用户支持人员</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            网络信息中心
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.16-
+                                                            2015.12.31
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="title">
+                            <div class="more">
+                                <a href="Browse.aspx?name=4">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    <div class="tab" id="zzky">
+                      
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  
+                                    <td valign="top">
+                                        
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=58b15ba8f22f41b0a176b942ba621550" title='材料科学与工程学院招聘专职科研人员'>
+                                                                    材料科学与工程学院招聘专职科研人员</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            材料科学与工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.27-
+                                                            2015.11.15
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=6c8850ed78254966bc34eb62257c97a8" title='航空航天学院招聘专职科研人员'>
+                                                                    航空航天学院招聘专职科研人员</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            航空航天学院(空天科学...
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.23-
+                                                            2015.12.31
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=ecaf23d5b1cf47fba80ba708d8074ef2" title='高等教育研究院专职科研人员招聘启事'>
+                                                                    高等教育研究院专职科研人员招聘启事</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            高等教育研究院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.22-
+                                                            2015.12.20
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=368d5918c7824e84831f974456de2545" title='电子信息与电气工程学院自动化系专职科研人员招聘启事'>
+                                                                    电子信息与电气工程学院自动化系专职科研人员招聘启事</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            电子信息与电气工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.09-
+                                                            2015.11.09
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=18a77f058d5749d9a1c953e40afaf29c" title='材料科学与工程学院招聘专职科研人员'>
+                                                                    材料科学与工程学院招聘专职科研人员</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            材料科学与工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.08-
+                                                            2015.10.31
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="title">
+                            <div class="more">
+                                <a href="Browse.aspx?name=5">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    <div class="tab" id="tab_bshzp">
+                       
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  
+                                    <td valign="top">
+                                        
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="440">
+                                                            <div style="width: 432px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=433" title='上海交通大学农业与生物学院生态学科招聘博士后'>
+                                                                    上海交通大学农业与生物学院生态学科招聘博士后</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2015-10-27
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="440">
+                                                            <div style="width: 432px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=432" title='生物医学工程学院招收博士后启事'>
+                                                                    生物医学工程学院招收博士后启事</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2015-10-14
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="440">
+                                                            <div style="width: 432px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=431" title='农业与生物学院生态学博士后招聘启事'>
+                                                                    农业与生物学院生态学博士后招聘启事</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2015-10-10
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="440">
+                                                            <div style="width: 432px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=430" title='化学化工学院郑思珣教授课题组招收博士后'>
+                                                                    化学化工学院郑思珣教授课题组招收博士后</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2015-10-10
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="440">
+                                                            <div style="width: 432px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=429" title='生命科学技术学院郑舰艇实验室招聘有机化学、结构生物学博后'>
+                                                                    生命科学技术学院郑舰艇实验室招聘有机化学、结构生物学博后</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2015-10-10
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                         <div class="title">
+                            <div class="more">
+                                <a href="ZPSpecialList.aspx?name=1">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="tabs_top_1">
+                    <ul style=" text-align:">
+                        <li style="width: 128px;"><a href="#tab_glry">管理人员招聘</a></li>
+                        <li style="width: 120px; "><a href="#tab_wy">文员招聘</a></li>
+                        <li style="width: 135px;"><a href="#tab_qtry">其他人员招聘</a></li>
+                        <li style="width: 130px;"><a href="#tab_fsdwzp">附属单位招聘</a></li>
+                        <li style="width: 144px;"><a href="#tab_yejsjgq">幼儿教师和工勤人员</a></li>
+                    </ul>
+                    
+                    <div class="tab" id="tab_glry">
+                        
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    
+                                    <td valign="top">
+                                        
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=9215dbef2a334133ba939e669bf76c94" title='上海交大-巴黎高科卓越工程师学院办公室招聘启事'>
+                                                                    上海交大-巴黎高科卓越工程师学院办公室招聘启事</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            巴黎高科卓越工程师学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.28-
+                                                            2015.11.28
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=f4c34581a23b46959d8324a68c68f7ae" title='材料科学与工程学院招聘项目聘用人员'>
+                                                                    材料科学与工程学院招聘项目聘用人员</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            材料科学与工程学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.27-
+                                                            2015.11.27
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=61630699568a4c3e934253812bd30d4c" title='物理与天文系激光等离子体研究所行政工作人员'>
+                                                                    物理与天文系激光等离子体研究所行政工作人员</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            物理与天文系
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.16-
+                                                            2015.11.16
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=daf58c59966047cc816078aba4fa5d26" title='人文学院招生办公室招聘启事'>
+                                                                    人文学院招生办公室招聘启事</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            国际教育学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.15-
+                                                            2015.11.15
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                        </td>
+                                                         <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=f1c332bccc464bc1b00d478ebe051d85" title='安泰经济与管理学院招聘行政工作人员'>
+                                                                    安泰经济与管理学院招聘行政工作人员</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            安泰经济与管理学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.12-
+                                                            2016.12.31
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="title">
+                            <div class="more">
+                                <a href="Browse.aspx?name=3">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    <div class="tab" id="tab_wy">
+                        
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    
+                                    <td valign="top">
+                                        
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=f5533bf3518740679fc1e45d7d51691d" title='研究生院招聘文员'>
+                                                                    研究生院招聘文员</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            研究生院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.27-
+                                                            2015.11.15
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=f5533bf3518740679fc1e45d7d51691d" title='研究生院招聘文员'>
+                                                                    研究生院招聘文员</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            研究生院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.27-
+                                                            2015.11.15
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=2cd22830340944d481204589d6ea8673" title='凯原法学院招聘行政人员'>
+                                                                    凯原法学院招聘行政人员</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            凯原法学院
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.19-
+                                                            2015.11.19
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=7448b65c4f4744ac82663718f26a8381" title='科研院文员招聘'>
+                                                                    科研院文员招聘</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            项目管理中心
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.19-
+                                                            2015.10.30
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                        <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="Admin/QsPreview.aspx?qsid=7448b65c4f4744ac82663718f26a8381" title='科研院文员招聘'>
+                                                                    科研院文员招聘</a></a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            项目管理中心
+                                                        </td>
+                                                        <td align="right">
+                                                            2015.10.19-
+                                                            2015.10.30
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="title">
+                            <div class="more">
+                                <a href="Browse.aspx?name=5">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    <div class="tab" id="tab_qtry">
+                       
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  
+                                    <td valign="top">
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                         <div class="title">
+                            <div class="more">
+                                <a href="ZPSpecialList.aspx?name=1">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    <div class="tab" id="tab_fsdwzp">
+                       
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                
+                                    <td valign="top">
+                                        
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                       <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=384" title='上海交大海科（集团）有限公司招聘人员'>
+                                                                    上海交大海科（集团）有限公司招聘人员</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2015-03-04
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                       <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=370" title='上海交大海科（集团）有限公司，因工作需要，特向社会招聘工作人员'>
+                                                                    上海交大海科（集团）有限公司，因工作需要，特向社会招聘工作人员</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2014-11-17
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                       <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=369" title='上海交大海科（集团）有限公司，因工作需要，特向社会招聘专业人员'>
+                                                                    上海交大海科（集团）有限公司，因工作需要，特向社会招聘专业人员</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2014-11-17
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                       <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=361" title='嘉兴南洋职业技术学院公开招聘院长公告'>
+                                                                    嘉兴南洋职业技术学院公开招聘院长公告</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2014-10-14
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                                <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                                    <tr>
+                                                        <td width="12" class="arrow">
+                                                            &nbsp;
+                                                        </td>
+                                                       <td width="320">
+                                                            <div style="width: 310px;" class="hidden">
+                                                                <a target="_blank" href="ZPSpecialShow.aspx?id=334" title='上海交大海科（集团）有限公司财务资金部经理招聘启事'>
+                                                                    上海交大海科（集团）有限公司财务资金部经理招聘启事</a>
+                                                            </div>
+                                                        </td>
+                                                        <td align="right">
+                                                            2014-06-12
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                         <div class="title">
+                            <div class="more">
+                                <a href="ZPSpecialList.aspx?name=2">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    <div class="tab" id="tab_yejsjgq">
+                       
+                        <div class="content">
+                            <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    
+                                    <td valign="top">
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                         <div class="title">
+                            <div class="more">
+                                <a href="Browse.aspx?name=6">more&gt;&gt;</a></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div class="border">
+                <div class="title">
+                    <div class="span">
+                        用户登录</div>
+                </div>
+                
+                <div id="PanelNotLogined">
+	
+                    <div >
+                        <table id="tab" width="95%" border="0" align="center" class="member">
+		<tr>
+			<td align="right" class="style2">
+                                    姓 名：
+                                </td>
+			<td>
+                                    <input name="txXM" type="text" maxlength="20" id="txXM" class="InputText" style="width:136px;" />
+                                </td>
+		</tr>
+		<tr>
+			<td align="right" class="style2">
+                                    证件号：
+                                </td>
+			<td>
+                                    <input name="txZJH" type="text" id="txZJH" class="InputText" style="width:136px;" />
+                                </td>
+		</tr>
+		<tr>
+			<td align="right" class="style2">
+                                    密&nbsp;&nbsp;码：
+                                </td>
+			<td>
+                                    <input name="txMM" type="password" maxlength="16" id="txMM" class="InputText" style="width:136px;" />
+                                </td>
+		</tr>
+		<tr>
+			<td align="right" class="style2">
+                                    验证码：
+                                </td>
+			<td>
+                                    <input name="input1" type="text" maxlength="4" id="input1" style="width:36px;" />
+                                    <input name="checkCode" type="text" id="checkCode" class="unchanged" style="width: 50px" />
+                                    <a onclick="createCode()" style="color: #0D79B7; cursor: pointer;">刷新</a>
+                                </td>
+		</tr>
+		<tr>
+			<td colspan="2">
+                              
+                                    <input type="submit" name="btnLogin" value="登录" id="btnLogin" class="botton" />
+                                    &nbsp;
+                                    <input type="submit" name="btnRegister" value="注册" id="btnRegister" class="botton" />
+                                      <a id="lbnFindPWD" href="javascript:__doPostBack('lbnFindPWD','')" style="color:#0D79B7;">找回密码</a>
+                                   
+                                    
+                                </td>
+		</tr>
+	</table>
+	
+                    </div>
+                    
+                
+</div>
+            </div>
+            <div class="border">
+                <div class="title">
+                    <div class="span">
+                        职位搜索</div>
+                </div>
+                <div class="search">
+                    <table width="98%" border="0" cellpadding="0" cellspacing="0" class="member">
+                        <tr>
+                            <td align="right" class="style1">
+                                启事名称：
+                            </td>
+                            <td>
+                                <input name="Qsmc" type="text" id="Qsmc" class="InputText" style="width:124px;" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="style1">
+                                招聘部门：
+                            </td>
+                            <td>
+                                <select name="Yxdm" id="Yxdm" class="inputtext" style="width:130px;">
+	<option value="">请选择</option>
+	<option value="01000">船舶海洋与建筑工程学院</option>
+	<option value="01900">海洋研究院</option>
+	<option value="01A00">高新船舶与深海开发装备协同创新中心</option>
+	<option value="02000">机械与动力工程学院</option>
+	<option value="03000">电子信息与电气工程学院</option>
+	<option value="03610">信息内容分析技术国家工程实验室</option>
+	<option value="03I00">未来媒体网络协同创新中心</option>
+	<option value="05000">材料科学与工程学院</option>
+	<option value="05300">材料创新研究所（平野材料创新研究）</option>
+	<option value="07100">数学系</option>
+	<option value="07200">物理与天文系</option>
+	<option value="07300">IFSA协同创新中心</option>
+	<option value="08000">生命科学技术学院</option>
+	<option value="08200">生物医学工程学院</option>
+	<option value="09000">人文学院</option>
+	<option value="09600">科学史与科学文化研究院</option>
+	<option value="11000">化学化工学院</option>
+	<option value="12000">安泰经济与管理学院</option>
+	<option value="13000">国际与公共事务学院</option>
+	<option value="14000">外国语学院</option>
+	<option value="15000">农业与生物学院</option>
+	<option value="15030">新农村发展研究院</option>
+	<option value="16000">环境科学与工程学院</option>
+	<option value="17000">药学院</option>
+	<option value="19000">凯原法学院</option>
+	<option value="20000">媒体与设计学院</option>
+	<option value="20100">媒体文化与社会发展高等研究院</option>
+	<option value="22000">继续教育学院</option>
+	<option value="23000">马克思主义学院</option>
+	<option value="24000">致远学院</option>
+	<option value="25100">体育系</option>
+	<option value="25110">综合体育馆</option>
+	<option value="26000">巴黎高科卓越工程师学院</option>
+	<option value="27000">上海交大-南加州大学文化创意产业学院</option>
+	<option value="29100">材料科学与工程学院塑性成形技术与装备研究院</option>
+	<option value="32100">海外教育学院</option>
+	<option value="33000">图书馆</option>
+	<option value="34000">微纳米科学技术研究院</option>
+	<option value="35000">高等教育研究院</option>
+	<option value="35100">中美物流研究院</option>
+	<option value="35200">中欧国际工商学院</option>
+	<option value="36000">国际教育学院</option>
+	<option value="37000">密西根联合学院</option>
+	<option value="38000">上海高级金融学院</option>
+	<option value="39000">创业学院</option>
+	<option value="40100">网络信息中心</option>
+	<option value="40200">教育技术中心</option>
+	<option value="40300">档案馆</option>
+	<option value="40400">分析测试中心</option>
+	<option value="40500">出版社</option>
+	<option value="40700">交大第二附属中学</option>
+	<option value="41000">工程训练中心</option>
+	<option value="41100">纳米中心</option>
+	<option value="41300">航空航天学院(空天科学技术研究院)</option>
+	<option value="41500">系统生物医学研究院</option>
+	<option value="41700">人文艺术研究院</option>
+	<option value="41800">先进产业技术研究院</option>
+	<option value="41900">自然科学研究院</option>
+	<option value="42000">海洋水下工程科学研究院</option>
+	<option value="42100">钱学森图书馆</option>
+	<option value="42200">教学发展中心</option>
+	<option value="42300">慕课研究院</option>
+	<option value="42400">数据科学研究中心</option>
+	<option value="50100">党委办公室</option>
+	<option value="50120">党、校史研究室</option>
+	<option value="50200">党委组织部</option>
+	<option value="50300">纪委</option>
+	<option value="50400">党委宣传部</option>
+	<option value="50423">影视文化中心</option>
+	<option value="50500">学指委、团委(含学生处、人武部)</option>
+	<option value="50540">生活园区管理中心</option>
+	<option value="50600">工会妇委会</option>
+	<option value="50700">改革与发展研究室</option>
+	<option value="50800">党委统战部</option>
+	<option value="50900">信息安全管理办公室</option>
+	<option value="60100">校长办公室</option>
+	<option value="60130">校长办公室法律事务室</option>
+	<option value="60150">校长办公室医工结合办公室</option>
+	<option value="60160">校长办公室驻京办事处</option>
+	<option value="60170">徐汇校区综合管理办公室</option>
+	<option value="60200">教务处</option>
+	<option value="60300">研究生院</option>
+	<option value="60400">科学技术发展研究院</option>
+	<option value="60450">《上海交通大学学报》编辑部</option>
+	<option value="60500">国际合作与交流处</option>
+	<option value="60510">出入境管理与服务中心</option>
+	<option value="60520">留学生发展中心</option>
+	<option value="60600">人力资源处</option>
+	<option value="60700">财务计划处</option>
+	<option value="60710">财务处会计核算中心</option>
+	<option value="60800">保卫处</option>
+	<option value="60810">校卫队</option>
+	<option value="60900">规划发展处</option>
+	<option value="61000">基建处</option>
+	<option value="61100">资产管理处</option>
+	<option value="61200">实验室与设备处</option>
+	<option value="61300">后勤保障处</option>
+	<option value="61310">水电管理中心</option>
+	<option value="61400">211／985办公室</option>
+	<option value="61700">文科建设处</option>
+	<option value="61800">发展联络处</option>
+	<option value="62000">信息化办公室</option>
+	<option value="62100">学科发展与建设处</option>
+	<option value="62200">项目管理中心</option>
+	<option value="62400">招投标办公室</option>
+	<option value="62500">科研生产质量管理办公室</option>
+	<option value="62600">“转化医学国家重大科技基础设施（上海）”项目建设指挥部办公室</option>
+	<option value="62700">经营性资产管理办公室</option>
+	<option value="62800">校友总会办公室</option>
+	<option value="69200">资产管理与实验室处</option>
+	<option value="80000">后勤集团</option>
+	<option value="80501">后勤集团公共事业服务中心_校医院(单列)</option>
+	<option value="80502">后勤集团公共事业服务中心_幼儿园(单列)</option>
+	<option value="90000">上海交大产业投资管理（集团）有限公司</option>
+
+</select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="style1">
+                                学历：
+                            </td>
+                            <td>
+                                <select name="ddlXl" id="ddlXl" class="inputtext" style="width:130px;">
+	<option value="">请选择</option>
+	<option value="10">研究生</option>
+	<option value="20">大学本科</option>
+	<option value="30">大学专科</option>
+	<option value="40">中等专业学校</option>
+
+</select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="style1">
+                                学位：
+                            </td>
+                            <td>
+                                <select name="ddlXw" id="ddlXw" class="inputtext" style="width:130px;">
+	<option value="">请选择</option>
+	<option value="2">博士</option>
+	<option value="3">硕士</option>
+	<option value="4">学士</option>
+
+</select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="style1">
+                            </td>
+                            <td>
+                                <input type="submit" name="btnSearch" value="搜索" id="btnSearch" class="botton" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="border">
+                <div class="title">
+                    <div class="span">
+                        资讯公告</div>
+                    <div class="more">
+                        <a href="More.aspx">more&gt;&gt;</a></div>
+                </div>
+                <div class="content">
+                    
+                            <table border="0" cellpadding="0" cellspacing="0" class="news">
+                                <tr>
+                                    <td width="12" class="arrow">
+                                    </td>
+                                    <td>
+                                        <a target="_blank" href="Show.aspx?id=2" title='上海交通大学人才招聘网新老网页的更替'>
+                                            上海交通大学人才招聘网新老...</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        
+                </div>
+            </div>
+            <div class="border">
+                <div class="title">
+                    <div class="span">
+                        友情链接</div>
+                </div>
+                <div class="content">
+                    <table border="0" cellpadding="0" cellspacing="0" class="news">
+                        <tr>
+                            <td width="12" class="arrow">
+                                &nbsp;
+                            </td>
+                            <td width="308">
+                                <a href="http://www.sjtu.edu.cn" target="_blank">上海交通大学主页</a>
+                            </td>
+                        </tr>
+                            <tr>
+                            <td width="12" class="arrow">
+                                &nbsp;
+                            </td>
+                            <td width="308">
+                                <a href="http://hr.sjtu.edu.cn/" target="_blank">上海交通大学人力资源处主页</a>
+                            </td>
+                        </tr>
+                              <tr>
+                            <td width="12" class="arrow">
+                                &nbsp;
+                            </td>
+                            <td width="308">
+                                <a href="http://postd.sjtu.edu.cn/" target="_blank">上海交通大学博士后管理办公室</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="12" class="arrow">
+                                &nbsp;
+                            </td>
+                            <td width="308">
+                                <a href="http://www.21cnhr.gov.cn/" target="_blank">21世纪人才网</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="12" class="arrow">
+                                &nbsp;
+                            </td>
+                            <td width="308">
+                                <a href="http://www.firstjob.com.cn/" target="_blank">上海高校毕业生就业信息网</a>
+                            </td>
+                        </tr>
+                    
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<link type="text/css" rel="Stylesheet" href="../content/css.css" />
+<!--
+<table width="1004" border="0" align="center" cellpadding="0" cellspacing="0" class="boot">
+    <tr>
+        <td>
+            上海交通大学人事处 闵行区东川路800号新行政楼B楼417-429室 传真： 34206791 沪交ICP备05168
+            <br>
+            技术支持：上海交大网络宣传与领导管理小组办公室 &copy;2008 上海交通大学
+        </td>
+    </tr>
+</table>-->
+<div id="footer">
+    <div class="line">
+    </div>
+    本站共有<span class="total">
+    1139629</span> 次访问<br />
+    上海交通大学人力资源处 闵行区东川路800号新行政楼B楼417-429室<br />
+    传真：34206791 沪交ICP备05168 技术支持：上海交大网络宣传与领导管理小组办公室 ◎2010 上海交通大学
+</div>
+
+    <input type="hidden" name="hiddenYZM" id="hiddenYZM" />
+    
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('btnLogin');//]]>
+</script>
+</form>
+</body>
+</html>
