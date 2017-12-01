@@ -1,0 +1,3159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta property="wb:webmaster" content="ce164a7aefc59ac8" />
+<meta property="qc:admins" content="2275327226566573636" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="keywords" content="思客,新华网,原创,专栏,作者,智库,专家,社科院,评论,网评,媒体,博客,时政,国际,财经,文学,文化,教育,军事,专车新政要摆脱少数人群使用的思维">
+<meta name="description" content="思客，新华网的自媒体深阅读平台。汇聚有深度、有态度、有品质的原创内容。力求在浮躁的时代倾听思想，在碎片化的当下沉淀深度。在这里，影响有影响力的人，成为有影响力的人。,如果将专车管理定位于满足少数人出行工具，甚至定位于出租车使用之上的出行工具，显然忽略了现代普通年轻人对专车的使用。">
+
+<title>
+思客 </title>
+
+<!--[if IE]>
+<script type="text/javascript">
+(function(){if(!/*@cc_on!@*/0)return;
+var e = "abbr,article,aside,audio,bb,canvas,datagrid,datalist,details,dialog,eventsource,figure,footer,hgroup,header,mark,menu,meter,nav,output,progress,section,time,video".split(','),   
+i=0,
+length=e.length;
+while(i<length){
+    document.createElement(e[i++])   
+}
+})();
+</script>  
+<![endif]-->
+<style>
+article,aside,dialog,footer,header,section,footer,nav,figure,menu {display:block;}
+
+#collectBox{width:1px;height:1px;border:1px red solid;z-index:2;position:fixed;top:0px;right:0px;background:#a0a0a0;}
+</style>
+
+	<link rel="stylesheet" type="text/css" href="http://sike.news.cn/resources/themes/sike/css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://image.sike.news.cn/resources/themes/sike/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="http://sike.news.cn/resources/themes/sike/css/cssnml.css">
+	<link rel="stylesheet" type="text/css" href="http://image.sike.news.cn/resources/themes/sike/css/cssauto.css">
+	
+<link rel="Shortcut Icon" href="http://sike.news.cn/resources/themes/sike/img/favicon.ico" >
+<link rel="Bookmark" href="http://sike.news.cn/resources/themes/sike/img/favicon.ico" >
+
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/jquery.lazyload.min.js"></script>
+
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/jquery.cookie.js"></script>
+
+<script>
+
+var JPlaceHolder = {
+    //检测
+    _check : function(){
+        return 'placeholder' in document.createElement('input');
+    },
+    //初始化
+    init : function(){
+        if(!this._check()){
+            this.fix();
+        }
+    },
+    //修复
+    fix : function(){
+        jQuery(':input[placeholder]').each(function(index, element) {
+            var self = $(this), txt = self.attr('placeholder');
+            self.wrap($('<div></div>').css({position:'relative', zoom:'1', border:'none', background:'none', padding:'none', margin:'none'}));
+            var pos = self.position(), h = self.outerHeight(true), paddingleft = self.css('padding-left');
+            var holder = $('<span></span>').text(txt).css({position:'absolute', left:pos.left, top:pos.top, height:h, lienHeight:h, paddingLeft:paddingleft, color:'#aaa'}).appendTo(self.parent());
+            self.focusin(function(e) {
+                holder.hide();
+            }).focusout(function(e) {
+                if(!self.val()){
+                    holder.show();
+                }
+            });
+            holder.click(function(e) {
+                holder.hide();
+                self.focus();
+            });
+        });
+    }
+};
+//执行
+jQuery(function(){
+    JPlaceHolder.init();    
+});
+
+</script>
+
+<script>
+var homeurl = 'http://sike.news.cn';
+var ajaxurl = '/ajax-recv.php';
+var tbase = 'http://sike.news.cn/resources/themes/sike';
+var current_user_id = '0';
+
+$.fn.extend({
+	setCursorPosition: function (position) {
+		if (this.lengh == 0) return this;
+		return $(this).setSelection(position, position);
+	},
+	setSelection: function (selectionStart, selectionEnd) {
+		if (this.lengh == 0) return this;
+		input = this[0];
+
+		if (input.createTextRange) {
+			var range = input.createTextRange();
+			range.collapse(true);
+			range.moveEnd('character', selectionEnd);
+			range.moveStart('character', selectionStart);
+			range.select();
+		} else if (input.setSelectionRange) {
+			input.focus();
+			input.setSelectionRange(selectionStart, selectionEnd);
+		}
+
+		return this;
+	},
+	focusEnd: function () {
+		this.setCursorPosition(this.val().length);
+	}
+});
+
+function showMsgBox(content, action, hidebox) {
+	$('#popup_msg_content').html(content);
+	toggleWindow('popup_error_box', hidebox);
+
+	if (action.ok) {
+		$('#popup_msg_ok').show();
+		$('#popup_msg_ok').die().live('click', action.ok);
+	}
+	if (action.cancel) {
+		$('#popup_msg_cancel').show();
+		$('#popup_msg_cancel').die().live('click', action.cancel);
+	}
+}
+
+function pageName() {
+	var a = location.href;
+	var b = a.split("/");
+	var c = b.slice(b.length-1, b.length).toString(String).split("?");
+	return c.slice(0, 1);
+}
+
+//解决页面下方多出background问题
+function resolve_background() {
+	if($("#totop").height() > $(".bgall").height()){
+		$("body").css("height",$(".bgall").height());
+	}
+}
+
+function MoveBox(obj) {
+	var divTop = $(obj).offset().top;
+	var divLeft = $(obj).offset().left;
+	$(obj).css({ 
+		// "position": "absolute", 
+		"z-index": "500", 
+		"left": divLeft + "px", 
+		"top": divTop + "px",
+		"border": "1px solid #F00"
+	});
+	$(obj).animate({ 
+		"left": ($("#collectBoxCont").offset().left - $("#collectBoxCont").width()) + "px", 
+		"top": ($(document).scrollTop() + 30) + "px", 
+		"width": "100px", 
+		"height": "70px" 
+	}, 500, function () {
+		$(obj).animate({ 
+			"left": $("#collectBoxCont").offset().left + "px", 
+			"top": $("#collectBoxCont").offset().top + "px" 
+		}, 500).fadeTo(0, 0.1).hide(0);
+	});
+}
+
+jQuery(document).ready(function ($) {
+	
+	function init() {
+		var bgall = $('.bgall');
+		var bgallOffset = bgall.offset();
+		bgall.css('min-height', $(window).height() - bgallOffset.top);
+		var clientWidth = document.body.clientWidth; //获取当前窗口的宽度
+		var isMove = clientWidth >= width; //宽度是否大于500
+		if (isMove) { //如果宽度大于500，监听滚动事件
+			if(pname == 'tank' || pname == 'tanker' || pname == 'theme'){
+				var nav = $('#navbar');
+				nav.removeClass('nav1,navadd,navbar-static-top').addClass('nav2,navbar-fixed-top');
+				
+				var logo_zk = 'http://sike.news.cn/resources/themes/sike' + '/img/logozk.png';
+				$("title").html('思客-智库');
+				$("#navmain_sike_tank").show();
+				$("#navmain_sike").hide();
+				$("#logo-image").attr("src",logo_zk);
+				$("#logo-image").parent().attr("href",'http://sike.news.cn/tank');
+			}else{
+				var nav = $('#navbar');
+				if (nav.hasClass('nav2')) {
+					nav.removeClass('nav2');
+					nav.addClass('nav1');
+					nav.addClass('navadd');
+					nav.removeClass('navbar-fixed-top');
+					nav.addClass('navbar-static-top');
+					$('#logo-image').attr('src', tbase + '/img/logo1.png');
+				}
+			}
+
+			if (typeof ($('#rank-list').attr('class')) == 'undefined') {
+				return false;
+			}
+			//设置最右侧的div为fixed
+			var rankList = $('#rank-list'); //获取推读div对象，替换文档时候注意此ID
+			var atrsJoin = $('#atrs_join'); //获取参与我们div对象，替换文档时候注意此ID
+			var rankListTop = $(rankList).offset().top; //获取推读div距离文档头的高度
+			var atrsJoinTop = $(atrsJoin).offset().top - rankListTop; //获取参与我们和推读排行之间的距离
+			$(window).bind('scroll', menu_bar = function() {
+				var scrollTop = $(window).scrollTop(); //获取滚动条距离文档头的距离
+				if (scrollTop > rankListTop) { //判断是否滚动到要监听的div
+					//推读排行
+					$(rankList).css('position', 'fixed');
+					$(rankList).css('top', '0px');
+				} else {
+					$(rankList).css('position', 'static');
+					$(rankList).css('top', '');
+				}
+			});
+			
+		} else {
+			
+			//设置导航为nav2等
+			var nav = $('#navbar');
+			nav.removeClass('nav1');
+			nav.removeClass('navadd');
+			nav.addClass('nav2');
+			nav.removeClass('navbar-static-top');
+			nav.addClass('navbar-fixed-top');
+			$('#logo-image').attr('src', tbase + '/img/logo3.png');
+			//解决手机端内部跳转问题
+			$('a').removeAttr('target');
+
+			if(pname == 'tank' || pname == 'tanker' || pname == 'theme'){
+				var logo_zk = 'http://sike.news.cn/resources/themes/sike' + '/img/logozk.png';
+				$("title").html('思客-智库');
+				$("#navmain_sike_tank").show();
+				$("#navmain_sike").hide();
+				$("#logo-image").attr("src",logo_zk);
+				$("#logo-image").parent().attr("href",'http://sike.news.cn/tank');
+			}
+		}
+	}
+	var width = 767;
+
+	$(window).resize(function () {
+		init();
+	});
+
+	init();
+
+	$('#myTab a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+	})
+	
+	$(".mctext").click(function () {
+		var kd = $(this).next('.kdlists');
+		$(this).siblings().next('.kdlists').slideUp();
+		if (kd.is(':visible')) {
+			$(this).next('.kdlists').slideUp();
+		} else {
+			$(this).next('.kdlists').slideDown();
+		}
+	});
+
+	$("#back-to-top").hide();
+
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > 100) {
+			$("#back-to-top").fadeIn(1500);
+		} else {
+			$("#back-to-top").fadeOut(1500);
+		}
+	});
+
+	$("#backtop").click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 1000);
+		return false;
+	});
+
+// 	lazyload
+	$('img.lazy').lazyload({
+		effect: 'fadeIn'
+	});
+
+// 	注册
+	$('#register_email, #register_username, #register_password').blur(function() {
+		var id = $(this).attr('id');
+		var name = $(this).attr('rel');
+		var value = $(this).val();
+		
+		if(name == 'password'){
+			value = $.base64.btoa(value);
+		}
+		
+		$.ajax({
+			type: 'POST',
+			url: 'http://login.home.news.cn/api/sike/regVerify.do',
+			data: {
+				name: name,
+				value: value
+			},
+			dataType: 'jsonp',
+			jsonp: 'jsonpCallback',
+			success: function(res) {
+				if (res.code == 200) {
+					$('#' + id + '_succico').show();
+					$('#' + id + '_errico, #' + id + '_tips').hide();
+				} else {
+					$('#' + id + '_succico').hide();
+					$('#' + id + '_errico').show();
+					$('#' + id + '_tips').html(res.msg);
+					$('#' + id + '_tips').show();
+				}
+			}
+		});
+	});
+	$('#register_check_password').blur(function() {
+		var id = $(this).attr('id');
+		var password = $('#register_password').val();
+		var check_password = $(this).val();
+		if (check_password == '') {
+			$('#' + id + '_succico').hide();
+			$('#' + id + '_errico').show();
+			$('#' + id + '_tips').html('输入的确认密码不能为空');
+			$('#' + id + '_tips').show();
+			return false;
+		}
+		if (password == check_password) {
+			$('#' + id + '_succico').show();
+			$('#' + id + '_errico, #' + id + '_tips').hide();
+		} else {
+			$('#' + id + '_succico').hide();
+			$('#' + id + '_errico').show();
+			$('#' + id + '_tips').html('两次输入的密码不一致');
+			$('#' + id + '_tips').show();
+		}
+		return false
+	});
+	$('#register_new_user').click(function() {
+		var username = $('#register_username').val();
+		var password = $('#register_password').val();
+		var email = $('#register_email').val();
+		
+		jQuery.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'register_new_user',
+				username: username,
+				password: password,
+				email: email
+			},
+			dataType: 'json',
+			success: function(res) {
+				if (res.code == 200) {
+					window.location.href = '/';
+				} else {
+					showMsgBox(res.msg, {
+						ok: function() {
+							toggleWindow('register_user_box', 'popup_error_box');
+							return false;
+						},
+						cancel: function() {
+							toggleWindow('popup_error_box');
+							return false;
+						}
+					}, 'register_user_box');
+				}
+			}
+		});
+		return false
+	});
+
+// 	登录
+	$('#do_login').click(function() {
+		var username = $('#login_username').val();
+		var password = $('#login_password').val();
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'user_signon',
+				username: username,
+				password: password
+			},
+			dataType: 'json',
+			success: function(res) {
+				if (res.code == 200) {
+					location.reload();
+				} else {
+					toggleWindow('login_msg_box');
+					showMsgBox(res.msg, {
+						ok: function() {
+							toggleWindow('login_msg_box', 'popup_error_box');
+							return false;
+						},
+						cancel: function() {
+							toggleWindow('popup_error_box');
+							return false;
+						}
+					}, 'register_user_box');
+					$('#popup_msg_cancel').hide();
+				}
+			}
+		});
+		return false;
+	});
+
+// 	退出登录
+	$('#do_logout,#do_logout_small').click(function() {
+		var is_remove = $.removeCookie('ak-1');
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'user_signout'
+			},
+			dataType: 'json',
+			success: function(res) {
+				$.cookie('is_third_login','1');
+				window.location.reload();
+			}
+		});
+		return false;
+	});
+
+	// 	用户头像滑动显示
+	$("#user_zone_closed,#user_login_nav").hover(function(){
+		$('#user_login_nav').show();
+	},function(){
+		$('#user_login_nav').hide();
+	});
+	
+// 	用户飘浮
+	$("div.tx36 img:not(.small_author_pic)").die().live("hover",function(event){
+		if(event.type =='mouseenter'){
+			$(this).parent().parent().find(".yin_tx").css("margin-top","");
+			if($(this).offset().top - $(window).scrollTop() + $(this).parent().parent().find(".yin_tx").height() > $(window).height()){
+				var num = $(this).offset().top - $(window).scrollTop() + $(this).parent().parent().find(".yin_tx").height() - $(window).height();
+				$(this).parent().parent().find(".yin_tx").css("margin-top",0-num);
+			}
+			$(".yin_tx").hide();
+			if(280 + $(this).offset().left > $(window).width()){
+				$(this).parent().parent().find(".yin_tx").css("left",280-$(this).parent().parent().find("#floatview").width()).show();
+			}else{
+				$(this).parent().parent().find(".yin_tx").show();
+			}
+			
+		}else{
+			
+		}
+	})
+
+	$(".txAndfloat_view,div.tx40").die().live("hover",function(event){
+		if(event.type == 'mouseenter'){
+			$(this).find(".yin_tx").css("margin-top","");
+			if($(this).offset().top - $(window).scrollTop() + $(this).find(".yin_tx").height() > $(window).height()){
+				var num = $(this).offset().top - $(window).scrollTop() + $(this).find(".yin_tx").height() - $(window).height();
+				$(this).find(".yin_tx").css("margin-top",0-num-60);
+			}
+			
+			$(".yin_tx").hide();
+			if(280 + $(this).offset().left > $(window).width()){
+				$(this).find(".yin_tx").css("left",280-$(this).find("#floatview").width()).show();
+			}else{
+				$(this).find(".yin_tx").show();
+			}
+		}else{
+			$(this).find(".yin_tx").hide();
+		}
+	})
+	
+	
+	//先清除然后添加hover事件
+	$(".yin_tx").die().live("hover",function(event){
+		if(event.type == 'mouseenter'){
+			$(".yin_tx").hide();
+			$(this).show();
+		}else{
+			$(".yin_tx").hide();
+		}
+	});
+	
+// 	稍后阅读
+	$('.readit, #footer_readit,#marked_small').die().live('click', function () {
+		var can_click = true;
+		var readit_this = $(this);
+		if ($.trim($(this).text()) != '稍后阅读' && $.trim($(this).text()) != '取消收藏' && $.trim($(this).text()) != '已加书签') {
+			return false;
+		}
+		if (!can_click) {
+			return false;
+		}
+
+		var is_footer = $(this).attr('rel');
+		
+		can_click = false;
+		var postid = $(this).attr('data');
+		if ($.trim($(this).text()) == '稍后阅读') {
+			jQuery.ajax({
+				type: 'POST',
+				url: ajaxurl,
+				data: {
+					action: 'add_bookmark',
+					postid: postid
+				},
+				dataType: 'json',
+				success: function (res) {
+					can_click = true;
+					if (res.code == false) {
+						if (res.msg == '您还未登录') {
+							showMsgBox('给文章加个书签，有空的时候一气呵成读完才叫畅快。', {
+								ok: function () {
+									toggleWindow('login_msg_box', 'popup_error_box');
+									return false;
+								},
+								cancel: function () {
+									toggleWindow('popup_error_box');
+									return false;
+								}
+							});
+							$('#popup_msg_cancel').hide();
+							$('#popup_msg_ok').text('我要登录');
+						} else {
+
+						}
+						return false;
+					}
+					readit_this.after('<div id="shyd_'+postid+'" style="display:none;color:red;float:left;">书签+1</div>');
+					$('#shyd_'+postid).animate({opacity: 'show'}, 400).delay(2000).animate({opacity: 'hide'}, 2000,function() {$('#shyd_'+postid).remove();});
+
+					
+					readit_this.html('已加书签');
+					if(readit_this.attr('id') == 'marked_small'){
+						readit_this.removeClass('marked');
+					}else{
+						readit_this.addClass('readited');
+					}
+					
+				}
+			});
+		}
+
+		if ($(this).text() == '取消收藏' || $.trim($(this).text()) == '已加书签') {
+			readit_this = $(this);
+			jQuery.ajax({
+				type: 'POST',
+				url: ajaxurl,
+				data: {
+					action: 'delete_bookmark',
+					postid: postid
+				},
+				dataType: 'json',
+				success: function (res) {
+					can_click = true;
+					if (res.code == false) {
+						showMsgBox(res.msg, {
+							ok: function () {
+								toggleWindow('popup_error_box');
+								return false;
+							},
+							cancel: function () {
+								toggleWindow('popup_error_box');
+								return false;
+							}
+						});
+						return false;
+					}
+					readit_this.text('稍后阅读');
+					if(readit_this.attr('id') == 'marked_small'){
+						readit_this.addClass('marked');
+					}else{
+						readit_this.removeClass('readited');
+					}
+				}
+			});
+		}
+
+		return false;
+	});
+	
+// 	推荐
+	$('#fab_button').click(function () {
+		if ($('.btn_tjian').hasClass('btn_tjianed')) {
+			return false;
+		}
+		var postid = $(this).attr('data');
+		var current_user_id = $(this).attr('current_user_id');
+		var count = $("#fab_count").text();
+		if (postid == '' || current_user_id == '') {
+			return false;
+		}
+		jQuery.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'add_fab',
+				postid: postid,
+				current_user_id: current_user_id,
+				count: count
+			},
+			dataType: 'json',
+			success: function (res) {
+				if (res.code == 'false' || res.code == false) {
+					showMsgBox(res.msg, {
+						ok: function () {
+							toggleWindow('popup_error_box');
+							return false;
+						},
+						cancel: function () {
+							toggleWindow('popup_error_box');
+							return false;
+						}
+					});
+					$("#popup_msg_cancel").remove();
+				} else {
+					$('#fab_count, #fab_count1').html(res.code);
+					$('.btn_tjian').addClass('btn_tjianed');
+					$('#fab_button h4').text("已推荐");
+				}
+
+			}
+		});
+	});
+
+	$('#fab_button h4').click(function() {
+		if($(this).text() == '已推荐') {
+			showMsgBox("您已推荐过此文", {
+				ok: function() {toggleWindow('popup_error_box'); return false;},
+				cancel: function() {toggleWindow('popup_error_box'); return false;}
+			});
+		}
+	});
+	
+	$('#img').attr('src',tbase + '/img/logo1.png');
+	var m_st, m_po= 1;
+	var m_tpot=1;
+	var	pname =pageName();
+	if(pname=='handwriting'||
+		pname=='order'||
+		pname=='comment'||
+		pname=='recommend'||
+		pname=='contribute'||
+		pname=='ctrbtcheck'||
+		pname=='ctrbtdraft'||
+		pname=='ctrbtbin'||
+		pname=='useredit'||
+		pname=='search'||
+		pname=='subject-article'||
+		pname=='404'||
+		pname == 'tank' || 
+		pname == 'tanker' || 
+		pname == 'theme'){
+		$("#navbar").removeClass('navbar-static-top nav1 navadd')
+		.addClass('navbar-fixed-top nav2');
+		$('#logo-image').attr('src', tbase + '/img/logo3.png'); 
+		$('#user_login_nav').removeClass().addClass("dropdown-menu");
+	}
+	<!--if(pname=='subject') $(".rightcon").css("top","382px");临时 谷歌浏览器-->
+	$(window).scroll(function () {
+	var	pname =pageName();
+
+	if(pname == 'tank' || pname == 'tanker' || pname == 'theme')
+		return false;
+	
+	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+	document.getElementById("navbar").style.display = 'block';
+	if (m_st > m_po) {
+		if(m_tpot>m_st){
+			$('#img').attr('src', tbase + '/img/logo3.png'); 
+			$('#user_login_nav').removeClass().addClass("dropdown-menu");
+			$("#navbar").removeClass('navbar-static-top nav1 navadd').addClass('navbar-fixed-top nav2');
+			$("#logo-image").attr('src', tbase + '/img/logo3.png');
+		}
+		else{
+			$('#navbar').hide();
+		}
+	} else {
+		if(pname=='handwriting'||
+				pname=='order'||
+				pname=='comment'||
+				pname=='recommend'||
+				pname=='contribute'||
+				pname=='ctrbtcheck'||
+				pname=='ctrbtdraft'||
+				pname=='ctrbtbin'||
+				pname=='useredit'||
+				pname=='search'||
+				pname=='subject-article'||
+				pname=='404'||
+				pname == 'tank' || 
+				pname == 'tanker' || 
+				pname == 'theme'
+					){
+			$("#navbar").removeClass('navbar-static-top nav1 navadd').addClass('navbar-fixed-top nav2');
+			$('#logo-image').attr('src', tbase + '/img/logo3.png'); 
+			$('#user_login_nav').removeClass().addClass("dropdown-menu");
+		}
+		else{
+			var clientWidth = document.body.clientWidth; //获取当前窗口的宽度
+			if(clientWidth > width){
+				$("#navbar").removeClass('navbar-fixed-top nav2').addClass('navbar-static-top nav1 navadd')
+				$('#logo-image').attr('src', tbase + '/img/logo1.png'); 
+				$('#user_login_nav').removeClass().addClass("dropdown-menu");
+			}
+		}
+	}
+	m_tpot = m_st;
+	
+	});
+	
+	$('.ipt_serh').keydown(function(e){
+		if(e.keyCode==13){
+		   var search = $('.ipt_serh').val();
+		   search = encodeURIComponent(search);
+		   if($.trim($('.ipt_serh').val()) != '' &&
+				   $.trim($('.ipt_serh').val()) != null){
+
+			   var url =  "http://"+window.location.host+"/search?search="+encodeURIComponent(search);
+			   window.location.href=url;
+			   return false;
+		   }else{
+			   showMsgBox("请输入搜索词!", {
+					ok: function() {toggleWindow('popup_error_box'); return false;},
+					cancel: function() {toggleWindow('popup_error_box'); return false;}
+				});
+		   }
+		}
+	});
+
+	$('.btn_serh').click(function(){
+	   var search = $('.ipt_serh').val();
+	   search = encodeURIComponent(search);
+	   if($.trim($('.ipt_serh').val()) != '' &&
+			   $.trim($('.ipt_serh').val()) != null){
+		   var url =  "http://"+window.location.host+"/search?search="+encodeURIComponent(search);
+		   window.location.href=url;
+		   return false;
+	   }else{
+		   showMsgBox("请输入搜索词!", {
+				ok: function() {toggleWindow('popup_error_box'); return false;},
+				cancel: function() {toggleWindow('popup_error_box'); return false;}
+			});
+	   }
+	});
+
+	//点击头像跳转到修改页
+	$('#bindfloat').click(function(){
+		window.location.href="/user?userid="+current_user_id;
+	});
+
+	$('.btn_serhxs').click(function(){
+		window.location.href= 'http://sike.news.cn/search';
+	});
+
+	// 手机端显示
+	$("#user_zone_closed_small,#user_login_nav_small").toggle(function(){
+		$('#user_login_nav_small').show();
+		$("#dropdown_small").addClass("open");
+	},function(){
+		$('#user_login_nav_small').hide();
+		$("#dropdown_small").removeClass("open");
+	});
+
+	//解决手机端跳转问题
+	$("#user_login_nav_small li a").click(function(){
+		window.location.href=$(this).attr("href");
+	});
+
+	$('#login_username, #login_password').keydown(function(e){
+		if(e.keyCode==13){
+			$('#do_login').click();
+		}
+	});
+
+	if(pname == 'tank' || pname == 'tanker' || pname == 'theme'){
+
+		var logo_zk = 'http://sike.news.cn/resources/themes/sike' + '/img/logozk.png';
+		$("title").html('思客-智库');
+		$("#navmain_sike_tank").show();
+		$("#navmain_sike").hide();
+		$("#logo-image").attr("src",logo_zk);
+		$("#logo-image").parent().attr("href",'http://sike.news.cn/tank');
+	}
+
+	//订阅推荐作者
+	$("#subscribe_recommend_author").live('click',function () {
+		
+		var _this = $(this);
+		var author_id = $(this).attr('data');
+		
+		if($(this).hasClass('zz_sxhbtn_ok')){
+			return false;
+		}
+		
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'add_Subscription',
+				author_id: author_id,
+				user_id: current_user_id
+			},
+			dataType: 'json',
+			success: function(res) {
+				if(res == true){
+					_this.text("已订阅").addClass("zz_sxhbtn_ok");
+				}else{
+					showMsgBox('属于你的思想邮箱，订阅内容、重磅文章一个都不会少。', {
+						ok: function () {
+							toggleWindow('login_msg_box', 'popup_error_box');
+							return false;
+						},
+						cancel: function () {
+							toggleWindow('popup_error_box');
+							return false;
+						}
+					});
+					$('#popup_msg_cancel').hide();
+					$('#popup_msg_ok').text('我要登录');
+				}
+			}
+		});
+		return false;
+	});
+
+
+	$("#ord_guide_button").click(function(){
+		$("#ord_guide").toggle();
+	  	$("#ord_guide_box").toggle();
+	});
+	
+	$('#close_ord_guide_box').live('click', function() {
+		$("#ord_guide").hide();
+	  	$("#ord_guide_box").hide();
+	});
+
+	$('.set_order_category').click(function() {
+		if($(this).hasClass("checkit")){
+			$(this).removeClass("checkit");
+		}else{
+			$(this).addClass("checkit");
+		}
+	});
+
+	$('#order_category_submit').click(function() {
+		var selected = new Array();
+		$(".checkit").each(function() {
+			selected.push($(this).attr("data"));
+		});
+		
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'add_order_category',
+				category_ids: selected,
+				user_id: current_user_id
+			},
+			dataType: 'json',
+			success: function(res) {
+				window.location.href = window.location.host + '/ordlist';
+			}
+		});
+		
+	});
+	
+})
+
+//分页
+function page_str(pagenum,total_count,type){
+
+	var str = '';
+
+	var pagenum = parseInt(pagenum);
+	var total_count = parseInt(total_count);
+	
+	if(total_count > 1 && pagenum != 1){
+		str += '<a href="javascript:;" class="click_page_'+type+'" rel = "'+(pagenum-1)+'">&lt;&nbsp;</a>';
+	}
+	
+	for (var i=1; i<= total_count; i++)
+	{
+		if(i == pagenum){
+			str += "<a href='javascript:;' class='click_page_"+type+" now' rel = "+i+">"+i+"</a>";
+		}else{
+			if(((pagenum-i) < 3 && (pagenum-i) > 0) 
+					|| ((i-pagenum) < 3 && (i-pagenum) > 0)){
+				str += "<a href='javascript:;' class='click_page_"+type+"' rel = "+i+">"+i+"</a>";
+			}else if(i==1
+					|| i==total_count){
+				str += "<a href='javascript:;' class='click_page_"+type+"' rel = "+i+">"+i+"</a>";
+			}else if((pagenum-i) == 3 || (i-pagenum) == 3){
+				str += "...";
+			}
+		}
+	}
+	if(total_count > 1 && pagenum != total_count ){
+		str += '<a href="javascript:;" class="click_page_'+type+'" rel = "'+(pagenum+1)+'">&nbsp;&gt;</a>';
+	}
+	return str;
+}
+
+function addBookmarkOver(_this){
+	delay(1000);
+	_this.text('已加书签').addClass('readited');
+	$('#shyd_'+postid).remove();
+}
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?09326dea8707366ed6d27f4b1f398828";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta name='robots' content='noindex,follow' />
+<style>
+html { margin-top: 0 !important; }
+* html body { margin-top: 0 !important; }
+@media screen and ( max-width: 782px ) {
+	html { margin-top: 0 !important; }
+	* html body { margin-top: 0 !important; }
+}
+</style>
+</head>
+
+<body id="totop">
+
+<script type="text/javascript">
+  $(function(){
+   var browser = {
+              versions: function(){
+                  var u = navigator.userAgent;
+                  var app = navigator.appVersion;
+                  var uu = navigator.appName;
+                  
+                  return {
+                      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, 
+                      iPad: u.indexOf('iPad') > -1, 
+                      weixin: u.indexOf('MicroMessenger') > -1,
+                      ie6: uu === "Microsoft Internet Explorer" && u.indexOf("MSIE 6.0") > 0,
+                      ie7: uu === "Microsoft Internet Explorer" && u.indexOf("MSIE 7.0") > 0,
+                      ie8: uu === "Microsoft Internet Explorer" && u.indexOf("MSIE 8.0") > 0,
+                     
+                  };
+              }()
+    };
+
+
+        if(browser.versions.weixin || browser.versions.ios || browser.versions.android || browser.versions.iPad || browser.versions.ie6 || browser.versions.ie7 || browser.versions.ie8){
+ $("#xhVideo").remove();
+ $("#xh-video").remove();
+ $(".vName").remove();
+$(".logo").height(350);
+
+  }
+
+    $(".vName").hover(function(){
+      $(this).css("opacity", 1);
+    }, function(){
+      $(this).css("opacity", 0.2);
+    });
+  })
+</script>
+
+<style id="xhVideo" type="text/css">
+ .nav1 .container-fluid{background-color:rgba(0, 0, 0, 0.05)!important;} 
+</style>
+<div class="xh-video" id="xh-video">
+  <div class="video-w">
+    <video poster="http://image.sike.news.cn/resources/themes/sike/xhImg/poster.jpg" class="videoSelf" controls autoplay loop>
+      <source src="http://image.sike.news.cn/resources/themes/sike/glaciartopp/test2.mp4" />
+      <!-- <source src="glaciartopp/glaciartopp.webm" /> -->
+    </video>
+  </div>
+</div>
+<div class="vName">Video by Leif Eliasson</div>
+
+<nav class="navbar navbar-default navbar-static-top nav1 navadd" id="navbar">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand logo2" href="http://sike.news.cn">
+                 <img src="http://sike.news.cn/resources/themes/sike/img/logo1.png" id="logo-image">
+              </a>
+              
+            </div>
+
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+  			<!-- <a href="javascript:;" class="btn_serhxs visible-xs"><img src="/img/btn_ser1.png"></a> -->
+            	            <ul class="nav navbar-nav navbar-right visible-xs hidden-sm hidden-md hidden-lg">
+                <li><a href="http://sike.news.cn/statics/sike/posts/2015/07/219478973.html" >加入思客</a></li>
+				<li><a href="#" id="popups_action_btn1" onclick="toggleWindow('login_msg_box');return false;" rel="login_msg_box">注册 / 登录</a></li>
+				<li class="visible-xs"><a href="/search" style="display:block">搜索</a></li>
+              </ul> 
+                        
+            <ul class="nav navbar-nav navmain" id="navmain_sike">
+              <!-- <li class="active"><a href="http://sike.news.cn">首页</a>
+  </li> -->
+  <li><a target="_blank" href="http://www.news.cn/" class="hidden-xs">新华网</a>
+  <a href="http://3g.news.cn/" class="visible-xs hidden-lg hidden-md hidden-sm">新华网</a></li>
+  <li ><a href="http://sike.news.cn/thinker-page">思享汇</a></li>
+  <li><a target="_blank" href="http://sike.news.cn/jiangtang/index.html">讲堂</a></li>
+  <li ><a href="http://sike.news.cn/author">作者</a></li>
+  <li ><a href="http://sike.news.cn/rank">排行</a></li>
+  <li ><a href="http://sike.news.cn/subject">精品</a>
+<!--   <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">精品 <span class="caret"></span></a> -->
+<!--   <ul role="menu" class="dropdown-menu"> -->
+<!--    <li><a href="">专题活动1</a></li>-->
+<!--   <li><a href="#">专题活动2</a></li> -->
+<!--   <li><a href="#">专题活动3</a></li> -->
+<!--   </ul> -->
+  </li>
+  <li><a target="_blank" href="http://sike.news.cn/tank">智库</a></li>
+  
+  		<li><a href="javascript:void(0)" onclick="toggleWindow('login_msg_box');return false;">我的订阅</a></li>
+		
+  
+                              </ul>
+              
+            <ul class="nav navbar-nav navmain" id="navmain_sike_tank" style="display: none">
+                <li class="active"><a href="http://sike.news.cn/tank">首页</a></li>
+                <li><a href="http://sike.news.cn/tanker">成员</a></li>
+                 <li><a href="http://sike.news.cn/theme">主题</a></li>
+            <li><a target="_blank" href="http://sike.news.cn">思客</a></li>
+            <li><a target="_blank" href="http://www.news.cn/" class="hidden-xs">新华网</a></li>
+             </ul>
+             
+              
+              	            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li><a href="http://sike.news.cn/statics/sike/posts/2015/07/219478973.html" class="btn_yh">加入思客</a></li>
+				<li><a href="#" class="btn_yh" id="popups_action_btn1" onclick="toggleWindow('login_msg_box');return false;" rel="login_msg_box" class="btn_yh" style="display:block">注册 / 登录</a></li>
+              </ul> 
+                          
+                <a href="javascript:;" class="visible-md visible-sm fr" style="margin:10px 10px 0 0"><img src="http://sike.news.cn/resources/themes/sike/img/btn_ser2.png"></a>
+                
+                <form role="search" class="hidden-md hidden-sm hidden-xs navbar-form navbar-right" id="header_search">
+                <div class="form-group yin_serh">
+                  <input type="text" class="form-control ipt_serh">
+                  <a href="/search" class="btn btn-default btn_serh" title="搜索">搜索</a>
+                </div> 
+              </form>
+                         
+            </div>
+            
+            
+          </div>
+        </nav><script src="http://image.sike.news.cn/resources/themes/sike/js/jquery.esn.autobrowse.js" /></script>
+<script src="http://image.sike.news.cn/resources/themes/sike/js/jstorage.js" /></script>
+<script src="http://image.sike.news.cn/resources/themes/sike/js/jquery.base64.js"></script>
+
+
+<script>
+jQuery(document).ready(function ($) {
+
+		//add author page
+		var author_pagenum = 1;
+
+		var total_count = 5;
+		
+		var str = page_str(author_pagenum,total_count,'author');
+		
+		if(5 > 1){
+			$("#author_pagenum").append(str);
+		}
+
+		var authorpagenum = 6;
+		
+		$(".click_page_author").live('click',function(){
+
+			var author_this = $(this);
+			var authorcurrentnum = $(this).attr('rel');
+			
+			$.ajax({ 
+				type: 'POST',
+				url: ajaxurl,
+				data: {
+					action: 'get_recommend_author',
+					authorpagenum :authorpagenum,
+					authorcurrentnum :authorcurrentnum
+				},
+				dataType: 'json',
+				success: function(data) {
+ 	 			   $(".click_page_author").removeClass("now");
+					author_this.addClass("now");
+ 	 			   $(".recommend_author").html(data);
+
+ 	 			 var str = page_str(authorcurrentnum,total_count,'author');
+ 	 			$("#author_pagenum").html(str);
+//  	 			$("#author_pagenum").append(str);
+				}
+			});
+		
+		});
+
+// 		首页滚动翻页
+		var index_page = 1;
+		var ajax_page = 1;
+		$('#index_page_down_con').autobrowse({
+			url: function (offset) {
+				ajax_page = ajax_page + 1;
+				$('#index_page_down_con').append('<div class="pagenum" id="post_loading">正在加载 ...</div>');
+				return ajaxurl;
+			},
+			postData: function() {
+				index_page = index_page + 1;
+				data = {
+					action: 'index_ajax_page_down',
+					page: index_page,
+				}
+				return data;
+			},
+			template: function (response) {
+				return response.body;
+			},
+			complete: function(response) {
+				$('#post_loading').remove();
+				if (ajax_page % 3 == 0) {
+					$('#index_page_down_con').append(response.page);
+					$('#index_page_down_con').find('.current').addClass('now');
+				}
+			},
+			itemsReturned: function (response) {
+				return $('.index_post_list_item').length;
+			},
+			useCache: false,
+			max: 30,
+		});
+
+// 		点击首页tag
+		$('.search_word').click(function(){
+			var search = $(this).text();
+			search = encodeURIComponent(search);
+			if(search != '' && search != null){
+				window.open(homeurl + '/search?search=' + encodeURIComponent(search));
+			}
+		});
+
+		resolve_background();
+
+// 		$("#navbar").addClass("navadd");
+
+
+		//解决手机端第一页之后不显示 作者推荐等信息
+		var width = 767;
+		var clientWidth = document.body.clientWidth;
+
+		if((clientWidth < width) && index_page > 1){
+			$('#tjzz').hide();
+			$('#bqqh').hide();
+			$('#focus1').hide();
+			$('#jcpl').hide();
+			$('#dtph').hide();
+		}
+
+		//设置 is_third_login 判断第三方登陆的状态 1登陆 2登出
+		$('.weibo,.qzone').click(function(){
+			$.cookie('is_third_login','2');
+		});
+});
+
+</script>
+
+<div class="row col-lg-12 col-md-12 hidden-xs logo"> 
+<div class="bg_logo">
+     <img src="http://sike.news.cn/resources/themes/sike/img/logo.png" class="logolg"> 
+              <a target="_blank" href="http://www.haier.net/cn/" class="haier">
+              <img src="http://sike.news.cn/resources/themes/sike/img/haier.png"></a>
+</div>
+</div>
+<div class="cyright hidden-xs">新华网社交网络中心出品</div>
+
+<!--container-->
+<div class="container-fluid pageall">
+	<div class="bgall">
+		<div class="container3 center-block">
+						<div class="col-lg-7 col-md-8 col-sm-8 col-xs-12 leftcon"><!--leftcon-->
+										<div class="ns_main" style="border:none;"> 
+							<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484036.html" class="ns_title">
+							李彦宏：做让这个世界变得不一样的事情</a>
+							<div class="tx36"> <img src="http://tpic.home.news.cn/userIcon/s/ruixiang01">
+								<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8269086'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/ruixiang01'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8269086'>思·锐享</a>
+		<p>167&nbsp;篇</p>
+		<p>为读者提供最有价值的观点</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484058.html'>当我们拼妈时，我们在拼什么？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484036.html'>李彦宏：做让这个世界变得不一样的事情</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483997.html'>扎克伯格：使命、用心、向前看——你会改变世界</a></li></ul></div></div></div>								<p>
+									<a target="_blank" href="user?userid=8269086">思·锐享</a>
+									<span>为读者提供最有价值的观点</span>
+									<span>10/28 06:30</span>
+									<span>发表于&nbsp;</span>
+									<a target="_blank" class="kds" href="http://sike.news.cn/statics/sike/category/%E6%BC%94%E8%AE%B2">演讲</a>
+								</p>
+							</div>
+							<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484036.html" class="img_newsmain img-responsive">
+							<img data-original="http://image.sike.news.cn/uploads/2015/10/1445936579-2697.jpeg" class="lazy img-responsive" src="http://sike.news.cn/resources/themes/sike/img/grey.gif"></a>
+							<p class="nsl_infor">我已经有了我一生都花不完的钱了，完全没有必要纯粹为了钱去做很多事情。但是，如果因为你做了什么事情，让这个世界变得不一样了，那我死了以后很多很多人会想起我，这是多么美妙的一件事情。</p>
+							 <div class="visible-sm visible-xs cl_list" style="text-align:left">
+					               <a href="#" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219484036">稍后阅读</a>
+					                 <span>时长：5分钟</span>
+					             </div>
+					       <div class="hidden-sm hidden-xs cl_list">
+					                 <a href="#" class="hidden-sm hidden-xs readit " data="219484036">
+					                 稍后阅读</a>
+					                 
+					                <span data-icon="&#xe9ce;">8508</span>
+					               <span data-icon="&#xe970;">
+											<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484036.html#comment"> 3 </a>
+										</span> 
+					                 <span data-icon="&#xe94e;">5分钟</span>
+					             </div>
+						</div>
+										<!--AdForward Begin:-->
+				<script type='text/javascript' src='http://embed.xinhuanet.com/main/s?user=AllyesNetwork|SiKe|SiBn01_01&db=xinhuanet&border=0&local=yes&js=ie' charset='gbk'></script>
+				<!--AdForward End-->
+				<div class="tab_kinds" style="text-align:center;">
+					<a href="javascript:void(0);" id="editor_chie" class="now" onClick="editor()">主编优选</a> 
+					<a href="javascript:void(0);" id="readers" onClick="reader()">读者荐文</a>  
+					<a href="javascript:void(0);" id="subscription" onClick="subscribe()">我的订阅</a>
+				</div>
+
+									
+										<div class="ns_list editor row ns_list" id="editor">
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484018.html" class="nsl_title">马云：低端制造业不继续下滑，中国没有机会</a>
+						<div class=" visible-sm visible-xs tx362"> 
+							<img src="http://image.sike.news.cn/uploads/2015/10/thumb/1444906025-252.jpeg">
+							<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8246348'>
+		<img class='small_author_pic' src='http://image.sike.news.cn/uploads/2015/10/thumb/1444906025-252.jpeg'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8246348'>马云</a>
+		<p>40&nbsp;篇</p>
+		<p>阿里巴巴创始人</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484018.html'>马云：低端制造业不继续下滑，中国没有机会</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483517.html'>马云：不把村里地主斗死，农民也能富起来</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/09/219482604.html'>马云：企业家过早“裸捐”对国家没有好处</a></li></ul></div></div></div>							<div style="overflow:hidden;">
+								<p class="bltxt">
+								马云								</p>
+								<p>发表于&nbsp;
+									<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E6%BC%94%E8%AE%B2" class="kds">演讲</a>
+									<span>10/27 06:30</span>
+								</p>
+							</div>
+						</div>
+						<div style="overflow:hidden">
+							<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484018.html" class="img_news">
+									<img src="http://image.sike.news.cn/uploads/2015/10/1445851217-6926.jpeg" class=" img-responsive" >
+								</a> 
+							</div>
+							<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+								<div class="hidden-sm hidden-xs tx36"> <img src="http://image.sike.news.cn/uploads/2015/10/thumb/1444906025-252.jpeg">
+									<p class="bltxt">
+									<a target="_blank" href="user?userid=8246348">
+									马云									</a>
+										<span>10/27 06:30</span>
+										<span>发表于&nbsp;</span>
+										<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E6%BC%94%E8%AE%B2" class="kds">演讲</a>
+									</p>
+								</div>
+								<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8246348'>
+		<img class='small_author_pic' src='http://image.sike.news.cn/uploads/2015/10/thumb/1444906025-252.jpeg'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8246348'>马云</a>
+		<p>40&nbsp;篇</p>
+		<p>阿里巴巴创始人</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484018.html'>马云：低端制造业不继续下滑，中国没有机会</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483517.html'>马云：不把村里地主斗死，农民也能富起来</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/09/219482604.html'>马云：企业家过早“裸捐”对国家没有好处</a></li></ul></div></div></div>								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484018.html" class="nsl_infor" target="_blank">其实中国的制造业下滑，主要是低端制造业、粗劣制造业必须下滑，如果中国粗制滥造的加工制造业不继续下滑，中国没有机会。</a>
+								<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+									<a href="#" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219484018">稍后阅读</a> 
+									<span>时长：10分钟</span> 
+								</div>
+								
+							</div>
+						</div>
+						<div class="hidden-sm hidden-xs cl_list">
+						<a href="#" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219484018">稍后阅读</a> 
+									<span data-icon="&#xe9ce;">9264</span> 
+									<span data-icon="&#xe970;">
+										<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484018.html#comment"> 7 </a>
+									</span> 
+									<span data-icon="&#xe94e;">10分钟</span> 
+								</div>
+						</div>
+												
+						
+						
+										
+											<div class="ns_list editor row ns_list ns_main" id="editor"> 
+							<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483957.html" class="nsl_title">
+							杰里米•里夫金：迈向第三次工业革命和零边际成本时代</a>
+							<div class="tx36"> <img src="/uploads/2015/10/thumb/1445680365-3828.jpeg">
+								<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8946465'>
+		<img class='small_author_pic' src='http://image.sike.news.cn/uploads/2015/10/thumb/1445680365-3828.jpeg'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8946465'>杰里米•里夫金</a>
+		<p>2&nbsp;篇</p>
+		<p>美国华盛顿特区经济趋势基金会总裁</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483967.html'>【里夫金现场互动】经济变革需要强有力的政府</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483957.html'>杰里米•里夫金：迈向第三次工业革命和零边际成本时代</a></li></ul></div></div></div>								<p>
+									<a target="_blank" href="user?userid=8946465">杰里米•里夫金</a>
+									<span>美国华盛顿特区经济趋势基金会总裁</span>
+									<span>10/24 17:40</span>
+									<span>发表于&nbsp;</span>
+									<a target="_blank" class="kds" href="http://sike.news.cn/statics/sike/category/%E6%BC%94%E8%AE%B2">演讲</a>
+								</p>
+							</div>
+							<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483957.html" class="img_newsmain img-responsive">
+							<img src="http://image.sike.news.cn/uploads/2015/10/1445681402-9029.jpeg" class=" img-responsive" ></a>
+							<p class="nsl_infor">在资本市场以及分享经济中要做的是把工具进行分享，不管是汽车、家庭、能源还是孩子的玩具都要分享，我们这边使用的资源越来越少，这就是共享经济。实际上，我们通过数字化能够做到这一点，然后就可以实现零边际成本。</p>
+							 <div class="visible-sm visible-xs cl_list" style="text-align:left">
+					               <a href="#" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219483957">稍后阅读</a>
+					                 <span>时长：33分钟</span>
+					             </div>
+					       <div class="hidden-sm hidden-xs cl_list">
+					                 <a href="#" class="hidden-sm hidden-xs readit " data="219483957">
+					                 稍后阅读</a>
+					                 
+					                <span data-icon="&#xe9ce;">15999</span>
+					               <span data-icon="&#xe970;">
+											<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483957.html#comment"> 5 </a>
+										</span> 
+					                 <span data-icon="&#xe94e;">33分钟</span>
+					             </div>
+						</div>
+												
+						
+						
+										
+										<div class="ns_list reader row ns_list" id="reader"  style="display:none;"><!--one ns_list--> 
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html" class="nsl_title">邱晓华：中国正在积蓄发展的四个新红利</a>
+						<div class=" visible-sm visible-xs tx362"> <img src="/uploads/2015/10/thumb/1444471347-2178.jpeg">
+							<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8945957'>
+		<img class='small_author_pic' src='http://image.sike.news.cn/uploads/2015/10/thumb/1444471347-2178.jpeg'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8945957'>思客会</a>
+		<p>6&nbsp;篇</p>
+		<p>新华网思客倾力打造的品牌栏目</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483427.html'>沈博阳：选择与努力哪个更重要？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483604.html'>有奖征集丨海南思客会邀您提问</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483422.html'>马歇尔•梅耶：中国制造业因弱势而走向国际化</a></li></ul></div></div></div>							<div style="overflow:hidden;">
+								<p class="bltxt">思客会</p>
+								<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds">热点</a><span>10/12 13:30</span></p>
+							</div>
+						</div>
+						<div style="overflow:hidden">
+							<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html" class="img_news">
+									<img src="http://image.sike.news.cn/uploads/2015/10/1444466680-4847.jpeg" class=" img-responsive" >
+								</a> 
+							</div>
+							<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+								<div class="hidden-sm hidden-xs tx36"> 
+									<img src="/uploads/2015/10/thumb/1444471347-2178.jpeg">
+									<p class="bltxt">
+									<a target="_blank" href="user?userid=8945957">
+									思客会									</a>
+										<span>10/12 13:30</span>
+										<span>发表于&nbsp;</span><a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds">热点</a></p>
+								</div>
+								<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8945957'>
+		<img class='small_author_pic' src='http://image.sike.news.cn/uploads/2015/10/thumb/1444471347-2178.jpeg'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8945957'>思客会</a>
+		<p>6&nbsp;篇</p>
+		<p>新华网思客倾力打造的品牌栏目</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483427.html'>沈博阳：选择与努力哪个更重要？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483604.html'>有奖征集丨海南思客会邀您提问</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483422.html'>马歇尔•梅耶：中国制造业因弱势而走向国际化</a></li></ul></div></div></div>								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html" class="nsl_infor" target="_blank">对中国经济前景的悲观是因为对很多中国经济过去的红利在消失、在弱化而产生的，但是在这边我想提醒大家，中国经济正在形成四个新的红利。</a>
+								<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+									<a href="#" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219483363">稍后阅读</a> 
+									<span>时长：4分钟</span> 
+								</div>
+								
+							</div>
+						</div>
+						<div class="hidden-sm hidden-xs cl_list">
+						<a href="#" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219483363">稍后阅读</a> 
+									<span data-icon="&#xe9ce;">20577</span> 
+									<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html#comment"> 4 </a></span> 
+									<span data-icon="&#xe94e;">4分钟</span> 
+								</div>
+						</div>
+						
+												
+										
+										<div class="ns_list reader row ns_list" id="reader"  style="display:none;"><!--one ns_list--> 
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483438.html" class="nsl_title">肖耿：新常态下，我们更需要容忍失败</a>
+						<div class=" visible-sm visible-xs tx362"> <img src="http://tpic.home.news.cn/userIcon/s/xiaogeng2014">
+							<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8627148'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/xiaogeng2014'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8627148'>肖耿</a>
+		<p>8&nbsp;篇</p>
+		<p>香港大学荣誉教授、香港经纶国际经济研究院学术研究副总裁</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483898.html'>[思客会]肖耿：中国要在试错中告别野蛮增长</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483438.html'>肖耿：新常态下，我们更需要容忍失败</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/07/219402948.html'>中国经济必须跨过的两道坎</a></li></ul></div></div></div>							<div style="overflow:hidden;">
+								<p class="bltxt">肖耿</p>
+								<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds">热点</a><span>10/15 06:30</span></p>
+							</div>
+						</div>
+						<div style="overflow:hidden">
+							<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483438.html" class="img_news">
+									<img src="http://image.sike.news.cn/uploads/2015/10/1444645230-2036.jpeg" class=" img-responsive" >
+								</a> 
+							</div>
+							<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+								<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/xiaogeng2014">
+									<p class="bltxt">
+									<a target="_blank" href="user?userid=8627148">
+									肖耿									</a>
+										<span>10/15 06:30</span>
+										<span>发表于&nbsp;</span><a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds">热点</a></p>
+								</div>
+								<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8627148'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/xiaogeng2014'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8627148'>肖耿</a>
+		<p>8&nbsp;篇</p>
+		<p>香港大学荣誉教授、香港经纶国际经济研究院学术研究副总裁</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483898.html'>[思客会]肖耿：中国要在试错中告别野蛮增长</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483438.html'>肖耿：新常态下，我们更需要容忍失败</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/07/219402948.html'>中国经济必须跨过的两道坎</a></li></ul></div></div></div>								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483438.html" class="nsl_infor" target="_blank">新经济里最重要的是能容忍失败。容忍失败的生态环境，包括我们的公司法人制度、金融扶持、财经政策甚至社保，当然也包括地区之间的竞争。</a>
+								<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+									<a href="#" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219483438">稍后阅读</a> 
+									<span>时长：3分钟</span> 
+								</div>
+								
+							</div>
+						</div>
+						<div class="hidden-sm hidden-xs cl_list">
+						<a href="#" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219483438">稍后阅读</a> 
+									<span data-icon="&#xe9ce;">15299</span> 
+									<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483438.html#comment"> 1 </a></span> 
+									<span data-icon="&#xe94e;">3分钟</span> 
+								</div>
+						</div>
+						
+												
+									
+		<!-- 我的订阅 -->
+		
+						
+		<div style="position:relative;display:none;" class="subscription">
+        
+                	
+       	<div class="interstitialWall">
+        <div class="interstitial-content">
+        <p>属于你的思想邮箱，订阅内容、重磅文章一个都不会少。</p>
+        <div class="buttonSet">
+        <a class="btn_submit" href="#" onclick="toggleWindow('login_msg_box');return false;">我要登录</a>
+        <br>
+       </div>
+        </div></div>
+        	
+        						
+										<div class="ns_list subscription row ns_list" id="subscription"><!--one ns_list--> 
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html" class="nsl_title">邱晓华：中国正在积蓄发展的四个新红利</a>
+						<div class=" visible-sm visible-xs tx362"> <img src="/uploads/2015/10/thumb/1444471347-2178.jpeg">
+							<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8945957'>
+		<img class='small_author_pic' src='http://image.sike.news.cn/uploads/2015/10/thumb/1444471347-2178.jpeg'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8945957'>思客会</a>
+		<p>6&nbsp;篇</p>
+		<p>新华网思客倾力打造的品牌栏目</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483427.html'>沈博阳：选择与努力哪个更重要？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483604.html'>有奖征集丨海南思客会邀您提问</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483422.html'>马歇尔•梅耶：中国制造业因弱势而走向国际化</a></li></ul></div></div></div>							<div style="overflow:hidden;">
+								<p class="bltxt">思客会</p>
+								<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds">热点</a><span>10/12 13:30</span></p>
+							</div>
+						</div>
+						<div style="overflow:hidden">
+							<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html" class="img_news">
+									<img data-original="http://image.sike.news.cn/uploads/2015/10/1444466680-4847.jpeg" class="lazy img-responsive" src="http://sike.news.cn/resources/themes/sike/img/grey.gif">
+								</a> 
+							</div>
+							<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+								<div class="hidden-sm hidden-xs tx36"> 
+									<img src="/uploads/2015/10/thumb/1444471347-2178.jpeg">
+									<p class="bltxt">
+									<a target="_blank" href="user?userid=8945957">
+									思客会									</a>
+										<span>10/12 13:30</span>
+										<span>发表于&nbsp;</span><a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds">热点</a></p>
+								</div>
+								<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8945957'>
+		<img class='small_author_pic' src='http://image.sike.news.cn/uploads/2015/10/thumb/1444471347-2178.jpeg'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8945957'>思客会</a>
+		<p>6&nbsp;篇</p>
+		<p>新华网思客倾力打造的品牌栏目</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483427.html'>沈博阳：选择与努力哪个更重要？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483604.html'>有奖征集丨海南思客会邀您提问</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483422.html'>马歇尔•梅耶：中国制造业因弱势而走向国际化</a></li></ul></div></div></div>								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html" class="nsl_infor" target="_blank">对中国经济前景的悲观是因为对很多中国经济过去的红利在消失、在弱化而产生的，但是在这边我想提醒大家，中国经济正在形成四个新的红利。</a>
+								<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+									<a href="#" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219483363">稍后阅读</a> 
+									<span>时长：4分钟</span> 
+								</div>
+								
+							</div>
+						</div>
+						<div class="hidden-sm hidden-xs cl_list">
+						<a href="#" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219483363">稍后阅读</a> 
+									<span data-icon="&#xe9ce;">20577</span> 
+									<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html#comment"> 4 </a></span> 
+									<span data-icon="&#xe94e;">4分钟</span> 
+								</div>
+						</div>
+						
+												
+										
+										<div class="ns_list subscription row ns_list" id="subscription"><!--one ns_list--> 
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483438.html" class="nsl_title">肖耿：新常态下，我们更需要容忍失败</a>
+						<div class=" visible-sm visible-xs tx362"> <img src="http://tpic.home.news.cn/userIcon/s/xiaogeng2014">
+							<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8627148'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/xiaogeng2014'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8627148'>肖耿</a>
+		<p>8&nbsp;篇</p>
+		<p>香港大学荣誉教授、香港经纶国际经济研究院学术研究副总裁</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483898.html'>[思客会]肖耿：中国要在试错中告别野蛮增长</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483438.html'>肖耿：新常态下，我们更需要容忍失败</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/07/219402948.html'>中国经济必须跨过的两道坎</a></li></ul></div></div></div>							<div style="overflow:hidden;">
+								<p class="bltxt">肖耿</p>
+								<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds">热点</a><span>10/15 06:30</span></p>
+							</div>
+						</div>
+						<div style="overflow:hidden">
+							<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483438.html" class="img_news">
+									<img data-original="http://image.sike.news.cn/uploads/2015/10/1444645230-2036.jpeg" class="lazy img-responsive" src="http://sike.news.cn/resources/themes/sike/img/grey.gif">
+								</a> 
+							</div>
+							<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+								<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/xiaogeng2014">
+									<p class="bltxt">
+									<a target="_blank" href="user?userid=8627148">
+									肖耿									</a>
+										<span>10/15 06:30</span>
+										<span>发表于&nbsp;</span><a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds">热点</a></p>
+								</div>
+								<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8627148'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/xiaogeng2014'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8627148'>肖耿</a>
+		<p>8&nbsp;篇</p>
+		<p>香港大学荣誉教授、香港经纶国际经济研究院学术研究副总裁</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483898.html'>[思客会]肖耿：中国要在试错中告别野蛮增长</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483438.html'>肖耿：新常态下，我们更需要容忍失败</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/07/219402948.html'>中国经济必须跨过的两道坎</a></li></ul></div></div></div>								<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483438.html" class="nsl_infor" target="_blank">新经济里最重要的是能容忍失败。容忍失败的生态环境，包括我们的公司法人制度、金融扶持、财经政策甚至社保，当然也包括地区之间的竞争。</a>
+								<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+									<a href="#" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219483438">稍后阅读</a> 
+									<span>时长：3分钟</span> 
+								</div>
+								
+							</div>
+						</div>
+						<div class="hidden-sm hidden-xs cl_list">
+						<a href="#" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219483438">稍后阅读</a> 
+									<span data-icon="&#xe9ce;">15299</span> 
+									<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483438.html#comment"> 1 </a></span> 
+									<span data-icon="&#xe94e;">3分钟</span> 
+								</div>
+						</div>
+						
+												
+					        
+        </div>
+        
+        		
+				<div class="skjt">
+						<a style="display:block" target="_blank" href="http://sike.news.cn/jiangtang/index.html">
+						<img src="http://sike.news.cn/resources/themes/sike/img/sk.png" class="dv_skjt">
+						</a> 
+													<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 jtone"> 
+								<a target="_blank" href="http://sike.news.cn/hot/jab/gyz0914/index.html"> 
+									<span class="jttime"></span> 
+									<img data-original="http://sike.news.cn/uploads/2015/09/thumb/1443082915-3313.jpeg" alt="领导力的价值与修炼" class="lazy img-responsive" src="http://sike.news.cn/resources/themes/sike/img/grey.gif"> 
+								</a>
+								<h4 class="textflow">领导力的价值与修炼</h4>
+								<p class="textflow">曾仕强、杨壮、宫玉振</p>
+								<p class="jtdate">2015-09-24 16:21:58</p>
+							</div>
+														<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 jtone"> 
+								<a target="_blank" href="http://www.xinhuanet.com/forum/sqgj/sk08.htm"> 
+									<span class="jttime"></span> 
+									<img data-original="http://sike.news.cn/uploads/2015/09/thumb/1443147170-3906.jpeg" alt="罗杰斯：投资股市的秘诀" class="lazy img-responsive" src="http://sike.news.cn/resources/themes/sike/img/grey.gif"> 
+								</a>
+								<h4 class="textflow">罗杰斯：投资股市的秘诀</h4>
+								<p class="textflow">国际著名投资家、金融学家</p>
+								<p class="jtdate">2015-06-07 16:48:00</p>
+							</div>
+														<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 jtone"> 
+								<a target="_blank" href="http://sike.news.cn/hot/jab/lcz/index.html"> 
+									<span class="jttime"></span> 
+									<img data-original="http://sike.news.cn/uploads/2015/09/thumb/1443147291-88.jpeg" alt="柳传志：做一个创业的行者" class="lazy img-responsive" src="http://sike.news.cn/resources/themes/sike/img/grey.gif"> 
+								</a>
+								<h4 class="textflow">柳传志：做一个创业的行者</h4>
+								<p class="textflow">联想控股董事长、联想集团创始人</p>
+								<p class="jtdate">2015-08-20 16:55:00</p>
+							</div>
+											</div>
+			</div>
+			
+						
+			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 leftcon clearfix">
+			<a name="posts"></a>
+																<div class=" row ns_list index_post_list_item">
+							<a style="padding-top: 20px" target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484058.html" class="nsl_title" target="">当我们拼妈时，我们在拼什么？</a>
+							<div class=" visible-sm visible-xs tx362"> 
+								<img src="http://tpic.home.news.cn/userIcon/s/ruixiang01">
+								<div style="overflow:hidden;">
+									<p class="bltxt">思·锐享</p>
+									<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E6%95%99%E8%82%B2" class="kds" target="_blank">教育</a><span>10/28 06:30</span></p>
+								</div>
+							</div>
+							<div style="overflow:hidden">
+								<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484058.html" class="img_news">
+										<img data-original="http://image.sike.news.cn/uploads/2015/10/1445935717-7434.jpeg" src="http://sike.news.cn/resources/themes/sike/img/grey.gif" class="lazy img-responsive">
+									</a> 
+								</div>
+								<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+									<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/ruixiang01">
+										<p class="bltxt">
+										<a target="_blank" href="user?userid=8269086">
+										思·锐享										</a>
+											<span>10/28 06:30</span>
+											<span>发表于&nbsp;</span>
+											<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E6%95%99%E8%82%B2" class="kds" target="_blank">教育</a>
+										</p>
+									</div>
+									<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8269086'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/ruixiang01'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8269086'>思·锐享</a>
+		<p>167&nbsp;篇</p>
+		<p>为读者提供最有价值的观点</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484058.html'>当我们拼妈时，我们在拼什么？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484036.html'>李彦宏：做让这个世界变得不一样的事情</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483997.html'>扎克伯格：使命、用心、向前看——你会改变世界</a></li></ul></div></div></div>									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484058.html" class="nsl_infor" target="_blank">在当今，教育“拼妈”已成为中国都市社会的一个普遍现象。义务教育体系外滋生出了庞大的“隐形市场”，教育已变成“隐形市场”下的竞争，市场原则一跃成为教育场域中强有力的行动逻辑，这不仅会侵蚀公共教育，还会强烈冲击到教育的公平性。</a>
+									<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+										<a href="javascript:void(0);" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219484058">稍后阅读</a> 
+										<span>时长：9分钟</span> 
+									</div>
+							
+								</div>
+							</div>
+									<div class="hidden-sm hidden-xs cl_list">
+									<a href="javascript:void(0);" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219484058">稍后阅读</a> 
+										<span data-icon="&#xe9ce;">4908</span> 
+										<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484058.html#comment"> 0 </a></span> 
+										<span data-icon="&#xe94e;">9分钟</span> </div>
+							</div>
+												
+																	<div class=" row ns_list index_post_list_item">
+							<a  target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484041.html" class="nsl_title" target="">居住证制度，如何释放改革红利？</a>
+							<div class=" visible-sm visible-xs tx362"> 
+								<img src="http://tpic.home.news.cn/userIcon/s/kuangxianming">
+								<div style="overflow:hidden;">
+									<p class="bltxt">匡贤明</p>
+									<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds" target="_blank">热点</a><span>10/28 06:30</span></p>
+								</div>
+							</div>
+							<div style="overflow:hidden">
+								<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484041.html" class="img_news">
+										<img data-original="http://image.sike.news.cn/uploads/2015/10/1445930358-3649.png" src="http://sike.news.cn/resources/themes/sike/img/grey.gif" class="lazy img-responsive">
+									</a> 
+								</div>
+								<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+									<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/kuangxianming">
+										<p class="bltxt">
+										<a target="_blank" href="user?userid=8295952">
+										匡贤明										</a>
+											<span>10/28 06:30</span>
+											<span>发表于&nbsp;</span>
+											<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds" target="_blank">热点</a>
+										</p>
+									</div>
+									<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8295952'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/kuangxianming'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8295952'>匡贤明</a>
+		<p>12&nbsp;篇</p>
+		<p>中国(海南)改革发展研究院经济研究所所长</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484041.html'>居住证制度，如何释放改革红利？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/08/219480901.html'>简政放权，“割肉”还得继续</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/06/219335009.html'>经济下行压力如何转化为改革动力？</a></li></ul></div></div></div>									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484041.html" class="nsl_infor" target="_blank">从这几年城镇化的趋势看，城镇完全有能力通过居住证制度吸纳进城务工人员，并为他们提供与户籍人口无差异的基本公共服务。</a>
+									<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+										<a href="javascript:void(0);" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219484041">稍后阅读</a> 
+										<span>时长：4分钟</span> 
+									</div>
+							
+								</div>
+							</div>
+									<div class="hidden-sm hidden-xs cl_list">
+									<a href="javascript:void(0);" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219484041">稍后阅读</a> 
+										<span data-icon="&#xe9ce;">1625</span> 
+										<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484041.html#comment"> 2 </a></span> 
+										<span data-icon="&#xe94e;">4分钟</span> </div>
+							</div>
+												
+																	<div class=" row ns_list index_post_list_item">
+							<a  target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484014.html" class="nsl_title" target="">为中国的民族复兴提供国际关系理论支持</a>
+							<div class=" visible-sm visible-xs tx362"> 
+								<img src="http://tpic.home.news.cn/userIcon/s/yanxuetong">
+								<div style="overflow:hidden;">
+									<p class="bltxt">阎学通</p>
+									<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E5%9B%BD%E9%99%85" class="kds" target="_blank">国际</a><span>10/28 06:30</span></p>
+								</div>
+							</div>
+							<div style="overflow:hidden">
+								<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484014.html" class="img_news">
+										<img data-original="http://image.sike.news.cn/uploads/2015/10/1445932969-6472.jpeg" src="http://sike.news.cn/resources/themes/sike/img/grey.gif" class="lazy img-responsive">
+									</a> 
+								</div>
+								<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+									<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/yanxuetong">
+										<p class="bltxt">
+										<a target="_blank" href="user?userid=8563983">
+										阎学通										</a>
+											<span>10/28 06:30</span>
+											<span>发表于&nbsp;</span>
+											<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E5%9B%BD%E9%99%85" class="kds" target="_blank">国际</a>
+										</p>
+									</div>
+									<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8563983'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/yanxuetong'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8563983'>阎学通</a>
+		<p>3&nbsp;篇</p>
+		<p>清华大学国际问题研究所所长</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484014.html'>为中国的民族复兴提供国际关系理论支持</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/03/219027576.html'>现在谈“中国世纪”太早了</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/01/218824416.html'>整体的“周边”比美国更重要</a></li></ul></div></div></div>									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484014.html" class="nsl_infor" target="_blank">我们不仅应该维护“战略机遇期”，还应该主动创造“战略机遇期”。我们的东海识别区，就是主动创造自己的机遇。当时我们突然公布识别区，导致美日无法进行协调，因此他们两国的政策彼此矛盾。</a>
+									<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+										<a href="javascript:void(0);" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219484014">稍后阅读</a> 
+										<span>时长：8分钟</span> 
+									</div>
+							
+								</div>
+							</div>
+									<div class="hidden-sm hidden-xs cl_list">
+									<a href="javascript:void(0);" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219484014">稍后阅读</a> 
+										<span data-icon="&#xe9ce;">258</span> 
+										<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484014.html#comment"> 0 </a></span> 
+										<span data-icon="&#xe94e;">8分钟</span> </div>
+							</div>
+												
+											
+						<div class="jumbotron div_ads" style="position:relative">
+
+						<a target="_blank" href="http://sike.news.cn/jiangtang/index.html">
+							<img src="http://sike.news.cn/resources/themes/sike/img/adlogos.png" class="adlogos"/>
+							<img style="height:250px;" src="http://sike.news.cn/resources/themes/sike/img/1200x250.jpg"/>
+							<p style="text-align: center; width: 100%; top: 50%; margin-top: -16px;">传递专业思想&nbsp;&nbsp;&nbsp;&nbsp;分享智慧人生</p> 
+						</a>
+						
+           
+						</div>
+						
+						</div>
+						
+												
+						<div class=" col-lg-7 col-md-7 col-sm-12 col-xs-12 leftcon" id="index_page_down_con">
+																		<div class=" row ns_list index_post_list_item">
+							<a  target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484032.html" class="nsl_title" target="">诺奖归华，青蒿属外
+——青蒿素的荣耀与中国医药的尴尬</a>
+							<div class=" visible-sm visible-xs tx362"> 
+								<img src="http://tpic.home.news.cn/userIcon/s/tanyuping01">
+								<div style="overflow:hidden;">
+									<p class="bltxt">谭玉平</p>
+									<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds" target="_blank">热点</a><span>10/27 09:07</span></p>
+								</div>
+							</div>
+							<div style="overflow:hidden">
+								<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484032.html" class="img_news">
+										<img data-original="http://image.sike.news.cn/uploads/2015/10/1445908186-8705.jpeg" src="http://sike.news.cn/resources/themes/sike/img/grey.gif" class="lazy img-responsive">
+									</a> 
+								</div>
+								<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+									<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/tanyuping01">
+										<p class="bltxt">
+										<a target="_blank" href="user?userid=8573570">
+										谭玉平										</a>
+											<span>10/27 09:07</span>
+											<span>发表于&nbsp;</span>
+											<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds" target="_blank">热点</a>
+										</p>
+									</div>
+									<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8573570'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/tanyuping01'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8573570'>谭玉平</a>
+		<p>22&nbsp;篇</p>
+		<p>资深媒体人</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484032.html'>诺奖归华，青蒿属外
+——青蒿素的荣耀与中国医药的尴尬</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483673.html'>世界警察还是世界土匪？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483337.html'>成不成龙并不重要，孩子的成长没有输赢</a></li></ul></div></div></div>									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484032.html" class="nsl_infor" target="_blank">从科研到生产、到市场，希望国人能走出一条平坦的大道，让我们的科学家不再尴尬。</a>
+									<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+										<a href="javascript:void(0);" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219484032">稍后阅读</a> 
+										<span>时长：5分钟</span> 
+									</div>
+							
+								</div>
+							</div>
+									<div class="hidden-sm hidden-xs cl_list">
+									<a href="javascript:void(0);" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219484032">稍后阅读</a> 
+										<span data-icon="&#xe9ce;">853</span> 
+										<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484032.html#comment"> 0 </a></span> 
+										<span data-icon="&#xe94e;">5分钟</span> </div>
+							</div>
+												
+																	<div class=" row ns_list index_post_list_item">
+							<a  target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483997.html" class="nsl_title" target="">扎克伯格：使命、用心、向前看——你会改变世界</a>
+							<div class=" visible-sm visible-xs tx362"> 
+								<img src="http://tpic.home.news.cn/userIcon/s/ruixiang01">
+								<div style="overflow:hidden;">
+									<p class="bltxt">思·锐享</p>
+									<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E6%BC%94%E8%AE%B2" class="kds" target="_blank">演讲</a><span>10/27 06:30</span></p>
+								</div>
+							</div>
+							<div style="overflow:hidden">
+								<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483997.html" class="img_news">
+										<img data-original="http://image.sike.news.cn/uploads/2015/10/1445840935-9796.png" src="http://sike.news.cn/resources/themes/sike/img/grey.gif" class="lazy img-responsive">
+									</a> 
+								</div>
+								<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+									<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/ruixiang01">
+										<p class="bltxt">
+										<a target="_blank" href="user?userid=8269086">
+										思·锐享										</a>
+											<span>10/27 06:30</span>
+											<span>发表于&nbsp;</span>
+											<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E6%BC%94%E8%AE%B2" class="kds" target="_blank">演讲</a>
+										</p>
+									</div>
+									<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8269086'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/ruixiang01'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8269086'>思·锐享</a>
+		<p>167&nbsp;篇</p>
+		<p>为读者提供最有价值的观点</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484058.html'>当我们拼妈时，我们在拼什么？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484036.html'>李彦宏：做让这个世界变得不一样的事情</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483997.html'>扎克伯格：使命、用心、向前看——你会改变世界</a></li></ul></div></div></div>									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483997.html" class="nsl_infor" target="_blank">你应该相信你的使命，听从它的召唤去解决重要的问题。要用心，不要放弃，要一直向前看。你们可以成为全球的领导者，可以去做提升人们生活质量的事情，可以用互联网影响全世界。</a>
+									<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+										<a href="javascript:void(0);" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219483997">稍后阅读</a> 
+										<span>时长：7分钟</span> 
+									</div>
+							
+								</div>
+							</div>
+									<div class="hidden-sm hidden-xs cl_list">
+									<a href="javascript:void(0);" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219483997">稍后阅读</a> 
+										<span data-icon="&#xe9ce;">4462</span> 
+										<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483997.html#comment"> 1 </a></span> 
+										<span data-icon="&#xe94e;">7分钟</span> </div>
+							</div>
+												
+																	<div class=" row ns_list index_post_list_item">
+							<a  target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484003.html" class="nsl_title" target="">让谷歌来告诉你：如何避免大企业式下滑</a>
+							<div class=" visible-sm visible-xs tx362"> 
+								<img src="http://tpic.home.news.cn/userIcon/s/chenchunhua01">
+								<div style="overflow:hidden;">
+									<p class="bltxt">陈春花</p>
+									<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E8%B4%A2%E7%BB%8F" class="kds" target="_blank">财经</a><span>10/27 06:30</span></p>
+								</div>
+							</div>
+							<div style="overflow:hidden">
+								<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484003.html" class="img_news">
+										<img data-original="http://image.sike.news.cn/uploads/2015/10/1445845332-9157.jpeg" src="http://sike.news.cn/resources/themes/sike/img/grey.gif" class="lazy img-responsive">
+									</a> 
+								</div>
+								<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+									<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/chenchunhua01">
+										<p class="bltxt">
+										<a target="_blank" href="user?userid=8762209">
+										陈春花										</a>
+											<span>10/27 06:30</span>
+											<span>发表于&nbsp;</span>
+											<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E8%B4%A2%E7%BB%8F" class="kds" target="_blank">财经</a>
+										</p>
+									</div>
+									<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8762209'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/chenchunhua01'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8762209'>陈春花</a>
+		<p>27&nbsp;篇</p>
+		<p>新希望六和股份有限公司联席董事长兼CEO</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484003.html'>让谷歌来告诉你：如何避免大企业式下滑</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483461.html'>无法走得更远的中国企业，缺了什么</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/09/219482278.html'>师生之间真的可以亦师亦友吗？</a></li></ul></div></div></div>									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484003.html" class="nsl_infor" target="_blank">能使企业一直保持领先而避免下滑的秘诀，就是不断保持企业的创造力。创造力从哪里来？那就需要重视员工的个体价值，为他们营造思考的环境，充分发挥他们的创新精神，从而为企业创造更大价值。</a>
+									<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+										<a href="javascript:void(0);" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219484003">稍后阅读</a> 
+										<span>时长：7分钟</span> 
+									</div>
+							
+								</div>
+							</div>
+									<div class="hidden-sm hidden-xs cl_list">
+									<a href="javascript:void(0);" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219484003">稍后阅读</a> 
+										<span data-icon="&#xe9ce;">533</span> 
+										<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484003.html#comment"> 0 </a></span> 
+										<span data-icon="&#xe94e;">7分钟</span> </div>
+							</div>
+												
+																	<div class="ns_main"> 
+							<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484015.html" class="ns_title">
+							国企改革与能源改革如何联接？</a>
+							<div class="tx36"> <img src="http://tpic.home.news.cn/userIcon/s/thinker01">
+								<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8269089'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/thinker01'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8269089'>Thinker</a>
+		<p>116&nbsp;篇</p>
+		<p>为读者提供最有价值的观点</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484015.html'>国企改革与能源改革如何联接？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483769.html'>【福利 】“新华网思客”第二波红包来啦！</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483698.html'>【福利 】“新华网思客”第一波红包今晚发出！</a></li></ul></div></div></div>								<p>
+									<a target="_blank" href="user?userid=8269089">Thinker</a>
+									<span>为读者提供最有价值的观点</span>
+									<span>10/27 06:30</span>
+									<span>发表于&nbsp;</span>
+									<a target="_blank" class="kds" href="http://sike.news.cn/statics/sike/category/%E8%B4%A2%E7%BB%8F">财经</a>
+								</p>
+							</div>
+							<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484015.html" class="img_newsmain img-responsive">
+							<img data-original="http://image.sike.news.cn/uploads/2015/10/1445928560-3976.jpeg" class="lazy img-responsive" src="http://sike.news.cn/resources/themes/sike/img/grey.gif"></a>
+							<p class="nsl_infor">要想将国企改革与能源改革进行流畅联接，需要明确政企职能、管控交叉补贴，将网络型行业作为二者的重要结合点，加强政府监管；国有能源企业可出让部分股权；扩大能源国有企业国有资本的经营预算规模。</p>
+							 <div class="visible-sm visible-xs cl_list" style="text-align:left">
+					               <a href="#" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219484015">稍后阅读</a>
+					                 <span>时长：5分钟</span>
+					             </div>
+					       <div class="hidden-sm hidden-xs cl_list">
+					                 <a href="#" class="hidden-sm hidden-xs readit " data="219484015">
+					                 稍后阅读</a>
+					                 
+					                <span data-icon="&#xe9ce;">4951</span>
+					               <span data-icon="&#xe970;">
+											<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484015.html#comment"> 0 </a>
+										</span> 
+					                 <span data-icon="&#xe94e;">5分钟</span>
+					             </div>
+						</div>
+												
+																	<div class=" row ns_list index_post_list_item">
+							<a  target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483544.html" class="nsl_title" target="">“十三五”中国经济需要不同于以往的增长方式</a>
+							<div class=" visible-sm visible-xs tx362"> 
+								<img src="http://tpic.home.news.cn/userIcon/s/zhikubaogao">
+								<div style="overflow:hidden;">
+									<p class="bltxt">智库报告</p>
+									<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E6%99%BA%E5%BA%93%E6%8A%A5%E5%91%8A" class="kds" target="_blank">智库报告</a><span>10/26 09:00</span></p>
+								</div>
+							</div>
+							<div style="overflow:hidden">
+								<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483544.html" class="img_news">
+										<img data-original="http://image.sike.news.cn/uploads/2015/10/1444890373-336.jpeg" src="http://sike.news.cn/resources/themes/sike/img/grey.gif" class="lazy img-responsive">
+									</a> 
+								</div>
+								<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+									<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/zhikubaogao">
+										<p class="bltxt">
+										<a target="_blank" href="user?userid=8819938">
+										智库报告										</a>
+											<span>10/26 09:00</span>
+											<span>发表于&nbsp;</span>
+											<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E6%99%BA%E5%BA%93%E6%8A%A5%E5%91%8A" class="kds" target="_blank">智库报告</a>
+										</p>
+									</div>
+									<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8819938'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/zhikubaogao'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8819938'>智库报告</a>
+		<p>5&nbsp;篇</p>
+		<p>为读者提供最前沿的智库报告</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483544.html'>“十三五”中国经济需要不同于以往的增长方式</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/09/219482925.html'>智库报告丨美国制造业真的在回流吗？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/09/219481975.html'>智库报告丨勤劳返贫，我们的农村怎么了？</a></li></ul></div></div></div>									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483544.html" class="nsl_infor" target="_blank">坚持创新和效率取向的城市化方式，稳固可持续增长的基础；坚持“利益共同性”取向的秩序规范，缓解经济矛盾及其压力；坚持福利取向的增长方式重构，进行经济和社会的整合。</a>
+									<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+										<a href="javascript:void(0);" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219483544">稍后阅读</a> 
+										<span>时长：11分钟</span> 
+									</div>
+							
+								</div>
+							</div>
+									<div class="hidden-sm hidden-xs cl_list">
+									<a href="javascript:void(0);" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219483544">稍后阅读</a> 
+										<span data-icon="&#xe9ce;">5730</span> 
+										<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483544.html#comment"> 2 </a></span> 
+										<span data-icon="&#xe94e;">11分钟</span> </div>
+							</div>
+												
+																	<div class=" row ns_list index_post_list_item">
+							<a  target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483471.html" class="nsl_title" target="">李稻葵：中国将借“十三五”消灭贫困</a>
+							<div class=" visible-sm visible-xs tx362"> 
+								<img src="http://tpic.home.news.cn/userIcon/s/lidaokui01">
+								<div style="overflow:hidden;">
+									<p class="bltxt">李稻葵</p>
+									<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E8%B4%A2%E7%BB%8F" class="kds" target="_blank">财经</a><span>10/26 09:00</span></p>
+								</div>
+							</div>
+							<div style="overflow:hidden">
+								<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483471.html" class="img_news">
+										<img data-original="http://image.sike.news.cn/uploads/2015/10/1444716785-3648.jpeg" src="http://sike.news.cn/resources/themes/sike/img/grey.gif" class="lazy img-responsive">
+									</a> 
+								</div>
+								<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+									<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/lidaokui01">
+										<p class="bltxt">
+										<a target="_blank" href="user?userid=8299679">
+										李稻葵										</a>
+											<span>10/26 09:00</span>
+											<span>发表于&nbsp;</span>
+											<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E8%B4%A2%E7%BB%8F" class="kds" target="_blank">财经</a>
+										</p>
+									</div>
+									<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8299679'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/lidaokui01'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8299679'>李稻葵</a>
+		<p>41&nbsp;篇</p>
+		<p>清华大学中国与世界经济研究中心主任</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483471.html'>李稻葵：中国将借“十三五”消灭贫困</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483509.html'>李稻葵：中国经济新增长点怎么“发光”？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483415.html'>李稻葵：未来10年经济回到7%的增长速度没有问题</a></li></ul></div></div></div>									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483471.html" class="nsl_infor" target="_blank">“十三五”末期的重点，应该是中国真正的跨入了初步发达国家的行列，初步跨越了中等收入陷阱，人均GDP在1.2万以上，国内的贫困问题基本上解决，贫困人口基本上被消灭，我们的社会管理和经济管理的能力大幅度提升。</a>
+									<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+										<a href="javascript:void(0);" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219483471">稍后阅读</a> 
+										<span>时长：12分钟</span> 
+									</div>
+							
+								</div>
+							</div>
+									<div class="hidden-sm hidden-xs cl_list">
+									<a href="javascript:void(0);" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219483471">稍后阅读</a> 
+										<span data-icon="&#xe9ce;">1074</span> 
+										<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483471.html#comment"> 4 </a></span> 
+										<span data-icon="&#xe94e;">12分钟</span> </div>
+							</div>
+												
+																	<div class=" row ns_list index_post_list_item">
+							<a  target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483993.html" class="nsl_title" target="">[思客会]圆桌对话：“互联网+”寻找城市新动力</a>
+							<div class=" visible-sm visible-xs tx362"> 
+								<img src="http://tpic.home.news.cn/userIcon/s/sixianghui">
+								<div style="overflow:hidden;">
+									<p class="bltxt">思享汇</p>
+									<p>发表于&nbsp;<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds" target="_blank">热点</a><span>10/25 11:45</span></p>
+								</div>
+							</div>
+							<div style="overflow:hidden">
+								<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12 nsl_img fl"> 
+									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483993.html" class="img_news">
+										<img data-original="http://image.sike.news.cn/uploads/2015/10/1445745619-2674.jpeg" src="http://sike.news.cn/resources/themes/sike/img/grey.gif" class="lazy img-responsive">
+									</a> 
+								</div>
+								<div class="nst_wid  col-lg-7 col-md-8 col-sm-8 col-xs-12 nslcont fr">
+									<div class="hidden-sm hidden-xs tx36"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/sixianghui">
+										<p class="bltxt">
+										<a target="_blank" href="user?userid=8769587">
+										思享汇										</a>
+											<span>10/25 11:45</span>
+											<span>发表于&nbsp;</span>
+											<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E7%83%AD%E7%82%B9" class="kds" target="_blank">热点</a>
+										</p>
+									</div>
+									<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8769587'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/sixianghui'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8769587'>思享汇</a>
+		<p>20&nbsp;篇</p>
+		<p>聚焦热点话题，汇集名家思想</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483993.html'>[思客会]圆桌对话：“互联网+”寻找城市新动力</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483978.html'>[思客会]圆桌对话：构建创新创业新生态</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483971.html'>[思客会]圆桌对话：从“制造”到“智造”</a></li></ul></div></div></div>									<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483993.html" class="nsl_infor" target="_blank">无论是“互联网+”还是“+互联网”，互联网都是一个放大器，最核心的东西还是需要靠我们原来的专业推动。</a>
+									<div class="visible-sm visible-xs cl_list" style="text-align:left"> 
+										<a href="javascript:void(0);" data-icon="&#xe9d3;" id="marked_small" class="marked" data="219483993">稍后阅读</a> 
+										<span>时长：11分钟</span> 
+									</div>
+							
+								</div>
+							</div>
+									<div class="hidden-sm hidden-xs cl_list">
+									<a href="javascript:void(0);" class="hidden-sm hidden-xs col-lg-offset-5 col-md-offset-4 readit " data="219483993">稍后阅读</a> 
+										<span data-icon="&#xe9ce;">1533</span> 
+										<span data-icon="&#xe970;"><a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483993.html#comment"> 0 </a></span> 
+										<span data-icon="&#xe94e;">11分钟</span> </div>
+							</div>
+												
+													<div class="atrs_tj atrs_tj2" id="tjzz">
+					<h4><span>推荐作者</span><a class="fr" target="_blank" href="author">更多&nbsp;&gt;</a></h4>
+					<div style="overflow:hidden">
+												<div class="atrs_list fl">
+							<div class="tx60"> 
+								<a target="_blank" href="http://sike.news.cn/user?userid=8397800"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/93184181"> 
+								</a> 
+							</div>
+							<a target="_blank" href="http://sike.news.cn/user?userid=8397800">周其仁</a>
+							<p>北京大学国家发展研究院教授</p>
+																<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8397800" href="javascript:void(0);">+ 订阅</a>
+														</div>
+												<div class="atrs_list fl">
+							<div class="tx60"> 
+								<a target="_blank" href="http://sike.news.cn/user?userid=8943626"> 
+									<img src="http://image.sike.news.cn/uploads/2015/08/thumb/1439978469-2973.jpeg"> 
+								</a> 
+							</div>
+							<a target="_blank" href="http://sike.news.cn/user?userid=8943626">柳传志</a>
+							<p>联想控股董事长、联想集团创始人</p>
+																<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8943626" href="javascript:void(0);">+ 订阅</a>
+														</div>
+												<div class="atrs_list fl">
+							<div class="tx60"> 
+								<a target="_blank" href="http://sike.news.cn/user?userid=8299679"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/lidaokui01"> 
+								</a> 
+							</div>
+							<a target="_blank" href="http://sike.news.cn/user?userid=8299679">李稻葵</a>
+							<p>清华大学中国与世界经济研究中心主任</p>
+																<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8299679" href="javascript:void(0);">+ 订阅</a>
+														</div>
+												<div class="atrs_list fl">
+							<div class="tx60"> 
+								<a target="_blank" href="http://sike.news.cn/user?userid=8349865"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/zhengyongnian"> 
+								</a> 
+							</div>
+							<a target="_blank" href="http://sike.news.cn/user?userid=8349865">郑永年</a>
+							<p>新加坡国立大学东亚研究所所长</p>
+																<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8349865" href="javascript:void(0);">+ 订阅</a>
+														</div>
+												<div class="atrs_list fl">
+							<div class="tx60"> 
+								<a target="_blank" href="http://sike.news.cn/user?userid=8246348"> 
+									<img src="http://image.sike.news.cn/uploads/2015/10/thumb/1444906025-252.jpeg"> 
+								</a> 
+							</div>
+							<a target="_blank" href="http://sike.news.cn/user?userid=8246348">马云</a>
+							<p>阿里巴巴创始人</p>
+																<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8246348" href="javascript:void(0);">+ 订阅</a>
+														</div>
+												<div class="atrs_list fl">
+							<div class="tx60"> 
+								<a target="_blank" href="http://sike.news.cn/user?userid=8448396"> 
+									<img src="http://tpic.home.news.cn/userIcon/s/bishumin"> 
+								</a> 
+							</div>
+							<a target="_blank" href="http://sike.news.cn/user?userid=8448396">毕淑敏</a>
+							<p>作家</p>
+																<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8448396" href="javascript:void(0);">+ 订阅</a>
+														</div>
+											</div>
+				</div>
+				<div class="bqconts" id="bqqh">
+					<div class="atrs_hot" role="tabpanel">
+						<ul id="myTab" class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 active"><a href="#hot2" role="tab" id="hot2-tab" data-toggle="tab" aria-controls="hot2" aria-expanded="true">智库报告</a></li>
+							<li role="presentation" class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#hot1" id="hot1-tab" role="tab" data-toggle="tab" aria-controls="hot1" aria-expanded="false">智库推荐</a></li>
+							<li role="presentation" class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#hot3" role="tab" id="hot3-tab" data-toggle="tab" aria-controls="hot3" aria-expanded="false">活动预告</a></li>
+						</ul>
+						<div id="myTabContent" class="tab-content"> 
+							<!-- div bqas -->
+							<div role="tabpanel" class="tab-pane fade in bqas" id="hot1" aria-labelledby="hot1-tab">
+														<a href="http://sike.news.cn/user?userid=8819490" target="_blank">北京大学国家发展研究院</a>
+						<a href="http://sike.news.cn/user?userid=8819487" target="_blank">世界经济论坛</a>
+						<a href="http://sike.news.cn/user?userid=8284658" target="_blank">中国人民大学重阳金融研究院</a>
+						<a href="http://sike.news.cn/user?userid=8246951" target="_blank">盘古智库</a>						
+						<a href="http://sike.news.cn/user?userid=8819494" target="_blank">中国(海南)改革发展研究院</a>
+						<a href="http://sike.news.cn/user?userid=8685447" target="_blank">瞭望智库</a>
+						<a href="http://sike.news.cn/user?userid=8785346" target="_blank">清华大学中国与世界经济研究中心</a>
+						<a href="http://sike.news.cn/user?userid=8819479" target="_blank">中国与全球化智库</a>
+						<a href="http://sike.news.cn/user?userid=8819552" target="_blank">阿里研究院</a>
+						
+																</div>
+							<div role="tabpanel" class="tab-pane fade active in bqlist" id="hot2" aria-labelledby="hot2-tab">
+								 <ol>
+                 <li class="textflow"><span class="img-circle">1</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219436562">智库应如何发出中国声音？</a></li>
+                    <li class="textflow"><span class="img-circle">2</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219389003">指望养老金做接盘侠只是梦一场  </a></li>
+                    <li class="textflow"><span class="img-circle">3</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219264002">如何判断创业者是从0到1，还是从1到N？</a></li>
+                    <li class="textflow"><span class="img-circle">4</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219412175">为什么美国重视中国对美直接投资？</a></li>
+                    <li class="textflow"><span class="img-circle">5</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219398262">成为未来赢家要激发哪些创新潜能？</a></li>
+                
+                </ol>
+							</div>
+							<div role="tabpanel" class="tab-pane fade in" id="hot3" aria-labelledby="hot3-tab">
+								<a href="javascript:void(0);"><img src="http://sike.news.cn/resources/themes/sike/img/bq_ad.jpg"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--normal list end--> 
+				
+				<div id="focus1" class="focus focus2">
+					<div class="swipe1">
+						<ul id="slider1">
+							<li><a href="http://sike.news.cn/hot/zt/zt2015/wangjianlin20150624/index.html" target="_blank"><img alt="" src="http://sike.news.cn/resources/themes/sike/img/img_lb1.jpg" class="img-responsive"></a></li>
+							<li><a href="http://sike.news.cn/hot/zt/zt2015/zy0709/index.html" target="_blank"><img alt="" class="img-responsive" src="http://sike.news.cn/resources/themes/sike/img/img_lb3.jpg"></a></li>
+							<li><a href="http://sike.news.cn/hot/zt/zt2014/sikehui1217/index.html" target="_blank"><img alt="" class="img-responsive" src="http://sike.news.cn/resources/themes/sike/img/img_lb4.jpg"></a></li>
+						</ul>
+						<div id="pagenavi1"> <a class="active" href="javascript:void(0);">1</a> <a href="javascript:void(0);">2</a> <a href="javascript:void(0);">3</a></div>
+					</div>
+				</div>
+				
+				<div class="atrs_tj atrs_tj2" style="padding-top:30px;" id="jcpl">
+					<h4><span>精彩回应</span><!--<a class="fr" href="#">更多&nbsp;&gt;</a>--></h4>
+													<div class="plpart">
+							<div class="atsname">
+															匿名
+																&nbsp;回应于&nbsp;10/28 11:44<br/>
+								<a class="wz_title" target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484041.html">居住证制度，如何释放改革红利？</a>&nbsp;: 
+							</div>
+							<div class="plcont"><a target="_blank" title="从上层管理来说，我相信居住证政策是希望弱化户籍政策。但实际是这样吗？不是，人口政策前两三年已被逼到临界点，但现在大幅缓解了。那么是居住证政策起了实效吗?我想不是，因为没有几个人通过居住证政策得到所谓的人口流动自由。既便居住证政策让个别流动人口获得到当地户口，但他又陷入另一个固化。很多人担心陷入另一个固化会丧失家乡的一些权益，根本不愿放弃这种区域身份固化。他甚至担心在获得当地户籍的同时也丧失了再回家乡做一个普通居民的资格。打破户籍政策是希望打破框框架架，使人员得以自由流动，改户籍并不是为外来人口争福利，为他们争取含金量较高的户籍身份。只有抛弃身份福利看待人口流动利弊，才能真正改革户籍政策。" href="http://sike.news.cn/statics/sike/posts/2015/10/219484041.html#comment">
+							从上层管理来说，我相信居住证政策是希望弱化户籍政策。但实际是这样吗？不是，人口政策前两三年已被逼到临界点，但现在大幅缓解了。那么是居住证政策起了实...<br>							</a></div>
+							</div>
+														<div class="plpart">
+							<div class="atsname">
+															匿名
+																&nbsp;回应于&nbsp;10/25 09:06<br/>
+								<a class="wz_title" target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483701.html">幸福该何处安放，城市还是乡镇？</a>&nbsp;: 
+							</div>
+							<div class="plcont"><a target="_blank" title="幸福取决于你如何看待。城市有城市的优点，但也有缺陷。乡镇有乡镇的长处，但也有弊端。因人而异。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483701.html#comment">
+							幸福取决于你如何看待。城市有城市的优点，但也有缺陷。乡镇有乡镇的长处，但也有弊端。因人而异。<br>							</a></div>
+							</div>
+														<div class="plpart">
+							<div class="atsname">
+															匿名
+																&nbsp;回应于&nbsp;10/25 11:31<br/>
+								<a class="wz_title" target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483957.html">杰里米•里夫金：迈向第三次工业革命和零边际成本时代</a>&nbsp;: 
+							</div>
+							<div class="plcont"><a target="_blank" title="讲得太好了，都说头脑风暴，给我感觉这就是真正的头脑风暴。其实包括作者谈到的物联后的隐私暴露问题都可能并不是问题。既然这是一个担心的问题，那就有人去想法解决这个问题。阳光让一切都可以被照亮，但阳光也不表示就完全不能被遮挡。未来会有人去解决如何随时打开、遮敝的问题 。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483957.html#comment">
+							讲得太好了，都说头脑风暴，给我感觉这就是真正的头脑风暴。其实包括作者谈到的物联后的隐私暴露问题都可能并不是问题。既然这是一个担心的问题，那就有人去...<br>							</a></div>
+							</div>
+														<div class="plpart">
+							<div class="atsname">
+															匿名
+																&nbsp;回应于&nbsp;10/20 10:52<br/>
+								<a class="wz_title" target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483609.html">周牧之：中国的城镇化需要“边动边谋”</a>&nbsp;: 
+							</div>
+							<div class="plcont"><a target="_blank" title="城镇化不能把城市与乡、村割裂开来，要科学规划，形成系统化，应以利于生态化便捷进城为出发点，打破行政区划界限，充分调研，一镇一乡一村一策，从实际具体情况出发，精细化管理。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483609.html#comment">
+							城镇化不能把城市与乡、村割裂开来，要科学规划，形成系统化，应以利于生态化便捷进城为出发点，打破行政区划界限，充分调研，一镇一乡一村一策，从实际具体...<br>							</a></div>
+							</div>
+														<div class="plpart">
+							<div class="atsname">
+															匿名
+																&nbsp;回应于&nbsp;10/18 14:15<br/>
+								<a class="wz_title" target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483577.html">网约车还是个孩子，不应有太多约束</a>&nbsp;: 
+							</div>
+							<div class="plcont"><a target="_blank" title="我是一名老出租车司机，对于网络约车并不抵触。没有创新行业没有发展。问题出租车行业应该从自身管理上打破旧的垄断管理模式，减去不必要公司管理制度，顺应新形势，探索新路。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483577.html#comment">
+							我是一名老出租车司机，对于网络约车并不抵触。没有创新行业没有发展。问题出租车行业应该从自身管理上打破旧的垄断管理模式，减去不必要公司管理制度，顺应...<br>							</a></div>
+							</div>
+														<div class="plpart">
+							<div class="atsname">
+															匿名
+																&nbsp;回应于&nbsp;10/13 16:35<br/>
+								<a class="wz_title" target="_blank" href="http://sike.news.cn/statics/sike/posts/2014/08/218232342.html">青山绿水留不住农民离乡的脚步</a>&nbsp;: 
+							</div>
+							<div class="plcont"><a target="_blank" title="其实笔者看到了农村的现实问题，交通的合理性才是解决新型城镇化农民方便进城，进得去城，回的去照顾老小才是硬道理。现在许多村庄道路建设只是简单的串联起来，没有与现实现状实行村与村，村与镇，村与城的连通，许多被农田水系分割，而农业发展还是粗放式的原来面貌，乡村人力，资金等的缺失，往往使得农业农村农民问题还停留原来的面貌，没有质的进展。" href="http://sike.news.cn/statics/sike/posts/2014/08/218232342.html#comment">
+							其实笔者看到了农村的现实问题，交通的合理性才是解决新型城镇化农民方便进城，进得去城，回的去照顾老小才是硬道理。现在许多村庄道路建设只是简单的串联起...<br>							</a></div>
+							</div>
+														<div class="plpart">
+							<div class="atsname">
+															匿名
+																&nbsp;回应于&nbsp;10/13 10:43<br/>
+								<a class="wz_title" target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html">邱晓华：中国正在积蓄发展的四个新红利</a>&nbsp;: 
+							</div>
+							<div class="plcont"><a target="_blank" title="民族的复兴不仅仅是经济上的崛起，更要有面对困难的智慧和勇气。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html#comment">
+							民族的复兴不仅仅是经济上的崛起，更要有面对困难的智慧和勇气。<br>							</a></div>
+							</div>
+														<div class="plpart">
+							<div class="atsname">
+															匿名
+																&nbsp;回应于&nbsp;10/11 13:36<br/>
+								<a class="wz_title" target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483073.html">管控即瘫痪:“70前”企业家不知道的事</a>&nbsp;: 
+							</div>
+							<div class="plcont"><a target="_blank" title="平衡是运动中的平衡，管控是对运动姿态和方向的调控，扁平是控制系统的结构。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483073.html#comment">
+							平衡是运动中的平衡，管控是对运动姿态和方向的调控，扁平是控制系统的结构。<br>							</a></div>
+							</div>
+														<div class="plpart">
+							<div class="atsname">
+															匿名
+																&nbsp;回应于&nbsp;10/10 11:40<br/>
+								<a class="wz_title" target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483337.html">成不成龙并不重要，孩子的成长没有输赢</a>&nbsp;: 
+							</div>
+							<div class="plcont"><a target="_blank" title="说的很有道理，我们现在的社会，父母恨不得将以前没有实现的梦想都在孩子身上体现出来，又由于就业艰难，还想让孩子出人头地，就不断的压迫、强制，要求，抱着”为你好“的招牌，将孩子的天性、创造力抹杀在摇篮中，还沾沾自喜，可悲啊
+" href="http://sike.news.cn/statics/sike/posts/2015/10/219483337.html#comment">
+							说的很有道理，我们现在的社会，父母恨不得将以前没有实现的梦想都在孩子身上体现出来，又由于就业艰难，还想让孩子出人头地，就不断的压迫、强制，要求，抱...<br>							</a></div>
+							</div>
+											</div>
+				
+				<div class="atrs_tj atrs_tj2" id="dtph">
+					<h4><span>读推排行</span><a class="hidden-xs fr" target="_blank" href="/rank">更多&nbsp;&gt;</a></h4>
+					<div class="ph_list">
+						<ul>
+													
+								<li><span class="img-circle">1</span>
+									<div class="tj_bt"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483084.html" title="“富”了就一定能养好“老”吗？" target="_blank">“富”了就一定能养好“老”吗？</a>
+										<p>Thinker&nbsp;&nbsp;&nbsp;&nbsp;为读者提供最有价值的观点</p>
+									</div>
+								</li>
+							
+														
+								<li><span class="img-circle">2</span>
+									<div class="tj_bt"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219482993.html" title="未来十年实现财富增值的四大“战术”" target="_blank">未来十年实现财富增值的四大“战术”</a>
+										<p>吴晓波&nbsp;&nbsp;&nbsp;&nbsp;财经作家，《吴晓波频道》作者</p>
+									</div>
+								</li>
+							
+														
+								<li><span class="img-circle">3</span>
+									<div class="tj_bt"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483517.html" title="马云：不把村里地主斗死，农民也能富起来" target="_blank">马云：不把村里地主斗死，农民也能富起来</a>
+										<p>马云&nbsp;&nbsp;&nbsp;&nbsp;阿里巴巴创始人</p>
+									</div>
+								</li>
+							
+														
+								<li><span class="img-circle">4</span>
+									<div class="tj_bt"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483548.html" title="辩客丨互联网时代，制造业何去何从？" target="_blank">辩客丨互联网时代，制造业何去何从？</a>
+										<p>思享汇&nbsp;&nbsp;&nbsp;&nbsp;聚焦热点话题，汇集名家思想</p>
+									</div>
+								</li>
+							
+														
+								<li><span class="img-circle">5</span>
+									<div class="tj_bt"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219482910.html" title="这一轮国企改革难在哪儿？" target="_blank">这一轮国企改革难在哪儿？</a>
+										<p>思·锐享&nbsp;&nbsp;&nbsp;&nbsp;为读者提供最有价值的观点</p>
+									</div>
+								</li>
+							
+													</ul>
+					</div>
+					<p><a class="visible-xs fr" target="_blank" href="/rank" style="color:#999;margin-bottom:10px;">更多&nbsp;&gt;</a></p>
+				</div>
+				<div class="pagenum" id="post_pagenum" style="display:none"></div>
+			</div>
+			<!--leftcon end--> 
+		</div>
+		<!--container end--> 
+	</div>
+	
+	<div class="rightcon"><!--rightcon-->
+		
+		<div class="atrs_tj atrs_tj2">
+			<h4><span>推荐作者</span><a target="_blank" href="author" class="fr">更多&nbsp;&gt;</a></h4>
+			<div style="overflow:hidden" id="recommend_author" class="recommend_author">
+								<div class="atrs_list fl">
+					<div class="txAndfloat_view">
+					<div class="tx60"><a href="user?userid=8397800" target="_blank"><img src="http://tpic.home.news.cn/userIcon/s/93184181"></a></div>
+					<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8397800'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/93184181'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8397800'>周其仁</a>
+		<p>28&nbsp;篇</p>
+		<p>北京大学国家发展研究院教授</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483790.html'>周其仁：没有创新能力就没有生存能力</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483603.html'>周其仁：网约车的最大价值在于它的弹性</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483293.html'>周其仁：杜润生给了我们苏格拉底式的教育</a></li></ul></div></div></div> 
+					</div>
+					<a class="textflow" href="user?userid=8397800" target="_blank">周其仁</a>
+					<p>北京大学国家发展研究院教授</p>
+												<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8397800" href="javascript:void(0);">+ 订阅</a>
+										</div>
+								<div class="atrs_list fl">
+					<div class="txAndfloat_view">
+					<div class="tx60"><a href="user?userid=8943626" target="_blank"><img src="/uploads/2015/08/thumb/1439978469-2973.jpeg"></a></div>
+					<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8943626'>
+		<img class='small_author_pic' src='http://image.sike.news.cn/uploads/2015/08/thumb/1439978469-2973.jpeg'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8943626'>柳传志</a>
+		<p>14&nbsp;篇</p>
+		<p>联想控股董事长、联想集团创始人</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/09/219482581.html'>柳传志：创业者不虚心就会犯错</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/08/219481183.html'>柳传志：联想继续创新才能跟上时代的脚步</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/08/219481140.html'>柳传志：众创时代让企业放手去做 释放互联网的潜能</a></li></ul></div></div></div> 
+					</div>
+					<a class="textflow" href="user?userid=8943626" target="_blank">柳传志</a>
+					<p>联想控股董事长、联想集团创始人</p>
+												<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8943626" href="javascript:void(0);">+ 订阅</a>
+										</div>
+								<div class="atrs_list fl">
+					<div class="txAndfloat_view">
+					<div class="tx60"><a href="user?userid=8299679" target="_blank"><img src="http://tpic.home.news.cn/userIcon/s/lidaokui01"></a></div>
+					<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8299679'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/lidaokui01'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8299679'>李稻葵</a>
+		<p>41&nbsp;篇</p>
+		<p>清华大学中国与世界经济研究中心主任</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483471.html'>李稻葵：中国将借“十三五”消灭贫困</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483509.html'>李稻葵：中国经济新增长点怎么“发光”？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483415.html'>李稻葵：未来10年经济回到7%的增长速度没有问题</a></li></ul></div></div></div> 
+					</div>
+					<a class="textflow" href="user?userid=8299679" target="_blank">李稻葵</a>
+					<p>清华大学中国与世界经济研究中心主任</p>
+												<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8299679" href="javascript:void(0);">+ 订阅</a>
+										</div>
+								<div class="atrs_list fl">
+					<div class="txAndfloat_view">
+					<div class="tx60"><a href="user?userid=8349865" target="_blank"><img src="http://tpic.home.news.cn/userIcon/s/zhengyongnian"></a></div>
+					<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8349865'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/zhengyongnian'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8349865'>郑永年</a>
+		<p>32&nbsp;篇</p>
+		<p>新加坡国立大学东亚研究所所长</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483446.html'>郑永年：谁才是中国的“出类拔萃之辈”？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/08/219481448.html'>郑永年：美国为什么“恐惧”中国</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/08/219479520.html'>文化的“巫术化”为何让精英阶层如此焦虑</a></li></ul></div></div></div> 
+					</div>
+					<a class="textflow" href="user?userid=8349865" target="_blank">郑永年</a>
+					<p>新加坡国立大学东亚研究所所长</p>
+												<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8349865" href="javascript:void(0);">+ 订阅</a>
+										</div>
+								<div class="atrs_list fl">
+					<div class="txAndfloat_view">
+					<div class="tx60"><a href="user?userid=8246348" target="_blank"><img src="/uploads/2015/10/thumb/1444906025-252.jpeg"></a></div>
+					<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8246348'>
+		<img class='small_author_pic' src='http://image.sike.news.cn/uploads/2015/10/thumb/1444906025-252.jpeg'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8246348'>马云</a>
+		<p>40&nbsp;篇</p>
+		<p>阿里巴巴创始人</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219484018.html'>马云：低端制造业不继续下滑，中国没有机会</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/10/219483517.html'>马云：不把村里地主斗死，农民也能富起来</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/09/219482604.html'>马云：企业家过早“裸捐”对国家没有好处</a></li></ul></div></div></div> 
+					</div>
+					<a class="textflow" href="user?userid=8246348" target="_blank">马云</a>
+					<p>阿里巴巴创始人</p>
+												<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8246348" href="javascript:void(0);">+ 订阅</a>
+										</div>
+								<div class="atrs_list fl">
+					<div class="txAndfloat_view">
+					<div class="tx60"><a href="user?userid=8448396" target="_blank"><img src="http://tpic.home.news.cn/userIcon/s/bishumin"></a></div>
+					<div class='yin_tx' id='floatview' style='display:none'>
+		<div class='txsh60'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8448396'>
+		<img class='small_author_pic' src='http://tpic.home.news.cn/userIcon/s/bishumin'>
+		</a>
+		<div class='urinfor'>
+		<a target='_blank' href='http://sike.news.cn/user?userid=8448396'>毕淑敏</a>
+		<p>9&nbsp;篇</p>
+		<p>作家</p>
+		</div><div><ul><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/07/219441950.html'>斜眼看人是一种病</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/06/219299951.html'>你站在金字塔的第几层？</a></li><li class='textflow'> <a target='_blank' href='http://sike.news.cn/statics/sike/posts/2015/05/219189502.html'>幸福需要恰到好处</a></li></ul></div></div></div> 
+					</div>
+					<a class="textflow" href="user?userid=8448396" target="_blank">毕淑敏</a>
+					<p>作家</p>
+												<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8448396" href="javascript:void(0);">+ 订阅</a>
+										</div>
+							</div>
+			<div class="pagenum" id="author_pagenum" style="margin:30px auto 0"></div>
+		</div>
+		<div class="bqconts">
+			<div class="atrs_hot" role="tabpanel" >
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 active"><a href="#home1" role="tab" id="home1-tab" data-toggle="tab" aria-controls="home1" aria-expanded="true">智库报告</a></li>
+					<li role="presentation" class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="false">智库推荐</a></li>
+					<li role="presentation" class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a href="#home2" role="tab" id="profile-tab" data-toggle="tab" aria-controls="home2" aria-expanded="false">活动预告</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in bqas" id="home" aria-labelledby="home-tab">
+												<a href="http://sike.news.cn/user?userid=8819490" target="_blank">北京大学国家发展研究院</a>
+						<a href="http://sike.news.cn/user?userid=8819487" target="_blank">世界经济论坛</a>
+						<a href="http://sike.news.cn/user?userid=8284658" target="_blank">中国人民大学重阳金融研究院</a>
+						<a href="http://sike.news.cn/user?userid=8246951" target="_blank">盘古智库</a>						
+						<a href="http://sike.news.cn/user?userid=8819494" target="_blank">中国(海南)改革发展研究院</a>
+						<a href="http://sike.news.cn/user?userid=8685447" target="_blank">瞭望智库</a>
+						<a href="http://sike.news.cn/user?userid=8785346" target="_blank">清华大学中国与世界经济研究中心</a>
+						<a href="http://sike.news.cn/user?userid=8819479" target="_blank">中国与全球化智库</a>
+						<a href="http://sike.news.cn/user?userid=8819552" target="_blank">阿里研究院</a>
+											</div>
+					<div role="tabpanel" class="tab-pane fade active in bqlist" id="home1" aria-labelledby="home1-tab">
+						 <ol>
+                 <li class="textflow"><span class="img-circle">1</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219436562" target="_blank">智库应如何发出中国声音？</a></li>
+                    <li class="textflow"><span class="img-circle">2</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219389003" target="_blank">指望养老金做接盘侠只是梦一场 </a></li>
+                    <li class="textflow"><span class="img-circle">3</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219264002" target="_blank">如何判断创业者是从0到1，还是从1到N？</a></li>
+                    <li class="textflow"><span class="img-circle">4</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219412175" target="_blank">为什么美国重视中国对美直接投资？</a></li>
+                    <li class="textflow"><span class="img-circle">5</span><a href="http://sike.news.cn/article.do?action=articleDetail&id=219398262" target="_blank">成为未来赢家要激发哪些创新潜能？</a></li>
+                
+                </ol>
+					</div>
+					<div role="tabpanel" class="tab-pane fade in" id="home2" aria-labelledby="home2-tab">
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/07/219478976.html"><img src="http://sike.news.cn/resources/themes/sike/img/bq_ad.jpg"></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="focus" id="focus">
+			<div class="swipe">
+				<ul id="slider">
+					<li style="display:block"><a href="http://sike.news.cn/hot/zt/zt2015/wangjianlin20150624/index.html" target="_blank"><img src="http://sike.news.cn/resources/themes/sike/img/img_lb1.jpg" alt=""/></a></li>
+					<li><a href="http://sike.news.cn/hot/zt/zt2015/zy0709/index.html" target="_blank"><img src="http://sike.news.cn/resources/themes/sike/img/img_lb3.jpg" alt="" /></a></li>
+					<li><a href="http://sike.news.cn/hot/zt/zt2014/sikehui1217/index.html" target="_blank"><img src="http://sike.news.cn/resources/themes/sike/img/img_lb4.jpg" alt="" /></a></li>
+				</ul>
+				<div id="pagenavi" class="pagenavi"> <a href="javascript:void(0);" class="active">1</a> <a href="javascript:void(0);">2</a> <a href="javascript:void(0);">3</a></div>
+			</div>
+		</div>
+		
+		<div class="atrs_tj atrs_tj2">
+			<h4><span>精彩回应</span></h4>
+									<div class="plpart">
+					<div class="atsname">
+													匿名
+												&nbsp;回应于&nbsp;10/28 11:44<br/>
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219484041.html" class="wz_title" target="_blank">居住证制度，如何释放改革红利？</a>&nbsp;: 
+					</div>
+					<div class="plcont"><a target="_blank" title="从上层管理来说，我相信居住证政策是希望弱化户籍政策。但实际是这样吗？不是，人口政策前两三年已被逼到临界点，但现在大幅缓解了。那么是居住证政策起了实效吗?我想不是，因为没有几个人通过居住证政策得到所谓的人口流动自由。既便居住证政策让个别流动人口获得到当地户口，但他又陷入另一个固化。很多人担心陷入另一个固化会丧失家乡的一些权益，根本不愿放弃这种区域身份固化。他甚至担心在获得当地户籍的同时也丧失了再回家乡做一个普通居民的资格。打破户籍政策是希望打破框框架架，使人员得以自由流动，改户籍并不是为外来人口争福利，为他们争取含金量较高的户籍身份。只有抛弃身份福利看待人口流动利弊，才能真正改革户籍政策。" href="http://sike.news.cn/statics/sike/posts/2015/10/219484041.html#comment">
+					从上层管理来说，我相信居住证政策是希望弱化户籍政策。但实际是这样吗？不是，人口政策前两三年已被逼到临界点，但现在大幅缓解了。那么是居住证政策起了实...<br>					</a><br></div>
+					</div>
+										<div class="plpart">
+					<div class="atsname">
+													匿名
+												&nbsp;回应于&nbsp;10/25 09:06<br/>
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483701.html" class="wz_title" target="_blank">幸福该何处安放，城市还是乡镇？</a>&nbsp;: 
+					</div>
+					<div class="plcont"><a target="_blank" title="幸福取决于你如何看待。城市有城市的优点，但也有缺陷。乡镇有乡镇的长处，但也有弊端。因人而异。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483701.html#comment">
+					幸福取决于你如何看待。城市有城市的优点，但也有缺陷。乡镇有乡镇的长处，但也有弊端。因人而异。<br>					</a><br></div>
+					</div>
+										<div class="plpart">
+					<div class="atsname">
+													匿名
+												&nbsp;回应于&nbsp;10/25 11:31<br/>
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483957.html" class="wz_title" target="_blank">杰里米•里夫金：迈向第三次工业革命和零边际成本时代</a>&nbsp;: 
+					</div>
+					<div class="plcont"><a target="_blank" title="讲得太好了，都说头脑风暴，给我感觉这就是真正的头脑风暴。其实包括作者谈到的物联后的隐私暴露问题都可能并不是问题。既然这是一个担心的问题，那就有人去想法解决这个问题。阳光让一切都可以被照亮，但阳光也不表示就完全不能被遮挡。未来会有人去解决如何随时打开、遮敝的问题 。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483957.html#comment">
+					讲得太好了，都说头脑风暴，给我感觉这就是真正的头脑风暴。其实包括作者谈到的物联后的隐私暴露问题都可能并不是问题。既然这是一个担心的问题，那就有人去...<br>					</a><br></div>
+					</div>
+										<div class="plpart">
+					<div class="atsname">
+													匿名
+												&nbsp;回应于&nbsp;10/20 10:52<br/>
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483609.html" class="wz_title" target="_blank">周牧之：中国的城镇化需要“边动边谋”</a>&nbsp;: 
+					</div>
+					<div class="plcont"><a target="_blank" title="城镇化不能把城市与乡、村割裂开来，要科学规划，形成系统化，应以利于生态化便捷进城为出发点，打破行政区划界限，充分调研，一镇一乡一村一策，从实际具体情况出发，精细化管理。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483609.html#comment">
+					城镇化不能把城市与乡、村割裂开来，要科学规划，形成系统化，应以利于生态化便捷进城为出发点，打破行政区划界限，充分调研，一镇一乡一村一策，从实际具体...<br>					</a><br></div>
+					</div>
+										<div class="plpart">
+					<div class="atsname">
+													匿名
+												&nbsp;回应于&nbsp;10/18 14:15<br/>
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483577.html" class="wz_title" target="_blank">网约车还是个孩子，不应有太多约束</a>&nbsp;: 
+					</div>
+					<div class="plcont"><a target="_blank" title="我是一名老出租车司机，对于网络约车并不抵触。没有创新行业没有发展。问题出租车行业应该从自身管理上打破旧的垄断管理模式，减去不必要公司管理制度，顺应新形势，探索新路。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483577.html#comment">
+					我是一名老出租车司机，对于网络约车并不抵触。没有创新行业没有发展。问题出租车行业应该从自身管理上打破旧的垄断管理模式，减去不必要公司管理制度，顺应...<br>					</a><br></div>
+					</div>
+										<div class="plpart">
+					<div class="atsname">
+													匿名
+												&nbsp;回应于&nbsp;10/13 16:35<br/>
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2014/08/218232342.html" class="wz_title" target="_blank">青山绿水留不住农民离乡的脚步</a>&nbsp;: 
+					</div>
+					<div class="plcont"><a target="_blank" title="其实笔者看到了农村的现实问题，交通的合理性才是解决新型城镇化农民方便进城，进得去城，回的去照顾老小才是硬道理。现在许多村庄道路建设只是简单的串联起来，没有与现实现状实行村与村，村与镇，村与城的连通，许多被农田水系分割，而农业发展还是粗放式的原来面貌，乡村人力，资金等的缺失，往往使得农业农村农民问题还停留原来的面貌，没有质的进展。" href="http://sike.news.cn/statics/sike/posts/2014/08/218232342.html#comment">
+					其实笔者看到了农村的现实问题，交通的合理性才是解决新型城镇化农民方便进城，进得去城，回的去照顾老小才是硬道理。现在许多村庄道路建设只是简单的串联起...<br>					</a><br></div>
+					</div>
+										<div class="plpart">
+					<div class="atsname">
+													匿名
+												&nbsp;回应于&nbsp;10/13 10:43<br/>
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html" class="wz_title" target="_blank">邱晓华：中国正在积蓄发展的四个新红利</a>&nbsp;: 
+					</div>
+					<div class="plcont"><a target="_blank" title="民族的复兴不仅仅是经济上的崛起，更要有面对困难的智慧和勇气。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483363.html#comment">
+					民族的复兴不仅仅是经济上的崛起，更要有面对困难的智慧和勇气。<br>					</a><br></div>
+					</div>
+										<div class="plpart">
+					<div class="atsname">
+													匿名
+												&nbsp;回应于&nbsp;10/11 13:36<br/>
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483073.html" class="wz_title" target="_blank">管控即瘫痪:“70前”企业家不知道的事</a>&nbsp;: 
+					</div>
+					<div class="plcont"><a target="_blank" title="平衡是运动中的平衡，管控是对运动姿态和方向的调控，扁平是控制系统的结构。" href="http://sike.news.cn/statics/sike/posts/2015/10/219483073.html#comment">
+					平衡是运动中的平衡，管控是对运动姿态和方向的调控，扁平是控制系统的结构。<br>					</a><br></div>
+					</div>
+										<div class="plpart">
+					<div class="atsname">
+													匿名
+												&nbsp;回应于&nbsp;10/10 11:40<br/>
+						<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483337.html" class="wz_title" target="_blank">成不成龙并不重要，孩子的成长没有输赢</a>&nbsp;: 
+					</div>
+					<div class="plcont"><a target="_blank" title="说的很有道理，我们现在的社会，父母恨不得将以前没有实现的梦想都在孩子身上体现出来，又由于就业艰难，还想让孩子出人头地，就不断的压迫、强制，要求，抱着”为你好“的招牌，将孩子的天性、创造力抹杀在摇篮中，还沾沾自喜，可悲啊
+" href="http://sike.news.cn/statics/sike/posts/2015/10/219483337.html#comment">
+					说的很有道理，我们现在的社会，父母恨不得将以前没有实现的梦想都在孩子身上体现出来，又由于就业艰难，还想让孩子出人头地，就不断的压迫、强制，要求，抱...<br>					</a><br></div>
+					</div>
+							</div>
+		
+		<div class="atrs_tj atrs_tj2" id="rank-list">
+			<h4><span>读推排行</span><a target="_blank" href="/rank" class="fr">更多&nbsp;&gt;</a></h4>
+			<div class="ph_list">
+				<ul>
+									<li><span class="img-circle">1</span>
+						<div class="fl tj_bt textflow"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483084.html" target="_blank" title="“富”了就一定能养好“老”吗？">“富”了就一定能养好“老”吗？</a>
+							<p class="textflow">Thinker&nbsp;&nbsp;&nbsp;&nbsp;为读者提供最有价值的观点</p>
+						</div>
+					</li>
+									<li><span class="img-circle">2</span>
+						<div class="fl tj_bt textflow"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219482993.html" target="_blank" title="未来十年实现财富增值的四大“战术”">未来十年实现财富增值的四大“战术”</a>
+							<p class="textflow">吴晓波&nbsp;&nbsp;&nbsp;&nbsp;财经作家，《吴晓波频道》作者</p>
+						</div>
+					</li>
+									<li><span class="img-circle">3</span>
+						<div class="fl tj_bt textflow"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483517.html" target="_blank" title="马云：不把村里地主斗死，农民也能富起来">马云：不把村里地主斗死，农民也能富起来</a>
+							<p class="textflow">马云&nbsp;&nbsp;&nbsp;&nbsp;阿里巴巴创始人</p>
+						</div>
+					</li>
+									<li><span class="img-circle">4</span>
+						<div class="fl tj_bt textflow"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219483548.html" target="_blank" title="辩客丨互联网时代，制造业何去何从？">辩客丨互联网时代，制造业何去何从？</a>
+							<p class="textflow">思享汇&nbsp;&nbsp;&nbsp;&nbsp;聚焦热点话题，汇集名家思想</p>
+						</div>
+					</li>
+									<li><span class="img-circle">5</span>
+						<div class="fl tj_bt textflow"> <a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/10/219482910.html" target="_blank" title="这一轮国企改革难在哪儿？">这一轮国企改革难在哪儿？</a>
+							<p class="textflow">思·锐享&nbsp;&nbsp;&nbsp;&nbsp;为读者提供最有价值的观点</p>
+						</div>
+					</li>
+								</ul>
+			</div>
+			<div class="atrs_join" id="atrs_join">
+	<p class="btmline"> 
+		<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/07/219478973.html#joinus">加入思客</a> 
+		<a target="_blank" href="http://www.xinhuanet.com/jsfw/index.html">帮助</a> 
+		<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/07/219478973.html#contactus">联系我们</a> 
+		<a target="_blank" href="http://sike.news.cn/statics/sike/posts/2015/07/219478973.html#aboutus">关于思客</a>
+	</p>
+	<p><span class="fr">新华网社交网络中心出品</span><i class="fr"></i></p>
+</div>		</div>
+		
+	</div>
+	<!--rightcon end--> 
+	
+</div>
+
+<!-- 帮助弹窗 -->
+<div style="display:none;" class="black-overlay" id="gray gray_help">
+
+<div class="hidden-xs" style="display:block;" id="lb_guide">
+ 
+<div role="alert" class="alert alert-dismissible fade in lb_edit login hidden-xs">
+	
+    <button aria-label="Close" id="help_close" data-dismiss="alert" class="close" type="button"><span aria-hidden="true" data-icon=""></span></button>
+   
+    	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+       
+  <!-- Indicators -->
+
+ <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active"><h4><span>1</span>登录思客，您可以“稍后阅读”欣赏的文章，将它收藏。</h4><img src="http://sike.news.cn/resources/themes/sike/img/lbm1.jpg" alt=""></div>
+    <div class="item"><h4><span>2</span>在笔迹中,书签有您的收藏记录。</h4><img src="http://sike.news.cn/resources/themes/sike/img/lbm2.jpg" alt=""></div>
+     <div class="item"><h4><span>3</span>如果您是<b>作者身份</b>，您可以畅享新版文章发表功能!</h4><img src="http://sike.news.cn/resources/themes/sike/img/lbm3.jpg" alt=""></div>
+      <div class="item"><h4><span>4</span>您还可以订阅感兴趣的思享汇和作者啦！</h4><img src="http://sike.news.cn/resources/themes/sike/img/lbm4.jpg" alt=""></div>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"> <img src="http://sike.news.cn/resources/themes/sike/img/arrow_left0.png" alt=""></span>
+   
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><img src="http://sike.news.cn/resources/themes/sike/img/arrow_right2.png" alt=""></span>
+   
+  </a>
+</div>
+
+</div>
+</div>
+</div>
+
+<script>
+				
+
+var user_is_login =  '';
+
+// $.cookie('ak-1','eyJ1c2VySUQiOjEwMzYyNDk0Nn0=');
+
+var thrid_login_str = $.cookie('ak-1');
+var is_third_login = $.cookie('is_third_login');
+
+if(typeof(thrid_login_str) != "undefined" 
+		&& !user_is_login
+		&& is_third_login != "1" ){
+	var value = $.base64.decode(thrid_login_str);
+	var dataobj=eval("("+value+")");
+	var userid = dataobj.userID;
+
+	var username = userid;
+	var password = userid;
+	
+	$.ajax({
+		type: 'POST',
+		url: ajaxurl,
+		data: {
+			action: 'third_user_signon',
+			username: userid,
+			password: userid
+		},
+		dataType: 'json',
+		success: function(res) {
+			if (res.code == 0) {
+				location.reload();
+			}
+		}
+	});
+	
+}
+
+// alert(userid);
+
+</script>
+
+<div style="display:none"><div id="fwl">010020040520000000000000011200000000000000</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020040520000000000000011200000000000000")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020040520000000000000011200000000000000" border="0" /></noscript></div>﻿<div class="footer">
+版权所有 © 2000 - 2015 XINHUANET.com 新华网<br />
+</div> 
+
+<div class="fd_btns" id="back-to-top">
+	<a href="javascript:void(0)" id="footer_bookmark" rel="1" class="read" title="书签"><i>我的书签</i></a>
+	<a href="#totop" id="backtop"><img src="http://sike.news.cn/resources/themes/sike/img/btn_back.png"></a>
+    <a id="smgz"><img src="http://sike.news.cn/resources/themes/sike/img/btn_ewm.png"></a>
+    <div class="yin_ewm" id="yin_ewm" >
+    	<p>扫码关注<span class="bltxt">思客</span></p>
+        <img src="http://sike.news.cn/resources/themes/sike/img/img_ewm.jpg">
+    </div>
+</div>
+
+<div style="display:none; cursor:pointer;" role="alert" class="alert alert-warning alertnew" id="show_add_bookmark" onclick="window.location='/handwriting';">
+	<span style=" font-size:16px;line-height:1.42857">
+	书签+1</span>
+</div> 
+
+<script>
+function toggleWindow(windowID, windowHide){
+	if (windowHide) {
+		$('#' + windowHide).hide();
+	}
+// 	$('#' + windowID).toggle();
+	$('#' + windowID).toggle(0, function() {
+// 		$('input').placeholder();
+	});
+	return false;
+}
+
+</script>
+
+<script>
+function toQzoneLogin()
+{
+	var protocol = window.location.protocol;
+	var host = window.location.host;
+	var A=window.open(protocol + "//" +host+"/resources/mods/sike-third/qq/oauth/qq_login.php","TencentLogin","width=450,height=320,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+} 
+</script>
+
+<div id='popup_error_box' class="black-overlay" id="" style="display:none;">
+	<div style="display: block;" id="tan_tz" class="tongz">
+      <div class="close">
+              	<i onclick="toggleWindow('popup_error_box')"></i>
+              </div>
+    <h4>提示信息</h4>
+    	<div style="display:block;" class="div_tongz">
+        	
+            <p id="popup_msg_content">服务异常</p>
+             <div class=" btns_div">
+             <a class="btn_submit" id="popup_msg_ok" href="#">确定</a>
+             <a class="btn_cancel" id="popup_msg_cancel" href="#">取消</a>
+             
+             </div>
+            
+           
+        </div>
+    </div>
+</div>
+
+<!--登录窗口-->
+<div id='login_msg_box' class="black-overlay" style="display:none;">
+	<!--main-->
+	<div id="login_frame1" style="margin-top:-215px;display:block;">
+    	<div class="col-lg-12 col-md-12 col-xs-8 col-sm-8 login" style="display:block;">
+        	<div class="holder">
+            
+               <div class="logo3"><img src="http://sike.news.cn/resources/themes/sike/img/logo3.jpg"></div>
+                <form class="mail-login" method="post" id="user_login_form" action="">
+                	<input type="hidden" name="redirect_to" value="http://sike.news.cn" />
+                	<input class="clear-input" type="text" placeholder="注册邮箱/用户名" name="log" id="login_username">
+                    <input class="clear-input" type="password" placeholder="密码" name="pwd" id="login_password" autocomplete="off">
+                    <label><input class="fl" name="rememberme" type="checkbox" id="login_save_password" value="forever">记住密码</label>
+                  	<a class="btn_submit" id="do_login" onclick="return false;" href="#">
+						登录思客
+					</a>
+                </form>
+                
+                <div class="with-line">使用第三方帐号登录</div>
+                <div class="buttons">
+            		<a class="weibo" rel="nofollow" title="新浪微博帐号登录" href="https://api.weibo.com/oauth2/authorize?client_id=3583909335&redirect_uri=http%3A%2F%2Fsike.news.cn%2Fresources%2Fmods%2Fsike-third%2Fsina%2Fcallback.php&response_type=code"></a>
+ 					<a class="qzone" rel="nofollow" title="腾讯QQ帐号登录" href="#" onclick='toQzoneLogin()'></a>
+              	</div>
+              	 
+                <div class="switch-back">
+                 	<a class="reset-password" href="http://login.home.news.cn/getPwd.do">忘记密码&gt;&gt;</a>
+                    还没有思客帐号？
+					<a href="javascript:void(0)" onClick="toggleWindow('register_user_box', 'login_msg_box')">点击注册&gt;&gt;</a>
+                    <div style="clear:both;"></div>
+                </div>    
+              </div>
+              <div class="close">
+              	<i class="popups_action_btn" onclick="toggleWindow('login_msg_box');return false" rel="login_msg_box"></i>
+              </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <!--main over-->
+</div>
+
+<div id='forget_password_box' class="black-overlay" style="display:none;">
+    <!--找回密码-->
+    <div id="login_frame2" style="height:auto; margin-top: -137px;display:none;">
+    	<div class="holder">
+        	<div class="with-line">找回密码</div>
+            <div class="reset" style="display: block;">
+            	<form class="reset-form">
+        			<p><input class="clear-input" type="password" placeholder="注册邮箱" name="email" style="margin-bottom:10px;width:100%;"><i data-icon="&#xe603;" class="red"></i></p>
+                     <p class="red">邮箱格式不正确</p>
+                      <div><input class="clear-input input-captcha" type="text" placeholder="验证码" name="email">
+                      
+                    <a class="captcha" title="换一个">
+                    <!-- 	<img src="http://sike.news.cn/resources/themes/sike/img/ValidatorCode.php.png"><i data-icon="&#xe603;" class="red"></i> -->
+                    </a></div>
+                    
+                     <p class="red">验证码不正确</p>
+        			<p><a class="btn_submit" onclick="return false;" href="#">
+						找回密码
+					</a></p>
+            	</form>
+                <a class="back" onClick="toggleWindow('login_frame1')">想起来了&gt;&gt;</a>
+            </div>    
+        </div>
+    	<div class="close">
+              	<i onClick="toggleWindow()"></i>
+        </div>
+    </div>
+    <!--找回密码 over-->
+</div>
+
+
+<div id='register_user_box' class="black-overlay" style="display:none;">
+    <!--注册-->
+  
+    <!--使用邮箱注册-->
+    <div id="login_frame4" style="margin-top:-215px;">
+    	<div class="col-lg-12 col-md-12 col-xs-8 col-sm-8 login" style="display:block;">
+        	<div class="holder">
+            	<div class="with-line">使用邮箱注册</div>
+                 <form class="mail-login">
+                	<p><input class="clear-input" type="text" placeholder="邮箱" name="email" id="register_email" rel="email">
+                		<i data-icon="&#xe603;" id="register_email_errico" class="red" style="display:none;"></i>
+                		<i data-icon="&#xe602;" id="register_email_succico" class="green" style="display:none;"></i>
+                	</p>
+                    <p class="red" id="register_email_tips" style="display:none;">邮箱格式不正确</p>
+                    
+                    <p><input class="clear-input" type="text" placeholder="用户名" name="username" id="register_username" rel="username">
+                    	<i data-icon="&#xe603;" id="register_username_errico" class="red" style="display:none;"></i>
+                    	<i data-icon="&#xe602;" id="register_username_succico" class="green" style="display:none;"></i>
+                    </p>
+                    <p class="red" id="register_username_tips" style="display:none;">已存在该用户</p>
+                    
+                    <p><input class="clear-input" type="password" placeholder="密码" name="password" id="register_password" rel="password" autocomplete="off">
+                    	<i data-icon="&#xe603;" id="register_password_errico" class="red" style="display:none;"></i>
+                    	<i data-icon="&#xe602;" id="register_password_succico" class="green" style="display:none;"></i>
+                    </p>
+                    <p class="red" id="register_password_tips" style="display:none;">已存在该用户</p>
+                    
+                    <p><input class="clear-input" type="password" placeholder="确认密码" name="check_password" id="register_check_password" autocomplete="off">
+                    	<i data-icon="&#xe603;" id="register_check_password_errico" class="red" style="display:none;"></i>
+                    	<i data-icon="&#xe602;" id="register_check_password_succico" class="green" style="display:none;"></i>
+                    </p>
+                    <p class="red" id="register_check_password_tips" style="display:none;">已存在该用户</p>
+                    
+                    
+                    <div>
+                    <p><input class="clear-input input-captcha" id="register_captcha" type="text" placeholder="验证码" name="yzm">
+                    <a class="captcha" title="换一个">
+                    	<img src="/captcha/captcha.php"><!-- <i data-icon="&#xe602;" class="green"> --></i>
+                    </a></p></div>
+                   
+                    <p class="red" style="display:none">验证码不正确</p>
+                  	<p><a class="btn_submit" onclick="return false;" id="register_new_user" href="#">
+						注册
+					</a></p>
+                </form>
+                <div class="switch-back">
+                 	<a class="reset-password" href="javascript:void(0)" onClick="toggleWindow('login_msg_box', 'register_user_box');">返回登录&gt;&gt;</a>
+					
+                    <div style="clear:both;"></div>
+                </div>    
+              </div>
+              <div class="close">
+              	<i onClick="toggleWindow('register_user_box');return false;"></i>
+              </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <!--使用邮箱注册 over-->
+</div>
+
+
+<div id='ord_guide_box' class="black-overlay" style="display:none;">
+<!--订阅引导-->
+ <div id='ord_guide'>
+    
+    	<div class="col-lg-12 col-md-12 col-xs-8 col-sm-8 login">
+        	<div class="holder">
+            
+              <h4>思客欢迎您，请挑选您感兴趣的<span class="bltxt">思享汇</span>吧！</h4>
+              
+              <div aria-labelledby="home-tab" id="home" class="tab-pane fade in bqas active" role="tabpanel">
+            
+        	
+        	        		<a href="javascript:;" class="set_order_category" data="657">互联网</a>
+        		        		<a href="javascript:;" class="set_order_category" data="649">体育</a>
+        		        		<a href="javascript:;" class="set_order_category" data="656">军事</a>
+        		        		<a href="javascript:;" class="set_order_category" data="652">历史</a>
+        		        		<a href="javascript:;" class="set_order_category" data="647">国际</a>
+        		        		<a href="javascript:;" class="set_order_category" data="651">娱乐</a>
+        		        		<a href="javascript:;" class="set_order_category" data="648">媒体融合</a>
+        		        		<a href="javascript:;" class="set_order_category" data="659">征文</a>
+        		        		<a href="javascript:;" class="set_order_category" data="653">情感</a>
+        		        		<a href="javascript:;" class="set_order_category" data="650">教育</a>
+        		        		<a href="javascript:;" class="set_order_category" data="640">文化</a>
+        		        		<a href="javascript:;" class="set_order_category" data="663">智库报告</a>
+        		        		<a href="javascript:;" class="set_order_category" data="646">楼市</a>
+        		        		<a href="javascript:;" class="set_order_category" data="643">法治</a>
+        		        		<a href="javascript:;" class="set_order_category" data="654">演讲</a>
+        		        		<a href="javascript:;" class="set_order_category" data="658">热点</a>
+        		        		<a href="javascript:;" class="set_order_category" data="662">自媒体</a>
+        		        		<a href="javascript:;" class="set_order_category" data="639">财经</a>
+        		        	</div>
+               <div class="btn_more"><a href="javascript:;" id="order_category_submit">完成</a></div>
+                
+              </div>
+              <div class="close">
+              	<i id="close_ord_guide_box"></i>
+              </div>
+            <div style="clear:both;"></div>
+        </div>
+</div><!--订阅引导 ending-->
+</div> 
+ 
+         <!--幻灯片-->
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/touchScroll.js"></script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/touchslider.dev.js"></script>
+<script>
+function editor(){
+// 	document.getElementById("readers").className='';
+// 	document.getElementById("editor_chie").className='now';
+// 	document.getElementById("subscription").className='';
+
+	$('#readers').removeClass('now');
+	$('#editor_chie').addClass('now');
+	$('#subscription').removeClass('now');
+	
+	$('.editor').show();
+	$('.reader').hide();
+	$('.subscription').hide();
+	$('#sub_btn_more').hide();
+}
+function reader(){
+// 	document.getElementById("editor_chie").className='';
+// 	document.getElementById("readers").className='now';
+// 	document.getElementById("subscription").className='';
+
+	$('#editor_chie').removeClass('now');
+	$('#readers').addClass('now');
+	$('#subscription').removeClass('now');
+
+	$('.reader').show();
+	$('.editor').hide();
+	$('.subscription').hide();
+	$('#sub_btn_more').hide();
+}
+function subscribe(){
+// 	document.getElementById("editor_chie").className=''
+// 	document.getElementById("readers").className=''
+// 	document.getElementById("subscription").className='now';
+
+	$('#editor_chie').removeClass('now');
+	$('#subscription').addClass('now');
+	$('#readers').removeClass('now');
+
+	$('.reader').hide();
+	$('.editor').hide();
+	$('.subscription').show();
+	$('#sub_btn_more').show();
+}
+
+</script>
+<script type="text/javascript">
+     var active=0,
+	as = $('#pagenavi a');
+
+	//var t1=new TouchScroll({id:'wrapper','width':5,'opacity':0.7,color:'#555',minLength:20});
+
+    var t2=new TouchSlider({id:'slider', speed:600, timeout:6000, before:function(index){
+		as[active].className='';
+		active=index;
+		as[active].className='active';
+	}});
+
+	for(var i=0;i<as.length;i++){	
+		(function(){
+			var j=i;
+			as[i].onclick=function(){
+				t2.slide(j);
+				return false;
+			}
+		})();
+
+
+		//alert(as[i].innerHTML);
+	}
+
+
+  var active1=0,
+	as1 = $('#pagenavi1 a');
+
+	var t3=new TouchSlider({id:'slider1', speed:600, timeout:6000, before:function(index){
+			as1[active1].className='';
+			active1=index;
+			as1[active1].className='active';
+		}});
+
+
+	for(var i=0;i<as1.length;i++){
+		//alert(as[i].html());
+
+		(function(){
+			var j=i;
+			as1[i].onclick=function(){
+				t3.slide(j);
+				return false;
+			}
+		})();
+	}
+	
+</script> 
+<script type="text/javascript">
+$(document).ready(
+	function () {
+		$('#smgz').click(function(){	
+			if(document.getElementById("yin_ewm").style.display=="block"){
+				$(".yin_ewm").css("display","none");
+			}
+			else{
+				$(".yin_ewm").css("display","block");
+			}
+		});
+
+
+		var is_login =  '';
+		
+		$('#footer_bookmark').click(function(){
+			if(is_login){
+				var url =  "http://"+window.location.host+"/handwriting";
+				 window.location.href=url;
+			}else{
+				showMsgBox('您尚未登录，请登录后进行操作', {
+					ok: function () {
+						toggleWindow('login_msg_box', 'popup_error_box');
+						return false;
+					},
+					cancel: function () {
+						toggleWindow('popup_error_box');
+						return false;
+					}
+				});
+			}
+		});
+		
+		
+	})
+	
+
+</script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/bootstrap-ie.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    
+    <title>Support Center</title>
+     <style type="text/css">
+        .resizing
+        {
+            background-color: #E0E0E0;
+        }
+        
+        #resize_table  th
+        {
+            cursor: w-resize;        
+        }
+        #resize_table  th.unselectable::selection { background: transparent; }
+        #resize_table  th.unselectable::-moz-selection { background: transparent; }
+        .unselectable
+        {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -o-user-select:none;
+        }
+        select 
+        {
+            background-color: inherit;
+        }
+    </style>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<script type="text/javascript" src="https://services.acs.org/flXHR/flXHR.js"></script>
+<script type="text/javascript" src="https://services.acs.org/pubshelp/jquery-combo-flensed.js"></script>
+<script type="text/javascript" src="https://services.acs.org/pubshelp/Portal/js/main_help.js"></script>    <link type="text/css" rel="stylesheet" href="/ics/support/accounts/9131/9131_nf_style.css">
+
+    <!-- YUI -->
+    <link rel="stylesheet" type="text/css" href="/ics/support/inc/yui/build/treeview/assets/skins/sam/treeview.css?ver=Spring+%2709" />
+    <script type="text/javascript" src="https://az686636.vo.msecnd.net/yui/yahoo-dom-event.js""></script>
+    <script type="text/javascript" src="https://az686636.vo.msecnd.net/yui/treeview-min.js"></script>
+    <script type="text/javascript">
+        var initializeTree = function() {
+            try {
+                var markupTree = new YAHOO.widget.TreeView("treeViewChildMarkup"); markupTree.render();
+                var basehref = document.getElementsByTagName("base")[0].href;
+                function replaceAllInvalidLinks() {
+                    // we just replace a with base href  # in yahoo tree
+                    var links = document.getElementsByTagName("a");
+                    for (var i = 0; i < links.length; i++) {
+                        if (links[i].className.indexOf("ygtvspacer") != -1 && (links[i].href == basehref + "#" || links[i].href == "#")){
+                            links[i].href = "javascript:void(0)"; 
+                            }
+                    }
+                }
+
+                markupTree.subscribe("expandComplete", function() {
+                    replaceAllInvalidLinks();
+                });
+                // replace # in all a in the page
+                replaceAllInvalidLinks();
+            } catch (e) { }
+        };
+      YAHOO.util.Event.onDOMReady(initializeTree);
+    </script>
+
+    <script type="text/javascript">
+        var CYRACLE_HOST = "acs.parature.com";
+      var DEBUG        = 'false';
+    </script>
+	
+    <script type="text/javascript" src="/ics/ic1.js?ver=Spring+%2709"></script>
+	
+    <script type="text/javascript">
+      var duplicateChatError = 'Another chat is already active.  You must end your current chat before you initiate a new chat request.';
+	  
+      var backUrl = '';
+	  
+      var isLogin = false;
+	  
+      var timeoutErrorMessage = "Your session has expired due to inactivity.";
+    </script>
+
+    <script type="text/javascript" src="/ics/support/inc/frameless/portalheader.js?ver=Spring+%2709"></script>
+
+<script type="text/javascript" language="javascript">
+function sessionRenew_Do() {
+	var sessionImg = new Image(1,1);
+	sessionImg.src = "sessionRenewal.asp?deptID=9131&i="+Math.random();
+	setTimeout(function(){
+	    sessionRenew_Do();
+	}, 20 * 60 * 1000); 
+}
+if (20 > 0) {
+    setTimeout(function(){
+        sessionRenew_Do();
+    }, 20  * 60 * 1000); 
+}
+</script>
+
+
+    <base href="https://help.acs.org/ics/support/frameless" />  
+  </head>
+  <body class="yui-skin-sam support_center help_acs_org splash_asp default_asp">
+    <div id="banner-bg">
+	<div id="global-banner">
+		<ul title="ACS Websites Menu" role="navigation">
+			<li class="login-link">
+	<a href="https://help.acs.org/ics/support/mylogin.asp" id="login-href"> 
+		<!--<img src="https://assets.acs.org/prod/images/release_2/lock-image.gif" alt="" align="texttop" border="0" hspace="2"> -->
+		<span id="login-text">Log In</span>
+	</a> 
+</li> 
+<li id="active-gb"><a href="https://help.acs.org/ics/support/splash.asp">Help</a></li>
+			<li><a href="https://www.acs.org/">ACS<span>|</span></a></li>
+			<li><a href="https://pubs.acs.org/">Journals<span>|</span></a></li>
+			<li><a href="https://pubs.acs.org/cen/">C&amp;EN<span>|</span></a></li>
+			<li><a href="https://www.cas.org/">CAS</a></li>
+		</ul>
+	</div>
+</div>
+    <div id="parature_wrapper">
+      <div id="helpLayer" class="helplayer" style="position:absolute; visibility:hidden; z-index: 1;"></div>
+
+
+      <div id="parature_content">
+
+        <h1 class="title">Support Center</h1>
+        <span class="titledesc"><div id="notification_helper" ></div>
+<p style="font-size: 10pt;">Answers to common questions are available by <b>choosing a topic</b> from the list at left or selecting the <b>Online Support</b> tab. Our Help Desk staff will also be happy to assist you in resolving issues, reporting bugs, and suggesting improvements to our products and services. Simply <b>Submit a Ticket</b> or select <b>Live Chat.</b> To track the status of your queries and view a history of all your previous queries, <b>Register/Sign In.</b></p>
+<ul class="splash">
+	<li class="splash_item" id="knowledge"><a class="splash_link" href="KBSplash.asp">Knowledge Base</a><span class="splash_description">Browse or search the Knowledge Base for a wide variety of solutions.</span></li>
+	<li class="splash_item" id="download"><a class="splash_link" href="DLSplash.asp?task=download">Downloads</a><span class="splash_description">Browse our library of downloads and files.</span></li>
+	<li class="splash_item" id="ticket"><a class="splash_link" href="/ics/support/ticketNew.asp">Submit a Request</a><span class="splash_description">Submit a request to our service representatives. You can track the status of your request in My Support.</span></li>
+	<li class="splash_item" id="realtime"><a class="splash_link" href="#" onclick="return SnapABug.startLink();">Live Chat</a><span class="splash_description">Chat with a service representative live over the web.</span></li>
+</ul>
+</span>
+
+        <ul class="splash">
+        </ul>
+<div id='kbGlance'><ol class="mostpopular"><li class="heading"><span class="item">Viewed</span><span class="desc">Most Popular Topics</span></li><li class='first rank1 alt1'><span class="item">94945</span><span class='desc'><a href='/link/portal/9131/9131/Article/556/How-can-I-contact-Customer-Services-Information' class=contentLinks >How can I contact Customer Services & Information?</a></span></li><li class='rank2 alt2'><span class="item">55578</span><span class='desc'><a href='/link/portal/9131/9131/Article/244/Frequently-Asked-Questions-about-Just-Accepted-Manuscripts' class=contentLinks >Frequently Asked Questions about "Just Accepted" Manuscripts</a></span></li><li class='rank3 alt1'><span class="item">32206</span><span class='desc'><a href='/link/portal/9131/9131/Article/1190/Ordering-Commercial-Reprints-for-ACS-Articles' class=contentLinks >Ordering Commercial Reprints for ACS Articles</a></span></li><li class='rank4 alt2'><span class="item">8036</span><span class='desc'><a href='/link/portal/9131/9131/Article/184/Where-can-I-find-instructions-for-author-and-reviewer-submissions' class=contentLinks >Where can I find instructions for author and reviewer submissions?</a></span></li><li class='rank5 alt1'><span class="item">5532</span><span class='desc'><a href='/link/portal/9131/9131/Article/48/Can-I-get-help-with-editing-my-manuscript-before-submission' class=contentLinks >Can I get help with editing my manuscript before submission?</a></span></li></ol><ol class="mostrecent"><li class="heading"><span class="desc">Most Recent Topics</span></li><li class='first rank1 alt1'><span class='item'>09:11:2015</span><span class='desc'><a href='/link/portal/9131/9131/Article/2215/Sales-Tax' class='contentLinks'>Sales Tax</a></span></li><li class='rank2 alt2'><span class='item'>09:10:2015</span><span class='desc'><a href='/link/portal/9131/9131/Article/1808/Which-formats-are-acceptable-for-submitting-my-manuscript-file-to-an-ACS-journal' class='contentLinks'>Which formats are acceptable for submitting my manuscript file to an ACS journal?</a></span></li><li class='rank3 alt1'><span class='item'>08:17:2015</span><span class='desc'><a href='/link/portal/9131/9131/Article/2768/How-do-I-access-my-ACS-Journal-email-via-Webmail' class='contentLinks'>How do I access my ACS Journal email via Webmail?</a></span></li><li class='rank4 alt2'><span class='item'>07:08:2015</span><span class='desc'><a href='/link/portal/9131/9131/Article/2603/I-am-trying-to-access-my-proofs-and-am-getting-the-error-Welcome-to-ACS-Single-Sign-On-Internal-error-Please-contact-help-desk-How-can-I-access-my-proofs' class='contentLinks'>I am trying to access my proofs and am getting the error “Welcome to ACS Single Sign-On Internal error. Please contact help desk”. How can I access my proofs?</a></span></li><li class='rank5 alt1'><span class='item'>06:19:2015</span><span class='desc'><a href='/link/portal/9131/9131/Article/2709/Applying-Discounts-and-Processing-Payments-within-RightsLink' class='contentLinks'>Applying Discounts and Processing Payments within RightsLink </a></span></li></ol></div><div id='treeView' class='treeViewContainer'><h4 class='treeViewRoot'>Support Topics</h4><div id='treeViewChildMarkup' class='treeViewChildFolders'><ul class='folder'><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/21/ACS-Books'>ACS Books</a></li><li class='parentFolder'><a href='/link/portal/9131/9131/ArticleFolder/310/ACS-ChemWorx'>ACS ChemWorx</a><ul class='folder'><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/377/ACS-ChemWorx-User-Guide'>ACS ChemWorx User Guide</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/385/ACS-Manuscript-Proof-Correction'>ACS Manuscript Proof Correction</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/346/Android-Phones-and-Tablets'>Android Phones and Tablets</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/314/Calendar'>Calendar</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/345/iPhone-and-iPad-Applications'>iPhone and iPad Applications</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/349/Migrating-to-ACS-ChemWorx'>Migrating to ACS ChemWorx</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/347/Web-Importer'>Web Importer</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/318/Drive'>Drive</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/311/General'>General</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/317/Getting-Started'>Getting Started</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/319/Groups'>Groups</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/312/Library'>Library</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/322/Messages'>Messages</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/321/Reader'>Reader</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/316/My-Account'>My Account</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/313/Tasks'>Tasks</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/341/Publishing-Center'>Publishing Center</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/343/ActiveView-PDF'>ActiveView PDF</a></li></ul></li><li class='parentFolder'><a href='/link/portal/9131/9131/ArticleFolder/124/ACS-Paragon-Plus'>ACS Paragon Plus</a><ul class='folder'><li class='parentFolder'><a href='/link/portal/9131/9131/ArticleFolder/168/FAQs-ACS-Paragon-Plus'>FAQs ACS Paragon Plus</a><ul class='folder'><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/169/Author'>Author</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/170/Reviewer'>Reviewer</a></li><li class='parentFolder'><a href='/link/portal/9131/9131/ArticleFolder/171/Editorial-Office'>Editorial Office</a></li></ul></li></ul></li><li class='parentFolder'><a href='/link/portal/9131/9131/ArticleFolder/173/ACS-Publications-Website'>ACS Publications Website</a><ul class='folder'><li class='parentFolder'><a href='/link/portal/9131/9131/ArticleFolder/174/FAQs'>FAQs</a><ul class='folder'><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/175/Author'>Author</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/176/Librarian'>Librarian</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/177/Subscriber'>Subscriber</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/178/General-Website'>General Website</a></li></ul></li></ul></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/374/ACS-Store'>ACS Store</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/22/Copyright-Permissions-RightsLink'>Copyright &amp; Permissions/RightsLink</a></li><li class='parentFolder'><a href='/link/portal/9131/9131/ArticleFolder/137/Journal-Hardware-Software'>Journal Hardware/Software</a><ul class='folder'><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/282/Journal-Office-Email'>Journal Office Email</a></li></ul></li><li class='parentFolder'><a href='/link/portal/9131/9131/ArticleFolder/393/Open-Access'>Open Access</a><ul class='folder'><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/394/ACS-Central-Science'>ACS Central Science</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/395/ACS-Editors-Choice'>ACS Editors' Choice</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/396/ACS-Author-Rewards'>ACS Author Rewards</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/397/ACS-AuthorChoice'>ACS AuthorChoice</a></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/398/Overview'>Overview</a></li></ul></li><li class='leafFolder'><a href='/link/portal/9131/9131/ArticleFolder/103/Technical-Help'>Technical Help</a></li></ul></div></div>
+<script type="text/javascript">
+    function PassthroughLogin(loginpage) {
+        parent.document.location.href = loginpage;
+    }
+</script>
+
+      </div>
+      <!-- parature_content was just closed-->
+      <div id="parature_navigation">
+        <ul class="mainmenu">
+          <li id="mli_splash" class="selected"><a href="/ics/support/splash.asp" id="mli_splash_link">Home</a></li>
+          <li id="mli_knowledge_main"><a href="/ics/support/KBSplash.asp" id="mli_knowledge_main_link">Knowledge Base</a></li>
+          <li id="mli_SRSplash"><a href="/ics/support/SRSplash.asp" id="mli_SRSplash_link">New Request</a></li>
+          <li id="mli_my"><a href="/ics/support/mylogin.asp" id="mli_my_link">My Activity</a></li>
+          <li id="mli_widget3486"><a href="/ics/support/loadWidgetTab.asp?widgetID=3486" id="mli_widget3486_link">Call Us</a></li>
+          <li id="mli_widget4525"><a href="/ics/support/loadWidgetTab.asp?widgetID=4525" id="mli_widget4525_link">File Upload</a></li>
+        </ul>
+        <ul class="utilitymenu">
+          <li id="mli_Login"><a href="mylogin.asp" id="mli_Login_link">Sign in</a></li>
+          <li id="mli_Exit"><a href="javascript:exitSupport();" id="mli_Exit_link">Exit</a></li>
+        </ul>
+        <ul class="submenu splash">
+          <li id="mli_knowledge"><a href="/ics/support/KBSplash.asp" id="mli_knowledge_link">Knowledge Base</a></li>
+          <li id="mli_download"><a href="/ics/support/DLSplash.asp?task=download" id="mli_download_link">Downloads</a></li>
+          <li id="mli_ticket"><a href="/ics/support/ticketNew.asp" id="mli_ticket_link">Submit a Request</a></li>
+          <li id="mli_contactUs"><a href="/ics/support/contactUs.asp" id="mli_contactUs_link">Contact Us</a></li>
+          <li id="mli_myTickets"><a href="/ics/support/mytickets.asp" id="mli_myTickets_link">My Requests</a></li>
+          <li id="mli_mySubscriptions"><a href="/ics/support/mysubscriptions.asp" id="mli_mySubscriptions_link">My Subscriptions</a></li>
+        </ul>
+        <div id="welcome"><span id="welcome_text">Welcome</span> <span id="welcome_firstname">Guest</span></div>
+      </div>
+
+          <div id="parature_search">
+            <form name="search" method="post" action="/ics/support/KBResult.asp" id="search">
+                <input type="hidden" name="ParatureCSRFSecurityToken" value="5514a9c9-b7d3-4c77-a475-418823270db4"/>
+              <input class="searchText" placeholder="Search" name="searchFor" />
+              <input name="button" class="button" type="submit" value="Search" />
+              <input name="task" value="knowledge" type="hidden" />
+              <input name="basicSearch" type="hidden" value="1" />
+            </form>
+            <a class="searchLinks" href="/ics/support/frameless/search.asp?task=knowledge&amp;pageContentIdentifier=0">
+              Advanced Search
+            </a>
+          </div>
+        
+
+      <div id="parature_footer">
+
+      </div>
+        <!-- parature_footer was just closed-->
+    </div>
+        <!-- parature_wrapper was just closed-->
+    <!--
+Parature Support Portal tracking for Piwik
+Ian Webb, October 2011
+
+Customization points
+* Switch statement at top for correct hostnames and details
+* tyntID tag
+* In noscript tag at bottom, site ID for Piwik
+-->
+
+<!--
+Add the following scripts to the page:
+* flXHR for Flash-based XHR requests
+* jQuery, jQueryUI Position, jQuery flXHR
+* SnapEngage Live Chat Script
+* Piwik tracker.js
+* Tynt tools 
+-->
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='" + ((document.location.protocol=="https:")?"https://snapabug.appspot.com":"https://www.snapengage.com") + "/snapabug.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!--
+Main script for page. Almost all codes here should be 
+within jQuery(document).ready() statements.
+-->
+<script type="text/javascript">
+// detect if this is the create a ticket page & apply changes if so
+jQuery(document).ready(function($) { 
+if ( /ticketnewwizard/.test(document.location.href) ) {
+	jQuery('select option:contains("do not select")').remove();
+}
+});
+// replace Contact Us description
+jQuery(document).ready(function($) {
+	// if we're not on the appropriate page these selectors will just be empty
+	$('#mli_contactUs_link').html('Extra Tools');
+	$('.title:contains("Contact Us")').html('Extra Tools');
+	$('#contactUs > .splash_link').html('Extra Tools');
+	$('#contactUs > .splash_description').html('Extra tools our service representatives may ask you to use for specific requests.');
+});
+// all pages - prevent session timeout warning
+jQuery(document).ready(function($) { 
+	window.showSessionTimeoutWarning = function() {
+    sessionRenew_Do(false); // renew session, do not pop up an alert
+	};
+});
+// Resize the screen if it's too small - from Paragon Plus
+jQuery(document).ready(function($) { 
+  if ( (jQuery(window).width() == 700) && (jQuery(window).height() == 400) ) {
+  	window.resizeTo(980,760);
+  }
+});
+//set up SnapEngage chat
+jQuery(document).ready(function($) {
+	var paratureUserEmail = $('#welcome_email').html();
+	var userEmail;
+	if (paratureUserEmail) {
+		userEmail = paratureUserEmail;
+	} else {
+		userEmail = '';
+	}
+	var divSnapABug_W = document.createElement("div");
+	divSnapABug_W.id  = "SnapABug_W";
+	document.body.appendChild(divSnapABug_W);
+	var divSnapABug_WP = document.createElement("div");
+	divSnapABug_WP.id  = "SnapABug_WP";
+	document.body.appendChild(divSnapABug_WP);
+	var divSnapABug_Applet = document.createElement("div");
+	divSnapABug_Applet.id  = "SnapABug_Applet";
+	document.body.appendChild(divSnapABug_Applet);
+	SnapABug.setUserEmail(userEmail);
+	SnapABug.setDomain('acs.org');
+	SnapABug.initAsync("32ed9abd-0c89-48e6-819a-2f5ff40b0a9b","3","80%");
+	// now add chat link to top menu options
+	$('.mainmenu').append('<li id="mli_live_chat"><a href="#" onclick="return SnapABug.startLink();" id="mli_live_chat_link">Live Chat</a></li>');
+});
+</script>
+  </body>
+</html>
+
+<form id="logoff" name="logoff" method="post"  action="/ics/support/custhandler.asp">
+	<input type="hidden" name="task" id="task" value="null" />
+	<input type="hidden" name="redirectURL" id="redirectURL" value="null" />
+</form>
+
+<script>
+function exitSupport() {
+	var frmExitSupport = document.forms.logoff;
+	frmExitSupport.task.value = "signOut";
+   	frmExitSupport.redirectURL.value = "/ics/support/default.asp?deptID=9131"; 
+	frmExitSupport.submit();
+}
+</script>
+
+<script type="text/javascript" src="/ics/inc/js/cookies.js?ver=5%2E8%2E8%2E28496"></script>
+<script type="text/javascript" src="/ics/support/inc/portalfooter.js?ver=5%2E8%2E8%2E28496"></script>
+<script type="text/javascript">
+    var encodedURL = encodeURIComponent(document.URL);
+    if (getCookie("newMetricsView") == "1" && getCookie("prevURLMetrics") != encodedURL) {
+        //update values
+        deleteCookie("newMetricsView", "/");
+        setCookie("prevURLMetrics", encodedURL, null, "/");
+
+        try {
+            var pvUrl = "/services/WebMetrics.bmp?";
+
+            var pvBody = "accountID=9131&deptID=9131&visitorGuid=b01217d178244bfcba110a2d32d3382c";
+            pvBody += "&url=" + encodedURL + "&referer=" + encodeURIComponent(document.referrer);
+            addImage(pvUrl + pvBody, false);
+        } 
+        catch (err) {
+            //do not do anything, don't want error propagating
+        }
+        
+        
+        setTimeout( deleteVisitCookies, 1000);
+    }
+
+    function deleteVisitCookies(){
+        deleteCookie("VisitGUID", "/");
+        deleteCookie("ArticlesVisited", "/");
+    }
+</script>

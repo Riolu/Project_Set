@@ -1,0 +1,2390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>军事论坛-强国社区-人民网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="军事动态，军力盘点，军史揭秘，武器研究。中国军事爱好者的网上乐园——人民网军事论坛。" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<meta name="keywords" content="军事 时政 解放军 空军 海军 陆军 航母 瓦良格 歼10 毛泽东 三沙市 钓鱼岛"/>
+<META name="filetype" content="1">
+<META name="publishedtype" content="2">
+<META name="pagetype" content="2">
+<META name="catalogs" content="bbs_7">
+<link href="/css_bbs/qgbbs.css?v=20140320" rel="stylesheet" /><script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/qgBasePlugin.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/qgList.js?v=2015101902"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/page/treeListView.js?v=2015101901"></script>
+<script type="text/javascript" src="/js_library/qgbbs/2013/include/qgListDefault.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/qgbbs_base.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/jquery.rmw.global.js?v=201510191"></script> 
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/faces.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/plug/owl.carousel.min.js"></script>
+<script type="text/javascript">
+var cdomain = "http://bbs1.people.com.cn";
+var mdomain = "http://bbs1.people.com.cn";
+var snsdomain="http://sns.people.com.cn";
+var officialPost = 1;
+ $(document).ready(function(){
+	rmw.global.setSNSDomain("http://sns.people.com.cn") ;
+	RMWSSO.getUserData(function(guzzLoginUser){
+		if(guzzLoginUser && guzzLoginUser.userId > 0){
+		    var displayName = guzzLoginUser.nickname;
+			var userNick = guzzLoginUser.nickname;
+			$("#loginHeaderUserNick").html(displayName+"<i></i>") ;
+			$("#formEditorPostListImg").attr("userNick",userNick);
+			$(".loginUserNick").show();
+			$(".guest").hide();
+			$(".forumEditorUserNick").html('<a href="/userInfo.do?userNick='+userNick+'" target="_blank">'+displayName+'</a>');
+			$("#formEditorPostListImg").attr("userNick",userNick);
+			var _userName =  guzzLoginUser.username;
+			$("#tableListView").
+			attr("userName",_userName);
+			$("#treeListView").attr("userName",_userName);
+	    	loadNewsCount();
+		}else{
+			var retUrl = encodeURI(top.location.href);
+			$(".msgTips").remove();
+			$(".userReg").attr("href",rmw.sns.regUserLink("bbs",true));
+		}
+	});
+	rmw.global.bindUserPortraits($("img.portrait", $(".fReplay"))) ;
+  });
+</script>
+</head>
+
+<body style="overflow-x:hidden">
+	<div class="headerNavAd clearfix">
+		<center>  
+			<script type='text/javascript' src='http://pmm.people.com.cn/main/s?user=people|bbs1|topfullcolumn_liebiaoye&db=people&border=0&local=yes&js=ie' charset='gbk'></script>
+		</center>
+</div>	<div class="rel">
+	<div class="people_line">
+<div class="tempDiv clearfix">
+  		<div class="float_l floatTitle">
+        	<p class="FTtop"></p>
+            <p class="clearfix FTbtm">
+            	<span class="float_l"><a target="_blank" href="http://bbs1.people.com.cn">强国社区</a><span class="SMArrow"></span><a target="_blank" href="http://bbs1.people.com.cn/board/7.html">军事论坛</a></span>
+                <span class="float_R"><a href="http://bbs1.people.com.cn/userInfo.do?userNick=" target="_blank"></a><span class="SMline"></span></span>
+            </p>
+        </div>
+        <div class="float_R buttons">
+            <div class="DDWrap mR15 freadMode float_l">
+                <span class="showPart bold">阅读设置<i></i></span>
+                <div class="hidePart modeWrap">
+	                                    <p>楼主正文显示宽度</p>
+	                <ul class="mode showWidth clearfix">
+			            <li id='showWidth0'><strong>全幅</strong></li>
+			            <li id='showWidth1' class="focus special"><strong>2/3幅</strong></li>
+			            <li id='showWidth2' class="special"><strong>1/2幅</strong></li>
+			        </ul>
+			                          <p>跟帖显示为</p>
+                  <ul class="mode clearfix">
+                    <li boardId="${rootPost.boardId}" postId="${rootPost.id}"  view="2" userName="-1" class=" tableView"><strong>表状</strong></li>
+                    <li boardId="${rootPost.boardId}" postId="${rootPost.id}"  view="1" userName="-1" class="focus treeView"><strong>树状</strong></li>
+                  </ul>
+                   <p>跟帖内容</p>
+                  <ul class="mode clearfix">
+                    <li class="notAuthorOnly focus" boardId="${post.boardId}" postId="${post.id}"><strong>全部</strong></li>
+                    <li class="authorOnly " userId="$userId" boardId="${post.boardId}" postId="${post.id}"><strong>楼主直播</strong></li>
+		          </ul>
+                </div>
+             </div>
+           <div class="DDWrap float_l">
+              <span class="showPart bold share">分享<i></i></span>
+              <div class="hidePart posts_tools shareWrap clearfix">
+                  <div class="bshare-custom"><div class="bsPromo bsPromo2"></div>
+                      <a href="javascript:void(0);" class="bshare-peoplemb" title="分享到人民微博"></a>
+                      <a href="javascript:void(0);" class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+                      <a href="javascript:void(0);" class="bshare-weixin" title="分享到微信"></a>
+                      <a href="javascript:void(0);" class="bshare-qzone" title="分享到QQ空间"></a>
+                      <a href="javascript:void(0);" class="bshare-qqmb" title="分享到腾讯微博"></a>
+                      <a href="javascript:void(0);" class="bshare-renren" title="分享到人人网"></a>
+                      <a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+               </div>
+            </div>
+         </div>
+                <span class="float_l supportBtn" postId="${post.id}" overscore="${post.vote_yes}">赞(${post.vote_yes})</span>
+                <span class="float_l mainrRepBtn blueBtn">快速回复</span>
+         </div>
+  </div>
+</div>
+<div id="header">
+		<div class="headerNav clearfix">
+		<ul id="headerNavUl">
+			<li><a target="_blank" href="http://bbs1.people.com.cn">社区首页</a></li>
+			<li><a target="_blank" href="http://bbs1.people.com.cn/board/1.html">论坛</a></li>
+			<li><a target="_blank" href="http://qgblog.people.com.cn/">博客</a></li>
+			<li><a target="_blank" href="http://bbs1.people.com.cn/board/1/131.html">育儿宝</a></li>
+			<li><a target="_blank" href="http://ezheng.people.com.cn/">E政</a></li>
+			<li><a target="_blank" href="http://fangtan.people.com.cn/">访谈</a></li>
+			<li><a target="_blank" href="http://t.people.com.cn/">微博</a></li>
+			<li><a target="_blank" href="http://vblog.people.com.cn/">播客 </a></li>
+			<li><a target="_blank" href="http://sns.people.com.cn/">SNS </a></li>
+		</ul>
+		<div>
+			<a target="_blank" href="http://people.com.cn">人民网首页</a>
+		</div>
+	</div>
+		<div class='logo'>
+		<a href="http://bbs1.people.com.cn" target="_blank" style="display:inline-block;width:120px;height:49px;float:left;*display:inline; *zoom:1;"></a>
+    	<div class="searchWrap">
+        	<span class="search clearfix">
+        	<span class="inputTips"><a class="closeInputTips" href="javascript:void(0);"></a></span>
+        		<span class="float_l">
+				<form action="http://bbs1.people.com.cn/quickSearch.do" name="searchFrm1" id="searchFrm1" target="_blank" method="GET" class="float_l">
+    				<input type="hidden" value="title" name="field" id="field"/>
+					<input type="hidden" value="1" name="threadtype">
+					<input type="text" autocomplete="off"  name="content" id="searchTopic" value="输入标题/笔名查找感兴趣的话题..." /> <span id="searchBtn"></span>
+				 </form>
+				 <a href="/quickSearch.do" class="seniorLink" target='_blank'>高级检索</a>
+				 </span>
+				<ul class="userCenter">
+					<li class="pT10 last guest">
+						<a class="userReg" target="_blank" href="#">注册</a>
+					</li>
+					<li class="pT10 last loginBtn guest">
+						<a href="javascript:void(0);">登录</a>
+					</li>
+    				<li class="DDWrap userMsg loginUserNick" style="display:none;">
+    					<span class="showPart" id="loginHeaderUserNick"><i></i></span>
+    					<ul class="hidePart">
+                            <li><a href="/personInfo.do" target="_blank" id="personInfo">个人信息</a></li>
+                            <li><a href="http://sns.people.com.cn/usr/saveImage.do" target="_blank">修改头像</a></li>
+                            <li><a href="http://sns.people.com.cn/usr/userRegister.do" target="_blank">设置</a></li>
+                            <li class="keepGray"><a href="javascript:logout();">退出</a></li>
+    					</ul>
+    				</li>
+					<li class="DDWrap userMsg userNewMsg loginUserNick" style="display:none;">
+						<span class="showPart">提醒<span id="allNum"></span><i></i></span>
+						<ul class="hidePart">
+							<li><a id="newFansCount" title="粉丝"  target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=fans">粉丝</a></li>
+							<li><a id="newBulletinCount" title="公告" target="_blank"  href="http://sns.people.com.cn/usr/sms/administratorMsgs.jsp">公告</a></li>
+							<li><a id="newSmsCount" title="站内信" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=sms">站内信</a></li>
+                            <li><a id="newAppMsgCount" title="回复提醒" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=appMsg">回复提醒</a></li>
+							<li><a id="newBirthdayCount" title="生日提醒" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=birthday">生日提醒</a></li>
+							<li><a id="newSysMsgCount" title="系统消息" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=sysmsg">系统消息</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="tipList">
+					<li class="paper" search="userNick"></li>
+					<li class="user" search="title"></li>
+				</ul> 
+			</span>
+    	</div>
+	</div>
+	<div class='hotTopic'>
+		<div class='topicWrap clearfix'>
+			<div class="entrance float_l">
+					<!--<strong>军事论坛</strong>-->
+				<span class="subNav">
+			      	时政版块
+			      <ul class="navList clearfix">
+					<li><a href="http://bbs1.people.com.cn/board/1.html" target="_blank">强国论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/2.html" target="_blank">深入讨论</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/1/129.html" target="_blank">新闻论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/6.html" target="_blank">国际论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/7.html" target="_blank">军事论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/71.html" target="_blank">百姓监督</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/60.html" target="_blank">煮酒论史</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/11.html" target="_blank">经济论坛</a></li>
+			      </ul>
+			      </span>
+			      <span class="subNav">
+			      	生活版块
+			      <ul class="navList clearfix">
+					<li><a href="http://bbs1.people.com.cn/board/1/29.html" target="_blank">贴图论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/27.html" target="_blank">娱乐论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/26.html" target="_blank">女性论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/23.html" target="_blank">生活论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/24.html" target="_blank">联谊会馆</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/131.html" target="_blank">育儿宝</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/80.html" target="_blank">大学生</a></li>
+					<li><a href="http://bbs1.people.com.cn/citan" target="_blank">人民瓷坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/57.html" target="_blank">房产论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/8.html" target="_blank">教育论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/44.html" target="_blank">文化论坛</a></li>
+			      </ul>
+			      </span>
+			      <span class="subNav">
+			      	地区版块
+			      <ul class="navList clearfix">
+			        <li><a href="http://bbs1.people.com.cn/board/133.html" target="_blank">城市论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/13.html" target="_blank">中日论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/4.html" target="_blank">港澳台</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/73.html" target="_blank">强桂论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/75.html" target="_blank">强闽论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/86.html" target="_blank">强陕论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/87.html" target="_blank">强深论坛 </a></li>
+					<li><a href="http://bbs1.people.com.cn/board/74.html" target="_blank">热带语林</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/88.html" target="_blank">湖北论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/132.html" target="_blank">强赣论坛</a></li>
+			      </ul>
+			      </span>
+			      <span class="original">
+			      	原创栏目
+			      <ul class="originalNav clearfix">
+					<li><a href="http://www.people.com.cn/32306/359302/359317/index.html" target="_blank">一语惊坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/2/123.html" target="_blank">i态度</a></li>
+					<li><a href="http://www.people.com.cn/32306/387208/index1.html" target="_blank">强国图解</a></li>
+					<li><a href="http://www.people.com.cn/32306/390007/index.html" target="_blank">强国视点</a></li>
+					<li><a href="http://www.people.com.cn/32306/355718/364306/index.html" target="_blank">态度调查</a></li>
+					<li><a href="http://www.people.com.cn/32306/363234/366740/index.html" target="_blank">谣言狙击榜</a></li>
+					<li><a href="http://bbs1.people.com.cn/eliteList.do?pid=118921&bid=1" target="_blank">真心话大冒险</a></li>
+					<li><a href="http://bbs1.people.com.cn/eliteList.do?pid=118873&bid=7" target="_blank">名家点兵</a></li>
+			      </ul>
+			      </span>
+			</div>
+			<div class="float_l nav_R" id="forumsTalkingAbout"></div>
+			<script type="text/javascript">
+        		jQuery.ajax({
+        			url : "http://bbs1.people.com.cn/api/config.do?action=getConfigurationVal&key=forumsTalkingAbout",
+        			type: "GET",
+        			dataType: "jsonp",
+        			success: function(text){
+        				jQuery("#forumsTalkingAbout").html(text);
+        			}
+        		});
+        		function logout(){
+        		   RMWSSO.logout(function(){
+				       location.reload(true);
+			       });
+			    }
+    		</script>
+		</div>
+	</div>
+</div>	<div class="outer">
+		<div class='goTop'></div>
+		<div class='ad bannerTag' id="bannerTag">
+	<a href="" target="_blank"></a>
+</div>
+<script language="javascript" type="text/javascript">
+	jQuery.ajax({
+		url : "http://bbs1.people.com.cn/api/config.do?action=getConfigurationVal&key=boardTopAdv" ,
+		type: "GET",
+		dataType: "jsonp",
+		success: function(text){
+			jQuery(".bannerTag").html(text);
+		}	
+	});	 
+</script>		<div class='navBar borderBtn'>
+	<div class="wrapNavBar clearfix">
+		<a target="_blank" href="http://people.com.cn" class="peopleLogo"></a><span>&gt;</span>
+		<a target="_blank" href="http://bbs1.people.com.cn">强国社区</a><span>&gt;</span>
+						<a target="_blank" href="http://bbs1.people.com.cn/board/7.html">军事论坛</a>
+					<span class="float_R">版主：Aude </span>
+				</div>
+	<div class="otherPlate clearfix">
+		<div class="platesWrap topPlate">
+			<table width="960" border="0" align="center">
+  <tr>
+    <td><a href="http://bbs1.people.com.cn/post/1/1/2/138509741.html" target="_blank"><IMG src="http://bbs1.people.com.cn/postImages/2B/D3/93/2F/1396599657263.jpg" width="214" height="150" border="0"></a><a href="http://bbs1.people.com.cn/post/27/1/2/127955179.html" target="_blank"></a></td>
+    <td><a href="http://www.people.com.cn/32306/387485/index1.html" target="_blank"><IMG src="http://bbs1.people.com.cn/postImages/D3/39/FD/C5/1407998098885.jpg" width="221" height="150" border="0"></a></td>
+    <td><a href="http://bbs1.people.com.cn/post/7/1/2/139194419.html" target="_blank"><IMG src="http://bbs1.people.com.cn/postImages/E0/2A/C2/C6/1399625269958.jpg" width="210" height="150" border="0"></a></td>
+    <td><a href="http://bbs1.people.com.cn/post/1/1/2/136252373.html" target="_blank"><IMG src="http://bbs1.people.com.cn/postImages/28/C7/09/08/1387958569224.jpg" width="214" height="150" border="0"></a><a href="http://bbs1.people.com.cn/post/27/1/2/127955179.html" target="_blank"></a></td>
+  </tr>
+  <tr>
+    <td><div align="center"><a href="http://bbs1.people.com.cn/post/1/1/2/138509741.html" target="_blank">·2014年中国人真心话震撼欧洲</a></div></td>
+    <td><div align="center"><a href="http://www.people.com.cn/32306/387485/index1.html" target="_blank">·强国论坛互动栏目【名家点兵】汇总 
+    </a></div></td>
+    <td><div align="center"><a href="http://bbs1.people.com.cn/post/7/1/2/139194419.html" target="_blank">·万人参阅！俄举行冷战后最大阅兵式</a></div></td>
+    <td><div align="center"><a href="http://bbs1.people.com.cn/post/1/1/2/136252373.html" target="_blank">·一代枪王之惑:英雄还是魔鬼?</a></div></td>
+  </tr></table>
+		</div>
+	</div>
+	<div class="articleInfo clearfix" style='padding: 10px 0;'>
+		<div class="focusOn float_l">
+			<span id="allPostList" class="button float_l buttonG">全部</span>
+			<span id="allElitePostList" class="button float_l noBordLR">精华</span>
+			<span id="myPostList" class="button float_l mR10 ">我的帖</span>
+			<div class="DDWrap float_l readMode">
+            <span class="showPart bold" >阅读设置<i></i></span>
+            <div class="hidePart modeWrap">
+              <p>主帖显示为</p>
+					<ul class="mode mR7" id="readingSet">
+						<li  boardId="7" view="2" userName="-1" id="tableListView">
+							<strong>表状</strong>
+						</li>
+						<li class="focus" boardId="7" view="1" userName="-1" id="treeListView">
+							<strong>树状</strong>
+						</li>
+						<li  boardId="7" view="3">
+							<strong>图状</strong>
+						</li>
+					</ul>
+            </div>
+         </div>
+		</div>
+				<span class="float_R blueBtn" id="addNewPost">加新帖</span>
+				<span class="reFrash button" id="reFrash"><i></i>刷新</span>
+	</div>
+			<div class="clearfix clearBoth">
+			<span class="float_l">话题</span>
+			<span class="float_R">（&nbsp;作者&nbsp;发表时间&nbsp;）&nbsp;字数&nbsp;（&nbsp;阅读/回复&nbsp;）</span>
+		</div>
+	</div>					<div class="replayWrap scrollFlag">
+	<ul class="replayList clearfix">
+				 																		
+    			    												            			<li class="treeReplyItem ding elite" >
+            			<p class="treeTitle">
+																															<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/150392149.html">
+																												<img src="/images/bbs_2013/ding.jpg" />
+																														<img src="/images/bbs_2013/jing.jpg" />
+						    						    																													竖起忠诚与信仰之剑——国防大学专家谈纪念中国人民解放军建军88周年
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国论坛" class="tableAuthor"><font color="">强国论坛</font></a>
+													07月31日 14:01						)</span>
+												<span>37493字</span><span>(7602/36)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    												            			<li class="treeReplyItem ding elite" >
+            			<p class="treeTitle">
+																															<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/150033000.html">
+																												<img src="/images/bbs_2013/ding.jpg" />
+																														<img src="/images/bbs_2013/jing.jpg" />
+						    						    																													【名家点兵】冯玮：日本“新安保法案”，到底保了谁的安全？
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=名家点兵" class="tableAuthor"><font color="#ff00">名家点兵</font></a>
+													07月17日 11:14						)</span>
+												<span>281字</span><span>(35908/103)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    												            			<li class="treeReplyItem ding elite" >
+            			<p class="treeTitle">
+																															<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/150391685.html">
+																												<img src="/images/bbs_2013/ding.jpg" />
+																														<img src="/images/bbs_2013/jing.jpg" />
+						    						    																													老兵的敬礼！16位各军兵种专家寄语建军88周年
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国论坛" class="tableAuthor"><font color="">强国论坛</font></a>
+													07月31日 13:32						)</span>
+												<span>403字</span><span>(24998/42)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    												            			<li class="treeReplyItem ding elite" >
+            			<p class="treeTitle">
+																															<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/143989484.html">
+																												<img src="/images/bbs_2013/ding.jpg" />
+																														<img src="/images/bbs_2013/jing.jpg" />
+						    						    																													【龙凯锋瞰天下】美国预设的对华战略损耗点在哪？(原创首发)
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=龙凯锋.blog" class="tableAuthor"><font color="">龙凯锋.blog</font></a>
+													12月18日 22:30						)</span>
+												<span>1688字</span><span>(92103/100)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											1.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152374257.html">
+																																	    									                                        中美比的是软实力，急需改革与开发13亿国人人力资源，战时全民皆精兵。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=中国创新人类" class="tableAuthor"><font color="">中国创新人类</font></a>
+													10月28日 11:46						)</span>
+												<span>586字</span><span>(69/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=地田農" class="userNick"><font color="">地田農</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152376004.html">美國研發新一代隱形長程轟炸機。 美國軍方宣布決定揀選諾斯羅普格魯曼公司，即是研製B-2轟炸機的公司負責研發新一代轟炸機，計劃總值五百五十億美元。美軍會購買一百架</a><span>(10月28日 13:55)</span><span>239字</span><span>(17/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											2.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152374121.html">
+																																	    									                                        要求没落帝国还钱，是釜底抽薪的高招。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="tableAuthor"><font color="">会心一笑</font></a>
+													10月28日 11:39						)</span>
+												<span>1139字</span><span>(110/2)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="userNick"><font color="">会心一笑</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152375789.html">建立新国际银行体系和建立公平公正的新国际法庭可让没落帝国提前毙命。</a><span>(10月28日 13:41)</span><span>33字</span><span>(15/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="userNick"><font color="">会心一笑</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152375779.html">要求没落帝国还钱，将美纸转变为一带一路开发资金，是釜底抽薪的高招。</a><span>(10月28日 13:41)</span><span>33字</span><span>(20/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											3.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152373717.html">
+																																	    									                                        美舰强闯中国领海得不偿失！
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="tableAuthor"><font color="">会心一笑</font></a>
+													10月28日 11:20						)</span>
+												<span>1258字</span><span>(180/2)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="userNick"><font color="">会心一笑</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152375759.html">美国显耀武力和带头搞南海军事化，使得中国有理由在南海大力建设国防。这次给亲美专家教训深刻，中国的战备工作将消除阻碍和获得空前的加强。</a><span>(10月28日 13:39)</span><span>70字</span><span>(19/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="userNick"><font color="">会心一笑</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152375748.html">美舰强闯中国领海，表面上风光，暗地里悲凉。美国独舰孤往，没落帝国的战略尴尬暴露无遗。</a><span>(10月28日 13:39)</span><span>42字</span><span>(27/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											4.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152373230.html">
+																																	    									                                        美军舰闯南海后：中国股市都帮王毅外长警告美国
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 10:59						)</span>
+												<span>6637字</span><span>(174/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ssqsdd" class="userNick"><font color="">ssqsdd</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152375308.html">美军舰擅闯南海的最好应对就是将其“俘获”，就会有利有礼有节。</a><span>(10月28日 12:59)</span><span>30字</span><span>(23/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											5.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152373201.html">
+																																	    									                                        宦官之治，何以言勇？(原创首发)
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=青萍良图" class="tableAuthor"><font color="">青萍良图</font></a>
+													10月28日 10:59						)</span>
+												<span>11263字</span><span>(88/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											6.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152373191.html">
+																																	    									                                        中方回应是否对美舰采取军事行动 中国关心和平
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 10:58						)</span>
+												<span>18128字</span><span>(85/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											7.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152373154.html">
+																																	    									                                        美军舰巡航南海遭批危害地区和平 中美避免冲突
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 10:56						)</span>
+												<span>53781字</span><span>(79/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											8.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152373122.html">
+																																	    									                                        美军方称美军每天都在亚太巡航 根据国际法进行
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 10:55						)</span>
+												<span>18939字</span><span>(46/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											9.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152373086.html">
+																																	    									                                        少将：美军舰挑衅不会影响中国在南海的工程进度
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 10:54						)</span>
+												<span>16858字</span><span>(77/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											10.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152373002.html">
+																																	    									                                        韩明年增加国防预算 朴槿惠:应对朝鲜挑衅
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 10:50						)</span>
+												<span>8828字</span><span>(39/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											11.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152372824.html">
+																																	    									                                        台报告评估解放军战力:2020年前具备攻台战力
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 10:44						)</span>
+												<span>8095字</span><span>(47/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											12.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152372704.html">
+																																	    									                                        美舰强闯中国领海得不偿失！
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="tableAuthor"><font color="">会心一笑</font></a>
+													10月28日 10:40						)</span>
+												<span>1001字</span><span>(70/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											13.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152372345.html">
+																																	    									                                        美~舰绕过中方控制圈 前往 越 非 所占岛礁---------- 哈哈 哈哈哈
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=盛大超市" class="tableAuthor"><font color="">盛大超市</font></a>
+													10月28日 10:29						)</span>
+												<span>0字</span><span>(169/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											14.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152372307.html">
+																																	    									                                        来了没送什么礼物，走了也不必送行！该干什么还干什么！
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=观潮草民" class="tableAuthor"><font color="">观潮草民</font></a>
+													10月28日 10:28						)</span>
+												<span>33字</span><span>(78/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											15.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152372108.html">
+																																	    									                                        中国海军:将继续监视有关海空情况防止意外事件
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 10:21						)</span>
+												<span>7409字</span><span>(154/2)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=地田農" class="userNick"><font color="">地田農</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152376289.html">理直氣壯的在島嶼上，部署預警雷達與作戰戰機。問題是要考慮鄰國感受，不然適得其反</a><span>(10月28日 14:12)</span><span>39字</span><span>(19/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="userNick"><font color="">会心一笑</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152373753.html">美舰强闯中国领海得不偿失！美舰如期而至地巡航南海且违法强闯中国领海，表面上风光，暗地里悲凉。大声吆喝了半天，结果只有美国独舰孤往，没落帝国的战略</a><span>(10月28日 11:22)</span><span>348字</span><span>(52/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											16.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152371908.html">
+																																	    									                                        媒体：美军歇兵三日坐看俄轰炸IS
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 10:12						)</span>
+												<span>6795字</span><span>(63/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											17.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152371847.html">
+																																	    									                                        末路枭雄的苍凉：从美舰此次巡航南海若干细节看到的
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=自然向前" class="tableAuthor"><font color="">自然向前</font></a>
+													10月28日 10:10						)</span>
+												<span>4940字</span><span>(173/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											18.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152371787.html">
+																																	    									                                        美国海军爆出最大腐败案 涉案人舰艇活跃南海（很有意思的旧闻）
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=自然向前" class="tableAuthor"><font color="">自然向前</font></a>
+													10月28日 10:08						)</span>
+												<span>1435字</span><span>(63/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											19.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152371758.html">
+																																	    									                                        日媒：美舰进南海为保“美国威严” 防盟国离心
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=自然向前" class="tableAuthor"><font color="">自然向前</font></a>
+													10月28日 10:06						)</span>
+												<span>1791字</span><span>(62/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											20.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152371738.html">
+																																	    									                                        中国必须注意南海争端中的一个根本误区
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=青锋断月" class="tableAuthor"><font color="">青锋断月</font></a>
+													10月28日 10:05						)</span>
+												<span>411字</span><span>(90/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											21.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152371671.html">
+																																	    									                                        独家评论：美军方南海行动得罪3类人，里外不是人
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=自然向前" class="tableAuthor"><font color="">自然向前</font></a>
+													10月28日 10:03						)</span>
+												<span>2081字</span><span>(137/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											22.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152371645.html">
+																																	    									                                        环球：要把咋咋呼呼的美军舰看成“纸老虎”
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=自然向前" class="tableAuthor"><font color="">自然向前</font></a>
+													10月28日 10:01						)</span>
+												<span>3785字</span><span>(103/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="userNick"><font color="">会心一笑</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152374165.html">美舰强闯中国领海得不偿失！美舰如期而至地巡航南海且违法强闯中国领海，表面上风光，暗地里悲凉。大声吆喝了半天，结果只有美国独舰孤往，没落帝国的战略</a><span>(10月28日 11:42)</span><span>348字</span><span>(32/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											23.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152370828.html">
+																																	    									                                        海军回应美军强闯南沙:海军回应美军强闯南沙:建议采取驱逐逼停扣畄措施
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=东方之子天称" class="tableAuthor"><font color="">东方之子天称</font></a>
+													10月28日 09:28						)</span>
+												<span>2247字</span><span>(208/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=song234777" class="userNick"><font color="">song234777</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152373174.html">喊得真响。事情发生却什么也没有做、下次再来你们还会喊什么呢？本人意见直接击沉入侵的美国军舰、打三次世界大战又如何、死了也比一次次的侮辱活着好受的多、为中</a><span>(10月28日 10:58)</span><span>120字</span><span>(40/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											24.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152370600.html">
+																																	    									                                        海军少将:美舰闯入南海 我们不能忍气吞声
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 09:19						)</span>
+												<span>7576字</span><span>(208/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class="elite ">
+																											25.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152370570.html">
+																																											<img src="/images/bbs_2013/jing.jpg" />
+						    						    																																							中国驻美大使:美舰进入南沙岛礁海域是严重挑衅
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 09:18						)</span>
+												<span>8592字</span><span>(105/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											26.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152370561.html">
+																																	    									                                        拉登兄弟进南海 七绝（藏头诗）(原创首发)
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=王和谐理想社会" class="tableAuthor"><font color="">王和谐理想社会</font></a>
+													10月28日 09:18						)</span>
+												<span>5734字</span><span>(143/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											27.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152370558.html">
+																																	    									                                        外交部回应美舰驶入南沙：强烈不满坚决反对
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 09:18						)</span>
+												<span>14061字</span><span>(68/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											28.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152370485.html">
+																																	    									                                        中国两艘军舰依法警告美舰 我海军严密监视海空
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月28日 09:14						)</span>
+												<span>21571字</span><span>(143/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=song234777" class="userNick"><font color="">song234777</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152373441.html">没有直接击沉入侵的美国军舰就是无能、不要说冠冕弹簧的官话找辙。什么叫防止不测事件？什么叫严密监视、都入侵我领海你还监视？为什么不直接击沉入侵美国军舰？韬光养晦装</a><span>(10月28日 11:08)</span><span>96字</span><span>(42/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											29.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152370114.html">
+																																	    									                                        挑衅中华，天理不容（修订）
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=我发一帖" class="tableAuthor"><font color="">我发一帖</font></a>
+													10月28日 09:02						)</span>
+												<span>15116字</span><span>(85/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											30.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152370017.html">
+																																	    									                                        陈中华；中国应当理性处理美国军舰前来骚扰问题
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=中国一青年" class="tableAuthor"><font color="">中国一青年</font></a>
+													10月28日 08:58						)</span>
+												<span>3505字</span><span>(111/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											31.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152369634.html">
+																																	    									                                        哈哈哈 美军“拉森”号... 你要是再来我们就要吐口水啦...
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=www17888" class="tableAuthor"><font color="">www17888</font></a>
+													10月28日 08:42						)</span>
+												<span>63字</span><span>(67/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											32.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152369111.html">
+																																	    									                                        美国声称克里米亚属于乌克兰，为什么不去自由航行，北方四岛俄日有争议甚至属于日本，美国为什么不自由航行，中国南海，美未维护中国利益来自由航行，正义呢
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月28日 07:51						)</span>
+												<span>0字</span><span>(179/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=song234777" class="userNick"><font color="">song234777</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152373631.html">欠揍</a><span>(10月28日 11:17)</span><span>2字</span><span>(11/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											33.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152369079.html">
+																																	    									                                        中国军方：海军派两军舰和航空兵警告美舰
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=byzh" class="tableAuthor"><font color="">byzh</font></a>
+													10月28日 07:45						)</span>
+												<span>6298字</span><span>(118/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											34.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152369068.html">
+																																	    									                                        美方搬起石头砸自己脚：美舰入侵12海里逼迫中方改变南海岛礁民事用途被迫军事化部署
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ningshui" class="tableAuthor"><font color="">ningshui</font></a>
+													10月28日 07:43						)</span>
+												<span>0字</span><span>(210/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											35.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152368896.html">
+																																	    									                                        挑衅中华，天理不容
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=我发一帖" class="tableAuthor"><font color="">我发一帖</font></a>
+													10月28日 07:07						)</span>
+												<span>33399字</span><span>(112/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=我发一帖" class="userNick"><font color="">我发一帖</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152369884.html">哇，不好意思。夜半三更，一气呵成，未及细看。将“唇亡齿寒”错打为“唇寒齿亡”。更正并道歉。</a><span>(10月28日 08:53)</span><span>45字</span><span>(39/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											36.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152368665.html">
+																																	    									                                        美国是一个“唯利是图”的国家。因此，你相信他可以遵守诺言，那就是等于相信狼承诺“不再吃肉”的承诺，是极其幼稚的。中国是一个有着多种经验案例的国家，“丢掉幻...
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ssqsdd" class="tableAuthor"><font color="">ssqsdd</font></a>
+													10月28日 05:52						)</span>
+												<span>100字</span><span>(196/2)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ssqsdd" class="userNick"><font color="">ssqsdd</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152374116.html">羊在狼面前选择妥协，就是待宰。</a><span>(10月28日 11:39)</span><span>15字</span><span>(30/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ssqsdd" class="userNick"><font color="">ssqsdd</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152374087.html">中国可以多种选择，为什么一定要选择妥协呢？！</a><span>(10月28日 11:37)</span><span>22字</span><span>(24/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											37.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152368390.html">
+																																	    									                                        中国可提出中国俄罗斯相互提供核保护，中国战略守势可移位，目前只有核武器平衡才能世界稳定。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月28日 00:29						)</span>
+												<span>0字</span><span>(169/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											38.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152368323.html">
+																																	    									                                        中国不如和俄罗斯相互提供核保护，中国战略守势或可移位。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月28日 00:12						)</span>
+												<span>0字</span><span>(137/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											39.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152368265.html">
+																																	    									                                        美国强闯南海，中国并未全力反制表明中国热爱和平，讲道理，美国喜欢靠武力挑事，还有谁不会和中国交朋友？支持中国的不会只有俄罗斯。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月27日 23:54						)</span>
+												<span>0字</span><span>(216/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数想记" class="userNick"><font color="">数想记</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152368993.html">阁下如果照你的逻辑，还不如把军队缴给美国人，美国的人民没有军权，他为乱来吗</a><span>(10月28日 07:30)</span><span>37字</span><span>(29/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											40.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152368134.html">
+																																	    									                                        为中国对美舰入南海的反应点赞！！！
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=黎莘" class="tableAuthor"><font color="">黎莘</font></a>
+													10月27日 23:25						)</span>
+												<span>10831字</span><span>(310/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											41.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152367428.html">
+																																	    									                                        中国在南海可以修建三座教堂，分别是基督教，伊斯兰教，佛教教堂，用以教化越南菲律宾不要侵略中国了，还可以用于旅游回本钱，防灾之用。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月27日 22:11						)</span>
+												<span>0字</span><span>(133/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											42.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152366345.html">
+																																	    									                                        一艘 美舰乱跑不要紧. 300架 那啥违约 失大 -------哈哈 哈哈哈
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=盛大超市" class="tableAuthor"><font color="">盛大超市</font></a>
+													10月27日 21:10						)</span>
+												<span>0字</span><span>(452/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											43.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152366095.html">
+																																	    									                                        有靠谱的老师就会有靠谱的学生（原创）
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=海堤梦言" class="tableAuthor"><font color="">海堤梦言</font></a>
+													10月27日 20:58						)</span>
+												<span>8181字</span><span>(189/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											44.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152364869.html">
+																																	    									                                        (原创首发) 美国，这回你真的长脸了！
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=我发一帖" class="tableAuthor"><font color="">我发一帖</font></a>
+													10月27日 19:45						)</span>
+												<span>11057字</span><span>(734/5)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">58.251.146.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152368263.html">在阿富汗的美军和军机就是活靶子，可以通过第三方力量，巧妙地大量消灭驻扎在海外美军！</a><span>(10月27日 23:53)</span><span>41字</span><span>(82/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=水调歌头245463" class="userNick"><font color="">水调歌头245463</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152368055.html">由于美国军舰进入中国岛礁12海里范围挑衅行为，使中国在南海岛礁建立军事设施，顺理成章，甚至将来设立南海防空识别区都有了借口。斗智斗勇，美国强在勇，中国赢在智。</a><span>(10月27日 23:17)</span><span>79字</span><span>(86/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=我发一帖" class="userNick"><font color="">我发一帖</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152367394.html">实话实说，俺特想当英雄。要是真能把一腔热血洒在捍卫祖国的战场上，那是俺三生有幸，今生算没白活！</a><span>(10月27日 22:09)</span><span>47字</span><span>(79/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=我发一帖" class="userNick"><font color="">我发一帖</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152367377.html">中国人的团结是第一要义，必须攥成铁拳，谁胆敢来犯，就把它彻底砸烂！</a><span>(10月27日 22:07)</span><span>33字</span><span>(47/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=我发一帖" class="userNick"><font color="">我发一帖</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152367328.html">鬼子来挑衅，今夜我不眠。胆敢来侵犯，誓死上前线！</a><span>(10月27日 22:04)</span><span>24字</span><span>(66/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											45.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152364751.html">
+																																	    									                                        环球时报：劝闯12海里美军舰做做样子滚蛋
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 19:39						)</span>
+												<span>10326字</span><span>(590/3)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">221.204.240.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152368045.html">人类什么时候把美国这个瘟神清除，世界太平就有希望了。</a><span>(10月27日 23:14)</span><span>26字</span><span>(51/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=再白说一次" class="userNick"><font color="">再白说一次</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152367838.html">这次太便宜它了，以后还会有麻烦。</a><span>(10月27日 22:52)</span><span>16字</span><span>(42/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">221.218.172.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152367307.html">受气的小媳妇</a><span>(10月27日 22:03)</span><span>6字</span><span>(54/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											46.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152363940.html">
+																																	    									                                        1988年苏联军舰撞美国军舰回顾(组图)
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=byzh" class="tableAuthor"><font color="">byzh</font></a>
+													10月27日 18:55						)</span>
+												<span>1093字</span><span>(418/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">111.199.181.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152366488.html">制造几艘四、五千吨位的专门用于撞击敌舰的舰船，船头要坚固、骨架要硬，装三台发动机，平时用一台，启动撞击时三台同时发动快速前进。舰艇上不要太高科技，装几枚导弹、一</a><span>(10月27日 21:17)</span><span>87字</span><span>(86/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											47.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152363864.html">
+																																	    									                                        美军既然决意闯南海“碰瓷”，最好做最坏打算！
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=byzh" class="tableAuthor"><font color="">byzh</font></a>
+													10月27日 18:49						)</span>
+												<span>4074字</span><span>(422/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">111.39.108.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152368120.html">毫无顾忌地挑衅是狂妄自大的表现，不知好歹的牲口，等过年再说。</a><span>(10月27日 23:24)</span><span>30字</span><span>(49/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											48.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152363505.html">
+																																	    									                                        南海维权我国有打大仗的决心吗？(原创首发)
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=清江游.blog" class="tableAuthor"><font color="">清江游.blog</font></a>
+													10月27日 18:17						)</span>
+												<span>3876字</span><span>(1024/4)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=张继平.blog" class="userNick"><font color="">张继平.blog</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152375909.html">美国到南海是挑衅不是来打仗，如果真打起来三五年也难收尾。如果它们胆敢伤害我军舰艇就应该歼灭他们。如果乱转就让它转去。持久战，消耗它们的人力财力。用软办法对付他们</a><span>(10月28日 13:50)</span><span>81字</span><span>(13/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=张继平.blog" class="userNick"><font color="">张继平.blog</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152367427.html">不把美国打趴下美国是不会服输的。美国现在就是拳王，到处亮肌肉，到南海亮亮看中国敢不敢动动他们。打败美帝一回老实三十年。</a><span>(10月27日 22:11)</span><span>59字</span><span>(77/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">171.35.222.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152366084.html">国家都成鸵鸟了</a><span>(10月27日 20:57)</span><span>7字</span><span>(68/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">113.215.6.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152365886.html">没有</a><span>(10月27日 20:46)</span><span>2字</span><span>(28/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											49.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152363435.html">
+																																	    									                                        非法进入我岛礁海域的美军舰有何弱点
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=byzh" class="tableAuthor"><font color="">byzh</font></a>
+													10月27日 18:12						)</span>
+												<span>5881字</span><span>(348/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=地田農" class="userNick"><font color="">地田農</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152365971.html">特戰兵機降艦（游繩而下）作戰與反作戰只是其中作戰之一，在多維作戰中，類島嶼滲入深入作戰中，而戰機被壓迫無法靠近島嶼呢？或戰機被擊傷呢？等信息萬變的實戰戰場環境中</a><span>(10月27日 20:51)</span><span>187字</span><span>(58/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											50.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152363128.html">
+																																	    									                                        (原创首发)胆小内向？重复谈谈中国的教育问题
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=我发一帖" class="tableAuthor"><font color="">我发一帖</font></a>
+													10月27日 17:57						)</span>
+												<span>3516字</span><span>(171/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											51.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152362773.html">
+																																	    									                                        美国染指南海有三种策略 中国两武器可让美军丧胆
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 17:35						)</span>
+												<span>24289字</span><span>(305/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">222.189.135.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152367916.html">研制生产小型隐身无人攻击潜艇，装上反坦克导弹（我就不相信军舰的装甲比坦克厚），近距离攻击敌舰的导弹仓部位，诱发导弹仓里导弹内爆。</a><span>(10月27日 22:58)</span><span>64字</span><span>(50/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											52.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152362756.html">
+																																	    									                                        驻港部队三军轮番实兵演习 港媒称意在震慑港独
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 17:34						)</span>
+												<span>6035字</span><span>(170/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											53.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152362745.html">
+																																	    									                                        美宙斯盾舰闯南海岛礁 航母在附近待命以备不测
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 17:34						)</span>
+												<span>29093字</span><span>(490/3)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">115.220.140.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152368950.html">[如花抠鼻]</a><span>(10月28日 07:20)</span><span>6字</span><span>(24/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=再白说一次" class="userNick"><font color="">再白说一次</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152367960.html">赶快把岛礁机场港口建好，派舰机长期驻守是当务之急。</a><span>(10月27日 23:03)</span><span>25字</span><span>(44/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数想记" class="userNick"><font color="">数想记</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152364950.html">破一就能破万！花姑娘让人强奸还要讲好话给美国人听，你是猪八戒迎亲啊！如果是这样有人闯中南海也会来的！解放军不打！领土是美国人的组织义勇军也得战！任何一个农村的村</a><span>(10月27日 19:50)</span><span>114字</span><span>(71/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											54.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152362690.html">
+																																	    									                                        论，，，，，，战争的本质。就是杀人，不是你死，就是我活的问题，不是谦虚的问题。。。。。。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=天边红叶" class="tableAuthor"><font color="">天边红叶</font></a>
+													10月27日 17:31						)</span>
+												<span>17字</span><span>(163/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											55.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152362651.html">
+																																	    									                                        中国未强调人工岛12海里问题 美军用行动帮华确认
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 17:29						)</span>
+												<span>8106字</span><span>(269/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											56.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152362586.html">
+																																	    									                                        论，，中国不称霸的问题，李大人您对此有什么看法；我的看法是；当今的天下不是称霸和不称霸的问题；而是必须去、、、
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=天边红叶" class="tableAuthor"><font color="">天边红叶</font></a>
+													10月27日 17:25						)</span>
+												<span>53字</span><span>(174/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											57.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152361677.html">
+																																	    									                                        新华社：南海本无事，美国来搞事
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=byzh" class="tableAuthor"><font color="">byzh</font></a>
+													10月27日 16:41						)</span>
+												<span>1702字</span><span>(172/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											58.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152361142.html">
+																																	    									                                        美海军来南海闹事，中国海军也没闲着
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=byzh" class="tableAuthor"><font color="">byzh</font></a>
+													10月27日 16:18						)</span>
+												<span>7744字</span><span>(1005/3)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																											<span class="showSubreply">[-]</span>
+																													                                <a class="userNick" href="javascript:void(0);">180.117.130.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152362608.html">[心]如同普京22日在索契所说的那样，如果打架无法避免，你就必须先动手，事实上也确实如此，无论是在历史上，还是当今这个世界，弱肉强食的规律一直没有改变。对于美国</a><span>(10月27日 17:26)</span><span>181字</span><span>(81/0)</span>
+					    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=天边红叶" class="userNick"><font color="">天边红叶</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152364625.html">这条评论是人间的真话，人间的真情就是如此、、、、、、</a><span>(10月27日 19:31)</span><span>26字</span><span>(111/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">175.9.191.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152362221.html">泥足巨人</a><span>(10月27日 17:05)</span><span>4字</span><span>(46/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											59.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152359757.html">
+																																	    									                                        美称中国一类飞机世界顶级 解放军将配4万架
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 15:21						)</span>
+												<span>9123字</span><span>(382/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ssqsdd" class="userNick"><font color="">ssqsdd</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152369676.html">无人机40万架差不多。有人机4万架也许够用。</a><span>(10月28日 08:44)</span><span>22字</span><span>(30/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											60.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152359730.html">
+																																	    									                                        南海舰队多艘驱护舰进行高强度实兵实弹演练(图)
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 15:20						)</span>
+												<span>6306字</span><span>(307/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">180.117.130.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152362623.html">[心]如同普京22日在索契所说的那样，如果打架无法避免，你就必须先动手，事实上也确实如此，无论是在历史上，还是当今这个世界，弱肉强食的规律一直没有改变。对于美国</a><span>(10月27日 17:27)</span><span>181字</span><span>(31/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											61.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152359594.html">
+																																	    									                                        如何反制美军舰进中国岛礁12海里：应动员二炮
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 15:18						)</span>
+												<span>6739字</span><span>(402/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高低平" class="userNick"><font color="">高低平</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152360375.html">高低平试试?美国大话是气吹,中国拳头是铁铸;拳落肚气没喊声,龙要喷水海太平! 【王毅警告美方：三思而后行 不要轻举妄动】王毅：奉劝美方不要无事生非 【王毅：</a><span>(10月27日 15:46)</span><span>392字</span><span>(101/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											62.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152358503.html">
+																																	    									                                        中方回应美军舰巡航南海：已对其跟踪警告
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 14:27						)</span>
+												<span>13071字</span><span>(605/2)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=击水三千252566" class="userNick"><font color="">击水三千252566</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152370350.html">对于下作的流氓，光是正规的行动往往是行不通的。</a><span>(10月28日 09:10)</span><span>23字</span><span>(20/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=再白说一次" class="userNick"><font color="">再白说一次</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152368003.html">跟踪警告远远不够，应该加快建设岛礁军事设施布署反舰导弹应对。</a><span>(10月27日 23:07)</span><span>30字</span><span>(54/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											63.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152356593.html">
+																																	    									                                        重要新闻：美国防部称美舰并未进入中国南海岛礁12海里内
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 12:24						)</span>
+												<span>6987字</span><span>(941/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">61.186.153.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152359161.html">悲哀</a><span>(10月27日 15:00)</span><span>2字</span><span>(25/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											64.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152356421.html">
+																																	    									                                        美军：美宙斯盾舰已进中国南海岛礁12海里巡航
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 12:15						)</span>
+												<span>32448字</span><span>(512/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											65.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152355756.html">
+																																	    									                                        中国南海建灯塔是精明战略
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=byzh" class="tableAuthor"><font color="">byzh</font></a>
+													10月27日 11:42						)</span>
+												<span>3434字</span><span>(284/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											66.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152355563.html">
+																																	    									                                        美军放言巡航我岛礁，王毅：美方不要轻举妄动
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=byzh" class="tableAuthor"><font color="">byzh</font></a>
+													10月27日 11:35						)</span>
+												<span>2361字</span><span>(266/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											67.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152354432.html">
+																																	    									                                        我国第3颗立体测绘卫星成功发射 与美国同等技术
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 10:57						)</span>
+												<span>6246字</span><span>(356/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											68.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152354339.html">
+																																	    									                                        朝鲜渔政船巡查中国渔船越线 遭韩军炮击逼退
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 10:54						)</span>
+												<span>43514字</span><span>(264/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											69.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152353231.html">
+																																	    									                                        中情局档案：美在朝战中犯下的战略情报错误
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=自然向前" class="tableAuthor"><font color="">自然向前</font></a>
+													10月27日 10:17						)</span>
+												<span>4156字</span><span>(323/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											70.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152352699.html">
+																																	    									                                        菲在南海充当马前卒 要买第三艘美国巡逻舰
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=自然向前" class="tableAuthor"><font color="">自然向前</font></a>
+													10月27日 09:56						)</span>
+												<span>1798字</span><span>(297/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数想记" class="userNick"><font color="">数想记</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152356665.html">叁拾年的血雨醒风，资本家圈地，掠夺完了中国的良田美池，为了实现马克思的预言：要么用战争来消灭它们，要么用转基因食物毒死它们，要么用细菌病毒吃了食物后来清消它们—</a><span>(10月27日 12:28)</span><span>85字</span><span>(129/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											71.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152352622.html">
+																																	    									                                        美国总统批准军舰巡航中国南海岛礁 未知会中方
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 09:51						)</span>
+												<span>22530字</span><span>(897/2)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="userNick"><font color="">会心一笑</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152354783.html">解放军可以通过武装支援阿富汗正义力量，在阿富汗隐蔽性消灭美军！</a><span>(10月27日 11:09)</span><span>31字</span><span>(288/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=会心一笑" class="userNick"><font color="">会心一笑</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152354443.html">“人不犯我、我不犯人，人若犯我、我必犯人”。如果美国蓄意要在南海挑起军事冲突，想要通过军事冒险来借机拼凑起围堵中国的包围圈，中国就要勇敢地和狠狠地打击美军！打蛇</a><span>(10月27日 10:57)</span><span>132字</span><span>(133/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											72.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152352428.html">
+																																	    									                                        外媒：中美同意军机飞行员空中相遇不做粗鲁动作
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 09:45						)</span>
+												<span>13946字</span><span>(262/2)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数想记" class="userNick"><font color="">数想记</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152369029.html">这是向敌人投降的信号！我劝你还是让美国人的屁股指挥你的头</a><span>(10月28日 07:37)</span><span>28字</span><span>(29/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">27.187.210.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152365508.html">啊！</a><span>(10月27日 20:24)</span><span>2字</span><span>(22/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											73.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152352052.html">
+																																	    									                                        中国外长回应美舰巡南海：不要轻举妄动无事生非
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月27日 09:30						)</span>
+												<span>14604字</span><span>(285/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											74.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152349444.html">
+																																	    									                                        基本上美国一提起核打击就是黔驴技穷了，因为它己默认了常规战无胜算，而核战这种两败俱伤的事它也没胆干。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=再白说一次" class="tableAuthor"><font color="">再白说一次</font></a>
+													10月26日 23:03						)</span>
+												<span>0字</span><span>(312/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											75.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152349321.html">
+																																	    									                                        台独势力的恶意人为阻扰将会恶化两岸安全两岸交流两岸经济发展两岸稳定。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月26日 22:42						)</span>
+												<span>0字</span><span>(301/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											76.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152349299.html">
+																																	    									                                        日本恶化了中国经济发展，如日本撤资，人民币对美元人为增值使中国经济下行压力大，最终影响中国美国日本经济发展，美国日本政治干扰了中国美国日本经济发展。，
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月26日 22:38						)</span>
+												<span>0字</span><span>(259/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											77.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152349227.html">
+																																	    									                                        保障中国经济增长就是保障美国经济增长，任何干扰中国经济增长的因素是对中国美国的威胁，包括制造南海紧张的越南菲律宾，还有不公平的收入分配和腐败
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月26日 22:30						)</span>
+												<span>0字</span><span>(240/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											78.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152348972.html">
+																																	    									                                        美国要更强大，就需要改变对华的移民政策，让中国人像美国人一样在美国居住，因为中国人勤劳，只有用勤劳的中国人，美国才更会强盛不衰。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月26日 22:06						)</span>
+												<span>0字</span><span>(229/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											79.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152348804.html">
+																																	    									                                        期待五中全会谋新加谋实
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=古洋斋" class="tableAuthor"><font color="">古洋斋</font></a>
+													10月26日 21:55						)</span>
+												<span>9516字</span><span>(214/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">221.181.228.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152349421.html">深秋寸草虽见黄，微风小雨柔情长。</a><span>(10月26日 22:57)</span><span>16字</span><span>(83/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											80.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152348547.html">
+																																	    									                                        不作死就不会死---为了配合米国军舰搞乱中国南海地汉奸谢作诗最终一定会泄作屎！！！
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=针灸索巴" class="tableAuthor"><font color="">针灸索巴</font></a>
+													10月26日 21:36						)</span>
+												<span>694字</span><span>(535/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数想记" class="userNick"><font color="">数想记</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152356756.html">中国人与美国人进行一个对一个的肉博擂台战让普京和爸杀儿做栽判</a><span>(10月27日 12:33)</span><span>30字</span><span>(72/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											81.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152348181.html">
+																																	    									                                        掠夺中国南海就是掠夺美国的华盛顿，分裂中国台湾就是分裂夏威夷，抢夺中国东海就是抢夺美国阿拉斯加。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=buweiyangnu2014" class="tableAuthor"><font color="">buweiyangnu2014</font></a>
+													10月26日 21:10						)</span>
+												<span>0字</span><span>(324/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数想记" class="userNick"><font color="">数想记</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152349100.html">人来因该来一次核大战让核市场化，然后统一全世界，收缴核武器，氢弹基本没有核污染！向我开炮———王成</a><span>(10月26日 22:17)</span><span>49字</span><span>(106/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											82.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152347294.html">
+																																	    									                                        私有制就是一个“诸葛亮”；公有制就是“三个臭皮匠”。毛主席说：三个臭皮匠，赛过诸葛亮。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ssqsdd" class="tableAuthor"><font color="">ssqsdd</font></a>
+													10月26日 20:12						)</span>
+												<span>147字</span><span>(294/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数想记" class="userNick"><font color="">数想记</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152348728.html">#赚钱叁拾年，土地归资本家使用！土地没有了！国家因大量进口兼价的转基因粮食，毒死资本家，让他们变疯，变癌，东亚病夫，然后救世界，特别是美国数想记</a><span>(10月26日 21:49)</span><span>72字</span><span>(142/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											83.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152347031.html">
+																																	    									                                        不能把“为人民服务”当成“讨好百姓”！
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ssqsdd" class="tableAuthor"><font color="">ssqsdd</font></a>
+													10月26日 19:48						)</span>
+												<span>26字</span><span>(239/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=zxzxa1111" class="userNick"><font color="">zxzxa1111</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152364620.html">是宗旨，不是口号。更不是戏词儿。</a><span>(10月27日 19:30)</span><span>16字</span><span>(45/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											84.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152346970.html">
+																																	    									                                        美国的焦虑：自己有了性病，生不出来高大的儿子，眼看着邻居生的儿子一群又一群，又高又大，有点钱，毕竟感到不舒服。为了不让邻居超过自己，想到了暗杀，可是又怕打...
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ssqsdd" class="tableAuthor"><font color="">ssqsdd</font></a>
+													10月26日 19:43						)</span>
+												<span>93字</span><span>(207/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=ssqsdd" class="userNick"><font color="">ssqsdd</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152369926.html">美国的办法：1、先试探底线。a、到你家门口、窗口窥视。b、公开拿你点小东西。c、拎个棒子到你家门口耍武吧超。2、威逼利诱你家附近的小兄弟入伙喊口号。a、说你威胁</a><span>(10月28日 08:55)</span><span>112字</span><span>(19/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											85.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152346899.html">
+																																	    									                                        海上丝绸之路与家庭的梦想之中国创意之加强梦想格局(原创首发)
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=林森刚" class="tableAuthor"><font color="">林森刚</font></a>
+													10月26日 19:37						)</span>
+												<span>3468字</span><span>(127/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											86.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152346024.html">
+																																	    									                                        帝王思维的几个支点
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=凌傲" class="tableAuthor"><font color="">凌傲</font></a>
+													10月26日 18:38						)</span>
+												<span>72字</span><span>(139/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											87.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152345324.html">
+																																	    									                                        台湾统一问题该不该提上议事日程？
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=黎莘" class="tableAuthor"><font color="">黎莘</font></a>
+													10月26日 17:45						)</span>
+												<span>6381字</span><span>(468/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">139.202.60.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152348327.html">大陆政府应当向台湾执政者宣布，大陆不干涉台湾谁上台执政，但是谁要走独立的道路，大陆就会毫不留情的对台实施武力！外外国军队进驻台湾之时大陆会毫不留情的使用武力！大</a><span>(10月26日 21:20)</span><span>107字</span><span>(142/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											88.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152342601.html">
+																																	    									                                        中美若导致冲突可能是核战大仗吗？
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=马鼎奇" class="tableAuthor"><font color="">马鼎奇</font></a>
+													10月26日 15:33						)</span>
+												<span>23451字</span><span>(1013/5)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">221.181.228.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152349615.html">当下狂躁不安是因对小跟班期望值过高，以及俄欧之间的藕断丝连；现在东北亚显示霸气有现实基础和需求，这应该是高调挑衅的动因。</a><span>(10月26日 23:30)</span><span>60字</span><span>(109/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=再白说一次" class="userNick"><font color="">再白说一次</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152349407.html">不要指望美国人和你玩互相摧毁，它没那个胆量。</a><span>(10月26日 22:53)</span><span>22字</span><span>(84/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=luominshen" class="userNick"><font color="">luominshen</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152346704.html">中美若导致冲突可能是核战大仗吗？―――不会。为什么？中国不侵略，不主动惹事美国战败只会找替罪羊；</a><span>(10月26日 19:16)</span><span>48字</span><span>(129/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=黄明玉" class="userNick"><font color="">黄明玉</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152346603.html">两个人互相拿枪指着对方，旁边还有很多看呵呵笑的，最后的结果就是各走各的路。</a><span>(10月26日 19:09)</span><span>37字</span><span>(98/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																									                                <a class="userNick" href="javascript:void(0);">111.164.252.*:</a>
+												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152345544.html">美国就会狐假虎威吓唬人，美国绝不敢跟中国打任何战争，任何战争都不是中国的对手，打核战争中国上世纪就准备好迎接美国核战争，毛泽东的深挖洞广积粮就是对付美国核战争的</a><span>(10月26日 18:00)</span><span>167字</span><span>(137/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											89.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152342123.html">
+																																	    									                                        日媒：东盟草案妄称中方武力控制南海 出招制衡
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月26日 15:11						)</span>
+												<span>40856字</span><span>(153/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											90.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152342097.html">
+																																	    									                                        印度财长称印度将把中国甩在身后 成最快经济体
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月26日 15:10						)</span>
+												<span>22894字</span><span>(255/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											91.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152342058.html">
+																																	    									                                        解放军多架外购军机遇故障 兵王巧化解外方震惊
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月26日 15:07						)</span>
+												<span>21757字</span><span>(451/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											92.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152342042.html">
+																																	    									                                        特战班美女班长穿越火障受伤 手被灼成黑色(图)
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月26日 15:07						)</span>
+												<span>6656字</span><span>(242/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											93.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152342026.html">
+																																	    									                                        日媒称中国在南海修建灯塔将覆盖无线网
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月26日 15:06						)</span>
+												<span>15319字</span><span>(274/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											94.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152342013.html">
+																																	    									                                        解放军为何偏瘦与美军差异大 大块头易被子弹射中
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月26日 15:05						)</span>
+												<span>23983字</span><span>(321/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=黄明玉" class="userNick"><font color="">黄明玉</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152346643.html">体能有了，力量就有了</a><span>(10月26日 19:11)</span><span>10字</span><span>(65/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											95.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152341924.html">
+																																	    									                                        美称中国反导对美毫无威胁 美几分钟可射数百核弹
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月26日 15:02						)</span>
+												<span>6231字</span><span>(349/1)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=再白说一次" class="userNick"><font color="">再白说一次</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152349393.html">说这话之前美国想好没有，用哪些城市承受核反击呢？</a><span>(10月26日 22:51)</span><span>24字</span><span>(95/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											96.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152340123.html">
+																																	    									                                        揭秘朝鲜航空公司：所用飞机在中国已进博物馆
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=kashback" class="tableAuthor"><font color="">kashback</font></a>
+													10月26日 13:20						)</span>
+												<span>11065字</span><span>(279/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											97.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152339803.html">
+																																	    									                                        张召中评歼10-B性能---三代半
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=老张头650加" class="tableAuthor"><font color="">老张头650加</font></a>
+													10月26日 12:59						)</span>
+												<span>1055字</span><span>(393/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											98.<span class="showSubreply">[-]</span>
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152339723.html">
+																																	    									                                        论，，，，，，当今天下无人管，，枪杆子说话就是政权。
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=天边红叶" class="tableAuthor"><font color="">天边红叶</font></a>
+													10月26日 12:52						)</span>
+												<span>32字</span><span>(360/2)</span>
+											    			</p>
+    			    				<ul class="subUL" >
+    			    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=黄明玉" class="userNick"><font color="">黄明玉</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152346727.html">老美把中东弄乱了，收不了场了，我们又不好过去搞建设，老俄这才走上台来，好叫老美就坡下驴，</a><span>(10月26日 19:18)</span><span>44字</span><span>(81/0)</span>
+					    			</p>
+    			    			    				</li>
+    			    																				
+    			    			        			        			    																					<li>
+							<p>
+																																																	<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=天边红叶" class="userNick"><font color="">天边红叶</font>:</a>
+													<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/1/152342654.html">俄罗斯开炮是正确的</a><span>(10月26日 15:35)</span><span>9字</span><span>(84/0)</span>
+					    			</p>
+    			    			    			    				    					</ul>
+					</li>
+										     																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											99.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152339559.html">
+																																	    									                                        中国85式机枪逞威叙利亚 绰号巷战破拆收割机
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=老张头650加" class="tableAuthor"><font color="">老张头650加</font></a>
+													10月26日 12:39						)</span>
+												<span>1315字</span><span>(519/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    																				
+    			    																									<li class="treeReplyItem">
+							<p class=" treeTitle ">
+																											100.
+																																												<a class="treeReply" target="_blank" href="http://bbs1.people.com.cn/post/7/1/2/152339314.html">
+																																	    									                                        英国前首相布莱尔致歉 承认伊战导致IS崛起
+																</a><span>(
+															<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国2011" class="tableAuthor"><font color="">强国2011</font></a>
+													10月26日 12:19						)</span>
+												<span>7767字</span><span>(238/0)</span>
+											    			</p>
+    			    			    				</li>
+    			    												</ul>
+</div>				<!-- we need propery PAGE_FLIP[1323][132230] -->
+<div class="pageBar" postId="${rootPost.id}" bid="" boardId="7" pageCount="1323" noAjax="true" >
+		<ul param="pageNo" flipUrl="/boardList.do?action=postList&boardId=7" class="pageBarUl" id="pageBarUl" view="" treeView="1" boardId="7" flipType="board">
+		</ul>
+		<script type='text/javascript'>
+    		changePage(1,1323,$("#pageBarUl"));
+        </script>
+</div>
+		<div id="boardBottomAdv" class="ad">
+	<a href="" target="_blank"></a>
+</div>
+<script language="javascript" type="text/javascript">
+	jQuery.ajax({
+		url : "http://bbs1.people.com.cn/api/config.do?action=getConfigurationVal&key=boardBottomAdv" ,
+		type: "GET",
+		dataType: "jsonp",
+		success: function(text){
+			jQuery("#boardBottomAdv").html(text);
+		}	
+	});	 
+</script>		<div class="joinTopic">快速发帖</div>
+		<ul class="fReplay clearfix author">
+	<li>
+		<a href="/userInfo.do?userNick=" target="_blank">			
+			<img id="formEditorPostListImg" width="50" height="50" class="portrait" userNick="Guest" imgWidth="50" border="0" />		
+		</a>
+	</li>
+	<li class="replayli nickName forumEditorUserNick">
+		<a class="loginBtn" href="javascript:void(0);">登录</a>
+		<a class="userReg" target="_blank" href="javascript:window.location.href=rmw.sns.regUserLink('bbs',true);">注册</a>
+	</li>
+	<li class="lastLi">
+		<form id="quickPostForm">
+		<input name='bid' type='hidden'  value='7'/>
+		<input type="hidden" name="pageNo" value="1" />
+		<input type="text" name="titleText" class="inputTitle" value="添加标题">
+		<textarea class="subTextarea" name="message">添加内容</textarea>
+		<div class="clearfix">
+			<span id="advancedReply" boardId="7" class="button float_l">图文编辑模式</span>
+			<span class='float_R'>
+				<span class="blueBtn float_R" onclick="submitFormPost(this);">发表</span><span class="smile"></span>
+			</span>
+		</div>
+		<div class="faces">
+			<table class="faceTable">
+			</table>
+			<ul class="facePage clearfix">
+				<li class="focus">1</li>
+				<li>2</li>
+			</ul>
+		</div>
+		</form>
+	</li>
+</ul>
+	<script type="text/javascript">
+				  rmw.global.bindUserPortraitsByNewBoard($("img.portrait", $(".tableWrap"))) ;
+		   RMWSSO.getUserData(function(guzzLoginUser){
+			if(guzzLoginUser && guzzLoginUser.userId > 0){
+			  var displayName = guzzLoginUser.usernick;
+			  $("#formEditorPostListImg").attr("userNick",displayName);
+		    }
+		  });
+		 rmw.global.bindUserPortraits($("img.portrait", $(".fReplay"))) ;
+    </script>		<!--
+		<div class="otherPlate clearfix">
+	<div class="otherPlateTitle">
+		<div class="banzhuPortrait">
+			<img src="test/banzhu.jpg" />
+			<div class="banzhuNick">无所谓</div>
+		</div>
+		<div class="banzhuIntro">版主邀请你继续浏览</div>
+	</div>
+	<div class="platesWrap">
+		<ul class="relateTopic clearfix">
+			<li>
+				<p>有图的版块标题</p>
+				<ul class="relateContent clearfix">
+					<li class="imgNews"><div class="prev">
+							<img src="images/goLeftS.png" />
+						</div>
+						<div class="imgList">
+							<ul>
+								<li><a href='javascript:;' title="高考英语科目分值将下调" target="_blank"><img src="test/test2.jpg" />
+								</a>
+								</li>
+								<li><a href='javascript:;' title="空气最差城市榜，有你的城市吗？" target="_blank"><img src="test/test.jpg" />
+								</a>
+								</li>
+								<li><a href='javascript:;' title="俄每年将向华增供1000万吨原油" target="_blank"><img src="test/test3.jpg" />
+								</a>
+								</li>
+								<li><a href='javascript:;' title="画的乔峰到底是什么形象呢?" target="_blank"><img src="test/test4.jpg" />
+								</a>
+								</li>
+							</ul>
+						</div>
+						<div class="next">
+							<img src="images/goRightS.png" />
+						</div>
+						<div class="imgNum">1/4</div>
+						<div class="imgNumBg"></div>
+					</li>
+					<li class="emphasis"><a title="央视批星巴克在中国坑人公司回应媒体误读星巴克在中国坑人公" href="javascript:;">央视批星巴克在中国坑人公司回应媒体误读星巴克在中国坑人公</a>
+					</li>
+					<li><a title="北京市中高考改革拟出重拳高考英语科目分值将下调" href="javascript:;">北京市中高考改革拟出重拳高考英语科目分值将下调</a>
+					</li>
+					<li><a title="山西神童13岁考上清华老成得让校长吃惊" href="javascript:;">山西神童13岁考上清华老成得让校长吃惊语科目分值将下调</a>
+					</li>
+				</ul> <a href="javascript:;" target="_blank" class="relateMore">查看更多</a></li>
+			<li>
+				<p>图文直播</p>
+				<ul class="relateContent clearfix">
+					<li class="emphasis"><a title="央视批星巴克在中国坑人公司回应媒体误读星巴克在中国坑人公" href="javascript:;">央视批星巴克在中国坑人公司回应媒体误读星巴克在中国坑人公</a>
+					</li>
+					<li><a title="北京市中高考改革拟出重拳高考英语科目分值将下调" href="javascript:;">北京市中高考改革拟出重拳高考英语科目分值将下调</a>
+					</li>
+					<li><a title="山西神童13岁考上清华老成得让校长吃惊" href="javascript:;">山西神童13岁考上清华老成得让校长吃惊语科目分值将下调</a>
+					</li>
+					<li><a title="杭州一中学校长为学生打饭9年带动老师们集体参与" href="javascript:;">杭州一中学校长为学生打饭9年带动老师们集体参与</a>
+					</li>
+					<li><a title="山西神童13岁考上清华老成得让校长吃惊" href="javascript:;">山西神童13岁考上清华老成得让校长吃惊语科目分值将下调</a>
+					</li>
+				</ul> <a href="javascript:;" target="_blank" class="relateMore">查看更多</a></li>
+			<li>
+				<p>囧文日报</p>
+				<ul class="relateContent clearfix">
+					<li class="emphasis"><a title="央视批星巴克在中国坑人公司回应媒体误读星巴克在中国坑人公" href="javascript:;">央视批星巴克在中国坑人公司回应媒体误读星巴克在中国坑人公</a>
+					</li>
+					<li><a title="北京市中高考改革拟出重拳高考英语科目分值将下调" href="javascript:;">北京市中高考改革拟出重拳高考英语科目分值将下调</a>
+					</li>
+					<li><a title="山西神童13岁考上清华老成得让校长吃惊" href="javascript:;">山西神童13岁考上清华老成得让校长吃惊语科目分值将下调</a>
+					</li>
+					<li><a title="杭州一中学校长为学生打饭9年带动老师们集体参与" href="javascript:;">杭州一中学校长为学生打饭9年带动老师们集体参与</a>
+					</li>
+					<li><a title="山西神童13岁考上清华老成得让校长吃惊" href="javascript:;">山西神童13岁考上清华老成得让校长吃惊语科目分值将下调</a>
+					</li>
+				</ul> <a href="javascript:;" target="_blank" class="relateMore">查看更多</a></li>
+			<li class="noMargin">
+				<p>谣言狙击榜</p>
+				<ul class="relateContent clearfix">
+					<li class="emphasis"><a title="央视批星巴克在中国坑人公司回应媒体误读星巴克在中国坑人公" href="javascript:;">央视批星巴克在中国坑人公司回应媒体误读星巴克在中国坑人公</a>
+					</li>
+					<li><a title="北京市中高考改革拟出重拳高考英语科目分值将下调" href="javascript:;">北京市中高考改革拟出重拳高考英语科目分值将下调</a>
+					</li>
+					<li><a title="山西神童13岁考上清华老成得让校长吃惊" href="javascript:;">山西神童13岁考上清华老成得让校长吃惊语科目分值将下调</a>
+					</li>
+					<li><a title="杭州一中学校长为学生打饭9年带动老师们集体参与" href="javascript:;">杭州一中学校长为学生打饭9年带动老师们集体参与</a>
+					</li>
+					<li><a title="山西神童13岁考上清华老成得让校长吃惊" href="javascript:;">山西神童13岁考上清华老成得让校长吃惊语科目分值将下调</a>
+					</li>
+				</ul> <a href="javascript:;" target="_blank" class="relateMore">查看更多</a></li>
+		</ul>
+	</div>
+</div>		-->
+	</div>
+	<!--
+	<div class="bottomScroll">
+	<div class="goLeft">
+		<img src="/images/bbs_2013/goLeft.png" />
+	</div>
+	<div class="ulWrap">
+		<ul class="imgWrapUl clearfix">
+			<li><img src="/images/bbs_2013/test/t1.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">上弦月</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t2.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">一个美女</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t3.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">青青的草原</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t4.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">小树</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t5.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">新月份的日历</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t6.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">哇！大海</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t7.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">大怪物</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t8.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">绿色树林</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t9.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">小亭子</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t10.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">茉莉花</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t11.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">俩小孩</div>
+			</li>
+			<li><img src="/images/bbs_2013/test/t12.jpg" />
+			<div class="imgMask"></div>
+				<div class="floatFont">小池塘</div>
+			</li>
+		</ul>
+	</div>
+	<div class="goRight">
+		<img src="/images/bbs_2013/goRight.png" />
+	</div>
+</div>	-->
+	<div id="footer">
+		<ul id="footerNavUl">
+		<li><a target="_blank" href="http://bbs1.people.com.cn">强国社区</a>
+		</li>
+		<li><a target="_blank" href="http://bbs1.people.com.cn/post/1/0/1/135544954.html">意见反馈</a>
+		</li>
+		<li><a target="_blank" href="/gltl.do">管理条例</a>
+		</li>
+		<li><a target="_blank" href="http://kf.people.com.cn/GB/193845/index.html">如何删帖</a>
+        </li>
+		<li><a target="_blank" href="http://bbs1.people.com.cn/help.htm">帮助</a>
+		</li>
+	</ul>
+	©&nbsp;1997-2015&nbsp;by&nbsp;<a target="_blank" href="http://www.people.com.cn">www.people.com.cn</a>&nbsp;All&nbsp;Rights&nbsp;Reserved.
+</div>
+<script src="http://www.people.com.cn/css/2010tianrun/webdig_test.js" type="text/javascript"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45054704-1', 'auto');
+  ga('send', 'pageview');
+
+</script>	<div id='floatTips'><p class="tipTitle">提示</p><p class="tipsCont"></p><a href="javascript:;" class="closeTip"></a></div>
+
+<!-- 顶 踩 成功的弹出框-->
+<div  class="pop_box clearfix" id="dialog" title="" style="display:none;">
+	  		   <h1 id="textTitle"></h1>
+	   		   <h2 id="textShare">你的态度靠谱吗？发到你的主页让大家评一评！</h2>
+			   <div class="shear clearfix" style="display:none;">
+			   	<strong>分享到：</strong>
+				<div class="iocn" style="display:block;">
+					<div class="bshare-custom icon-medium-plus">
+						<div class="bsPromo bsPromo1"></div>
+						<a title="分享到人民微博" class="bshare-peoplemb"></a>
+						<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+						<a title="分享到人人网" class="bshare-renren"></a>
+						<a title="分享到QQ空间" class="bshare-qzone"></a>
+						<a title="分享到豆瓣" class="bshare-douban"></a>
+						<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+						<span class="BSHARE_COUNT bshare-share-count">0</span>
+	  					<p style="display: none;" id="BSHARE_TEXT" class="BSHARE_TEXT" ></p>
+					</div>
+				</div>
+			</div>
+   			<div class="pop_sucees" style="display:none;padding-top: 20px;">恭喜您成为强国社区用户！
+   			 	<a href="javascript:void(0)" id="userPassword" target="_blank"><img src="http://bbs1.people.com.cn/2013lianghui/images/edit_password.png" border="0" alt="" /></a>
+   			 	<a href="http://sns.people.com.cn/usr/home.do" target="_blank"><img src="http://bbs1.people.com.cn/2013lianghui/images/login_index.png" border="0" alt="" /></a>
+   			</div><br />
+  			<h3 class="pop_sucees" style="display:none;">用户名：<span id="myUserName"></span>&nbsp;&nbsp;&nbsp;昵称：<span id="myUserNick"></span></h3>
+</div>
+<!-- 顶 踩 成功的弹出框-->
+
+<div class="mask">
+<div class="maskBg"></div>
+<div class="maskWrap">
+	<div class="followTips">请登录后继续操作....</div>
+    <div class="maskCont">
+    	<div class="loginCont">
+        	<div class="closeMask"></div>
+            <h3>强国社区-人民网</h3>
+            <img src="/images/bbs_2013/login.jpg" />            
+            <form method="post" id="loginForm">
+		      <input type="hidden" value="1" name="rememberMe">
+		      <input type="hidden" value="" id="retUrl" name="retUrl">
+		      	<table class="loginTable">
+	           	 	<tr><td>英文或数字登录名</td><td colspan="2">密码</td></tr>
+	            	<tr><td><input type="text" id="userName" name="userName" class="input"/></td><td><input type="password" id="passWord" name="password"  class="input"/></td><td><span id="login_btn" class="button">登录</span></td></tr>
+	            	<tr><td><input type="checkbox" class="keepAlive"/>在本电脑一直保持登录状态</td><td colspan="2"><a class="losePassword" href="http://sso.people.com.cn/u/findpwd/phone">忘记密码</a></td></tr>
+	            	<tr>
+						<td colspan="3">
+							<div class="otherAccount">
+								<a href="javascript:window.location.href=rmw.sns.regUserLink('bbs',true);">注册新账号</a>
+								或使用合作伙伴账号
+									<span class="otherLoginWrap">
+										<a href="http://open.denglu.cc/transfer/qzone?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon tengxun"></a>
+										<a href="http://open.denglu.cc/transfer/sina?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon weibo"></a>
+										<a href="http://open.denglu.cc/transfer/windowslive?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon MSN"></a>
+										<a href="http://open.denglu.cc/transfer/renren?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon renren"></a>
+										<a href="http://open.denglu.cc/transfer/baidu?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" ><img style="vertical-align:inherit;" src="http://bbs1.people.com.cn/images/bbs_2012/baidu.gif"></a>
+									</span>
+							</div>
+						</td>
+					</tr>
+                </table>
+		    </form>
+        </div>
+    </div>
+</div>
+</div>
+<script language="javascript" src="http://bbs1.people.com.cn/js_library/writePeopleLog.js"></script>
+	<input type="hidden" id="page_flip_pageNo" value="1" />
+</div>
+</body>
+</html>

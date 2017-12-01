@@ -1,0 +1,3317 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="baidu-site-verification" content="TGpGGBGNUT" ignoreapd="1" />
+<title>中国机构编制网</title>
+<base target="_blank"/><!--新窗口打开-->
+<link href="./images/style20150807.css" rel="stylesheet" type="text/css" />
+<link href="./images/shouyeceshi20150807.css" rel="stylesheet" type="text/css" />
+<script src="./images/AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+<script src="./images/shoucangshouye.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+    <!--分享CSS样式调用代码 BEGIN（此代码必须部署在</head>闭合标记之前）-->
+    <script type="text/javascript">
+        var gwdshare = gwdshare || { version: "1.0", udata: "type=tools&amp;uid=GWD-000531", pageFilter: "", jsLoaded: false };
+        (function () {
+            function async_load() {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = '//static.gridsumdissector.com/zheng_fen_xiang/scripts/gwdshareasync.min.js';
+                var x = document.getElementsByTagName('script'), y = x[x.length - 1];
+                y.parentNode.appendChild(s);
+            }
+            if (!gwdshare.jsLoaded) {
+                if (window.attachEvent) window.attachEvent('onload', async_load);
+                else window.addEventListener('load', async_load, false);
+                gwdshare.jsLoaded = true;
+            }
+        })();
+    </script>
+    <!--分享CSS样式调用代码 END-->
+</head>
+<script type="text/javascript">
+
+var Speed_1 = 10; //速度(毫秒)
+var Space_1 = 20; //每次移动(px)
+var PageWidth_1 = 97 * 8; //翻页宽度
+var interval_1 = 5000; //翻页间隔时间
+var fill_1 = 0; //整体移位
+var MoveLock_1 = false;
+var MoveTimeObj_1;
+var MoveWay_1="right";
+var Comp_1 = 0;
+var AutoPlayObj_1=null;
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay_1(){clearInterval(AutoPlayObj_1);AutoPlayObj_1=setInterval('ISL_GoDown_1();ISL_StopDown_1();',interval_1)}
+function ISL_GoUp_1(){if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="left";MoveTimeObj_1=setInterval('ISL_ScrUp_1();',Speed_1);}
+function ISL_StopUp_1(){if(MoveWay_1 == "right"){return};clearInterval(MoveTimeObj_1);if((GetObj('ISL_Cont_1').scrollLeft-fill_1)%PageWidth_1!=0){Comp_1=fill_1-(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1);CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrUp_1(){if(GetObj('ISL_Cont_1').scrollLeft<=0){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft+GetObj('List1_1').offsetWidth}
+GetObj('ISL_Cont_1').scrollLeft-=Space_1}
+function ISL_GoDown_1(){clearInterval(MoveTimeObj_1);if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="right";ISL_ScrDown_1();MoveTimeObj_1=setInterval('ISL_ScrDown_1()',Speed_1)}
+function ISL_StopDown_1(){if(MoveWay_1 == "left"){return};clearInterval(MoveTimeObj_1);if(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1-(fill_1>=0?fill_1:fill_1+1)!=0){Comp_1=PageWidth_1-GetObj('ISL_Cont_1').scrollLeft%PageWidth_1+fill_1;CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrDown_1(){if(GetObj('ISL_Cont_1').scrollLeft>=GetObj('List1_1').scrollWidth){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft-GetObj('List1_1').scrollWidth}
+GetObj('ISL_Cont_1').scrollLeft+=Space_1}
+function CompScr_1(){if(Comp_1==0){MoveLock_1=false;return}
+var num,TempSpeed=Speed_1,TempSpace=Space_1;if(Math.abs(Comp_1)<PageWidth_1/2){TempSpace=Math.round(Math.abs(Comp_1/Space_1));if(TempSpace<1){TempSpace=1}}
+if(Comp_1<0){if(Comp_1<-TempSpace){Comp_1+=TempSpace;num=TempSpace}else{num=-Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft-=num;setTimeout('CompScr_1()',TempSpeed)}else{if(Comp_1>TempSpace){Comp_1-=TempSpace;num=TempSpace}else{num=Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft+=num;setTimeout('CompScr_1()',TempSpeed)}}
+function picrun_ini(){
+GetObj("List2_1").innerHTML=GetObj("List1_1").innerHTML;
+GetObj('ISL_Cont_1').scrollLeft=fill_1>=0?fill_1:GetObj('List1_1').scrollWidth-Math.abs(fill_1);
+GetObj("ISL_Cont_1").onmouseover=function(){clearInterval(AutoPlayObj_1)}
+GetObj("ISL_Cont_1").onmouseout=function(){AutoPlay_1()}
+AutoPlay_1();
+}
+</script>
+<!--[if IE 6]>
+<style>
+ .ie6kuandu{
+   float:right; display:inline; margin-left:10px;border:1px #f5e6c0 solid; height:50px; width:222px; 
+}
+.ie6kuandu ul{
+   height:50px;
+}
+.ie6kuandu ul li{
+   width:220px; margin:0px;float:right; display:inline; padding:0px; 
+}
+.xinwenzhongxin{
+   width:313px;
+   margin-left:10px;
+   float:left; display:inline;
+}
+.beijing6{
+   background:url(./images/beijing06.jpg) no-repeat;
+   width:300px;
+   height:180px;
+   float:left; display:inline;
+   margin-left:8px;
+}
+.beijing6 ul li{
+ font-size:14px;
+ line-height:24px;
+ height:24px;
+ margin-left:8px;
+ width:290px;
+}
+
+</style>
+<![endif]-->
+
+
+</head>
+
+<body style="margin:0px auto; width:1200px;">
+<table width="1200" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100">&nbsp;</td>
+    <td width="1000">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	margin-top: 0px;
+}
+.top_hui12 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #000000;
+}
+.top_red14c {
+	font-family: "宋体";
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.top_black12 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #000000;
+}
+.top_black12c {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #000000;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+.top_red12 {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: normal;
+	color: #000099;
+	line-height: 22px;
+}
+.top_blue12c {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #000099;
+}
+-->
+</style>
+</head>
+<SCRIPT language=javascript>
+<!--
+	function submitSearch(thisform)
+	{
+		var keyword = "%";
+		if(thisform.doctitle.value.length>0)
+		{
+			keyword += " AND doctitle = '%"+thisform.doctitle.value+"%'";
+		}
+		if(keyword=="%")
+		{
+			alert("请输入检索词！");
+			return false;
+		}
+		else
+		{
+			thisform.searchword.value = keyword;
+			return true;
+		}
+	}
+//-->
+</SCRIPT>
+<body>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="122" align="center" valign="top" background="./images/top_banner.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="85%" height="122">&nbsp;</td>
+        <!--<td width="15%" align="left" valign="bottom" class="top_blue12c"><a href="javascript:void(0)" onclick="addCookie()">加入收藏</a> |
+<a href="javascript:void(0)" onclick="setHomepage()">设为首页</a></td>-->
+<td width="15%" align="left" valign="bottom" class="top_blue12c"><a href="javascript:window.external.addFavorite('http://www.scopsr.gov.cn/','中国机构编制网');" target=_top class="top_blue12c">加入收藏</a> |
+<a href="#" class="top_blue12c" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.scopsr.gov.cn/');">设为首页</a></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="38" align="center" valign="middle" bgcolor="#f4f2f3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="10"></td>
+        <td width="170" align="left"><table width="170" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="175" align="left" valign="top" style="padding-top:7px;"><font style="font-size:12px">
+	<script language='JavaScript'>
+	   <!--
+   tmpDate = new Date();
+   date = tmpDate.getDate();
+   month = tmpDate.getMonth() + 1 ;
+   year = tmpDate.getYear();
+   year = tmpDate.getYear();
+   year = year>1900 ? year : year+1900;
+   document.write("今天是"+year + "年" + month + "月" + date + "日");
+   myArray = new Array(6);
+   myArray[0] = "星期日"
+   myArray[1] = "星期一"
+   myArray[2] = "星期二"
+   myArray[3] = "星期三"
+   myArray[4] = "星期四"
+   myArray[5] = "星期五"
+   myArray[6] = "星期六"
+   weekday = tmpDate.getDay();
+   document.write(myArray[weekday])
+   //-->
+   </script></font>    </td>
+  </tr>
+</table></td>
+        <td width="350"><table width="98%" height="34" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    
+    <td width="29" align="left" valign="top" style="padding-top:10px;"><a href="mailto:tg@scopsr.gov.cn"><img src="./images/email_2.gif" width="23" height="17" border="0" /></a></td> 
+    <td width="326" align="left" valign="top" style="padding-top:5px;"><form name=login method=post target="_blank" action="http://mail.scopsr.gov.cn/login.php?for_web=1" style="margin:0px 0px 0px 0px;">
+<input type=hidden id=rlogin name=rlogin value=111 />
+            <input type=hidden name=F_lang value={F_lang} />
+            <input type=hidden name=F_tm value={F_tm} />
+            <input type=hidden name=F_loginkey value=1381212594 />
+            <input type=hidden id="F_logintype" name=F_logintype value="0" />
+            <input type=hidden id="F_rsapassword" name=F_rsapassword value />
+	  <table width="97%" height="28" border="0" cellpadding="0" cellspacing="0" style="font-size:12px">
+      <tr align="left">
+       <td width="75" height="25" align="right" class="top_hui12">用户名：</td>
+        <td width="49"><!--<input type=text name=F_email class="input" size="7" />--><input name=F_email type=text class=input size=7 /></td>
+		<input type=hidden name=F_domain value="scopsr.gov.cn" />
+        <td width="55" align="right" class="top_hui12">密码：</td>
+        <td width="65" align="center"><!--<input type=password name=F_password class="input" size="10" />--><input type=password name=F_password size=8 class=input /></td>
+        <td width="60" align="right"><label>
+          <input type="submit" name="action" value="登录" />
+        </label></td>
+      </tr>
+    </table>
+    </form></td>
+  </tr>
+</table></td>
+        <td width="354"><table border="0" cellspacing="0" cellpadding="0" style="font-size:12px">
+        <tr> 
+          <td width="23" height="24"><img src="./images/in_z_1.gif" width="20" height="23" /></td>
+          <td width="63" class="top_hui12">站内检索：</td>
+          <FORM onSubmit="return submitSearch(this);" method=get name=advsearchform action=/wasdemo/search target=_blank>
+          <input type="hidden" name="channelid" value="161945" />
+          <input type="hidden" name="searchword" />
+          <td width="123" valign="top"> <input name="doctitle" type="text" size="15" value="关键字" onFocus="javascript:this.value=''" onBlur="if(this.value=='')this.value='关键字'" class="input" /></td>
+          <td width="53" align="center"><label>
+            <input type="submit" name="button2" id="button2" value="检索" />
+          </label></td>
+          <td width="79" align="left"><label>
+            <input type="button" name="button3" onclick="location.href='http://www.scopsr.gov.cn/index_462.html'" value="高级检索" />
+          </label></td>
+          </form>
+        </tr>
+</table></td>
+        <td width="116"><table width="100%" height="33" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="23" align="left" valign="top" style="padding-top:5px;"><a href="http://www.baidu.com/" target="_blank"><img src="./images/baidu.gif" width="98" height="25" border="0" /></a></td>
+  </tr>
+</table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="61" align="center" valign="middle" background="./images/nav_bg_1.gif"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="95"><img src="./images/nav_bg_2.gif" width="95" height="61" border="0" usemap="#Map1" /></td>
+        <td width="35" align="center"><img src="./images/line_1.gif" alt width="2" height="61" /></td>
+        <td width="82" align="left" valign="middle" class="top_black12c"><a href="./tppd/" target="_blank" class="top_hui12">图片</a>&nbsp;<span class="top_hui12"><a href='http://www.scopsr.gov.cn/tt/' target="_blank" class="top_hui12">头条新闻</a><br />
+        </span><a href="http://www.scopsr.gov.cn/zxft/" target="_blank" class="top_hui12">访谈</a><span class="top_hui12">&nbsp;<a href="http://www.scopsr.gov.cn/zxdd/" target="_blank" class="top_hui12">新闻中心</a></span></td>
+        <td width="35" align="center" valign="middle"><img src="./images/line_1.gif" width="2" height="61" /></td>
+        <td width="106" align="left" valign="middle" class="top_hui12"><span class="top_black12c"><a href="./ggts/zyjs/" target="_blank" class="top_hui12">中央精神</a></span>&nbsp;<a href="./ggts/jzfq/" target="_blank" class="top_hui12">简政放权</a><br />
+          <span class="top_black12c"><a href="./ggts/ggjy/" target="_blank" class="top_hui12">改革建议</a></span>&nbsp;<a href="./ggts/flgg/" target="_blank" class="top_hui12">分类改革</a></td>
+        <td width="35" align="center" valign="middle" class="top_hui12"><img src="./images/line_1.gif" alt width="2" height="61" /></td>
+        <td width="216" align="left" valign="middle" class="top_black12c"><a href="./bbyw/zyhd/" target="_blank" class="top_hui12">编办动态</a>&nbsp;<a href="./bbyw/bzgl/" target="_blank" class="top_hui12">编制管理</a>&nbsp;<span class="top_black12"><a href="./bbyw/fzgz/" target="_blank" class="top_hui12">法制工作</a></span>&nbsp;<a href="./wsbs/" target="_blank" class="top_hui12">网上办事</a><br /><span class="top_black12"><a href="http://www.scopsr.gov.cn/bbyw/qwfb/" target="_blank" class="top_hui12">事项公告</a></span><span class="top_black12c">&nbsp;</span><span class="top_hui12"><a href="http://www.scopsr.gov.cn/bbyw/jdjc/" target="_blank" class="top_hui12">监督检查</a>&nbsp;<a href="./bbyw/jgxxh/" target="_blank" class="top_hui12">信息工作</a></span>&nbsp;<span class="top_black12c"><a href="http://www.scopsr.gov.cn/bbyw/zdgzzt/" target="_blank" class="top_hui12">重点专题</a></span></td>
+        <td width="35" align="center" valign="middle"><img src="./images/line_1.gif" alt width="2" height="61" /></td>
+        <td width="108" align="left" valign="middle"><span class="top_black12c"><a href="http://www.scopsr.gov.cn/index_1194.html" target="_blank" class="top_hui12">汇总清单</a></span><span class="top_black12">&nbsp;<a href="http://www.scopsr.gov.cn/index_1131.html" target="_blank" class="top_hui12">机构名录</a><br />
+          </span><span class="top_black12c"><a href="http://wzsh.scopsr.gov.cn/" target="_blank" class="top_hui12">审核平台</a></span><span class="top_black12">&nbsp;<a href="http://www.gjsy.gov.cn/" target="_blank" class="top_hui12">法人登记</a></span></td>
+          <td width="35" align="center" valign="middle"><img src="./images/line_1.gif" alt width="2" height="61" /></td>
+        <td align="left" valign="middle"><span class="top_black12c"><a href="http://www.scopsr.gov.cn/zwgz/" target="_blank" class="top_hui12">政务经济</a></span><span class="top_black12">&nbsp;<a href="http://www.scopsr.gov.cn/mtgl/" target="_blank" class="top_hui12">理论学习</a>&nbsp;<a href="http://www.scopsr.gov.cn/zgjgggygl/zxdk" target="_blank" class="top_hui12">在线读刊</a><br />
+          </span><span class="top_black12c"><a href="http://www.scopsr.gov.cn/whsh/" target="_blank" class="top_hui12">社会文化</a></span><span class="top_black12">&nbsp;<a href="http://www.scopsr.gov.cn/zlzx/" target="_blank" class="top_hui12">资料中心</a>&nbsp;<a href="http://www.scopsr.gov.cn/index_1130.html" target="_blank" class="top_hui12">建言献策</a></span></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+
+<map name="Map1" id="Map1"><area shape="rect" coords="46,15,93,46" href="http://www.scopsr.gov.cn/" target="_parent" />
+</map>
+</body>
+</html>
+<div style=" width:1000px; margin:0 auto; margin-top:10px;">
+
+ 
+  <!--top开始-->
+  
+  <!--top结束-->
+  
+  <!--中间开始-->
+  <div>
+     
+     <!--左边开始-->
+<div class="zuobian" >
+       <!--中央编委开始-->
+       
+       <!--中央编委结束-->
+       <div style=" margin-bottom:5px;"><a href="http://www.scopsr.gov.cn/zybwzzjg" target="_blank"><img src="./images/bianwei011.jpg" /></a></div>
+       <!--中央编办开始-->
+       <div><a href="http://www.scopsr.gov.cn/zybbzzjg/" target="_blank"><img src="./images/bianban011.jpg" /></a></div>
+       <!--中央编办结束-->
+       
+           
+       <div class="dabg" style=" margin-top:10px;">
+       
+          <!--机构概况开始-->
+         <div class="jigougaikuang">
+          <ul>
+           <li style=" font-size:14px; width:145px; font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin-top:0px; margin-bottom:5px;height:28px; background: url(./images/bg.jpg) repeat-x;">
+           <img style=" margin:10px 8px 0px 0px;" src="./images/th.jpg" />机构概况
+           <!--<a class="more" style="color:#946f2b; margin-left:15px;" href='./zlzx/jggk/' target="_blank">更多>></a>-->
+           </li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201410/t20141013_267051.html' title='党中央部门机构'  target="_blank">党中央部门机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201203/t20120329_57315.html' title='全国人大机构'  target="_blank">全国人大机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zlzx/jggk/gwyjg/index.html' title='国务院机构'  target="_blank">国务院机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/rdzt/zxwyjgt/' title='全国政协机构'  target="_blank">全国政协机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201203/t20120329_57312.html' title='最高人民法院机构'  target="_blank">最高人民法院机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201203/t20120329_57311.html' title='最高人民检察院机构'  target="_blank">最高人民检察院机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201203/t20120329_57310.html' title='中央编办管理机构编制的群众团体机关'  target="_blank">群众团体机关</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201203/t20120329_57309.html' title='民主党派中央机关'  target="_blank">民主党派中央机关</a></li>
+           
+           <!--
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zlzx/jggk/gwyjg/index.html' title='三定方案'  target="_blank">国务院机构</a></li>
+           
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/rdzt/zxwyjgt/' title='全国政协机构'  target="_blank">全国政协机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201203/t20120329_57312.html' title='最高人民法院机构'  target="_blank">最高人民法院机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201203/t20120329_57311.html' title='最高人民检察院机构'  target="_blank">最高人民检察院机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201203/t20120329_57310.html' title='中央编办管理机构编制的群众团体机关'  target="_blank">群众团体机关</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/jggk/201203/t20120329_57309.html' title='民主党派中央机关'  target="_blank">民主党派中央机关</a></li>
+           -->
+          
+          </ul>
+         </div>
+         <!--机构概况结束-->
+         
+         <!--网上办事开始-->
+         <div class="wangsahgnbanshi" style=" margin-top:0px;">
+          <ul>
+           
+           
+           <li style=" font-size:14px; width:145px; font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin-top:0px; margin-bottom:5px;height:28px; background: url(./images/bg.jpg) repeat-x;">
+           <img style=" margin:10px 8px 0px 0px;" src="./images/th.jpg" />网上办事
+           <!--<a class="more" style="color:#946f2b; margin-left:15px;" href="#" target="_blank">更多>></a>-->
+           </li>
+           
+           
+           <li style=" margin:5px 0px 0px -2px;"><a href="http://wzsh.scopsr.gov.cn/" target="_blank"><img src="./images/guanlipingtai20141203.jpg" /></a></li>
+           <!--<li style="background: url(./images/chaxun01123.jpg) no-repeat; width:138px; height:40px; margin-top:5px; padding-top:36px; margin-left:5px;">
+           <FORM method=get name=advsearchform1 action='http://www.scopsr.gov.cn/index_1131.html' target=_blank>
+            <input style="width:98px; height:18px; padding-top:3px; border:0px; background:none;" name="doctitle" type="text" size="13" value="关键字" onFocus="javascript:this.value=''" onBlur="if(this.value=='')this.value='关键字'" class="input" />
+            
+            <input style=" width:26px; height:26px; line-height:22px; border:0px; text-align:center; background:none;cursor:pointer;" onclick="javascript:window.open('http://www.scopsr.gov.cn/index_1131.html')" />
+            </FORM>
+           </li>-->
+           
+           
+          
+           <li style=" margin:0px; height:370px">
+             <!--<iframe src="http://www.scopsr.gov.cn/index_1192.html" width="138" height="335" style="margin:0px auto" scrolling="no" frameborder="0"></iframe>-->
+     <iframe name="denglu" id="denglu001" src="https://resource.chinagov.cn/resources/00001.html" width="138px" target="_top" height="210px" style="margin:0px auto" scrolling="no" frameborder="0"></iframe>
+             <iframe name="chaxun" id="chaxun002" src="http://bszs.conac.cn/iframeSearch.html" width="138px" target="_top" height="165px" style="margin-top:-20px" scrolling="no" frameborder="0"></iframe>
+           </li>
+             
+
+            
+            <li style=" margin-top:5px; margin-left:-1px; margin-bottom:5px;"><a href="http://www.conac.cn/" target="_blank"><img src="./images/yumingguanli.jpg" /></a></li>
+          </ul>
+         </div>
+         <!--网上办事结束-->
+         
+         
+         
+         
+         <!--历史沿革开始-->
+         <div class="wangsahgnbanshi">
+          <ul>
+            
+           <li style=" margin-top:10px; margin-left:-1px; padding-right:6px"><a href='http://www.gjsy.gov.cn/' target="_blank"><img src="./images/shiyedanweizaixian.jpg" /></a></li> 
+            
+           <li style=" margin-top:5px; margin-left:-1px;"><a href='http://www.scopsr.gov.cn/bbyw/jdjc/12310jbdh/index.html' target="_blank"><img src="./images/12310201587.jpg" /></a></li>
+           
+		   <li style=" margin-top:5px; margin-left:-1px; margin-bottom:6px;"><a href="http://www.scopsr.gov.cn/wsbs/201505/t20150504_275400.html" target="_blank"><img src="./images/jijianjubao.jpg" /></a></li>
+           <li style=" margin-top:1px; margin-left:-1px; margin-bottom:6px;"><a href="http://jgjs.scopsr.gov.cn" target="_blank"><img src="./images/zhongguojigoujiansuo20150921.png" /></a></li>
+          </ul>
+         </div>
+         <!--历史沿革结束-->
+         
+         
+         
+         
+         <!--历史沿革开始-->
+         <div class="jigougaikuang">
+          <ul>
+           <li style=" font-size:14px; width:145px; font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin-top:0px; margin-bottom:5px;height:28px; background: url(./images/bg.jpg) repeat-x;">
+           <img style=" margin:10px 8px 0px 0px;" src="./images/th.jpg" />历史沿革
+           <a class="more" style="color:#946f2b; margin-left:15px;" href='./zlzx/zlzxlsyg/' target="_blank">更多>></a>
+           </li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35157.html' title='中共中央机构沿革概要' target="_blank">中共中央机构沿革概要</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201409/t20140929_266637.html' title='2013年国务院机构改革的情况' target="_blank">2013年国务院机构改...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35145.html' title='2008年国务院机构改革的情况' target="_blank">2008年国务院机构改...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201209/t20120920_182788.html' title='2008年地方政府机构改革的情况' target="_blank">2008年地方政府机构...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35147.html' title='2003年国务院机构改革的情况' target="_blank">2003年国务院机构改...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35146.html' title='2003年地方政府机构改革的情况' target="_blank">2003年地方政府机构...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35148.html' title='2000年全国各级人大、政协机关，法院、检察院机关，群众团体机关机构改革的情况' target="_blank">2000年全国各级人大...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35149.html' title='1999年省级党委机构改革的情况' target="_blank">1999年省级党委机构...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35152.html' title='1998年国务院机构改革的情况' target="_blank">1998年国务院机构改...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35151.html' title='1998年地方政府机构改革的情况' target="_blank">1998年地方政府机构...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201209/t20120920_182784.html' title='1994年地方政府机构改革的情况' target="_blank">1994年地方政府机构...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35153.html' title='1993年国务院机构改革的情况' target="_blank">1993年国务院机构改...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35154.html' title='1988年国务院机构改革的情况' target="_blank">1988年国务院机构改...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35156.html' title='1982年国务院机构改革的情况' target="_blank">1982年国务院机构改...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/zlzxlsyg/201203/t20120323_35155.html' title='1982年地方党政机关机构改革的情况' target="_blank">1982年地方党政机关...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://cpc.people.com.cn/GB/64162/64168/351850/index.html' title='中国共产党第十八次全国代表大会' target="_blank">中国共产党第十八次...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://cpc.people.com.cn/GB/64162/64168/106155/index.html' title='中国共产党第十七次全国代表大会' target="_blank">中国共产党第十七次...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://cpc.people.com.cn/GB/64162/64168/64569/index.html' title='中国共产党第十六次全国代表大会' target="_blank">中国共产党第十六次...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://cpc.people.com.cn/GB/64162/64168/64568/index.html' title='中国共产党第十五次全国代表大会' target="_blank">中国共产党第十五次...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://cpc.people.com.cn/GB/64162/64168/64567/index.html' title='中国共产党第十四次全国代表大会' target="_blank">中国共产党第十四次...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='http://cpc.people.com.cn/GB/64162/64168/64566/index.html' title='中国共产党第十三次全国代表大会' target="_blank">中国共产党第十三次...</a></li>
+           
+          </ul>
+         </div>
+         <!--历史沿革结束-->
+         
+         
+         <!--编制常识开始-->
+         <div class="jigougaikuang" style=" margin:0px 5px 5px 5px;">
+          <ul>
+           <li style=" font-size:14px; width:145px; font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin-top:0px; margin-bottom:5px;height:28px; background: url(./images/bg.jpg) repeat-x;">
+           <img style=" margin:10px 8px 0px 0px;" src="./images/th.jpg" />编制常识
+           <a class="more" style="color:#946f2b; margin-left:15px;" href='./zlzx/bzcs/' target="_blank">更多>></a>
+           </li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55628.html' title='政府派出机关' target="_blank">政府派出机关</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55627.html' title='政府派出机构' target="_blank">政府派出机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55626.html' title='机构限额' target="_blank">机构限额</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55625.html' title='机构编制实名制管理' target="_blank">机构编制实名制管理</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55624.html' title='“一支笔”审批制度' target="_blank">“一支笔”审批制度</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55623.html' title='行政管理体制改革' target="_blank">行政管理体制改革</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55622.html' title='部际联席会议' target="_blank">部际联席会议</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55621.html' title='直属机构' target="_blank">直属机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55620.html' title='直属特设机构' target="_blank">直属特设机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55619.html' title='议事协调机构' target="_blank">议事协调机构</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55618.html' title='精简、统一、效能原则' target="_blank">精简、统一、效能原则</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55617.html' title='国务院行政机构设置和编制管理条例' target="_blank">国务院行政机构设置...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201501/t20150119_270724.html' title='国务院机构名称' target="_blank">国务院机构名称</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55616.html' title='地方各级人民代表大会和地方各级人民政府组织法' target="_blank">地方各级人民代表大...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201303/t20130308_210063.html' title='30个国家和地区中央政府机构设置情况' target="_blank">30个国家和地区中央...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55615.html' title='中华人民共和国国务院组织法' target="_blank">中华人民共和国国务...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55614.html' title='地方各级人民政府机构设置和编制管理条例' target="_blank">地方各级人民政府机...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55613.html' title='机构编制管理评估制度' target="_blank">机构编制管理评估制度</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55612.html' title='乡镇机构改革' target="_blank">乡镇机构改革</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55611.html' title='以虚报人员等方式占用编制并冒领财政资金' target="_blank">以虚报人员等方式占...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55610.html' title='事业单位登记管理制度' target="_blank">事业单位登记管理制度</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55609.html' title='事业单位登记管理暂行条例' target="_blank">事业单位登记管理暂...</a></li>
+           
+           <li><img style=" margin-right:5px;" src="./images/dian20140924.jpg" /><a href='./zlzx/bzcs/201203/t20120326_55608.html' title='机构改革' target="_blank">机构改革</a></li>
+           
+
+          </ul>
+         </div>
+         <!--编制常识结束-->
+         
+         
+       </div>
+       
+       
+  </div>
+     <!--左边结束-->
+     
+     
+     <!--右边开始-->
+<div style=" float:right;display:inline; width:825px;">
+      
+       <!--头条开始-->
+       <div class="toudiao">
+        <ul>
+         <li style=" margin:10px; width:60px;"><a href="http://www.scopsr.gov.cn/tt/" target="_blank"><img src="./images/toutiaoxinwen.gif" /></a></li>
+         
+         <li style=" width:740px;"><a href='./tt/201510/t20151028_281890.html' target="_blank"><img src='./tt/201510/W020151028259338818359.gif' width="740" height="56" border="0" /></a></li>
+         
+         <li  style=" width:740px; height:24px;  text-align:center; margin-top:-4px">
+         
+          <a style="margin-left:10px;" href='./tt/gdxw/201510/t20151028_281891.html' target="_blank">[新华社评论员：让全面小康照亮我们的梦想]</a>
+         
+          <a style="margin-left:10px;" href='./tt/gdxw/201510/t20151028_281889.html' target="_blank">[改革为全面建成小康催生强大动力]</a>
+         
+          <a style="margin-left:10px;" href='./tt/gdxw/201510/t20151027_281863.html' target="_blank">[啥是小康? 大学生:不用发愁找工作]</a>
+         
+         </li>
+        </ul>
+       </div>
+       <!--头条结束-->
+       
+       <!--焦点图开始-->
+       <div class="jiaodiantu">
+       
+        <div >
+        <div style="border:1px #f5e6c0 solid ;float:left; display:inline; width:473px; height:302px; margin-top:5px; ">
+        <ul>
+         <li style="margin:0px 0px 0px 0px"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页焦点图</title>
+<link href="./images/lrtk201587.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./images/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./images/koala.min.1.5.js"></script>
+</head>
+<body>
+<!-- 代码 开始 -->
+<div id="fsD1" class="focus">  
+    <div id="D1pic1" class="fPic">  
+    
+<div class="fcon" style="display: none;">
+            <a target="_blank" href="./tppd/201510/t20151027_281872.html"><img src='./tppd/201510/W020151027362417919335.jpg' style="opacity: 1;" border="0" /></a>
+            <span class="shadow"><a target="_blank" href="./tppd/201510/t20151027_281872.html"><span class='jiaodiantupian'>习近平同荷兰国王威廉－亚历山大会谈</span></a></span>
+        </div>
+    
+<div class="fcon" style="display: none;">
+            <a target="_blank" href="./tppd/201510/t20151022_281780.html"><img src='./tppd/201510/W020151022358200309941.jpg' style="opacity: 1;" border="0" /></a>
+            <span class="shadow"><a target="_blank" href="./tppd/201510/t20151022_281780.html"><span class='jiaodiantupian'>习近平同英国首相卡梅伦举行会谈</span></a></span>
+        </div>
+    
+<div class="fcon" style="display: none;">
+            <a target="_blank" href="./tppd/201510/t20151021_281749.html"><img src='./tppd/201510/W020151021362234465436.jpg' style="opacity: 1;" border="0" /></a>
+            <span class="shadow"><a target="_blank" href="./tppd/201510/t20151021_281749.html"><span class='jiaodiantupian'>习近平在英国议会发表讲话</span></a></span>
+        </div>
+    
+<div class="fcon" style="display: none;">
+            <a target="_blank" href="./tppd/201510/t20151020_281727.html"><img src='./tppd/201510/W020151020607053366390.jpg' style="opacity: 1;" border="0" /></a>
+            <span class="shadow"><a target="_blank" href="./tppd/201510/t20151020_281727.html"><span class='jiaodiantupian'>李克强出席全国大众创业万众创新活动周</span></a></span>
+        </div>
+    
+<div class="fcon" style="display: none;">
+            <a target="_blank" href="./tppd/201510/t20151016_281636.html"><img src='./tppd/201510/W020151016366591438131.jpg' style="opacity: 1;" border="0" /></a>
+            <span class="shadow"><a target="_blank" href="./tppd/201510/t20151016_281636.html"><span class='jiaodiantupian'>李克强会见克罗地亚总统基塔罗维奇</span></a></span>
+        </div>
+    
+<div class="fcon" style="display: none;">
+            <a target="_blank" href="./tppd/201510/t20151008_281410.html"><img src='./tppd/201510/W020151008369717017488.jpg' style="opacity: 1;" border="0" /></a>
+            <span class="shadow"><a target="_blank" href="./tppd/201510/t20151008_281410.html"><span class='jiaodiantupian'>“吉林一号”商业卫星组星发射成功</span></a></span>
+        </div>
+         
+</div>
+    <div class="fbg">  
+    <div class="D1fBt" id="D1fBt">  
+    
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>1</i></a>  
+    
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>  
+    
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>3</i></a>  
+    
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>  
+    
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>5</i></a>  
+    
+        <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>6</i></a>  
+    
+    </div>  
+    </div>  
+    <span class="prev"></span>   
+    <span class="next"></span>    
+</div>  
+<script type="text/javascript">
+	Qfast.add('widgets', { path: "./images/terminator2.2.min.js", type: "js", requires: ['fx'] });  
+	Qfast(false, 'widgets', function () {
+		K.tabs({
+			id: 'fsD1',   //焦点图包裹id  
+			conId: "D1pic1",  //** 大图域包裹id  
+			tabId:"D1fBt",  
+			tabTn:"a",
+			conCn: '.fcon', //** 大图域配置class       
+			auto: 1,   //自动播放 1或0
+			effect: 'fade',   //效果配置
+			eType: 'click', //** 鼠标事件
+			pageBt:true,//是否有按钮切换页码
+			bns: ['.prev', '.next'],//** 前后按钮配置class                          
+			interval: 3000  //** 停顿时间  
+		}) 
+	})  
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>
+<span style="display:none">
+<img src="./images/focus_btn.png" />
+<img src="./images/terminator2.2.min.js" />
+</span></li>
+        </ul>
+        </div>
+      
+     
+     
+        
+     
+     
+        </div>
+        <!--焦点图结束-->
+        
+        <!--访谈视频开始-->
+        <div style=" width:473px;_width:200px;_margin-top:3px;  border-top:0px; float:left; display:inline; height:130px;">
+        
+          <!--访谈开始-->
+       <div class="xinwenzhongxin" style=" height:130px; width:473px; margin-left:0px;">
+       <div style="height:29px;">
+       <li style="float:left; display:inline; height:29px"><a href="http://www.scopsr.gov.cn/bbyw/zdgzzt/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image120','','./images/rednews.jpg',1)"><img src="./images/blanknews02.jpg" name="Image120" border="0" id="Image120" /></a></li>
+         <li style="text-align:right; width:40px; float:fight; display:inline; padding-left:230px">
+          <a style="color:#333333; font-size:12px;margin-right:3px; line-height:32px; " href='http://www.scopsr.gov.cn/bbyw/zdgzzt/' target="_blank">更多>></a>
+         </li>
+        </div>
+        
+         <div class="gaigetansuo" style=" width:310px; margin:5px 0px 0px 0px; float:left; display:inline;">
+          <ul style=" width:300px;">
+         
+          <li style="width:95px; height:85px; margin-bottom:"><a href='http://politics.people.com.cn/GB/8198/395920/index.html#p1bg' target="_blank"><img style=" margin-right:8px; border:1px solid #CCCCCC" src='./bbyw/zdgzzt/201508/W020150810388602768408.jpg' width="85" height="85" border="0" /></a></li>
+          
+        
+          
+          <li style=" width:190px;margin-bottom:8px; height:24;"><a style="color:#666666; font-weight:bold;" href='http://politics.people.com.cn/GB/8198/395920/index.html#p1bg' target="_blank">纪念抗战胜利70周年</a></li>
+          <li style="width:200px;"><a style="color:#666666;font-size:12px; height:60px; line-height:22px; line-height:22px;" href='http://politics.people.com.cn/GB/8198/395920/index.html#p1bg' target="_blank">八年间祖国大地满目疮痍，但我们也用八年时间踏出了一条胜利之路。</a></li>
+          
+         </ul>
+         </div>
+         
+         
+         <div style=" width:150px; float:left; display:inline; background:url(../site7/shudaobg.jpg) no-repeat; padding-left:8px;">
+           <ul style=" padding:5px 0px 5px 5px;">
+        
+         <li style=" width:150px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" font-size:12px;" href="http://www.scopsr.gov.cn/rdzt/jzfq/" target="_blank">简政放权专题</a></li>
+          
+        
+         <li style=" width:150px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" font-size:12px;" href="http://www.scopsr.gov.cn/rdzt/znzb/" target="_blank">职能转变专题</a></li>
+          
+        
+         <li style=" width:150px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" font-size:12px;" href="http://www.scopsr.gov.cn/rdzt/xzzf/" target="_blank">综合行政执法专题</a></li>
+          
+        
+         <li style=" width:150px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" font-size:12px;" href="http://www.scopsr.gov.cn/rdzt/gg/" target="_blank">改革在路上</a></li>
+          
+        
+        </ul>
+         </div>
+        
+       </div>
+       <!--访谈结束-->
+         
+        </div>
+        <!--访谈视频开始-->
+        
+       </div>
+       
+       
+       
+       
+       
+
+  <div style=" float: left; display:inline; width:342px;"> 
+       <!--新闻中心开始-->
+       <div class="xinwenzhongxin">
+       <div style="height:29px;">
+       <li style="float:left; display:inline; height:29px"><a href="http://www.scopsr.gov.cn/zxdd/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image120','','./images/rednews.jpg',1)"><img src="./images/blanknews.jpg" name="Image120" border="0" id="Image120" /></a></li>
+         <li style="text-align:right; width:40px; float:fight; display:inline; padding-left:100px">
+          <a style="color:#333333; font-size:12px;margin-right:3px; line-height:32px;" href='http://www.scopsr.gov.cn/zxdd/' target="_blank">更多>></a>
+         </li>
+        </div>
+        <ul style=" padding:5px 0px 5px 5px; height:267px; width:335px;">
+      
+        
+         <li style=" width:335px; height:26px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" line-height:26px; height:26px;" href="./zxdd/zdxw/201510/t20151028_281892.html" target="_blank">习近平访英：顶层设计绘就美好未来</a></li>
+
+         <li style=" width:335px; height:26px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" line-height:26px; height:26px;" href="./zxdd/zdxw/201510/t20151028_281894.html" target="_blank">习近平就阿富汗地震向阿富汗总统加尼致慰问电</a></li>
+
+         <li style=" width:335px; height:26px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" line-height:26px; height:26px;" href="./zxdd/zdxw/201510/t20151028_281893.html" target="_blank">李克强会见第70届联大主席吕克托夫特</a></li>
+
+         <li style=" width:335px; height:26px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" line-height:26px; height:26px;" href="./zxdd/zdxw/201510/t20151028_281895.html" target="_blank">李克强和内塔尼亚胡向2015年浦江创新论坛致贺信</a></li>
+
+         <li style="background: url(./images/dianbg.jpg) repeat-x; width:335px; margin-bottom:-15px; margin-top:7px"></li>
+        
+        
+        
+         <li style=" width:335px; height:26px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" line-height:26px;height:26px;" href="./zxdd/zygg/201510/t20151028_281896.html" target="_blank">国务院印发《关于在北京市暂时调整有关行政审...</a></li>
+         
+         <li style=" width:335px; height:26px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" line-height:26px;height:26px;" href="./zxdd/zygg/201510/t20151028_281897.html" target="_blank">2018年中央财政取消对行业协会商会直接拨款</a></li>
+         
+         <li style=" width:335px; height:26px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" line-height:26px;height:26px;" href="./zxdd/zygg/201510/t20151026_281825.html" target="_blank">“三证合一”送简政放权大礼包 百姓提速创业梦</a></li>
+         
+         <li style="background: url(./images/dianbg.jpg) repeat-x; width:335px; margin-bottom:-15px; margin-top:7px"></li>
+         
+        
+        
+        
+        
+         <li style=" width:335px; height:26px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" line-height:26px;height:26px;" href="./zxdd/xwrd/201510/t20151028_281899.html" target="_blank">湖北省：权力清单管理办法即将出台</a></li>
+                 
+         <li style=" width:335px; height:26px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" line-height:26px;height:26px;" href="./zxdd/xwrd/201510/t20151028_281898.html" target="_blank">八省份实施城乡医保并轨 体改整合方案下月完成</a></li>
+                 
+        
+        
+        
+        </ul>
+        
+       </div>
+       <!--新闻中心结束-->
+       
+       
+       
+       
+       <!--访谈开始-->
+       <div class="xinwenzhongxin" style=" height:130px; margin-top:5px;">
+       <div style="height:29px;">
+       <li style="float:left; display:inline; height:29px"><a href="http://www.scopsr.gov.cn/zxdd/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image120','','./images/rednews.jpg',1)"><img src="./images/blanknews01.jpg" name="Image120" border="0" id="Image120" width="197" height="29" /></a></li>
+         <li style="text-align:right; width:40px; float:fight; display:inline; padding-left:100px">
+          <a style="color:#333333; font-size:12px;margin-right:3px; line-height:32px;" href='./zxft/' target="_blank">更多>></a>
+         </li>
+        </div>
+        <ul style=" padding:5px 0px 5px 5px; height:130px">
+        
+         <li style=" width:335px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" font-size:12px;" href="http://www.china.com.cn/zhibo/2015-10/09/content_36767478.htm" target="_blank">国务院政策吹风会：推进简政放权有关政策情况</a></li>
+        
+         <li style=" width:335px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" font-size:12px;" href="http://www.scopsr.gov.cn/rdzt/cfh/" target="_blank"><font color="#FF0000">深化简政放权、处理好政府与市场关系有关工作情况</font></a></li>
+        
+         <li style=" width:335px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" font-size:12px;" href="http://www.scopsr.gov.cn/rdzt/ftzb/" target="_blank"><font color="#FF0000">国新办就简政放权深化行政审批制度改革进展情况举...</font></a></li>
+        
+         <li style=" width:335px;"><img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a style=" font-size:12px;" href="http://ft.people.com.cn/fangtanDetail.do?pid=3881" target="_blank">十八届四中全会《决定》亮点解读</a></li>
+        
+       
+
+        </ul>
+        
+       </div>
+       <!--访谈结束-->
+       
+       
+       
+       
+  </div>
+       
+       
+      <!--<div class="gaige">
+        <ul style="margin:15px 10px 10px 20px;">
+        
+          
+         
+         <li style=" margin-left:10px; background:url(./images/bj7_20130609.gif) no-repeat; padding-left:10px;float:left; display:inline; width:210px;"><a style=" font-size:12px;" href="./xzspzd/" target="_blank">更多>></a></li>
+         <li class="gaigeanniu" style="height:28px;"><a style=" font-weight:bold;line-height:28px;" href="./xzspzd/zyjs/" target="_blank">中央声音</a></li>
+         <li class="gaigeanniu" style="height:28px;"><a style=" font-weight:bold;line-height:28px;" href="./xzspzd/ggdt/" target="_blank">改革动态</a></li>
+         <li class="gaigeanniu" style="height:28px; margin-right:100px;"><a style=" font-weight:bold;line-height:28px;" href="./xzspzd/dfts/" target="_blank">地方探索</a></li>
+         <li class="gaigeanniu" style="height:28px;"><a style=" font-weight:bold;line-height:28px;" href="./xzspzd/zcfb/" target="_blank">政策文件</a></li>
+         <li class="gaigeanniu" style="height:28px;"><a style=" font-weight:bold;line-height:28px;" href="./xzspzd/pl/" target="_blank">观点评论</a></li>
+         <li class="gaigeanniu" style="height:28px;"><a style=" font-weight:bold;line-height:28px;" href="./xzspzd/wmyj/" target="_blank">网民意见</a></li>
+        </ul>
+      </div>-->
+       
+       
+       
+       
+  <div style="height:65px; width:826px;  float:left; display:inline; margin-top:10px; margin-bottom:10px;">
+        <ul>
+         <li style=" float:left; display:inline"><a href="http://www.scopsr.gov.cn/index_1194.html" target="_blank"><img src="./images/qlqd2015415.jpg" width="410" height="63" border="0" /></a></li>
+         <li style=" float:left; display:inline; margin-left:10px;"><a href="http://www.scopsr.gov.cn/index_1194.html" target="_blank"><img src="./images/xzspgg2015415.jpg" width="403" height="63" border="0" /></a></li>
+        </ul>
+  </div>
+      
+      
+      <!--改革探索开始-->
+  <div style=" float:left; display:inline; width:823px;border:#f5e6c0 solid 1px; margin-bottom:10px;">
+        
+        <div style="background:url(./images/zbg.jpg) repeat-x; height:34px;">
+         <ul>
+          <li><img src="./images/tansuo.jpg" /></li>
+         </ul>
+        </div>
+        
+        
+        <!--中央精神开始-->
+        <div class="gaigetansuo">
+         <ul style=" width:380px;">
+         
+         
+          <li style="background: url(./images/jinshen01.jpg) no-repeat;height:35px;"><div><a  style="margin-left:330px; line-height:12px; font-size:12px;" href='./ggts/zyjs/' target="_blank">更多>></a></div></li>
+          
+          <li style=" width:360px;margin-bottom:8px; margin-top:8px; height:28;"><a style="color:#000; font-weight:bold;" href='./ggts/zyjs/201509/t20150914_280894.html' target="_blank">中共中央国务院印发关于深化国企改革的指导意见</a></li>
+          
+          <li style="width:180px; height:110px; margin-bottom:"><a href='./ggts/zyjs/201509/t20150914_280894.html' target="_blank"><a href='./ggts/zyjs/201509/t20150914_280894.html' target="_blank"><img style=" margin-right:8px; border:1px solid #CCCCCC" src='./ggts/zyjs/201509/W020150914543978711321.jpg' width="164" height="110" border="0" /></a></li>
+          
+          
+          
+          <li style="width:190px;"><a style="color:#666666;font-size:14px; height:60px; line-height:24px; " href='./ggts/zyjs/201509/t20150914_280894.html' target="_blank">这是新时期指导和推进国有企业改革的纲领性文件，必将开启国有企业发展的新篇章。</a></li>
+          
+         </ul>
+         
+         <ul style=" padding-top:10px; float:left; display:inline;">
+         
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/zyjs/201509/t20150924_281166.html'  title='法人和其他组织"数字身份证"将统一 为"三证合一"提供技术保障' target="_blank">法人和其他组织"数字身份证"将统一 为"三证合一"...</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/zyjs/201509/t20150924_281164.html'  title='我国将实行市场准入负面清单制度' target="_blank">我国将实行市场准入负面清单制度</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/zyjs/201509/t20150924_281161.html'  title='国务院出台方案为生态文明领域改革作出顶层设计' target="_blank">国务院出台方案为生态文明领域改革作出顶层设计</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/zyjs/201509/t20150918_281023.html'  title='经济体制改革：九大领域取得重要进展' target="_blank">经济体制改革：九大领域取得重要进展</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/zyjs/201509/t20150914_280893.html'  title='政治局会议审议通过生态文明体制改革总体方案等' target="_blank">政治局会议审议通过生态文明体制改革总体方案等</a>
+          </li>
+          
+          
+         </ul>
+         
+        </div>
+        <!--中央精神开始-->
+        
+        
+        
+        
+         <!--改革建设开始-->
+        <div class="gaigetansuo">
+         <ul style=" width:380px;">
+         
+           <li style="background: url(./images/jinshen03.jpg) no-repeat;height:28px;"><div><a  style="margin-left:330px; line-height:12px; font-size:12px;" href='./ggts/jzfq/' target="_blank">更多>></a></div></li>
+          
+          <li style=" width:360px;margin-bottom:8px; margin-top:8px; height:28;"><a style="color:#000; font-weight:bold;" href='./ggts/jzfq/201509/t20150914_280895.html' target="_blank">杜绝“环检寻租”，简政放权需更给力</a></li>
+          
+          <li style="width:180px; height:110px; margin-bottom:"><a href='./ggts/jzfq/201509/t20150914_280895.html' target="_blank"><a href='./ggts/jzfq/201509/t20150914_280895.html' target="_blank"><img style=" margin-right:8px; border:1px solid #CCCCCC" src='./ggts/jzfq/201509/W020150914575388938721.jpg' width="164" height="110" border="0" /></a></li>
+          
+          
+          
+          <li style="width:190px;"><a style="color:#666666;font-size:14px; height:60px; line-height:24px; " href='./ggts/jzfq/201509/t20150914_280895.html' target="_blank">本届政府的最主要的一个特点就是积极推进简政放权，并通过简政放权来压缩权力寻租的空间。</a></li>
+
+          
+         </ul>
+         
+         <ul style=" padding-top:10px; float:left; display:inline;">
+         
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/jzfq/201509/t20150918_281020.html' target="_blank">以监管转型为重点深化简政放权改革</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/jzfq/201507/t20150706_278407.html' target="_blank">大数据助力简政放权</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/jzfq/201507/t20150721_279221.html' target="_blank">要在法治的轨道上把简政放权改革推向深入</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/jzfq/201507/t20150707_278493.html' target="_blank">调查数据显示简政放权社会满意度高</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/jzfq/201507/t20150707_278492.html' target="_blank">超七成企业望进一步简政放权</a>
+          </li>
+          
+          
+         </ul>
+         
+        </div>
+        <!--改革建设开始-->
+        
+        
+        
+        
+       
+        
+    <div style="height:3px; line-height:3px; float:left; display:inline; margin-bottom:10px;"><img src="./images/xian20140924.jpg" /></div>
+        
+        
+       
+        
+        
+        
+        
+        
+        
+         <!--简政放权开始-->
+        <div class="gaigetansuo">
+         <ul style=" width:380px;">
+         
+          <li style="background: url(./images/jinshen02.jpg) no-repeat;height:28px;"><div><a  style="margin-left:330px; line-height:12px; font-size:12px;" href='./ggts/ggjy/' target="_blank">更多>></a></div></li>
+          
+          <li style=" width:360px;margin-bottom:8px; margin-top:8px; height:28;"><a style="color:#000; font-weight:bold;" href='./ggts/ggjy/201509/t20150914_280896.html' target="_blank">以监管转型为重点深化简政放权改革的24条建议</a></li>
+          
+          <li style="width:180px; height:110px; margin-bottom:"><a href='./ggts/ggjy/201509/t20150914_280896.html' target="_blank"><a href='./ggts/ggjy/201509/t20150914_280896.html' target="_blank"><img style=" margin-right:8px; border:1px solid #CCCCCC" src='./ggts/ggjy/201509/W020150914554945734521.jpg' width="164" height="110" border="0" /></a></li>
+          
+          
+          
+          <li style="width:190px;"><a style="color:#666666;font-size:14px; height:60px; line-height:24px; " href='./ggts/ggjy/201509/t20150914_280896.html' target="_blank">为全面激发市场活力、释放内需潜力、推进经济转型升级创造良好的制度环境。</a></li>
+          
+         </ul>
+         
+         <ul style=" padding-top:10px; float:left; display:inline;">
+         
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/ggjy/201507/t20150706_278403.html' target="_blank">整治“红顶中介”“隐形”是重点</a>
+          </li>
+         
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/ggjy/201507/t20150707_278494.html' target="_blank">全面深化改革 要做更要说</a>
+          </li>
+         
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/ggjy/201507/t20150706_278405.html' target="_blank">别让简政放权堵在“最后一公里”</a>
+          </li>
+         
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/ggjy/201507/t20150703_278308.html' target="_blank">审计监督在深化国企改革中不可缺席</a>
+          </li>
+         
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/ggjy/201507/t20150703_278304.html' target="_blank">世行建议中国成立金融改革委</a>
+          </li>
+         
+         <li style=" width:390px;">
+          <!-- <img style=" margin-right:2px; margin-bottom:5px;" src="./images/dian20140924.jpg" />
+           <a href='http://####' target="_blank"></a>-->
+         </li>
+          
+         </ul>
+         
+        </div>
+        <!--简政放权开始-->
+        
+        
+        
+        
+        
+        <!--事业单位分类改革开始-->
+        <div class="gaigetansuo">
+         <ul style=" width:380px;">
+
+         
+          <li style="background: url(./images/jinshen04.jpg) no-repeat;height:28px;"><div><a  style="margin-left:330px; line-height:12px; font-size:12px;" href='./ggts/flgg/' target="_blank">更多>></a></div></li>
+          
+          <li style=" width:360px;margin-bottom:8px; margin-top:8px; height:28;"><a style="color:#000; font-weight:bold;" href='./ggts/flgg/201507/t20150703_278311.html' target="_blank">以“三严三实”促事业单位人事改革</a></li>
+          
+          <li style="width:180px; height:110px; margin-bottom:"><a href='./ggts/flgg/201507/t20150703_278311.html' target="_blank"><a href='./ggts/flgg/201507/t20150703_278311.html' target="_blank"><img style=" margin-right:8px; border:1px solid #CCCCCC" src='./ggts/flgg/201507/W020150703343056033841.jpg' width="164" height="110" border="0" /></a></li>
+          
+          
+          
+          <li style="width:190px;"><a style="color:#666666;font-size:14px; height:60px; line-height:24px;" href='./ggts/flgg/201507/t20150703_278311.html' target="_blank">如何以“三严三实”抵制违规“双肩挑”泛滥、督促事业单位人事改革走向深入？</a></li>
+          
+         </ul>
+         
+         <ul style=" padding-top:10px; float:left; display:inline;">
+         
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./rdzt/sydwggzl/sydwggdxjy/201510/t20151009_281446.html' target="_blank">山东威海市出台《分类推进事业单位改革重点任务分工》</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./rdzt/sydwggzl/sydwggdxjy/201509/t20150929_281295.html' target="_blank">云南红河州编办完成州属事业单位分类工作</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./rdzt/sydwggzl/sydwggdxjy/201509/t20150924_281176.html' target="_blank">青岛市明确分类推进事业单位改革重点任务</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/flgg/201509/t20150914_280903.html' target="_blank">新疆积极探索符合本地特点的事业单位分类改革路子</a>
+          </li>
+          
+          <li style=" width:390px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./ggts/flgg/201509/t20150914_280902.html' target="_blank">重庆市统筹推进事业单位分类改革</a>
+          </li>
+          
+          
+          
+         </ul>
+         
+        </div>
+        <!--事业单位分类改革开始-->
+        
+        
+        
+  </div>
+      <!--改革探索结束-->
+      
+       
+      <!-- 
+       <div style="height:70px; width:825px;  float:left; display:inline; margin-top:10px; margin-bottom:10px;">
+        
+        <ul>
+        
+         <li style=" float:left; display:inline"><a href='http://wzsh.scopsr.gov.cn/' target="_blank"><img src='./syzttj/201409/W020140915462387968614.jpg' width="409" height="70" style=" border:0px;" /></a></li>
+         
+         
+         <li style=" float:left; display:inline; margin-left:7px;"><a href='http://www.scopsr.gov.cn/rdzt/ddqzlxjysjhd/index.html' target="_blank"><img style=" border:0px;" width="409" height="70" src='./syzttj/201404/W020140410574439101089.jpg' /></a></li>
+         
+        </ul>
+        
+      </div>
+       -->
+       
+       
+       <!--编办业务开始-->
+  <div style=" float:left; display:inline; width:823px;border:#f5e6c0 solid 1px; h">
+        
+        <div style="background:url(./images/zbg.jpg) repeat-x; height:34px;">
+         <ul>
+          <li><img src="./images/bbyw_0718.jpg" /></li>
+         </ul>
+        </div>
+        
+        
+        <!--编办业务开始-->
+        
+    <div style=" width:552px; float:left; display:inline;">
+        
+        <div class="bianbanyewu" style="height:188px">
+         <ul style=" width:552px;">
+          <li style="width:223px;text-align:center; height:149px; margin:10px;"><iframe runat="server" src="http://www.scopsr.gov.cn/sycs/sycs/index_1118.html" width="224" height="176" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+          </li>
+          
+          <li style=" font-size:14px; font-weight:bold; color:#ce1f1c;line-height:28px; padding-bottom:5px; background:none;margin-top:0px; margin-bottom:5px;height:28px;  border-bottom:1px dashed #CCCCCC;">
+           <img style=" margin:10px 8px 0px 0px;" src="./images/xiaotu02.jpg" />机构编制工作<font style=" font-size:18px;">·<img src="./images/dongtainew1.gif" width="45" height="20" style="margin-bottom:-3px" /></font>
+           <a style="color:#946f2b; margin-left:90px; font-weight:200; font-size:12px;" href='./bbyw/zyhd/' target="_blank">更多>></a>
+          </li>
+          
+          <li style=" width:300px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/zyhd/201509/t20150930_281327.html' target="_blank">推进权责清单工作座谈会在合肥召开 张...</a>
+          </li>
+          
+          <li style=" width:300px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/zyhd/201509/t20150930_281326.html' target="_blank">张纪南一行赴江苏省调研</a>
+          </li>
+          
+          <li style=" width:300px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/zyhd/201510/t20151015_281595.html' target="_blank">中央编办副主任吴知论到辽宁大连调研指...</a>
+          </li>
+          
+          <li style=" width:300px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/zyhd/201510/t20151012_281529.html' target="_blank">第29次全国大城市机构编制工作研讨会在...</a>
+          </li>
+          
+          <li style=" width:300px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/rdzt/gsfsj/' target="_blank"><font color="#FF0000">中央编办举办关松发同志先进事迹报告会</font></a>
+          </li>
+          
+          <li style=" width:300px;  height:24px; line-height:24px;">
+           <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/zyhd/201509/t20150923_281127.html' target="_blank">吴知论会见澳门特别行政区行政公职局局...</a>
+          </li>
+          
+          
+         </ul>
+        </div>
+        
+        
+        <div class="beijing">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">机构编制管理
+           <a class="more" style="color:#946f2b; margin-left:100px; font-size:12px;" href='./bbyw/bzgl/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/glcx/201510/t20151027_281857.html' target="_blank">福建三明市巧用“加减乘除”方...</a>
+         </li>
+        
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/gljc/201510/t20151026_281852.html' target="_blank">湖北随州市编办立足“五个确保...</a>
+         </li>
+        
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/gljc/201510/t20151026_281827.html' target="_blank">吉林松原市将机构编制管理情况...</a>
+         </li>
+        
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/gljc/201510/t20151023_281799.html' target="_blank">杭州市“三明确”深入做好机构...</a>
+         </li>
+        
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/gljc/201510/t20151023_281792.html' target="_blank">湖北黄石市编办三举措确保控编...</a>
+         </li>
+        
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/gljc/201510/t20151020_281723.html' target="_blank">内蒙古呼和浩特市全面落实控编...</a>
+         </li>
+        
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/gljc/201510/t20151016_281630.html' target="_blank">吉林省松原市编办“实”字为本...</a>
+         </li>
+        
+         
+         </ul>
+        </div>
+        
+        <div class="beijing">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">机构编制督查
+           <a class="more" style="color:#946f2b; margin-left:90px; font-size:12px;" href='./bbyw/jdjc/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jdjc/jdjcgzdt/201510/t20151028_281911.html' target="_blank">山东潍坊市编办做好“三个确保...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jdjc/jdjcgzdt/201510/t20151013_281533.html' target="_blank">湖北黄石市编办强化督办检查  ...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jdjc/jdjcgzdt/201510/t20151012_281526.html' target="_blank">新疆阿勒泰市委编办“三项措施...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/bzgljdjc/201508/t20150821_280319.html' target="_blank">安徽合肥市多措并举强化机构编...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/bzgljdjc/201508/t20150817_280165.html' target="_blank">广东省汕头市编办认真开展控编...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/bzgljdjc/201508/t20150813_280068.html' target="_blank">福建漳州市探索机构编制监督检...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/bzgl/bzgljdjc/201508/t20150811_279959.html' target="_blank">浙江绍兴市将机构编制管理情况...</a>
+         </li>
+         
+         
+         </ul>
+        </div>
+        
+        <div class="beijing">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">机构编制法制化
+           <a class="more" style="color:#946f2b; margin-left:80px; font-size:12px;" href='./bbyw/fzgz/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/fzgz/lfsj/201510/t20151010_281486.html' target="_blank">内蒙古阿拉善盟出台从严规范干...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/fzgz/lfsj/201509/t20150914_280871.html' target="_blank">江苏省出台处级机构编制领导职...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/fzgz/lfsj/201509/t20150914_280870.html' target="_blank">贵州省编办出台措施规范机构编...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/fzgz/lfsj/201509/t20150909_280775.html' target="_blank">河南省三门峡市出台《行政规范...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/fzgz/pfxc/201509/t20150907_280698.html' target="_blank">福建省三明市“四策并举”提高...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/fzgz/xgwj/201509/t20150906_280668.html' target="_blank">杭州市“三措并举”规范领导职...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/fzgz/pfxc/201508/t20150828_280483.html' target="_blank">吉林省松原市编办“三个立足”...</a>
+         </li>
+         
+         
+         </ul>
+        </div>
+        
+        <div class="beijing">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">机构编制信息化
+           <a class="more" style="color:#946f2b; margin-left:80px; font-size:12px;" href='./bbyw/jgxxh/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jgxxh/201510/t20151028_281912.html' target="_blank">山东烟台市福山区编办三措并举...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jgxxh/201510/t20151027_281875.html' target="_blank">山东蓬莱市编办加强“网络红页...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jgxxh/201510/t20151023_281816.html' target="_blank">陕西省编办积极推动机构编制实...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jgxxh/201510/t20151021_281737.html' target="_blank">吉林省松原市编办建立“三项制...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jgxxh/201510/t20151020_281706.html' target="_blank">山东威海乳山市编办做好“三个...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jgxxh/201510/t20151019_281678.html' target="_blank">甘肃省天水市麦积区推进机构编...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/jgxxh/201510/t20151016_281642.html' target="_blank">湖南省岳阳市平江县编办突出“...</a>
+         </li>
+         
+         
+         </ul>
+        </div>
+        
+        
+         <div class="beijing">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">业务培训
+           <a class="more" style="color:#946f2b; margin-left:120px; font-size:12px;" href='./bbyw/ywpx/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/ywpx/201510/t20151027_281879.html' target="_blank">新疆塔城地委编办以网络视频系...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/ywpx/201510/t20151021_281734.html' target="_blank">河南省开封市编办召开全市事业...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/ywpx/201510/t20151020_281718.html' target="_blank">吉林省松原市编办召开建立市政...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/ywpx/201510/t20151020_281717.html' target="_blank">山东省滨州市沾化区举办政府购...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/ywpx/201510/t20151014_281578.html' target="_blank">成都邛崃市编办召开机构编制实...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/ywpx/201509/t20150929_281291.html' target="_blank">湖南省长沙市举办行政审批制度...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/ywpx/201509/t20150928_281261.html' target="_blank">海南省海口市编办组织开展“三...</a>
+         </li>
+         
+         
+         </ul>
+        </div>
+        
+        <div class="beijing">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">地方信息
+           <a class="more" style="color:#946f2b; margin-left:120px; font-size:12px;" href='http://www.scopsr.gov.cn/bbyw/dfjgbzxxkd/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/dfjgbzxxkd/frdj/201510/t20151028_281909.html' target="_blank">青岛即墨市编办拓展“四个维度...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/dfjgbzxxkd/zsjs/201510/t20151028_281906.html' target="_blank">山东东营市东营区编办三个强化...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/dfjgbzxxkd/xxdy/201510/t20151028_281901.html' target="_blank">山东省临沂市莒南县编办开展中...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/dfjgbzxxkd/frdj/201510/t20151028_281900.html' target="_blank">山东省泰安市“四个明确”做好...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/dfjgbzxxkd/qtgz/201510/t20151027_281888.html' target="_blank">海南琼海市编办完成不动产登记...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/dfjgbzxxkd/qtgz/201510/t20151027_281886.html' target="_blank">黑龙江省大兴安岭地区呼玛县编...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/dfjgbzxxkd/qtgz/201510/t20151027_281885.html' target="_blank">福建漳州市完成市、县级不动产...</a>
+         </li>
+         
+         
+         </ul>
+        </div>
+        
+        
+        
+    </div>
+        
+        
+    <div style=" float:right; display:inline; width:268px;">  
+        
+        <div class="beijing" style=" margin-left:-0px; margin-top:3px; height:185px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">机构编制事项<font style="font-size:18px;">·<img src="./images/gonggaonew.gif" width="45" height="20" style="margin-bottom:-3px" /></font>
+           <a class="more" style="color:#946f2b; margin-left:40px; font-size:12px;" href='./bbyw/qwfb/' target="_blank">更多>></a>
+         </li>
+         
+          <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/qwfb/201507/t20150710_278816.html' target="_blank">中央编办调整工业和信息化部有...</a>
+         </li>
+         
+          <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/qwfb/201503/t20150310_272579.html' target="_blank">中央编办 教育部 财政部关于统...</a>
+         </li>
+         
+          <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/qwfb/201401/t20140121_251016.html' target="_blank">中央编办关于整合不动产登记职...</a>
+         </li>
+         
+          <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/qwfb/201311/t20131112_245264.html' target="_blank">中央编办发文对有关部门职责内...</a>
+         </li>
+         
+          <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/qwfb/201306/t20130627_227855.html' target="_blank">中央编办发文明确私募股权基金...</a>
+         </li>
+         
+          <li>
+          <img style=" margin-right:5px; margin-bottom:4px;" src="./images/dian20140924.jpg" /><a href='./bbyw/qwfb/201405/t20140509_260892.html' target="_blank">关于规范事业单位登记管理业务...</a>
+         </li>
+         
+
+         
+         </ul>
+        </div>
+        
+        
+        
+         <div class="beijing3" style=" margin-top:0px; margin-right:8px;_margin-right:0px;">
+         <ul style="padding-bottom:5px;">
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">机构编制重点工作专题
+           <a class="more" style="color:#946f2b; margin-left:30px; font-size:12px;" href="http://www.scopsr.gov.cn/bbyw/zdgzzt/" target="_blank">更多>></a>
+         </li>
+         <li>
+          <a href="http://www.scopsr.gov.cn/rdzt/hlj/" target="_blank"><img src="./images/33333333333.jpg" width="229" height="34" /></a>
+         </li>
+         <li>
+          <a href="http://www.scopsr.gov.cn/rdzt/znzb/" target="_blank"><img src="./images/zhinengzhuanbian1210.jpg" width="229" height="34" /></a>
+         </li>
+         <li>
+          <a href="http://www.scopsr.gov.cn/rdzt/xzzf/" target="_blank"><img src="./images/zhifa1210.jpg" width="229" height="34" /></a>         </li>
+         
+         
+         
+         
+        <li ><a href="http://www.scopsr.gov.cn/index_1130.html" target="_blank"><img src="./images/11111111111111111111111111111.jpg" width="229" height="34" /></a>         </li> 
+         
+        
+         </ul>
+         
+         
+         <!--<ul style=" padding-top:3px;">
+         
+          <li ><a href="http://www.scopsr.gov.cn/index_1130.html" target="_blank"><img style=" _margin-left:15px;" src="./images/11111111111111111111111111111.jpg" width="229" height="34" /></a>         </li>
+         
+         
+         
+         </ul>-->
+         
+         
+         
+        </div>   
+    </div>
+        
+        
+    <div style=" float:right; display:inline; width:268px; margin-top:6px;">  
+         <div class="beijing" style=" margin-left:-3px; height:190px;">
+         <ul style=" padding-bottom:5px;">
+         
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">机构编制刊物
+           <!--<a class="more" style="color:#946f2b; margin-left:100px; font-size:12px;" href='./zgjgggygl/' target="_blank">更多>></a>-->
+         </li>
+         
+        
+         
+         
+         <li style=" float:left; display:inline; width:70px; height:94px;"><a href='http://www.scopsr.gov.cn/zazhi/201508/' target="_blank"><img src='./zgjgggygl/201509/W020150921538075711986.jpg' width="69" height="94" style="border:1px solid #f5e5c1;" /></a></li>
+         
+         <li style=" float:left; display:inline; width:170px; height:40px;"><a href="http://114.251.191.196/qk/" target="_blank"><img src="./images/222222222222.jpg" width="163" height="40" style="border:1px solid #f5e5c1;" /></a></li>
+         <li style=" float:left; display:inline; width:170px; height:48px; text-align:left; padding-top:5px; padding-left:6px;  font-size:12px; color:#CC0000;  margin:0px;"><!--
+　　2016征订办法 征订单 统计表
+　　-->
+         <!--<a target="_blank" href="http://www.scopsr.gov.cn/zlk/201411/P020141114597596188970.doc" style="font-size:12px; color:#ff0000">2015年杂志征订办法</a>-->
+         <a target="_blank" href="http://www.scopsr.gov.cn/zgjgggygl/zzzl/201508/P020150831589062210689.doc" style="font-size:12px;  color:#ff0000">2016征订办法</a>&nbsp;
+<a target="_blank" href="http://www.scopsr.gov.cn/zgjgggygl/zzzl/201508/P020150831589326196571.doc" style="font-size:12px;  color:#ff0000">征订单</a>&nbsp;
+<a target="_blank" href="http://www.scopsr.gov.cn/zgjgggygl/zzzl/201508/U020150901346451210526.xls" style="font-size:12px;  color:#ff0000">统计表</a><br>
+<a target="_blank" href="http://www.scopsr.gov.cn/zgjgggygl/zzzl/201504/t20150429_275136.html" style="font-size:14px;  color:#ff0000">杂志社迁址公告</a>
+
+<!--<a target="_blank" href="http://www.scopsr.gov.cn/zlk/201411/P020141104376650847078.doc" style="font-size:12px; color:#ff0000" >2015年征订单</a>-->
+         </li>
+         
+         <li style=" width:255px; float:left; height:48px; display:inline; border-top:1px dashed #CCCCCC; border-bottom:1px dashed #CCCCCC; margin-top:5px;">
+         
+          <a href='http://www.scopsr.gov.cn/zazhi/201508/' target="_blank">2015.08&nbsp;</a>
+         
+          <a href='http://www.scopsr.gov.cn/zazhi/201507/' target="_blank">2015.07&nbsp;</a>
+         
+          <a href='http://www.scopsr.gov.cn/zazhi/201506/' target="_blank">2015.06&nbsp;</a>
+         
+          <a href='http://www.scopsr.gov.cn/zazhi/201505/' target="_blank">2015.05&nbsp;</a>
+         
+          <a href='http://www.scopsr.gov.cn/zazhi/201504/' target="_blank">2015.04&nbsp;</a>
+         
+          <a href='http://www.scopsr.gov.cn/zazhi/201503/' target="_blank">2015.03&nbsp;</a>
+         
+          <a href='http://www.scopsr.gov.cn/zazhi/201502/' target="_blank">2015.02&nbsp;</a>
+         
+          <a style=" font-size:12px;" href='./zgjgggygl/' target="_blank">更多>></a>
+         </li>
+         
+         </ul>
+         
+       
+         
+         
+         
+        </div>   
+    </div>
+        
+        
+        <div class="beijing4">
+         <ul>
+          
+           
+          <li style=" width:250px; float:left; display:inline;"><a href='http://theory.people.com.cn/GB/82288/207260/' target="_blank">行政管理改革</a></li>
+          
+          <li style=" width:250px; float:left; display:inline;"><a href='http://www.cpaj.com.cn/zuixinmulu.aspx' target="_blank">中国行政管理</a></li>
+          
+          
+          <li style=" width:250px; float:left; display:inline;"><a href='http://www.chinareform.org.cn:8080/was5/web/search?searchword=中国改革年鉴&amp;channelid=261018&amp;templet=261018_chinareform.jsp&amp;Submit=' target="_blank">中国改革年鉴</a></li>
+          
+          
+          <li style=" width:250px; float:left; display:inline;"><a href='http://jpa.sysu.edu.cn/gkdzb/index.htm' target="_blank">[广东]公共行政评论</a></li>
+          
+          <li style=" width:250px; float:left; display:inline;"><a href='http://www.zjjgbz.gov.cn/syglnk/index.htm' target="_blank">[浙江]浙江机构与编制</a></li>
+          
+          <li style=" width:250px; float:left; display:inline;"><a href='./bbyw/dfjgbzxxkd/dfkw/201409/t20140926_266554.html' target="_blank">[甘肃]甘肃机构与编制</a></li>
+          
+          <li style=" width:250px; float:left; display:inline;"><a href='http://www.shbb.gov.cn/maga/m.html' target="_blank">[上海]上海编制管理研究</a></li>
+          
+          <li style=" width:250px; float:left; display:inline;"><a href='http://www.hnsbb.gov.cn/yjh/ggygl.htm' target="_blank">[河南]河南改革与管理</a></li>
+          
+          <li style=" width:250px; float:left; display:inline;"><a href='http://www.sdbb.gov.cn/sdbb/jgxz/index.do' target="_blank">[山东]机构与行政</a></li>
+          
+          <!--<li style=" color:#666666; width:60px; float:left; display:inline;">[2014.9]</li>-->
+          
+          
+         
+           
+         </ul>
+        </div>
+        
+        
+        <!--编办业务开始-->
+       
+        
+        
+      
+
+        
+  </div>
+       <!--编办业务结束-->
+       
+       
+       
+       <!--政务经济开始-->
+      
+       <!--政务经济结束-->
+       
+       
+</div>
+     <!--右边结束-->
+     
+     
+     <!--通栏开始-->
+<div style="clear:both; height:1px"></div>
+<style type=text/css>
+body{
+margin:0px auto;}
+#ccrjBoxleft .boxD {
+	WIDTH: 1000px; FLOAT: left; OVERFLOW: hidden;
+}
+.boxD .left {
+	MARGIN: 0px auto; WIDTH: 1000px; OVERFLOW: hidden
+}
+.boxD .left .boxDcolumn {
+	LINE-HEIGHT: 35px; BACKGROUND: url(./images/2014120201-1.jpg) no-repeat; HEIGHT: 35px
+}
+.boxD .left .boxDcolumn li {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; WIDTH: 250px; FLOAT: left; HEIGHT: 35px; COLOR: #cd0006; FONT-SIZE: 14px
+}
+.boxD .left .boxDcolumn li A {
+	COLOR: #cd0006; FONT-SIZE: 14px; font-weight:bold; display:inline; list-style:none;
+}
+.boxD .left .boxDcolumn .HotWord {
+	TEXT-ALIGN: right; PADDING-RIGHT: 10px; FLOAT: right; FONT-SIZE: 12px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.boxD .left .boxDcolumnr {
+	LINE-HEIGHT: 35px; BACKGROUND: url(./images/2014120202-2.jpg) no-repeat; HEIGHT: 35px
+}
+.boxD .left .boxDcolumnr li {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; WIDTH: 250px; FLOAT: left; HEIGHT: 35px; COLOR: #cd0006; FONT-SIZE: 14px
+}
+.boxD .left .boxDcolumnr li A {
+	COLOR: #cd0006; FONT-SIZE: 14px; font-weight:bold; display:inline; list-style:none;
+}
+.boxD .left .boxDcolumnr .HotWord {
+	TEXT-ALIGN: right; PADDING-RIGHT: 10px; FLOAT: right; FONT-SIZE: 12px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.boxD .left .boxDcolumnr3 {
+	LINE-HEIGHT: 35px; BACKGROUND: url(./images/2014120203-3.jpg) no-repeat; HEIGHT: 35px
+}
+.boxD .left .boxDcolumnr3 li {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; WIDTH: 250px; FLOAT: left; HEIGHT: 35px; COLOR: #cd0006; FONT-SIZE: 14px
+}
+.boxD .left .boxDcolumnr3 li A {
+	COLOR: #cd0006; FONT-SIZE: 14px; font-weight:bold; display:inline; list-style:none;
+}
+.boxD .left .boxDcolumnr3 .HotWord {
+	TEXT-ALIGN: right; PADDING-RIGHT: 10px; FLOAT: right; FONT-SIZE: 12px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.boxD .left .boxDcolumnr4 {
+	LINE-HEIGHT: 35px; BACKGROUND: url(./images/2014120204-4.jpg) no-repeat; HEIGHT: 35px
+}
+.boxD .left .boxDcolumnr4 li {
+	TEXT-ALIGN: center; LINE-HEIGHT: 35px; WIDTH: 250px; FLOAT: left; HEIGHT: 35px; COLOR: #cd0006; FONT-SIZE: 14px
+}
+.boxD .left .boxDcolumnr4 li A {
+	COLOR: #cd0006; FONT-SIZE: 14px; font-weight:bold; display:inline; list-style:none;
+}
+.boxD .left .boxDcolumnr4 .HotWord {
+	TEXT-ALIGN: right; PADDING-RIGHT: 10px; FLOAT: right; FONT-SIZE: 12px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+li{
+	list-style:none;
+}
+.rjcontent .rjlist .boxtitle {
+	 FLOAT: left; display:inline; margin-top:0px; height:auto;
+}
+.rjcontent .rjlist .boxtitle div {
+	list-style-type:none; display:inline; FLOAT: left; padding-left:0px; height:auto;
+}
+</style>
+
+<DIV class=boxD style=" margin-top:10px;">
+<DIV style="DISPLAY: block" id=ccrj1link_1 class=left>
+<DIV class=boxDcolumn>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(1) 
+href="./zwgz/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(2) 
+href="./whsh/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(3) 
+href="./mtgl/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(4) 
+href="#"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<!--<li class=HotWord><A 
+href="./zxft/">更多>></A>  
+</li>--></DIV>
+<DIV class=rjcontent>
+<DIV class=rjlist>
+<DIV class=boxtitle>
+ <!--政务经济开始-->
+    <div style=" float:left; display:inline; width:998px;border:#f5e6c0 solid 1px; border-top-style:none; padding-bottom:8px">
+        
+        <!--<div style="background:url(../site7/zbg.jpg) repeat-x; height:34px;">
+         <ul>
+          <li><img src="./images/shehuiwenhuashengtai.jpg" /></li>
+         </ul>
+        </div>-->
+        
+        
+        <!--编办业务开始-->
+        
+        <div style=" width:640px; float:left; display:inline;">
+        
+        <div class="bianbanyewu" >
+         <ul style=" width:640px;">
+          
+          <li style="width:310px;text-align:center;  height:160px; margin:10px;"><a href='./zwgz/zwkx/201510/t20151027_281861.html' target="_blank"><img src='./zwgz/zwkx/201510/W020151027344096194769.jpg' width="310" height="160" /></a> </li>
+           
+           
+          <li style=" width:310px;  height:28px; line-height:24px; margin-top:10px;">
+           <a style="font-weight:bold;" href='./zwgz/zwkx/201510/t20151027_281861.html' target="_blank">央行副行长易纲：利率市场化并非一放了之</a>
+          </li>
+          
+          <li style=" width:310px; text-indent:28px;  height:50px; line-height:24px; border-bottom:1px dashed #CCCCCC;">
+           23日晚，央行宣布降息降准。同时，对商业银行和农村合作金融机构等不再设...<a  style="color:#FF0000" href='./zwgz/zwkx/201510/t20151027_281861.html' target="_blank">[详细]</a>          
+           </li>
+            
+           
+           <li style=" width:300px;  height:28x; line-height:24px; margin-top:10px;">
+           <a style="font-weight:bold;" href='./zwgz/zwkx/201510/t20151021_281758.html' target="_blank">跨境人民币业务新模式：巧用境外资金降...</a>
+          </li>
+          
+           <li style=" width:300px; text-indent:28px;  height:50px; line-height:24px;">
+           距离乌鲁木齐市670公里的霍尔果斯，曾经是古丝绸之路上的重要驿站。如今去...<a  style="color:#FF0000" href='./zwgz/zwkx/201510/t20151021_281758.html' target="_blank">[详细]</a>          
+           </li>
+            
+           
+         </ul>
+        </div>
+        
+        
+     
+        
+        </div>
+        
+        
+        <div style=" float: right;display:inline; width:334px;">  
+         
+         <div style=" text-align:right; float:right; display:inline; width:50px;"><a href='./zwgz/' target="_blank"><img src="./images/gengduokuaixun.jpg" width="19" height="69" border="0" /></a></div>
+         
+         <div class="beijing" style=" background:none; height:170px; margin:5px 0px 0px 0px;">
+         <ul>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/zwkx/201510/t20151021_281757.html' target="_blank">英国金融巨头汇丰的“中国法宝”</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/zwkx/201510/t20151008_281425.html' target="_blank">养老金待遇调整机制将逐步建立 顶层...</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/zwkx/201509/t20150923_281113.html' target="_blank">我国有条件有能力实现全年经济发展...</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/zwkx/201509/t20150923_281115.html' target="_blank">固定资产折旧优惠政策扩至四大领域</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/zwkx/201509/t20150906_280675.html' target="_blank">周小川：金融市场可望更为稳定 深化...</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/zwkx/201509/t20150910_280805.html' target="_blank">李克强：人民币汇率能够在合理、均...</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/zwkx/201509/t20150906_280676.html' target="_blank">七部委联手清理规范进出口环节收费</a>
+         </li>
+         
+         
+         </ul>
+        </div>
+         
+         
+         
+        </div>
+        
+
+        
+       <div style=" float:left; display:inline; width:998px;"> 
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">部门履职
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./zwgz/bmlz/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/bmlz/201510/t20151027_281860.html' target="_blank">交通部：公开征求收到出租车改革意见32...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/bmlz/201510/t20151021_281759.html' target="_blank">交通部：出租车改革方案利于新老业态融合</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/bmlz/201510/t20151008_281426.html' target="_blank">工商总局：企业简易注销改革试点扩至7...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/bmlz/201509/t20150923_281120.html' target="_blank">证监会：强化对并购重组所涉中介机构监管</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/bmlz/201509/t20150923_281116.html' target="_blank">财政部：固定资产折旧优惠政策扩至四大...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/bmlz/201509/t20150910_280806.html' target="_blank">环境保护影响经济吗？看环保部用数据说话</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/bmlz/201509/t20150906_280677.html' target="_blank">七部委联手清理规范进出口环节收费</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">人事任免
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./zwgz/rsrm/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zwgz/rsrm/syzyrm/' target="_blank">10月中央重要人事任免</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zwgz/rsrm/syrm/' target="_blank">10月地方重要人事任免</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zwgz/rsrm/jyzy/' target="_blank">9月中央重要人事任免</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zwgz/rsrm/jy/' target="_blank">9月地方重要人事任免</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zwgz/rsrm/byzy/' target="_blank">8月中央重要人事任免</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zwgz/rsrm/byrs/' target="_blank">8月地方重要人事任免</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zwgz/rsrm/qyzy/' target="_blank">7月中央重要人事任免</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+           
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">地方联播
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./zwgz/gdlb/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/gdlb/201510/t20151027_281859.html' target="_blank">【青海】依托资源优势“领跑”集中并网...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/gdlb/201510/t20151027_281858.html' target="_blank">【北京】用国管公积金购政策房 须提交...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/gdlb/201509/t20150923_281121.html' target="_blank">【西安】发布第二批丝绸之路经济带重点...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/gdlb/201509/t20150910_280814.html' target="_blank">【山东】千亿养老金委托社保基金已到位...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/gdlb/201508/t20150810_279933.html' target="_blank">【北京】停车位租售：高档住宅区车位价...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/gdlb/201507/t20150720_279132.html' target="_blank">【北京】将出多政策促企业转移 年底前...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/gdlb/201507/t20150701_278158.html' target="_blank">【北京】【上海】今日启动离境退税 政...</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+        
+        </div>
+        
+        
+        
+        
+        <div style=" float:left; display:inline; width:998px;"> 
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">宏观分析
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./zwgz/hgjj/' target="_blank">更多>></a>
+         </li>
+          
+          <li style="margin-bottom:3px; text-align:center; height:24; padding-top:8px"><a style="color:#666666; font-weight:bold;" href='./zwgz/hgjj/201508/t20150807_279844.html' target="_blank">建设全国统一市场迈出一大步</a></li>
+          <li style="width:120px; height:90px;float:left; display:inline"><a href='./zwgz/hgjj/201508/t20150807_279844.html' target="_blank"><img src='./zwgz/hgjj/201508/W020150807549648434523.jpg' width="120" height="80" style=" margin-right:8px;border:1px solid #CCCCCC" /></a></li>
+          <li style="width:150px;float:left; display:inline;color:#666666;font-size:12px; height:60px; line-height:22px;">生产、分配、流通、消费，是社会生产总过程的四个基本环节。流通环节承前启后，决定着...<a style=" color:#FF0000; font-size:12px;" href='./zwgz/hgjj/201508/t20150807_279844.html' target="_blank">[详细]</a></li>
+         
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/hgjj/201508/t20150807_279848.html' target="_blank">海康人寿更名为同方全球人寿</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/hgjj/201508/t20150807_279847.html' target="_blank">客户与银行间信息不对称问题待解决</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/hgjj/201508/t20150807_279846.html' target="_blank">湖北黄石打造长江内贸流通节点</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/hgjj/201508/t20150807_279845.html' target="_blank">我国启动企业新型学徒制试点</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/hgjj/201507/t20150731_279615.html' target="_blank">欧元地位难以走强</a>
+         </li>
+         
+
+         
+         </ul>
+        </div>
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">市场动态
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./zwgz/cydt/' target="_blank">更多>></a>
+         </li>
+         
+          <li style="margin-bottom:3px; text-align:center; height:24; padding-top:8px"><a style="color:#666666; font-weight:bold;" href='./zwgz/cydt/201508/t20150807_279850.html' target="_blank">商业大行服务“小微”补短板</a></li>
+          <li style="width:120px; height:90px;float:left; display:inline"><a href='./zwgz/cydt/201508/t20150807_279850.html' target="_blank"><img src='./zwgz/cydt/201508/W020150807553884162278.jpg' width="120" height="80" style=" margin-right:8px;border:1px solid #CCCCCC" /></a></li>
+          <li style="width:150px;float:left; display:inline;color:#666666;font-size:12px; height:60px; line-height:22px;">在商业银行传统的“存贷汇”业务中，存款、汇款、支付结算等早已实现了互联网化，只有...<a style=" color:#FF0000; font-size:12px;" href='./zwgz/cydt/201508/t20150807_279850.html' target="_blank">[详细]</a></li>
+          
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/cydt/201508/t20150807_279853.html' target="_blank">工行对P2P资金存管进行研究</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/cydt/201508/t20150807_279852.html' target="_blank">央行开展350亿元逆回购</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/cydt/201508/t20150807_279851.html' target="_blank">房地产税立法不应过度解读</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/cydt/201508/t20150807_279849.html' target="_blank">银联国际推出手机声波支付</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/cydt/201507/t20150731_279621.html' target="_blank">稳健货币政策松紧适度</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+           
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">世界经济
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./zwgz/sjjj/' target="_blank">更多>></a>
+         </li>
+         
+          <li style="margin-bottom:3px; text-align:center; height:24; padding-top:8px"><a style="color:#666666; font-weight:bold;" href='./zwgz/sjjj/201508/t20150807_279854.html' target="_blank">机械工业：压力下有望趋稳回升</a></li>
+          <li style="width:120px; height:90px;float:left; display:inline"><a href='./zwgz/sjjj/201508/t20150807_279854.html' target="_blank"><img src='./zwgz/sjjj/201508/W020150807561662273010.jpg' width="120" height="80" style=" margin-right:8px;border:1px solid #CCCCCC" /></a></li>
+          <li style="width:150px;float:left; display:inline;color:#666666;font-size:12px; height:60px; line-height:22px;">上半年，机械工业主要经济指标延续了去年以来的回落趋势，多项指标创下5年来同期最低。...<a style=" color:#FF0000; font-size:12px;" href='./zwgz/sjjj/201508/t20150807_279854.html' target="_blank">[详细]</a></li>
+         
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/sjjj/201508/t20150807_279857.html' target="_blank">基金“触网”加速变身</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/sjjj/201508/t20150807_279856.html' target="_blank">游族网络上半年利润2.2亿元</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/sjjj/201508/t20150807_279855.html' target="_blank">可穿戴设备市场将快速增长</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/sjjj/201507/t20150731_279620.html' target="_blank">炼化行业高盈利 时代渐近尾声</a>
+         </li>
+         
+         <li style="float:left; display:inline">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zwgz/sjjj/201507/t20150731_279619.html' target="_blank">卢布贬值冲击俄罗斯经济</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--编办业务开始-->
+      </div>
+       <!--政务经济结束-->
+   </DIV></DIV>
+<DIV class=bla2></DIV>
+</DIV>
+</DIV>
+<DIV style="DISPLAY: none" id=ccrj1link_2 class=left>
+<DIV class=boxDcolumnr>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(1) 
+href="./zwgz/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(2) 
+href="./whsh/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(3) 
+href="./mtgl/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(4) 
+href="#"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<!--<li class=HotWord><A href="./sppd/">更多>></A>
+</li>--></DIV>
+<DIV class=bla5></DIV>
+<DIV class=rjcontent>
+<DIV class=rjlist>
+<DIV class=boxtitle>
+  <!--社会文化开始-->
+      <div style=" float:left; display:inline; width:998px;border:#f5e6c0 solid 1px; border-top-style:none; padding-bottom:8px">
+        
+        <!--<div style="background:url(../site7/zbg.jpg) repeat-x; height:34px;">
+         <ul>
+          <li><img src="./images/shehuiwenhuashengtai.jpg" /></li>
+         </ul>
+        </div>-->
+        
+        
+        <!--编办业务开始-->
+        
+        <div style=" width:640px; float:left; display:inline;">
+        
+        <div class="bianbanyewu" style=" width:550px;">
+         <ul style=" width:640px;">
+          
+          <li style="width:310px;text-align:center;  height:160px; margin:10px;"><a href='./whsh/shkx/201508/t20150821_280318.html' target="_blank"><img src='./whsh/shkx/201508/W020150821514012201483.jpg' width="310" height="160" /></a> </li>
+           
+           
+          <li style=" width:310px;  height:28px; line-height:24px; margin-top:10px;">
+           <a style="font-weight:bold;" href='./whsh/shkx/201508/t20150821_280318.html' target="_blank">31省份上半年GDP数据出炉</a>
+          </li>
+          
+          <li style=" width:310px; text-indent:28px;  height:50px; line-height:24px; border-bottom:1px dashed #CCCCCC;">
+           国家统计局数据显示，初步核算，上半年国内生产总值296868亿元，同比增长7...<a  style="color:#FF0000" href='./whsh/shkx/201508/t20150821_280318.html' target="_blank">[详细]</a>          
+           </li>
+            
+           
+           <li style=" width:300px;  height:28x; line-height:24px; margin-top:10px;">
+           <a style="font-weight:bold;" href='./whsh/shkx/201507/t20150707_278499.html' target="_blank">努力提升人民的幸福感——全面深化社会...</a>
+          </li>
+          
+           <li style=" width:300px; text-indent:28px;  height:50px; line-height:24px;">
+           全面深化改革，这六个字，对于国家，它意味着向着全面建成小康社会目标迈...<a  style="color:#FF0000" href='./whsh/shkx/201507/t20150707_278499.html' target="_blank">[详细]</a>          
+           </li>
+            
+           
+         </ul>
+        </div>
+        
+        
+     
+        
+        </div>
+        
+        
+        <div style=" float: right; margin-left:8px; display:inline; width:334px;">  
+         
+         <div style=" text-align:right; float:right; display:inline; width:50px;"><a href='./whsh/' target="_blank"><img src="./images/gengduokuaixun.jpg" width="19" height="69" border="0" /></a></div>
+         
+         <div class="beijing" style=" background:none; height:170px; margin:5px 0px 0px 0px;">
+         <ul>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shkx/201507/t20150706_278412.html' target="_blank">上海自贸区推出电力O2O服务平台</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shkx/201507/t20150702_278244.html' target="_blank">河南：“互联网＋”让工会服务普惠化</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='http://www.scopsr.gov.cn/zxdd/zdxw/201507/t20150702_278228.html' target="_blank">降税降费措施密集出台 你的生活账单...</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shkx/201507/t20150701_278112.html' target="_blank">新华网发布《全国城市与县域网络形...</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shkx/201507/t20150701_278121.html' target="_blank">人民日报聚焦荒唐证明 公安部全面梳...</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shkx/201507/t20150701_278113.html' target="_blank">四问“僵尸肉”蹿上餐桌 到底从哪里来?</a>
+         </li>
+         
+         <li style="width:300px">
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shkx/201507/t20150701_278116.html' target="_blank">教育部回应清华北大招生骂战：要求...</a>
+         </li>
+         
+         
+         </ul>
+        </div>
+         
+         
+         
+        </div>
+        
+
+        
+       <div style=" float:left; display:inline; width:998px;"> 
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">法制服务
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./whsh/fzgj/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/fzgj/201508/t20150821_280321.html' target="_blank">为公平正义的法治中国护航 中国律师事...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/fzgj/201508/t20150821_280320.html' target="_blank">依法保障律师执业权利 切实规范律师执...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/fzgj/201507/t20150707_278502.html' target="_blank">家暴不是“家务事”——中德专家“会诊...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zxdd/zdxw/201507/t20150707_278472.html' target="_blank">今年中央第二轮巡视全面展开 巡视组向2...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zxdd/zdxw/201507/t20150707_278484.html' target="_blank">全国扫黄打非办公室通报护苗2015专项行...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zxdd/zdxw/201507/t20150707_278483.html' target="_blank">全面深化改革新进展：司法改革驶上快车道</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">民生观察
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./whsh/msmj/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/msmj/201508/t20150821_280323.html' target="_blank">以房养老推出一年全国仅签12户 为何叫...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zxdd/zdxw/201507/t20150707_278486.html' target="_blank">海外僵尸肉流入国内谁之过？边监等5环...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./zxdd/zdxw/201507/t20150707_278473.html' target="_blank">工信部督战：年内流量宽带资费务必下降30%</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/msmj/201507/t20150706_278417.html' target="_blank">广西区内通关一体化 边民互市申报无纸化</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/msmj/201507/t20150706_278416.html' target="_blank">27条城际铁路将联通京津冀 总规模3796公里</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/msmj/201507/t20150702_278251.html' target="_blank">东北四省区检验检疫一体化全面实施</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+           
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">生态环境
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./whsh/sthj/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/sthj/201507/t20150707_278505.html' target="_blank">京津冀协同发展环保优先 PPP项目发掘万...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/sthj/201507/t20150707_278504.html' target="_blank">广东低碳供电近3年减排二氧化碳约1200万吨</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/sthj/201507/t20150706_278421.html' target="_blank">发展新能源是大势所趋 光伏投资不再血...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/sthj/201507/t20150706_278420.html' target="_blank">中央专项资金将大力支持30个地市防治重...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/sthj/201507/t20150706_278415.html' target="_blank">南开大学教授：将环境承载力列入京津冀...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/sthj/201507/t20150702_278258.html' target="_blank">干部任期内损害生态环境将终身追责</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+        
+        </div>
+        
+        
+        <div style=" float:left; display:inline; width:998px;"> 
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">改革史话
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./whsh/ggdf/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/ggdf/201510/t20151015_281614.html' target="_blank">改革的时代——19世纪英国改革综论</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/ggdf/201509/t20150918_281017.html' target="_blank">商鞅环环相扣式改革启示：敢不敢处罚权...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/ggdf/201509/t20150914_280900.html' target="_blank">吴起大刀阔斧式改革启示：搞改革不能只...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/ggdf/201509/t20150911_280846.html' target="_blank">李悝双管齐下式改革启示：改革是一个系...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/ggdf/201508/t20150825_280384.html' target="_blank">商鞅变法为何有效</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/ggdf/201508/t20150812_280006.html' target="_blank">唐代司法慎刑原则</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">史海纵横
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./whsh/shzh/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shzh/201510/t20151020_281704.html' target="_blank">晚清救国语境下的妇女解放言论</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shzh/201510/t20151020_281703.html' target="_blank">明代科举中的“同等学力”</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shzh/201510/t20151019_281692.html' target="_blank">洪仁玕与中国专利制度的萌芽</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shzh/201510/t20151019_281691.html' target="_blank">吉萨金字塔聚落考古分析</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shzh/201510/t20151019_281683.html' target="_blank">延安精神：管党治党的重大理论与实践成果</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/shzh/201510/t20151015_281618.html' target="_blank">光业寺碑题记与唐代村落史研究</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+           
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">人物春秋
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./whsh/rwcq/' target="_blank">更多>></a>
+         </li>
+         
+         <li style=" float:left; display:inline; width:70px; height:94px;"><a href='./whsh/rwcq/201509/t20150928_281264.html' target="_blank"><img src='./whsh/rwcq/201509/W020150928556970429809.jpg' width="69" height="94" style="border:1px solid #f5e5c1;" /></a></li>
+         <li style=" float:left; display:inline; width:210px; height:94px;"><a href='./whsh/rwcq/201509/t20150928_281264.html' target="_blank">杨　亿</font>	早年以神童闻名，七岁能诗文，与客人谈论，显得很老成。十一岁那年，宋太宗闻知其名，诏令地...  [详细] 
+</a></li>
+
+
+          <li style=" width:315px; float:left; height:48px; display:inline; margin-top:5px;">
+          <table width="310" cellpadding="0" cellspacing="0" border="0" align="center" style="line-height:24px;">
+		   
+  <tr align="center" height="24">
+   
+    <td><a href="./whsh/rwcq/201509/t20150928_281264.html">杨　亿</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201509/t20150923_281141.html">左宗棠</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201509/t20150914_280899.html">王安石</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201509/t20150908_280738.html">刘胡兰</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201509/t20150902_280610.html">百里奚</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201508/t20150812_280005.html">刘　基</a></td>
+    <td> | </td>
+
+	
+  </tr>
+   
+  <tr align="center" height="24">
+   
+    <td><a href="./whsh/rwcq/201508/t20150807_279836.html">范仲淹</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201507/t20150715_278974.html">万　里</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201507/t20150715_278973.html">成思危</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201507/t20150706_278456.html">张荫桓</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201507/t20150701_278177.html">李　悝</a></td>
+    <td> | </td>
+
+    <td><a href="./whsh/rwcq/201506/t20150629_278012.html">杰斐逊</a></td>
+    <td> | </td>
+
+	
+  </tr>
+
+</table>
+         </li>
+
+         
+         </ul>
+        </div>
+        
+        </div>
+        
+        
+        <div style=" float:left; display:inline; width:998px;"> 
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">科技文卫
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./whsh/kj/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/kj/201509/t20150906_280662.html' target="_blank">国务院印发《促进大数据发展行动纲要》</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/kj/201509/t20150923_281135.html' target="_blank">工信部部长：年内完成电信资费下调30%目标</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/kj/201508/t20150803_279683.html' target="_blank">“城市数据团”：用数据读懂城市</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/kj/201507/t20150721_279176.html' target="_blank">“互联网＋”改变中国农产品流通传统模式</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/kj/201507/t20150714_278904.html' target="_blank">手机APP悄悄“蚕食”流量包 刷机或成恶...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/kj/201507/t20150709_278739.html' target="_blank">安卓手机爆“寄生兽”漏洞</a>
+         </li>
+         
+
+         
+         </ul>
+        </div>
+        
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">国学艺术
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./whsh/gxys/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/gxys/201509/t20150923_281138.html' target="_blank">《清明上河图》逆袭之路：从少人问津到...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/gxys/201509/t20150906_280663.html' target="_blank">“仿宋体”的由来：直接仿照宋版书的雕...</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/gxys/201508/t20150803_279684.html' target="_blank">“马踏飞燕” 竟是一个诗意的误会</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/gxys/201507/t20150707_278529.html' target="_blank">世遗名录新增24处 中国世遗数量居世界第二</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/gxys/201507/t20150701_278160.html' target="_blank">中国最早油画作品：清女性肖像</a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/gxys/201507/t20150701_278161.html' target="_blank">汉人取名：阳刚霸气 多用单字</a>
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+           
+        <div class="beijing6" style=" margin-top:8px;">
+         <ul>
+         <li style=" font-size:14px;font-weight:bold; color:#ce1f1c;line-height:28px; background:none;margin:5px 5px 5px 25px;height:28px;">健康生活
+           <a class="more" style="color:#946f2b; margin-left:180px; font-size:12px;" href='./whsh/jk/' target="_blank">更多>></a>
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/jk/201510/t20151026_281847.html' target="_blank">流感的危害被严重低估 流感来了我们怎...</a>
+
+
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/jk/201510/t20151015_281625.html' target="_blank">动粥疾病成我国头号杀手 “坏胆固醇”...</a>
+
+
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/jk/201509/t20150923_281136.html' target="_blank">常常恶心呕吐 颈椎病喜欢“伪装”成胃肠病</a>
+
+
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/jk/201509/t20150906_280660.html' target="_blank">七个减压好方法 日常生活中就能做到</a>
+
+
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/jk/201508/t20150803_279681.html' target="_blank">牢记“五个处方”远离动粥疾病</a>
+
+
+         </li>
+         
+         <li>
+          <img style=" margin-right:5px; margin-bottom:5px;" src="./images/dian20140924.jpg" /><a href='./whsh/jk/201507/t20150721_279175.html' target="_blank">上班族易得胃溃疡 主要与压力大有关</a>
+
+
+         </li>
+         
+         
+
+         
+         </ul>
+        </div>
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--编办业务开始-->
+      </div>
+       <!--社会文化结束-->
+  </DIV></DIV>
+  <DIV class=bla2></DIV>
+</DIV>
+</DIV>
+<DIV style="DISPLAY: none" id=ccrj1link_3 class=left>
+<DIV class=boxDcolumnr3>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(1) 
+href="./zwgz/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(2) 
+href="./whsh/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(3) 
+href="./mtgl/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(4) 
+href="#"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<!--<li class=HotWord><A href="./sppd/">更多>></A>
+</li>--></DIV>
+<DIV class=bla5></DIV>
+<DIV class=rjcontent>
+<DIV class=rjlist>
+<DIV class=boxtitle>
+<div class="r7">
+  
+     <!--战略思维开始-->
+      <div style="height:177px; border:1px solid #f3e5c0; border-top-style:none; float:left; display:inline; width:998px;">
+         <ul style="margin:0px 0px 0px 10px; padding:0px;">
+          <li>
+           <!--<div style="float:left; display:inline;"><img src="./images/zhanlvesiwei.jpg" /></div>-->
+
+          <iframe runat="server" src="http://www.scopsr.gov.cn/sycs/sycs/index_1121.html" width="990" height="170" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+           
+          </li>
+         </ul>
+      </div>
+      <!--战略思维结束-->
+      
+      
+      
+	  <div style="float:left; display:inline;">
+	  <div class="hh2s">
+	   <div class="ssjj" style="height:226px">
+		   <span class="sf"><span class="zz11" style="margin-left:40px;">理论选摘</span></span><a class="aa1hzt1" style="color:#93702c"  href='./mtgl/jgbzlltj/'>更多>></a>
+		   <ul style=" margin:0px; padding:0px;"></br></br>
+           
+             <li style=" float:left; display:inline; height:24px; margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/jgbzlltj/201510/t20151021_281753.html' title='“ 四个全面 ”与治国理政'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />“ 四个全面 ”与治国理政</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px; margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/jgbzlltj/201509/t20150928_281268.html' title='国家治理现代化进程中的重要课题'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />国家治理现代化进程中的重要课题</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px; margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/jgbzlltj/201509/t20150915_280941.html' title='运用战略思维谋划全面深化改革'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />运用战略思维谋划全面深化改革</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px; margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/jgbzlltj/201509/t20150915_280940.html' title='从整体论角度理解“四个全面”战略布局'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />从整体论角度理解“四个全面”战略布局</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px; margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/jgbzlltj/201509/t20150910_280803.html' title='运用民主集中制全面推进依法治国'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />运用民主集中制全面推进依法治国</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px; margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/jgbzlltj/201509/t20150910_280804.html' title='安全发展是现代化的本质要求'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />安全发展是现代化的本质要求</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px; margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/jgbzlltj/201509/t20150901_280564.html' title='清醒认识当代世界社会主义发展的新特点'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />清醒认识当代世界社会主义发展的新特点</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px; margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/jgbzlltj/201508/t20150827_280449.html' title='宣传思想工作须提高科学思维能力'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />宣传思想工作须提高科学思维能力</a> </li>
+              
+           </ul>
+
+		</div>
+        
+        
+        
+        <div class="ssjj" style=" margin-left:8px;height:226px; margin-right:0px;">
+		   <span class="sf"><span class="zz11" style="margin-left:40px;">资政研究</span></span><a class="aa1hzt1" style="color:#93702c"  href='./mtgl/dzyj/'>更多>></a>
+		   <ul style=" margin:0px; padding:0px;"></br></br>
+           
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/dzyj/201510/t20151021_281754.html' title='亟待关注新型农村社区建设中存在的三个问题'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />亟待关注新型农村社区建设中存在的三个问题</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/dzyj/201510/t20151010_281476.html' title='社会治理需做到四个结合'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />社会治理需做到四个结合</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/dzyj/201509/t20150928_281270.html' title='政府管理体制改革新进展'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />政府管理体制改革新进展</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/dzyj/201509/t20150928_281269.html' title='健全完善生态文明制度的路径与选择'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />健全完善生态文明制度的路径与选择</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/dzyj/201509/t20150924_281178.html' title='推进社会组织规范有序发展'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />推进社会组织规范有序发展</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/dzyj/201509/t20150917_280996.html' title='社区治理未必全都网格化'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />社区治理未必全都网格化</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/dzyj/201509/t20150915_280942.html' title='让农村资本流动起来'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />让农村资本流动起来</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/dzyj/201509/t20150910_280802.html' title='破解养老保险制度改革困局'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />破解养老保险制度改革困局</a> </li>
+             
+              
+           </ul>
+
+		</div>
+        
+        <div class="ssjj" style=" margin-left:8px;height:226px; margin-right:0px;">
+		   <span class="sf"><span class="zz11" style="margin-left:40px;">报刊精萃</span></span><a class="aa1hzt1" style="color:#93702c"  href='./mtgl/bkjc/'>更多>></a>
+		   <ul style=" margin:0px; padding:0px;"></br></br>
+           
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/bkjc/201510/t20151027_281882.html' title='[学习时报]改革试点绩效评估亟待改进'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />[学习时报]改革试点绩效评估亟待改进</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/bkjc/201510/t20151021_281755.html' title='[人民日报]发挥标准化在国家治理中的重要作用'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />[人民日报]发挥标准化在国家治理中的重要...</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/bkjc/201509/t20150924_281177.html' title='[学习时报]中国为什么需要“政务公开”'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />[学习时报]中国为什么需要“政务公开”</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/bkjc/201509/t20150921_281065.html' title='[学习时报]打破社会动员的 “体制内外”壁垒'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />[学习时报]打破社会动员的 “体制内外”壁垒</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/bkjc/201509/t20150915_280943.html' title='[学习时报]大数据推动政府治理变革'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />[学习时报]大数据推动政府治理变革</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/bkjc/201509/t20150906_280657.html' title='[学习时报]中国推动世界社会主义不扛旗不当头'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />[学习时报]中国推动世界社会主义不扛旗不...</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/bkjc/201509/t20150901_280570.html' title='[学习时报]体制的可改革性比改革重要'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />[学习时报]体制的可改革性比改革重要</a> </li>
+             
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/bkjc/201508/t20150828_280488.html' title='[人民日报]推动简政放权向纵深发展'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />[人民日报]推动简政放权向纵深发展</a> </li>
+             
+              
+           </ul>
+
+		</div>
+        
+        
+       <div class="ssjj"style="margin-top:7px; height:226px">
+
+
+		   <span class="sf"><span class="zz11" style="margin-left:40px;">干部教育</span></span><a class="aa1hzt1" style="color:#93702c"  href='./mtgl/zzxx/'>更多>></a>
+		   <ul style=" margin:0px; padding:0px;"></br></br>
+           
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/zzxx/ldkx/201509/t20150906_280648.html' title='邓小平 “点、线、面、体”的改革策略'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />邓小平 “点、线、面、体”的改革策略</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/zzxx/ldkx/201508/t20150820_280281.html' title='全面履行党章赋予的重要职责'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />全面履行党章赋予的重要职责</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/zzxx/ldkx/201508/t20150817_280143.html' title='干部的“幸福指数”该怎么提高'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />干部的“幸福指数”该怎么提高</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/zzxx/ldkx/201508/t20150813_280048.html' title='“成绩自己会说话”'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />“成绩自己会说话”</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/zzxx/ldkx/201508/t20150813_280046.html' title='在基层当好学习型“工兵”'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />在基层当好学习型“工兵”</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./tt/gdxw/201508/t20150810_279896.html' title='家事牵国事　家风引政风'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />家事牵国事　家风引政风</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/zzxx/ldkx/201508/t20150805_279756.html' title='不忘本来才能开辟未来'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />不忘本来才能开辟未来</a> </li>
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/zzxx/ldkx/201506/t20150630_278060.html' title='用好“能上能下”的指挥棒'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />用好“能上能下”的指挥棒</a> </li>
+              
+		  
+           </ul>
+
+		</div>
+        
+		
+		<div class="ssjj" style=" margin-top:7px; margin-left:8px;height:226px">
+
+		   <span class="sf"><span class="zz11" style="margin-left:40px;">电子政务</span></span><a class="aa1hzt1" style="color:#93702c"  href='./dzzw2015/'>更多>></a>
+		   <ul style=" margin:0px; padding:0px;"></br></br>
+           
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./dzzw2015/201508/t20150817_280128.html' title='重庆：5年时间全面建成统一规范的电子政务网络'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />重庆：5年时间全面建成统一规范的电子政...</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./dzzw2015/201508/t20150817_280127.html' title='云南省政务外网工作会议提出推动电子政务协调可持续发展'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />云南省政务外网工作会议提出推动电子政...</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./dzzw2015/201508/t20150817_280126.html' title='韩国将向非洲出口电子政务系统'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />韩国将向非洲出口电子政务系统</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./dzzw2015/201508/t20150810_279921.html' title='贵州省电子政务网上线 致远软件助力贵州“互联网+政务”落地'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />贵州省电子政务网上线 致远软件助力贵州...</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./dzzw2015/201508/t20150810_279915.html' title='2015中国电子政务论坛召开 聚焦互联网+政府管理'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />2015中国电子政务论坛召开 聚焦互联网+...</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./dzzw2015/201506/t20150630_278046.html' title='天津电子政务“五个一工程”助智慧城市'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />天津电子政务“五个一工程”助智慧城市</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./dzzw2015/201506/t20150625_277874.html' title='互联网+政务推动电子政务变革'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />互联网+政务推动电子政务变革</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./dzzw2015/201506/t20150625_277873.html' title='云计算助电子政务升级 华为政务云推动转型'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />云计算助电子政务升级 华为政务云推动转型</a> </li>
+            
+              
+           </ul>
+
+		</div>
+        
+        <div class="ssjj" style=" margin-top:7px; margin-left:8px;height:226px">
+
+		   <span class="sf"><span class="zz11" style="margin-left:40px;">环球视野</span></span><a class="aa1hzt1" style="color:#93702c"  href='./mtgl/ddsj/'>更多>></a>
+		   <ul style=" margin:0px; padding:0px;"></br></br>
+           
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/ddsj/201509/t20150906_280646.html' title='德国在欧盟的“领导困境”'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />德国在欧盟的“领导困境”</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/ddsj/201509/t20150906_280645.html' title='联合国改革向何处去'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />联合国改革向何处去</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/ddsj/201509/t20150906_280643.html' title='阅兵不针对日本，东京莫频频自黑'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />阅兵不针对日本，东京莫频频自黑</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/ddsj/201508/t20150820_280272.html' title='在泰中国留学生：爆炸过后恐惧难消 学校加强安保'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />在泰中国留学生：爆炸过后恐惧难消 学校...</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/ddsj/201508/t20150817_280129.html' title='国际观察：安倍谈话是一场政治秀'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />国际观察：安倍谈话是一场政治秀</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/ddsj/201508/t20150813_280042.html' title='韩美靠近三八线 启动迄今规模最大"剿敌演习"'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />韩美靠近三八线 启动迄今规模最大"剿敌演习"</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/ddsj/201508/t20150810_279898.html' title='报告:中国制造成本已接近美国'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />报告:中国制造成本已接近美国</a> </li>
+            
+              
+             <li style=" float:left; display:inline; height:24px;margin-left:10px;"><a target="_blank" class="lianjie" style=" width:305px;" href='./mtgl/ddsj/201508/t20150805_279751.html' title='外媒：中国冬奥——“历史性选择”'><img style="border:0px; margin-right:5px; margin-bottom:4px" src="./images/dian20140924.jpg" />外媒：中国冬奥——“历史性选择”</a> </li>
+            
+              
+           </ul>
+
+		</div>
+		
+		
+		
+	  </div>
+	  
+	 
+	  </div>
+
+      
+      
+      <div style=" width:998px;border:#f5e6c0 solid 1px; height:177px; margin-top:10px; float:left; display:inline;">
+       <img style=" float:left; display:inline;" src="./images/shujishuji.jpg" />
+       
+       
+       <!-- picrotate_left start  -->
+<div class="blk_18"> <a class="LeftBotton" onMouseDown="ISL_GoUp_1()" onMouseUp="ISL_StopUp_1()" onMouseOut="ISL_StopUp_1()" href="javascript:void(0);" target="_self"></a>
+  <div class="pcont" id="ISL_Cont_1">
+    <div class="ScrCont">
+      <div id="List1_1">
+        <!-- piclist begin -->
+		
+          <a class="pl" href='./mtgl/sjtj/201406/t20140618_262569.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201406/W020140618599244459911.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201311/t20131118_245835.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201311/W020131118413018616537.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201307/t20130725_232198.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201307/W020130725329836365839.jpg' /></a> 
+          
+          <a class="pl" href='http://dangjian.people.com.cn/GB/135685/348822/index.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201307/W020130701555991446438.jpg' /></a> 
+          
+          <a class="pl" href='http://www.qstheory.cn/ts/zxyd/xydll/'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201306/W020130620629215355425.jpg' /></a> 
+          
+          <a class="pl" href='http://dangshi.people.com.cn/GB/146570/350450/index.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201306/W020130617607429895688.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201305/t20130513_220729.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130513407035255408.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201305/t20130513_220718.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130513383334390583.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201305/t20130513_220717.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130513381091621307.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201305/t20130513_220716.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130513379910551642.jpg' /></a> 
+          
+          <a class="pl" href='http://www.zgdsw.org.cn/GB/218994/219014/220527/index.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130513378818351918.jpg' /></a> 
+          
+          <a class="pl" href='http://www.qstheory.cn/ts/zxyd/dsdyjsc/'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130513376159624942.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201305/t20130510_220524.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130510366802529351.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201305/t20130510_220509.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130510349066493920.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201305/t20130510_220505.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130510346732917566.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201305/t20130510_220502.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130510343120126580.jpg' /></a> 
+          
+          <a class="pl" href='./mtgl/sjtj/201305/t20130510_220500.html'><img style="border:1px solid #CCCCCC;" src='./mtgl/sjtj/201305/W020130510341285745296.jpg' /></a> 
+          
+		  
+        <!-- piclist end -->
+      </div>
+      <div id="List2_1"></div>
+    </div>
+  </div>
+  
+  <a class="RightBotton" onMouseDown="ISL_GoDown_1()" onMouseUp="ISL_StopDown_1()" onMouseOut="ISL_StopDown_1()" href="javascript:void(0);" target="_self"></a> </div>
+<div class="c"></div>
+<script type="text/javascript">
+        <!--
+        picrun_ini()
+        //-->
+        </script>
+<!-- picrotate_left end -->
+       
+      </div>
+
+	  
+    </div>
+     
+  </DIV></DIV>
+  <DIV class=bla2></DIV>
+</DIV>
+</DIV>
+<DIV style="DISPLAY: none" id=ccrj1link_4 class=left>
+<DIV class=boxDcolumnr4>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(1) 
+href="./zwgz/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(2) 
+href="./whsh/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(3) 
+href="./mtgl/" target="_blank"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<li class=b><A onmouseover=javascript:SetMenuccrj1(4) style="cursor:hand"><img src="./images/siqiehuanpng.png" width="250" height="35" /></A></li>
+<!--<li class=HotWord><A href="./sppd/">更多>></A>
+</li>--></DIV>
+<DIV class=bla5></DIV>
+<DIV class=rjcontent>
+<DIV class=rjlist>
+<DIV class=boxtitle>
+ 
+  <div style=" height:325px; width:998px;border:#f5e6c0 solid 1px;float:left; display:inline; border-top-style:none">
+    
+    <!--<div  style=" width:46px; float:left;"><img src="./images/bianminfuwu.jpg" /> </div>-->
+    
+     <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.12306.cn/mormhweb/" target="_blank"><img src="./images/0a1.jpg" /></a><a href="http://www.12306.cn/mormhweb/" target="_blank">火车时刻</a></li>
+       </ul>
+     </div>
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.scopsr.gov.cn/bmcx/gjcx/" target="_blank"><img src="./images/0a2.jpg" /></a><a href="http://www.scopsr.gov.cn/bmcx/gjcx/" target="_blank">公交查询</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.scopsr.gov.cn/bmcx/hkcx/" target="_blank"><img src="./images/0a3.jpg" /></a><a href="http://www.scopsr.gov.cn/bmcx/hkcx/" target="_blank">航班查询</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.scopsr.gov.cn/bmcx/jtwzcx/" target="_blank"><img src="./images/0a4.jpg" /></a><a href="http://www.scopsr.gov.cn/bmcx/jtwzcx/" target="_blank">交通违章</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.cnta.gov.cn:8000/Forms/TravelCatalog/TravelCatalogList.aspx?catalogType=hotel&resultType=%u4E94" target="_blank"><img src="./images/0a5.jpg" /></a><a href="http://www.cnta.gov.cn:8000/Forms/TravelCatalog/TravelCatalogList.aspx?catalogType=hotel&resultType=%u4E94" target="_blank">酒店管理</a></li>
+
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.cnta.gov.cn:8000/Forms/TravelCatalog/TravelCatalogList.aspx?catalogType=view&resultType=5A" target="_blank"><img src="./images/0a6.jpg" /></a><a href="http://www.cnta.gov.cn:8000/Forms/TravelCatalog/TravelCatalogList.aspx?catalogType=view&resultType=5A" target="_blank">著名景区</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.gov.cn/test/2005-06/15/content_18253.htm" target="_blank"><img src="./images/0a7.jpg" /></a><a href="http://www.gov.cn/test/2005-06/15/content_18253.htm" target="_blank">行政区划</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.tianditu.cn/map/index.html" target="_blank"><img src="./images/0a8.jpg" /></a><a href="http://www.tianditu.cn/map/index.html" target="_blank">网上地图</a></li>
+       </ul>
+     </div>       
+   
+   
+     
+     
+     <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.scopsr.gov.cn/bmcx/sbcx/" target="_blank"><img src="./images/0a9.jpg" /></a><a href="http://www.scopsr.gov.cn/bmcx/sbcx/" target="_blank">社保查询</a></li>
+       </ul>
+     </div>
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.10086.cn/" target="_blank"><img src="./images/1a1.jpg" /></a><a href="http://www.10086.cn/" target="_blank">移动营业厅</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.189.cn/" target="_blank"><img src="./images/1a2.jpg" /></a><a href="http://www.189.cn/" target="_blank">电信营业厅</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.10010.com/" target="_blank"><img src="./images/1a3.jpg" /></a><a href="http://www.10010.com/" target="_blank">联通营业厅</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://datacenter.mep.gov.cn/report/air_daily/air_dairy.jsp?〈=" target="_blank"><img src="./images/pm25kongqi.jpg" /></a><a href="http://datacenter.mep.gov.cn/report/air_daily/air_dairy.jsp?〈=" target="_blank">空气</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://datacenter.mep.gov.cn/report/getCountGraph.do?type=runQianWater" target="_blank"><img src="./images/shuizhi.jpg" /></a><a href="http://datacenter.mep.gov.cn/report/getCountGraph.do?type=runQianWater" target="_blank">水质</a></li>
+       </ul>
+     </div>   
+     
+     <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://xxfb.hydroinfo.gov.cn/" target="_blank"><img src="./images/yushuiqing.jpg" /></a><a href="http://xxfb.hydroinfo.gov.cn/" target="_blank">水雨情</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.weather.com.cn/" target="_blank"><img src="./images/1a6.jpg" /></a><a href="http://www.weather.com.cn/" target="_blank">天气查询</a></li>
+       </ul>
+     </div>   
+     
+     
+     
+     
+     <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.scopsr.gov.cn/bmcx/gjjcx/" target="_blank"><img src="./images/1a7.jpg" /></a><a href="http://www.scopsr.gov.cn/bmcx/gjjcx/" target="_blank">住房公积金</a></li>
+       </ul>
+     </div>
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://search.chinalaw.gov.cn/search.html" target="_blank"><img src="./images/1a8.jpg" /></a><a href="http://search.chinalaw.gov.cn/search.html" target="_blank">法律法规</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.scopsr.gov.cn/bmcx/kdcx/" target="_blank"><img src="./images/1a9.jpg" /></a><a href="http://www.scopsr.gov.cn/bmcx/kdcx/" target="_blank">快递查询</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.cwl.gov.cn/kjxx/" target="_blank"><img src="./images/2a0.jpg" /></a><a href="http://www.cwl.gov.cn/kjxx/" target="_blank">彩票开奖</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://translate.google.com.hk/?hl=zh-CN&tab=wT#zh-CN/en/" target="_blank"><img src="./images/2a1.jpg" /></a><a href="http://translate.google.com.hk/?hl=zh-CN&tab=wT#zh-CN/en/" target="_blank">在线翻译</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://tv.cntv.cn/epg" target="_blank"><img src="./images/2a2.jpg" /></a><a href="http://tv.cntv.cn/epg" target="_blank">电视节目</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://www.boc.cn/sourcedb/whpj/" target="_blank"><img src="./images/2a3.jpg" /></a><a href="http://www.boc.cn/sourcedb/whpj/" target="_blank">外汇牌价</a></li>
+       </ul>
+     </div>   
+     
+     
+      <div class="bianminfuwu">
+       <ul style="text-align:center">
+        <li><a href="http://xh.5156edu.com/" target="_blank"><img src="./images/2a4.jpg" /></a><a href="http://xh.5156edu.com/" target="_blank">新华字典</a></li>
+       </ul>
+     </div>   
+    
+    </div>
+    
+  </DIV></DIV>
+  <DIV class=bla2></DIV>
+</DIV>
+</DIV>
+
+</DIV>
+
+<div  style="width:1000px; text-align:center; margin:0px auto; ">
+ <div class="r9">
+      <div class="r9b">
+        <div class="r9bz"><img src="./images/hudongbianminfuwu1205.jpg" width="143" height="31" border="0" /></div>
+      </div>
+	 
+
+    <div style="float: left; display:inline; width:1000px; margin-bottom:15px;">
+      
+      
+        <div class="r8" style=" height:400px; margin-right:8px;">
+	   <div class="r2b" style=" border:0px; border-bottom:1px;">
+        <div class="r2bz" style="width:auto;"><span style="margin-left:5px;">友情链接</span></div><a class="aa1hzt1" style="color:#93702c"  href="./zmmt/" target='_blank'>更多>></a>      </div>
+        
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://www.12371.cn/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201406/W020140926583768757813.jpg' /></a></div>
+	
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://www.xinhuanet.com/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201303/W020130319569612167575.jpg' /></a></div>
+	
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://www.people.com.cn/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201303/W020130319569790045125.jpg' /></a></div>
+	
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://www.cntv.cn' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201406/W020140604323104593912.jpg' /></a></div>
+	
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://www.chinadaily.com.cn/hqzx/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201303/W020130319569965949844.jpg' /></a></div>
+	
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://gb.cri.cn/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201303/W020130319576922028411.jpg' /></a></div>
+	
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://www.ce.cn/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201303/W020130319572596421089.jpg' /></a></div>
+	
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://www.youth.cn/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201303/W020130319572752302549.jpg' /></a></div>
+	
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://www.cnr.cn/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201303/W020130319572940753424.jpg' /></a></div>
+	
+	       <div ><a class="logo" style="margin-left:5px; margin:5px 3px 0px 4px;" href='http://www.gmw.cn/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201303/W020130319573111973446.jpg' /></a></div>
+	
+    
+	       <div ><a class="logo" style="margin-left:5px; margin:3px 3px 0px 4px;" href='http://www.cyol.net/' target='_blank'><img style=" width:115px; height:28px;" src='./zmmt/zdxw/201303/W020130321379575181195.gif' /></a></div>
+	
+	  </div>
+      
+      
+      
+
+      <div style=" float:left; display:inline;width:575px;height:406px; margin-top:5px; margin-left:4px">
+	     
+<script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0','width','570','height','405','src','./images/map0305new1','quality','high','pluginspage','http://www.macromedia.com/go/getflashplayer','movie','./images/map0305new1' ); //end AC code
+</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="570" height="405">
+           <param name="movie" value="images/map0305new1.swf" />
+           <param name="quality" value="high" />
+          <embed src="./images/map0305new1.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="570" height="405"></embed>
+         </object></noscript>
+
+      </div>
+      <div style="float: right; display:inline; margin-top:8px; width:280px;border:#f5e6c0 solid 1px;  height:180px;">
+       
+         <div class="r2b" style=" border:0px; border-bottom:1px;">
+           <div class="r2bz1" ><span style="margin-left:-25px;">中央和国家机关部门网站</span></div><a class="aa1hzt1" style="color:#93702c"  href="./zybw/" target="_blank">更多>></a>
+         </div>
+           
+            <ul style=" margin:0px; padding:0px; margin-top:10px; text-align:left">
+            <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href="http://www.scopsr.gov.cn/zybw#1" style=" font-size:14px">党中央各部门</a></li>
+            <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href="http://www.scopsr.gov.cn/zybw#2" style=" font-size:14px">全国人大</a></li>
+            <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href="http://www.scopsr.gov.cn/zybw#3" style=" font-size:14px">国务院各部门</a></li>
+            <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href="http://www.scopsr.gov.cn/zybw#4" style=" font-size:14px">全国政协</a></li>
+            <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href="http://www.scopsr.gov.cn/zybw#5" style=" font-size:14px">最高人民法院</a></li>
+            <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href="http://www.scopsr.gov.cn/zybw#6" style=" font-size:14px">最高人民检察院</a></li>
+            <!--
+             <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href='http://www.mfa.gov.cn/' style=" font-size:14px">中华人民共和国外交部</a></li>
+            
+             <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href='http://www.mod.gov.cn/' style=" font-size:14px">中华人民共和国国防部</a></li>
+            
+             <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href='http://www.ndrc.gov.cn/' style=" font-size:14px">中华人民共和国国家发展和改革委员会</a></li>
+            
+             <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href='http://www.moe.gov.cn/' style=" font-size:14px">中华人民共和国教育部</a></li>
+            
+             <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;"><a target="_blank" href='http://www.most.gov.cn/' style=" font-size:14px">中华人民共和国科学技术部</a></li>
+            -->
+         </ul>
+       
+      </div>
+       
+      <div style="float: right; display:inline; margin-top:8px; width:280px;border:#f5e6c0 solid 1px;  height:210px;">
+       
+         <div class="r2b" style=" border:0px; border-bottom:1px;">
+           <div class="r2bz1" ><span style="margin-left:-50px;">机构编制部门网站群</span></div><!--<a class="aa1hzt1" style="color:#93702c"  href="./zybw/" target="_blank">更多>></a>-->
+         </div>
+           
+            <ul style=" margin:0px; padding:0px; margin-top:10px;">
+             <li style=" float:left; display:inline; font-size:14px; height:24px;margin-left:10px;width:260px;">
+             <table width="250" cellpadding="0" cellspacing="0" border="0" align="center" style="line-height:24px;">
+  <tr align="left" height="24">
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/bj/index.html" target="_blank" style=" font-size:14px">北&nbsp;&nbsp;京</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/tj/index.html" target="_blank" style=" font-size:14px">天&nbsp;&nbsp;津</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/sh/index.html" target="_blank" style=" font-size:14px">上&nbsp;&nbsp;海</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/cq/index.html" target="_blank" style=" font-size:14px">重&nbsp;&nbsp;庆</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/hb/index.html" target="_blank" style=" font-size:14px">河&nbsp;&nbsp;北</a></td>
+  </tr>
+  <tr align="left" height="24">
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/sxs/index.html" target="_blank" style=" font-size:14px">山&nbsp;&nbsp;西</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/nmg/index.html" target="_blank" style=" font-size:14px">内蒙古</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/ln/index.html" target="_blank" style=" font-size:14px">辽&nbsp;&nbsp;宁</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/jl/index.html" target="_blank" style=" font-size:14px">吉&nbsp;&nbsp;林</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/hlj/index.html" target="_blank" style=" font-size:14px">黑龙江</a></td>
+  </tr>
+  <tr align="left" height="24">
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/js/index.html" target="_blank" style=" font-size:14px">江&nbsp;&nbsp;苏</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/zj/index.html" target="_blank" style=" font-size:14px">浙&nbsp;&nbsp;江</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/ah/index.html" target="_blank" style=" font-size:14px">安&nbsp;&nbsp;徽</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/fj/index.html" target="_blank" style=" font-size:14px">福&nbsp;&nbsp;建</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/jx/index.html" target="_blank" style=" font-size:14px">江&nbsp;&nbsp;西</a></td>
+  </tr>
+  <tr align="left" height="24">
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/sd/index.html" target="_blank" style=" font-size:14px">山&nbsp;&nbsp;东</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/hn/index.html" target="_blank" style=" font-size:14px">河&nbsp;&nbsp;南</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/hbs/index.html" target="_blank" style=" font-size:14px">湖&nbsp;&nbsp;北</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/hns/index.html" target="_blank" style=" font-size:14px">湖&nbsp;&nbsp;南</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/gd/index.html" target="_blank" style=" font-size:14px">广&nbsp;&nbsp;东</a></td>
+  </tr>
+  <tr align="left" height="24">
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/gx/index.html" target="_blank" style=" font-size:14px">广&nbsp;&nbsp;西</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/hainan/index.html" target="_blank" style=" font-size:14px">海&nbsp;&nbsp;南</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/sc/index.html" target="_blank" style=" font-size:14px">四&nbsp;&nbsp;川</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/gz/index.html" target="_blank" style=" font-size:14px">贵&nbsp;&nbsp;州</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/yn/index.html" target="_blank" style=" font-size:14px">云&nbsp;&nbsp;南</a></td>
+  </tr>
+  <tr align="left" height="24">
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/xz/index.html" target="_blank" style=" font-size:14px">西&nbsp;&nbsp;藏</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/sx/index.html" target="_blank" style=" font-size:14px">陕&nbsp;&nbsp;西</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/gs/index.html" target="_blank" style=" font-size:14px">甘&nbsp;&nbsp;肃</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/qh/index.html" target="_blank" style=" font-size:14px">青&nbsp;&nbsp;海</a></td><td width="6">|</td>
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/nx/index.html" target="_blank" style=" font-size:14px">宁&nbsp;&nbsp;夏</a></td>
+  </tr>
+  <tr align="left" height="24">
+    <td width='50'><a href="http://www.scopsr.gov.cn/hdfw/zgjg/xj/index.html" target="_blank" style=" font-size:14px">新&nbsp;&nbsp;疆</a></td><td width="6">|</td>
+    <td colspan="7"><a href="http://bwb.xjbt.gov.cn/" target="_blank" style=" font-size:14px">新疆生产建设兵团</a></td>
+    </tr>
+
+</table>
+             </li>
+         </ul>
+       
+      </div>
+       
+       
+       
+    </div>
+      
+	  
+      
+      <div style=" height:45px; float:left; display:inline;">
+      
+       <div style=" float:left; display:inline;"> <a  href="http://www.scopsr.gov.cn/yjh_1/index.htm" target="_blank" style="width:195px;margin:0px 3px 0px 0px ;"><img style="border:0px;" ?src="huiyuanzhijia.jpg" width="160" height="40" SRC="./images/huiyuanzhijia.jpg" /></a></div>
+      <div style="padding-left:0px; float:left; display:inline;"> <!--<a class="lianjie" style="width:265px;margin:0px 0px 0px 0px ;" href="javascript:void(0);" onclick="document.frmPost.submit()" target="_blank"><img style="border:0px;" src="./images/qwe (33).gif" /></a>-->
+      <input type="image" src="./images/guojiatushuguan.jpg" style="width:160px; height:40px; margin:0px 3px 0px 3px" onclick="document.frmPost.submit()" />
+    </div>
+        <div style=" float:left; display:inline;"> <a href="http://114.251.191.190/" target="_blank" class="lianjie" style="width:160px;margin:0px 3px 0px 3px ;"><img style="border:0px;" src="./images/jiaoliupingtai.jpg" width="160" height="40" /></a></div> 
+	    <div style=" float:left; display:inline;"> <a href="http://www.scopsr.gov.cn/zlzx/index.html" target="_blank" class="lianjie" style="width:160px;margin:0px 3px 0px 3px ;"><img style="border:0px;" src="./images/ziliaoxiazai.jpg" width="160" height="40" /></a></div>
+        <div style=" float:left; display:inline;"> <a href="http://www.scopsr.gov.cn/rdzt/rtx/" target="_blank" class="lianjie" style="width:160px;margin:0px 0px 0px 3px ;"><img style="border:0px;" src="./images/RTXindex.jpg" width="160" height="40" /></a></div>
+         <div style=" float: right; display:inline;"> <a href="http://scopsr.gov.cn/zazhi/client-and-fix.rar" target="_blank" class="lianjie" style="width:170px;margin:0px 0px 0px 6px ;"><img style="border:0px;" src="./images/waiwangxinxi.png" width="170" height="40" /></a></div>
+      
+      </div>
+      
+  </div>
+  <form name="frmPost" method="post" action="http://202.106.125.27/portal/portalpage/index_zbb.jsp"  target="frmTarget"><!-- target="frmTarget" -->
+	<input name="UserName" type="hidden" value />
+	<INPUT type="hidden" name="ForceKick" value="false" />
+	<input name="PassWord" type="hidden" value />
+</form>
+
+  <!--底部开始-->
+  <div style="clear:both"></div>
+  <div id="footer" style="width:1000px; text-align:center; margin:0px auto; padding-top:10px; height:200px; padding-bottom:20px"><div class="fo" style="text-align:center; margin:0px auto;"> </div>﻿<link href="./images/foot_style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.hei12 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+-->
+</style>
+<div class="content"> 
+ 
+  <div class="footer">
+    <div class="hei12"> 
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/01/000/0000/40434131/CA010000000404341310001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<br />
+联系地址：北京市东城区东四南大街85号　　邮政编码：100010<br />
+电话：010-69001463 69001475　电子邮件：<a href="mailto:webserver@scopsr.gov.cn" target="_blank" class="hei12">webserver@scopsr.gov.cn</a>　投稿邮箱：<a href="mailto:tg@scopsr.gov.cn" target="_blank" class="hei12">tg@scopsr.gov.cn</a>&nbsp;&nbsp;<a href="http://www.scopsr.gov.cn/bbyw/dfjgbzxxkd/tbgz/201507/t20150723_279283.html" target="_blank"  class="hei12"> 投稿说明</a><br />
+中央机构编制委员会办公室版权所有，未经书面授权禁止使用  | <span class="hei12"><a href="http://www.scopsr.gov.cn/mzsm/201204/t20120411_161782.html" target="_blank" class="hei12">免责声明</a>  | <a href="http://www.miibeian.gov.cn" target="_blank" class="hei12"> 京ICP备 05084180号</a> | </span>广播电视节目制作许可证号（广媒）字第167号<br />
+Copyright © 2010-2015 www.scopsr.gov.cn. All Rights Reserved.     </p>
+    </div>
+ </div>
+  
+</div>
+<script type='text/javascript' src='http://static.gridsumdissector.com/js/Clients/GWD-000531-C21155/gs.js'></script></div>
+  <!--底部结束-->
+</div>
+
+</td>
+    <td width="100" style="text-align:left; padding-left:10px"><!-- Gridsum tracking code begin. -->
+
+  <!-- GWD SHARE BEGIN 页面右侧浮动分享代码-->
+<div style=" position:fixed; float:left; top:300px;">
+    <div>
+        <div id="gwdShare_win_2">
+            <div id="gwdShare_con_2" style="display:none;height:51px;">
+                <div class="gwdshare_t gwds_tools_24 get-codes-gwdshare">
+                    <a class="gwds_people gwds_right_button"></a>
+                    <a class="gwds_tsina gwds_right_button"></a>
+                    <a class="gwds_tqq gwds_right_button"></a>
+                    <span class="gwds_more gwds_right_more"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- GWD SHARE END --></td>
+  </tr>
+</table>
+
+<!--长城热荐-->
+<SCRIPT type=text/javascript>			
+		function SetMenuccrj1(theid){					    
+			if(theid){
+				for (i = 1; i< 5; i++) {				
+			 		document.getElementById("ccrj1link_"+i).style.display="none";
+			 		if(i==theid){
+						document.getElementById("ccrj1link_"+i).style.display="block";			
+					}		  	
+				}
+
+			}
+		}
+</SCRIPT>
+<span style="display:none">
+<img src="./images/qiehuanbg.jpg" />
+<img src="./images/qiehuanbgsp.jpg" />
+<img src="./images/2014120201-1.jpg" />
+<img src="./images/2014120202-2.jpg" />
+<img src="./images/2014120203-3.jpg" />
+<img src="./images/2014120204-4.jpg" />
+<img src="./images/2014120204-4.jpg" />
+<img src="./images/2014120202-2.jpg" />
+<img src="./images/2014120203-3.jpg" />
+<img src="./images/2014120201-1.jpg" />
+<img src="chaxun02123" />
+</span>
+  
+     <!--学习参考开始-->
+
+    <!--学习参考结束-->
+    <!--导航服务开始-->
+    
+</body>
+</html>
+<span style="display:none">
+<img src="./images/zhoyang01.jpg" />
+<img src="./images/zhoyang02.jpg" />
+<img src="./images/zhoyang03.jpg" />
+<img src="./images/zhoyang04.jpg" />
+<img src="./images/map0928new.swf" />
+<img src="./images/jiantou20140926you.jpg" />
+<img src="./images/jiantou20140926.jpg" />
+<img src="./images/lilunzizhengcankao.jpg" />
+<img src="./images/shehuiwenhuashengtai.jpg" />
+<img src="./images/hudongbianminfuwu.jpg" />
+<img src="./images/chaxun01123.jpg" />
+<img src="./images/chaxun02123.jpg" />
+<img src="./images/blanknews.jpg" />
+<img src="./images/blanknews01.jpg" />
+<img src="./images/blanknews02.jpg" />
+<img src="./images/jinshen01.jpg" />
+<img src="./images/jinshen02.jpg" />
+<img src="./images/jinshen03.jpg" />
+<img src="./images/jinshen04.jpg" />
+<img src="./images/dianbg.jpg" />
+<img src="./images/zbg.jpg" width="1" height="34" />
+
+</span>

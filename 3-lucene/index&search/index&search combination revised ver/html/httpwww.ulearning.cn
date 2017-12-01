@@ -1,0 +1,753 @@
+
+
+
+
+
+
+ 
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页 - 优学院 - 体验最好的学习方式</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link rel="shortcut icon" href="static/portal/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="static/portal/css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="static/portal/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="static/portal/css/index.css"/>
+<link rel="stylesheet" type="text/css" href="static/portal/css/responsive.css"/>
+
+<script type="text/javascript" src="static/portal/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/portal/js/responsive.js"></script>
+<script type="text/javascript" src="/ulearning_web/static/portal/js/jquery.html5-placeholder-shim.js"></script>
+<style>
+.resources .lastres{border-right:0;}
+.block-cont{width:100%;max-height:200px;background:#f7f7f7;bottom:0;position:fixed;}
+	.box-close{max-width:26px;max-height:26px;float:right;margin:10px;}
+	.box-close img{vertical-align:middle;margin:0 auto;}
+	.box-left,.box-right,.box-cont{box-sizing:border-box;}
+	.box-left{max-width:136px;height:96px;float:left;width:30%;text-align:center;padding:0 2%;}
+	.box-right{float:left;max-width:130px;width:30%;text-align:center;}
+	.box-cont{font-family: "微软雅黑";color:#444;width:40%;float:left;padding:1%;}
+	.bc-text{margin:0 130px 0 136px;padding:10px;}
+	.box-right a{
+		width:80%;
+		max-width:120px;
+		height:50px;
+		line-height:50px;
+		border-radius:4px;
+		border:none;color:#f7f7f7;
+		font-size:1.2rem;
+		display:inline-block;
+		margin:15% 0;
+		background: #000000;
+	   	background: -moz-linear-gradient(top,#ea5746, #ea3a3c);
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(#ea5746), color-stop(#ea3a3c));
+	    background: -webkit-linear-gradient(top,  #ea5746,#ea3a3c);
+	    background: -o-linear-gradient(top,#ea5746, #ea3a3c);
+	    background: -ms-linear-gradient(top,#ea5746, #ea3a3c);
+	    background: linear-gradient(to bottom,  #ea5746,#ea3a3c);
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5746', endColorstr='#ea3a3c',GradientType=0 );
+	}
+	.b{display:none;}
+	.banner img{vertical:middle;}
+	.pagesPic{background:#dbdbdb;display: block;width: 16px;height: 8px;margin-right: 10px;border: none;filter:Alpha(opacity=50);opacity:0.5;cursor: pointer;}
+	.pageOn{background: #fff;filter:Alpha(opacity=100);opacity:1.0;margin-top: 0px;}
+	.bannerTurn{position:relative;margin-top: -30px;}
+	.bannerNum{width:150px;margin:0 auto;}
+	.banner-img{vertical-align:middle;}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+    
+<style>
+	.loginBtn,.registerBtn{padding:5px 14px;font-size:14px;height:23px;line-height:23px;background:#ea5947;color:#fff;}
+	.headInfo{padding:42px 0 26px;line-height:35px;}
+	.appEnter{margin-right:10px;}
+	.updateInfo{height:100px;background:#445567;font:18px "微软雅黑";line-height:36px;color:#F6F6F7;padding:40px 0;display:none;}
+	.updateInfo_title{width:1170px;margin:0 auto;}
+	@media only screen and (max-width: 1980px) and (min-width: 0){
+		.updateInfo_title{width:1170px;}
+	}
+	@media only screen and (min-width: 0) and (max-width: 1280px){
+		.updateInfo_title{width:980px;}
+	}
+	.appEnter{margin-left:24px;}
+	.appEnter a{margin:0;padding-right:10px;}
+	.personal a{color:#444444;font-size:14px;padding-right:10px;}
+	.li_spacer{padding-left:10px;color:#969696;display:none;}
+</style>
+<script type="text/javascript" src="/ulearning_web/static/web/js/jquery.cookie.js"></script>
+<script>
+//百度统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?82dc9406a304f020903ac2082ddad1d8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div class="header">
+   <div class="updateInfo">
+   <p class="updateInfo_title">尊敬的用户:</p>
+   <p class="updateInfo_title">您好！因系统升级,优学院网站将于2015年8月12日(星期三)上午9点后停止服务,2015年8月12日(星期三)24点后恢复服务。在此期间,服务器将间断或运行异常,导致网站无法访问。因此给您造成的不便,敬请谅解!</p>
+   </div>
+    <div class="headInfo clearfix">
+        <div class="logodiv clearfix">
+            <a id="logo" href="http://www.ulearning.cn/ulearning_web/index.do"></a>
+        </div>
+        
+        <div class="personal  hide800" style="display:none;">
+        	<a href="javascript:checklogin();"><img id="headImg" src="/ulearning_web/static/portal/images/stu_m.png"/><span id='logined_name'>我</span>的首页<span class="li_spacer">|</span></a>
+        	
+        	<a href="javascript:logout();">退出</a>
+        </div>
+        
+        <div class="appEnter clearfix">
+        	<a href="http://help.ulearning.cn/" target="_blank" >帮助中心<span class="li_spacer">|</span></a>
+        	<a href="http://www.ulearning.cn/firstClass/index.html" target="_blank">导学课<span class="li_spacer">|</span></a>
+        </div>
+        <div class="login clearfix hide800">
+            <a class="loginBtn" id="loginBtnClick" href="">登录</a>
+            <a class="registerBtn" href="/ulearning_web/web/register!register.do">注册</a>
+        </div>
+        <a class="openTeleNav hide1280 show800" onclick="javascript:openTeleNav()"></a>
+    </div>
+    <div class="hide1280 show800 placediv"></div>
+    <div id="nav" class="hide800">
+        <ul class="navInfo clearfix">
+            <li><a href="/ulearning_web/index.do" class="chooseNav">首页</a></li>
+            <li><a href="/ulearning_web/web!course.do?flag=1" >课程</a></li>
+           
+            <!-- <li><a href="/ulearning_web/web!resourse.do" >资源</a></li>-->
+            <li><a href="/ulearning_web/web!school.do" >院校</a></li>
+            <li><a href="/ulearning_web/ucloud.jsp"  id='ucloudNav'>优学云</a></li>
+            <li><a href="javascript:openapply()" >申请</a></li>
+             <li><a href="/ulearning_web/mobile/android_wap.html" target="_blank">APP下载</a></li>
+        </ul>
+    </div>
+    <div class="teleNav clearfix hide1280 show800">
+    	<div class="closeTeleNav"><a onclick="javascript:closeTeleNav()">收起导航</a></div>
+        <ul class="clearfix">
+            <li><a href="/ulearning_web/index.do">首页</a></li>
+            <li><a href="/ulearning_web/web!course.do">课程</a></li>
+           <!-- <li><a href="/ulearning_web/web!resourse.do">资源</a></li> --> 
+            <li><a href="/ulearning_web/web!school.do">院校</a></li>
+           <li><a href="/ulearning_web/ucloud.jsp">优学云</a></li>
+            <li><a href="/ulearning_web/web!apply.do">申请</a></li>
+            <li><a href="/ulearning_web/mobile/android_wap.html">APP下载</a></li>
+            <li><a href="http://help.ulearning.cn/" target="_blank">帮助中心</a></li>
+             
+        </ul>
+        <div class="teleNavBtm clearfix">
+        	<a href="/ulearning_web/web/register!register.do" style="border-right:1px solid #d1d1d1;">注册</a>
+        	<a id="loginBtnClick" href="/ulearning_web/user/login.do">登录</a>
+        </div>
+    </div>
+</div>
+<script>
+	//var url = window.location.href;
+	
+	var url = "/ulearning_web/user/login.do";
+	//$("#loginBtnClick").attr("href","http://sso.ulearning.com.cn?service="+url+"");
+	$("#loginBtnClick").attr("href",url);
+	$(".personal").mouseover(function(){
+		$(".pers-ope").show();
+	});
+	$(".personal").mouseout(function(){
+		$(".pers-ope").hide();
+	});
+	
+	//判断是否已登录
+	var userID = $.cookie("lms_sessionuserid");
+	var name = $.cookie("lms_sessionloginame_name");
+	var sex = $.cookie("lms_sessionusersex");
+	if(userID != "" && userID != null){
+		$(".login").css("display","none");
+		$(".personal").css("display","block");
+		$(".li_spacer").css("display","inline");
+		$("#logined_name").text(name);
+		if(sex == 0){
+			$("#headImg").attr("src","/ulearning_web/static/portal/images/stu_f.png");
+		}
+	}
+	function checklogin(){
+			if(typeof userID !="undefined" && userID!=null && userID!=""){
+				var userRole = parseInt($.cookie("lms_user_role"));
+				var url = "";
+				switch(userRole){
+					case 8:
+						url = "/umooc/tutorv2/tutorManage.do?operation=index";
+						break;
+					case 9:
+						url = "/umooc/learner/learner.do?operation=index";
+						break;
+					case 183:
+						url = "/umooc/manager/manager.do?operation=index";
+						break;
+					default:
+						url = "index.html";	
+				}
+				top.location=url;
+			}
+	
+	}
+	function logout(){
+		$.cookie("lms_sessionuserid",null,{path:"/"}); 
+		$.cookie("lms_sessionloginame_name",null,{path:"/"}); 
+		$(".login").css("display","block");
+		$(".personal").css("display","none");
+		$(".li_spacer").css("display","none");
+	}
+	function closeTeleNav(){
+		$(".teleNav").css("right","-251px");
+	}
+	function openTeleNav(){
+		$(".teleNav").css("right","0");
+	}
+	function openapply(){
+		window.open("/ulearning_web/web!apply.do");
+	}
+</script>
+     <!-- 先隐藏掉 显示考研
+	    <div class="wall">
+	        <div class="appeal">
+	            <p class="title tsize55">100+课程，3,000+免费资源</p>
+	            <p class="title tsize32">和500,000+人一起学习</p>
+	        </div>
+	        <div class="searchdiv clearfix">
+	        	<form name="form" action="/ulearning_web/web!course.do" method="post">
+		            <input type="text" placeholder="查找你想学习的课程" name="keyword" value="" />
+		            <a class="searchBtn bgwhite"></a>
+		            <div class="searchIconBig" onclick="javascript:document.form.submit();"></div>
+	            </form>
+	        </div>
+	    </div>
+     -->
+    <div class="banner-container">	
+	     <div id="banner" class="clearfix">
+			    <div class="banner1 b" style="display:block;">
+	                <a href="http://www.ulearning.cn/ulearning_web/web!courseDetail.do?courseID=63" target="_blank" title="形式与政策"><img src="/ulearning_web/static/portal/images/banner_xsyzc2.png" class="banner-img"/></a>
+	             </div>
+	     </div>
+	</div>
+    <div class="courseHead">
+        <div class="pageCeter clearfix" style="position:relative;">
+            <span class="recommend">推荐课程</span>
+            <span class="courseload hide800">一大波课程正在来袭……</span>
+            <a class="allResource" href="/ulearning_web/web!course.do">全部课程</a>
+            <div class="downTriangle hide800"></div>
+        </div>
+    </div>
+    <div class="contain">
+        <div class="allCourses clearfix">
+        <!--课程-->
+        	
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=1')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/static/web/images/courseCover/rjgtjq.jpg"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">人际沟通技巧</p>
+		                    <p class="teacher"><span class="mr10">文华在线</span><span>课程小助手</span></p>
+		                    <p class="numAndTime"><span class="mr30">190人参与</span><span>2013-12-25 00:00:00.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=1')">
+		                    <p class="courseHoverName omit" title="人际沟通技巧">人际沟通技巧</p>
+		                    <p class="courseHoverinfo">
+		                    	“通用技能”是相对于专业技能而言，对任何职业都适用的技能，是职业人士取得成功所需要的基本能力。通用技能可以概括为三大类：分析判断、人际交往、工作态度。每一类技能又可以细分为更多的具体技能。文华在线通用技能课程，是一组专为职业人士打造的基础培训课程，课程内容涵盖了各类通用技能，包括《人际沟通技...
+		                        
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=2')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/static/web/images/courseCover/jjwtjq.jpg"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">解决问题技巧</p>
+		                    <p class="teacher"><span class="mr10">文华在线</span><span>课程小助手</span></p>
+		                    <p class="numAndTime"><span class="mr30">178人参与</span><span>2013-12-25 00:00:00.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=2')">
+		                    <p class="courseHoverName omit" title="解决问题技巧">解决问题技巧</p>
+		                    <p class="courseHoverinfo">
+		                    	“通用技能”是相对于专业技能而言，对任何职业都适用的技能，是职业人士取得成功所需要的基本能力。通用技能可以概括为三大类：分析判断、人际交往、工作态度。每一类技能又可以细分为更多的具体技能。文华在线通用技能课程，是一组专为职业人士打造的基础培训课程，课程内容涵盖了各类通用技能，包括《人际沟通技...
+		                        
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=4')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/static/web/images/courseCover/zyjqys.jpg"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">专业演示技巧</p>
+		                    <p class="teacher"><span class="mr10">文华在线</span><span>课程小助手</span></p>
+		                    <p class="numAndTime"><span class="mr30">68人参与</span><span>2013-12-25 00:00:00.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=4')">
+		                    <p class="courseHoverName omit" title="专业演示技巧">专业演示技巧</p>
+		                    <p class="courseHoverinfo">
+		                    	“通用技能”是相对于专业技能而言，对任何职业都适用的技能，是职业人士取得成功所需要的基本能力。通用技能可以概括为三大类：分析判断、人际交往、工作态度。每一类技能又可以细分为更多的具体技能。文华在线通用技能课程，是一组专为职业人士打造的基础培训课程，课程内容涵盖了各类通用技能，包括《人际沟通技...
+		                        
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=5')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/static/web/images/courseCover/szjjxt.jpg"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">塑造积极心态</p>
+		                    <p class="teacher"><span class="mr10">文华在线</span><span>课程小助手</span></p>
+		                    <p class="numAndTime"><span class="mr30">49人参与</span><span>2013-12-25 00:00:00.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=5')">
+		                    <p class="courseHoverName omit" title="塑造积极心态">塑造积极心态</p>
+		                    <p class="courseHoverinfo">
+		                    	“通用技能”是相对于专业技能而言，对任何职业都适用的技能，是职业人士取得成功所需要的基本能力。通用技能可以概括为三大类：分析判断、人际交往、工作态度。每一类技能又可以细分为更多的具体技能。文华在线通用技能课程，是一组专为职业人士打造的基础培训课程，课程内容涵盖了各类通用技能，包括《人际沟通技...
+		                        
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=6')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/static/web/images/courseCover/pyqs.jpg"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">培养情商</p>
+		                    <p class="teacher"><span class="mr10">文华在线</span><span>课程小助手</span></p>
+		                    <p class="numAndTime"><span class="mr30">169人参与</span><span>2013-12-25 00:00:00.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=6')">
+		                    <p class="courseHoverName omit" title="培养情商">培养情商</p>
+		                    <p class="courseHoverinfo">
+		                    	“通用技能”是相对于专业技能而言，对任何职业都适用的技能，是职业人士取得成功所需要的基本能力。通用技能可以概括为三大类：分析判断、人际交往、工作态度。每一类技能又可以细分为更多的具体技能。文华在线通用技能课程，是一组专为职业人士打造的基础培训课程，课程内容涵盖了各类通用技能，包括《人际沟通技...
+		                        
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=7')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/static/web/images/courseCover/sjgl.jpg"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">时间管理</p>
+		                    <p class="teacher"><span class="mr10">文华在线</span><span>课程小助手</span></p>
+		                    <p class="numAndTime"><span class="mr30">46人参与</span><span>2013-12-25 00:00:00.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=7')">
+		                    <p class="courseHoverName omit" title="时间管理">时间管理</p>
+		                    <p class="courseHoverinfo">
+		                    	“通用技能”是相对于专业技能而言，对任何职业都适用的技能，是职业人士取得成功所需要的基本能力。通用技能可以概括为三大类：分析判断、人际交往、工作态度。每一类技能又可以细分为更多的具体技能。文华在线通用技能课程，是一组专为职业人士打造的基础培训课程，课程内容涵盖了各类通用技能，包括《人际沟通技...
+		                        
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=8')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/static/web/images/courseCover/ggyj.jpg"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">公共演讲（即将上线）</p>
+		                    <p class="teacher"><span class="mr10">文华在线</span><span>课程小助手</span></p>
+		                    <p class="numAndTime"><span class="mr30">13人参与</span><span>2013-12-25 00:00:00.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=8')">
+		                    <p class="courseHoverName omit" title="公共演讲（即将上线）">公共演讲（即将上线）</p>
+		                    <p class="courseHoverinfo">
+		                    	
+		                        公共演讲是职业人士所需的基本技能之一。课程帮助学习者建立演讲者自信、做好准备、锻炼演讲的技巧，课程中的视频材料帮助学习者观摩专业人士的演讲技巧。
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=9')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/static/web/images/courseCover/ppxsw.jpg"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">批判性思维（即将上线）</p>
+		                    <p class="teacher"><span class="mr10">文华在线</span><span>课程小助手</span></p>
+		                    <p class="numAndTime"><span class="mr30">8人参与</span><span>2013-12-25 00:00:00.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=9')">
+		                    <p class="courseHoverName omit" title="批判性思维（即将上线）">批判性思维（即将上线）</p>
+		                    <p class="courseHoverinfo">
+		                    	
+		                        批判性思维（Critical Thinking）是以逻辑方法作为基础，包含超过1500个练习和可视化的思维训练工具，结合人们日常思维的实际和心理倾向发展出的一系列批判性思维技巧。
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=47')">
+		                <div class="course_pic">
+		                	
+                     			
+                      			
+                      				<img src="/ulearning_web/static/web/images/courseCover/white.png"/>
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">Captivate E-learning Course</p>
+		                    <p class="teacher"><span class="mr10">文华在线</span><span>陶岸琳</span></p>
+		                    <p class="numAndTime"><span class="mr30">15人参与</span><span>2014-08-31 15:17:39.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=47')">
+		                    <p class="courseHoverName omit" title="Captivate E-learning Course">Captivate E-learning Course</p>
+		                    <p class="courseHoverinfo">
+		                    	
+		                        
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=63')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/upload/resources/552739/20150924175513518.png"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">形势与政策（2015年秋季版）</p>
+		                    <p class="teacher"><span class="mr10">平台</span><span></span></p>
+		                    <p class="numAndTime"><span class="mr30">24392人参与</span><span>2014-10-13 11:15:42.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=63')">
+		                    <p class="courseHoverName omit" title="形势与政策（2015年秋季版）">形势与政策（2015年秋季版）</p>
+		                    <p class="courseHoverinfo">
+		                    	“形势与政策”课是高校思想政治理论课的重要组成部分，是对学生进行形势与政策教育的主渠道、主阵地，在大学生思想政治教育中担负着重要使命，具有不可替代的重要作用。通过形势与政策的教育，帮助大学生开阔视野，审时度势，紧跟时代步伐，全面正确地认识党和国家面临的形势与任务，提高认识、分析、判断形势的能...
+		                        
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=95')">
+		                <div class="course_pic">
+		                	
+                     			
+                      				<img src="http://www.ulearning.cn/upload/resources/0/201509141502245095.jpg"/>
+                      			
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">大学体育互动教程</p>
+		                    <p class="teacher"><span class="mr10">平台</span><span></span></p>
+		                    <p class="numAndTime"><span class="mr30">4559人参与</span><span>2015-01-14 14:25:26.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=95')">
+		                    <p class="courseHoverName omit" title="大学体育互动教程">大学体育互动教程</p>
+		                    <p class="courseHoverinfo">
+		                    	
+		                        
+		                    </p>
+		                </div>
+		            </div>
+        		
+        			<div class="each_course" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=213')">
+		                <div class="course_pic">
+		                	
+                     			
+                      			
+                      				<img src="/ulearning_web/static/web/images/courseCover/white.png"/>
+                      			
+                     		
+		                </div>
+		                <div class="courseinfo">
+		                    <p class="course_name omit">计算机等级考试（二级）</p>
+		                    <p class="teacher"><span class="mr10">杭州万向职业技术学院</span><span></span></p>
+		                    <p class="numAndTime"><span class="mr30">2925人参与</span><span>2015-03-10 14:03:01.0</span></p>
+		                </div>
+		                <div class="courseHover hide800" onclick="window.open('/ulearning_web/web!courseDetail.do?courseID=213')">
+		                    <p class="courseHoverName omit" title="计算机等级考试（二级）">计算机等级考试（二级）</p>
+		                    <p class="courseHoverinfo">
+		                    	
+		                        计算机等级考试（二级）是办公软件高级应用的考试辅导课程。演示word单项题，excel，PPT三个办公软件的高级应用。
+		                    </p>
+		                </div>
+		            </div>
+        		
+        	
+        </div>
+        <!--资源-->
+        
+        <!-- 热门院校-->
+        <div class="schoolHead">
+            <span class="recommend">热门院校</span>
+            <a class="allResource" href="/ulearning_web/web!school.do">更多院校</a>
+        </div>
+        <div class="schools clearfix"></div>
+        <div class="conFooter clearfix">
+            <div class="confoot1">
+                <div class="aboutus">关于我们</div>
+                <a class="" href="http://www.ulearning.com.cn/" target="_blank">文华在线</a>
+                <a class="" href="http://www.ulearning.com.cn/mission-vision.html" target="_blank">使命及愿景</a>
+                <a class="" href="http://www.ulearning.com.cn/certifications.html" target="_blank">我们的资质</a>
+                <a class="" href="http://www.ulearning.com.cn/newsList.html" target="_blank">新闻动态</a>
+            </div>
+            <div class="confoot2">
+                <div class="otherPro">其他产品</div>
+                <a class="" href="http://www.longmanenglish.cn/index.html" target="_blank">交互英语</a>
+                <a class="" href="http://www.learnmandarin.cn/portal.do" target="_blank">交互汉语</a>
+                <a class="" href="http://www.statsedu.com/staedu/portal/index.do" target="_blank">统计继续教育</a>
+                <a class="" href="http://www.bankingedu.cn" target="_blank">银行网络学院</a>
+            </div>
+            <div class="confoot3">
+                <div class="attention">关注我们</div>
+                <div class="weixincode"></div>
+                <p>微信公众号</p>
+                <a class="weibo" href="http://weibo.com/u/2322859745?from=profile&wvr=5&loc=infdomain" target="_blank">新浪官方微博</a>
+            </div>
+            <div class="confoot4">
+                <div class="contactus">联系我们</div>
+                <p class="phone">400 610 7808</p>
+                <a class="emails" href="mailto:leisupport@ulearning.cn" style="margin-left:0;padding-left:30px;">services@ulearning.cn</a>
+            </div>
+        </div>
+    </div>
+    
+<div class="footer">
+    <p class="">Copyright© <span class="time mr10"></span><span class="mr10"><a href="http://www.ulearning.com.cn/" target="_blank">ULearning  文华在线</a>&nbsp;&nbsp; All rights reserved</span><a class="peologo" href="http://www.people.cn/" target="_blank"></a></p>
+    <p class="showInpc">
+        <a href="http://www.ulearning.com.cn/certifications.html" class="mr20">京ICP证120106号</a>
+        <a href="http://www.ulearning.com.cn/certifications.html" class="mr20">互联网出版许可证 新出网证（京）字218号</a>
+        <a href="http://www.ulearning.com.cn/certifications.html" class="mr20">出版物经营许可证 新出发京批字第直120206号</a>
+    </p>
+</div>
+<script>
+$(function() {
+    //底部获取年份
+    var today = new Date(); 
+    var btyear = today.getFullYear();
+    $('.time').text(btyear);
+});
+
+
+</script>
+</div>
+<style>
+	.box-cont ul{text-align:center;}
+	.box-cont li{display:inline-block;}
+</style>
+<div class="block-download">
+	<div class="block-cont">
+		<div class="box-close"><img src="/ulearning_web/static/images/mobile/close_mobile.png" width="100%" /></div>
+		<div style="float:left;width:100%;margin-bottom:5%" class="clearfix">
+			<div class="box-left">
+				 <img src="/ulearning_web/static/images/mobile/icon_mobile.png" width="100%">
+			</div>
+			<div class="box-cont">
+				<ul>
+					<li>为保证正常学习,</li>
+					<li>建议您使用</li>
+					<li>"优学院APP"</li>
+					<li>(仅Android版).</li>
+				</ul>
+			<span style="display: inline-block"></span><span style="display: inline-block"></span>
+			</div>
+			<div class="box-right">
+				<a href="http://www.ulearning.cn/upload/apk/umooc.apk">下载</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+ var school=new Array;
+$(function() {
+    $(".each_course").mouseover(function(){
+        $(this).children(".courseHover").css("opacity","1");
+    });
+    $(".each_course").mouseout(function(){
+        $(this).children(".courseHover").css("opacity","0");
+    });
+     $(".searchIconBig").hover(
+         function(){
+             $(".searchBtn").toggleClass("bgwhite");
+     });
+
+    var courseRight = $(".allCourses").children(".each_course");
+    var courseNum = $(".allCourses").children(".each_course").length;
+    //var schoolRight = $(".hotSchools").children(".eachSchool");
+    //var schoolNum = $(".hotSchools").children(".eachSchool").length;
+    nthchild(courseNum,courseRight,4);
+    //nthchild(schoolNum,schoolRight,5);
+    $(".eachresource").eq(10).css("border-bottom","0");
+    $(".eachresource").eq(11).css("border-bottom","0");
+    var resRight = $(".resources").children(".eachresource");
+    var resNum = resRight.length;
+    resLast(resNum,resRight,2);
+	function resLast(num,right,last){
+    var sWidth = screen.width;
+	    for(var i=1;i<=num;i++){
+	        if(i%last==0){
+	            right.eq(i-1).addClass("lastres"); 
+	        }
+	    }
+    }
+    $.ajax({
+            url:"case.json",
+            dataType:"json",
+            type:"GET",
+            success:function(data){
+                var schools = typeof data=="string"?JSON.parse(data):data;
+                var html = "";
+                function getSchool(url,name,text,imgsrc,engname){
+                    return '<div class="left user_logo">\
+                        <img src="/ulearning_web/static/portal/images/schoollogo/'+imgsrc+'.jpg"/>\
+                        <span class="center school_logo '+name+'_logo"></span>\
+                        <span class="center schoolName">'+text+'</span>\
+                        <span class="center scEngName">'+engname+'</span>\
+                </div>';
+                }
+                var i=0;
+                var a=new Array();
+                for (var k in schools){
+                    if(schools.hasOwnProperty(k)){
+                        a[i]={"address":schools[k].address,
+                            "text":schools[k].text,
+                            "engname":schools[k].engname,
+                            "imgsrc":schools[k].imgsrc,
+                            "url": schools[k].url,
+                            "vip":schools[k].vip}
+
+                        copy(a[i],i);
+                        i++;
+                    }
+                }
+                /*产生10个不同的随机数*/
+                var $random=new Array();
+                for(var j=0;j<10;j++){
+                    var random=Math.floor(Math.random()*school.length);
+                    while($.inArray(random, $random)>=0){
+                        random=Math.floor(Math.random()*school.length);
+                    }
+                    $random[j]=random;
+                }
+                for(var n=0;n<10;n++){
+                    var sschool = getSchool(school[$random[n]].url,$random[n],school[$random[n]].text,school[$random[n]].imgsrc,school[$random[n]].engname);
+                    html+=sschool;
+                }
+                $(".schools").append(html);
+                var sWidth = screen.width;
+                var schoolRight = $(".schools").children("div");
+		    	var schoolNum = $(".schools").children(".user_logo").length;
+				if(sWidth>1080){
+					schoolRight.eq(schoolNum-1).css({"border-bottom":"1px solid #d1d1d1","border-right":"1px solid #d1d1d1"});
+					schoolRight.eq(schoolNum-2).css("border-bottom","1px solid #d1d1d1");
+					schoolRight.eq(schoolNum-3).css("border-bottom","1px solid #d1d1d1");
+					schoolRight.eq(schoolNum-4).css("border-bottom","1px solid #d1d1d1");
+					schoolRight.eq(schoolNum-5).css("border-bottom","1px solid #d1d1d1");
+					for(var i=0;i<schoolNum;i++){
+						if(i%5 == 0){
+							schoolRight.eq(i+4).css("border-right","1px solid #d1d1d1");
+						}
+					}
+				}
+				$(".schoolNum span").text(schoolNum);
+            }
+        });
+        var schoolRight = $(".schools").children(".user_logo");
+        var schoolNum = $(".schools").children(".user_logo").length;
+});   
+function copy(a,i){                             //将json转换为数组
+    school[i]={"address":a.address,
+        "text":a.text,
+        "engname":a.engname,
+        "imgsrc":a.imgsrc,
+        "url": a.url,
+        "vip":a.vip}
+}
+function nthchild(num,right,last){
+    var sWidth = screen.width;
+    if(sWidth>1080){
+	    right.eq(num-4).css("margin-bottom","10px");
+	    right.eq(num-3).css("margin-bottom","10px");
+	    right.eq(num-2).css("margin-bottom","10px");
+	    right.eq(num-1).css("margin-bottom","10px");
+	    for(var i=1;i<=num;i++){
+	        if(i%last==0){
+	            right.eq(i-1).addClass("mr0"); 
+	        }
+	    }
+    }
+}
+function closeWindow() {
+  window.open('','_parent','');
+  window.close();
+  } 
+  
+  (function(){
+  	if($(".block-download")&&$(".block-download").css("display")=="block"){
+  		$("html").css("overflow","hidden");
+  	}
+  	$(".box-close").click(function(){
+  		$(".block-download").remove();
+  		$("html").css("overflow","auto");
+  	});
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<!-- This site is optimized with the Yoast SEO plugin v2.3.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Official Piwik Blog - Analytics Platform - Piwik</title>
+<link rel="canonical" href="http://piwik.org/blog/" />
+<link rel="next" href="http://piwik.org/blog/page/2/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Official Piwik Blog - Analytics Platform - Piwik" />
+<meta property="og:description" content="At Piwik we have developed a new plugin named AnonymousPiwikUsageMeasurement. The opt-in and anonymised usage tracking information will be used by us to build a better product and a great user experience. The plugin can be installed via the Piwik &hellip; Read More" />
+<meta property="og:url" content="http://piwik.org/blog/" />
+<meta property="og:site_name" content="Analytics Platform - Piwik" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/media/piwik.png" />
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"\/wp-includes\/js\/wp-emoji.js?ver=4.3","twemoji":"\/wp-includes\/js\/twemoji.js?ver=4.3"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" href="/wp-content/plugins/multilingual-press-pro/css/frontend.css?ver=4.3">
+<link rel="stylesheet" href="/wp-content/plugins/cc-syntax-highlight/highlight/tomorrow-night.css">
+<link rel="stylesheet" href="/wp-content/themes/piwik/assets/css/main.min.css?ver=4e6facf06b484b7a4e30141789370add">
+<script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/highlight.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js'></script>
+<script>window.jQuery || document.write('<script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/modernizr-2.6.2.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.backstretch.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.dlmenu.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/bootstrap-slider.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.swfobject.1-1-1.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/youTubeEmbed-jquery-1.0.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/url_builder.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.sticky.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.validate.min.js'></script>
+
+  <link rel="alternate" type="application/rss+xml" title="Analytics Platform - Piwik Feed" href="http://piwik.org/feed/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+    <!--[if lt IE 9]>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/html5shiv.js"></script>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="blog">
+
+  <!--[if lt IE 7]><div class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+  <button class="navbar-toggle-menu" type="button" data-toggle="collapse" data-target=".sidebar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+<div class="sidebar affix" role="complementary">
+
+	<aside>
+		<div id="side-wrap">
+			<div id="side-main">
+				<header class="banner" role="banner">
+					<a class="page-title brand" href="http://piwik.org/"> <i class="ficon-piwik_logo header-logo"></i> Open Analytics Platform </a>
+					<!-- languages -->
+					<div class="language-widget ui-dropdown">
+											</div>
+				</header>
+
+				<nav class="nav-main dl-menuwrapper" id="menu" role="navigation">
+					<ul id="menu-sidebar-header-original" class="nav"><li class="dropdown menu-learn-more"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Learn more <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-what-is-piwik"><a href="http://piwik.org/what-is-piwik/">What is Piwik?</a></li>
+	<li class="menu-features"><a href="http://piwik.org/features/">Features</a></li>
+	<li class="menu-integrations"><a href="http://piwik.org/integrate/">Integrations</a></li>
+	<li class="menu-log-analytics"><a href="http://piwik.org/log-analytics/">Log Analytics</a></li>
+	<li class="menu-roadmap"><a href="http://piwik.org/roadmap/">Roadmap</a></li>
+	<li class="menu-changelog"><a href="http://piwik.org/changelog/">Changelog</a></li>
+	<li class="menu-enterprise"><a target="_blank" href="https://piwik.pro/enterprise/?pk_source=Piwik.org&#038;pk_medium=Enterprise_Menu_link&#038;pk_campaign=PO_Enterprise">Enterprise</a></li>
+</ul>
+</li>
+<li class="dropdown menu-community"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://">Community <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-get-involved"><a href="http://piwik.org/get-involved/">Get involved</a></li>
+	<li class="menu-translators"><a href="http://piwik.org/translations/">Translators</a></li>
+	<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+	<li class="menu-contact-the-team"><a href="http://piwik.org/contact/">Contact the team</a></li>
+</ul>
+</li>
+<li class="dropdown menu-help"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Help <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-user-guides"><a href="http://piwik.org/docs">User Guides</a></li>
+	<li class="menu-faq"><a href="http://piwik.org/faq">FAQ</a></li>
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-consulting"><a href="http://piwik.org/consulting/">Consulting</a></li>
+	<li class="menu-issue-tracker"><a target="_blank" href="https://github.com/piwik/piwik/issues">Issue tracker</a></li>
+</ul>
+</li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org/">Marketplace</a></li>
+<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-hosting"><a href="http://piwik.org/hosting/">Hosting</a></li>
+<li class="dropdown menu-about"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://piwik.org/about/">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-jobs-were-hiring"><a href="http://piwik.org/jobs/">Jobs (we&#8217;re hiring!)</a></li>
+	<li class="menu-history"><a href="http://piwik.org/history/">History</a></li>
+	<li class="menu-press"><a href="http://piwik.org/press/">Press</a></li>
+	<li class="menu-testimonials"><a href="http://piwik.org/testimonials">Testimonials</a></li>
+	<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+	<li class="menu-team"><a href="http://piwik.org/team/">Team</a></li>
+</ul>
+</li>
+<li class="active menu-blog active"><a href="http://piwik.org/blog/">Blog</a></li>
+</ul>				</nav>
+				<div style="clear: both"> </div>
+			</div>
+		</div>
+		<div class="content-info side-footer" role="contentinfo">
+			<ul id="menu-sidebar-footer" class="nav"><li class="menu-download"><a href="http://piwik.org/download/">Download</a></li>
+<li class="menu-demo"><a target="_blank" href="http://demo.piwik.org">Demo</a></li>
+</ul>			<form role="search" method="get" class="form-inline" action="http://piwik.org/">
+  <div class="form-group search-form">
+    <input type="search" value="" name="s" class="ui-search-field form-control" placeholder="Search phrase...">
+    <label class="hide">Search for:</label>
+     <button type="submit" class="btn-search"><i class="ficon-search"></i></button>
+  </div>
+</form>
+			<div class="side-footer-bottom">
+				<hr class="separate">
+				<a href="http://piwik.pro/?pk_source=Piwik.org&pk_medium=Banner_link&pk_campaign=PO_Explore_Piwik_Pro" title="Explore our professional services at Piwik PRO" class="page-switch">
+					<span class="piwik_logo">Piwik Pro - Explore our business offer</span>
+					<span class="text">Explore our business offer.</span>
+				</a>
+			</div>
+			<div style="clear: both"> </div>
+
+		</div>
+	</aside><!-- /.sidebar -->
+
+</div>
+   <div class="container-content">
+        <header class="page-header default text-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Official Piwik Blog</h1>
+                                
+                                    <p>News from the experts of the Open Analytics Platform Piwik</p>
+                    <a class="a-rss" href="feed"><i class="icons-rss"></i>Get RSS feed</a>
+                            </div>
+        </div>
+    </div>
+</header>
+    
+     <div class="wrap container-main" role="document">
+      
+  <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <nav id="sticky">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/about/" title="View all posts in About">
+                                    About (30)
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/community/" title="View all posts in Community">
+                                    Community (113)
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/development/" title="View all posts in Development">
+                                    Development (77)
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/jobs/" title="View all posts in Jobs">
+                                    Jobs (2)
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/meta/" title="View all posts in Meta">
+                                    Meta (27)
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/piwik-mobile-changelog/" title="View all posts in Piwik Mobile Releases">
+                                    Piwik Mobile Releases (33)
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/plugins/" title="View all posts in Plugins">
+                                    Plugins (16)
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/press-release/" title="View all posts in Press Releases">
+                                    Press Releases (6)
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/security/" title="View all posts in Security">
+                                    Security (17)
+                                </a>
+                            </li>
+                                                    <li>
+                                <a href="http://piwik.org/blog/category/videos/" title="View all posts in Videos">
+                                    Videos (5)
+                                </a>
+                            </li>
+                                            </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-20957 post type-post status-publish format-standard hentry category-community category-plugins">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/10/help-us-to-improve-piwik-by-sending-anonymous-usage-data-and-get-usage-data-yourself/">Help us to improve Piwik by sending anonymous usage data (and get usage data yourself)</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>At Piwik we have developed a new plugin named AnonymousPiwikUsageMeasurement. The opt-in and anonymised usage tracking information will be used by us to build a better product and a great user experience. The plugin can be installed via the Piwik &hellip; <a href="http://piwik.org/blog/2015/10/help-us-to-improve-piwik-by-sending-anonymous-usage-data-and-get-usage-data-yourself/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-20549 post type-post status-publish format-standard hentry category-community category-development category-plugins">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/09/how-to-get-your-piwik-plugin-translated-in-many-languages/">How to get your Piwik plugin translated in many languages?</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>About a year ago we introduced the Piwik Marketplace to make it easy for developers to share their plugins with all Piwik users. As Piwik is currently available in 54 languages we would love to have as many plugins as &hellip; <a href="http://piwik.org/blog/2015/09/how-to-get-your-piwik-plugin-translated-in-many-languages/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-20464 post type-post status-publish format-standard hentry category-community">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/08/notes-piwik-community-meetup-2015/">A *hot* Piwik Community Meetup 2015!</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>Last weekend I arrived in Germany to attend the Piwik Community Meetup 2015 and now I am in Poland. I joined Piwik PRO back in May as enterprise support project coordinator in North America. I am now writing this from &hellip; <a href="http://piwik.org/blog/2015/08/notes-piwik-community-meetup-2015/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-20208 post type-post status-publish format-standard hentry category-community category-meta">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/06/piwik-community-meetup-berlin/">Join us for the Piwik Community Meetup 2015!</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>We’re excited to announce that our third Piwik Community Meetup will be held in Berlin on Tuesday, the 4th of August, 2015. Don’t miss this great opportunity to connect with other users and meet the core team behind Piwik. It&#8217;s &hellip; <a href="http://piwik.org/blog/2015/06/piwik-community-meetup-berlin/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-20091 post type-post status-publish format-standard hentry category-plugins">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/05/wordpress-integration-wp-piwik-1-0/">WordPress Analytics plugin WP-Piwik reaches version 1.0.0 (and 50,000 active users)</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>After six years of development, we are proud to announce the 1.0.0 release of our WP-Piwik WordPress plugin! Started as a simple plugin to show a selection of statistics within the WordPress dashboard, WP-Piwik has become a full Piwik integration &hellip; <a href="http://piwik.org/blog/2015/05/wordpress-integration-wp-piwik-1-0/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-20074 post type-post status-publish format-standard hentry category-jobs">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/05/looking-for-a-sales-development-representative-careers-at-piwik/">Looking for a Sales Development Representative (Jobs at Piwik)</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>This blog post is a job offer at Piwik PRO for a Sales Development Representative. Please share this job ad if you know anyone who may be interested. Job description As a sales development rep your job will be to &hellip; <a href="http://piwik.org/blog/2015/05/looking-for-a-sales-development-representative-careers-at-piwik/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-20042 post type-post status-publish format-standard hentry category-community">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/05/stopping-referrer-spam/">Stopping Referrer Spam</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>In this blog post we explain what is Referrer spam, this new kind of spam that has recently appeared on the Internet. We also provide solutions to stop it and preserve the quality of your analytics data. What is Referrer &hellip; <a href="http://piwik.org/blog/2015/05/stopping-referrer-spam/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-19965 post type-post status-publish format-standard hentry category-community">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/04/announcement-of-a-new-translation-platform-for-piwik-translators-transifex/">Announcement of a new Translation platform for Piwik translators: Transifex</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>To our dear Translators community, Thank you for helping us to translate Piwik into one of the many languages Piwik is available in. In this blog post, we are happy to announce a new and better way for you to &hellip; <a href="http://piwik.org/blog/2015/04/announcement-of-a-new-translation-platform-for-piwik-translators-transifex/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-19893 post type-post status-publish format-standard hentry category-community category-development category-plugins">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/04/piwik-developer-guides-helping-you-make-the-most-of-the-piwik-platform/">Piwik Developer Guides: helping you make the most of the Piwik platform</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>At Piwik we are creating the leading open analytics platform that gives every user full control over their data. Today we are excited to announce the official launch of the Piwik Developer Guides at developer.piwik.org. The Developer Guides complement existing &hellip; <a href="http://piwik.org/blog/2015/04/piwik-developer-guides-helping-you-make-the-most-of-the-piwik-platform/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <article class="post-19800 post type-post status-publish format-standard hentry category-about">
+          <header>
+            <h2 class="entry-title"><a href="/blog/2015/04/piwik-and-piwik-pro-featured-in-venturebeat-insight-as-an-obvious-solution-for-web-analytics/">Piwik and Piwik PRO featured in VentureBeat Insight as &#8220;an obvious solution&#8221; for web analytics</a></h2>
+          </header>
+          <div class="entry-summary">
+            <p>We are proud to see Piwik and Piwik PRO featured in the recent report published by VentureBeat Insight. Published at the end of March 2015, Conversion Rate Optimisation: how to win at performance marketing was based on surveys of almost &hellip; <a href="http://piwik.org/blog/2015/04/piwik-and-piwik-pro-featured-in-venturebeat-insight-as-an-obvious-solution-for-web-analytics/">Read More</a></p>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <nav class="post-nav">
+          <ul class="pager">
+                            <li class="previous">
+                    <i class="ficon-arrow-left"></i> <a href="/blog/page/2/" >Older posts</a>                </li>
+                      </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+     </div><!-- /.wrap -->
+
+   <div class="wrapper-body">
+<div class="row extra-foot">
+    <div class="container">
+        <div class="col-md-6 anyquest">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/piwik_help.jpg" class="any-q">
+            <h3>Any questions? </h3>
+            <p>Many answers and more information about Piwik You can find here:</p>
+            <ul class="inline">
+                <li><a href="/docs/">User Guides</a></li>
+                <li><a href="http://forum.piwik.org/">Forums</a></li>
+                <li><a href="/faq/">FAQs</a></li>
+	            <li><a href="http://piwik.pro?pk_source=Piwik.org&pk_medium=footer_link&pk_campaign=PO_Pro_Solutions" target="_blank">PRO Solutions</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/socials.png" class="socials">
+            <h3>We are social </h3>
+            <p>Follow us:</p>
+            <ul class="inline">
+                <li><a href="/newsletter/">Newsletter</a></li>
+                <li><a href="http://www.facebook.com/Piwik">Facebook</a></li>
+                <li><a href="http://twitter.com/piwik">Twitter</a></li>
+                <li><a href="http://www.linkedin.com/groups?gid=867857" target="_blank">Linkedin</a></li>
+                <li><a href="https://github.com/piwik/piwik">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="container footer-page footer-updated">
+    <div class="row">
+        <div class="col-lg-11 col-md-11 foot-cc">
+            <a href="http://piwik.org/thank-you-all/"><img src="http://piwik.org/wp-content/themes/piwik/assets/img/cc.png" class="clearcode"></a>
+            <span class="pworg">Piwik.org. &copy; 2015</span>
+            <ul id="menu-footer" class="nav"><li class="menu-piwik-cloud"><a href="http://piwik.org/hosting/">Piwik Cloud</a></li>
+<li class="menu-privacy"><a href="http://piwik.org/privacy/">Privacy</a></li>
+<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+<li class="menu-developers"><a target="_blank" href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org">Marketplace</a></li>
+<li class="menu-credits"><a href="http://piwik.org/thank-you-all/">Credits</a></li>
+</ul>            <span class="respect">Piwik respects your privacy and gives you full control over your data.</span>
+        </div>
+    </div>
+</footer>
+</div>
+   </div>
+  <!-- Piwik -->
+<!-- Load Piwik.js from demo2 for continuous testing -->
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/") + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker((("https:" == document.location.protocol) ? "https://demo.piwik.org/" : "http://demo.piwik.org/") + "piwik.php", 1);
+piwikTracker.setCookieDomain('*.piwik.org');
+
+if(document.domain != 'piwik.org') {
+  piwikTracker.setDocumentTitle(document.domain + "/" + document.title);
+}
+
+// Set the domain the visitor landed on, in the Custom Variable
+if(!piwikTracker.getCustomVariable(1)) { 
+  piwikTracker.setCustomVariable(1, "Domain landed", document.domain );
+}
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();  
+} catch( err ) {}
+</script><noscript><p><img src="http://demo.piwik.org/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+
+
+<!-- We're tracking data in demo2.piwik.org for purpose of testing Piwik. Signed: the Piwik core team -->
+<script type="text/javascript">
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/");
+    try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.setCookieDomain('*.piwik.org');
+        // Track Javascript Errors as Events
+        piwikTracker.enableJSErrorTracking();
+        
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+</script>
+  <script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/syntax_highlight.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/scripts.min.js?ver=160b62610afbe732febb44f9896f3afd'></script>
+
+  <div id="fb-root"></div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.363 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-10-27 21:06:35 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

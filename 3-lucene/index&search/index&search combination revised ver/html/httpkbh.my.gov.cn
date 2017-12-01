@@ -1,0 +1,1832 @@
+
+
+
+
+ 
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+
+<title>第三届中国（绵阳）科技城国际科技博览会</title>
+<link href="/static/css/base.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/static/css/jqueryslidemenu.css" />
+<link rel="stylesheet" type="text/css"	href="/static/css/slide-2.css" />
+<script type="text/javaScript"	src="/static/js/jquery-1.7.2.min.js"></script>
+<script type="text/javaScript" src="/static/js/slide.js"></script>
+
+<!--[if lte IE 7]>
+<style type="text/css">
+html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+</style>
+<![endif]-->
+
+<script type="text/javaScript">
+<!--
+	/*第一种形式 第二种形式 更换显示样式*/
+	function setTab(name, cursel, n) {
+		for (var i = 1; i <= n; i++) {
+			var menu = document.getElementById(name + i);
+			var con = document.getElementById("con_" + name + "_" + i);
+			menu.className = i == cursel ? "hover" : "";
+			con.style.display = i == cursel ? "block" : "none";
+		}
+	}
+//-->
+</script>
+</head>
+<body>
+<div style="width:100%; height:10px; position:fixed; z-index:100; margin:auto;top:350px; left:0px;">
+	<div style="width:1004px; height:10px; position:relative; margin:auto;">
+		<div style="width:90px; height:200px; position:absolute; z-index:120; right:-90px; top:50px;">
+			<img src="/static/images/wb.jpg" border="0" width="140" height="140">
+		</div>	
+	</div>
+</div>
+<div style="width:100%; height:10px; position:fixed; z-index:100; margin:auto;top:350px; left:-1170px;">
+	<div style="width:1004px; height:10px; position:relative; margin:auto;">
+		<div style="width:95px; height:200px; position:absolute; z-index:120; right:-100px; top:50px;">
+			<img src="/static/images/wb1.jpg" border="0" width="154" height="237" >
+		</div>	
+	</div>
+</div>
+	<div id="box">
+		<!-- 顶部链接 + 菜单 -->
+		
+
+
+
+ 
+
+
+
+
+
+
+
+<div class="top">
+<!-- 	<div class="top1"> -->
+<!-- 		<div class="topleft"> -->
+<!-- 			<a href="#">中国·绵阳&gt;&gt;</a> -->
+<!-- 		</div> -->
+<!-- 		<div class="topright"> -->
+<!-- 			<a href="#"> 绵阳信息 </a> <a href="#"> 政务公开</a> <a href="#"> 在线办事</a> <a -->
+<!-- 				href="#"> 政民互动</a> <a href="#"> 投资绵阳</a> <a href="#"> 网络理政平台</a> <a -->
+<!-- 				href="#"> 微绵阳</a> <a href="#"> 政务邮箱 </a> <a href="#"> 绵阳旅游 </a> <a -->
+<!-- 				href="#"> 绵阳人才网</a> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+</div>
+<div class="toppic">
+	<img src="/static/images/kbh_05.jpg"  usemap="#Map"  border="0">
+	 <map name="Map" id="Map">
+    <area shape="rect" coords="917,7,996,32" href="/englishIndex.html" />
+  </map>
+	
+</div>
+<div id="myslidemenu" class="nav jqueryslidemenu" >
+<script type="text/javascript">
+	$("#myslidemenu").load("http://kbh.my.gov.cn/menu.do");
+</script>
+</div>
+
+       <!-- 科博头条 -->
+		<div id="box">
+			<!--class=yi 公告-搜索 -->
+			
+
+
+
+ 
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#weeknews_triger').click(function() {
+			$('#weeknews').animate({
+				height : '293'
+			});
+			$('#medianews').animate({
+				height : '40'
+			});
+		});
+
+		$('#medianews_triger').click(function() {
+			$('#weeknews').animate({
+				height : '40'
+			});
+			$('#medianews').animate({
+				height : '293'
+			});
+		});
+
+		$('.link2home').hover(function() {
+			$(this).css('background-position', '0 -30px');
+			$('body').animate({
+				backgroundPosition : '0 0'
+			});
+			$('#header_top_nav a').hide();
+			$('#header_top_nav a.more').show();
+			$('#header_top_nav').animate({
+				height : 20
+			});
+		});
+
+		$('.imp_news').hover(function() {
+			$('body').animate({
+				backgroundPosition : '0 0'
+			});
+			$('#header_top_nav a').hide();
+			$('#header_top_nav a.inews').show();
+			$('#header_top_nav').animate({
+				height : 20
+			});
+		});
+
+		$('.camp_news').hover(function() {
+			$('body').animate({
+				backgroundPosition : '0 0'
+			});
+			$('#header_top_nav a').hide();
+			$('#header_top_nav a.cnews').show();
+			$('#header_top_nav').animate({
+				height : 20
+			});
+		});
+
+		$('#slides').slides({
+			preload : true,
+			preloadImage : 'http://kbh.my.gov.cn/static/images/ajax-loader.gif',
+			effect : 'slide',
+			play : 5000,
+			pause : 2500,
+			hoverPause : true,
+			animationStart : function(current) {
+				$('.caption').animate({
+					bottom : 0,
+					right : 40,
+					opacity : 0
+				}, 200);
+			},
+			animationComplete : function(current) {
+				$('.caption').animate({
+					bottom : 20,
+					right : 40,
+					opacity : 1
+				}, 200);
+			},
+			slidesLoaded : function() {
+				$('.caption').animate({
+					bottom : 20,
+					right : 40,
+					opacity : 1
+				}, 200);
+			}
+		});
+
+		$('#wrapper').bind("mouseleave", function() {
+			$('#header_top_nav').animate({
+				height : 0
+			});
+			$('body').animate({
+				backgroundPosition : '0 -20px'
+			});
+		});
+	});
+</script>
+<div class="yi">
+	<div class="yi_left">
+		<marquee onmouseover="this.stop()" onmouseout="this.start()"
+			scrollamount="3" scrolldelay="7" direction="left"
+			style="height:40px; line-height:40px ;">
+			
+				<a target="_blank" href='http://kbh.my.gov.cn/info/cid_010300/newsshow.html?id=81731ccd9d5d4af485789a6132b01bc2'>[关于维护第三届科博会治安交通秩序的通告]</a> | 
+			
+				<a target="_blank" href='http://kbh.my.gov.cn/info/cid_010300/newsshow.html?id=7723049c1518429384d8ce8e45be149f'>[关于科博会期间对城区道路实施临时交通管理措施的通告]</a> | 
+			
+				<a target="_blank" href='http://kbh.my.gov.cn/info/cid_010300/newsshow.html?id=d81527a69e4641c191f93a506a2a3239'>[关于公开选择第三届科博会4处高速路单立柱广告实施单位的公告]</a> | 
+			
+		</marquee>
+	</div>
+</div>
+
+			<div style="margin-left:10px; float:left; display:inline">
+						<table width="958" border="0" cellspacing="0" cellpadding="0">
+						      <tbody><tr>
+						        <td width="110" valign="top"><img src="/static/images/tt_bit.gif" width="95" height="95"></td>
+						        <td width="848" valign="top">
+						                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:8px;">
+									          <tbody><tr> 
+									           <td valign="top">
+									               
+									               <a href="http://kbh.my.gov.cn/info/cid_011022/newsshow.html?id=5ae0a8cb4ed34a62b5024bf307f60527" target="_blank">
+									           		<img src="/admin/fileupload//044c5193-644d-47e3-8901-6c919a83fdba.jpg" width="840" height="50" border="0"></a>
+									               
+									           </td>
+									          </tr>
+									          <tr>
+									            <td id="tt02">
+										              
+										              			| <a href="http://kbh.my.gov.cn/info/cid_011022/newsshow.html?id=dd32a4f8f3624717bac2806ade7ef06e" title="科博会中物院主题活动日举行" target="_blank">
+												              			
+																		科博会中物院主题活动日举行
+										              			</a> 
+										              
+										              			| <a href="http://kbh.my.gov.cn/info/cid_011022/newsshow.html?id=28b9f25965994975a6ef3b15e6947bda" title="科博会中关村主题活动日举行" target="_blank">
+												              			
+																		科博会中关村主题活动日举行
+										              			</a> 
+										              
+										              			| <a href="http://kbh.my.gov.cn/info/cid_011022/newsshow.html?id=d3a7525a63f942879b14eaed803479e5" title="第三届中国（绵阳）科技城国际科技博览会开幕" target="_blank">
+												              			
+																		第三届中国（绵阳）科技城国际科技博览会开幕
+										              			</a> 
+										              
+									            </td>
+									          </tr>
+									        </tbody>
+								      </table>
+						        </td>
+						      </tr>
+						    </tbody>
+						 </table>
+              </div>
+			<!-- 科博头条 -->
+			<div class="er">
+				<div class="er_left">
+					<div class="ca1_slide">
+						<div id="slider-wrapper">
+							<div id="slider-bg">
+								<div id="slider-photos">
+									<div id="slides">
+										<div class="slides_container">
+											
+												<div class="slide">
+													<a href='
+																
+																info/cid_010302/newsshow.html?id=ba7b0a49070b4b479d5dd00c4332ad8c
+															'  target="_blank"> 
+														<img src='/admin/fileupload//5fb33310-3bd7-4636-89ee-542e74487800.jpg'
+															width="323" height="262" />
+													</a>
+												</div>
+											
+												<div class="slide">
+													<a href='
+																
+																info/cid_010302/newsshow.html?id=a522d28abd07447f84b20f0aeb1eda6c
+															'  target="_blank"> 
+														<img src='/admin/fileupload//117db241-5341-415d-a86b-eeb54eb1ca81.jpg'
+															width="323" height="262" />
+													</a>
+												</div>
+											
+												<div class="slide">
+													<a href='
+																
+																info/cid_010302/newsshow.html?id=03e51981c1464b92b159e20bfc1ac1ee
+															'  target="_blank"> 
+														<img src='/admin/fileupload//994c829f-77b5-4f40-ba9e-7d13097535fc.jpg'
+															width="323" height="262" />
+													</a>
+												</div>
+											
+												<div class="slide">
+													<a href='
+																
+																info/cid_010302/newsshow.html?id=c6448449cd5c42f7b62f91528d26a897
+															'  target="_blank"> 
+														<img src='/admin/fileupload//4b81d9f3-ac6f-471a-822f-982e58c4504c.jpg'
+															width="323" height="262" />
+													</a>
+												</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="er_center">
+					<div class="er_center_top">
+						<div class="er_center_top_left">科博会焦点</div>
+						<div class="er_center_top_right">
+							<a href="http://kbh.my.gov.cn/channel/0101/010101.html">更多&gt;&gt;</a>
+						</div>
+					</div>
+					<div class="er_center_bottom">
+						<ul>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=28206da244e840d7b38f13e369aca306
+								' target="_blank">
+									
+									天天“科博蓝”美得好亮眼</a></li>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=e1e1bfd91aa04972bb36f59d2874f333
+								' target="_blank">
+									全市公安机关3082名警力确保科博...
+									</a></li>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=7d6e490415824257907607536737cfe9
+								' target="_blank">
+									
+									科博会最后一天 观众热情不减</a></li>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=1acc4e99e83f427ea2012496fa83a40a
+								' target="_blank">
+									
+									小朋友体验自制机器人</a></li>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=4e126023d5464c0d91b1b44a622550e7
+								' target="_blank">
+									拥抱高精尖特新 4天签下超千亿大单...
+									</a></li>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=ed1e4dcc449540229a29a3dcd0471b7c
+								' target="_blank">
+									互利共赢 磁场效应平台效应不断扩大...
+									</a></li>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=ea693239b6514ae394e3ede7bf4055b6
+								' target="_blank">
+									核技术在医学领域应用 高端论坛昨日...
+									</a></li>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=c6cdf04e8c014f51934c01e7a59a1e22
+								' target="_blank">
+									
+									小小GPS 给汽车装上“黑匣子”</a></li>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=6f0245eac6c64b98b7f0d82ffcffba2d
+								' target="_blank">
+									
+									律师为军民融合提供特色服务</a></li>
+							
+								<li><span>2015.09.21</span> 
+								<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010101/newsshow.html?id=dd4286cda63d492181bea2b0fbabeb2f
+								' target="_blank">
+									
+									妻子伴夫上阵 当医疗志愿者</a></li>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="er_right">
+
+<div class="er_right_bottom" style="height:110px">
+<div class="er_right_bottom_top">
+<div class="er_right_bottom_top_left">科博会主办单位</div>
+<div class="er_right_bottom_top_right"></div>
+</div>
+<div class="er_right_bottom_bottom">
+<ul style="font-family: '微软雅黑';font-weight:bold;">
+ 
+	<li id="cbdw"><a href="http://www.most.gov.cn/" class="text" title="科技部">科技部</a></li>
+
+	<li id="cbdw"><a href="http://www.sc.gov.cn/" class="text" title="四川省人民政府">四川省人民政府</a></li>
+
+
+</ul>
+</div>
+</div>
+<div class="er_right_bottom" style="height:170px; margin-top:9px;">
+<div class="er_right_bottom_top">
+<div class="er_right_bottom_top_left">科博会承办单位</div>
+<div class="er_right_bottom_top_right"></div>
+</div>
+<div class="er_right_bottom_bottom">
+<ul style="font-family: '微软雅黑';font-weight:bold;">
+
+	<li id="cbdw" ><a href="http://www.chinatorch.gov.cn/" class="text" title="科技部火炬中心">科技部火炬中心</a></li>
+
+	<li id="cbdw" ><a href="http://www.scst.gov.cn/info/" class="text" title="四川省科技厅">四川省科技厅</a></li>
+
+	<li id="cbdw" ><a href="http://www.scjg.gov.cn/" class="text" title="四川省国防科工办">四川省国防科工办</a></li>
+
+	<li id="cbdw" ><a href="http://www.scbea.org.cn/" class="text" title="四川博览事务局">四川博览事务局</a></li>
+
+	<li id="cbdw" ><a href="http://www.my.gov.cn/" class="text" title="绵阳市人民政府">绵阳市人民政府</a></li>
+
+	<li id="cbdw" ><a href="" class="text" title="中国（绵阳）科技城管委会">中国（绵阳）科技城管委会</a></li>
+
+
+</ul>
+</div>
+</div>
+			</div>
+		<div style="width:100%;height:10px;clear:both">
+				
+			</div>	
+			<!-- 
+			<div class="food">
+				
+			</div> -->
+			<div class="si">
+				<div class="si_left">
+					<div class="si_left_yi">
+						<div class="si_left">
+							<div class="si_left_top">
+								<div class="er_center_top_left">新华社直击</div>
+								<div class="er_center_top_right">
+									<a href="http://kbh.my.gov.cn/channel/0102/010200.html">更多&gt;&gt;</a>
+								</div>
+							</div>
+							<div class="si_left_bottom">
+								<div class="si_left_bottom_top">
+									
+									<div class="si_left_bottom_top_left">
+										<div class="si_left_bottom_top_left_top">
+											<span style="font-weight: bold; margin-right: 40px;">天天“科博蓝”美得好亮眼</span>
+
+
+										</div>
+										<div class="si_left_bottom_top_left_bottom">
+											科博会期间，绵阳被蓝天覆盖，不少市民和来宾陶醉地称之为“科博蓝”。“科博蓝”到底有多蓝？据中国环境监测总站发布的全国城市空气质量数据显示，9...
+											
+											<a href='
+									
+									http://kbh.my.gov.cn/info/cid_010200/newsshow.html?id=28206da244e840d7b38f13e369aca306
+								' target="_blank">[详细]</a>
+										</div>
+									</div>
+									<div class="si_left_bottom_top_right">
+										<img src='/admin/fileupload//8fdedde0-ee70-49b7-b540-99e899938157.jpg' width="153" height="101" />
+									</div>
+								</div>
+								<div class="si_left_bottom_bottom">
+									<div class="si_left_bottom_bottom_left">
+										<ul>
+											
+												<li><span>09.21</span> <a target="_blank"
+													href='
+									
+									info/cid_010200/newsshow.html?id=e1e1bfd91aa04972bb36f59d2874f333
+								'> 全市公安机关3082名警力确...
+														
+												</a></li>
+											
+												<li><span>09.21</span> <a target="_blank"
+													href='
+									
+									info/cid_010200/newsshow.html?id=7d6e490415824257907607536737cfe9
+								'> 科博会最后一天 观众热情不减...
+														
+												</a></li>
+											
+												<li><span>09.21</span> <a target="_blank"
+													href='
+									
+									info/cid_010200/newsshow.html?id=1acc4e99e83f427ea2012496fa83a40a
+								'> 
+														小朋友体验自制机器人
+												</a></li>
+											
+												<li><span>09.21</span> <a target="_blank"
+													href='
+									
+									info/cid_010200/newsshow.html?id=4e126023d5464c0d91b1b44a622550e7
+								'> 拥抱高精尖特新 4天签下超千...
+														
+												</a></li>
+											
+										</ul>
+									</div>
+									<div class="si_left_bottom_bottom_left"
+										style="margin-left: 40px;">
+										<ul>
+											
+												<li><span>09.20</span> <a
+													href='
+									
+									info/cid_010200/newsshow.html?id=cf5d494e42c3415b855d872340e2faf5
+								'> 
+														捷克高科技飞行器太扯眼球了
+												</a></li>
+											
+												<li><span>09.20</span> <a
+													href='
+									
+									info/cid_010200/newsshow.html?id=ce59d86c68184b65b11388f494436d9c
+								'> 产业资本与实体经济零距离对接...
+														
+												</a></li>
+											
+												<li><span>09.20</span> <a
+													href='
+									
+									info/cid_010200/newsshow.html?id=8a226d25dcf54b98bd3a2a83f97bd5a2
+								'> 加强科技经贸合作 创互利共赢...
+														
+												</a></li>
+											
+												<li><span>09.20</span> <a
+													href='
+									
+									info/cid_010200/newsshow.html?id=9570e6e227ff4f8ca6c832edf8677a6d
+								'> 投融资机构与企业对接专场举行...
+														
+												</a></li>
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="si_left_er">
+						<div class="si_left">
+							<div class="si_left_top">
+								<div class="er_center_top_left">新闻报道</div>
+								<div class="er_center_top_right">
+									<a href="http://kbh.my.gov.cn/channel/0110/011000.html">更多&gt;&gt;</a>
+								</div>
+							</div>
+							<div class="si_left_er_bottom_top">
+								<div class="si_left_er_bottom_top_left">
+									
+									<div class="si_left_er_bottom_top_left_top">
+										<span
+											style="font-size: 14px; color: #313538; font-weight: bold;">互利共赢 磁场效应平台效应不断扩大</span><br />
+									</div>
+									<div class="si_left_er_bottom_bottom">
+										秋天，是收获的季节。但对中国科技城来说，也是播种的季节。昨(20)日，为期4天的第三届科博会完美收官。据统计，本届科博会国际化程度进一步提高，参会参展境外企业数、外宾数量均创下新高...
+										
+										<a target="_blank" href='
+									
+									info/cid_011000/newsshow.html?id=ed1e4dcc449540229a29a3dcd0471b7c
+								'>[详细]</a>
+									</div>
+								</div>
+								<div class="si_left_er_bottom_top_right">
+									<ul>
+										
+											<li><span>2015.09.21</span> <a target="_blank"
+												href='
+									
+									info/cid_011000/newsshow.html?id=ea693239b6514ae394e3ede7bf4055b6
+								'> 核技术在医学领域应用 高端论坛昨日...
+													
+											</a></li>
+										
+											<li><span>2015.09.21</span> <a target="_blank"
+												href='
+									
+									info/cid_011000/newsshow.html?id=c6cdf04e8c014f51934c01e7a59a1e22
+								'> 
+													小小GPS 给汽车装上“黑匣子”
+											</a></li>
+										
+											<li><span>2015.09.21</span> <a target="_blank"
+												href='
+									
+									info/cid_011000/newsshow.html?id=6f0245eac6c64b98b7f0d82ffcffba2d
+								'> 
+													律师为军民融合提供特色服务
+											</a></li>
+										
+											<li><span>2015.09.21</span> <a target="_blank"
+												href='
+									
+									info/cid_011000/newsshow.html?id=dd4286cda63d492181bea2b0fbabeb2f
+								'> 
+													妻子伴夫上阵 当医疗志愿者
+											</a></li>
+										
+											<li><span>2015.09.21</span> <a target="_blank"
+												href='
+									
+									info/cid_011000/newsshow.html?id=185cf3ade4ca4dfe9369ac1696ec6419
+								'> 
+													义工组团 为科博会会场美容
+											</a></li>
+										
+											<li><span>2015.09.21</span> <a target="_blank"
+												href='
+									
+									info/cid_011000/newsshow.html?id=1d7cafd9fc874f2b8931d7fb53cc2f12
+								'> 科技创新的大展示 开放合作的大舞台...
+													
+											</a></li>
+										
+											<li><span>2015.09.21</span> <a target="_blank"
+												href='
+									
+									info/cid_011000/newsshow.html?id=e8760968fb4e4af5826892b02e6d5038
+								'> 
+													人才交流与成果展示硕果累累
+											</a></li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="si_right">
+
+			<div class="er_right_top">
+				<div class="er_right_top_left">
+					<img src="/static/images/bigtop.jpg" width="260"  height="318" border="0" usemap="#Map1"/>
+					<map name="Map1" id="Map1">
+						<area shape="rect" coords="4,30,257,84" href="
+									http://isp.my.gov.cn/app/common/member/register/personal/register
+									
+								" />
+						<area shape="rect" coords="3,93,256,151" href="
+									http://isp.my.gov.cn/app/common/member/register/exhibitor/register
+									
+								" />
+						<area shape="rect" coords="4,191,255,243" href="
+									http://kbh.sungoal.org/wssen/visit/login.aspx
+									
+								" />
+						<area shape="rect" coords="5,256,257,313" href="
+									http://isp.my.gov.cn/app/common/member/register/personal/register
+									
+								" />
+					</map>
+				</div>
+			</div>
+			<div class="er_right_bottom">
+			<div class="er_right_bottom_top">
+			<div class="er_right_bottom_top_left">通知公告</div>
+			<div class="er_right_bottom_top_right"><a href="http://kbh.my.gov.cn/channel/0103/010300.html">更多</a></div>
+			</div>
+			<div class="er_right_bottom_bottom">
+			<ul>
+						
+									<li class="er1">
+										1&nbsp;
+										<a title="关于维护第三届科博会治安交通秩序的通告"  href='
+									
+									info/cid_010300/newsshow.html?id=81731ccd9d5d4af485789a6132b01bc2
+								' class='text' target="_blank">
+											关于维护第三届科博会治安交通...
+											
+										</a></li>
+								
+									<li class="er2">
+										2&nbsp;
+										<a title="关于科博会期间对城区道路实施临时交通管理措施的通告"  href='
+									
+									info/cid_010300/newsshow.html?id=7723049c1518429384d8ce8e45be149f
+								' class='text' target="_blank">
+											关于科博会期间对城区道路实施...
+											
+										</a></li>
+								
+									<li class="er3">
+										3&nbsp;
+										<a title="关于公开选择第三届科博会4处高速路单立柱广告实施单位的公告"  href='
+									
+									info/cid_010300/newsshow.html?id=d81527a69e4641c191f93a506a2a3239
+								' class='text' target="_blank">
+											关于公开选择第三届科博会4处...
+											
+										</a></li>
+								
+									<li class="er4">
+										4&nbsp;
+										<a title="科技成果和专利技术发布与交易专场简介"  href='
+									
+									info/cid_010300/newsshow.html?id=d7be955749b942918b4e68fbfc09489d
+								' class='' target="_blank">
+											科技成果和专利技术发布与交易...
+											
+										</a></li>
+								
+									<li class="er5">
+										5&nbsp;
+										<a title="第三届中国（绵阳）科技城国际科技博览会门票票面广告位招商"  href='
+									
+									info/cid_010300/newsshow.html?id=4698687181dc4edd9953230cfe090438
+								' class='' target="_blank">
+											第三届中国（绵阳）科技城国际...
+											
+										</a></li>
+								
+									<li class="er6">
+										6&nbsp;
+										<a title="绵阳广发英雄贴 第四届军转民大赛等你来！"  href='
+									
+									info/cid_010300/newsshow.html?id=0cb69a1378a341f1a1a8e5244f815c22
+								' class='' target="_blank">
+											绵阳广发英雄贴 第四届军转民...
+											
+										</a></li>
+								
+									<li class="er7">
+										7&nbsp;
+										<a title="关于维护第二届科博会治安交通秩序的通告"  href='
+									
+									info/cid_010300/newsshow.html?id=56f73f92a26d4ad08fe827f094359e79
+								' class='' target="_blank">
+											关于维护第二届科博会治安交通...
+											
+										</a></li>
+								
+									<li class="er8">
+										8&nbsp;
+										<a title="媒体邀请通知"  href='
+									
+									info/cid_010300/newsshow.html?id=5e231750adfb4588b05f4eae049937bf
+								' class='' target="_blank">
+											
+											媒体邀请通知
+										</a></li>
+								
+									<li class="er9">
+										9&nbsp;
+										<a title="关于确定第二届中国（绵阳）科技城国际科技博览会科普展区布展合作单位的公示 "  href='
+									
+									info/cid_010300/newsshow.html?id=adbf1241dc5e4f28b875fef35bfd779e
+								' class='' target="_blank">
+											关于确定第二届中国（绵阳）科...
+											
+										</a></li>
+								
+									<li class="er10">
+										10&nbsp;
+										<a title="第三届中国创新创业大赛军转民大赛宣传评标结果公示"  href='
+									
+									info/cid_010300/newsshow.html?id=31243efbacc44dcfa7787c6d5beab471
+								' class='' target="_blank">
+											第三届中国创新创业大赛军转民...
+											
+										</a></li>
+								
+									<li class="er11">
+										11&nbsp;
+										<a title="第二届中国（绵阳）科技城国际科技博览会科普展区征集布展合作单位的公告 "  href='
+									
+									info/cid_010300/newsshow.html?id=8c985b73f42b496ca11005b11e5f330f
+								' class='' target="_blank">
+											第二届中国（绵阳）科技城国际...
+											
+										</a></li>
+								
+									<li class="er12">
+										12&nbsp;
+										<a title="第二届科博会四大经济区展览协调会召开"  href='
+									
+									info/cid_010300/newsshow.html?id=aec27279d54148648626f44e9ecb3cf3
+								' class='' target="_blank">
+											第二届科博会四大经济区展览协...
+											
+										</a></li>
+								
+			</ul>
+			</div>
+			</div>
+			</div>
+			</div>
+			<!-- 
+			<div class="food">
+				
+			</div> -->
+		</div>
+		<div class="con">
+			<div class="con1">
+				<div class="con1_left">
+					<div class="con1_left1">
+						<div class="con1_left1_t">
+							<div class="con1_left1_tl">展会热点</div>
+							<div class="con1_left1_tr">
+								<a href="http://kbh.my.gov.cn/channel/0110/011002.html">更多&gt;&gt;</a>
+							</div>
+						</div>
+						<div class="con1_left2_c">
+						
+							<a target="_blank" href='
+									
+									info/cid_011002/newsshow.html?id=1560a16138f74476a020a15aebfc8fc6
+								'>
+							<img src="/admin/fileupload//c99e20c1-c9b0-4840-8abc-b035e3e518bf.jpg"
+								width="125" height="83" style="float: left; margin-right: 10px;" />
+							<span> 
+								军事迷的狂欢盛宴
+							</span>
+							</a>
+							<br />
+							本届科博会展示了多款军事模型，阿帕奇直升机模型、C919大飞机体验舱、飞虎队战斗...
+							
+						</div>
+						<ul class="con1_left3_b">
+							
+								<li><span>09-20</span> <a
+									href='
+									
+									info/cid_011002/newsshow.html?id=64f1c66cd2ff46d6b9b90b50d684f19c
+								'> 
+										展场服务 贴心服务 志愿者获点赞
+								</a></li>
+							
+								<li><span>09-20</span> <a
+									href='
+									
+									info/cid_011002/newsshow.html?id=dde7b50daa164eec97f67d98e5e40ef2
+								'> 
+										小男孩走失 交警帮他找到亲人
+								</a></li>
+							
+								<li><span>09-20</span> <a
+									href='
+									
+									info/cid_011002/newsshow.html?id=82ffbfa960764c568202d996874e70b8
+								'> 
+										观众热捧食品安全、医疗创新技术
+								</a></li>
+							
+								<li><span>09-20</span> <a
+									href='
+									
+									info/cid_011002/newsshow.html?id=c3933c3f46a1425a89d14d05ad1bf079
+								'> 
+										警方用高科技 保障安保通信畅通
+								</a></li>
+							
+						</ul>
+					</div>
+					<div class="con1_left1">
+						<div class="con1_left1_t">
+							<div class="con1_left1_tl">展会资讯</div>
+							<div class="con1_left1_tr">
+								<a href="http://kbh.my.gov.cn/channel/0110/011004.html">更多&gt;&gt;</a>
+							</div>
+						</div>
+						<div class="con1_left2_c">
+							
+							<a target="_blank" href='
+									
+									info/cid_011004/newsshow.html?id=9a0e0a0aead94cccb08bf25c518278e3
+								'>
+							<img src="/admin/fileupload//a81b05f8-d4ec-4931-b68d-87c74075bb23.jpg"
+								width="125" height="83" style="float: left; margin-right: 10px;" />
+							<span> 
+								科博会让绵阳更美
+							</span>
+							</a>
+							<br />
+							17日，第三届科博会在我市正式揭开序幕，一大波高精尖的科技产品让人眼花缭乱，这也...
+							
+						</div>
+						<ul class="con1_left3_b">
+							
+								<li><span>09-20</span> <a target="_blank"
+									href='
+									
+									info/cid_011004/newsshow.html?id=f28a4022b89748d1b5d97e0212c77bd9
+								'> 
+										北斗导航展示引关注
+								</a></li>
+							
+								<li><span>09-20</span> <a target="_blank"
+									href='
+									
+									info/cid_011004/newsshow.html?id=a549c7f1b9e64d56abba5240c2234eb7
+								'> 在长虹智慧社区 每个业主都是“大人...
+										
+								</a></li>
+							
+								<li><span>09-20</span> <a target="_blank"
+									href='
+									
+									info/cid_011004/newsshow.html?id=ce1d0cf7072145229f512542441c278d
+								'> 
+										专家访谈
+								</a></li>
+							
+								<li><span>09-20</span> <a target="_blank"
+									href='
+									
+									info/cid_011004/newsshow.html?id=dac579578daf4e238b506384dee1126a
+								'> 
+										携手打造区域特色优势产业集群
+								</a></li>
+							
+						</ul>
+					</div>
+					<div class="con1_left1">
+						<div class="con1_left1_t">
+							<div class="con1_left1_tl">推荐企业</div>
+							<div class="con1_left1_tr">
+								<a href="http://kbh.my.gov.cn/channel/0110/011003.html">更多&gt;&gt;</a>
+							</div>
+						</div>
+						<div class="con1_left2_c">
+							<ul >
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="绵阳新晨动力机械有限公司"  href='
+																http://www.xce.com.cn/
+																
+															'>
+															<img src="/admin/fileupload//1f34f2d7-2037-40ca-b027-694af32874ef.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="四川科莱电梯有限责任公司"  href='
+																http://www.myclimb.cn/
+																
+															'>
+															<img src="/admin/fileupload//cf0616a4-83e4-4766-85e9-25f097801a9e.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="长虹集团"  href='
+																http://www.changhong.com.cn/
+																
+															'>
+															<img src="/admin/fileupload//87e72eeb-52a9-429c-965f-7c05b6cbd263.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="四川中物材料有限责任公司"  href='
+																http://www.coremer.com/
+																
+															'>
+															<img src="/admin/fileupload//9474672a-b64a-4cf7-9435-78b972f391f3.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="绵阳灵通电讯设备有限公司"  href='
+																http://www.my730.cn/
+																
+															'>
+															<img src="/admin/fileupload//5dcd3662-6874-406a-aa83-22aee4b33c22.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="四川九州电器集团有限责任公司"  href='
+																http://www.jiuzhou.com.cn/
+																
+															'>
+															<img src="/admin/fileupload//97632d66-ab3b-44d4-a55e-62b2571ef70b.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							</ul>
+						</div>
+					</div>
+					<div class="con1_left1">
+						<div class="con1_left1_t">
+							<div class="con1_left1_tl">推荐产品</div>
+							<div class="con1_left1_tr">
+								<a href="http://kbh.my.gov.cn/channel/0110/011023.html">更多&gt;&gt;</a>
+							</div>
+						</div>
+						<div class="con1_left2_c">
+							<ul >
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="CHiQ(启客）来了 想象正在发生"  href='
+																
+																info/cid_011023/newsshow.html?id=f390cf10ba4440f882123678a893e40b
+															'>
+															<img src="/admin/fileupload//d8ea0129-3ed8-49a1-b4fd-79c246168ed5.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="2013中国科博会在绵阳开幕“3D打印”成热点"  href='
+																
+																info/cid_011023/newsshow.html?id=e0aefb2ab7e34ffc8fedb98a9bb6bfa0
+															'>
+															<img src="/admin/fileupload//23b90b86-f653-4e18-ade5-410ec47a013d.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="最新“战机”驾临绵阳科博会会展中心"  href='
+																
+																info/cid_011023/newsshow.html?id=7a1970419856438f872586c3e1c6e059
+															'>
+															<img src="/admin/fileupload//48f1f8b8-f5fb-4e3a-a2e8-504cfff51638.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="中国科博会绵阳开幕 “神十”宇航员出席(图)"  href='
+																
+																info/cid_011023/newsshow.html?id=e84b480d1ee44629bda78996b1e4eef7
+															'>
+															<img src="/admin/fileupload//6e563f4d-437d-4629-9f53-6f967012d460.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="深潜英雄叶聪将携“蛟龙号”来绵"  href='
+																http://www.myrb.net/Html/News/2014/10/08/1517284.shtml
+																
+															'>
+															<img src="/admin/fileupload//bf451e02-0ca1-45b4-a1b8-6b1dc1003016.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							       				<li style="width:160px;text-align:center;float:left;">
+														<a target="_blank"  title="科博会期间 猎鹰旋翼机将空降绵阳"  href='
+																http://www.suloon.com/contents/2014/410/372773.html
+																
+															'>
+															<img src="/admin/fileupload//88a711a3-dbf3-49a1-9037-d88eb36290e7.jpg"
+																	width="125" height="70" style=" margin-right: 1px;" />
+														</a>
+												</li>	
+							       
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="con1_right">
+					<div class="con1_right_t">
+						<div class="con1_right_tl">重点项目</div>
+						<div class="con1_right_tr">
+							<a href="http://kbh.my.gov.cn/channel/0109/010902.html">更多&gt;&gt;</a>
+						</div>
+					</div>
+					
+					<div class="con1_right_c">
+						<a target="_blank" title="" href='
+									
+									info/cid_010902/newsshow.html?id=ead24fb61f964e31bed30f873a565f16
+								'>
+							<img src="/admin/fileupload//86fa3ffc-6c0b-4057-a6bb-fb9ab3339ad2.jpg"
+								width="242" height="308" />
+						</a>
+					</div>
+					<div class="con1_right_b">
+						科技创新世界，人文点亮心灵。昨（17）日，第三届中国（绵阳）科技城国际科技博览会在万众期待中开幕。47个国家和地区的企业、采购商、国际友人、尖端科学人才等参加了盛会，对于参加这样的...
+						
+						<a href='
+							
+							http://kbh.my.gov.cn/info/cid_010902/newsshow.html?id=ead24fb61f964e31bed30f873a565f16
+						' target="_blank">[详细]</a>
+					</div>
+				</div>
+			</div>
+			<!-- 
+			<div class="food">
+				
+			</div> -->
+			<div class="con3">
+				<div class="con3_left">
+					<div class="con3_left1_t">
+						<div class="con1_left1_tl">科博会掠影</div>
+						<div class="con1_left1_tr">
+							<a href="http://kbh.my.gov.cn/channel/0103/010302.html">更多&gt;&gt;</a>
+						</div>
+					</div>
+					<div class="con3_left1_b">
+						
+							<dl>
+								<a target="_blank" href='
+							
+							info/cid_010302/newsshow.html?id=ba7b0a49070b4b479d5dd00c4332ad8c
+								'>
+									<dt>
+										<img src="/admin/fileupload//5fb33310-3bd7-4636-89ee-542e74487800.jpg" width="155"
+											height="109" />
+									</dt>
+									<dd>
+										
+										再会 相约下届
+									</dd>
+								</a>
+							</dl>
+						
+							<dl>
+								<a target="_blank" href='
+							
+							info/cid_010302/newsshow.html?id=a522d28abd07447f84b20f0aeb1eda6c
+								'>
+									<dt>
+										<img src="/admin/fileupload//117db241-5341-415d-a86b-eeb54eb1ca81.jpg" width="155"
+											height="109" />
+									</dt>
+									<dd>
+										
+										博识 开阔眼界
+									</dd>
+								</a>
+							</dl>
+						
+							<dl>
+								<a target="_blank" href='
+							
+							info/cid_010302/newsshow.html?id=03e51981c1464b92b159e20bfc1ac1ee
+								'>
+									<dt>
+										<img src="/admin/fileupload//994c829f-77b5-4f40-ba9e-7d13097535fc.jpg" width="155"
+											height="109" />
+									</dt>
+									<dd>
+										
+										科技 改变生活
+									</dd>
+								</a>
+							</dl>
+						
+							<dl>
+								<a target="_blank" href='
+							
+							info/cid_010302/newsshow.html?id=c6448449cd5c42f7b62f91528d26a897
+								'>
+									<dt>
+										<img src="/admin/fileupload//4b81d9f3-ac6f-471a-822f-982e58c4504c.jpg" width="155"
+											height="109" />
+									</dt>
+									<dd>
+										贴心服务 温暖八方来...
+										
+									</dd>
+								</a>
+							</dl>
+						
+							<dl>
+								<a target="_blank" href='
+							
+							info/cid_010302/newsshow.html?id=5b1f1f38df7848c6a227636ffb4256d1
+								'>
+									<dt>
+										<img src="/admin/fileupload//cb09e4e9-2718-4bf8-8fcd-592ad33a164f.jpg" width="155"
+											height="109" />
+									</dt>
+									<dd>
+										
+										潮涌科博会热闹
+									</dd>
+								</a>
+							</dl>
+						
+							<dl>
+								<a target="_blank" href='
+							
+							info/cid_010302/newsshow.html?id=68d5158dfe22400193a3b3eb64e5703d
+								'>
+									<dt>
+										<img src="/admin/fileupload//77085864-875a-47f1-b11a-89b52d4bce90.jpg" width="155"
+											height="109" />
+									</dt>
+									<dd>
+										
+										零距离体验奇妙
+									</dd>
+								</a>
+							</dl>
+						
+							<dl>
+								<a target="_blank" href='
+							
+							info/cid_010302/newsshow.html?id=c7d3d51144844ae6988ecacc1014349d
+								'>
+									<dt>
+										<img src="/admin/fileupload//dc10eae5-f3e1-446b-b2c6-cb6f1f765005.jpg" width="155"
+											height="109" />
+									</dt>
+									<dd>
+										科博会的粉丝们留下这...
+										
+									</dd>
+								</a>
+							</dl>
+						
+							<dl>
+								<a target="_blank" href='
+							
+							info/cid_010302/newsshow.html?id=71a2e96952f148719c22fe5798a23a7e
+								'>
+									<dt>
+										<img src="/admin/fileupload//d2f7894a-6120-4d0b-8cb4-eadeed877ec1.jpg" width="155"
+											height="109" />
+									</dt>
+									<dd>
+										“触动”高科技 体验...
+										
+									</dd>
+								</a>
+							</dl>
+						
+					</div>
+				</div>
+				<div class="con3_right">
+					<div class="con3_right_t">
+						<div class="con3_right_tl">视频播报</div>
+						<div class="con3_right_tr">
+							<a href="http://kbh.my.gov.cn/channel/0103/010303.html">更多&gt;&gt;</a>
+						</div>
+					</div>
+					
+						<div class="con3_right_b">
+							<a target="_blank" href="info/cid_011009/newsshow.html?id=cee9d38d0f5749b38bef004afbbbbacf">
+								<img src="/admin/fileupload/21ae359d-475f-49b6-9888-689c98f1f4a0.jpg" width="182" height="108" />
+							</a>
+							<a target="_blank" href="info/cid_011009/newsshow.html?id=cee9d38d0f5749b38bef004afbbbbacf">
+								
+								10.16 科博会
+							</a>
+						</div>
+					
+						<div class="con3_right_b">
+							<a target="_blank" href="info/cid_011009/newsshow.html?id=cd97e2d0781a4c1f9699af7f2b021ad3">
+								<img src="/admin/fileupload/7f647992-d7be-4e76-8b3f-cebb5f9a2046.jpg" width="182" height="108" />
+							</a>
+							<a target="_blank" href="info/cid_011009/newsshow.html?id=cd97e2d0781a4c1f9699af7f2b021ad3">
+								
+								科博会之旅 科技开启智慧生活新方式
+							</a>
+						</div>
+					
+				</div>
+			</div>
+			<!-- 
+			<div class="food">
+				
+			</div> -->
+			<div class="con4" >
+				<div class="con4_t">
+					<div class="con1_left1_tl">参展指南</div>
+					<div class="con1_left1_tr">
+						<a href="http://kbh.my.gov.cn/channel/0104.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+				<ul class="con4_b" >
+					<li><a href='http://kbh.my.gov.cn/channel/0104/010403.html'>了解展馆</a></li>
+					<li><a href='http://kbh.my.gov.cn/channel/0104/010404.html'>如何参展</a></li>
+					<li><a href='http://kbh.my.gov.cn/channel/0104/010405.html'>如何参观</a></li>
+					<li><a href='http://kbh.my.gov.cn/channel/0104/010410.html'>交通指引</a></li>
+					<li><a href='http://kbh.my.gov.cn/channel/0104/010411.html'>酒店及餐饮</a></li>
+					<li><a href='http://kbh.my.gov.cn/channel/0104/010412.html'>展馆分布</a></li>
+				</ul>
+			</div>
+			<div class="con5">
+				<div class="con4_t">
+					<div class="con1_left1_tl" style="margin-left: 11px;">论坛会议一览</div>
+					<div class="con1_left1_tr">
+						<a href="http://kbh.my.gov.cn/channel/0105/010502.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+				<div class="con5_left">
+					
+						<div class="con5_left1">
+							<div class="con5_left1_t">
+								<a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=c0a9045f645f49f18c16433354f1d780
+								'> 
+									媒体见面会
+								</a>
+							</div>
+							<div class="con5_left1_b">
+								<pre>会议时间：9月16日 17：00—17：40
+
+地    点：科发商务酒店科博厅
+</pre>
+							</div>
+						</div>
+					
+						<div class="con5_left1">
+							<div class="con5_left1_t">
+								<a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=19e60b029dc84baca56c0a080e59c6a4
+								'> 
+									开幕式
+								</a>
+							</div>
+							<div class="con5_left1_b">
+								<pre>会议时间：9月17日 10：00—11：00
+
+地    点：九洲体育馆
+</pre>
+							</div>
+						</div>
+					
+						<div class="con5_left1">
+							<div class="con5_left1_t">
+								<a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=99726174c8d54239a28213e3615d4d19
+								'> 
+									军民融合创新发展论坛
+								</a>
+							</div>
+							<div class="con5_left1_b">
+								<pre>会议时间：9月17日 14：00—17：30  
+
+地    点：九洲体育馆
+</pre>
+							</div>
+						</div>
+					
+						<div class="con5_left1">
+							<div class="con5_left1_t">
+								<a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=602551525b8046b09c1a5cc0fc51f770
+								'> 
+									科技与金融融合创新发展论坛
+								</a>
+							</div>
+							<div class="con5_left1_b">
+								<pre>会议时间：9月17日 14：00—18：00 
+
+地    点：长虹技术中心三楼会议室
+</pre>
+							</div>
+						</div>
+					
+						<div class="con5_left1">
+							<div class="con5_left1_t">
+								<a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=43c2c88bc33f4c2bb0a04c52c9ec8fcc
+								'> 
+									区域协作创新论坛
+								</a>
+							</div>
+							<div class="con5_left1_b">
+								<pre>会议时间：9月17日 14：00—18：00
+
+地    点：科发商务酒店科博厅
+</pre>
+							</div>
+						</div>
+					
+						<div class="con5_left1">
+							<div class="con5_left1_t">
+								<a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=93d059c6ec8f47d89794f5071e0ec099
+								'> 科技成果与专利技术发布交易专场...
+									
+								</a>
+							</div>
+							<div class="con5_left1_b">
+								<pre>会议时间：9月17日 14：00—17：00  
+
+地    点：绵阳创新中心二期1号楼1楼报告厅
+</pre>
+							</div>
+						</div>
+					
+				</div>
+				<div class="con5_right">
+					<div class="con5_right1">
+						<div class="con5_right1_t">
+							<div class="con5_right1_tl">论坛会议动态</div>
+							<div class="con1_left1_tr">
+								<a href="http://kbh.my.gov.cn/channel/0105/010501.html">更多&gt;&gt;</a>
+							</div>
+						</div>
+						<ul class="con5_left3_b">
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010501/newsshow.html?id=56f0265b60d84db28d8aa78f5c9bed02
+								'> 第三届科博会区域协作创新论坛举...
+										
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010501/newsshow.html?id=8f2fd17eabb34ed1b2cc3bc0f4d74c5e
+								'> 科技成果和专利技术发布交易专场...
+										
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010501/newsshow.html?id=1cbebfc2aa344c46bd5c220833c385f5
+								'> 
+										知名专家齐聚一堂开“药方”
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010501/newsshow.html?id=479de672fb3043909d3dd3a3deb311ff
+								'> 名企名家探讨深挖“互联网+”金...
+										
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010501/newsshow.html?id=89e5094879194d548a696659635d5242
+								'> 科博会首届区域协作创新论坛举行...
+										
+								</a></li>
+							
+						</ul>
+
+					</div>
+					<div class="con5_right1">
+						<div class="con5_right1_t">
+							<div class="con5_right1_tl">论坛会议通知</div>
+						</div>
+						<ul class="con5_left3_b">
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=7d4e73194712402085b93b4194207a16
+								'> 
+										媒体见面会
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=229d547edb354e1baa4c948aa0f0780a
+								'> 
+										开幕式
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=ff08b45c27364873a1268a30a9af939b
+								'> 
+										军民融合创新发展论坛
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=e8542ab2acf247c8a2eb666fc7f33b18
+								'> 
+										科技与金融融合创新发展论坛
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=3f520bc103944bd2bc3aa64b7279af4c
+								'> 
+										区域协作创新论坛
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=77002f0cdfe6479f86f34c98e2b2c216
+								'> 科技成果与专利技术发布交易专场...
+										
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=1db09d25335c4f14b1cf9c48f0ce6dec
+								'> 
+										国际电子信息发展论坛
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=3fb3c50d0afe40258e0eb4e7dd91007d
+								'> 四川四大经济片区科技投资集中推...
+										
+								</a></li>
+							
+								<li><a  target="_blank" href='
+									
+									info/cid_010502/newsshow.html?id=94df2ab8145a4ef2a911a7fb3627a62e
+								'> 2015年“天府友谊奖”、“绵...
+										
+								</a></li>
+							
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<!-- 
+			<div class="con5">
+				<div class="con4_t">
+					<div class="con1_left1_tl" style="margin-left: 11px;">企业展示</div>
+					<div class="con1_left1_tr">
+						<a href="http://kbh.my.gov.cn/channel/0109/010901.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+				<div class="con7_right">
+					
+						<a  target="_blank" href='
+									http://www.myclimb.cn/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_e101de931aa2faf66bc5c905c61c5c5e.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.emtco.cn/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_159da84b2c3a3a99d21f7b4582b6ca82.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.yonggui-sc.com/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_49ae3c076fd1dcf37412ab76cd577307.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.lierchem.com/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_8f6f4b7db9d953bbc6d467812824c3dc.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.sc-linkton.com.cn/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_cb16379c2b88f5db40c4d4a94270b4a1.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.taijimy.com/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_25f9d7c4c83c6d138ca406396d7f18d4.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.my730.cn/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_88f877beda196674363ec85510303c45.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.scsanyang.com/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_03ed3ba87c40438327f38bd1fddc6221.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://company.96scsh.com/SiteHtml/2120/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_8f70aff641443f300e08540157722660.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.myweiqi.com/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_7eea7488ce1e9cff6f9f9f74f35b45b8.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.jyhlps.cn/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_fefc9349c8e6c9d386040351eb027cfd.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.xce.com.cn/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_de986ad7485b02e518275cd8cd99b1c4.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.tqlsgroup.com/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_ce43ebcbe4e26855606445357e4733e8.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+						<a  target="_blank" href='
+									http://www.coremer.com/
+									
+								'><img src="/admin/fileupload/2013-9/16/f117_d2e6271a9c69ffd2df7888d78cd6823e.jpg"
+							style="width: 137px; height: 51px;" /></a>
+					
+				</div>
+			</div>
+			 -->
+			<div class="con6">
+				<div class="con6_left" style="height: auto;">
+					<div class="con3_left1_t">
+						<div class="con1_left1_tl">官方微博</div>
+						<!-- <div class="con1_left1_tr">
+							<a href="this">更多&gt;&gt;</a>
+						</div> -->
+					</div>
+<!-- 					<iframe -->
+<!-- 						src="http://widget.weibo.com/livestream/listlive.php?language=zh_cn&width=0&height=500&uid=2939233582&skin=1&refer=0&appkey=&pic=0&titlebar=0&border=0&publish=0&atalk=0&recomm=0&at=0&dpc=1" -->
+<!-- 						width="655" height="357px" marginwidth="0" marginheight="0" -->
+<!-- 						scrolling="no" frameborder="0" border="0" framespacing="0" -->
+<!-- 						noresize="noResize"></iframe> -->
+						<iframe width="655" height="357" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=655&height=357&ptype=1&speed=50&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2939233582&verifier=628a25ff&dpc=0"></iframe>
+				</div>
+				<div class="con6_right">
+					<div class="con6_right_t">
+						<div class="con3_right_tl" style="line-height: 27px;">展会分布</div>
+						<div class="con3_right_tr" style="line-height: 27px;">
+							<a href="http://kbh.my.gov.cn/channel/0110/011010.html">更多&gt;&gt;</a>
+						</div>
+					</div>
+					<ul>
+						
+							<li style="margin-top: 10px;">
+							<div class="con5_left1_t">
+							<a  target="_blank" href='
+									
+									info/cid_011010/newsshow.html?id=ddc088b1654f4f8e99458dc9707d6c05
+								'> 
+									A馆平面图
+							</a>
+							</div></li>
+						
+							<li style="margin-top: 10px;">
+							<div class="con5_left1_t">
+							<a  target="_blank" href='
+									
+									info/cid_011010/newsshow.html?id=8601e79c71bc4a41bad836ab70c87c4c
+								'> 
+									B馆平面图
+							</a>
+							</div></li>
+						
+							<li style="margin-top: 10px;">
+							<div class="con5_left1_t">
+							<a  target="_blank" href='
+									
+									info/cid_011010/newsshow.html?id=0d2c28d7aba84f9bb97c99b64218648b
+								'> 
+									C馆平面图
+							</a>
+							</div></li>
+						
+							<li style="margin-top: 10px;">
+							<div class="con5_left1_t">
+							<a  target="_blank" href='
+									
+									info/cid_011010/newsshow.html?id=3ea326f8d9334dac92a9b44b9a02c516
+								'> 
+									D馆平面图
+							</a>
+							</div></li>
+						
+							<li style="margin-top: 10px;">
+							<div class="con5_left1_t">
+							<a  target="_blank" href='
+									
+									info/cid_011010/newsshow.html?id=f1006fcbb683407f9fd43fbc02a9ab07
+								'> 
+									展馆平面图
+							</a>
+							</div></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="con6">
+				<div class="con7_left">友情链接</div>
+				<div class="con8_right" id="link">
+					
+						<a target="_blank" href='
+									http://www.mykjgl.cn/
+									
+								'> 绵阳市科技计划项目申报与管理中心</a>
+						|
+					
+						<a target="_blank" href='
+									http://www.ptd1111.com
+									
+								'> 1111人力银行_平潭大门</a>
+						|
+					
+						<a target="_blank" href='
+									http://www.Tmianyang.com
+									
+								'> 绵阳旅游资讯网</a>
+						|
+					
+						<a target="_blank" href='
+									http://www.amc-org.com/myamc/
+									
+								'> 2014中国绵阳先进制造业大会</a>
+						|
+					
+						<a target="_blank" href='
+									http://isp.my.gov.cn/app/common/welcome?ran=0
+									
+								'> 科博会综合信息服务平台</a>
+						|
+					
+						<a target="_blank" href='
+									http://www.scst.gov.cn
+									
+								'> 四川省科学技术厅</a>
+						|
+					
+						<a target="_blank" href='
+									http://125.71.214.77/myxmgl/
+									
+								'> 绵阳市科技成果转化项目申报管理中心</a>
+						|
+					
+						<a target="_blank" href='
+									http://125.71.214.77/myjbj/
+									
+								'> 绵阳市科技进步奖申报评审管理中心</a>
+						|
+					
+						<a target="_blank" href='
+									http://www.ctex.cn/article/lswj/
+									
+								'> 中国技术交易所科博会专题</a>
+						|
+					
+						<a target="_blank" href='
+									http://kjqy.myyqzy.com/
+									
+								'> 绵阳市科技型中小企业服务网 </a>
+						|
+					
+						<a target="_blank" href='
+									http://www.baidu.com
+									
+								'> 中国技术交易所</a>
+						|
+					
+						<a target="_blank" href='
+									http://www.baidu.com
+									
+								'> 四川省科学技术厅</a>
+						|
+					
+						<a target="_blank" href='
+									http://www.baidu.com
+									
+								'> 四川省投资促进局</a>
+						|
+					
+						<a target="_blank" href='
+									http://www.baidu.com
+									
+								'> 中国西部国际博览会</a>
+						
+					
+				</div>
+			</div>
+			<!-- 版权信息 -->
+			
+<div class="footer" style="height:89px">
+本网站所刊登的新华社及新华网各种新闻、信息、专题专栏资料，均为新华社版权所有，未经协议授权，禁止下载使用。<br />
+Copyright (C) 2000-2013 SC.XINHUANET.com ALL Rights Reserved.站长统计<br/>
+座机电话：0816-2260139
+联系人：任先生
+电话：13320890068
+地址：绵阳市高新区九州体育馆会展中心25号
+
+</div>
+		</div>
+	</div>
+</body>
+</html>

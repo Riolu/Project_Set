@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上海交通大学海洋研究院</title>
+<meta name="keywords" content="上海交通大学海洋研究院" />
+<meta name="description" content="上海交通大学海洋研究院" />
+<link rel="stylesheet" type="text/css" href="/css/Home/css.css" />
+</head>
+<body>
+<!--
+<DIV style=" WIDTH: 100%; height:80px; background-image:url(/images/Home/banner_s.jpg); background-position:center; background-repeat:no-repeat;" >
+&nbsp;
+</DIV>
+-->
+<!--
+<DIV style="MARGIN: 0px auto; WIDTH: 100%; height:423px; overflow:hidden;  background-image:url(/images/Home/banner_b.jpg); background-position:center; background-repeat:no-repeat;" id="js_ads_banner_top_slide99">
+	<IMG src="/images/Home/banner_b.jpg" width="1600" height="423" style="visibility:hidden;">
+</DIV>
+
+<SCRIPT type=text/javascript src="/js/Home/jquery.min.js"> </SCRIPT>
+<SCRIPT type=text/javascript src="/js/Home/lrtk.js"> </SCRIPT>
+-->
+
+<!--top-->
+<div class="top1">
+  <div class="main">
+     <div class="top1_left"><a href="/">&nbsp;</a></div>
+     <div class="top1_right">
+       <div class="t_cd"><a href="/index.php">中文版</a>|<a href="/eng.php">English</a></div>
+       <div class="t_ss">
+       <form method="get" action="index.php">
+        <input type="hidden" name="cat_code" value="search" />
+      <input name="keywords" type="text" class="txt1" value="Search" onFocus="if(this.value=='Search') {this.value='';};" onBlur="if(this.value=='') {this.value='Search';}" /><input name="" type="submit" value=" " class="an1" />
+      </form></div>
+     </div>
+     <div class="clear"></div>
+  </div>
+</div>
+<!--menu-->
+<div class="top2">
+  <div class="main">
+    <ul class="menu">
+      <li><a href="/">首页</a></li>
+              <li class="mjg">&nbsp;</li>
+      <li><a href="index.php?cat_code=gk" >研究院概况</a></li>
+                 <li class="mjg">&nbsp;</li>
+      <li><a href="index.php?cat_code=dw" >师资队伍</a></li>
+                 <li class="mjg">&nbsp;</li>
+      <li><a href="index.php?cat_code=yj" >科学研究</a></li>
+                 <li class="mjg">&nbsp;</li>
+      <li><a href="index.php?cat_code=yjs" >研究生教育</a></li>
+                 <li class="mjg">&nbsp;</li>
+      <li><a href="index.php?cat_code=jdjs" >基地建设</a></li>
+                 <li class="mjg">&nbsp;</li>
+      <li><a href="index.php?cat_code=gjhz" >国际合作</a></li>
+                 <li class="mjg">&nbsp;</li>
+      <li><a href="index.php?cat_code=rjwm" >加入我们</a></li>
+              </ul>
+  </div>
+</div>
+<!--/top--><!--body-->
+<div class="top3">
+<!--banner-->
+<script type="text/javascript" src="/js/Home/jquery.js"/></script>
+<script type="text/javascript">
+function banner(){	
+	var bn_id = 0;
+	var bn_id2= 1;
+	var speed33=5000;
+	var qhjg = 1;
+    var MyMar33;
+	$("#banner .d1").hide();
+	$("#banner .d1").eq(0).fadeIn("slow");
+	if($("#banner .d1").length>1)
+	{
+		$("#banner_id li").eq(0).addClass("nuw");
+		function Marquee33(){
+			bn_id2 = bn_id+1;
+			if(bn_id2>$("#banner .d1").length-1)
+			{
+				bn_id2 = 0;
+			}
+			$("#banner .d1").eq(bn_id).css("z-index","2");
+			$("#banner .d1").eq(bn_id2).css("z-index","1");
+			$("#banner .d1").eq(bn_id2).show();
+			$("#banner .d1").eq(bn_id).fadeOut("slow");
+			$("#banner_id li").removeClass("nuw");
+			$("#banner_id li").eq(bn_id2).addClass("nuw");
+			bn_id=bn_id2;
+		};
+	
+		MyMar33=setInterval(Marquee33,speed33);
+		
+		$("#banner_id li").click(function(){
+			var bn_id3 = $("#banner_id li").index(this);
+			if(bn_id3!=bn_id&&qhjg==1)
+			{
+				qhjg = 0;
+				$("#banner .d1").eq(bn_id).css("z-index","2");
+				$("#banner .d1").eq(bn_id3).css("z-index","1");
+				$("#banner .d1").eq(bn_id3).show();
+				$("#banner .d1").eq(bn_id).fadeOut("slow",function(){qhjg = 1;});
+				$("#banner_id li").removeClass("nuw");
+				$("#banner_id li").eq(bn_id3).addClass("nuw");
+				bn_id=bn_id3;
+			}
+		})
+		$("#banner_id").hover(
+			function(){
+				clearInterval(MyMar33);
+			}
+			,
+			function(){
+				MyMar33=setInterval(Marquee33,speed33);
+			}
+		)	
+	}
+	else
+	{
+		$("#banner_id").hide();
+	}
+}
+</script>
+<!--/banner-->
+ <div class="banner" id="banner" >
+ 		<a href="javascript:void(0)" class="d1" style="background:url(/upload/14379627088144.jpg) center no-repeat;"></a>
+    	<a href="javascript:void(0)" class="d1" style="background:url(/upload/140446663019131.jpg) center no-repeat;"></a>
+    	<a href="javascript:void(0)" class="d1" style="background:url(/upload/1396408955210222.jpg) center no-repeat;"></a>
+    	<a href="javascript:void(0)" class="d1" style="background:url(/upload/139770486317063.jpg) center no-repeat;"></a>
+    	<a href="javascript:void(0)" class="d1" style="background:url(/upload/139770483213093.jpg) center no-repeat;"></a>
+    	<div class="d2" id="banner_id">
+		<ul>
+        			<li></li>
+        			<li></li>
+        			<li></li>
+        			<li></li>
+        			<li></li>
+        		</ul>
+	</div>
+</div>
+<script type="text/javascript">banner()</script>
+ <div class="top3_nr">
+   <div class="main">
+     <div class="top4">
+       <div class="top4_left">
+         <div class="lmbt1">
+           <span class="s_l">新闻中心</span>
+           <span class="s_r"><a href="index.php?cat_code=xwzx"><img src="/images/Home/jdy-s_24.png" /></a></span>
+         </div>
+         <div class="lmk1">
+                             <div class="n1_tt">
+             <div class="imgk"><a href="index.php?cat_code=xwzx2&art_id=791" title="海洋研究院研制1500米级重载作业型ROV南海海试获得圆满成功"><img src="/upload/144443990214116.JPG"/></a></div>
+             <div class="txtk"><a href="index.php?cat_code=xwzx2&art_id=791" title="海洋研究院研制1500米级重载作业型ROV南海海试获得圆满成功">海洋研究院研制1500米级重载作业型ROV南海海试获得圆满成功</a><p style="font-size:12px;">继4500米级“海马”号ROV研制成功并投入应用后，我院连琏教授团队研制的又一型ROV——1500米级重载作业型ROV于2015年9月25日至10月1日在南海顺...</p></div>
+             <div class="clear"></div>
+           </div>
+                                                                                                                       <ul class="list_n1">
+                                                 <li><span class="s_l"><a href="index.php?cat_code=xwzx2&art_id=785" title="“南海陆坡生态系统动力学与生物资源的可持续利用”中期总结会召开">“南海陆坡生态系统动力学与生物资源的可持续利用”中期总结会召开</a></span><span class="s_r">2015/08/04 </span><div style="clear:both;"></div></li>
+                                        <li><span class="s_l"><a href="index.php?cat_code=xwzx2&art_id=779" title="海洋研究院研制水下滑翔机“海鸥一号”千岛湖湖试获得圆满成功">海洋研究院研制水下滑翔机“海鸥一号”千岛湖湖试获得圆满成功</a></span><span class="s_r">2015/07/15 </span><div style="clear:both;"></div></li>
+                                        <li><span class="s_l"><a href="index.php?cat_code=xwzx2&art_id=781" title="[中央电视台·视频]交大毕业典礼：与时代同行 让人生有价值">[中央电视台·视频]交大毕业典礼：与时代同行 让人生有价值</a></span><span class="s_r">2015/07/20 </span><div style="clear:both;"></div></li>
+                                        <li><span class="s_l"><a href="index.php?cat_code=xwzx2&art_id=778" title="4500米级“海马”号ROV通过国家验收">4500米级“海马”号ROV通过国家验收</a></span><span class="s_r">2015/05/18 </span><div style="clear:both;"></div></li>
+                                        <li><span class="s_l"><a href="index.php?cat_code=xwzx2&art_id=768" title="上海交大研制“海马”号荣登“2014年度中国海洋十大科技进展”榜首">上海交大研制“海马”号荣登“2014年度中国海洋十大科技进展”榜首</a></span><span class="s_r">2015/01/15 </span><div style="clear:both;"></div></li>
+                   
+           </ul>
+         </div>
+       </div>
+       <div class="top4_right">
+        <div class="lmbt1">
+           <span class="s_l">通知公告</span>
+           <span class="s_r"><a href="index.php?cat_code=zxgg"><img src="/images/Home/jdy-s_24.png" /></a></span>
+         </div>
+         <div class="lmk2">
+         <ul class="list_n1">
+                        <li style="padding-left:10px;"><span style="float:left"><a href="index.php?cat_code=tzgg&art_id=795" title="海洋研究院2016年“申请-考核制”攻读博士学位招生简章">海洋研究院2016年“申请-考...</a></span><span style="float:right;">10/27</span><div style="clear:both;"></div></li>
+                        <li style="padding-left:10px;"><span style="float:left"><a href="index.php?cat_code=tzgg&art_id=794" title="海洋研究院2016年招收推荐免试研究生选拔结果公示">海洋研究院2016年招收推荐免...</a></span><span style="float:right;">10/23</span><div style="clear:both;"></div></li>
+                        <li style="padding-left:10px;"><span style="float:left"><a href="index.php?cat_code=tzgg&art_id=790" title="2016年海洋研究院招收免试攻读研究生复试通知">2016年海洋研究院招收免试攻...</a></span><span style="float:right;">10/08</span><div style="clear:both;"></div></li>
+                        <li style="padding-left:10px;"><span style="float:left"><a href="index.php?cat_code=tzgg&art_id=788" title="2016年海洋研究院增招免试攻读研究生的通知">2016年海洋研究院增招免试攻...</a></span><span style="float:right;">10/03</span><div style="clear:both;"></div></li>
+                        <li style="padding-left:10px;"><span style="float:left"><a href="index.php?cat_code=tzgg&art_id=787" title="2016 海洋研究院招收免试攻读研究生实施方案">2016 海洋研究院招收免试攻...</a></span><span style="float:right;">09/29</span><div style="clear:both;"></div></li>
+                      </ul>
+           <div style="clear:both;"></div>
+         </div>
+         <div class="jg2"></div>
+         <div class="lmbt2">
+           <span class="s_l">学术动态</span>
+           <span class="s_r"><a href="index.php?cat_code=xsbg"><img src="/images/Home/jdy-s_31.png"  /></a></span>
+         </div>
+         <div class="lmk3">
+           <ul class="list_n1">
+                        <li style="padding-left:10px; overflow:hidden; line-height:24px;"><a href="index.php?cat_code=xsbg&art_id=716" title="Bottom boundary layer dynamics and its influences on biogeochemical processes over the Texas-Louisiana shelf">Bottom boundary layer dynamics and its influences on biogeochemical processes over the Texas-Louisiana shelf</a></li>
+                        <li style="padding-left:10px; overflow:hidden; line-height:24px;"><a href="index.php?cat_code=xsbg&art_id=506" title="Climate change during the ice ages of the past 2 million years">Climate change during the ice ages of the past 2 million years</a></li>
+                      </ul>
+         </div>
+       </div>
+       <div class="clear"></div>
+     </div>
+     <div class="jg1"></div>
+     <div class="top5">
+       <div class="top5_left">
+         <b>科研成果图片展</b>
+         <p>海洋研究院始终瞄准高新科技前沿和国家发展战略需求，承担了国家自然科学基金、“973”... </p>
+         <p class="more1"><a href="index.php?cat_code=tupianzhna">查看更多>></a></p>
+       </div>
+       <div class="top5_right">
+         <div class="l"><img src="/images/Home/jdy-s_51.jpg" id=LeftArr /></div>
+         <div class="c">
+           <DIV id=wedding class=wedding>
+           <ul class="list_p1">
+                        <li>
+               <div class="imgk"><a><img src="/upload/143712204873220.jpg"/></a></div></li>
+                        <li>
+               <div class="imgk"><a><img src="/upload/1404199997182164.jpg"/></a></div></li>
+                        <li>
+               <div class="imgk"><a><img src="/upload/14042904871131.jpg"/></a></div></li>
+                        <li>
+               <div class="imgk"><a><img src="/upload/1404290459197183.jpg"/></a></div></li>
+                        <li>
+               <div class="imgk"><a><img src="/upload/140479446419975.jpg"/></a></div></li>
+                      </ul>
+           </DIV>
+         </div>
+         <div class="r"><img src="/images/Home/jdy-s_54.jpg" id=RightArr /></div>
+         <div class="clear"></div>
+         <SCRIPT language=javascript type=text/javascript 
+src="/js/Home/ScrollPic.js"></SCRIPT>
+<SCRIPT type=text/javascript>
+var scrollPic_02 = new ScrollPic();
+scrollPic_02.scrollContId   = "wedding"; //内容容器ID
+scrollPic_02.arrLeftId      = "LeftArr";//左箭头ID
+scrollPic_02.arrRightId     = "RightArr"; //右箭头ID
+
+scrollPic_02.frameWidth     = 648;//显示框宽度
+scrollPic_02.pageWidth      = 648; //翻页宽度
+
+scrollPic_02.speed          = 10; //移动速度(单位毫秒，越小越快)
+scrollPic_02.space          = 10; //每次移动像素(单位px，越大越快)
+scrollPic_02.autoPlay       = true; //自动播放
+scrollPic_02.autoPlayTime   = 3; //自动播放间隔时间(秒)
+
+scrollPic_02.initialize(); //初始化
+
+</SCRIPT>
+       </div>
+       <div class="clear"></div>
+     </div>
+   </div>
+   <div class="jg3"></div>
+      <!--foot-->
+<div class="footk">
+  <div class="foot main">
+    <div class="l">
+      <div class="f_t1">
+      <img src="/images/Home/jdy-s_63.jpg" width="40" height="41" />
+      <img src="/images/Home/jdy-s_65.jpg" width="40" height="41" />
+      <img src="/images/Home/jdy-s_67.jpg" width="40" height="41" />
+      
+
+      </div>
+      
+      <div class="f_t2">Copyright ©2013 上海交通大学海洋研究院. All Rights Reserved. | Powered by <a href="http://www.web181.com">Renju</a>.</div>
+    </div>
+    <script type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+    <div class="r">
+     <select name="select" onChange="window.open(this.value)">
+              <option value="javascript:void(0)">请选择</option>
+                            <option value="http://www.ouc.edu.cn/index.htm" target="_blank">中国海洋大学</option>
+                            <option value="http://colp.sjtu.edu.cn/" target="_blank">极地与深海发展战略研究中心</option>
+                            <option value="http://cuti.sjtu.edu.cn/" target="_blank">海洋水下工程科学研究院</option>
+                            <option value="http://lmo.sjtu.edu.cn/Default.aspx" target="_blank">微生物海洋学实验室</option>
+                            <option value="http://law.sjtu.edu.cn/" target="_blank">凯原法学院</option>
+                            <option value="http://life.sjtu.edu.cn/" target="_blank">生命科技技术学院</option>
+                            <option value="http://naoce.sjtu.edu.cn/" target="_blank">船舶海洋与建筑工程学院</option>
+                            <option value="http://www.sjtu.edu.cn/" target="_blank">上海交通大学</option>
+                          </select>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
+<!--/foot-->
+ </div>
+</div>
+<!--/body-->
+<div style="position:fixed; bottom:200px; right:0px;">
+<a href="/index.php?cat_code=llfs"><img src="images/Home/pf_07.jpg" /></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="上海交通大学,个人云存储,云存储服务" />
+<meta name="description" content="上海交通大学校园个人云存储服务" />
+        <title>上海交通大学个人云存储</title>
+        <link rel="stylesheet" type="text/css" href="/Common/css/common.css?v=2011111704"/>
+        <link rel="stylesheet" type="text/css" href="/Common/css/sjtu_index.css?v=2011111704"/>
+        <script type="text/javascript" src="/Common/js/jquery.js"></script>
+        <script type="text/javascript" src="/Common/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="/Common/js/jsMD5.js"></script>
+        <script type="text/javascript" src="/Common/js/common.js?v=2011111704"></script>
+        <script type="text/javascript" src="/Common/js/gk_index.js?v=2011111704"></script>
+        <script type="text/javascript" src="/Common/js/jquery.cookie.js"></script>
+        <script type="text/javascript">
+            jsMD5_Typ = 'Typ32';
+            $(function(){
+				$('#btn_register').click(function(){
+                    location = '/regist';
+					return false;
+				});
+                var first = 1;
+                var last = 3;
+                var count = $("div[class=introDiv]").size();
+                $("#leftimg").click(function(){
+                    if(first-1 >= 1){
+                        first--;
+                        last--;
+                    }
+                    var i=1;
+                    $("div[class=introDiv]").each(function(){
+                        if(i>=first && i<=last){
+                            $(this).show();
+                        }else{
+                            $(this).hide();
+                        }
+                        i++;
+                    });
+                });
+                $("#rightimg").click(function(){
+                    if(last+1 <= count){
+                        first++;
+                        last++;
+                    }
+                    var i=1;
+                    $("div[class=introDiv]").each(function(){
+                        if(i>=first && i<=last){
+                            $(this).show();
+                        }else{
+                            $(this).hide();
+                        }
+                        i++;
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="width">
+                    <div id="logo">
+                        <a href="/"><p>上海交通大学个人云存储</p></a>
+                    </div>
+                    <div class="loginFormDiv">
+                        <a class="jaccount_login" href="/index/sjtu_login"></a>
+                       <td></td> 
+                        <a class="software_download" href="/software">客户端下载</a>
+                        <a class="userhelp" href="http://help.jcube.sjtu.edu.cn/" target="_blank">使用帮助</a>
+                    </div>
+                </div>
+                <!-- end .header --></div>
+        </div>
+        <div class="content">
+            <div class="introSubject width2">
+                <h1>个人云存储</h1>
+                <h2>3月1日全校试运营</h2>
+               <!-- <h2>it is different</h2> -->
+            </div>
+            <div class="clearfloat"></div>
+            <div class="intro width">
+                <div id="leftimg"></div>
+                <div class="introDiv" >
+                    <h2>公告栏</h2>
+                    <p><a href=http://jcube.sjtu.edu.cn/member/sjtu2gokuai target="_blank">毕业生数据迁移功能</a></p>
+                    <p><a href=http://help.jcube.sjtu.edu.cn/mima.html target="_blank">用户名密码登陆错误原因</a></p>
+                    <p><a href=http://jcube.sjtu.edu.cn/software target="_blank">最新客户端下载</a></p>
+                    <p>android 手机客户端提供下载</p>
+                </div>
+                <div class="introDiv" >
+                    <h2>同步、备份、多人合作</h2>
+                    <p>笔记本、手机、台式机数据时刻一致</p>
+                    <p>时刻备份你的重要数据</p>
+                    <p>随时随地和朋友分享文件</p>
+                    <p>……</p>
+                </div>
+                <div class="introDiv" >
+                    <h2>相册、ipod</h2>
+                    <p>个人网络相册</p>
+                    <p>音乐专辑在线播放</p>
+                    <p>影视剧在线收看</p>
+                    <p>……</p>
+                </div>
+             <!--   <div class="introDiv"  style="display:none;">
+                 <h2>相册、ipod</h2>
+                    <p>个人网络相册</p>
+                    <p>音乐专辑在线播放</p>
+                    <p>影视剧在线收看</p>
+                    <p>……</p>
+                </div>
+                <div class="introDiv" style="display:none;">
+                    <h2>相册、ipod</h2>
+                    <p>个人网络相册</p>
+                    <p>音乐专辑在线播放</p>
+                    <p>影视剧在线收看</p>
+                    <p>……</p>
+                </div>  -->
+                <div id="rightimg"></div>
+                <div class="clearfloat"></div>
+            </div>
+            <div class="introLast width3">
+		<div class="links">
+                <p><span class="width1">个人云存储</span><span><a href='/'>首页</a>&nbsp;&nbsp;&nbsp;<a href='/software'>客户端下载</a>&nbsp;&nbsp;&nbsp;<a href='http://help.jcube.sjtu.edu.cn'>使用帮助</a>&nbsp;&nbsp;&nbsp;<a href='/help'>常见问题</a>&nbsp;&nbsp;&nbsp;<a href='/feedback'>意见反馈</a></span></p>
+                <p><span class="width1">关于我们</span><span><a href='/contact'>联系我们</a>&nbsp;&nbsp;&nbsp;<a href='http://weibo.com/mikezhangsky'target='_blank'>技术支持</a></span></p>
+                <p><span class="width1">服务声明</span><span><a href='/agreement'>服务协议</a>&nbsp;&nbsp;&nbsp;<a href='/tort'>侵权处理</a></span></p>
+     </div>
+<div id="logopic"> <img src="/Common/images/sjtu/logo.png" width="80%" > </div>
+
+    <div class="clearfloat"></div>
+	<! -- end content --></div>
+    <div class="footer width3">
+                    <p><a href='http://net.sjtu.edu.cn' target='_blank'>&copy;2012-上海交通大学网络信息中心</a>&nbsp;&nbsp;&nbsp;<a href='http://www.gokuai.com' target='_blank'>够快科技提供技术支持</a>&nbsp;&nbsp;&nbsp;<a href='http://cert.sjtu.edu.cn/beian_user/show.asp?number=1140'>沪交ICP备&nbsp;20111140 </a></p>
+                    <!-- end .footer --></div>
+            </div>
+
+        <!-- end .container -->
+        </div>
+    </body>
+</html>

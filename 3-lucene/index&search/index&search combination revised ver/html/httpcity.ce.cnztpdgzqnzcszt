@@ -1,0 +1,1067 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>贵州黔南州城市专题——中国经济网——国家经济门户</title>
+
+
+ 
+<meta name="Keywords" content="新闻中心,地方经济,财经,股票,基金,产业,食品安全,房产,汽车,数码,国际经济,宏观经济,经济数据,时尚,娱乐,音乐,科技,教育,漫画,图书,论坛,博客,视频" /> 
+<meta name="Description" content="中国经济网是国家重点新闻网站中唯一以经济报道为中心的综合新闻网站，每日采写大量经济新闻，同时整合国内主要媒体经济新闻及信息，为政府部门、企业决策提供权威的参考依据；为所有关注经济生活的网络读者提供丰富及时的经济新闻。" /> 
+
+
+<script src="http://www.ce.cn/images/main123.js" language="javascript"></script> 
+
+<script type="text/javascript" src="http://shuhua.ce.cn/js/shuhualdy.js"></script>
+
+<script language="javascript">
+
+function openthis(a){
+    var b=getElement(a);
+    if(b.selectedIndex && b.selectedIndex!=0)
+	{
+	   window.open(b.value);
+	   b.selectedIndex=0;
+    }else{
+	   alert("请选择一项行业报告!");}
+}
+ 
+</script>
+
+<script type="text/javascript" src="/js/main_cpic_utf8.js"></script>
+<script src="/js/pack_utf8.js" type="text/javascript"></script>
+
+<SCRIPT type=text/javascript>
+
+
+
+(function($){
+$.fn.extend({
+        Scroll:function(opt,callback){
+                //参数初始化
+                if(!opt) var opt={};
+                var _btnUp = $("#"+ opt.up);//Shawphy:向上按钮
+                var _btnDown = $("#"+ opt.down);//Shawphy:向下按钮
+                var timerID;
+                var _this=this.eq(0).find("ul:first");
+                var     lineH=_this.find("li:first").height(), //获取行高
+                        line=opt.line?parseInt(opt.line,10):parseInt(this.height()/lineH,10), //每次滚动的行数，默认为一屏，即父容器高度
+                        speed=opt.speed?parseInt(opt.speed,10):1000; //卷动速度，数值越大，速度越慢（毫秒）
+                        timer=opt.timer //?parseInt(opt.timer,10):30000; //滚动的时间间隔（毫秒）
+                if(line==0) line=1;
+                var upHeight=0-line*lineH;
+                //滚动函数
+                var scrollUp=function(){
+                        _btnUp.unbind("click",scrollUp); //Shawphy:取消向上按钮的函数绑定
+                        _this.animate({
+                                marginTop:upHeight
+                        },speed,function(){
+                                for(i=1;i<=line;i++){
+                                        _this.find("li:first").appendTo(_this);
+                                }
+                                _this.css({marginTop:0});
+                                _btnUp.bind("click",scrollUp); //Shawphy:绑定向上按钮的点击事件
+                        });
+                }
+                //Shawphy:向下翻页函数
+                var scrollDown=function(){
+                        _btnDown.unbind("click",scrollDown);
+                        for(i=1;i<=line;i++){
+                                _this.find("li:last").show().prependTo(_this);
+                        }
+                        _this.css({marginTop:upHeight});
+                        _this.animate({
+                                marginTop:0
+                        },speed,function(){
+                                _btnDown.bind("click",scrollDown);
+                        });
+                }
+               //Shawphy:自动播放
+                var autoPlay = function(){
+                        if(timer)timerID = window.setInterval(scrollUp,timer);
+                };
+                var autoStop = function(){
+                        if(timer)window.clearInterval(timerID);
+                };
+                 //鼠标事件绑定
+                _this.hover(autoStop,autoPlay).mouseout();
+                _btnUp.css("cursor","pointer").click( scrollUp ).hover(autoStop,autoPlay);//Shawphy:向上向下鼠标事件绑定
+                _btnDown.css("cursor","pointer").click( scrollDown ).hover(autoStop,autoPlay);
+        }       
+})
+})(jQuery);
+$(document).ready(function(){
+        $("#scrollDiv").Scroll({line:1,speed:1000,timer:5000,up:"btn1",down:"btn2"});
+});
+</SCRIPT>
+
+
+<style type="text/css">
+<!--
+
+/*==全局样式==*/
+body {
+	font-family:"宋体",arial;
+	font-size:12px; 
+	line-height:20px;
+	margin:0;
+	padding:0;
+	background:#fff;
+	text-align:center;
+	color:#29628F;
+}
+
+div { float:none; margin:0px auto; padding:0;}
+
+form,img,ul,ol,li,dl,dt,dd,input,p,br,button{margin: 0; padding: 0; border: 0;}
+ul,li,ol {list-style: none;}
+h1,h2,h3,h4,h5,h6 { margin:0; padding:0;}
+
+img { border:0;}
+.dn{display:none;}
+.clear { clear:both; height:0; line-height:0;}
+
+
+/*==链接样式==*/
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {	text-decoration:underline;}
+a:active {text-decoration: none;}
+
+
+/*导航*/
+.logobox { width:1000px; height:52px;}
+.logobox .logocity { width:193px; height:52px; float:left; margin-right:20px;}
+.logonav { float:left; line-height:15px; height:15px; padding:0 10px; color:#555; margin-top:15px; font-size:14px; font-weight:bold; font-family:"微软雅黑";}
+.logonav a { color:#555;}
+
+.nav { width:1000px; height:388px;}
+
+
+.t2{float:right; height:23px; margin-top:9px; margin-right:20px;}
+.t2 select{width:107px; margin-right:10px; margin-top:2px;}
+
+.con { width:1000px;}
+.conbai { width:998px; border:#E1E1E1 1px solid; background:#fff; margin-top:8px;}
+
+.ttbox { width:998px; height:88px;border-bottom:#E1E1E1 1px solid;}
+.ttpic { width:998px; height:58px;}
+.ttzi { width:998px; height:20px; color:#000;}
+.ttzi a { color:#000;}
+
+.oneleft { width:475px; float:left; padding:20px 0 0 18px;}
+.oneleft .lhpic { width:470px; height:252px; float:left;}
+
+.ri3picbox { width:470px; padding:20px 0; float:left; background:#fff; background:url(http://city.ce.cn/images/xuline.jpg) repeat-x bottom;}
+.ri3picbox img { width:158px; height:110px;float:left;}
+.ri3picbox .p3zi { width:290px; line-height:20px; float:right; text-align:left; color:#696969;}
+.ri3picbox .p3zi a {color:#696969;}
+.ri3picbox .p3zi .tit { font-size:16px; font-weight:bold; line-height:30px; color:#9E0A20;}
+.ri3picbox .p3zi .tit a { color:#9E0A20;}
+.ri3picbox .p3zi .more a { color:#BE2D4A;}
+
+.onemore { width:450px; line-height:20px; text-align:right; float:left; color:#000;}
+.onemore a { color:#000;}
+
+.oneright { width:455px; float:right; padding:0 18px 0 0;}
+.titzia { width:450px; padding:15px 5px 15px 10px; text-align:left; color:#6E6E6E;background:url(http://city.ce.cn/images/xuline.jpg) repeat-x bottom; font-size:14px; line-height:26px;}
+.titzia a {color:#6E6E6E;}
+.titzia .tit { color:#000; font-size:16px; font-weight:bold; line-height:30px;}
+.titzia .tit a { color:#000;}
+.titzia .more { color:#811515; font-weight:bold;}
+.titzia .more a {color:#811515;}
+
+.adone { width:1000px; height:65px; margin-top:5px;}
+
+.twobox { width:998px; height:225px; border:#DDD 1px solid; border-top:0; background:url(images/tymbbg1.png) repeat-x top;}
+
+.tybox { width:998px;border:#DDD 1px solid; border-top:0; }
+
+.jybox { width:998px; padding:15px 0; border:#B9B9B9 1px solid; border-top:#000 3px solid; background:#fff; margin-top:15px;}
+.jybox .jytit { width:965px; height:30px; text-align:left;}
+.jybox .jyzi { width:965px; text-align:left; font-size:14px; padding-top:8px; color:#000;}
+
+
+/*第一行*/
+
+
+.tita { width:1000px; height:55px; margin-top:8px;}
+.tita a { color:#000;}
+.titbgb { width:100%; height:55px; line-height:46px; text-align:right;}
+.titbgb img { padding-left:15px; float:left;}
+
+/*滚动*/
+.rollBox{width:994px;overflow:hidden;padding:12px 0 5px 6px;} 
+.rollBox .LeftBotton{height:52px;width:19px;background:url(http://i3.sinaimg.cn/edu/deco/2007/0924/career/job_mj_069.gif) no-repeat 11px 0;overflow:hidden;float:left;display:inline;margin:25px 0 0 0;cursor:pointer;} 
+.rollBox .RightBotton{height:52px;width:20px;background:url(http://i3.sinaimg.cn/edu/deco/2007/0924/career/job_mj_069.gif) no-repeat -8px 0;overflow:hidden;float:left;display:inline;margin:25px 0 0 0;cursor:pointer;} 
+.rollBox .Cont{width:985px;overflow:hidden;float:left;} 
+.rollBox .ScrCont{width:10000000px;} 
+.rollBox .Cont .pic{width:246px;float:left;text-align:center;} 
+.rollBox .Cont .pic img{padding:4px;background:#fff;border:1px solid #ccc;display:block;margin:0 auto;} 
+.rollBox .Cont .pic p{line-height:26px;color:#505050;} 
+.rollBox .Cont a:link,.rollBox .Cont a:visited{color:#626466;text-decoration:none;} 
+.rollBox .Cont a:hover{color:#f00;text-decoration:underline;} 
+.rollBox #List1,.rollBox #List2{float:left;}
+
+
+/*第三行*/
+.h3left { width:620px; float:left; margin:12px 0 6px 10px; display:inline; border:#E1E1E1 1px solid;}
+.h3right { width:322px; float:right; margin:12px 10px 6px 0; background:#F0F0F0;}
+
+.h3picbox { width:600px; padding:10px 0; background:#fff; background:url(http://city.ce.cn/images/xuline.jpg) repeat-x bottom; text-align:left;}
+.h3picbox img { width:178px; height:110px; padding:2px; border:#D2D2D2 1px solid; float:left; margin-right:5px;}
+.h3picbox a {color:#545454;}
+.h3picbox .tit { font-size:16px; font-weight:bold; line-height:30px; color:#9E0A20;}
+.h3picbox .tit a { color:#9E0A20;}
+.h3picbox .more a { color:#BE2D4A;}
+
+.h3rtit { width:300px; height:40px; line-height:40px; background:#fff; border:#DCDCDC 1px solid; margin-top:9px; text-align:left; font-size:14px; color:#000;font-weight:bold;}
+.h3rtit a {color:#000; font-weight:bold;}
+
+.h3con { width:300px;background:#fff; border:#DCDCDC 1px solid; border-top:0; padding:10px 0; margin-bottom:10px; }
+
+.h3conpicbox { width:280px;  background:#fff; }
+.h3con .rimg { width:270px; height:100px;padding:2px; border:#D2D2D2 1px solid; margin-bottom:10px;}
+.h3conpicbox .p3zi { line-height:20px; text-align:left; color:#545454;}
+.h3conpicbox .p3zi a {color:#545454;}
+.h3conpicbox .p3zi .tit { font-size:14px; font-weight:bold; line-height:30px; color:#003269; background:url(http://city.ce.cn/images/tyicon1.jpg) no-repeat left center; padding-left:16px; }
+.h3conpicbox .p3zi .tit a { color:#003269;}
+.h3conpicbox .p3zi .more a { color:#BE2D4A;}
+
+
+/*图片切换*/
+.pic_run_container_all { 
+    background: none repeat scroll 0 0 #FFF; float: left;
+    height: 252px; width: 470px; overflow:hidden; border:0px dotted #00F;
+}
+.pic_run_container, .pic_run_container img{width:470px; height:222px; text-align:left;}
+.pic_run_container img{border:0;vertical-align:top;}
+.pic_run_container ul, .pic_run_container li{list-style:none;margin:0;padding:0;}
+.pic_run_title { position:absolute; display:block; left:0px; bottom:0px; width:100%; height:20px; line-height:20px; border:1px solid #3F0; }
+.pic_run_num{ position:absolute; right:5px; bottom:5px; font:12px/1.5 tahoma, arial; height:16px;}
+.pic_run_num li{float: left;color: #fff;text-align: center;line-height:16px;width:16px;height:16px;font-family: Arial;font-size: 12px;cursor: pointer;margin-left:3px;background: #0A0200; font-weight:bold;}
+.pic_run_num li.ononon{line-height:16px;width:16px;height:16px;font-size: 12px;background: #E60000;font-weight: bold;color:#FFF;}
+.pic_run_title_info { position:absolute; width:100%; padding-top:5px;left:0px; bottom:0px; font:12px/1.5 tahoma, arial; height:20px; overflow:hidden;background:#000; filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5;}
+.pic_run_title_info a { color:#FFF; }
+.pic_run_info { height:20px; overflow:hidden; padding:4px 8px; background-color:#555; color:#EEE; }
+.pic_run_info a { color:#EEE; }
+#pic_run_span_title { font-size:14px; font-weight:bolder; }
+#pic_run_span_info { font-size:12px; line-height:20px; font-weight:bolder; text-align:center;}
+
+
+/*友情链接*/
+.friend{width:1000px; height:55px;padding:10px 0; border-top:#737373 1px solid; margin-top:50px;}
+.friend .fle { width:70px; height:52px; float:left; line-height:26px; color:#034077; font-weight:bold;}
+.friend .top{ width:930px; float:left;line-height:26px; padding-top:2px; text-align:left;color:#7B7B7B;}
+.friend .top a:link{color:#7B7B7B;}
+.friend .top a:visited{color:#7B7B7B;}
+.friend .top a:hover{color:#7B7B7B;}
+.friend .top a:active{color:#7B7B7B;}
+
+a.flinkm:link{color:#024174;}
+a.flinkm:visited{color:#024174;}
+a.flinkm:hover{color:#024174;}
+a.flinkm:active{color:#024174;}
+
+
+ /*底部*/
+.cebottom{line-height:23px; text-align:center; padding-top:20px; padding-bottom:14px; color:#424242; width:1000px; border-top:#000 5px solid;}
+.cebottom a:link{color:#424242;}
+.cebottom a:visited{color:#424242;}
+.cebottom a:hover{color:#424242;}
+
+.wypl { width:1000px; height:40px; border-top:#000 3px solid; text-align:left; font-size:16px; color:#666; background:#fff; line-height:40px; font-weight:bold;}
+
+
+-->
+</style>
+
+
+
+
+
+</head>
+
+<body style=" background:#fff url(./images/P020150813613055663028.jpg) no-repeat center 52px;">
+
+
+<div class="logobox">
+     <div class="logocity"><img src="/images/citylogo.jpg" width="193" height="52" /></div>
+	 <div class="logonav" style="border-left:#565656 1px solid; "><a href="http://www.ce.cn/" target="_blank">中国经济网</a></div>
+	<div class="logonav"><a href="http://city.ce.cn/" target="_blank">城市频道</a></div>
+	 
+</div>
+
+<div class="nav"></div>
+
+<div class="conbai">
+     <div class="ttbox">
+	     
+	      <div class="ttpic"><a href="./ywtj/201507/10/t20150710_2621387.shtml" target="_blank"><img src="./ywtj/201507/10/W020150710527212719513.jpg" alt="22.jpg"  width=998 height=58/></a></div>
+		  <div class="ttzi">我们正处在一个新的时代、一个发生深刻变革的时代。
+“新常态”正成为这个时代的一个热词。
+</div>
+		  
+	 </div>
+	 <div class="oneleft">
+	      <div class="lhpic">
+		  <!--图片切换：开始-->
+<div id="pic_run_html_list_id" style="width:20px; height:0; line-height:0; display:none;">
+<ul>
+   
+  
+	<li>
+    	<span>./qnztpxw/201509/10/W020150910506738102158.jpg</span>
+        <span>./qnztpxw/201509/10/t20150910_2821563.shtml</span>
+		<span></span>
+        <span>都匀大十字人行天桥国庆节前投入使用</span>
+		
+    </li>
+	
+	<li>
+    	<span>./qnztpxw/201504/30/W020150430548264910560.jpg</span>
+        <span>./qnztpxw/201504/30/t20150430_2484634.shtml</span>
+		<span></span>
+        <span>都匀“会客厅”正式开园迎接“五一”</span>
+		
+    </li>
+	
+	<li>
+    	<span>./qnztpxw/201504/30/W020150430547224714628.jpg</span>
+        <span>./qnztpxw/201504/30/t20150430_2484631.shtml</span>
+		<span></span>
+        <span>都匀市直属机关工委开展党员干部进茶园...</span>
+		
+    </li>
+	
+	<li>
+    	<span>./qnztpxw/201504/20/W020150420509811308649.jpg</span>
+        <span>./qnztpxw/201504/20/t20150420_2461317.shtml</span>
+		<span></span>
+        <span>第二届贵定云雾山文化旅游节盛大开幕</span>
+		
+    </li>
+	
+	<li>
+    	<span>./qnztpxw/201504/16/W020150416426685378537.jpg</span>
+        <span>./qnztpxw/201504/16/t20150416_2455034.shtml</span>
+		<span></span>
+        <span>黔南都匀：修整花坛迎“五一” 10万鲜花...</span>
+		
+    </li>
+	
+	
+</ul>
+</div>
+<div class="pic_run_container_all">
+    <div class="pic_run_container" id="pic_run_idContainer2">
+        <ul id="pic_run_idSlider2"></ul>
+        <div class="pic_run_title_info">
+            <div id="pic_run_span_title">标题</div>
+        </div>
+        <ul class="pic_run_num" id="pic_run_idNum"></ul>
+    </div>
+    <div class="pic_run_info">
+        <div id="pic_run_span_info">内容</div>
+    </div>
+</div>
+<script type="text/javascript"> 
+ 
+ 
+ 
+//<![CDATA[
+ 
+function pic_run_string_trim(str){
+    return str.replace(/(^\s*)|(\s*$)/g, '');
+}
+ 
+function pic_run_add_one_info(a_src, a_href, a_title, target_blank){
+	var dom_ul = $$$$("pic_run_idSlider2");
+	if(dom_ul){
+		var dom_li = dom_ul.appendChild(document.createElement("li"));
+		if(dom_li){
+			var dom_a = dom_li.appendChild(document.createElement("a"));
+			if(dom_a){
+				dom_a.href = a_href;
+				if(target_blank){
+					dom_a.target = "_blank";
+				}else{
+					dom_a.target = "_self";
+				}
+				var dom_img = dom_a.appendChild(document.createElement("img"));
+				if(dom_img){
+					dom_img.src = a_src;
+					dom_img.alt = a_title;
+				}
+			}
+		}
+	}
+}
+ 
+var pic_run_html_list = new Array();
+var pic_run_html_list_title = new Array();
+var pic_run_html_list_info = new Array();
+ 
+if($$$$("pic_run_html_list_id")){
+	var pic_run_list_li = $$$$("pic_run_html_list_id").getElementsByTagName("li");
+	if(pic_run_list_li){
+		for(var i=0; i<pic_run_list_li.length; i++){
+			var list_span = pic_run_list_li[i].getElementsByTagName("span");
+			if(list_span){
+				if(list_span.length > 3){
+					var one_info = new Array();
+					for(var j=0; j<list_span.length; j++){
+						one_info[j] = pic_run_string_trim(list_span[j].innerHTML);
+					}
+					pic_run_html_list.push(one_info);
+				}
+			}
+		}
+	}
+}
+ 
+for(var i=0; i<pic_run_html_list.length; i++){
+	var one_info = pic_run_html_list[i];
+	if(one_info.length > 3){
+		//alert(one_info[0] + "|" + one_info[1]+ "|" + one_info[2]);
+		var ahref_begin = '<a target="_blank" href="' + one_info[1] + '">';
+		var ahref_end = '</a>';
+		pic_run_add_one_info(one_info[0], one_info[1], one_info[2], true);
+		pic_run_html_list_title.push(ahref_begin + one_info[2] + ahref_end);
+		pic_run_html_list_info.push(one_info[3] + ahref_begin  + ahref_end);
+	}
+}
+ 
+var pic_run_nums = [], pic_run_timer, pic_run_n = $$$$("pic_run_idSlider2").getElementsByTagName("li").length,
+	pic_run_st = new pic_run_SlideTrans("pic_run_idContainer2", "pic_run_idSlider2", pic_run_n, {
+		onStart: function(){//设置按钮样式
+			pic_run_forEach(pic_run_nums, function(o, i){ 
+				o.className = pic_run_st.Index == i ? "ononon" : ""; 
+				//设置新闻标题
+				if($$$$("pic_run_span_title")){
+					var nowindex = parseInt(pic_run_st.Index);
+					if(nowindex < pic_run_html_list_title.length){
+						$$$$("pic_run_span_title").innerHTML = pic_run_html_list_title[nowindex];
+						$$$$("pic_run_span_info").innerHTML = pic_run_html_list_info[nowindex];
+					}else{
+						$$$$("pic_run_span_title").innerHTML = "";
+						$$$$("pic_run_span_info").innerHTML = "";
+					}
+				}
+			})
+		}
+	});
+for(var i = 1; i <= pic_run_n; pic_run_AddNum(i++)){};
+function pic_run_AddNum(i){
+	var num = $$$$("pic_run_idNum").appendChild(document.createElement("li"));
+	num.innerHTML = i--;
+	num.onmouseover = function(){
+		pic_run_timer = setTimeout(function(){ num.className = "ononon"; pic_run_st.Auto = false; pic_run_st.Run(i); }, 200);
+	}
+	num.onmouseout = function(){ clearTimeout(pic_run_timer); num.className = ""; pic_run_st.Auto = true; pic_run_st.Run(); }
+	pic_run_nums[i] = num;
+}
+pic_run_st.Run();
+ 
+ 
+//]]>
+</script>
+ 
+    <!--图片切换：结束-->
+		  
+		  
+		  </div>
+		  
+		   
+		  <div class="ri3picbox">
+		   <a href="http://city.ce.cn/zzz/zl/201502/28/t20150228_2355717.shtml" target="_blank"><img src="./qnzsptj/201502/27/W020150227493840192857.jpg" alt="9f4568abgdf02c6ab8c11&amp;690.jpg"  width=108 height=80/></a>
+		   <div class="p3zi"><span class="tit"><a href="http://city.ce.cn/zzz/zl/201502/28/t20150228_2355717.shtml" target="_blank">黔南州都匀市专题片：“匀”端茶人</a></span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;都匀毛尖， 中国十大名茶之一。是贵州三大名茶之一。外形条索紧结纤细卷曲、披毫，色绿翠。香清高，味鲜浓，叶底嫩绿匀整明亮。<span class="more"><a href="http://city.ce.cn/zzz/zl/201502/28/t20150228_2355717.shtml" target="_blank">[详细]</a></a></span> </div>
+		   <div class="clear"></div>
+	      </div>
+		  
+		  
+		  <div class="ri3picbox" style="background:0; padding-bottom:0;">
+		   <a href="http://city.ce.cn/zzz/zl/201501/09/t20150109_2242097.shtml" target="_blank"><img src="./qnzsptj/201501/09/W020150109574559794282.jpg" alt="360截图20150109160306437.jpg"  width=108 height=80/></a>
+		   <div class="p3zi"><span class="tit"><a href="http://city.ce.cn/zzz/zl/201501/09/t20150109_2242097.shtml" target="_blank">黔南民族文化的神韵</a></span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;黔南州地处云贵高原东南部向广西丘陵过度的斜坡地带，地势西北高，东南低。<span class="more"><a href="http://city.ce.cn/zzz/zl/201501/09/t20150109_2242097.shtml" target="_blank">[详细]</a></a></span> </div>
+		   <div class="clear"></div>
+	      </div>
+		  
+		  
+		  <div class="onemore"><a href="./qnzsptj/" target="_blank">更多&gt;&gt;</a></div>
+	</div>
+	
+	<div class="oneright">
+	     
+	     <div class="titzia"><span class="tit"><a href="./csyw/201509/17/t20150917_2851343.shtml" target="_blank">强势发动强力推进强化保障办出水平办出特色办出风采</a></span><br />
+		    &nbsp;&nbsp;&nbsp;&nbsp;9月12日，黔南州在匀召开贵州茶产业发展大会暨都匀毛尖世博名茶百年品牌推介活动（简称“一会一活动”）动员大会，黔南州委书记龙长春出席会议并讲话。
+
+<span class="more">[<a href="http://city.ce.cn/ztpd/gzqnzcszt/csyw/201509/17/t20150917_2851343.shtml" target="_blank">详细</a>]</span></div>
+	  
+	     <div class="titzia"><span class="tit"><a href="./csyw/201509/17/t20150917_2851340.shtml" target="_blank">黔南州茶叶质量安全可追溯体系建设启动</a></span><br />
+		    &nbsp;&nbsp;&nbsp;&nbsp;9月10日，记者从黔南州茶办了解到，目前黔南州已有13家茶叶企业上线食品安全云，9家企业上线茶叶质量安全云，另有7家企业入驻了省农委农产品质量安全监管处建立的贵州省农产品质量安全追...<span class="more">[<a href="http://city.ce.cn/ztpd/gzqnzcszt/csyw/201509/17/t20150917_2851340.shtml" target="_blank">详细</a>]</span></div>
+	  
+	     <div class="titzia"><span class="tit"><a href="./csyw/201509/17/t20150917_2851336.shtml" target="_blank">都匀欢送新兵入伍</a></span><br />
+		    &nbsp;&nbsp;&nbsp;&nbsp;9月9日晚，都匀大剧院内载歌载舞、热闹非凡，都匀市2015年欢送新兵入伍文艺晚会在此隆重举行。黔南州委常委、副州长刘建民，州委常委、宣传部长刘良，州委常委、都匀军分区司令员罗燕军...<span class="more">[<a href="http://city.ce.cn/ztpd/gzqnzcszt/csyw/201509/17/t20150917_2851336.shtml" target="_blank">详细</a>]</span></div>
+	  
+	     <div class="titzia"><span class="tit"><a href="./csyw/201509/17/t20150917_2851334.shtml" target="_blank">全国人大常委会副委员长沈跃跃到黔南州调研</a></span><br />
+		    &nbsp;&nbsp;&nbsp;&nbsp;9月10日至11日,全国人大常委会副委员长、全国妇联主席沈跃跃一行到黔南州调研并开展《老年人权益保障法》执法检查,听取黔南州有关工作情况汇报。省委书记、省长陈敏尔陪同调研。
+
+<span class="more">[<a href="http://city.ce.cn/ztpd/gzqnzcszt/csyw/201509/17/t20150917_2851334.shtml" target="_blank">详细</a>]</span></div>
+	  
+	 						
+			<div class="onemore" style="margin-top:8px;"><a href="./csyw/" target="_blank">更多&gt;&gt;</a></div>
+	
+	
+	
+	</div>
+
+
+  
+    <div class="clear"></div>
+</div>
+
+
+<div class="adone"><a href="http://city.ce.cn/ztpd/qnzcyzt/" target="_blank"><img src="./qnztjtl/201410/31/W020141031526461273386.jpg" alt="黔南州小页面.jpg"  width=1000 height=65/></a></div>
+
+
+
+<div class="tita">
+  <div class="titbgb" style=" background:url(./qnzcsfc/images/P020131217000894523966.jpg) no-repeat;"><a href="./qnzcsfc/" target="_blank">更多&gt;&gt;</a>&nbsp;&nbsp;&nbsp;</div>
+</div>
+<div class="twobox">
+
+<!--滚动bigan-->
+<div class="rollBox">
+  <div class="Cont" id="ISL_Cont"> 
+      <div class="ScrCont"> 
+       <div id="List1"> 
+        
+        <!-- 图片列表 begin --> 
+		
+         <div class="pic"> 
+          <a href="./qnzcsfc/201501/04/t20150104_2222240.shtml" target="_blank"><img src="./qnzcsfc/201501/04/W020150104423905205213.jpg" alt="360桌面截图20150104114840.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201501/04/t20150104_2222240.shtml" target="_blank">大爱无疆铸师魂</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/30/t20141230_2213880.shtml" target="_blank"><img src="./qnzcsfc/201412/30/W020141230430004065833.jpg" alt="360桌面截图20141230120451.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/30/t20141230_2213880.shtml" target="_blank">为使命而勇</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/30/t20141230_2213352.shtml" target="_blank"><img src="./qnzcsfc/201412/30/W020141230373783338584.jpg" alt="360桌面截图20141230103102.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/30/t20141230_2213352.shtml" target="_blank">独臂男儿撑起爱心蓝天</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/30/t20141230_2213316.shtml" target="_blank"><img src="./qnzcsfc/201412/30/W020141230371222810688.jpg" alt="360桌面截图20141230102636.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/30/t20141230_2213316.shtml" target="_blank">都柳江畔“大禹魂”</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/24/t20141224_2199011.shtml" target="_blank"><img src="./qnzcsfc/201412/24/W020141224394769452467.jpg" alt="360桌面截图20141224110524.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/24/t20141224_2199011.shtml" target="_blank">“你”在我心上</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/22/t20141222_2192389.shtml" target="_blank"><img src="./qnzcsfc/201412/22/W020141222532076488853.jpg" alt="360桌面截图20141222145446.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/22/t20141222_2192389.shtml" target="_blank">最美司机——龙志华</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/22/t20141222_2192207.shtml" target="_blank"><img src="./qnzcsfc/201412/22/W020141222529160147086.jpg" alt="360桌面截图20141222144912.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/22/t20141222_2192207.shtml" target="_blank">身残志坚  “泳”往直前</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/19/t20141219_2187231.shtml" target="_blank"><img src="./qnzcsfc/201412/19/W020141219551363086622.jpg" alt="360桌面截图20141219152520.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/19/t20141219_2187231.shtml" target="_blank">好人老班公</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/18/t20141218_2183678.shtml" target="_blank"><img src="./qnzcsfc/201412/18/W020141218544704276503.jpg" alt="360桌面截图20141218151454.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/18/t20141218_2183678.shtml" target="_blank">一个女校长的“中国梦”</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/17/t20141217_2178532.shtml" target="_blank"><img src="./qnzcsfc/201412/17/W020141217423239681135.jpg" alt="360桌面截图20141217115234.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/17/t20141217_2178532.shtml" target="_blank">最美乡村医生——罗海香</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/10/t20141210_2160726.shtml" target="_blank"><img src="./qnzcsfc/201412/10/W020141210513053687182.jpg" alt="360桌面截图20141210142111.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/10/t20141210_2160726.shtml" target="_blank">“孔雀开屏”扮靓农家</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201412/08/t20141208_2153794.shtml" target="_blank"><img src="./qnzcsfc/201412/08/W020141208492246972218.jpg" alt="2.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201412/08/t20141208_2153794.shtml" target="_blank">为黔南磷化工产业提供强劲动力</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201409/25/t20140925_1950024.shtml" target="_blank"><img src="./qnzcsfc/201409/25/W020140925400268593967.jpg" alt="360桌面截图20140925111016.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201409/25/t20140925_1950024.shtml" target="_blank">“两工程一争当”活动</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201409/01/t20140901_1890713.shtml" target="_blank"><img src="./qnzcsfc/201409/01/W020140901586905172970.jpg" alt="20140901162148.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201409/01/t20140901_1890713.shtml" target="_blank">云海</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201408/15/t20140815_1851518.shtml" target="_blank"><img src="./qnzcsfc/201408/15/W020140815503521192165.jpg" alt="360桌面截图20140815135534.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201408/15/t20140815_1851518.shtml" target="_blank">四大公园构建都匀新景观</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201407/23/t20140723_1792812.shtml" target="_blank"><img src="./qnzcsfc/201407/23/W020140723555319728990.jpg" alt="5.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201407/23/t20140723_1792812.shtml" target="_blank">央视纪录片《稻之道》摄制组走进三都</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201406/18/t20140618_1701973.shtml" target="_blank"><img src="./qnzcsfc/201406/18/W020140618588687894067.jpg" alt="360桌面截图20140618160850.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201406/18/t20140618_1701973.shtml" target="_blank">全国安全生产月咨询日</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201405/14/t20140514_1615243.shtml" target="_blank"><img src="./qnzcsfc/201405/14/W020140514597967174953.jpg" alt="2014051415470827172.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201405/14/t20140514_1615243.shtml" target="_blank">首个规模化标准化机采茶园投入量产</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201405/07/t20140507_1599534.shtml" target="_blank"><img src="./qnzcsfc/201405/07/W020140514412293015497.jpg" alt="4615632210816.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201405/07/t20140507_1599534.shtml" target="_blank">“五一”24万人次游荔波</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201403/18/t20140318_1479270.shtml" target="_blank"><img src="./qnzcsfc/201403/18/W020140318597125505368.jpg" alt="2014031716505858913.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201403/18/t20140318_1479270.shtml" target="_blank">全国十九个冬泳团队泳友聚会都匀剑江</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201312/16/t20131216_1276617.shtml" target="_blank"><img src="./qnzcsfc/201312/16/W020131216839100860594.jpg" alt="2010_9_30_6124969.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201312/16/t20131216_1276617.shtml" target="_blank">打造“升级版” 彰显“软实力”</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201312/16/t20131216_1276608.shtml" target="_blank"><img src="./qnzcsfc/201312/16/W020131216829806067037.jpg" alt="u=1047120866,2405070545&amp;fm=23&amp;gp=0.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201312/16/t20131216_1276608.shtml" target="_blank">黔南州20个示范小城镇建设如火如荼</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201312/16/t20131216_1276606.shtml" target="_blank"><img src="./qnzcsfc/201312/16/W020131216826756106924.jpg" alt="2011121610239219754.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201312/16/t20131216_1276606.shtml" target="_blank">“空中课堂”架起信息直通车</a> 
+         </div>     
+		 
+         <div class="pic"> 
+          <a href="./qnzcsfc/201312/16/t20131216_1276604.shtml" target="_blank"><img src="./qnzcsfc/201312/16/W020131216820678646006.jpg" alt="b3b7d0a20cf431adb760809b4b36acaf2fdd98e6.jpg"  width=238 height=175/></a>
+          <a href="./qnzcsfc/201312/16/t20131216_1276604.shtml" target="_blank">高效农业园区凸显黔南特色</a> 
+         </div>     
+		    
+
+        <!-- 图片列表 end --> 
+         
+       </div> 
+       <div id="List2"></div> 
+      </div> 
+     </div> 
+    </div> 
+<script language="javascript" type="text/javascript"> 
+<!--//--><![CDATA[//><!-- 
+//图片滚动列表 mengjia 070816 
+var Speed = 5; //速度(毫秒) 
+var Space = 10; //每次移动(px) 
+var PageWidth = 246; //翻页宽度 
+var fill = 0; //整体移位 
+var MoveLock = false; 
+var MoveTimeObj; 
+var Comp = 0; 
+var AutoPlayObj = null; 
+GetObj("List2").innerHTML = GetObj("List1").innerHTML; 
+GetObj('ISL_Cont').scrollLeft = fill; 
+GetObj("ISL_Cont").onmouseover = function(){clearInterval(AutoPlayObj);} 
+GetObj("ISL_Cont").onmouseout = function(){AutoPlay();} 
+AutoPlay(); 
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}} 
+function AutoPlay(){ //自动滚动 
+clearInterval(AutoPlayObj); 
+AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',5000); //间隔时间 
+} 
+function ISL_GoUp(){ //上翻开始 
+if(MoveLock) return; 
+clearInterval(AutoPlayObj); 
+MoveLock = true; 
+MoveTimeObj = setInterval('ISL_ScrUp();',Speed); 
+} 
+function ISL_StopUp(){ //上翻停止 
+clearInterval(MoveTimeObj); 
+if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0){ 
+Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth); 
+CompScr(); 
+}else{ 
+MoveLock = false; 
+} 
+AutoPlay(); 
+} 
+function ISL_ScrUp(){ //上翻动作 
+if(GetObj('ISL_Cont').scrollLeft <= 0){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft + GetObj('List1').offsetWidth} 
+GetObj('ISL_Cont').scrollLeft -= Space ; 
+} 
+function ISL_GoDown(){ //下翻 
+clearInterval(MoveTimeObj); 
+if(MoveLock) return; 
+clearInterval(AutoPlayObj); 
+MoveLock = true; 
+ISL_ScrDown(); 
+MoveTimeObj = setInterval('ISL_ScrDown()',Speed); 
+} 
+function ISL_StopDown(){ //下翻停止 
+clearInterval(MoveTimeObj); 
+if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0 ){ 
+Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth + fill; 
+CompScr(); 
+}else{ 
+MoveLock = false; 
+} 
+AutoPlay(); 
+} 
+function ISL_ScrDown(){ //下翻动作 
+if(GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft - GetObj('List1').scrollWidth;} 
+GetObj('ISL_Cont').scrollLeft += Space ; 
+} 
+function CompScr(){ 
+var num; 
+if(Comp == 0){MoveLock = false;return;} 
+if(Comp < 0){ //上翻 
+if(Comp < -Space){ 
+   Comp += Space; 
+   num = Space; 
+}else{ 
+   num = -Comp; 
+   Comp = 0; 
+} 
+GetObj('ISL_Cont').scrollLeft -= num; 
+setTimeout('CompScr()',Speed); 
+}else{ //下翻 
+if(Comp > Space){ 
+   Comp -= Space; 
+   num = Space; 
+}else{ 
+   num = Comp; 
+   Comp = 0; 
+} 
+GetObj('ISL_Cont').scrollLeft += num; 
+setTimeout('CompScr()',Speed); 
+} 
+} 
+//--><!]]> 
+</script> 
+
+<!--滚动end-->
+
+
+</div>
+
+<div class="tita">
+  <div class="titbgb" style=" background:url(./xyyw/images/P020131217002075773514.jpg) no-repeat;"><a href="./xyyw/" target="_blank">更多&gt;&gt;</a>&nbsp;&nbsp;&nbsp;</div>
+</div>
+
+
+<div class="tybox">
+     <div class="h3left">
+	 
+	      
+		 
+		 <div class="h3picbox">
+		   
+		   <span class="tit"><a href="./xyyw/xyxw/201509/17/t20150917_2851348.shtml" target="_blank">挣钱顾家两不误</a></span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;年来，平塘县大力发展现代高效农业园，采取“公司+基地+合作社+农户”的发展模式，投资10141.19万元,在以京舟坝为核心区规划建设了占地12.7万亩的白龙现代高效农业示范园。
+
+<span class="more"><a href="http://city.ce.cn/ztpd/gzqnzcszt/xyyw/xyxw/201509/17/t20150917_2851348.shtml" target="_blank">[详细]</a></a></span>
+		   <div class="clear"></div>
+	     </div>
+		 
+		 <div class="h3picbox">
+		   <a href="./xyyw/xyxw/201509/15/t20150915_2840885.shtml" target="_blank"><img src="./xyyw/xyxw/201509/15/W020150915634804942068.jpg" alt="22.jpg"  width=178 height=110/></a>
+		   <span class="tit"><a href="./xyyw/xyxw/201509/15/t20150915_2840885.shtml" target="_blank">罗甸10万亩水稻开镰收割</a></span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;"天然温室”的罗甸，田野里早已一片金黄，沉甸甸的稻穗挂满了稻杆，处处呈现一派丰收繁忙的景象。目前，全县已完成水稻收割面积500多亩，预计10月上旬可全部收割完毕。
+
+<span class="more"><a href="http://city.ce.cn/ztpd/gzqnzcszt/xyyw/xyxw/201509/15/t20150915_2840885.shtml" target="_blank">[详细]</a></a></span>
+		   <div class="clear"></div>
+	     </div>
+		 
+		 <div class="h3picbox">
+		   <a href="./xyyw/xyxw/201509/06/t20150906_2799509.shtml" target="_blank"><img src="./xyyw/xyxw/201509/06/W020150906380907488902.jpg" alt="22.jpg"  width=178 height=110/></a>
+		   <span class="tit"><a href="./xyyw/xyxw/201509/06/t20150906_2799509.shtml" target="_blank">平桂希望工程圆了561名学子大学梦</a></span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;“感谢爱心单位、企业的资助，这1000块钱帮我圆的不仅是大学梦，更是未来梦想。”日前，被中国地质大学录取的黄田镇长龙村贫困学生陈艺文在贺州市平桂管理区“希望工程·圆梦行动” 助学金集中发放仪式上，道出了所有受助生的心声。
+
+<span class="more"><a href="http://city.ce.cn/ztpd/gzqnzcszt/xyyw/xyxw/201509/06/t20150906_2799509.shtml" target="_blank">[详细]</a></a></span>
+		   <div class="clear"></div>
+	     </div>
+		 
+		 <div class="h3picbox">
+		   <a href="./xyyw/xyxw/201508/14/t20150814_2728846.shtml" target="_blank"><img src="./xyyw/xyxw/201508/14/W020150814630475542022.jpg" alt="22.jpg"  width=178 height=110/></a>
+		   <span class="tit"><a href="./xyyw/xyxw/201508/14/t20150814_2728846.shtml" target="_blank">“都匀毛尖世博名茶百年品牌推介活动”文艺演出动员大会在匀举行</a></span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+2015年是都匀毛尖茶荣获首届巴拿马万国博览会优质大奖章100周年，今年9月，贵州省茶产业发展大会暨都匀毛尖世博名茶百年品牌推介活动将在都匀举办。为做好此次活动的演出工作，8月10日，都匀毛尖世博名茶百年品牌推介活动文艺演出筹排动员大会在黔南民族师范学院举行。
+大会就演出排练工作进行安排部署，要求各演出团队之间加强沟通与协作，保证方案切实可行、人员状态稳定；要求参加人员以强烈的责任感和纪律观念，确保工作正常有序进行。
+据悉，此次文艺演出以展现黔南的茶文化、民族文化为主题，参与人数多，对参加人员要求高。（中共黔南州委对外宣传办公室）
+<span class="more"><a href="http://city.ce.cn/ztpd/gzqnzcszt/xyyw/xyxw/201508/14/t20150814_2728846.shtml" target="_blank">[详细]</a></a></span>
+		   <div class="clear"></div>
+	     </div>
+		 
+		 
+		 
+		 <div class="h3picbox" style=" background:0;">
+		   <a href="./xyyw/xyxw/201508/14/t20150814_2728845.shtml" target="_blank"><img src="./xyyw/xyxw/201508/14/W020150814630017913546.jpg" alt="22.jpg"  width=178 height=110/></a>
+		   <span class="tit"><a href="./xyyw/xyxw/201508/14/t20150814_2728845.shtml" target="_blank">福泉市省级非物质文化遗产“6·24民族传统文化节”隆重开幕</a></span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;8月8日－8月10日，福泉市省级非物质文化遗产—6•24民族传统文化节分别在马场坪街道办事处、陆坪镇两个会场隆重开幕。<span class="more"><a href="http://city.ce.cn/ztpd/gzqnzcszt/xyyw/xyxw/201508/14/t20150814_2728845.shtml" target="_blank">[详细]</a></a></span>
+		   <div class="clear"></div>
+	     </div>
+		 
+		 
+	     
+		 
+	  </div>
+	  
+	 <div class="h3right">
+	 
+	  
+	  
+	      <div class="h3rtit">&nbsp;&nbsp;区县链接</div>
+		  <div class="h3con">
+		      
+		       <div class="rimg"><a href="./xyyw/qxlj/201411/04/t20141104_2057603.shtml" target="_blank"><img src="./xyyw/qxlj/201411/04/W020141104521475123479.jpg" alt="3.jpg"  width=270 height=100/></a></div>
+			   
+			   
+			   
+					<div class="h3conpicbox">
+					   <div class="p3zi"><span class="tit"><a href="http://city.ce.cn/ztpd/qnzlywhzt/index.shtml" target="_blank">黔南州文化旅游专题</a></span><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;<span class="more"><a href="http://city.ce.cn/ztpd/qnzlywhzt/index.shtml" target="_blank">[详细]</a></a></span> </div>
+					   <div class="clear"></div>
+					</div>
+		      
+					<div class="h3conpicbox">
+					   <div class="p3zi"><span class="tit"><a href="./xyyw/qxlj/201509/02/t20150902_2793191.shtml" target="_blank">都匀市文明专项行动启动</a></span><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;8月27日，都匀市开展了“迎毛尖庆典、展匀城新貌”文明专项行动动员会，号召全市上下积极投身于文明专项行动中。
+
+<span class="more"><a href="http://city.ce.cn/ztpd/gzqnzcszt/xyyw/qxlj/201509/02/t20150902_2793191.shtml" target="_blank">[详细]</a></a></span> </div>
+					   <div class="clear"></div>
+					</div>
+		      
+					<div class="h3conpicbox">
+					   <div class="p3zi"><span class="tit"><a href="./xyyw/qxlj/201504/16/t20150416_2455533.shtml" target="_blank">“回家路” 还有多远</a></span><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;一栋60多平方米的简易棚屋，掩映在一片茂密山地里。如果不是爱心人士七弯八拐地带路，一般人很难找到这个隐蔽的地方。<span class="more"><a href="http://city.ce.cn/ztpd/gzqnzcszt/xyyw/qxlj/201504/16/t20150416_2455533.shtml" target="_blank">[详细]</a></a></span> </div>
+					   <div class="clear"></div>
+					</div>
+		      
+					<div class="h3conpicbox">
+					   <div class="p3zi"><span class="tit"><a href="./xyyw/qxlj/201504/16/t20150416_2455022.shtml" target="_blank">都匀一季度财政收入完成56078万元</a></span><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;截止3月31日，都匀市第一季度财政总收入累计完成56078万元, 同比增收7992万元, 增长16.62％；一般预算收入完成30086万元，同比增收256万元, 增长0.86％。<span class="more"><a href="http://city.ce.cn/ztpd/gzqnzcszt/xyyw/qxlj/201504/16/t20150416_2455022.shtml" target="_blank">[详细]</a></a></span> </div>
+					   <div class="clear"></div>
+					</div>
+		      
+					<div class="h3conpicbox">
+					   <div class="p3zi"><span class="tit"><a href="./xyyw/qxlj/201501/22/t20150122_2276571.shtml" target="_blank">三都26万农村人口喝上安全水</a></span><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;三都县积极整合优质水资源，高起点、高标准做好农村饮水安全工程，全县农村人畜饮水安全达标率提高到了87.67％，累计解决了26.94万农村人口的饮水安全。<span class="more"><a href="http://city.ce.cn/ztpd/gzqnzcszt/xyyw/qxlj/201501/22/t20150122_2276571.shtml" target="_blank">[详细]</a></a></span> </div>
+					   <div class="clear"></div>
+					</div>
+		      
+         </div>
+		 
+		  
+		  
+	 
+	 </div>
+     <div class="clear"></div>
+</div>
+
+
+
+
+
+
+
+<div class="tita">
+  <div class="titbgb" style="background:url(./qnz1/images/P020131216862778314688.jpg) no-repeat;"></div>
+</div>
+
+<div class="tybox"><div class=TRS_Editor><img name="“一圈两翼”发展格局" width="1000" height="500" id="“一圈两翼”发展格局" alt="" border="0" usemap="#“一圈两翼”发展格局Map" complete="complete" oldsrc="W020131211335060409659.jpg" src="./qnz1/201312/11/W020131211335060409659.jpg" /> <map name="“一圈两翼”发展格局Map" id="“一圈两翼”发展格局Map"><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1263675.shtml" shape="rect" coords="26,145,313,213" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1263822.shtml" shape="rect" coords="26,338,313,375" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1263880.shtml" shape="rect" coords="23,244,311,303" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1263923.shtml" shape="rect" coords="26,408,310,464" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1263935.shtml" shape="rect" coords="354,148,637,209" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1264003.shtml" shape="rect" coords="350,242,635,307" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1264015.shtml" shape="rect" coords="354,337,634,379" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1264071.shtml" shape="rect" coords="349,408,632,464" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1264089.shtml" shape="rect" coords="691,151,992,213" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1264107.shtml" shape="rect" coords="701,247,991,308" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1264138.shtml" shape="rect" coords="700,340,993,375" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/10/t20131210_1264157.shtml" shape="rect" coords="694,409,990,465" target="_blank" /></map></div></div>
+
+
+
+
+<div class="tita">
+  <div class="titbgb" style="background:url(./qnz2/images/P020131216861474867863.jpg) no-repeat;"></div>
+</div>
+
+<div class="tybox"><div class=TRS_Editor><img border="0" name="非遗" alt="" width="1000" height="500" usemap="#非遗Map" src="./qnz2/201312/13/W020131213626905686343.jpg" OLDSRC="W020131213626905686343.jpg" /> <map name="非遗Map"><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269061.shtml" shape="rect" target="_blank" coords="32,68,323,153" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269088.shtml" shape="rect" target="_blank" coords="30,158,323,232" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269392.shtml" shape="rect" target="_blank" coords="32,236,323,316" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269422.shtml" shape="rect" target="_blank" coords="32,319,323,399" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269563.shtml" shape="rect" target="_blank" coords="32,402,323,482" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269448.shtml" shape="rect" target="_blank" coords="356,114,552,251" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269482.shtml" shape="rect" target="_blank" coords="574,114,769,251" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269495.shtml" shape="rect" target="_blank" coords="789,116,987,253" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269505.shtml" shape="rect" target="_blank" coords="356,287,553,425" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269515.shtml" shape="rect" target="_blank" coords="574,286,769,423" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/12/t20131212_1269534.shtml" shape="rect" target="_blank" coords="789,285,985,424" /></map></div></div>
+
+
+
+
+<div class="tita">
+  <div class="titbgb" style="background:url(./qnz3/images/P020131217008540935900.jpg) no-repeat;"></div>
+</div>
+
+<div class="tybox"><div class=TRS_Editor><img name="旅游休闲好去处" width="1000" height="400" id="旅游休闲好去处" alt="" border="0" complete="complete" usemap="#旅游休闲好去处Map" src="./qnz3/201312/23/W020131223591399166072.jpg" OLDSRC="W020131223591399166072.jpg" /> <map name="旅游休闲好去处Map" id="旅游休闲好去处Map"><area href="http://city.ce.cn/zzz/ztxwzzz/201312/23/t20131223_1291572.shtml" shape="rect" coords="25,64,229,209" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/23/t20131223_1291539.shtml" shape="rect" coords="278,66,476,206" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/23/t20131223_1291516.shtml" shape="rect" coords="535,67,734,205" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/23/t20131223_1291496.shtml" shape="rect" coords="781,68,978,205" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/23/t20131223_1291505.shtml" shape="rect" coords="59,255,212,274" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/23/t20131223_1291485.shtml" shape="rect" coords="60,283,142,300" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/23/t20131223_1291463.shtml" shape="rect" coords="58,310,157,330" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/23/t20131223_1291315.shtml" shape="rect" coords="57,343,219,361" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/20/t20131220_1288481.shtml" shape="rect" coords="58,367,153,390" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/20/t20131220_1288474.shtml" shape="rect" coords="571,257,668,277" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/20/t20131220_1288423.shtml" shape="rect" coords="569,286,632,301" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/20/t20131220_1288403.shtml" shape="rect" coords="571,313,737,333" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/20/t20131220_1288324.shtml" shape="rect" coords="569,345,678,365" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/20/t20131220_1288213.shtml" shape="rect" coords="571,374,666,394" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/20/t20131220_1288423.shtml" shape="rect" coords="221,265,493,378" target="_blank" /><area href="http://city.ce.cn/zzz/ztxwzzz/201312/20/t20131220_1288403.shtml" shape="rect" coords="766,257,985,387" target="_blank" /></map><embed width="1000" height="500" pluginspage="http://www.macromedia.com/go/getflashplayer" src="./qnz3/201312/23/W020131223589439131183.swf" type="application/x-shockwave-flash" oldsrc="W020131223589439131183.swf" mediatype="flash" play="1" loop="1" menu="1"></embed></div></div>
+
+
+
+
+
+
+<div class="jybox">
+     <div class="jytit"><img src="/images/ztjy.jpg" /></div>
+	 <div class="jyzi">&nbsp;&nbsp;&nbsp;&nbsp;黔南布依族苗族自治州北靠省会贵阳，南与广西壮族自治区邻接，是多民族聚居的地方。湘黔铁路、株六铁路复线，贵新高等级公路和四通八达的国道省道县道，以及荔波机场、扩能改造的黔桂铁路和红水河、都柳江航运等，构成了快速便捷的立体交通网，形成西南“借船出海”的黄金通道，使黔南具有近海、近边的相对区位优势。黔南山青峰奇、风光绚丽，名胜古迹众多，民族文化悠久，民俗风情浓郁，荔波茂兰国家级自然保护区”集山、水、洞、林、湖和瀑布为一体，熔旅游、观光、科研考察于一炉，享有黔南“地球上喀斯特地区独一无二的绿色宝库”的盛誉，秀丽风光让人一游难忘。</div>
+</div>
+
+
+
+
+
+<!--友情链接和底部-->
+
+<!--友情链接--> 
+<div class="friend"> 
+  <div class="fle">友情链接:</div> 
+  <div class="top"> 
+  
+  <a href="http://www.people.com.cn/">人民网 </a> 
+  
+  <a href="http://www.xinhuanet.com/">新华网</a> 
+  
+  <a href="http://www.china.com.cn/">中国网</a> 
+  
+  <a href="http://www.chinadaily.com.cn/">中国日报网</a> 
+  
+  <a href="http://gb.cri.cn/">国际在线</a> 
+  
+  <a href="http://www.cntv.cn/">CNTV</a> 
+  
+  <a href="http://www.youth.cn/">中青网</a> 
+  
+  <a href="http://www.chinataiwan.org/">中国台湾网</a> 
+  
+  <a href="http://www.cnr.cn/">中广网</a> 
+  
+  <a href="http://www.tibet.cn/">中国西藏网</a> 
+  
+  <a href="http://www.chinanews.com/">中新网</a> 
+  
+  <a href="http://www.workercn.cn/">中工网</a> 
+  
+  <a href="http://www.gmw.cn/">光明网</a> 
+  
+  <a href="http://www.baidu.com/">百度</a> 
+  
+  <a href="http://www.sina.com.cn/">新浪</a> 
+  
+  <a href="http://www.sohu.com/">搜狐</a> 
+  
+  <a href="http://www.163.com/">网易</a> 
+  
+  <a href="http://www.ifeng.com/">凤凰</a> 
+  
+  <a href="http://www.qq.com/">腾讯</a> 
+  
+  <a href="http://www.hexun.com">和讯</a> 
+  
+  <a href="http://www.jrj.com.cn">金融界</a> 
+  
+  <a href="http://www.panguso.com/">盘古</a> 
+  
+  <a href="http://www.jike.com/">即刻</a> 
+  
+  </div>
+  <div class="top">
+  
+  <a href="http://www.ce.cn/newmain/link/department/index.shtml">国家机关</a> 
+  
+  <a href="http://finance.ce.cn/jrjg/index.shtml">金融机构</a> 
+  
+  <a href="http://www.ce.cn/cysc/ztpd/12/dh/index.shtml">重点企业</a> 
+  
+  <a href="http://district.ce.cn/zt/friend-link/index.shtml">地方重点网站</a> 
+  
+  <a href="http://www.newssc.org/">四川新闻网</a> 
+  
+  <a href="http://www.nen.com.cn/">东北新闻网</a> 
+  
+  <a href="http://www.dzwww.com/">大众网</a> 
+  
+  <a href="http://www.iqilu.com">齐鲁网</a> 
+  
+  <a href="http://www.fjsen.com/">东南网</a> 
+  
+  <a href="http://www.rednet.cn/">红网</a> 
+  
+  <a href="http://www.sznews.com/">深圳新闻网</a> 
+  
+  <a href="http://www.dayoo.com/">大洋网</a> 
+  
+  <a href="http://www.voc.com.cn/">华声在线</a> 
+  
+  <a href="http://www.ts.cn/">天山网</a>
+  
+  <a href="http://www.ce.cn/about/friend-link/"><font color="#000033">更多》</font></a> 
+  </div>
+  
+  <div class="clear"></div> 
+  </div> 
+</div> 
+
+
+<div class="con cebottom">
+<SCRIPT language="javascript" src="http://www.ce.cn/inc1/cebottom_uft8.js" ignoreapd="1"></SCRIPT>
+</div>
+
+
+<!--时尚首页广告-->
+
+
+
+<div id="life_ad_body" style="display:none;">
+
+<div style="width:600px;float:left;padding-left:5px;">
+<!--AdForward Begin:-->
+<iframe marginheight="0" marginwidth="0" frameborder="0" width="600" height="80" scrolling="no" src="http://ads.ce.cn/main/adfshow?user=CEAFP|district|banner&db=ceafp&border=0&local=yes">
+<noscript><a href="http://ads.ce.cn/main/adfclick?user=CEAFP|district|banner&db=ceafp"><img src="http://ads.ce.cn/main/adfshow?user=CEAFP|district|banner&db=ceafp" width="600" height="80" border="0"></a></noscript></iframe>
+<!--AdForward End-->
+</div> 
+
+<div style="width:195px;float:left;padding-left:3px; overflow:hidden;">
+<a href="http://www.ce.cn/ztpd/bwlx/100/index.shtml" target="_blank"><img src="http://i1.ce.cn/district/newarea/toprightad/200911/30/W020091201590861091116.jpg" width="195" height="80" vspace=0 border=0></a>
+
+</div></div>
+
+
+
+
+
+<script type="text/javascript">
+
+var life_ad = document.getElementById('life_ad');
+
+var life_ad_body = document.getElementById('life_ad_body');
+
+if (life_ad != null) {
+
+life_ad.innerHTML=life_ad_body.innerHTML;
+
+life_ad_body.innerHTML="";
+
+}
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

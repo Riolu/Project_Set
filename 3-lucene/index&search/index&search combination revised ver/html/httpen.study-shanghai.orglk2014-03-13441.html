@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Study in Shanghai</title>
+<link href="/hongbull.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.8.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+                        $(function(){
+                        $(":input").focus(function(){
+                            if($(this).val() ==this.defaultValue){  
+                            $(this).val("");           
+                                } 
+                        }).blur(function(){
+                        if ($(this).val() == '') {
+                        $(this).val(this.defaultValue);
+                                 }
+                        });
+                                        })
+                    
+-->
+
+</script>
+</head>
+
+<body>
+<div id="site">
+	<!--Top Bar 开始-->
+      <div id="top_bar">
+<form name=search_js1 method=post action='/e/search/index.php' > 
+<input name="show" type="hidden" value="title,smalltext,newstext,writer">
+   	  <div id="top_bar_Search">
+      	<div id="top_bar_Search_input"><input name="keyboard" id="sh1" class="top_Search_input" type="text" value="Search" />
+        </div>
+        <div id="top_bar_Search_BT">
+        <input name="" onclick="su();" type="button" class="top_Search_BT" style="cursor:hand"/>
+        </div>
+</form>
+<script>
+function su(){
+var key =$.trim(document.getElementById("sh1").value);
+
+if(key!='' && key!='Search'){
+document.search_js1.submit();
+}else{
+alert('Please enter the keywords!');
+}
+}
+</script>
+   	  </div>
+      <div id="top_Item_app"><a href="http://en.study-shanghai.org/appsh/" class="Font_14_Green">App</a></div>
+      <div id="top_Item_English"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Item_中文"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Logo"><img src="/images/logo.png" />
+      </div>
+    </div>
+    <!--Top Bar 结束-->
+    
+    <!--Banner 开始-->
+    <div id="Banner">
+		<div id="Banner_pic"><img src="/images/Banner4.png" /></div>
+  </div>
+  <script>
+  var Banner_count=3;
+  var Banner_Max =4;
+  var Banner_list = new Array("images/Banner1.png","images/Banner2.png","images/Banner3.png","images/Banner4.png"); 
+
+	$(document).ready(function(){
+ 		$("#Banner_left").click(function(){
+			
+    		if( Banner_count>1 ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count--;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+		
+ 		$("#Banner_right").click(function(){
+			
+    		if( Banner_count<Banner_Max ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count++;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+	});
+
+
+  </script>
+  <!--Banner 结束-->
+  <!--Menu 开始-->
+  <div id="nav" class="nav">
+  <ul class="first">
+<li class="a"><a class="fir" href="/"><span><img src="/images/Menu_Icon_home_on.png" style="margin-right:5px;"/>Home</span></a>
+    <li class="b"><a class="fir" href="/sis/"><span>Study in Shanghai</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+       <ul class="second" style="display: none;">
+          <li><a href="/sis/ws/2014-02-21/26.html"><span>Why Shanghai</span></a></li>
+          <li><a href="/sis/universities/"><span>Universities</span></a></li>
+          <li><a href="/sis/courses/"><span>Courses</span></a></li>
+          <li><a href="/sis/tutors/"><span>Faculty</span></a></li>
+          <li><a href="/e/action/ListInfo/?classid=19&oper=1"><span>Student Stories</span></a></li>
+        </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+    <li class="c"><a class="fir" href="/ag/"><span>Application Guide</span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ag/lr/"><span>Regulations</span></a></li>
+          <li><a href="/ag/visa/"><span>FAQs</span></a></li>
+          <li><a href="http://www.study-shanghai.org/Scholarship_en.asp"><span>Scholarships</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_3_en"><span>Applying Online</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_STA_en"><span>Status Check</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="d"><a class="fir" href="/ds/"><span>Discover Shanghai </span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ds/cl/"><span>Cultural Life</span></a></li>
+          <li><a href="/ds/museums/"><span>Museums</span></a></li>
+          <li><a href="/ds/living/"><span>Living</span></a></li>
+          <li><a href="/ds/sights/"><span>Sights</span></a></li>
+          <li><a href="/ds/itineraries/"><span>Itineraries</span></a></li> 
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="e"><a class="fir" href="/nc/news/"><span>News Center </span>  </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/nc/news/"><span>News</span></a></li>
+          <li><a href="/nc/Specials/"><span>Specials</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+    <li class="f"><a  class="fir" href="/lc/"><span>Learn Chinese</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/lc/lm/"><span>Mandarin</span></a></li>
+          <li><a href="/lc/ls/"><span>Shanghai Dialect</span></a></li>
+          <li><a href="/lc/hsk/"><span>HSK</span></a></li>
+        </ul>  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+<li class="g"><a class="fir" href="/is/"><span>International Schools</span></a>
+            <ul class="second" style="display: none;">
+              <li>
+                <a href="/is/is"><span>International School</span></a>
+              </li>
+              <li>
+                <a href="/is/id"><span>International Division of Local School</span></a>
+              </li>
+              <li>
+                <a href="/is/asc"><span>After School Class</span></a>
+              </li>
+            </ul>
+          </li>
+  </ul>  
+</div><div class="cb"></div>
+  <!--Menu 结束-->
+  <div id="NavBar">
+  <a href="/index.html">Home</a>&nbsp;>&nbsp;<a href="/lk/">Links</a> </div>  
+<div class="cb"></div>
+
+  <!--Content 开始-->
+  <div id="Content">
+	<div id="End_full">
+  		<div id="End_page_full">
+        	
+       <div id="End_page_top_title">
+         Links          </div>
+          <div class="End_page_top_datatime">Updated: 2014-03-13 </div>
+          <div class="End_page_top_datatime">  (<a href='http://cn.study-shanghai.org/' target=_blank>study-shanghai.org</a>)</div>
+          <div id="End_page_top_content">
+
+<p>&nbsp;</p>
+<table border="0" cellspacing="1" cellpadding="1" width="920" align="left">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong><span style="color: #ff6600">STATE-LEVEL EDUCATIONAL ORGANIZATIONS</span></strong></p>
+            </td>
+            <td>
+            <p><strong><span style="color: #ff6600">RELATED SHANGHAI MUNICIPAL ORGANIZATIONS</span></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://www.moe.edu.cn/"><span style="color: #333333"><span style="font-size: small">Ministry of Education of the People&rsquo;s Republic of China</span></span></a></td>
+            <td><a href="http://www.shmec.gov.cn/"><span style="color: #333333"><span style="font-size: small">Shanghai Education</span></span></a></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.csc.edu.cn/"><span style="color: #333333"><span style="font-size: small">China Scholarship Council</span></span></a></td>
+            <td><a href="http://180.168.211.10/eemis_tydic/"><span style="color: #333333"><span style="font-size: small">Exit-Entry Administration Bureau of Shanghai Public Security&nbsp;</span></span></a></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><a href="http://www.shciq.gov.cn/"><span style="color: #333333"><span style="font-size: small">Shanghai Entry-Exit Inspection and Quarantine Bureau</span></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table border="0" cellspacing="1" cellpadding="1" width="950" align="left">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong><span style="color: #ff6600">COLLEGES AND UNIVERSITIES IN SHANGHAI</span></strong></p>
+            </td>
+            <td>
+            <p><strong><span style="color: #ff6600">CHINESE EMBASSY AND CONSULATE-LEVEL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.fso.fudan.edu.cn/"><span style="color: #333333"><span style="font-size: small">Fudan University</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.sino-education.org.au/chn"><span style="color: #333333"><span style="font-size: small">Education Office, Embassy of the PRC in Australia</span></span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.sie.sjtu.edu.cn/"><span style="color: #333333"><span style="font-size: small">Shanghai Jiaotong University</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://sydney.china-consulate.org/chn/"><span style="color: #333333"><span style="font-size: small">Consulate-General of the PRC in Sydney</span></span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.shsmu.edu.cn/"><span style="color: #333333"><span style="font-size: small">Shanghai Jiaotong University School of Medicine</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.edumel.org/"><span style="color: #333333"><span style="font-size: small">Education Office, Consulate-General of the PRC in Melbourne</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="color: #333333"><span style="font-size: small"><a href="http://lxs.ecnu.edu.cn/"><span style="color: #333333">East China Normal University</span></a></span></span></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://lxs.ecnu.edu.cn/"><span style="color: #333333">&nbsp;</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+            <td><span style="color: #333333"><span style="font-size: small"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.romaniaedu.org/"><span style="color: #333333">Sectia de Educatie, Ambasada Republicii Populare Chineze in Romania</span></a></span></span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://oisa.shisu.edu.cn/"><span style="color: #333333"><span style="font-size: small">Shanghai International Studies University</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.sino-education.org/"><span style="color: #333333"><span style="font-size: small">Office of Educational Affairs of the Embassy of the PRC in USA</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><a href="http://study.tongji.edu.cn/index.php?classid=3398"><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="font-size: small">Tongji University</span></span><span style="font-size: small">&nbsp;</span></span></a></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.edusf.org/"><span style="color: #333333"><span style="font-size: small">Education Office, Consulate General of the PRC in San Francisco</span></span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.shu.edu.cn/IndexPage.html"><span style="color: #333333"><span style="font-size: small">Shanghai University</span></span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.edulosangeles.org/"><span style="color: #333333"><span style="font-size: small">Education Office, Consulate General of the PRC in Los Angeles</span></span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.shnu.edu.cn/"><span style="color: #333333"><span style="font-size: small">Shanghai Normal University</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://houston.china-consulate.org/chn"><span style="color: #333333"><span style="font-size: small">Consulate-General of the PRC in Huston</span></span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.shufe.edu.cn/structure/index"><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="color: #333333"><span style="font-size: small">Shanghai University of Finance</span></span></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;and Economics</span></span></a></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.educhicago.org/"><span style="color: #333333"><span style="font-size: small">Education Section of Consulate-General of the PRC in Chicago</span></span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.shtcm.com/"><span style="color: #333333"><span style="font-size: small">Shanghai University of Traditional Chinese Medicine</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.eduembca.org/"><span style="color: #333333"><span style="font-size: small">Education Office, Embassy of the PRC in Canada</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.dhu.edu.cn/"><span style="color: #333333"><span style="font-size: small">Donghua University</span></span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.chinaeduvan.org/"><span style="color: #333333"><span style="font-size: small">Education Office, Consulate General of the PRC in Vancouver</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small"><a href="http://ies.ecust.edu.cn/"><span style="color: #333333">East China University of Science and Technology&nbsp;</span></a></span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.educationtoronto.org/"><span style="color: #333333"><span style="font-size: small">Education Office, Consulate General of the PRC in Toronto</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><u>&nbsp;</u></span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.ecupl.edu.cn/"><span style="color: #333333"><span style="font-size: small">East China University of Political Science and Law</span></span></a></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+            <td><span style="color: #333333"><span style="font-size: small"><a href="http://www.edu-chinaembassy.org.uk/"><span style="color: #333333">Education Section, Embassy of the PRC in the UK</span></a></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.sta.edu.cn/"><span style="color: #333333">Shanghai Theater Academy</span></a></span></span><span style="color: #333333"><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.consulateman.org/"><span style="color: #333333"><span style="font-size: small">Education Section, Consulate General of the PRC in Manchester</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><u>&nbsp;</u></span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.shift.edu.cn/"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="color: #333333">Shanghai University of International&nbsp;Business and Economics&nbsp;</span></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></a></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.china-embassy.or.jp/chn"><span style="color: #333333"><span style="font-size: small">Education Section, Consulate General of the PRC in&nbsp;Japan</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.shcmusic.edu.cn/"><span style="color: #333333">Shanghai Conservatory of Music</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://osaka.china-consulate.org/chn"><span style="color: #333333"><span style="font-size: small">Consulate-General of the PRC in Osaka</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.sues.edu.cn/"><span style="color: #333333">Shanghai University of Engineering Science</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://sapporo.china-consulate.org/chn"><span style="color: #333333"><span style="font-size: small">Consulate-General of the PRC in Sapporo</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.sus.edu.cn/"><span style="color: #333333">Shanghai University of Sport</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.cscse.edu.cn/"><span style="color: #333333"><span style="font-size: small">Education Section, Consulate General of the PRC in Fukuoka</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.usst.edu.cn/"><span style="color: #333333">University of Shanghai for Science and Technology</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://nagasaki.china-consulate.org/chn"><span style="color: #333333"><span style="font-size: small">Consulate-General of the PRC in Nagasaki</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.shfc.edu.cn/"><span style="color: #333333">Shanghai Finance University</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.eduru.org/"><span style="color: #333333"><span style="font-size: small">Education Office, Embassy of the PRC in Russia</span></span></a></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.shou.edu.cn/"><span style="color: #333333">Shanghai Ocean University</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://saint-petersburg.china-consulate.org/chn/hzxx/jy/default.htm"><span style="color: #333333"><span style="font-size: small">Consulate-General of the PRC in St. Petersburg</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.shmtu.edu.cn/"><span style="color: #333333">Shanghai Maritime University</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://ua.chineseembassy.org/chn/jylx/default.htm"><span style="color: #333333"><span style="font-size: small">Embassy of the PRC in Ukraine</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.shiep.edu.cn/"><span style="color: #333333">Shanghai University of Electric Power</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://by.chineseembassy.org/chn/jylx/default.htm"><span style="color: #333333"><span style="font-size: small">Education Office, Embassy of the PRC in&nbsp;Belarus</span></span></a></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.sit.edu.cn/"><span style="color: #333333">Shanghai Institute of Technology</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.de-moe.edu.cn/"><span style="color: #333333"><span style="font-size: small">Education Office, Embassy of the PRC in&nbsp;Germany</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.sdju.edu.cn/"><span style="color: #333333">Shanghai Dianji University</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://munich.china-consulate.org/chn"><span style="color: #333333"><span style="font-size: small">Genera konsulat der Volksrepublik China in Munchen</span></span></a></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.lixin.edu.cn/"><span style="color: #333333">Shanghai Lixin University of Commerce</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.edu-ambchine.org/"><span style="color: #333333"><span style="font-size: small">Education Office, Embassy of the PRC in&nbsp;France</span></span></a></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.ceibs.edu/"><span style="color: #333333">China Europe International Business School&nbsp;</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><a href="http://www.chinanz-education.org/"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="color: #333333"><span style="font-size: small">Education Office, Embassy of the PRC in&nbsp;New Zealand</span></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></a></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.dicccn.com/"><span style="color: #333333">Shanghai International College of Culture</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="color: #333333"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="color: #333333"><span style="font-size: small"><a href="http://www.educn-fi.org/"><span style="color: #333333">Education Office of Embassy of the PRC in Finland</span></a></span></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.educn-fi.org/"><span style="color: #333333">&nbsp;</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.siva.edu.cn/"><span style="color: #333333">Shanghai Institute of Visual Art</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.chinese-embassy.no/chn"><span style="color: #333333">Embassy of the PRC in the Kingdom of Norway</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.chinaembassy.dk/"><span style="color: #333333">Embassy of the PRC in the Kingdom of Denmark</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.cnedu.nu/"><span style="color: #333333">Education Section, the Embassy of the PRC in Sweden</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://it.chineseembassy.org/chn/jylx/default.htm"><span style="color: #333333">Embassy of the PRC in the Republic of Italy</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://nl.china-embassy.org/chn/zhgx/jyjl/"><span style="color: #333333">Embassy of the PRC in the Kingdom of Netherlands</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="color: #333333"><a href="http://at.china-embassy.org/chn/jysw/"><span style="color: #333333">Education office of Embassy of the PRC in&nbsp;Austria</span></a></span></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://at.china-embassy.org/chn/jysw/"><span style="color: #333333">&nbsp;</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="color: #333333"><a href="http://www.chinaedu.be/"><span style="color: #333333">Education Section, Embassy of the PRC in the Kingdom of Belgium</span></a></span></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.chinaedu.be/"><span style="color: #333333">&nbsp;</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.cnedu-ch.org/"><span style="color: #333333">Educational Affairs Office of the Embassy of the PRC in the Switzerland</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.chinaembassy.bg/chn/kjwh/jyjl/default.htm"><span style="color: #333333">Educational Affairs Office of the Embassy of the PRC in&nbsp;Bulgaria</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://cz.chineseembassy.org/chn/zjgx/jyjl/default.htm"><span style="color: #333333">Embassy of the PRC in the Czech Republic</span></a></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">&nbsp;</span>&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="color: #333333"><a href="http://www.chinaembassy.org.pl/chn/jy/"><span style="color: #333333">Embassy of the PRC in the Republic of Poland</span></a></span></span></span><span style="color: #333333"><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.chinaembassy.org.pl/chn/jy/"><span style="color: #333333">&nbsp;</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><a href="http://www.chinaembassy.hu/chn/zxgx/jylx/default.htm"><span style="color: #333333">Embassy of the PRC in Hungary</span></a></span></span><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><span style="font-size: small"><span lang="EN-US" style="font-family: 'Arial','sans-serif'; mso-fareast-font-family: 宋体; mso-font-kerning: 0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"><span style="color: #333333"><a href="http://www.chinaedukr.org/"><span style="color: #000000">Education Office of Embassy of the PRC in Korea </span></a></span></span></span></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><span style="color: #333333"><span style="font-size: small"><a href="http://www.chinese-embassy.org.za/chn/zngx/jy/default.htm"><span style="color: #333333">Embassy of the PRC in the Republic of Africa</span></a></span></span></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><span style="color: #333333"><span style="font-size: small"><a href="http://il.china-embassy.org/chn/jyjl/"><span style="color: #333333">Embassy of the PRC in the State of Israel</span></a></span></span></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><span style="color: #333333"><span style="font-size: small"><a href="http://www.edusg.org.cn/"><span style="color: #333333">Education Office, Emabssy of the PRC in the Republic of Singapore</span></a></span></span></td>
+        </tr>
+        <tr>
+            <td><span style="color: #333333"><span style="font-size: small">&nbsp;</span></span></td>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+          </div>
+        </div>
+        <div id="blank_bar_h13">
+        </div>
+  <!--底部按钮 开始-->
+      <div class="Learn_Bottom_menu_full">
+      <div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="http://studyinshanghai.cndy.org/e/action/ListInfo/?classid=19&oper=1"><img src="/images/Learn_Icon1.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="http://studyinshanghai.cndy.org/e/action/ListInfo/?classid=19&oper=1">Student Stories</a></div>
+        </div>
+
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="http://studyinshanghai.cndy.org/lc/"><img src="/images/Learn_Icon2.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="http://studyinshanghai.cndy.org/lc/">Learn Chinese</a></div>
+        </div>
+        
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="/appsh/"><img src="/images/Learn_Icon3.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right2">
+          <a href="#">APP</a></div>
+        </div>
+
+    </div>
+    <!--底部按钮 结束-->    
+	</div>
+  </div>
+  <!--Content 结束-->
+        <div id="bottom_bar">
+  	<div id="bottom_left"></div>
+    <div id="bottom_content">
+    	<div id="bottom_content1">
+        	<ul>
+            <li><a href="http://en.study-shanghai.org/sitemap/2014-03-13/442.html" class="Font_12_fff">Sitemap</a></li>
+            <li><a href="http://en.study-shanghai.org/tou/2014-04-07/655.html" class="Font_12_fff">Terms of Use</a></li>
+            <li><a href="http://en.study-shanghai.org/cu/2014-04-07/656.html" class="Font_12_fff">Contact Us</a></li>
+            <li><a href="http://en.study-shanghai.org/lk/2014-03-13/441.html" class="Font_12_fff">Links</a></li>
+            </ul>
+        </div>
+        <div class="cb"></div>
+        <span>Copyright 2013 Shanghai Municipal Education Commission. All rights reserved.</span>
+    </div>    
+    <div id="bottom_right"></div>
+  </div>
+<div style="dispaly:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1252937499'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D1252937499%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<script type="text/javascript" src="/js/nav.js"></script>
+  
+</div> 
+</body>
+</html>

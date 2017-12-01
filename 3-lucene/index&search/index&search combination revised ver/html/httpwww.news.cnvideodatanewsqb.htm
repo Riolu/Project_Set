@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="publishid" content="1169633.0.100.0"/>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" media="screen and (min-width:0px) and (max-width: 767px)" />
+<link href="http://www.xinhuanet.com/video/datanews/css/hbs_base.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.xinhuanet.com/video/datanews/css/mobile.css" media="screen and (min-width:0px) and (max-width: 767px)" />
+<link rel="apple-touch-icon" sizes="114x114" href="/desk_icon.png" />
+<base target="_blank" />
+<style type="text/css">
+* {
+padding:0px;
+margin:0px;
+}
+.digg {
+height: auto;
+width: 12px;
+font-size:12px;
+font-weight:normal;
+}
+.digg a {
+display: block;
+height: 12px;
+width: 12px;
+background-image: url(http://www.xinhuanet.com/video/datanews/good.gif);
+background-repeat: no-repeat;
+position: relative;
+color: #999999;
+text-decoration: none;
+}
+.digg .good {	
+margin-left:150px;
+margin-top:-16px;	
+}
+.digg .good a {
+background-position: -12px 0px;
+}
+.digg .good a:hover {
+background-position: 0px 0px;
+}
+.digg a p {
+padding-left:15px;
+line-height:10px;
+}
+</style>
+<script type="text/javascript" src="http://www.xinhuanet.com/static/jq.js"></script>
+<script src="http://www.xinhuanet.com/video/datanews/qb.js"></script>
+<script type="text/javascript">
+var isTouchDevice = 'ontouchstart' in window;
+var userAgent = navigator.userAgent.toLowerCase(),l=window.location;
+</script>
+<script type="text/javascript">
+request  = function (paras){ 
+	var url = location.href;
+	var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");
+	var paraObj = {}
+	for (i=0; j=paraString[i]; i++){
+		paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);
+	}
+	var returnValue = paraObj[paras.toLowerCase()];
+	if(typeof(returnValue)=="undefined"){
+		return "";
+	}
+	else{
+		return returnValue;
+	}
+};
+
+var total = data.length;           //总记录数
+var recordsPurPage = 60;           //每页显示记录数
+var pages = Math.ceil(total/recordsPurPage);		//总页数
+
+var curpage = request('spage');
+if(typeof(curpage) == "undefined" || curpage == ''){
+	curpage = 1;
+}
+function getPageCount(){ return pages;}
+function getRecordCount(){ return total;}
+
+function writePageDiv(pageElement){
+var url = window.location.href;
+var index = url.lastIndexOf ('/');
+var end = url.lastIndexOf('.');
+var page = '';
+if(end < 0 || index < 0 || index + 1 >= end){
+	page = 'index';
+}
+else{
+	page = url.substring(index+1, end)
+}
+
+var pageCount = getPageCount();
+var pageIndex = pageCount;
+if(page == 'index'){
+	writePage(pageCount * 1,pageCount, pageElement);
+}
+else{
+	writePage(page * 1, pageCount, pageElement);
+}
+};
+
+function writePage(pageIndex, pageCount, pageElement){
+var end,start;
+
+var str = '<a href="javascript:location.reload()" target="_self">刷新</a>&nbsp;<a href="qb.htm?spage=1" target="_self">首页</a>&nbsp;';
+
+if (parseInt(curpage) > 1){
+	str += ('<A href="qb.htm?spage='+eval(curpage - 1)+'" target="_self">上一页 </A>&nbsp;');
+}
+
+for(var i = 1 ; i <= pageCount; i++ ){
+	str += '&nbsp;';                       //分页增加空格
+	
+	if(i == parseInt(curpage)){
+		str += '<FONT color="#ff6600">'+i+'</FONT>';
+	}else{
+		str += '<a href="qb.htm?spage='+i+'">' + i + '</a>';
+	}	
+}
+str += "&nbsp;";
+
+if(pageIndex == 1){
+	str += '&nbsp;';
+}else if(parseInt(curpage) < pageCount){
+	str += ('&nbsp;<A href="qb.htm?spage='+eval(parseInt(curpage)+1)+'" target="_self">下一页 </A>');
+}
+
+if(pageCount == 1){
+	str += '&nbsp;尾页&nbsp;';
+}else{
+	str += '&nbsp;<A href="qb.htm?spage='+pageCount+'" target="_self">尾页</A>&nbsp;';
+}
+
+str += ('&nbsp;<SPAN class=pagenum>共'+pageCount+'页 , '+getRecordCount()+'条记录</SPAN>');	
+pageElement.innerHTML = str;
+}
+</script>
+<style type="text/css">
+.pageDiv{text-align:center;}
+<!--
+/* 导航部分 */
+#nav{ height:83px; width:650px;}
+.nav_box{  width:650px; float:left; }
+.nav_box ul{ margin-left:20px; height:83px }
+.nav_box ul li{float:left; width:32px; text-align:center; margin-left:30px; }
+.nav_box ul li.icon1 a{ background: url(http://www.xinhuanet.com/video/datanews/images/icon1.png) no-repeat;font-size:14px; color:#303135; line-height:40px; display:block; width:32px; height:40px; padding-top:35px}
+.nav_box ul li.icon1 a:hover{ background: url(http://www.xinhuanet.com/video/datanews/images/icon1.png) no-repeat; text-decoration:none;}
+.nav_box ul li.icon2 a{ background: url(http://www.xinhuanet.com/video/datanews/images/icon02.png) no-repeat;font-size:14px; color:#303135; line-height:40px; display:block; width:32px; height:40px; padding-top:35px}
+.nav_box ul li.icon2 a:hover{ background: url(http://www.xinhuanet.com/video/datanews/images/icon2.png) no-repeat; text-decoration:none;}
+.nav_box ul li.icon3 a{ background: url(http://www.xinhuanet.com/video/datanews/images/icon03.png) no-repeat;font-size:14px; color:#303135; line-height:40px;  display:block; width:32px; height:40px; padding-top:35px}
+.nav_box ul li.icon3 a:hover{ background: url(http://www.xinhuanet.com/video/datanews/images/icon3.png) no-repeat;text-decoration:none;}
+.nav_box ul li.icon4 a{ background: url(http://www.xinhuanet.com/video/datanews/images/icon04.png) no-repeat;font-size:14px; color:#303135; line-height:40px;  display:block; width:32px; height:40px; padding-top:35px}
+.nav_box ul li.icon4 a:hover{ background: url(http://www.xinhuanet.com/video/datanews/images/icon4.png) no-repeat; text-decoration:none;}
+.nav_box ul li.icon5 a{ background: url(http://www.xinhuanet.com/video/datanews/images/icon05.png) no-repeat;font-size:14px; color:#303135; line-height:40px;display:block; width:32px; height:40px;  padding-top:35px}
+.nav_box ul li.icon5 a:hover{ background: url(http://www.xinhuanet.com/video/datanews/images/icon5.png) no-repeat;text-decoration:none;}
+.nav_box ul li.icon6 a{ background: url(http://www.xinhuanet.com/video/datanews/images/icon06.png) no-repeat;font-size:14px; color:#303135; line-height:40px;display:block; width:32px; height:40px;  padding-top:35px}
+.nav_box ul li.icon6 a:hover{ background: url(http://www.xinhuanet.com/video/datanews/images/icon6.png) no-repeat;text-decoration:none;}
+.nav_box ul li.icon7 a{ background: url(http://www.xinhuanet.com/video/datanews/images/icon07.png) no-repeat;font-size:14px; color:#303135; line-height:40px; display:block; width:32px;height:40px;padding-top:35px}
+.nav_box ul li.icon7 a:hover{ background: url(http://www.xinhuanet.com/video/datanews/images/icon7.png) no-repeat;text-decoration:none;}
+.nav_box ul li.icon8 a{ background: url(http://www.xinhuanet.com/video/datanews/images/icon08.png) no-repeat;font-size:14px; color:#303135; line-height:40px;display:block; width:32px; height:40px;  padding-top:35px}
+.nav_box ul li.icon8 a:hover{ background: url(http://www.xinhuanet.com/video/datanews/images/icon8.png) no-repeat; text-decoration:none;}
+.nav_box ul li.icon9 a{ background: url(http://www.xinhuanet.com/video/datanews/images/icon09.png) no-repeat;font-size:14px; color:#303135; line-height:40px;  display:block; width:32px; height:40px; padding-top:35px}
+.nav_box ul li.icon9 a:hover{ background: url(http://www.xinhuanet.com/video/datanews/images/icon9.png) no-repeat; text-decoration:none;}
+.banner_b{background: url(http://www.xinhuanet.com/video/datanews/images/banner1.jpg) 50% 0 no-repeat;
+top: 84px;
+position: relative;
+}
+-->
+</style>
+<title>新华网数据新闻</title>
+    <meta name="description" content=" " />
+</head>
+<body style="background:#e9f1f3">
+<div id="mobileHeader" class="domMobile">
+<a class="logo" href="http://www.xinhuanet.com">
+</a>
+<span class="name">
+数据新闻
+</span>
+<span class="right">
+</span>
+<div class="mobileNavList clearfix">
+<script type="text/javascript" src="http://www.news.cn/static/js/20150323_moblie_nav.js"></script>
+<script>
+$("#mobileHeader .right").click(function(){
+	var $_this = $(this),
+		$_mobileNavList = $("#mobileHeader .mobileNavList");
+	if(!$_this.hasClass("open")){
+		$_this.addClass("open");
+		$_mobileNavList.animate({height:420}, 200);
+	}else{
+		$_this.removeClass("open");
+		$_mobileNavList.animate({height:0}, 200);
+	}
+});
+</script>
+</div>
+<div class="phnav clearfix">
+<a class="on" href="http://www.xinhuanet.com/video/datanews/qb.htm">
+全部
+</a>
+<a href="http://www.xinhuanet.com/video/datanews/tj.htm">
+推荐
+</a>
+<a href="http://www.xinhuanet.com/video/datanews/sz.htm">
+时政
+</a>
+<a href="http://www.xinhuanet.com/video/datanews/cj.htm">
+财经
+</a>
+<a href="http://www.xinhuanet.com/video/datanews/gj.htm">
+国际
+</a>
+<a href="http://www.xinhuanet.com/video/datanews/sh.htm">
+社会
+</a>
+<a href="http://www.xinhuanet.com/video/datanews/kp.htm">
+科普
+</a>
+<a href="http://www.xinhuanet.com/video/datanews/gw.htm">
+感悟
+</a>
+<a href="http://www.xinhuanet.com/video/datanews/jh.htm">
+交互
+</a>
+</div>
+</div>
+<div id="top">
+<div id="top1">
+<span>
+<img src="http://www.xinhuanet.com/video/datanews/images/LOGO.jpg" border="0" usemap="#Map" />
+<map name="Map" id="Map">
+<area shape="rect" coords="0,39,46,63" href="http://www.news.cn/" target="_blank" />
+</map>
+</span>
+<div id="nav">
+<div class="nav_box">
+<ul>
+<li class="icon1"><a href="http://www.xinhuanet.com/video/datanews/qb.htm" target="_self">全部</a></li>
+<li class="icon2"><a href="http://www.xinhuanet.com/video/datanews/tj.htm" target="_self">推荐</a></li>
+<li class="icon3"><a href="http://www.xinhuanet.com/video/datanews/sz.htm" target="_self">时政</a></li>
+<li class="icon4"><a href="http://www.xinhuanet.com/video/datanews/cj.htm" target="_self">财经</a></li>
+<li class="icon5"><a href="http://www.xinhuanet.com/video/datanews/gj.htm" target="_self">国际</a></li>
+<li class="icon6"><a href="http://www.xinhuanet.com/video/datanews/sh.htm" target="_self">社会</a></li>
+<li class="icon7"><a href="http://www.xinhuanet.com/video/datanews/kp.htm" target="_self">科普</a></li>
+<li class="icon8"><a href="http://www.xinhuanet.com/video/datanews/gw.htm" target="_self">感悟</a></li>
+<li class="icon9"><a href="http://www.xinhuanet.com/video/datanews/jh.htm" target="_self">交互</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="banner_b">
+<div class="banner">
+<img src="../titlepic/12751/127515891_1442889215688_title0h.png" alt="头图" />
+</div>
+</div>
+<div class="webpage">
+<!-- 分割线 -->
+<div class="search">
+<form action="http://www.chinaso.com/search/pagesearch.htm" target="_blank">
+<input type="text" placeholder="搜索" onFocus="this.style.color='#000';" style="color: rgb(0, 0, 0);width: 123px;	 background:url(http://www.xinhuanet.com/video/datanews/images/search.gif); 
+float: left;font-size: 12px;" name="q" value="" />
+<input type="submit" value="" style="float:left; width:28px;" />
+</form>
+</div>
+<!-- 分割线 -->
+<div id="wrap">
+</div>
+<div id="outlinebar" style="margin-left:0;max-width: 100%;">
+<script>
+$(function(){
+    $('#wrap .box').live(
+        'mouseenter mouseleave', function(event) 
+        { if (event.type == 'mouseenter') 
+            { $(this).find(".miaoshu").slideDown();}
+          else {$(this).find(".miaoshu").slideUp();}
+        });
+});
+</script>
+</div>
+</div>
+<div class="clear"></div>
+<div id="trsPageHead" class="pageDiv"></div>
+<div id="foot">
+<div class="copyright">Copyright © 2000 - 2015 XINHUANET.com　All Rights Reserved. 　制作单位：新华网<br />
+版权所有 新华网股份有限公司
+</div>
+</div>
+<div class="footer domMobile">
+<script type="text/javascript" src="http://www.xinhuanet.com/static/js/com_copyright.js"></script>
+</div>
+<div class="saomao"><img src="http://www.xinhuanet.com/video/datanews/images/sm.jpg" /></div>
+<div class="fanhui"><a href="#" target="_self"><img src="http://www.xinhuanet.com/video/datanews/images/fanhui.gif" /></a></div>
+<script src="http://www.xinhuanet.com/video/datanews/jquery.imagesloaded.js"></script>
+<script src="http://www.xinhuanet.com/video/datanews/jquery.wookmark.js"></script>
+<script>writePageDiv(document.getElementById('trsPageHead'));</script>
+<SCRIPT type="text/javascript">
+var oldpage = parseInt(curpage) + parseInt(2*(curpage-1));                //瀑布流使用的分页
+(function ($) {
+  var handler = null,
+      page = oldpage,
+      isLoading = false,
+      apiURL = 'http://www.xinhuanet.com/video/datanews/qb.js',
+      pageCount = Math.ceil(eval(data).length/20);
+
+  // Prepare layout options.
+  var options = {
+    autoResize: true, // This will auto-update the layout when the browser window is resized.
+    container: $(''), // Optional, used for some extra CSS styling
+    offset: 4, // Optional, the distance between grid items
+    itemWidth: 200 // Optional, the width of a grid item
+  };
+
+function letDivCenter(divName){   
+//var top = ($(window).height() - $(divName).height())/2;   
+var left = ($(window).width() - $(divName).width())/2;   
+//var scrollTop = $(document).scrollTop();   
+var scrollLeft = $(document).scrollLeft();   
+$(divName).css( { position : 'absolute', left : left + scrollLeft } ).show();  
+  }
+
+  /**
+   * When scrolled all the way to the bottom, add more tiles.
+   */
+  function onScroll(event) {
+    // Only check when we're not still waiting for data.
+    if(!isLoading) {
+      // Check if we're within 100 pixels of the bottom edge of the broser window.
+      var closeToBottom = ($(window).scrollTop() + $(window).height() > $(document).height() - 100);
+      if(closeToBottom) {
+        loadData();
+      }
+    }
+  };
+
+  /**
+   * Refreshes the layout.
+   */
+  function applyLayout() {
+    options.container.imagesLoaded(function() {
+      // Create a new layout handler when images have loaded.
+      handler = $('#wrap');
+      handler.wookmark(options);
+    });
+  };
+
+  /**
+  * Loads data from the API.
+  */
+  function loadData() {
+      isLoading = true;
+      $('#loaderCircle').show();
+
+      /*$.ajax({
+      url: apiURL,
+      dataType: 'jsonp',
+      data: {page: page}, // Page parameter to make sure we load new data
+      success: onLoadData
+      });*/
+      //alert(data);
+      onLoadData(data);
+  };
+
+  /**
+  * Receives data from the API, creates HTML for images and updates the layout
+  */
+  function onLoadData(data) {
+      isLoading = false;
+      $('#loaderCircle').hide();
+      // Increment page index for future calls.
+      if (page <= pageCount) {
+          letDivCenter('#loading');
+          // Create HTML for the images.
+          var html = '';
+
+          var i = (page - 1) * 20, length, image;
+          if (page < pageCount){
+		  	length = i + 20;
+		  }else if (page == pageCount){
+		  	length = eval(data).length;
+		  }
+		  //if(i <= parseInt(curpage * recordsPurPage) && (page <= curpage * 3))
+		  if(isTouchDevice){
+			if(!(i <= eval(data).length)){
+				return false;
+			}
+		  }else{
+			if(!(i <= parseInt(curpage * recordsPurPage) && (page <= curpage * 3))){
+				return false;
+			}
+		  }
+		  //if(i <= eval(data).length ){
+			  for (; i < length; i++) {                            
+				  //稿件id
+				  var nArtid = 0;
+				  {
+					  var myurl = data[i].url2;
+					  var pathArray = myurl.split('/');
+					  myurl = pathArray[pathArray.length - 1];
+					  var pathArray2 = myurl.split('_');
+					  myurl = pathArray2[pathArray2.length - 1];
+					  var pathArray3 = myurl.split('.');
+					  nArtid = pathArray3[0];
+				  }
+				  //控件id
+				  var ctrlId = "set_good_" + nArtid;
+	
+				  image = data[i];
+				  html += '<div class="box"><div class="info"><div class="pic">';
+				  
+				 if(data[i].url2.indexOf('"') >= 0){
+					data[i].url2 = data[i].url2.replace(/\"/g, "");
+				 }
+	
+				  html += '<a href="' + data[i].url2 + '">';
+	
+				  html += '<img src="' + data[i].url1 + '" width="200" height="200" alt="' + image.title + '" /></a><div class="title">';
+	
+				  html += '<a href="' + data[i].url2 + '">' + image.title + '</a><p style="font-size:12px; color: #999999">' + data[i].time + '</p></div>';
+	
+				  // Image title.
+				  html += '<div class="miaoshu">' + data[i].abstract + '</div>';
+	
+				  html += '<div class="digg" id="digg_' + nArtid + '">';
+				  html += '<div class="good"><a onclick="SetgbFunction(' + nArtid + ",'" + ctrlId + "'" + ');return false;" href="#" id="' + ctrlId + '" title="赞" target="_blank"><p>0</p></a> </div>'
+				  html += '</div>'
+	
+				  html += '</div></div></div>';
+	
+				  //初始加载
+				  LoadGoodFunction(nArtid, ctrlId);
+			  }
+          	  page++;
+	  	  //}else{
+			//return ;
+		  //}
+          setTimeout(function() { $("#loading").hide(); }, 1000);
+      }
+      else {
+          return;
+      }
+
+      // Add image HTML to the page.
+      $('#wrap').append(html);
+
+      // Apply layout.
+      applyLayout();
+  };
+
+  // Capture scroll event.
+  $(window).bind('scroll', onScroll);
+
+  // Load first data from the API.
+  loadData();
+})(jQuery);
+
+//服务器地址
+function LoadGoodFunction(aid,ctrlId)
+{
+    var svraddr = GetSvrAddr(aid);
+    var remoteurl = svraddr + "gi?id=" + aid;
+	GetJsonFunction(remoteurl, ctrlId, 1);
+  return 0; 
+}
+
+function tipsBox(options) 
+{
+                options = $.extend({
+                    obj: null,  //
+                    str: "+1",  //
+                    startSize: "12px",  //
+                    endSize: "30px",    //
+                    interval: 600,  //
+                    color: "red",    //
+                    callback: function() {}    //
+                }, options); 
+								
+                $("body").append("<span class='num'>"+ options.str +"</span>");
+                var box = $(".num");
+                var left = options.obj.offset().left + options.obj.width() / 2;
+                var top = options.obj.offset().top - options.obj.height();
+                box.css({
+                    "position": "absolute",
+                    "left": left + "px",
+                    "top": top + "px",
+                    "z-index": 9999,
+                    "font-size": options.startSize,
+                    "line-height": options.endSize,
+                    "color": options.color
+                });
+                box.animate({
+                    "font-size": options.endSize,
+                    "opacity": "0",
+                    "top": top - parseInt(options.endSize) + "px"
+                }, options.interval , function() {
+                    box.remove();
+                    options.callback();
+                });
+}
+
+function GetSvrAddr(aid) {
+    var svraddr = "http://dz.news.cn/";    
+    return svraddr;
+}
+
+function SetgbFunction(aid,ctrlId) {
+
+    var svraddr = GetSvrAddr(aid);
+	var remoteurl = svraddr + "ai?id=" + aid + "&a=g";
+	//异步调用
+	GetJsonFunction(remoteurl, ctrlId, 0);
+		
+  return 0;
+}
+function GetJsonFunction(aRemoteurl, actrlId, aInitLoad) {
+
+    $.getScript(aRemoteurl, function() {
+        var ret = retccsn.r;
+        var id = retccsn.i;
+        var good = retccsn.g;
+
+        //先取第一个p值
+        var nFirstp = $("p", $("#" + actrlId)).html();
+
+        $("#" + actrlId).html('<p>' + good + '</p>');
+
+        var isSayMsg = 0;
+        //是否为初始加载
+        if (0 == aInitLoad) {
+            //不是初始加载的处理
+            //已经点过赞
+            if (2 == ret) {
+
+                isSayMsg = 1; 
+            }
+            else {
+                if (good > nFirstp) {
+                    //显示效果
+                    tipsBox({ obj: $("#" + actrlId), str: "<b style='font-family:Microsoft YaHei;'>+1</b>", callback: function() { } });
+                }
+                else {
+
+                    isSayMsg = 1; 
+                }
+            }
+        }
+        if (1 == isSayMsg)
+        {
+            //alert("您今日已经对此稿件点过赞！谢谢。");
+        }
+
+    });
+}
+
+</SCRIPT>
+<div style="display:none"><div id="fwl">010020050550000000000000011200000000000000</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020050550000000000000011200000000000000")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020050550000000000000011200000000000000" border="0" /></noscript></div>   </body>
+</html>

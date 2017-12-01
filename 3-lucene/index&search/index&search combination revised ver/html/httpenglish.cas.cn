@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<title>Chinese Academy of Sciences</title>
+<link href="./images/css_2014en.css" rel="stylesheet" type="text/css" />
+<link href="./images/css_rili_2014en.css" rel="stylesheet" type="text/css" />
+<style>
+#caltable{margin:0 auto}
+.main{overflow: visible;}
+.maina1 p a{padding-top:5px;}
+.maina3x .on{color:#4a6baf;background-color:gainsboro}
+</style>
+
+<script language="JavaScript" type="text/javascript" src="./images/jquery-1.11.1.js"></script>
+<script language="javascript" type="text/javascript" src="./images/yao_2014en.js"></script>
+<script language="JavaScript" type="text/javascript" src="./images/js_2014en.js"></script>
+
+</head>
+<Style>
+/*.Calendar input.Calendarinput1{ width:40px;font-family:Calibri;font-size:16px;color:#fff;font-weight: bold;text-decoration: none;background-color: #3b93ce;height: 20px;border:none;}
+.Calendar input.Calendarinput2{ width:16px;font-family:Calibri;font-size:16px;color:#fff;font-weight: bold;text-decoration: none;background-color: #3b93ce;height: 20px;border:none;}*/
+.Calendar input.Calendarinput1{ width:40px;margin-left:32px;font-family:Calibri;font-size:16px;color:#fff;font-weight: bold;text-decoration: none;background-color: #3b93ce;height: 20px;border:none;}
+.Calendar input.Calendarinput2{font-family:Calibri;font-size:16px;color:#fff;font-weight: bold;text-decoration: none;background-color: #3b93ce;height: 20px;border:none;}
+
+.Calendar {font-family: verdana;text-decoration: none;width:318px;}
+.CalendarTD {background-color:#4a6baf;height: 20px;width:11%;text-align: center;}
+.Calendar tbody td{height:24px;font-family:Calibri;font-size:14px;color:#fff;font-weight: bold; position:relative; overflow:visible;}
+.Calendar td{border-bottom:1px solid #3156a4; border-right:1px solid #3156a4;}
+.Title {font-family:Calibri;font-size:16px;color:#fff;font-weight: bold;height: 27px;text-align: center;text-decoration: none;background-color: #3b93ce; position:relative;}
+.Title a{ text-decoration:none;}
+.Day {background-color: #4a6baf;width:11%;text-align: center;}
+.DaySat {text-decoration: none;background-color:#4a6baf;text-align: center;width: 12%;}
+.DaySun {text-decoration: none;background-color:#4a6baf;text-align: center;width: 12%;}
+.DayNow {background-color: #2d9a2c;text-align: center;}
+.DayButton1{font-size:12px;font-weight: bold;color: #fff;cursor:hand;position:absolute; left:15px; top:5px;}
+.DayButton2{font-size:12px;font-weight: bold;color: #fff;cursor:hand;position:absolute; right:15px; top:5px;}
+.maina3xy_xianshi{ width:212px;height:184px; position:absolute; left:-70px; top:25px; z-index:100;}
+.maina3xya_sanjiao{ width:188px; height:8px; background:url(images/en_ld_index_rili_sanjiao_2014en.png) no-repeat bottom; position:relative;z-index:102;top:1px;}
+.maina3xyb_content{ text-align:left;width:190px; padding:14px 10px 10px; background:#052f53;word-break:break-all;border:1px solid #9dcffa;}
+.maina3xyb_content p{font-size:12px;font-weight:bold;line-height:18px;color:#69c4f8;font-family:Arial, Helvetica, sans-serif;}
+.maina3xyb_content h1{font-size:12px;line-height:18px;color:#fff;font-family:Arial, Helvetica, sans-serif;}
+.maina3xyb_content h2{font-size:12px;line-height:18px;color:#fff;font-family:Arial, Helvetica, sans-serif;}
+.maina3xyb_content a{color:#9cff01;font-size:12px;line-height:18px; text-decoration:underline;}
+/*.maina3xyb1{ width:166px; word-break:break-all;border:1px solid #5e7e9d;}*/
+.maina div,.maina{ overflow:visible;}
+</Style>
+<body>
+
+<SCRIPT language="JavaScript">
+lastScrollY = 0;
+function heartBeat(){
+var diffY;
+if (document.documentElement && document.documentElement.scrollTop)
+diffY = document.documentElement.scrollTop;
+else if (document.body)
+diffY = document.body.scrollTop
+else
+{/*Netscape stuff*/}
+//alert(diffY);
+percent=.1*(diffY-lastScrollY);
+if(percent>0)percent=Math.ceil(percent);
+else percent=Math.floor(percent);
+document.getElementById("leftDiv").style.top = parseInt(document.getElementById("leftDiv").style.top)+percent+"px";
+document.getElementById("rightDiv").style.top = parseInt(document.getElementById("rightDiv").style.top)+percent+"px";
+lastScrollY=lastScrollY+percent;
+//alert(lastScrollY);
+}
+//下面这段删除后，对联将不跟随屏幕而移动。
+window.setInterval("heartBeat()",1);
+//-->
+//关闭按钮
+function close_left1(){
+    left1.style.visibility='hidden';
+}
+function close_left2(){
+    left2.style.visibility='hidden';
+}
+function close_right1(){
+    right1.style.visibility='hidden';
+}
+function close_right2(){
+    right2.style.visibility='hidden';
+}
+//显示样式
+document.writeln("<style type=\"text\/css\">");
+document.writeln("#leftDiv,#rightDiv{ position:absolute;}");
+document.writeln(".itemFloat{width:114px;height:auto;line-height:5px}");
+document.writeln("<\/style>");
+//以下为主要内容
+document.writeln("<div id=\"leftDiv\" style=\"top:40px;left:5px\">");
+//------左侧各块开始
+//---L1
+//document.writeln("<div id=\"left1\" class=\"itemFloat\">");
+//document.writeln("<embed src=flash/100x300-left.swf width=100 height=300></embed>");
+//document.writeln("<br><a href=\"javascript:close_left1();\" title=\"关闭上面的广告\">×<\/a><br><br><br><br>");
+//document.writeln("<\/div>");
+//---L2
+//document.writeln("<div id=\"left2\" class=\"itemFloat\">");
+//document.writeln("<a target=_blank href=http://www.lanrentuku.com/><img border=0 src=images/100x100-left.gif /></a>");
+//document.writeln("<br><a href=\"javascript:close_left2();\" title=\"关闭上面的广告\">×<\/a>");
+//document.writeln("<\/div>");
+//------左侧各块结束
+document.writeln("<\/div>");
+document.writeln("<div id=\"rightDiv\" style=\"top: 135px; right: 40px; *right:25px!important; z-index:99; \">");
+//------右侧各块开始
+//---R1
+//document.writeln("<div id=\"right1\" class=\"itemFloat\">");
+//document.writeln("<embed src=flash/100x300-right.swf width=100 height=300></embed>");
+//document.writeln("<br><a href=\"javascript:close_right1();\" title=\"关闭上面的广告\">×<\/a><br><br><br><br>");
+//document.writeln("<\/div>");
+//---R2
+document.writeln("<div id=\"right2\" class=\"itemFloat\">");
+document.writeln("<a href='http://english.cas.cn/Special_Reports/Pioneer_Initiative/' target='_blank'><img src='./images/114237.jpg' style='width:114px; height:237px;' /></a>");
+document.writeln("<br><a href=\"javascript:close_right2();\"><img src='http://www.cnic.cas.cn/images/gif_x.gif' width='11' height='11' border='0' vspace='3' /><\/a>");
+document.writeln("<\/div>");
+//------右侧各块结束
+document.writeln("<\/div>");
+</SCRIPT>
+
+<script type="text/javascript">
+function escapeTrs(str){//转义trs关键字
+	var arr = new Array("\\\\","!","@","#","\\$","\%","\\^","\&","\\*","\\(","\\)","\\_","\\+","\-","\=","\\{","\\}","\\|","\\[","\\]",";","'",":","\"","\<","\>","\\?","\,","\\.","\/");
+	
+	for(var i=0;i<arr.length;i++){
+	 var re = new RegExp(arr[i],"img");
+	 str = str.replace(re, '\\' + arr[i]);
+	}
+	
+	return str;
+}
+function dealKeywords(sword, relation)
+{	
+	var sTemp = "";
+	var swordtemp = ""; 
+	var sArray;
+
+	if(sword.indexOf("*")<0&&sword.indexOf("+")<0&&sword.indexOf(")")<0&&sword.indexOf("(")<0&&sword.indexOf("\\")<0)
+	{
+		sword = escapeTrs(sword);
+		//不含trs关键字
+		sArray = sword.split(" ");//输入框空格处理,空格表示 relation 关系
+		for(var i=0; i<sArray.length;i++)
+		{	
+			sTemp = sArray[i].replace(/^\s+|\s+$/g,"");//去掉sword前后空格
+			if(sTemp!="")
+			{
+				swordtemp += "'"+ sTemp + "' "+relation+" ";/*加上''符号,处理trs带运算符的检索词报错的问题*/
+			}					
+		}
+		if(swordtemp.lastIndexOf(" "+relation+" ")!=-1)//去掉relation结尾
+		{
+			swordtemp = swordtemp.substring(0,swordtemp.length-relation.length-2);
+		} 
+	}
+	
+	else//包含trs关键字
+	{    
+		 if(sword.indexOf("\\")!=-1){
+		 	var re = new RegExp("\\\\","img");
+	 		sword = sword.replace(re, '\\\\');
+		 }
+		 swordtemp = "'"+sword+"'";
+	}
+	return swordtemp;	
+} 
+
+function search_check() {
+	var sword =document.getElementById("iptSword").value.replace(/^\s+|\s+$/g,"");
+	
+	if (sword=='' || sword=='Please input keywords') {
+
+		alert('Please input keywords!');
+		return false;
+	} else {	
+		document.searchform.searchword.value = dealKeywords(sword, "and");
+		document.searchform.preKeyword.value = encodeURI(document.getElementById("iptSword").value);
+		document.searchform.submit();
+	}
+}
+</script>
+<div class="top1">
+  <div class="top1a">
+    <div class="top1a1" style="padding-top:15px;"><a href="http://english.cas.cn"><img src="http://english.cas.cn/images/en_pol_02_2014en.png" width="315" height="74" /></a></div>
+    <div class="top1a2">
+      <div class="top1a2x">
+        <form name="searchform" method="post" action="http://search.cas.cn/search" onSubmit="return search_check()">
+        	<input type="hidden" name="channelid" value="31870" />
+	  	     <input type="hidden" name="option" value="ideosingle" />
+		     <input type="hidden" name="searchword" value="" />
+		     <input type="hidden" name="preKeyword" value="" />
+          <table width="300" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="76" style="text-align: center;"><a href="http://www.cas.cn/">中文</a></td>
+              <td width="183"><label for="textfield"></label>
+                <input class="top1input1" type="text" name="iptSword" id="iptSword" value="search" onFocus="this.value=''"onBlur="if(!value){value=defaultValue;}" /></td>
+              <td width="51"><input type="image" src="http://english.cas.cn/images/en_pqj_04_2014en.png" name="button" id="button" value="提交" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="top1a2y">
+        <ul>
+          <li class="a2yli1"><a href="http://english.cas.cn/contact/">Contact</a></li>
+          <li class="a2yli2"><a href="http://english.cas.cn/sitemap/">Sitemap</a></li>
+          <!--<li class="a2yli3"><a href="http://e.weibo.com/zkyzs"  target="_blank" >App</a></li>-->
+          <li class="a2yli4"><a href="http://e.weibo.com/zkyzs"  target="_blank" >Micro-blog</a></li>
+          <li class="a2yli5"><a href="http://e.weibo.com/zkyzs"  target="_blank" >Wechat</a></li>
+        </ul>
+      </div>
+    </div>
+    <br class="clear"  />
+  </div>
+</div>
+<div class="top2">
+  <ul id="sddm">
+    <li class="top2li1">
+      <h1 style="cursor:pointer;display:inline-block;"><a href="http://english.cas.cn/about_us/"id="aa1" onmouseover="mopen('m1')" onmouseout="mclosetime()">
+               <h2 style="cursor:pointer;">About Us</h2>
+  </a></h1>
+      <div class="top2x" id="m1" onmouseover="mcancelclosetime(); aa1.className='now'" onmouseout="mclosetime();aa1.className=' '"><span>
+        <h3><a href="http://english.cas.cn/about_us/introduction/">Brief Introduction</a><a href="http://english.cas.cn/about_us/speech/">From the President</a><a href="http://english.cas.cn/about_us/administration/">Administration</a><a href="http://english.cas.cn/about_us/reports/">Annual Reports</a><a href="http://english.cas.cn/about_us/contact_us/">Contact Us</a></h3>
+        </span> </div>
+    </li>
+    <li>
+      <h1 style="cursor:pointer;display:inline-block;"><a href="http://english.cas.cn/institutes/"  id="aa2" onmouseover="mopen('m2')" onmouseout="mclosetime()">
+        <h2 style="cursor:pointer;">CAS Institutes</h2>
+        </a></h1>
+      <div class="top2x" id="m2" onmouseover="mcancelclosetime(); aa2.className='now'" onmouseout="mclosetime();aa2.className=' '"><span>
+        <h3><a href="http://english.cas.cn/institutes/cas_guide/" target="_blank">Guide to CAS</a><a href="http://english.cas.cn/institutes/research_bodies/">Research Institutes</a><a href="http://english.cas.cn/institutes/universities/">Universities & Supporting Organizations</a><a href="http://english.cas.cn/institutes/companies/">Other Units & CAS Holding Companies</a><a href="http://english.cas.cn/institutes/management/">Management Organizations</a> </h3>
+        </span> </div>
+    </li>
+    <li>
+      <h1 style="cursor:pointer;display:inline-block;"><a href="http://english.cas.cn/newsroom/" id="aa3" onmouseover="mopen('m3')" onmouseout="mclosetime()">
+        <h2 style="cursor:pointer;">Newsroom</h2>
+        </a></h1>
+      <div class="top2x" id="m3" onmouseover="mcancelclosetime(); aa3.className='now'" onmouseout="mclosetime();aa3.className=' '"><span>
+        <h3><a href="http://english.cas.cn/newsroom/news/">News Updates</a><a href="http://english.cas.cn/newsroom/research_news/">Research News</a><a href="http://english.cas.cn/newsroom/mutimedia_news/">Multimedia News</a><a href="http://english.cas.cn/newsroom/china_research/">Research in China</a><a href="http://english.cas.cn/newsroom/events/">Upcoming Events</a> </h3>
+        </span> </div>
+    </li>
+    <li>
+      <h1 style="cursor:pointer;display:inline-block;"><a href="http://english.cas.cn/research/"  id="aa4" onmouseover="mopen('m4')" onmouseout="mclosetime()">
+        <h2 style="cursor:pointer;">Research</h2>
+        </a></h1>
+      <div class="top2x" id="m4" onmouseover="mcancelclosetime(); aa4.className='now'" onmouseout="mclosetime();aa4.className=' '"><span>
+        <h3><a href="http://english.cas.cn/research/facts_figures/">Facts and Figures</a><a href="http://english.cas.cn/research/key_lab/">Key Laboratories</a><a href="http://english.cas.cn/research/facilities/">Big Science Facility</a><a href="http://english.cas.cn/research/database/">Scientific Database</a></h3>
+        </span> </div>
+    </li>
+    <li>
+      <h1 style="cursor:pointer;display:inline-block;"><a id="aa5" onmouseover="mopen('m5')" onmouseout="mclosetime()">
+        <h2 style="cursor:pointer;">Scientists</h2>
+        </a></h1>
+      <div class="top2x" id="m5" onmouseover="mcancelclosetime(); aa5.className='now'" onmouseout="mclosetime();aa5.className=' '"><span>
+        <h3><a href="http://english.casad.cas.cn/mem/divsions/domap/" target="_blank">CAS Members</a>
+<a href="http://english.cas.cn/scientists/researchers/">CAS Researchers</a></h3>
+        </span> </div>
+    </li>
+    <li>
+      <h1 style="cursor:pointer;display:inline-block;"><a href="http://english.cas.cn/cooperation/"   id="aa6" onmouseover="mopen('m6')" onmouseout="mclosetime()">
+  <h2 style="cursor:pointer;">International Cooperation</h2>
+
+        </a></h1>
+      <div class="top2x" id="m6" onmouseover="mcancelclosetime(); aa6.className='now'" onmouseout="mclosetime();aa6.className=' '"><span>
+        <h3 style="width:225px"><a href="http://english.cas.cn/cooperation/awards/">Awards</a><a href="http://english.cas.cn/cooperation/conferences/">International Conferences</a><a href="http://english.cas.cn/cooperation/partners/">Our Partners</a><a href="http://english.cas.cn/cooperation/fellowships/">Fellowships</a></h3>
+        </span> </div>
+    </li>
+    <li>
+      <h1 style="cursor:pointer;display:inline-block;"><a href="http://english.cas.cn/publications/" id="aa7" onmouseover="mopen('m7')" onmouseout="mclosetime()">
+        <h2 style="cursor:pointer;">Publications</h2>
+        </a></h1>
+      <div class="top2x" id="m7" onmouseover="mcancelclosetime(); aa7.className='now'" onmouseout="mclosetime();aa7.className=' '"><span>
+        <h3><a href="http://english.cas.cn/publications/multidisciplinary/">Multidisciplinary</a><a href="http://english.cas.cn/publications/earth_sciences/">Earth Sciences</a><a href="http://english.cas.cn/publications/math_phys_chem/">Mathematics, Physics and Chemistry</a><a href="http://english.cas.cn/publications/biotec/">Life Sciences and Biotechnology</a><a href="http://english.cas.cn/publications/tech_sciences/">Technological Sciences</a><a href="http://english.cas.cn/publications/environment/">Environment</a></h3>
+        </span> </div>
+    </li>
+    <li>
+      <h1 style="cursor:pointer;display:inline-block;"><a href="http://english.cas.cn/resources/" id="aa8" onmouseover="mopen('m8')" onmouseout="mclosetime()">
+        <h2 style="cursor:pointer;">Resources</h2>
+        </a></h1>
+      <div class="top2x" id="m8" onmouseover="mcancelclosetime(); aa8.className='now'" onmouseout="mclosetime();aa8.className=' '"><span>
+        <h3><a href="http://english.las.cas.cn/">Library</a><a href="http://english.cas.cn/resources/multimedia/">Multimedia</a><a href="http://english.cas.cn/resources/pop_science/">Popular Science</a><a href="http://english.cas.cn/resources/archive/">Archive</a></h3>
+        </span> </div>
+    </li>
+    <li>
+      <h1 style="cursor:pointer;display:inline-block;"><a  id="aa9" onmouseover="mopen('m9')" onmouseout="mclosetime()">
+        <h2 style="cursor:pointer;">Join Us</h2>
+        </a></h1>
+      <div class="top2x" id="m9" onmouseover="mcancelclosetime(); aa9.className='now'" onmouseout="mclosetime();aa9.className=' '"><span>
+        <h3><a href="http://english.cas.cn/join_us/jobs/">Career Opportunities</a><a href="http://english.cas.cn/join_us/study/">Study at CAS</a></h3>
+        </span> </div>
+    </li>
+  </ul>
+</div>
+    <div class="top3">
+
+
+    	<div class="top3x">
+    		<img src="./head/201510/W020151016354400041583.jpg" width="836" height="309" alt="tooth fossil;modern homo sapiens;modern human" title="tooth fossil;modern homo sapiens;modern human" /> 
+         </div>
+         <div class="top3a">
+
+<style type="text/css">
+.top3a ul li a{ font-size:28px;}
+</style>
+
+
+                    	<ul>
+                              	<li class="top3ali1" style="color:#fff; padding-bottom:20px;"><a href="./head/201510/t20151016_153530.shtml" title="Teeth Reveal Modern Humans in Asia 80,000 Years Ago">Teeth Reveal Modern Humans in Asia 80,000 Years Ago</a></li>
+                    <li class="top3ali2">Tooth fossils found in a county in central China's Hunan Province indicate the early form of modern homo sapiens appeared in the region more than 80,000 ye...</li>
+                    <li class="top3ali3"><a href="./head/201510/t20151016_153530.shtml" style=" font-size:14px; color:#fff;">MORE>></a></li>
+                
+ </ul>
+      </div>
+
+    </div>
+    <div class="main">
+    	<div class="maina">
+       	  <div class="maina1" style=" position:relative;">
+                	                    
+            	<div class="maina1x" style="height:170px;">
+<div class="maina1xd" style="height:170px;">
+<img src="./newsroom/mutimedia_news/201510/W020151010502573349099.jpg" width="305" height="170" alt="meteorological observation tower;meteorological observation;real-time photo" title="meteorological observation tower;meteorological observation;real-time photo" />
+</div>
+                </div>
+                <p style=" height:55px;font-weight:900; margin-left:8px; width:305px; background:url(./images/en_plk_03_2014en.png); position: absolute; left: 4px; top:127px; line-height:0px;  " ><a href="./newsroom/mutimedia_news/201510/t20151010_153343.shtml">Real-time Photos Taken by IAP Meteorological Observation Tower Open...</a>
+</p>
+                <div class="maina1y">
+                	<a href="./newsroom/mutimedia_news/" title="Multimedia News">Multimedia News</a>
+                </div>
+          </div>
+            <div style="position:relative;" class="maina2">
+            	<ul>
+                 
+                	<li style="height:36px;"><a href="./newsroom/news/201510/t20151027_153830.shtml" title="China’s Scientific Satellites to Enter Uncharted Territory">China’s Scientific Satellites to Enter Uncharted Territory</a></li>
+                  
+                	<li style="height:36px;"><a href="./newsroom/news/201510/t20151027_153838.shtml" title="Chinese Scientists Probe Mystery of Solar Storms">Chinese Scientists Probe Mystery of Solar Storms</a></li>
+                  
+                	<li style="height:36px;"><a href="./newsroom/news/201510/t20151022_153744.shtml" title="Advances in Atmospheric Sciences Announces New Partnership with IAMAS">Advances in Atmospheric Sciences Announces New Partnership with IAMAS</a></li>
+                  
+
+                </ul>
+                <div style="position:absolute; left:0; bottom:0;" class="maina2x"><a href="./newsroom/news/" title="News Updates">News Updates</a>
+</div>
+            </div>
+<div class="maina3">
+            	<div class="maina3x">
+                	<table border="0" cellpadding="0" cellspacing="0" class="Calendar" id="caltable">
+<thead>
+     <tr align="center" valign="middle"> 
+  <td colspan="7" class="Title">
+   <a href="javaScript:subMonth();" title="Last Month" Class="DayButton1">◄</a><input class="Calendarinput2" style="text-align: right;" name="month" type="text" size="7" onKeyDown="if (event.keyCode==13)" />,&nbsp;<input class="Calendarinput1" style="margin-left:0px;" name="year" type="text" size="4" maxlength="4" onKeyDown="if (event.keyCode==13)" onKeyUp="this.value=this.value.replace(/[^0-9]/g,'')" onpaste="this.value=this.value.replace(/[^0-9]/g,'')" /><a href="JavaScript:addMonth();" title="Next Month" Class="DayButton2">►</a>
+  </td>
+ </tr>
+</thead>
+<TBODY border="0" cellspacing="0" cellpadding="0" ID="calendar" >
+ <Script LANGUAGE="JavaScript">
+  for (var intWeeks = 0; intWeeks < 6; intWeeks++)
+  {
+   document.write("<TR style='cursor:hand'>");
+   for (var intDays = 0; intDays < days.length;intDays++) document.write('<TD class=CalendarTD onMouseover="buttonOver();" onMouseOut="buttonOut();"></TD>');
+   document.write("</TR>");
+  } 
+ </Script>
+</TBODY>
+</TABLE>
+<Script LANGUAGE="JavaScript">
+ Calendar();
+</Script>
+                </div>
+                <div class="maina3y"><a href="./newsroom/events/" title="Upcoming Events">Upcoming Events</a>
+</div>
+            </div><br class="clear"  />
+        </div>
+        <div class="mainb">
+        	<div class="mainb1">
+            	<div class="mainb1x">
+                	<div class="mainb1x1" style="height:305px">
+                   	  <h2><a href="./newsroom/research_news/" title="Research News">Research News</a></h2>
+                        <ul>
+
+ 
+                       	  <li  class="153859"><a href="./newsroom/research_news/201510/t20151027_153859.shtml" title="How Will ENSO's Impacts Change under Global Warming?">How Will ENSO's Impacts Change under Global Warming?</a></li>
+                       
+                       	  <li  class="153789"><a href="./newsroom/research_news/201510/t20151023_153789.shtml" title="Groundwater Impacts Cotton Growth and Root Zone Water Balance in the Aksu Oasis of Xinjiang">Groundwater Impacts Cotton Growth and Root Zone Water Balance in the Aksu Oasis of Xinjiang</a></li>
+                       
+                       	  <li  class="153783"><a href="./newsroom/research_news/201510/t20151023_153783.shtml" title="Long Noncoding RNA &lt;EM&gt;ADINR&lt;/EM&gt; Regulates Adipogenesis">Long Noncoding RNA <EM>ADINR</EM> Regulates Adipogenesis</a></li>
+                       
+                       	  <li  class="153771"><a href="./newsroom/research_news/201510/t20151023_153771.shtml" title="Xinhua Insight: Fossil Teeth Fill the Gaps on Human Evolution">Xinhua Insight: Fossil Teeth Fill the Gaps on Human Evolution</a></li>
+                       
+
+       
+                   </ul>
+                    </div>
+                    <div class="mainb1x2" style="height:295px">
+
+                      <img src="./newsroom/research_news/201510/W020151027512509315295.jpg" width="217" height="137" alt="ENSO;global warming;tropical rainfall variability;regional climate change" title="ENSO;global warming;tropical rainfall variability;regional climate change" />
+                        <p id="153859"><a href="./newsroom/research_news/201510/t20151027_153859.shtml" style="font-size:14px; color:#0b0b0b;">How Will ENSO's Impacts Change under Global Warming?</a></p><!-- style="height:90px;" -->
+                      <a  class="b1xa1" href="./newsroom/research_news/">Learn more</a>
+         
+               
+</div><br class="clear"  />
+                </div>
+                <div class="mainb1y" style="height:215px;"> 
+                	<h2><a href="./newsroom/china_research/" title="Research in China">Research in China</a></h2>
+                    <div class="mainb1y1">
+                    	<div id="YSlide">
+
+	   <p class="YSample" id="b1ya"><a href="./newsroom/china_research/201510/t20151028_153933.shtml"><img src="./newsroom/china_research/201510/W020151028018210641841.jpg" alt="China Launches Mapping Satellite"/></a>
+</p>
+
+	   <p class="YSample" id="b1ya"><a href="./newsroom/china_research/201510/t20151021_153644.shtml"><img src="./newsroom/china_research/201510/W020151021338297167794.jpg" alt="Premier Praises Innovators"/></a>
+</p>
+
+	   <p class="YSample" id="b1ya"><a href="./newsroom/china_research/201510/t20151016_153532.shtml"><img src="./newsroom/china_research/201510/W020151016364979046721.jpg" alt="China's New-type Airship Successfully Stays in Near Space"/></a>
+</p>
+
+	   <p class="YSample" id="b1ya"><a href="./newsroom/china_research/201510/t20151010_153330.shtml"><img src="./newsroom/china_research/201510/W020151010351688728797.jpg" alt="Chinese Scientists 3D-print Building Blocks of Liver"/></a>
+</p>
+
+	   <p class="YSample" id="b1ya"><a href="./newsroom/china_research/201509/t20150930_153194.shtml"><img src="./newsroom/china_research/201509/W020150930374444318500.jpg" alt="China Launches 20th Beidou Navigation Satellite"/></a>
+</p>
+
+<p id="YSIndex" class="b1yb"><a href="#1" class="current">1</a><a href="#1">2</a><a href="#1">3</a><a href="#1">4</a><a href="#1">5</a></p>
+	   </div>
+<script language="javascript" type="text/javascript">
+<!--
+YAO.YTabs({
+		tabs: YAO.getEl('YSIndex').getElementsByTagName('a'),
+		contents: YAO.getElByClassName('YSample', 'p', 'YSlide'),
+		defaultIndex: 0,
+		auto: true,
+		fadeUp: true
+});
+//-->
+</script>
+                    </div>
+                    <div class="mainb1y2">
+                    	<ul>
+                             
+                        	<li class="b1y2li1" style="padding:2px 0 3px 0;"><a href="./newsroom/china_research/201510/t20151028_153933.shtml" title="China Launches Mapping Satellite" style='line-height:19px;'>China Launches Mapping Satellite</a></li>
+                            
+                        	<li class="b1y2li1" style="padding:2px 0 3px 0;"><a href="./newsroom/china_research/201510/t20151028_153932.shtml" title="China Plans to Launch CO&lt;SUB&gt;2&lt;/SUB&gt; Monitoring Satellite in 2016" style='line-height:19px;'>China Plans to Launch CO2 Monitoring Satellite in 2016</a></li>
+                            
+                              
+                            <li style="padding:2px 0 3px 0;"><a href="./newsroom/china_research/201510/t20151022_153699.shtml" title="Chinese Scientists Remain Among Most Recognized in Sci-theses" style='line-height:19px;'>Chinese Scientists Remain Among Most Recognized in Sci-theses</a></li>
+                               
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="mainb2">
+            	<li class="b2li1">
+                 	<h2 class="f_c"> 
+         Scientific Database</h2>
+
+                    <p>Scientific databases of the Chinese Academy of Sciences are available.</p>
+ 
+                    <a  style="color:#0484cf;" href="./research/database/">Read more>> </a>
+                        
+</li>
+                <li class="b2li2">
+                	<h2 class="f_c">BCAS</h2>
+<div style=" width:376px; height:144px;">
+                    <span class="b2span1"><a href="http://english.cas.cn/bcas/" target="_blank">  <img src="./bcas/2015_3/images/P020150930663071403873.jpg" width="83" height="112" /></a></span>
+                    <span class="b2span2" style=" padding-left:8px;"><p>A magazine of China's national science academy that provides information on its latest events, research and innovations, telling stories of its leading scientists and their discoveries.</p>
+                    <a style="color:#0484cf;" href="http://english.cas.cn/bcas/"  target="_blank">Read more>> </a></span>
+                    <br class="clear"  /></div>
+                </li>
+           <li class="b2li3">
+               	  <h2 class="f_c">Join Us</h2>
+                   
+                     <p style="color:#666666;  padding-left:20px; background:url(images/xiaosanjiao_2014en.png) no-repeat 5px 6px;"><a href="./join_us/jobs/201510/t20151014_153490.shtml" title="IGDB Faculty Positions">IGDB Faculty Positions</a></p>
+                     <p style="color:#666666;  padding-left:20px; background:url(images/xiaosanjiao_2014en.png) no-repeat 5px 6px;"><a href="./join_us/jobs/201510/t20151014_153489.shtml" title="CEPAMS Group Leader Positions">CEPAMS Group Leader Positions</a></p>
+
+                    <a style="color:#0484cf;" href="./join_us/">Read more>> </a>
+                
+
+</li>
+                <li class="b2li4">
+                	<h2 class="f_c">Links</h2>
+                    <h3><a href="./links/domestic/" title="Domestic">Domestic</a> <a href="./links/overseas/" title="Overseas">Overseas</a></h3>
+                </li>
+            </div><br class="clear"  />
+        </div>
+    </div>
+    <div class="foot">
+  <div class="footx">
+    <h2>Contact Us</h2>
+    <ul>
+      <li class="footxli1" style=" height:36px;">86-10-68597521 (day)<br />
+        86-10-68597289 (night)</li>
+      <li class="footxli2"  style=" height:36px;">86-10-68511095 (day)<br />
+        86-10-68512458 (night)</li>
+      <li class="footxli3" style="text-decoration:none; height:26px;">cas_en@cas.cn</li>
+      <li class="footxli4"  style=" height:36px;">52 Sanlihe Rd., Beijing,<br />
+        China (100864)</li>
+    </ul>
+    <p>Copyright © 2002 - 2015 Chinese Academy of Sciences</p>
+  </div>
+</div>
+
+
+<noscript><img src="http://ta.trs.cn/c/1.gif?mpId=158&jsoff=1" style="border:0" alt="" /></noscript>
+<script>
+var _taq = _taq || [];
+_taq.home = 'http://ta.trs.cn/c';
+_taq.push(['_mpId', '158']);
+_taq.push(['_cli', '1']);
+(function(d, o, t) {
+	if (window.inTRSDesignMode) return;
+	var ma = d.createElement(o); ma.async = true; ma.commonresource="1"; ma.src = t;
+	var s = d.getElementsByTagName(o)[0]; s.parentNode.insertBefore(ma, s);
+})(document, 'script', 'http://ta.trs.cn/c/js/ta.js');
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ab0011d61e2361ebd5277961c46b7a23";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<style>.mainb2 li a{ color:#666666;}</style>
+<script>
+$(function(){
+var tp_chn_id = "." + $(".mainb1x2 p").attr("id");
+$(tp_chn_id).hide();
+$(".CalendarTD").attr("id","")
+calendar_ajax();
+});     	
+</script>
+
+</body>
+</html>

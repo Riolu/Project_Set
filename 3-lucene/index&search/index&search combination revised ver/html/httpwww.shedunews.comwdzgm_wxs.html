@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>网络微小说大赛-“文明上网 共建和谐——我的中国梦”主题系列活动</title>
+<script type="text/javascript" src="http://theme.shedunews.com/wdzgm/js/webconfig.js"></script>
+<link href="http://theme.shedunews.com/wdzgm/css/wdzgm_wxs.css" rel="stylesheet" type="text/css">
+<link href="http://theme.shedunews.com/wdzgm/css/facebox.css" media="screen" rel="stylesheet" type="text/css">
+<script src="http://theme.shedunews.com/wdzgm/js/jquery-1.2.2.pack.js" type="text/javascript"></script>
+<script src="http://theme.shedunews.com/wdzgm/js/facebox.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $('a[rel*=facebox]').facebox() 
+    })
+</script>
+<script type="text/javascript">
+function ntabs(thisObj,Num){
+	if(thisObj.className == "active")return;
+	var tabObj = thisObj.parentNode.id;
+	var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+	for(i=0; i <tabList.length; i++)
+	{
+		if (i == Num)
+		{
+		   thisObj.className = "active"; 
+		//      document.getElementById(tabObj+"_Content"+i).style.display = "block";
+		}else{
+		   tabList[i].className = "normal"; 
+		//   document.getElementById(tabObj+"_Content"+i).style.display = "none";
+		}
+	}
+}
+</script>
+<script type="text/javascript">
+function testDisplay()
+{
+    var divD = document.getElementById("TabTitle");
+
+        divD.style.display = "none";
+
+}
+
+</script>
+</head>
+
+<body>
+<script type="text/javascript" src="http://theme.shedunews.com/wdzgm/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="http://member.shedunews.com/sso2/has_logon_var" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+var site_url = 'http://event.shedunews.com';
+var activity_id = 14;//根据具体活动设置
+var page_size = 3;
+var group_id=199;
+var page_number = 15;//Top显示条数 TODO
+
+jQuery(function(){
+	
+	/**
+	 * 申报表单提交  
+	 */
+	jQuery('.shenbao-form').submit(function(){
+		checklogin();
+		var $_this = jQuery(this);
+		$_this.find('input[name="activity_id"]').val(activity_id);
+		$_this.find('input[name="uid"]').val(SSODATA.uid);
+		$_this.attr('action', site_url + '/index.php?r=meili/shenbao');
+		//TODO 根据实际情况添加验证规则
+		return verify_shenbao_form();
+	});
+
+	weibo_load(group_id, null);
+
+
+});
+
+
+/**
+ * 验证表单 
+ * 
+ * @access public
+ * @return void
+ */
+function verify_shenbao_form() {
+	return true;
+}
+
+function checklogin(){
+		if (SSODATA.status != 200) {
+			//TODO 弹出登录窗口，或者是跳到用户中心登录
+			alert("请先注册上海教育新闻网用户，登录后再参与活动，谢谢！");
+			window.location.replace("http://member.shedunews.com/account/logon?entry=&rurl=http://www.shedunews.com/wdzgm_wxs.html");
+			return false;
+		}
+}
+
+
+
+/**
+ * 加载微博列表 
+ * 
+ */
+function weibo_load(group, page) {
+	var myparams={
+			'id': activity_id,
+			'groupId':group,
+			'page': page,
+			'pageSize': page_size
+		};
+	jQuery.ajax({
+		url: site_url + '/index.php?r=activity/workslist',
+		type: 'get',
+		dataType: 'jsonp',
+		data: myparams,
+		success: function (rs) {
+			try {
+				if (rs.status) {
+					//根据实际情况编辑 weibo_list(rs.data.list) 这个函数，构造微博列表 TODO
+					weibo_list(rs.data.list);
+					//根据实际情况编辑 weibo_pages(rs.data.pages) 这个函数，构造微博分页 TODO
+					weibo_pages(rs.data.pages);
+
+					//绑定点击分页
+					bind_weibo_pages_click();
+				} else {
+					jQuery('.weibo-list').html('暂无记录');
+					jQuery('.weibo-pages').html('');
+				}
+			} catch (e) {
+				console.log(e);
+			}
+		}
+	});
+}
+
+
+/**
+ * 搜索微博列表 
+ * 
+ */
+function weibo_query(username,page) {
+	var myparams={
+			'activity_id': activity_id,
+			'title':username,
+			'page': page,
+			'pageSize': page_size
+		};
+	jQuery.ajax({
+		url: site_url + '/index.php?r=activity/workssearch',
+		type: 'get',
+		dataType: 'jsonp',
+		data: myparams,
+		success: function (rs) {
+			try {
+				if (rs.status) {
+					//根据实际情况编辑 weibo_list(rs.data.list) 这个函数，构造微博列表 TODO
+					weibo_list(rs.data.list);
+					//根据实际情况编辑 weibo_pages(rs.data.pages) 这个函数，构造微博分页 TODO
+					weibo_pages(rs.data.pages);
+
+					//绑定点击分页
+					bind_weibo_pages_click();
+				} else {
+					jQuery('.weibo-list').html('暂无记录');
+					jQuery('.weibo-pages').html('');
+				}
+			} catch (e) {
+				console.log(e);
+			}
+		}
+	});
+}
+
+/**
+ * 构造微博文列表函数 
+ */
+function weibo_list(list) {
+	var html = '<div>';
+	for (var i in list) {
+		html += '<div class="wbw_box">' + 
+			'<div style="height:25px; font-weight:bold;">' + list[i].title + '</div>' +  
+			'<div class="wbw_box_con" style="text-indent:2em;">' + list[i].content_article + '</div>' + 
+			'<div class="wbw_box_more"><span class="wbw_box_light" style="float:left;">' + list[i].contact_school + '&nbsp;&nbsp;' + list[i].contact_user + '</span><span style="float:right;"><a href="http://www.shedunews.com/wdzgm_wxs_details.html?id=' + list[i].id + ' " target="_blank"><img src="http://theme.shedunews.com/wdzgm/images/button_zf_wxs.jpg" border="0" width="38" height="18" /></a></span></div>' + 
+			'</div>'
+			
+	}
+	html += '</div>';
+	jQuery('.weibo-list').html(html);
+}
+
+
+/**
+ * 构造微博文分页函数
+ */
+function weibo_pages(pages) {
+	var html = '<div>';
+	for (var i in pages) {
+		//超链接一定要有 page 这个属性！
+		if (pages[i].is_link) {
+			html += '<div class="pagenum"><a href="javascript:;" page="'+pages[i].page+'">'+ pages[i].page +'</a>' + '</div>';
+		} else {
+			html += '<div class="pagenum">' + pages[i].page + '</div>';
+		}
+		
+	}
+	html += '</div>';
+	jQuery('.weibo-pages').html(html);
+}
+
+/**
+ *  微博文分页异步调用数据
+ */
+function bind_weibo_pages_click() {
+	jQuery('.weibo-pages a').click(function(){
+		var $_this = jQuery(this);
+		var page = $_this.attr('page');
+		//var school = jQuery('.school-list').val();
+		weibo_load(group_id, page);
+	});
+}
+</script>
+
+<script type="text/javascript" src="http://event.shedunews.com/index.php?r=site/funcWorkssearch"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.func-works-search-activity-form').submit(function(){
+            //workssearch_func 就是上面请求的 js 地址返回来的函数
+            //workssearch_func($(this).find('input[name=title]').val(), activity_id, workssearch_activity_form_submit);
+			weibo_query($(this).find('input[name=title]').val(),null);
+            return false;
+        });
+    });
+
+    function workssearch_activity_form_submit(workssearch_rs) {
+            var workssearch_rs_count = 0;
+            var html = '';
+            if (workssearch_rs.data != undefined) {
+                for (var i in workssearch_rs.data) {
+                    if (typeof(workssearch_rs.data[i]) == 'object') {
+                        html += '<div class="search_list"><a href="http://www.shedunews.com/wdzgm_wxs_details.html?id=' + workssearch_rs.data[i].id + '" target="_blank">'+workssearch_rs.data[i].title+'</a><span class="wbw_box_light">（' + workssearch_rs.data[i].contact_school + '&nbsp;' + workssearch_rs.data[i].contact_user + '）</span></div>';
+                        workssearch_rs_count++;
+                    }
+                }
+            }
+            
+            if (workssearch_rs_count == 0) {
+                html = '<div style="width:521px; height:290px; padding:10px 0 0 10px; background:#f0f0f0; line-height:26px; font-size:14px; margin:auto;">没有搜索结果，请输入关键词重新搜索。</div>';
+            }
+            $('.works-search-activity-list').html(html);
+        }
+
+    $(function(){
+    	//groupsorder_func(activity_id, page_number, groupsorder_handler);
+			jQuery.ajax({
+			url: 'http://event.shedunews.com/index.php?r=activity/workslist',
+			type: 'get',
+			dataType: 'jsonp',
+			data: {
+				'id': activity_id,
+				'pageSize': page_number,
+				'sort': "works_loaded_count_desc"
+			},
+			success: function (rs) {
+				try {
+					groupsorder_handler(rs);
+				} catch (e) {
+					console.log(e);
+				}
+			}
+		});  
+	});
+
+    /**
+     * TODO 列表返回结果处理函数 
+     */
+    function groupsorder_handler(data) {
+        var html = '<ul>';
+        if (data.data == undefined) {
+            html = '没有结果';
+        }
+        else {
+            for (var i in data.data.list) {
+                html += '<li><a href="http://www.shedunews.com/wdzgm_wxs_details.html?id=' + data.data.list[i].id + ' " target="_blank">' +data.data.list[i].contact_user+ '：' + data.data.list[i].title + '</a><span style="display:none;">(点击：'+ data.data.list[i].loaded+')</span></li>';
+            }
+        }
+        html += '</ul>';
+        $('.phb').html(html);
+    }
+
+</script>
+<div class="Header">
+	<script type="text/javascript">(function(){
+	SEPG_Write_Date = "<a href='http://www.shedunews.com/' target='_blank'>返回首页</a> &nbsp;|&nbsp;" + new Date().getFullYear() + "年" + (new Date().getMonth() + 1) + "月" + new Date().getDate() + "日 星期" + (("日一二三四五六").charAt(new Date().getDay()));
+SEPG_Write_Top = '<div class="Shadow"><!--导航阴影--></div><!--顶行start--><div class="Top"><div class="TopSpace"><span class="floatright">'+SEPG_Write_Login+'</span><span class="floatleft">'+SEPG_Write_Date+'</span><span class="floatleft"><iframe name="weather_inc" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=5" width="200" height="30" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></span></div></div>';
+
+	document.write(SEPG_Write_Top);})();</script>
+</div>
+<div style="width:960px; height:90px; margin:10px auto;"><a href="http://ad.shedunews.com/index.php?r=site/redirect&amp;id=184" title="我的中国梦网络人气评选960" target="_blank"><img src="http://ad.shedunews.com/upload/ads/83980/20140117_d71ffe48161a7ff8db1220380cee8777.jpg" title="我的中国梦网络人气评选960" alt="我的中国梦网络人气评选960"></a></div>
+<div class="wrap">
+	<div style="width:960px; height:280px; margin:0 auto; position:relative;">
+		<div style="position:absolute; width:190px; height:55px; top:15px; left:20px;">
+			  <table width="160" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="26" colspan="2" align="center"><span style="color:#000000; font-size:12px;">关注上海教育新闻网官博</span></td>
+                </tr>
+                <tr>
+                  <td width="80" height="26" align="center"><script type="text/javascript">
+                                    (function () {
+                                        var url = "http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=63&height=24&uid=2673597031&style=1&btn=red&dpc=1";
+
+                                        document.write('<iframe width="63" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" border="0" src="' + url + '"></iframe>');
+                                    })();
+				</script></td>
+                  <td width="80" align="center"><iframe id="review" height="24" marginheight="0" src="http://follow.v.t.qq.com/index.php?c=follow&a=quick&name=shedunews2009&style=5&t=1353403258109&f=0" frameborder="0" width="60" allowtransparency="" marginwidth="0"></iframe></td>
+                </tr>
+              </table>
+		</div>
+	</div>
+	<div style="width:960px; height:1030px; margin:0 auto;">
+		<!--左侧开始-->
+		<div class="left">
+			<div class="hdjj">
+				<div class="hdjj_con">　　为全面学习宣传贯彻落实党的十八大精神，营造“中国梦”的良好宣传氛围，引导广大师生深刻理解“中国梦”的真正内涵、积极践行社会主义核心价值观、为实现伟大的“中国梦”而奋斗，进一步加强校园文化网络阵地建设，市教卫工作党委、市教委将举办“文明上网 共建和谐——我的中国梦”主题系列活动，活动由上海教育报刊总社上海教育新闻网承办。</div>
+				<div class="hdjj_more"><a href="http://www.shedunews.com/wenming/gonggaolan/2013/05/06/515221.html" target="_blank">>>>查看活动通知详情</a></div>
+			</div>
+			<div class="search">
+				<form action="" method="get" class="func-works-search-activity-form">
+				<div class="search_con"><input style="width:320px; height:22px; line-height:22px; border:0; background:transparent;" type="text" name="title"></div>
+				<div class="search_button"><input type="image" src="http://theme.shedunews.com/wdzgm/images/button_search.jpg" onclick="testDisplay()"></div>
+				</form>
+			</div>
+			<div class="zxwxs">
+			<!--外套搜索层开始-->
+			<div class="works-search-activity-list">
+				<div class="zxwxs_con">
+					<!--切换开始-->
+					<div class="nTab">
+						<div class="TabTitle" id="TabTitle">
+							<ul id="myTab0">
+								<li class="active" style="width:173px; margin-left:16px;" onmouseover="ntabs(this,0);group_id=199;weibo_load(group_id,null);">中小学生（含中职生）组</li>
+								<li class="normal" style="width:81px; margin-left:12px;" onmouseover="ntabs(this,1);group_id=201;weibo_load(group_id,null);">大学生组</li>
+								<li class="normal" style="width:81px; margin-left:12px;" onmouseover="ntabs(this,2);group_id=202;weibo_load(group_id,null);">教师组</li>
+							</ul>
+						</div>
+						<div class="TabContent">
+								<!--微小说开始-->
+								<div class="weibo-list"></div>
+								<div class="wbw_page">
+									<div class="weibo-pages"></div>
+								</div>
+								<!--微小说结束-->
+
+						</div>
+					</div>
+					<!--切换结束-->
+				</div>
+			</div>			
+			<!--外套搜索层结束-->
+			</div>
+		</div>
+		<!--左侧结束-->
+		<div class="right">
+			<div class="dszt">
+			  <table width="410" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="35"><span style="color:#355001; font-size:20px; font-weight:bold;">大赛主题：</span><span style="font-size:20px; font-weight:bold;">我的中国梦</span></td>
+                </tr>
+                <tr>
+                  <td height="35"><span style="color:#355001; font-size:20px; font-weight:bold;">作品要求：</span></td>
+                </tr>
+                <tr>
+                  <td class="zpyq">1.参赛作品体裁要求为微型小说（140字之内），不得连载；<br>2.紧扣主题，并配以反映作品主题的图片或照片，图文并茂；<br>3.作品要求为原创，主题鲜明，内容充实，配图清晰，富有真情实感。如发现有剽窃、抄袭行为，作品参赛资格将被取消。</td>
+                </tr>
+              </table>
+			</div>
+			<div class="wycs"><img src="http://theme.shedunews.com/wdzgm/images/button_over.jpg" border="0"></div>
+			<div class="djph">
+				<div class="phb"></div>
+			</div>
+			<div class="tb"><a href="http://web.shedunews.com/" target="_blank"><img src="http://theme.shedunews.com/wdzgm/images/tb_2.jpg" width="413" height="138" border="0"></a></div>
+			<div class="tb"><a href="http://www.shedunews.com/2013bwds.html" target="_blank"><img src="http://theme.shedunews.com/wdzgm/images/tb_3.jpg" width="413" height="138" border="0"></a></div>
+		</div>
+	</div>
+
+</div>
+<!--
+<div id="mydiv" style="display:none">
+	<div style="width:95%; height:auto; display:block; margin:0 auto; font-size:10pt; line-height:150%;">
+		<div style="width:680px; height:527px; background:#ffffff; margin:0 auto;">
+			<iframe src="http://www.shedunews.com/wdzgm_wxs_post.html" width="620" height="510" frameborder="0" scrolling="no"></iframe>
+		</div>
+	</div>
+</div>
+-->
+<div class="foot"><a href="http://www.shedunews.com/baokanzongshe.html" target="_blank">上海教育报刊总社介绍</a>  |  <a href="http://www.shedunews.com/aboutus.html" target="_blank">关于我们</a>  |  <a href="http://www.shedunews.com/contactus.html" target="_blank">联系我们</a>  |  <a href="http://www.shedunews.com/falvguwen.html" target="_blank">法律顾问</a>  |  <a href="http://www.shedunews.com/yijianfankui.html" target="_blank">意见反馈</a>  |  <a href="http://www.shedunews.com/hezuoshengming.html" target="_blank">合作声明</a>  |  <a href="http://www.shedunews.com/banquanshengming.html" target="_blank">版权声明</a><br>主管单位：中共上海市教育卫生工作委员会、上海市教育委员会<br>主办单位：上海教育报刊总社<br>沪ICP备10006389号<br><a href="http://www.shjbzx.cn/" target="_blank"><img src="http://theme.shedunews.com/wdzgm/images/footer_img.png" width="179" height="73" border="0"></a>
+</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb07bbd1cdba6e7575527d6d8e362dd79' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

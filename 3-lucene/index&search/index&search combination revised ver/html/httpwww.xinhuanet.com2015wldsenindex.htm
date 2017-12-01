@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="publishid" content="1187662.0.3.0"/>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" media="screen and (min-width:0px) and (max-width: 767px)" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+<title>CNC World Live Broadcast</title>
+<style>
+/* Reset */
+html, body, div, img, p, hr, pre, h1, h2, h3, h4, h5, h6, table, tr, td, th, tfoot, tbody, thead, form, fieldset, input, textarea, select, label, ul, ol, dl, li, dt, dd { margin: 0; padding: 0; border: 0; outline: none; list-style: none; font-weight: normal; }
+body, html { }
+li { list-style-type: none; }
+a { text-decoration: none; outline: none; color: #000000; }
+a:hover { text-decoration: underline; }
+table { border-collapse: collapse; border-spacing: 0; margin: 0 auto; clear: both; }
+img { border: 0; display: block; }
+em { font-style: normal; }
+hr { height: 0; clear: both; }
+.none { display: none; }
+.clear { clear: both; }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+body { background: #060a20 url(bgbody.jpg) 50% 0 no-repeat; height: 100%; font-family: "微软雅黑"; line-height: 24px; padding-top: 70px; }
+.conWidth { width: 1000px; margin: 0 auto; }
+.top { height: 78px; line-height: 78px; position: relative; width: 1000px; margin: 0 auto; }
+.top .bg { height: 78px; line-height: 78px; background: #202020; filter: alpha(opacity=40); -moz-opacity: 0.4; -khtml-opacity: 0.4; opacity: 0.4; position: absolute; width: 1000px; left: 0; top: 0; }
+.top a { font-size: 16px; color: #fff; margin: 0 5px; }
+.top .conWidth { position: absolute; z-index: 2; left: 0; top: 0; }
+.top .logo { width: 95px; height: 45px; background: url(logo.png) no-repeat; float: left; display: inline; margin: 20px 0 0 20px; }
+.center { padding-top: 20px; }
+.center .conWidth { position: relative; }
+.center .conWidth .bg { position: absolute; z-index: 0; background: #202020; filter: alpha(opacity=40); -moz-opacity: 0.4; -khtml-opacity: 0.4; opacity: 0.4; position: absolute; width: 1000px; left: 0; top: 0; height: 100%; }
+.center .tit { padding: 0 30px 30px 0; z-index: 1; }
+.center .tit span { float: right; color: #999; font-size: 12px; font-family: "微软雅黑"; }
+.center .tit span a { color: #999; font-size: 14px; font-family: "微软雅黑"; }
+.center .con { padding: 20px; text-align: center; z-index: 1; position: relative; padding-top: 40px; }
+.center .con .ifrDiv { width: 834px; height: 581px; background: url(bgPlayer2.png) no-repeat; margin: 0 auto; text-align: center; }
+.center .con iframe { margin-top: 45px; margin-left:0px; }
+.center .con p { text-indent: 2em; text-align: left; line-height: 28px; color: #fff; }
+.footer { height: 55px; clear:both; }
+.footer p { font-size: 14px; color: #999999; text-align: center; line-height: 26px; z-index: 1; position: relative; }
+.footer .conWidth { padding-top: 15px; position: relative; }
+.footer .bg { background: #202020; filter: alpha(opacity=40); -moz-opacity: 0.4; -khtml-opacity: 0.4; opacity: 0.4; position: absolute; width: 1000px; left: 0; top: 0; height: 55px; z-index: 0; }
+.domPC { display: block; }
+.domMobile { display: none; }
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+#pcVideo { display: block!important; height: 500px; padding: 40px 30px 0; }
+#ifrPcVideo { display: none; }
+}
+
+@media screen and (min-width:0px) and (max-width: 767px) {
+body { padding: 0; background: #0e1735 url(bgbody3.jpg) no-repeat; background-size: 100% 100%; font-size: 14px; }
+.domPC { display: none;}
+.domMobile { display: block!important;}
+#center { padding-top: 100px; }
+.mobilePlay { background: url(bgPlayer4.png) no-repeat; background-size: 100% auto; height: 250px; padding: 30px 10px 0; }
+#center .text { color: #fff; padding: 0 10px; text-indent: 2em; font-size: 16px; line-height: 26px; font-family:arial; }
+.footbox { background: #1f1c33; text-align: center; padding: 20px 0; margin-top: 30px; }
+}
+</style>
+</head>
+<body>
+<div id="wx_pic" style="display:none;"> <img src="http://www.xinhuanet.com/imgs2015/xhwxlogo300.jpg" width="300" height="300" /> </div>
+<div class="domPC">
+  <div class="top">
+    <div class="conWidth"> <a class="logo" href="http://www.news.cn" target="_blank"> </a> <a href="http://www.xinhuanet.com/english/" target="_parent"> Xinhuanet </a> <a href="http://www.xinhuanet.com/english/china/index.htm" target="_parent"> China </a> <a href="http://www.xinhuanet.com/english/world/index.htm" target="_parent"> World </a> <a href="http://www.xinhuanet.com/english/business/index.htm" target="_parent"> Business </a> <a href="http://www.xinhuanet.com/english/entertainment/index.htm" target="_parent"> Entertainment </a> <a href="http://www.xinhuanet.com/english/sports/index.htm" target="_parent"> Sports </a> <a href="http://www.xinhuanet.com/english/culture/index.htm" target="_parent"> Culture & Edu </a> <a href="http://www.xinhuanet.com/english/sci/index.htm" target="_parent"> Sci & Tech </a> <a href="http://www.xinhuanet.com/english/health/index.htm" target="_parent"> Health </a> <a href="http://www.xinhuanet.com/english/odd/index.htm" target="_parent"> Odd </a> <a href="http://www.xinhuanet.com/english/travel/index.htm" target="_parent"> Travel </a> </div>
+    <div class="bg"></div>
+  </div>
+  <div class="center">
+    <div class="conWidth clearfix">
+      <div class="con">
+        <div class="tit"> <span> <a href="http://www.xinhuanet.com/2015wlds/index.htm">新华网络电视中文直播</a> </span> </div>
+        <div class="ifrDiv">
+          <iframe id="ifrPcVideo" src="http://livecdn1.news.cn/www/cncen.html" width="800" height="500" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+          <div id="pcVideo" style="display:none;">
+            <video width="100%" height="500" controls autobuffer>
+              <source src="http://livecdn1.news.cn/cncen/manifest.m3u8" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> </source>
+            </video>
+          </div>
+        </div>
+        <p>China Xinhua News Network Corporation (CNC) is a TV news network run by Xinhua News Agency targeting overseas audiences.</p>
+        <p>On Jan. 1, 2010, CNC officially kicked off its first owned and operated (O&O) TV station -- CNC Chinese channel, which was broadcast to audiences in parts of Europe and the Asia-Pacific region.</p>
+        <p>CNC stands ready to cover major worldwide events in a timely, accurate and authoritative manner with a global perspective.</p>
+      </div>
+      <div class="bg"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="conWidth">
+      <p>Copyright © 2000 - 2015 XINHUANET.com　All Rights Reserved.</p>
+      <div class="bg"></div>
+    </div>
+  </div>
+</div>
+<div class="domMobile">
+  <!--新闻频道-->
+  <div id="center" class="comWidth">
+    <div class="domMobile">
+      <div class="mobilePlay">
+        <video width="100%" height="200" controls autobuffer>
+          <source src="http://livecdn1.news.cn/cncen/manifest.m3u8" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> </source>
+        </video>
+      </div>
+      <div class="text">
+        <p>China Xinhua News Network Corporation (CNC) is a TV news network run by Xinhua News Agency targeting overseas audiences.</p>
+        <p>On Jan. 1, 2010, CNC officially kicked off its first owned and operated (O&O) TV station -- CNC Chinese channel, which was broadcast to audiences in parts of Europe and the Asia-Pacific region.</p>
+        <p>CNC stands ready to cover major worldwide events in a timely, accurate and authoritative manner with a global perspective.</p>
+      </div>
+    </div>
+    <div class="footbox">
+      <script type="text/javascript" src="http://www.xinhuanet.com/english/2015mobile/js/copyright.js"></script>
+    </div>
+  </div>
+</div>
+<div style="display:none">
+  <div id="fwl">010040091160000000000000011200000000000000</div>
+  <script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script>
+  <script type="text/javascript">wd_paramtracker("_wdxid=010040091160000000000000011200000000000000")</script>
+  <noscript>
+  <img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010040091160000000000000011200000000000000" border="0" />
+  </noscript>
+</div>
+</body>
+</html>

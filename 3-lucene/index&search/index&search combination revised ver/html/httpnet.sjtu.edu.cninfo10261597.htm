@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML><HEAD><TITLE>关于微软浏览器IE 8 CGenericElement对象内存释放重用零日漏洞的安全公告-上海交通大学网络信息中心</TITLE>
+
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META content="" name="keywords">
+<META content="" name="description"><LINK href="../../images/layout.css" type="text/css" rel="stylesheet"><LINK href="../../images/chromestyle.css" type="text/css" rel="stylesheet">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../../_sitegray/_sitegray_d.css" />
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:776562626572323074684754525b564203040000 -->
+<link rel="stylesheet" type="text/css" href="../../wlaq/content.vsb.css" />
+<META Name="keywords" Content="上海交通大学网络信息中心" />
+<script type="text/javascript" src="../../system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1026,'/wlaq/content.jsp',1597,739302322)</script>
+</HEAD>
+<BODY><script type="text/javascript" src="../../images/chrome.js"></script>
+<DIV id="container"><!-- header -->
+<DIV id="top">
+<DIV class="logo">
+<DIV class="mlink">&nbsp;</DIV>
+<DIV class="searchbox"><!--#begineditable viewid="1828" name="站内搜索"-->
+
+
+
+
+
+<form action="../../search.jsp?wbtreeid=1026" method="post" name="a1828a" onsubmit="return subsearchdataa1828a()" style="display: inline">
+  <input type="hidden" name="Find" value="find"><input type="hidden" name="entrymode" value="1"><input type="hidden" id="INTEXT2" name="INTEXT2" value=""><input type="hidden" name="news_search_code">
+站内搜索&nbsp;<iframe id="intextframea1828a" src="" scrolling="no" frameborder="0" style="position:absolute;top:0px;left:0px;display:none"></iframe>
+       <input class="s1" name="INTEXT">
+       <input type="image" src="../../images/searchbox.png" class="s2">
+</form>
+<script>
+function subsearchdataa1828a()
+{ 
+    if(checkDataa1828a(document.a1828a))
+    {
+       return true;  
+    }
+    return false;
+}       
+</script>
+
+    <script> 
+    function checkDataa1828a(formname)
+    {
+        if(window.toFF==1)
+            {
+                var ssvalue = a1828a.INTEXT.value;
+                document.a1828a.INTEXT2.value = base64.encode(Simplized(ssvalue));
+            }else
+            document.a1828a.INTEXT2.value = base64.encode(document.a1828a.INTEXT.value);
+           return true;
+    }
+    </script>
+<script language="javascript" src="../../system/resource/js/base64.js"></script> 
+<!--#endeditable--></DIV></DIV>
+<DIV class="bn">
+<DIV class="banner">
+<DIV class="mlink"><!--#begineditable viewid="1826" name="首页左上链接"--><script language="javascript" src="../../system/resource/js/dynclicks.js"></script><script language="javascript" src="../../system/resource/js/openlink.js"></script>    <a href="../../web_en/index_en.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 739302322, 1808)">[English Version]</a>
+<!--#endeditable--></DIV>
+
+
+</DIV>
+<DIV class="navi chromestyle" id="chromemenu"><!--#begineditable viewid="1785" name="网站主导航"--><a href="../../index.jsp" class="navi1" onmouseover="this.className='navi1-1'" onmouseout="this.className='navi1'" onclick="blur()"></a>
+<a href="../../zxgk.htm" rel="dropmenu2" class="navi2" onmouseover="this.className='navi2-1'" onmouseout="this.className='navi2'" onclick="blur()"></a>
+<a href="../../gzzd.htm" rel="dropmenu3" class="navi3" onmouseover="this.className='navi3-1'" onmouseout="this.className='navi3'" onclick="blur()"></a>
+<a href="../../wlfw.htm" rel="dropmenu4" class="navi4" onmouseover="this.className='navi4-1'" onmouseout="this.className='navi4'" onclick="blur()"></a>
+<a href="../../wlaq.htm" rel="dropmenu5" class="navi5" onmouseover="this.className='navi5-1'" onmouseout="this.className='navi5'" onclick="blur()"></a>
+<a href="../../yhzc.htm" rel="dropmenu6" class="navi6" onmouseover="this.className='navi6-1'" onmouseout="this.className='navi6'" onclick="blur()"></a>
+<a href="../../lxwm.htm" class="navi7" onmouseover="this.className='navi7-1'" onmouseout="this.className='navi7'" onclick="blur()"></a>
+<a href="../../web_en.htm" rel="dropmenu8" class="navi8" onmouseover="this.className='navi8-1'" onmouseout="this.className='navi8'" onclick="blur()"></a>
+<!--#endeditable--></DIV><!-- 1st drop down menu -->
+<DIV class="dropmenudiv" id="dropmenu1"></DIV>
+<DIV class="dropmenudiv" id="dropmenu2"><!--#begineditable name="中心概况子栏目" viewid="1837"-->    <a href="../../zxgk/zxjj.htm" title="中心简介">中心简介</a>
+    <a href="../../zxgk/xxwjj.htm" title="校园网简介">校园网简介</a>
+    <a href="../../zxgk/xyxxh.htm" title="校园信息化">校园信息化</a>
+<!--#endeditable--></DIV>
+<DIV class="dropmenudiv" id="dropmenu3"><!--#begineditable name="规章制度子栏目" viewid="1838"-->    <a href="../../gzzd/gzzdlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1018" title="规章条例">规章条例</a>
+    <a href="../../gzzd/gzzdlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1019" title="政策法规">政策法规</a>
+<!--#endeditable--></DIV>
+<DIV class="dropmenudiv" id="dropmenu4"><!--#begineditable name="网络服务子栏目" viewid="1839"-->    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1022" title="统一身份认证">统一身份认证</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1021" title="电子邮件">电子邮件</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1044" title="无线网">无线网</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1040" title="VPN">VPN</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1039" title="校园一卡通">校园一卡通</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1042" title="学生宿舍网络">学生宿舍网络</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1041" title="个人网络存储">个人网络存储</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1038" title="虚拟主机">虚拟主机</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1043" title="校园网">校园网</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1045" title="校内代理">校内代理</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1046" title="网络短信平台">网络短信平台</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1047" title="微软校园软件正版化">微软校园软件正版化</a>
+    <a href="../../wlfw/wlfwlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1049" title="网络会议和视频转播">网络会议和视频转播</a>
+<!--#endeditable--></DIV>
+<DIV class="dropmenudiv" id="dropmenu5"><!--#begineditable name="网络安全子栏目" viewid="1840"--><a href="../../wlaq/wlaqlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1024" title="安全建议">安全建议</a>
+<a href="../../wlaq/wlaqlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1026" title="安全事件通告">安全事件通告</a>
+<a href="http://windowsupdate.sjtu.edu.cn" target="_blank" title="自动更新服务">自动更新服务</a>
+<a href="http://antivirus.sjtu.edu.cn" target="_blank" title="防病毒服务">防病毒服务</a>
+<!--#endeditable--></DIV>
+<DIV class="dropmenudiv" id="dropmenu6"><!--#begineditable name="用户支持子栏目" viewid="1841"-->    <a href="../../yhzc/yhzclist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1098" title="校园网运行状态">校园网运行状态</a>
+    <a href="../../yhzc/yhzclist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1029" title="常用设置">常用设置</a>
+    <a href="../../yhzc/yhzclist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1030" title="用户指南">用户指南</a>
+    <a href="../../yhzc/yhzclist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1031" title="文档下载">文档下载</a>
+<!--#endeditable--></DIV>
+<DIV class="dropmenudiv" id="dropmenu7"></DIV>
+<DIV class="dropmenudiv" id="dropmenu8"></DIV>
+
+</DIV>
+<DIV style="clear: both"></DIV></DIV><script type="text/javascript">
+
+cssdropdown.startchrome("chromemenu")
+
+</script><!-- header end --><!-- main -->
+<DIV id="main"><!-- main left -->
+<DIV class="ln">
+<DIV class="mailloginform">
+<DIV class="mtitle64"></DIV>
+<DIV class="mtxt">
+<UL class="hl"><!--#begineditable viewid="1861" name="网络安全左边导航"-->    <li><div class="pt4"><a href="../../wlaq/wlaqlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1024" title="安全建议">安全建议</a></div></li>
+    <li><div class="pt4"><a href="../../wlaq/wlaqlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1026" title="安全事件通告">安全事件通告</a></div></li>
+    <li><div class="pt4"><a href="http://windowsupdate.sjtu.edu.cn" target="_blank" title="自动更新服务">自动更新服务</a></div></li>
+    <li><div class="pt4"><a href="http://antivirus.sjtu.edu.cn" target="_blank" title="防病毒服务">防病毒服务</a></div></li>
+<!--#endeditable--></UL></DIV>
+<DIV style="clear: both"></DIV>
+<DIV class="n1"></DIV>
+<DIV class="n2"></DIV>
+<DIV class="lititle"></DIV>
+<DIV class="hotlink">
+<UL class="hl">
+<LI>
+<DIV class="pt4"><A href="http://cert1.sjtu.edu.cn" target="_blank">安全问题举报</A></DIV></LI>
+<LI>
+<DIV class="pt4"><A href="http://bbs.sjtu.edu.cn/bbsdoc?board=SJTUnet" target="_blank">讨论交流</A></DIV></LI></UL></DIV></DIV></DIV><!-- main left end --><!-- main right -->
+<DIV class="rn"><!-- main right top -->
+<DIV class="htmc"></DIV><!-- location -->
+<DIV class="htlocation">
+<DIV id="position"><!--#begineditable viewid="1784" name="当前位置"-->  
+<a href="../../index.jsp">首页</a><a href="../../wlaq.htm">网络安全</a><a href="../../wlaq/wlaqlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1026">安全事件通告</a>正文<!--#endeditable--></DIV></DIV><!-- location end --><!-- main right top end --><!-- main right body -->
+<DIV class="hm">
+<DIV style="clear: both"></DIV>
+<DIV class="maintxt"><!--#begineditable viewid="1858" name="文章内容"--><script language="javascript" src="../../_dwr/interface/NewsvoteDWR.js"></script><script language="javascript" src="../../_dwr/engine.js"></script><script language="javascript" src="../../system/resource/js/news/newscontent.js"></script><LINK href="../../system/resource/style/component/news/content/format2.css" type="text/css" rel="stylesheet"><script language="javascript" src="../../system/resource/js/ajax.js"></script><style type="text/css">
+     .tpcontent{FONT-WEIGHT: bold; FONT-SIZE: 11pt; COLOR: #2b2b2b; FONT-FAMILY: 宋体;}
+     .cytpstyle{FONT-SIZE: 9pt; COLOR: #2b2b2b; FONT-FAMILY: 宋体;}
+     .content{margin:auto;text-align:left;line-height:18px;padding:3px 0 0 0;color:#727272;}
+     .process{width:162px;height:11px;background:#EDEDED;overflow:hidden;float:left;margin-left:26px !important;margin-left:13px;margin-right:10px;}
+     .process div{width:160px;height:11px;background:url(../../system/resource/images/newsvote/bg.gif) repeat-x;border-left:1px solid #000;border-right:1px solid #000;}
+     .process .style7{border-left-color:#ff0000;border-right-color:#ff0000;background-position:0 -77px;}
+</style>
+<form name="_newscontent_fromname">
+<div>
+    <p id="text-strong">关于微软浏览器IE 8 CGenericElement对象内存释放重用零日漏洞的安全公告</p>
+    <div align="center">2013-05-08&nbsp;&nbsp;点击：[<script>_showDynClicks("wbnews", 739302322, 1597)</script>] </div>
+    <hr>
+    <div><P><B>安全公告编号</B><B>:CNTA-2013-0014</B></P>
+<P>近日，国家信息安全漏洞共享平台（CNVD）收录了Microsoft IE 8 CGenericElement对象内存释放重要漏洞（CNVD-2013-23894，引用CVE-2013-1347）。利用漏洞，远程攻击者可通过诱使用户访问恶意网页发起挂马攻击，控制用户主机，目前，针对漏洞的利用代码已经公开，对IE 8用户构成较为严重的威胁。</P>
+<P></P>
+<P>一、漏洞情况分析</P>
+<P>IE 8没有正确处理CGenericElement对象的引用关系，恶意攻击者通过精心构造的页面可以使CGenericElement对象被错误地释放掉，进而导致内存释放后重用。远程攻击者可以利用漏洞构造挂马页面，诱使用户访问，发起大规模挂马攻击。</P>
+<P></P>
+<P>二、漏洞影响范围</P>
+<P>CNVD对该漏洞的综合评级为“高危”。受该漏洞影响的IE浏览器软件版本包括IE 8，而IE 6、7、9和IE 10不受此漏洞影响。</P>
+<P>目前，互联网上已经披露了该漏洞的攻击利用代码且有国内外安全组织已经监测到针对漏洞的大规模攻击情况。根据互联网报道的相关情况，该漏洞曾在近期导致美国劳工部（Department of Labor,U.S.A）网站服务器被黑客入侵。</P>
+<P></P>
+<P>三、漏洞处置建议</P>
+<P>目前，微软公司尚未提供漏洞补丁，但已发布了针对此漏洞的安全公告。在此期间，建议用户采取以下措施防范漏洞威胁：</P>
+<P>（1）建议IE用户进行版本升级，采用IE9或IE 10；</P>
+<P>（2）对于未进行升级的IE用户，通过安装主机安全防护软件以及更改提高IE安全配置等级等方式，一定程度上能阻止网页中异常的ActiveX控件以及恶意脚本的运行。</P>
+<P>相关安全公告链接参考如下：<A href="http://technet.microsoft.com/en-us/security/advisory/2847140" target="_blank"> 
+<P></A></P>
+<P></P>
+<P><A href="http://technet.microsoft.com/en-us/security/advisory/2847140" target="_blank">http://technet.microsoft.com/en-us/security/advisory/2847140</A></P>
+<P><A href="http://www.cnvd.org.cn/flaw/show/CNVD-2013-23894" target="_blank">http://www.cnvd.org.cn/flaw/show/CNVD-2013-23894</A></P></div><div id="div_vote_id"></div>
+    <p align="right">
+        
+        下一条：<a href="1538.htm">提供微点杀毒软件(一年期)和主动防御软件(半年期)</a>
+    </p>
+    <p align="right">【<a href="javascript:window.opener=null;window.open('','_self');window.close();">关闭</a>】</p>
+</div>
+</from>
+<script>
+    showVote(1597,739302322,"#F3F7FA"," class='cytpstyle' ","#090909","<img src ='/system/resource/images/newsvote/ss00.png' border='0'>"," class='tpcontent' ","欢迎参与投票",10,"<img src='/system/resource/images/newsvote/submit2.gif' onclick='_newscontent_getresult(1597,739302322)'  style='cursor:hand;'>","<img src='/system/resource/images/newsvote/view2.gif' onclick='_newscontent_lookresult()' style='cursor:hand;'>",document._newscontent_fromname,"请填写投票项！","127.0.0.1","您已经投过票了！","投票系统出现异常，请稍后再试！","感谢参与！","投票结果")
+</script><!--#endeditable-->
+<FORM name="_newscontent_fromname"></DIV>
+<DIV style="clear: both"></DIV></DIV>
+<DIV style="clear: both"></DIV><!-- main right body end --></DIV><!-- main right end --></DIV><!-- main end -->
+<DIV class="k"></DIV><!-- footer -->
+<DIV id="footer">
+<DIV class="link" style="display: none">友情链接：<SELECT class="s3" name="link" onchange="javascript:window.open(this.options[this.selectedIndex].value)"> <OPTION value="" selected>&nbsp;&nbsp;</OPTION> <OPTION value="http://www.sjtu.edu.cn">上海交通大学</OPTION> <OPTION value="http://www.edu.cn">中国教育和科研网</OPTION> <OPTION value="http://www.cdream.com/">校园梦网</OPTION></SELECT> </DIV>
+<DIV class="cp"><!--#begineditable viewid="1825" name="版权"--><P>2004-2013 上海交通大学网络中心 版权所有 <FONT color="#2c678d">沪交ICP备05069</FONT></P><!--#endeditable--></DIV></DIV><!-- footer end --></DIV>
+
+</FORM></BODY></HTML>

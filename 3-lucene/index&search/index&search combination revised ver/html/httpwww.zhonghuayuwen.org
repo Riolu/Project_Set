@@ -1,0 +1,215 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中华语文知识库</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="Keywords" content="关键词"/>
+<meta name="Description" content="描述内容"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link href="styleNew/common.css" rel="stylesheet" type="text/css" />
+<link href="styleNew/style.css"  rel="stylesheet" type="text/css" />
+<link href="styleNew/clearbox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery.autoSearchText.js"></script>
+<script src="js/clearbox.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#Web_Seach_TextBoxKeyword').autoSearchText({ width: 420, itemHeight: 60, minChar: 1, datafn: getData, fn: alertMsg });
+        var random_bg = Math.floor(Math.random() * 4 + 1);
+        var bg = 'url(imageNew/new_feed/bg_' + random_bg + '.jpg)';
+        $("html").css("background-image", bg);
+        $("body").addClass("Rback" + random_bg);
+
+        $(".menu7 h4:contains(新闻动态)").addClass("icoHehua");
+        $(".menu7 h4:contains(合作成果)").addClass("icoHezhuo");
+        $(".menu7 h4:contains(语言资源)").addClass("icoZhiyuan");
+        $(".menu7 h4:contains(语言测试)").addClass("icoCheshi");
+        $(".menu7 h4:contains(语文博览)").addClass("icoBolan");
+        $(".menu7 h4:contains(成语故事)").addClass("icoGushi");
+        $(".menu7 h4:contains(古籍经典)").addClass("icoGuji");
+
+        $(".news2 ul li:odd").css("borderBottom", "dashed 1px #d2d2d2")
+    });
+</script>
+
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b325759f22e915ce0bdcabce248c4373";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<!--头部开始-->
+<form name="form1" method="post" action="index.aspx" id="form1" autocomplete="off">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTcxNzYxNDk3ZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUXV2ViX1NlYWNoJGJ0bl9jaGFuZ3lvbmc5Ep04y7dcAg5wEt3YktRUmjem8A==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQLUmvrxDAKV0onfDQK8odfvAwLc+qjGCwKs8OjWB3sH97yTI7RMYK4mUTk4wVneXmwD" />
+</div>
+
+
+<script type="text/javascript">
+ var ua = navigator.userAgent.toLowerCase();
+ var s;
+ s = ua.match(/iPad/i);
+var ipadtxt="<a href=\"/index.aspx\"><img src=\"/images/common/logo_no_hei.png\" /></a>";
+var ipadnotxt="<a href=\"/index.aspx\"><object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"  codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0\" width=\"275\" height=\"40\">";
+	ipadnotxt +="<param name=\"movie\" value=\"flash/logo.swf\">";
+	ipadnotxt +="<param name=\"quality\" value=\"high\">";
+	ipadnotxt +="<param name=\"wmode\" value=\"transparent\">";	
+	ipadnotxt +="<embed src=\"flash/logo.swf\" width=\"275\" height=\"40\" loop=\"false\" quality=\"high\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" salign=\"T\" name=\"scriptmain\" menu=\"false\" wmode=\"transparent\" ></embed></object></a>";
+ if(s=="ipad")
+ {
+    $('#txt_logo').html(ipadtxt);
+ }
+ else
+ {
+    $('#txt_logo').html(ipadnotxt);
+ }
+
+$(function(){
+		$(".sddm li").hover(
+				function(){
+					$(this).children(".subnav").show();
+					$(this).addClass("root");
+				}
+			,function(){
+					$(this).children(".subnav").hide();
+					$(this).removeClass("root");
+				})
+
+		})
+</script>
+<div class="header">
+  <div class="nav-top"> 
+    <!--导航开始-->
+    <div class="nav">
+      <ul class="sddm">
+        <li><a href="/index.aspx" class="first">首页</a></li>
+        <li><a href="/NewList.aspx?Id=2">新闻</a></li><li><a href="/PageInfo.aspx?Id=375">合作成果</a><div class="subnav"><a href="/PageInfo.aspx?Id=375">两岸常用词典</a><a href="/PageInfo.aspx?Id=256">两岸科技名词词典</a><a href="/swords/py.aspx?action=py">汉字书写演示</a></div></li><li><a href="/PageInfo.aspx?Id=68">语言测试</a><div class="subnav"><a href="/PageInfo.aspx?Id=68">普通话水平测试</a><a href="/PageInfo.aspx?Id=18">汉语能力测试</a><a href="/PageInfo.aspx?Id=79">汉字应用水平测试</a></div></li><li><a href="/PageInfo.aspx?Id=329">语言资源</a><div class="subnav"><a href="/jsfg.aspx">有声数据库（江苏库）</a><a href="/PageInfo.aspx?Id=173">语言资源监测与研究</a><a href="/mcps.aspx">现代汉语语料库</a><a href="/hza.aspx">汉字属性库</a></div></li><li><a href="/PageInfo.aspx?Id=80">语文博览</a><div class="subnav"><a href="/PageInfo.aspx?Id=80">中华诵</a><a href="/ImgList.aspx?Id=38">史说汉字</a><a href="/NewList.aspx?Id=41">语文知识</a><a href="/PhotoList.aspx?Id=45">书法大赛</a><a href="/ImgTextList.aspx?Id=40">语文人物</a><a href="/ImgList.aspx?Id=42">学汉字</a><a href="/PageInfo.aspx?Id=138">中国文字博物馆</a></div></li><li><a href="/acps.aspx">古籍经典</a><div class="subnav"><a href="/acps.aspx">古籍语料</a><a href="/sw.aspx">说文解字</a><a href="/kx.aspx">康熙字典</a></div></li>     
+      </ul>
+    </div>
+    <!--导航结束--> 
+    <!--音乐开-->
+
+     <div class="nav-you"> 
+     <div class="nav-you"><a href="http://chinese-linguipedia.org/" target="_blank"><img src="/imageNew/background/tai.png" width="173" height="69" /></a> </div>
+    </div>
+    <!--音乐结束--> 
+  </div>
+</div>
+<!--头部结束--> 
+<!--中部开始-->
+<div class="main">
+  <div class="main-s"> 
+    <!--logo-->
+    <div class="logo" id="txt_logo">
+    <script type="text/javascript">
+
+ var ua = navigator.userAgent.toLowerCase();
+ var s;
+ s = ua.match(/iPad/i);
+var ipadtxt="<a href=\"/index.aspx\"><img src=\"/imageNew/commom/logo.png\" /></a>";
+var ipadnotxt="<a href=\"/index.aspx\"><object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"  codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0\" width=\"323\" height=\"57\">";
+	ipadnotxt +="<param name=\"movie\" value=\"flash/logoH.swf\">";
+	ipadnotxt +="<param name=\"quality\" value=\"high\">";
+	ipadnotxt +="<param name=\"wmode\" value=\"transparent\">";	
+	ipadnotxt +="<embed src=\"flash/logoH.swf\" width=\"323\" height=\"57\" loop=\"false\" quality=\"high\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" salign=\"T\" name=\"scriptmain\" menu=\"false\" wmode=\"transparent\" ></embed></object></a>";
+ if(s=="ipad")
+ {
+	
+    $('#txt_logo').html(ipadtxt);
+ }
+ else
+ {
+    $('#txt_logo').html(ipadnotxt);
+ }
+
+</script>
+    </div>
+    <!--搜索-->
+    
+
+<div class="search">
+   <div class="sou">
+     <div class="wenben" ><input name="Web_Seach$TextBoxKeyword" type="text" id="Web_Seach_TextBoxKeyword" value="请输入查询的字词" onfocus="if (value == '请输入查询的字词') { value = '' }" onblur="if (value ==''){value='请输入查询的字词'}" autocomplete="off" /></div>
+     
+     <div class="selectType"><select name="Web_Seach$Bs" id="Web_Seach_Bs">
+	<option selected="selected" value="两岸常用词典">两岸常用词典</option>
+	<option value="两岸科技名词">两岸科技名词</option>
+</select></div>
+     
+     <input name="Web_Seach$bj" type="text" id="Web_Seach_bj" style="display:none;" />
+     <div class="searchBtn">
+        <input type="image" name="Web_Seach$btn_changyong" id="Web_Seach_btn_changyong" src="imageNew/background/toum.png" style="height:40px;width:75px;border-width:0px;" />
+     </div>
+     <div class="sou-list"><span>热门检索：<a href="../dictquery.aspx?i=91489">土豆</a><a href="../dictquery.aspx?i=10179">信息</a><a href="../dictquery.aspx?i=566551">光盘</a><a href="../dictquery.aspx?i=567403">软件</a><a href="../dictquery.aspx?i=662858">窝心</a><a href="../dictquery.aspx?i=295461">网络</a><a href="../dictquery.aspx?i=129882">干系</a><a href="../dictquery.aspx?i=354081">阿司匹林</a><a href="../dictquery.aspx?i=627896">激光</a></span></div>
+  </div>
+</div>
+
+    <!--搜索结束--> 
+</div>
+  <!--两岸常用词典-->
+  <div class="main-list">
+    <div class="zuo-list">
+      <h1>两岸常用词典</h1>
+      <a href="/dictquery.aspx" class="latt"><img src="imageNew/commom/shutu.jpg" width="80" height="116" /></a>
+      <p>《两岸常用词典》共收字7000多个，收词近35000多条，全书约250万字，以收释现代汉民族共同语（大陆称“普通话”，台湾称“国语”）中的常用词语为主，<a href="/PageInfo.aspx?Id=375">[详细内容]</a></p>
+      <h2>每日一词</h2>
+       <div class='zuo-nei'><table class='symryc' align='center' width='366'><tr><td><a href='/dictquery.aspx?i=381182'><img src='/Common/DLText.aspx?text=奶酪&Type=1'/></a></td><td><span><img src='imageNew/background/jaintou.png' width='61' height='28' /></span></td><td><a href='/dictquery.aspx?i=381182'><img src='/Common/TWText.aspx?text=乳酪&Type=1'/></a></td></tr></table></div>    
+    </div>
+    <!--两岸科技名词-->
+    <div class="you-list">
+      <h1>两岸科技名词</h1>
+      <p>科学技术名词作为科技交流和知识传播的载体，在科技发展和社会进步中起着重要作用。规范和统一科技名词，对于一个国家的科技发展和文化传承是一项重要的基础性工作和长期性任务...<a href="/PageInfo.aspx?Id=256">[详细内容]</a></p>
+     
+      <div class="jfzt">
+        <table class='sykj' align='center'><tr><th><font color='#9c0000'  font-size='14px'>陆</font></th><th></th><th><font color='#9c0000' font-size='14px'>台</font></th></tr><tr><td><a href=/termq.aspx?CurrentPage=1&_key=低温镍钢&_mode=0&ID=2732>低温镍钢</a></td><td width='100' align='center' ><span><img src='imageNew/commom/heng.jpg' width='60' height='14' /></span></td><td><a href=/termq.aspx?CurrentPage=1&_key=低温镍钢&_mode=0&ID=2732>低溫鎳鋼</a></td></tr><tr><td><a href=/termq.aspx?CurrentPage=1&_key=最佳色刺激&_mode=0&ID=6645>最佳色刺激</a></td><td width='100' align='center' ><span><img src='imageNew/commom/heng.jpg' width='60' height='14' /></span></td><td><a href=/termq.aspx?CurrentPage=1&_key=最佳色刺激&_mode=0&ID=6645>最適色刺激</a></td></tr><tr><td><a href=/termq.aspx?CurrentPage=1&_key=火星&_mode=0&ID=47451>火星</a></td><td width='100' align='center' ><span><img src='imageNew/commom/heng.jpg' width='60' height='14' /></span></td><td><a href=/termq.aspx?CurrentPage=1&_key=火星&_mode=0&ID=47451>火星</a></td></tr></table>
+      </div>
+    </div>
+  </div>
+  <!--词典结束-->
+<div class="menu">
+    <div class='menu7'><h4><a href=/NewList.aspx?Id=2>新闻动态</a></h4><h5><a href=/ContentsInfo.aspx?Id=380>两岸语言文化交流深入开展  成果丰硕</a></h5><p></p><h5><a href=/ContentsInfo.aspx?Id=379>第八届海峡两岸现代汉语问题学术研讨会在台北召开</a></h5><p></p><a href=/NewList.aspx?Id=2 class='geng'><img src='imageNew/commom/duo.gif' width='23' height='24' title='更多' alt='更多'/></a></div><div class='menu7'><h4><a href=/PageInfo.aspx?Id=375>合作成果</a></h4><h5><a href=/PageInfo.aspx?Id=37>海峡两岸信息科学技术名词</a></h5><p>在海峡两岸科技交流中断的几十年间，很多科技名词出现很大差异，严重影响两岸科技、文化乃至经济的顺畅交流。1993年，具有历史意义的“汪辜会谈”把“探讨两岸科技...</p><a href=/PageInfo.aspx?Id=37 class='geng'><img src='imageNew/commom/duo.gif' width='23' height='24' title='更多' alt='更多'/></a></div><div class='menu7'><h4><a href=/PageInfo.aspx?Id=68 >语言测试</a></h4><h5><a href=PageInfo.aspx?Id=79>汉字应用水平测试</a></h5><p>汉字应用水平测试（HZC）是国家语委推出的一项语言类标准化水平测试，旨在考查应试人员汉字的认读、选用、辨误、书写等实际应用能力，引导人们进一步重视提高汉字应...</p><a href=/PageInfo.aspx?Id=79 class='geng'><img src='imageNew/commom/duo.gif' width='23' height='24' title='更多' alt='更多'/></a></div><div class='menu7'><h4><a href=/yssjk.aspx>语言资源</a></h4><div class='img'><a href='/VideoInfo.aspx?Id=265' rel='clearbox(565,383,click)'><img src='images/user/634634151104898750.jpg' width='240' height='130' /></br></br><span>扬剧-野猪林</span></a></div><a href=/ktku.aspx?typeId=5 class='geng'><img src='imageNew/commom/duo.gif' width='23' height='24' title='更多' alt='更多'/></a></div><div class='menu7'><h4><a href=/PageInfo.aspx?Id=80>语文博览</a></h4><div class='news'><ul><li><a href=/ContentsInfo.aspx?Id=252>书面上的“儿”有几种读法</a></li><li><a href=/ContentsInfo.aspx?Id=250>亮丽•靓丽</a></li><li><a href=/ContentsInfo.aspx?Id=249>“翻五番”与“好五倍”</a></li><li><a href=/ContentsInfo.aspx?Id=248>“肤浅”跟“浮浅”有何不同</a></li><li><a href=/ContentsInfo.aspx?Id=247>“绝无仅有”为中性词语</a></li></ul><a href=/NewList.aspx?Id=41 class='geng'><img src='imageNew/commom/duo.gif' width='23' height='24' title='更多' alt='更多'/></a></div></div><div class='menu7'><h4><a href=/acps.aspx>古籍经典</a></h4><div class='news2'><ul><li><a href='acps.aspx'><strong>古籍语料</strong></a></li><li>包含自周至清各朝代的约一亿字..</li><li><a href='sw.aspx'><strong>说文解字</strong></a></li><li>中国第一部系统分析汉字字形和..</li><li><a href='kx.aspx'><strong>康熙字典</strong></a></li><li>奉康熙圣旨编撰的一部具有深远影响..</li></ul><a href=/acps.aspx class='geng'><img src='imageNew/commom/duo.gif' width='23' height='24' title='更多' alt='更多'/></a></div></div>
+    <div class="xuxian"><img src="imageNew/commom/xuxu.png" width="958" height="2" /></div>
+</div>
+  <!--底部logo-->
+<div class="logo-d">
+<a href="#"><img src="imageNew/commom/you.png" width="81" height="75" /></a>
+
+<div class="syyq">
+<a href="http://www.china-language.gov.cn" target="_blank"><img src="imageNew/commom/yuyu.png" width="111" height="45" /></a>
+<a href="http://www.taiwan.cn" target="_blank"><img src="imageNew/commom/zguo.png" width="146" height="45" /></a>
+<a href="http://www.wzbwg.com" class="laster" target="_blank"><img src="imageNew/commom/whua.png" width="141" height="41" /></a> 
+</div>
+
+</div>
+</div>
+<!--中部结束-->
+
+<div class="footer">
+  <div class="foot">
+      <div class="link"> <a href="/PageInfo.aspx?Id=9">关于网站</a><a href="/PageInfo.aspx?Id=10">&nbsp;&nbsp;&nbsp;|&nbsp;联系我们</a><a href="/PageInfo.aspx?Id=167">&nbsp;&nbsp;&nbsp;|&nbsp;版权声明</a><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;访问计数: 12710010 </a></div>
+    <p>主办：两岸合作编纂中华语文工具书大陆编写委员会&nbsp;&nbsp;&nbsp;&nbsp;地址：北京市朝阳门内南小街51号&nbsp;&nbsp;&nbsp;&nbsp;邮箱：<a href="#">zhonghuayuwen@sina.com</a> </p>
+  </div>
+</div>
+
+
+
+</form>
+</body>
+</html>
+

@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="publishid" content="1172654.0.100.0"/>
+<title>新华微视评-新华网</title>
+    <meta name="description" content=" " />
+<base target="_blank" />
+<link href="http://www.xinhuanet.com/video/xhwsp/wsp.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://www.xinhuanet.com/static/jq.js"></script> 
+<script type="text/javascript"> 
+function datugundong(){ 
+    var jqpfoc=jQuery("#focus_pic"); 
+jQuery(document).ready(function(){ 
+var bigpic_boxobj=jqpfoc.find("div.bigpic_box"); 
+var jqnrbt=jqpfoc.find("ul.btPhoto"); 
+var len=bigpic_boxobj.find("div.fpic").length; 
+var kongzhi=''; 
+for(i=0;i<len;i++)kongzhi+='<li class="bt02"></li>'; 
+$("ul.btPhoto").append(kongzhi); 
+var nmyTime; 
+var nsig=0; 
+jqnrbt.find("li:first").addClass("current"); 
+jqnrbt.find("li").each(function(i){  
+    jQuery(this).mouseover(function(){ 
+    bigpic_boxobj.find("div.fpic").eq(i).fadeIn("slow").siblings().hide(); 
+    jQuery(this).addClass("current").siblings().removeClass("current"); 
+    nsig=i; 
+})}); 
+jqnrbt.find("li:first").mouseover(); 
+nmyTime=setInterval(function(){nsig++;if(nsig>=len){bigpic_boxobj.find("div.fpic").eq(0).fadeIn("slow").siblings().hide(); 
+jqnrbt.find("li").eq(0).addClass("current").siblings().removeClass("current");nsig=0;} 
+else{bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide();jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current")}},5000); 
+jqpfoc.mouseenter(function(){clearInterval(nmyTime)}); 
+jqpfoc.mouseleave(function(){nmyTime=setInterval(function(){nsig++;if(nsig>=len){bigpic_boxobj.find("div.fpic").eq(0).fadeIn("slow").siblings().hide(); 
+jqnrbt.find("li").eq(0).addClass("current").siblings().removeClass("current");nsig=0;}else{bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide();jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current")}},5000);}); 
+jQuery("#l_btn01").mouseover(function(){jQuery("#l_btn01").addClass("current01")}); 
+jQuery("#l_btn01").mouseout(function(){jQuery("#l_btn01").removeClass("current01")}); 
+jQuery("#r_btn01").mouseover(function(){jQuery("#r_btn01").addClass("current02")}); 
+jQuery("#r_btn01").mouseout(function(){jQuery("#r_btn01").removeClass("current02")}); 
+jQuery("#l_btn01").click(function(){nsig--; 
+if(nsig<0){nsig=len-1; 
+           bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide(); 
+            jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current"); 
+            } 
+else{bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide(); 
+jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current"); 
+}}); 
+jQuery("#r_btn01").click(function(){ 
+    nsig++; 
+    if(nsig>len-1){ 
+        nsig=0; 
+        bigpic_boxobj.find("div.fpic").eq(0).fadeIn("slow").siblings().hide(); 
+        jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current"); 
+    } 
+else{ 
+    bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide(); 
+    jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current"); 
+    }}); 
+}) 
+     
+}$(function(){ 
+    datugundong(); 
+}) 
+</script> 
+</head>
+<body>
+<div id="daohang">
+<div align="center"><span class="dh"><a target="_blank" href="http://www.xinhuanet.com/">新华网首页</a> | <a target="_blank" href="http://www.news.cn/jsyw.htm">新闻中心</a> | <a target="_blank" href="http://www.xinhuanet.com/politics/">时政</a> | <a target="_blank" href="http://www.xinhuanet.com/world/">国际</a> | <a target="_blank" href="http://www.xinhuanet.com/fortune/">财经</a> | <a target="_blank" href="http://www.xinhuanet.com/mil/">军事</a> | <a target="_blank" href="http://www.xinhuanet.com/legal/">法治</a> | <a target="_blank" href="http://www.xinhuanet.com/comments/">网评</a> | <a target="_blank" href="http://www.xinhuanet.com/sports/">体育</a> | <a target="_blank" href="http://www.xinhuanet.com/ent/">文娱</a> | <a target="_blank" href="http://www.xinhuanet.com/newmedia/">传媒</a> | <a target="_blank" href="http://www.xinhuanet.com/tech/">科技</a> | <a target="_blank" href="http://www.xinhuanet.com/edu/">教育</a> | <a target="_blank" href="http://www.xinhuanet.com/school/">校园</a> | <a target="_blank" href="http://www.xinhuanet.com/auto/">汽车</a> | <a target="_blank" href="http://www.xinhuanet.com/house/">房产</a></span></div>
+</div>
+<div id="main">
+<div class="count">
+<div class="shipin">
+<div id="bigpic">
+<div id="focus_pic" class="focusPic">
+<div id="l_btn01" class="l_btn"></div>
+<div id="r_btn01" class="r_btn"></div>
+<div class="bigpic_box">
+<div class="fpic" style="display: block;">
+<a href="http://news.xinhuanet.com/video/2015-09/10/c_128212784.htm"><img src="../titlepic/111652/1116524928_1441873927939_title0h.jpg" width="560" height="295" alt="【新华微视评】首位获得色拉寺&ldquo;群则法位&rdquo;的汉族艺术家" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-09/10/c_128212784.htm" target="_blank">【新华微视评】首位获得色拉寺“群则法位”的汉族艺术家</a></h3>
+<span class="f_bg"></span> 
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://news.xinhuanet.com/video/2015-09/09/c_128208426.htm"><img src="../titlepic/111650/1116504041_1441760533820_title0h.jpg" width="560" height="295" alt="【新华微视评】&ldquo;平语&rdquo;近人&mdash;&mdash;聆听习主席讲和平" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-09/09/c_128208426.htm" target="_blank">【新华微视评】“平语”近人——聆听习主席讲和平</a></h3>
+<span class="f_bg"></span> 
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://news.xinhuanet.com/video/2015-09/07/c_128200614.htm"><img src="../titlepic/111647/1116479198_1441588246832_title0h.jpg" width="560" height="295" alt="【新华微视评】阅兵式邀请的两位特殊嘉宾" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-09/07/c_128200614.htm" target="_blank">【新华微视评】阅兵式邀请的两位特殊嘉宾</a></h3>
+<span class="f_bg"></span> 
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://news.xinhuanet.com/video/2015-09/02/c_128188553.htm"><img src="../titlepic/111645/1116450122_1441170313540_title0h.jpg" width="560" height="295" alt="【新华微视评】方寸间的大美西藏" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-09/02/c_128188553.htm" target="_blank">【新华微视评】方寸间的大美西藏</a></h3>
+<span class="f_bg"></span> 
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://news.xinhuanet.com/video/2015-08/28/c_128173390.htm"><img src="../titlepic/111640/1116401084_1440725032385_title0h.jpg" width="560" height="295" alt="【新华微视评】九三，人类应该记住的重要符号" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-08/28/c_128173390.htm" target="_blank">【新华微视评】九三，人类应该记住的重要符号</a></h3>
+<span class="f_bg"></span> 
+</div>
+</div>
+<ul class="btPhoto"> 
+</ul>
+</div>
+</div>
+<div class="topright">
+<div class="newsbox">
+<h2><a href="http://news.xinhuanet.com/video/2015-09/09/c_128208426.htm" target="_blank">【新华微视评】聆听习主席讲和平</a></h2>
+<h3><a href="http://news.xinhuanet.com/video/2015-10/15/c_128318122.htm" target="_blank">【新华微视评】实实在在解决百姓疾苦的党代表</a></h3>
+<p>权力是用来做事的，是为党和人民来做事的，因为它是党和人民赋予的，要为党分忧、为国干事、为民谋利——作为“一线指挥部”的重庆垫江县委在班长罗德的带领下，不仅深知这一点，而且更为重要的是他们以平均每天解决5件群众实事的速度在身体力行。那么，在收集完群众疾苦和问题之后，那里的党代表制度又是如何雪中送炭地解决这些问题的呢？</p>
+</div>
+<div class="line"></div>
+<div class="newsbox">
+<h2><a href="http://news.xinhuanet.com/video/2015-09/22/c_128252229.htm" target="_blank">【新华微视评】科普中国 持之以恒</a></h2>
+<h3><a href="http://news.xinhuanet.com/video/2015-10/16/c_128322170.htm" target="_blank">【新华微视评】十三五，哪些变化值得期待？</a></h3>
+<p>十八届五中全会即将在10月26日召开，会议核心关键词，是国民经济和社会发展第十三个五年规划。大家想知道，新一届领导班子的首个五年规划，或给你我带来哪些变化？</p>
+</div>
+</div>
+</div>
+<div class="wqjm">
+<div class="title">
+<h2><img src="http://www.xinhuanet.com/video/xhwsp/images/title1.jpg" /></h2>
+<div class="more"><a href="http://www.xinhuanet.com/video/xhwsp/wqjm.htm">更多>></a></div>
+</div>
+<div class="wqlist">
+<ul>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/28/c_128364147.htm"><img src="../titlepic/12836/128364147_1445939774341_title0h.jpg" width="140" height="100" alt="【新华微视评】传统文化，如何穿越千年与你相爱" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/28/c_128364147.htm">【新华微视评】传统文化，如何穿越千年与你相爱</a></h2>
+<p>提起传统文化，成长于文化断层期的现代人多数没有什么清晰的概念。每天隔着电视屏幕，身处在钢筋水泥中的我们，通过大众传播的无数次误读，与老祖先的距离早已不只是几千年。我们的文化基因到底该去哪儿找呢？</p>
+<p class="date">2015-10-28</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/27/c_128359790.htm"><img src="../titlepic/12835/128359790_1445850055357_title0h.jpg" width="140" height="100" alt="【新华微视评】让&ldquo;宽容失败&rdquo;的顶层设计落地" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/27/c_128359790.htm">【新华微视评】让“宽容失败”的顶层设计落地</a></h2>
+<p>中观上建立鼓励自我创造、自由表达的制度体系和互联网平台。微观重塑说真话、干实事、鼓励另辟蹊径的文化，包括善待标新立异企业家和创业者的文化。深改组“允许试错，宽容失败”的宏观设计才能落地，基层创新、万众创新才有更宽松的环境，才能出更多屠呦呦、更多小岗村。</p>
+<p class="date">2015-10-27</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/26/c_128351808.htm"><img src="../titlepic/12835/128351808_1445593491612_title0h.jpg" width="140" height="100" alt="【新华微视评】西医精准养生了 中医咋办" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/26/c_128351808.htm">【新华微视评】西医精准养生了 中医咋办</a></h2>
+<p>西方发达国家有一个新名词儿：功能医学！简单地说，它就是在人没病的时候，根据平时收集的各方面数据的变化，来进行有针对性的预防。这个西医的新名词儿听起来有些像没生病时就“治未病”的中医。那么，它与中医以及临床医学有着怎样的不同？它们彼此间又该如何借鉴呢？</p>
+<p class="date">2015-10-26</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/23/c_128347525.htm"><img src="../titlepic/12834/128347525_1445504945727_title0h.jpg" width="140" height="100" alt="【新华微视评】让生命带着尊严谢幕" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/23/c_128347525.htm">【新华微视评】让生命带着尊严谢幕</a></h2>
+<p>临终的过程，因人而异。但绝大多数人都会需要一根“拐杖”，才能走得更平稳、更安详。今天，我们不谈未富先老，因为比金钱更重要的是人心。如果没有人愿意去做这根拐杖，我相信这才是对临终老人们最大的伤害。</p>
+<p class="date">2015-10-23</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/22/c_128343480.htm"><img src="../titlepic/12834/128343480_1445428831498_title0h.jpg" width="140" height="100" alt="【新华微视评】垫江探索：每天收入7.5元 该咋扶贫？" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/22/c_128343480.htm">【新华微视评】垫江探索：每天收入7.5元 该咋扶贫？</a></h2>
+<p>现在10块钱能买什么？但您或许不知道，在目前我国很多地方比如像重庆市的垫江县，那里现在还有2万多贫苦人一天收入平均不到7块5毛钱。“小康不小康、关键看老乡”，没有贫困人口的脱贫致富，全面建成小康社会是不完整的。那么，我们通过解析垫江的扶贫工作，来说说如何精准扶贫、“造血式”地扶贫呢？</p>
+<p class="date">2015-10-22</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/21/c_128339186.htm"><img src="../titlepic/12833/128339186_1445331367028_title0h.jpg" width="140" height="100" alt="【新华微视评】垫江探索：为什么纪委和检察院&ldquo;压力大&rdquo;" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/21/c_128339186.htm">【新华微视评】垫江探索：为什么纪委和检察院“压力大”</a></h2>
+<p>之前我们《新华微视评》说了重庆垫江施行党代表制度，定时定点定人收集与百姓生活利益密切相关的问题和困难。那么，收集上来之后，他们又是如何对待的呢？为什么那里纪检和检察院工作人员现在感到身上所谓的“鸭梨山大”呢？</p>
+<p class="date">2015-10-21</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/20/c_128335113.htm"><img src="../titlepic/12833/128335113_1445245578978_title0h.jpg" width="140" height="100" alt="【新华微视评】建海绵城市 野草比草坪好" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/20/c_128335113.htm">【新华微视评】建海绵城市 野草比草坪好</a></h2>
+<p>无论是城外还是城内，在西北、华北、西南等大部分缺水的地区，野草和本地树目前还能自我繁殖，我们不该砍掉它们，去种单一的、好看的树种进行所谓的“荒山”治理和所谓的植树造林。建设海绵城市、海绵农村、海绵山地，首先是保护本地天然的自然生态，顺应自然规律，而不是顺应我们人类的愿望和标准</p>
+<p class="date">2015-10-20</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/19/c_128326485.htm"><img src="../titlepic/12832/128326485_1444981175488_title0h.jpg" width="140" height="100" alt="【新华微视评】中药国际化 始于标准化" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/19/c_128326485.htm">【新华微视评】中药国际化 始于标准化</a></h2>
+<p>最近，因为屠呦呦发现了青蒿素、获得了诺贝尔奖，中药又火了一下子。可与高高在上的诺奖相对的，是目前国内中药市场上中药饮片质量良莠不齐、价格云里雾里的迷局。如何才能打破迷局，让中国中药市场更加规范，更好地参与国际竞争呢？</p>
+<p class="date">2015-10-19</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/16/c_128322170.htm"><img src="../titlepic/12832/128322170_1444893980250_title0h.jpg" width="140" height="100" alt="【新华微视评】十三五，哪些变化值得期待？" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/16/c_128322170.htm">【新华微视评】十三五，哪些变化值得期待？</a></h2>
+<p>十八届五中全会即将在10月26日召开，会议核心关键词，是国民经济和社会发展第十三个五年规划。大家想知道，新一届领导班子的首个五年规划，或给你我带来哪些变化？</p>
+<p class="date">2015-10-16</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/15/c_128318122.htm"><img src="../titlepic/12831/128318122_1444811971563_title0h.jpg" width="140" height="100" alt="【新华微视评】垫江探索：实实在在解决百姓疾苦的党代表" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/15/c_128318122.htm">【新华微视评】垫江探索：实实在在解决百姓疾苦的党代表</a></h2>
+<p>权力是用来做事的，是为党和人民来做事的，因为它是党和人民赋予的，要为党分忧、为国干事、为民谋利——作为“一线指挥部”的重庆垫江县委在班长罗德的带领下，不仅深知这一点，而且更为重要的是他们以平均每天解决5件群众实事的速度在身体力行。那么，在收集完群众疾苦和问题之后，那里的党代表制度又是如何雪中送炭地解决这些问题的呢？</p>
+<p class="date">2015-10-15</p>
+</div>
+</li>
+<li class="noborder">
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/14/c_128313990.htm"><img src="../titlepic/12831/128313990_1444726168138_title0h.jpg" width="140" height="100" alt="【新华微视评】当养儿不再防老，农村老人如何安度晚年" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/14/c_128313990.htm">【新华微视评】当养儿不再防老，农村老人如何安度晚年</a></h2>
+<p>我们应该看到，在可以预见的将来，乡村养老的医疗等基本设施的建设并不是最大的难题。如何让风景秀丽、气候宜人的自然条件，与精神层面上养老敬老的人文关怀相结合，如何真正做到“老吾老以及人之老”，才是在人力比物力还缺乏的当下最难解决的问题。而这，应该是社会上的许许多多有心人齐心协力才能共同完成的一件大事。</p>
+<p class="date">2015-10-14</p>
+</div>
+</li>
+</ul>
+<div class="more"><a href="http://www.xinhuanet.com/video/xhwsp/wqjm.htm">更多>></a></div>
+</div>
+</div>
+<div class="mainright">
+<div class="jmjs">
+<div class="title">节目介绍</div>
+<div class="con">
+<img src="http://www.xinhuanet.com/video/xhwsp/images/zcr0819.jpg" />
+<div class="jmsj">
+<p>“温度，深度，锐度”——《新华微视评》在互联网思维下，选材于网民关注的新闻话题与社会现象，邀请富有独立思想的权威人士进行精辟分析与评论。传播主流价值观、展现中华文化精神，传递满满的正能量。</p>
+</div>
+</div>
+</div>
+<div class="jmjs">
+<div class="title">热播推荐</div>
+<div class="con">
+<ul>
+<li><a href="http://news.xinhuanet.com/video/2015-02/21/c_127510087.htm">奥巴马幽默拜年:不管山羊绵羊都要快乐</a></li>
+<li><a href="http://news.xinhuanet.com/video/2015-02/21/c_127510091.htm">普京说俄罗斯将对等回应任何外来压力</a></li>
+<li><a href="http://news.xinhuanet.com/video/2015-02/21/c_127509986.htm">京城羊年首雪连降30余小时 美景格外靓</a></li>
+<li><a href="http://news.xinhuanet.com/video/2015-02/21/c_127508939.htm">盘点娱乐圈怪老爸 刘烨为儿子定娃娃亲</a></li>
+<li><a href="http://news.xinhuanet.com/video/2015-02/21/c_127508937.htm">2014脱单王老五 周杰伦昆凌幸福完婚</a></li>
+<li><a href="http://news.xinhuanet.com/video/2015-02/20/c_127509145.htm">当电影《赌神》配上斗地主的音效</a></li>
+<li><a href="http://news.xinhuanet.com/video/2015-02/21/c_127509094.htm">英王储查尔斯携妻子游中国城 庆新年</a></li>
+<li><a href="http://news.xinhuanet.com/video/2015-02/20/c_127508943.htm">韩国纪录片《超级中国》掀“中国热”</a></li>
+<li><a href="http://news.xinhuanet.com/video/2015-02/20/c_127508295.htm">女教师车祸瞬间推开学生 被撞飞10余米</a></li>
+<li><a href="http://news.xinhuanet.com/video/2015-02/19/c_127508123.htm">萌翻！大熊猫不想进笼子 耍赖抱大腿</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="foot">
+<div class="copyright">
+<p>Copyright &copy; 2000 - 2015 XINHUANET.com&#12288;All Rights Reserved. &#12288;制作单位：新华网 版权所有 <a target="_blank" href="http://www.news.cn">新华网</a> | <a target="_blank" href="http://www.xinhuanet.com/aboutus.htm">关于我们</a> | <a target="_blank" href="http://news.xinhuanet.com/way.htm">联系我们</a> | <a target="_blank" href="http://www.xinhuanet.com/linktous.htm">我要链接</a> | <a target="_blank" href="http://www.xinhuanet.com/xinhua_copyright.htm">版权声明</a>  </p>
+</div>
+</div>
+<div style="display:none"><div id="fwl">010020050550000000000000011200000000000000</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020050550000000000000011200000000000000")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020050550000000000000011200000000000000" border="0" /></noscript></div>   </body>
+</html>

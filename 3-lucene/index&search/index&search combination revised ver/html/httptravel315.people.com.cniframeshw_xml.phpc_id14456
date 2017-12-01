@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta content="all" name="robots" />
+<meta name="description" content="人民网旅游3·15投诉平台" />
+<meta name="keywords" content="旅游投诉 旅游315 旅游维权" />
+<META name='filetype' content='0'>
+<META name='publishedtype' content='1'>
+<META name='pagetype' content='2'>
+<META name='catalogs' content='XTW_0002005'>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>查看详情</title>
+<link  href="/style/page.css" type="text/css" rel="stylesheet" media="all"  />
+<script type="text/javascript" src="/js/webdig_test.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/artDialog/artDialog.js?skin=default" charset="utf-8"></script>
+<script type="text/javascript" src="/js/artDialog/jquery.artDialog.js?skin=default" charset="utf-8"></script>
+<script type="text/javascript" src="/js/artDialog/plugins/iframeTools.js?skin=default" charset="utf-8"></script>
+<script type="text/javascript" src="/js/jquery.quickpaginate.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/swfobject.js" ></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	var c_id = 14456 ;
+
+	var wwvars = {c_id: c_id,dataurl:"/interface/select/data_show.php"};
+	swfobject.embedSWF("/js/jdttop.swf?"+Math.random(), "wwdiv", "300", "300", "9.0.0", "",wwvars,false,false);
+	
+	
+	$.ajax({ 
+		async:false,
+		type: "GET",
+		url: "/interface/select/data_show_xml.php?c_id="+c_id , 
+		dataType: "xml",
+		cache:false,
+		success: function(data){
+			var complaint = $(data).find("complaints");
+			var discus = $(data).find("discus");
+			
+			var c_title 			= $(complaint).find("c_title").text();
+			var u_nick_name 		= $(complaint).find("u_nick_name").text();
+			var c_create_time 		= $(complaint).find("c_create_time").text();
+			var c_prev				= $(complaint).find("c_prev").text();
+			var c_type				= $(complaint).find("c_type").text();
+			var c_type_node			= $(complaint).find("c_type_node").text();
+			var c_travel_last		= $(complaint).find("c_travel_last").text();
+			var c_travel_loss		= $(complaint).find("c_travel_loss").text();
+			var c_travel_keys		= $(complaint).find("c_travel_keys").text();
+			var c_support			= $(complaint).find("c_support").text();
+			var c_oppose			= $(complaint).find("c_oppose").text();
+			var c_reply_good		= $(complaint).find("c_reply_good").text();
+			var c_reply_med			= $(complaint).find("c_reply_med").text();
+			var c_reply_bad			= $(complaint).find("c_reply_bad").text();
+			var c_create_time_2		= $(complaint).find("c_create_time_2").text();
+			var c_context			= $(complaint).find("c_context").text();
+			var c_to				= $(complaint).find("c_to").text();
+			var c_response_o_time	= $(complaint).find("c_response_o_time").text();
+			var c_response_o		= $(complaint).find("c_response_o").text();
+			var c_response_s_time	= $(complaint).find("c_response_s_time").text();
+			var c_response_s		= $(complaint).find("c_response_s").text();
+			var c_response_u_rank	= $(complaint).find("c_response_u_rank").text();
+			var c_response_u		= $(complaint).find("c_response_u").text();
+			var c_pics				= $(complaint).find("c_pics");
+
+			
+			
+			var c_pic_arr = new Array();
+			$(c_pics).find('item').each(function(){
+				c_pic_arr.push($(this).text());
+			}); 
+			
+			document.title = c_title;
+			$("#c_title").html (c_title);
+			$("#true_url").attr("href","shw.php?c_id="+c_id);
+
+			if(u_nick_name==undefined) $("#u_nick_name").html ("旅游频道网友");
+			else $("#u_nick_name").html (u_nick_name);
+			$("#c_create_time").html (c_create_time);
+			$("#c_prev").html (c_prev);
+			$("#c_type").html (c_type + c_type_node);
+			$("#c_travel_last").html (c_travel_last);
+			$("#c_travel_loss").html (c_travel_loss);
+			$("#c_support").html (c_support);
+			$("#c_oppose").html (c_oppose);
+			$("#c_reply_good").html (c_reply_good);
+			$("#c_reply_med").html (c_reply_med);
+			$("#c_reply_bad").html (c_reply_bad);
+			$("#c_create_time_2").html (c_create_time);
+			$("#c_context").html (c_context);
+			if(c_to=='') $("#c_to").html (c_to);
+			else $("#c_to").html (c_to+"<img src='/images/v.gif' />");
+			if(c_response_o_time!='0000-00-00 00:00:00') $("#c_response_o_time").html (c_response_o_time);
+			$("#c_response_o").html (c_response_o);
+			if(c_response_s_time!='0000-00-00 00:00:00') $("#c_response_s_time").html (c_response_s_time);
+			$("#c_response_s").html (c_response_s);
+			
+			if(c_response_u_rank!=0)
+				var starstr = "";
+				for(var i=0;i<c_response_u_rank;i++){
+					starstr += "<img src='/images/new1_09.gif' />" ;
+				}
+				$("#c_response_u_rank").html (starstr);
+			$("#c_response_u").html (c_response_u);
+
+			//关键词设置
+			var str_keys = c_travel_keys;
+
+			arr_keys = str_keys.split(";"); //字符分割     
+			for (i=0;i<arr_keys.length-1;i++ ) {   
+				$("#c_travel_keys").append("<font id='"+arr_keys[i]+"' class='pks'>"+arr_keys[i]+";</font>");
+			} 
+			//图区
+			if(c_pic_arr.length != 1 ){
+				$("#user_pic").prepend();
+			}else{
+				$("#user_pic").prepend('<h2><b>网友晒图</b></h2><div class="p2_ra"><span class="fl">图片</span></div>');
+			}
+
+			var dis_list = "";
+			var i=1;
+			$(discus).find('item').each(function(){
+				dis_list = dis_list + "<dl><dt><span>"+i+"楼&nbsp;&nbsp;"+$(this).find('d_author').text()+"</span>"+$(this).find('d_time').text()+"</dt><dd>"+$(this).find('d_context').text()+"</dd></dl>";	
+			}); 
+
+			$("#dis_list").html(dis_list);
+
+			$("#dis_list >dl").quickpaginate({perpage:5,showcounter:true, pager:$("#pager_dis_list"), prev_text : '上一页',next_text : '下一页',prev_class : "qp_p",next_class : "qp_n"});
+			//alert(c_context);
+
+		},
+		error:function(){
+			alert('加载失败');
+		}
+	});
+
+	$(".pks").live("click",function(){
+		var key = $(this).attr("id");
+		art.dialog.data('key',key);
+		art.dialog.open('/iframe/lst.html', {id:'srh_div',title: '查询结果',width:'100%',height:'100%',left: '0%', top: '0%', fixed: true,drag:false,resize:false});	
+		
+	})
+
+	$("#discuss").click(function(){
+		
+		art.dialog.data('c_id', c_id);		
+		art.dialog.open('/iframe/dis.html', {title: '留言板',width:400,height:350,lock:true,drag:false,resize:false});
+	})
+	$(".tp").click(function(){
+		
+		art.dialog.data('c_id', c_id);	
+		var tp = $(this).attr("tp");
+		var num = $("#"+tp).html();
+		//$("#"+tp).html()
+		$.post("/interface/update/upd_nums.php",{"c_id":''+c_id+'',"tp":''+tp+''},function(result){
+			
+			if(result.Status=="failed"){
+				alert(result.reason);
+			}else if(result.Status=="success"){
+				alert(result.reason);
+				$("#"+tp).html(parseInt(num)+1);
+				return;
+			}else{
+				alert("异步传输错误");
+			}
+		});
+	})
+    $("#srh_sub").live("click",function(){
+
+		if($("#srh_key").val()==""){
+			alert("搜索关键字不能为空")
+		}else{
+			art.dialog.data('key', $("#srh_key").val());
+			art.dialog.open('/iframe/lst.html', {id:'srh_div',title: '查询结果',width:'100%',height:'100%',left: '0%', top: '0%', fixed: true,drag:false,resize:false});	
+		}
+	})
+
+	//控制标签样式
+	$("[name='title_a']").live("click",function(){
+		$("[name='title_a']").removeClass() ;
+		$(this).addClass("this");
+		if($(this).attr("id")=="main"){
+			$("#content_rank").hide();
+			$("#content_main").show(1000);
+			$("#daohang").html('<div class="top_nav"><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529390.html" style="color:#064d7b;float:left;margin-right:10px" target="_blank">投诉须知</a><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529390-2.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">隐私保护</a><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529390-3.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">版权说明</a><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529390-4.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">常见问题</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="../images/ss.gif" width="47" height="31" id="srh_sub"/></span>');
+
+		}else if($(this).attr("id")=="hot"){
+			$("#daohang").html('<div class="top_nav1"><a href="http://travel.people.com.cn/GB/236434/359205/index.html" style="color:#064d7b;float:left;margin-right:10px" target="_blank">热点报道</a><a href="http://travel.people.com.cn/GB/236434/241507/359203/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">“诉”说旅游故事</a><a href="http://travel.people.com.cn/GB/236434/241508/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">平台动态</a><a href="http://travel.people.com.cn/GB/236434/241507/359204/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">跟踪报道</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="../images/ss.gif" width="47" height="31" id="srh_sub"/></span>');
+		}else if($(this).attr("id")=="rank"){
+			/*$("#content_rank").show(1000);
+			$("#content_main").hide();
+			$("#daohang").html('<div class="top_nav2"><a href="" style="color:#064d7b;float:left;margin-right:10px" target="_blank">诚信排行</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">投诉数量排行</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">回复数量排行</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">回复时长排行</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="images/ss.gif" width="47" height="31" id="srh_sub"/></span>');*/
+		}else if($(this).attr("id")=="introduce"){
+			$("#daohang").html('<div class="top_nav3"><a href="http://travel.people.com.cn/GB/236434/348173/index.html" style="color:#064d7b;float:left;margin-right:10px" target="_blank">维权指南</a><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529443.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">投诉指南</a><a href="http://travel.people.com.cn/GB/348387/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">法律法规</a><a href="http://travel.people.com.cn/GB/236434/359205/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">出游提示</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="../images/ss.gif" width="47" height="31" id="srh_sub"/></span>');
+		}else if($(this).attr("id")=="info"){
+			$("#daohang").html('<div class="top_nav4"><a href="http://travel.people.com.cn/GB/236434/347240/index.html" style="color:#064d7b;float:left;margin-right:10px" target="_blank">质检资讯</a><a href="" style="color:#064d7b;float:left;margin-right:10px"   id="iwr">我要回复</a><a href="http://travel.people.com.cn/GB/236434/361842/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">投诉通讯录</a><a href="http://travel.people.com.cn/GB/236434/243250/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">注意事项</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="images/ss.gif" width="47" height="31" id="srh_sub"/></span>');
+		}else{
+
+
+		}
+	});
+})
+</script>
+<style>
+.ph_b{width:150px; text-align:center;}
+#dis_list{margin:0 10px; padding:10px 20px;line-height:26px;}
+#dis_list b{ display:block;clear:both;line-height:28px;background:#f8f7f7;}
+#dis_list p{ display:block;clear:both;margin-bottom:10px;}
+#pager_dis_list a{border:1px solid #f8f7f7;}
+</style>
+
+</head>
+
+<body style="background:url()">
+<div id="head_c"> <img src="../images/head_01.jpg" alt=""></div>
+<div class="content w980">
+<div class="bc"><img src="../images/top.jpg" border="0" alt="" /></div>
+<!--导航栏-->
+<div class="nav w960">
+	<span href="#" name='title_a' id='main' class="this"><a href="http://travel315.people.com.cn" target="_blank">首页</a></span>
+	<span href="#" name='title_a' id='hot'>热点报道</span>
+	<!--<span href="#" name='title_a' id='rank'>排行榜</span>-->
+	<span href="#" name='title_a' id='introduce'>维权指南</span>
+	<span href="#" name='title_a' id='info'>质检咨询</span>
+	<b style="float:right;font-weight:normal;font-size:12px;margin-right:10px;">咨询电话：010-65368440（不接受电话投诉） 邮箱：travel315@people.cn</b>
+</div>
+<div class="ej_path w940 clearfix" id='daohang'>
+<div class="top_nav"><a href="" style="color:#064d7b;float:left;margin-right:10px" target="_blank">投诉须知</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">隐私保护</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">版权说明</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">常见问题</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="../images/ss.gif" width="47" height="31" id="srh_sub"/></span>
+</div>
+<div class="content w980" id="content_main" style="display:block">
+<div class="content w980" style="display:block">
+
+
+<div class="content w980">
+<div class="ej_left fl ml15 mt10">
+<h2 id="h2_head"><a href="" id="true_url" target="_blank"><b>题目:<i id="c_title"></i></b></a>用户名:<i id="u_nick_name"></i></h2>
+<div class="ej_bor">
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="10" class="blue m10 mt20"><tr>
+<td>投诉时间:<i id="c_create_time"></i></td><td></td></tr><tr>
+<td>投诉省份:<i id="c_prev"></i></td>
+<td>投诉分类:<i id="c_type"></i></td></tr><tr>
+<td>出行时间:<i id="c_travel_last"></i></td>
+<td>损失金额:<i id="c_travel_loss">2000</i></td></tr><tr>
+<td colspan="2"><p> 投诉支持:
+<input type="button" value="支持" tp="c_support" class="tp"/><i id="c_support">231</i>票 
+<input type="button" value="反对" tp="c_oppose" class="tp"/><i id="c_oppose">123</i>票</p></td> </tr><tr>
+<td colspan="2">回复满意:
+<input type="button" value="满意" tp="c_reply_good" class="tp"/><i id="c_reply_good">231</i>票 
+<input type="button" value="不满" tp="c_reply_med" class="tp"/><i id="c_reply_med">123123</i>票
+<input type="button" value="一般" tp="c_reply_bad" class="tp"/><i id="c_reply_bad">123123</i>票</td></tr>
+
+</table>
+
+<h4 class="c1"><b>投诉原文</b><i class="red" id="c_travel_keys" style="cursor:pointer"></i> &nbsp; 提交时间:<i class="gray" id="c_create_time_2">尚未回复</i></h4>
+<p class="p15 lh_22">
+
+<i id="c_context"></i>
+<div class="bshare-custom" style="padding: 15px;"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog" href="javascript:void(0);"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="分享到QQ空间" class="bshare-qzone" href="javascript:void(0);"></a><a title="分享到搜狐微博" class="bshare-sohuminiblog" href="javascript:void(0);"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span style="float: none;" class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+<div class="fr mr20"><wb:share-button addition="number" type="button"></wb:share-button></div></p>
+<h4 class="c2"><b><i id="c_to"></i>官方回复</b> 回复时间:<i class="gray"  id="c_response_o_time">尚未回复</i></h4>
+<p class="p15 lh_22">
+
+<i   id="c_response_o"></i></p>
+
+
+<h4 class="c3"><b>投诉人反馈意见</b>投诉人对处理结果打分:<i class="gray" id="c_response_u_rank">尚未打分</i></h4>
+<p class="p15 lh_22">
+
+<i  id="c_response_u"></i></p>
+
+<h4 class="c1"><b>人民网旅游频道反馈</b> 提交时间:<i class="gray"  id="c_response_s_time">尚未回复</i></h4>
+<p class="p15 lh_22">
+<i   id="c_response_s"></i></p>
+<h4 class="c2"><b>网友留言</b> <input type="button" value="点我" id="discuss"/></h4>
+<p class="p10 lh_22">
+<div class="clear" id="dis_list"> 
+<b></b>
+<p></p>
+
+</div>
+<div class="center p10" id="pager_dis_list"></div></p>
+</div>
+</div>
+<div class="ej_right fr mr15 mt10" id="user_pic">
+<h2><b>网友晒图</b></h2>
+<div class="p2_ra"><span class="fl"><div id="wwdiv"></div></span></div>
+</div>
+
+
+
+
+</div>
+<div class="line1 mt20">&nbsp;</div>
+</body>
+</html>

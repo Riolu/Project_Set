@@ -1,0 +1,461 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        校长办公室</title>
+    <link href="css/index1.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/JQ.js"></script>
+
+    <script language="javascript">
+$(function()
+{
+    $("#ImageButton1").click(
+    function()
+    {
+        if ($("#username").val()=="")
+        {
+            alert("请填写用户名");
+            return false;
+        }
+        if ($("#password").val()=="")
+        {
+            alert("请填写用户名");
+            return false;
+        }
+    }
+    )
+}
+)
+
+    </script>
+
+</head>
+<body>
+    <form name="form1" method="post" action="default.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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rabnrYnlm73pmYXokZflkI3mlZnlrabjgIHnp5HnoJTmnLrmnoTlt6XkvZzjgIIxOTk55bm0MeaciOi1t+S7u+S4reWbveenkeWtpumZoueJqeeQhueglOeptuaJgOeglOeptuWRmOOAgeWFieeJqeeQhumHjeeCueWunumqjOWupOS4u+S7u+OAgeWJr+aJgOmVv++8jDIwMDPlubTku7vkuK3lm73np5HlrabpmaLln7rnoYDnp5HlrablsYDlsYDplb/vvIwyMDA25bm0MTHmnIjoh7Pku4rlh7rku7vkuIrmtbfkuqTpgJrlpKflrabmoKHplb/jgII8L286cD48L3A+DQo8cCBjbGFzcz0iTXNvTm9ybWFsIiBzdHlsZT0ibWFyZ2luOiAwY20gMGNtIDBwdDsiPjxzcGFuZAIGDxYCHwACARYCZg9kFgJmDxUCInVwbG9hZGZpbGVzLzEwMTAyOTEwNDcyNjA2MzQzMC5qcGePBDxwPiZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwO+agoemVv+WKnuWFrOWupOaYr+WtpuagoeihjOaUv+W3peS9nOeahOe7vOWQiOWKnuS6i+acuuaehO+8jOaYr+WtpuagoeihjOaUv+W3peS9nOi/kOi9rOi/h+eoi+S4reaJv+S4iuWQr+S4i+OAgeiBlOezu+W3puWPs+OAgeayn+mAmuWGheWklueahOaeoue6veOAguagoemVv+WKnuWFrOWupOe0p+e0p+WbtOe7leWtpuagoeS4reW/g+W3peS9nO+8jOenieaJvyZsZHF1bzvlrabnlJ/nrKzkuIDvvIzmlZnluIjnrKzkuIDvvIzmnI3liqHnrKzkuIAmcmRxdW8755qE5bel5L2c55CG5b+177yM6K6k55yf5YGa5aW957u85ZCI5Y2P6LCD44CB5YWs5paH5rWB6L2s44CB6LCD5p+l56CU56m244CB552j5p+l552j5Yqe44CB6IGU57uc5o6l5b6F44CB5L+h5oGv5YWs5byA44CB5rOV5b6L5LqL5Yqh44CB6KeE6IyD5YyW5bu66K6+44CB5b6Q5rGH5qCh5Yy657u85ZCI566h55CG44CB5aSa5qCh5Yy65Y2P6LCD566h55CG5ZKM6aKG5a+85Lqk5Yqe55qE5YW25LuW5bel5L2c77yM5b2TLi4uZAIHDxYCHwACBhYMZg9kFgJmDxUGOuS4iua1t+S6pOmAmuWkp+WtpuWFs+S6jjIwMTXlubTmmpHlgYflt6XkvZzlronmjpLnmoTpgJrnn6UCNDIEMjM2NgI0MhzkuIrmtbfkuqTpgJrlpKflrablhbPkuo4yLi4uCjIwMTUtMDctMjBkAgEPZBYCZg8VBifkuIrmtbfkuqTpgJrlpKflraYxMjDlkajlubTmoKHluoblhazlkYoCNDIEMjA4NQI0MhjkuIrmtbfkuqTpgJrlpKflraYxMjAuLi4KMjAxNS0wNC0xMmQCAg9kFgJmDxUGO+S4iua1t+S6pOmAmuWkp+WtpiDlhbPkuo4yMDE15bm05a+S5YGH5bel5L2c5a6J5o6S55qE6YCa55+lAjQyBDE4NzUCNDIc5LiK5rW35Lqk6YCa5aSn5a2mIOWFs+S6ji4uLgoyMDE1LTAxLTEzZAIDD2QWAmYPFQY35LiK5rW35Lqk6YCa5aSn5a2m5YWz5LqOMjAxNeW5tOiKguWBh+aXpeaUvuWBh+eahOmAmuefpQI0MgQxODQ5AjQyHOS4iua1t+S6pOmAmuWkp+WtpuWFs+S6jjIuLi4KMjAxNC0xMi0yNWQCBA9kFgJmDxUGN+S4iua1t+S6pOmAmuWkp+WtpuWFs+S6jjIwMTTlubTlm73luoboioLmlL7lgYfnmoTpgJrnn6UCNDIEMTYwMgI0MhzkuIrmtbfkuqTpgJrlpKflrablhbPkuo4yLi4uCjIwMTQtMDktMjVkAgUPZBYCZg8VBjrkuIrmtbfkuqTpgJrlpKflrablhbPkuo4yMDE05bm05pqR5YGH5bel5L2c5a6J5o6S55qE6YCa55+lAjQyBDEzNjECNDIc5LiK5rW35Lqk6YCa5aSn5a2m5YWz5LqOMi4uLgoyMDE0LTA3LTAzZGRnllvXasT8EzG0/GmRV07O2ZVmPw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+    <div class="box">
+        
+
+  
+   <div class="top"><img src="images/banner_01.jpg" /></div>
+  <div class="menu">
+   <a href="Default.aspx">首&nbsp;&nbsp;页</a><img src="images/bj_03.jpg" />
+    <a href='http://president.sjtu.edu.cn/?info_lb=127&flag=127'>校长主页</a><img src='images/bj_03.jpg' /><a href='news.aspx?info_lb=4&flag=4'>领导介绍</a><img src='images/bj_03.jpg' /><a href='content.aspx?info_lb=3&flag=3'>校办介绍</a><img src='images/bj_03.jpg' /><a href='news.aspx?info_lb=142&flag=142'>党务公开</a><img src='images/bj_03.jpg' /><a href='news.aspx?info_lb=9&flag=9'>办事指南</a><img src='images/bj_03.jpg' /><a href='down.aspx?info_lb=10&flag=10'>文件下载</a><img src='images/bj_03.jpg' /><a href='content.aspx?info_lb=11&flag=11'>联系我们</a><img src='images/bj_03.jpg' /><a href='news.aspx?info_lb=8&flag=8'>新闻快递</a><img src='images/bj_03.jpg' />
+    <a href="En/">English</a>
+  </div>
+        <!--menu -->
+        <div class="content" style="width:960px;">
+            <div class="shang" style="width:960px;">
+                
+                <div class="shang_left">
+                    <div class="point_content">
+
+                        <script type="text/javascript">
+												var pic_width=428; //图片宽度
+												var pic_height=222; //图片高度
+												var button_pos=4; //按扭位置 1左 2右 3上 4下
+												var stop_time=4000; //图片停留时间(1000为1秒钟)
+												var show_text=0; //是否显示文字标签 1显示 0不显示
+												var txtcolor="000000"; //文字色
+												var bgcolor="FFFFFF"; //背景色
+												var imag=new Array();
+												var link=new Array();
+												var text=new Array();
+												
+												imag[1] = "/uploadfiles/1510260931607310.jpg";link[1] = "/#";text[1] = "/160";imag[2] = "/uploadfiles/1510260909895610.jpg";link[2] = "/#";text[2] = "/159";imag[3] = "/uploadfiles/1510221240461610.jpg";link[3] = "/#";text[3] = "/158";imag[4] = "/uploadfiles/1510221239505780.jpg";link[4] = "/#";text[4] = "/157";imag[5] = "/uploadfiles/1510221232714400.jpg";link[5] = "/#";text[5] = "/156";
+												
+												//可编辑内容结束
+												var swf_height=show_text==1?pic_height+20:pic_height;
+												var pics="", links="", texts="";
+												for(var i=1; i<imag.length; i++){
+													pics=pics+("|"+imag[i]);
+													links=links+("|"+link[i]);
+													texts=texts+("|"+text[i]);
+												}
+												pics=pics.substring(1);
+												links=links.substring(1);
+												texts=texts.substring(1);
+												document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cabversion=6,0,0,0" width="'+ pic_width +'" height="'+ swf_height +'">');
+												document.write('<param name="movie" value="en/images/focus.swf">');
+												document.write('<param name="quality" value="high"><param name="wmode" value="opaque">');
+												document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&pic_width='+pic_width+'&pic_height='+pic_height+'&show_text='+show_text+'&txtcolor='+txtcolor+'&bgcolor='+bgcolor+'&button_pos='+button_pos+'&stop_time='+stop_time+'">');
+												document.write('<embed src="en/images/focus.swf" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&pic_width='+pic_width+'&pic_height='+pic_height+'&show_text='+show_text+'&txtcolor='+txtcolor+'&bgcolor='+bgcolor+'&button_pos='+button_pos+'&stop_time='+stop_time+'" quality="high" width="'+ pic_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+												document.write('</object>');
+                        </script>
+
+                    </div>
+                </div>
+                
+                <div class="shang_right" style="width:530px;">
+                    
+                    <div class="shang_right_left" style="width:400px;">
+                        <div class="shang_right_left_bt" style="background:url('/images/xiaozhangjieshao_03.jpg') no-repeat scroll 0 0 transparent;">
+                            <div class="zi_left">
+                                最新新闻</div><div class="zi_right"><a href="news.aspx?info_lb=64&amp;flag=64">
+                                    <img src="images/more_03.jpg"></a></div>
+                        </div>
+                        <div class="shang_right_left_nr">
+                            <table class="xw_1" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                
+                                        <tr>
+                                            <td width="3%" height="14" align="center">
+                                                <!--img src="images/tubiao.jpg" /-->
+                                            </td>
+                                            <td width="97%" height="14" align="left">
+                                                <a title='上海交通大学2015年唐立新奖学金宣讲答辩会举行[图]' target='_blank' href="show.aspx?info_lb=64&info_id=2592&flag=64">
+                                                    上海交通大学2015年唐立新奖学金宣讲答辩会举行[图...</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="14" colspan="2" align="center">
+                                                <img src="images/shixian.jpg" />
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="3%" height="14" align="center">
+                                                <!--img src="images/tubiao.jpg" /-->
+                                            </td>
+                                            <td width="97%" height="14" align="left">
+                                                <a title='零号湾科技大楼启用仪式隆重举行[图]' target='_blank' href="show.aspx?info_lb=64&info_id=2589&flag=64">
+                                                    零号湾科技大楼启用仪式隆重举行[图]</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="14" colspan="2" align="center">
+                                                <img src="images/shixian.jpg" />
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="3%" height="14" align="center">
+                                                <!--img src="images/tubiao.jpg" /-->
+                                            </td>
+                                            <td width="97%" height="14" align="left">
+                                                <a title='上海交大后勤集团邀请全国劳模吴尔愉做专题讲座[图]' target='_blank' href="show.aspx?info_lb=64&info_id=2586&flag=64">
+                                                    上海交大后勤集团邀请全国劳模吴尔愉做专题讲座[图]</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="14" colspan="2" align="center">
+                                                <img src="images/shixian.jpg" />
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="3%" height="14" align="center">
+                                                <!--img src="images/tubiao.jpg" /-->
+                                            </td>
+                                            <td width="97%" height="14" align="left">
+                                                <a title='上海交大土木工程系恢复建系三十周年学科发展战略论坛隆重举行[图]' target='_blank' href="show.aspx?info_lb=64&info_id=2581&flag=64">
+                                                    上海交大土木工程系恢复建系三十周年学科发展战略论坛隆...</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="14" colspan="2" align="center">
+                                                <img src="images/shixian.jpg" />
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="3%" height="14" align="center">
+                                                <!--img src="images/tubiao.jpg" /-->
+                                            </td>
+                                            <td width="97%" height="14" align="left">
+                                                <a title='德国图宾根大学校长一行访问上海交大[图]' target='_blank' href="show.aspx?info_lb=64&info_id=2577&flag=64">
+                                                    德国图宾根大学校长一行访问上海交大[图]</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="14" colspan="2" align="center">
+                                                <img src="images/shixian.jpg" />
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="3%" height="14" align="center">
+                                                <!--img src="images/tubiao.jpg" /-->
+                                            </td>
+                                            <td width="97%" height="14" align="left">
+                                                <a title='上海交通大学校友会举办“源聚·思源敬老校友联欢会”[图]' target='_blank' href="show.aspx?info_lb=64&info_id=2574&flag=64">
+                                                    上海交通大学校友会举办“源聚·思源敬老校友联欢会”[...</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="14" colspan="2" align="center">
+                                                <img src="images/shixian.jpg" />
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="shang_right_right" style="width:120px;">
+                        <div class="shang_right_right_bt">
+                            <div class="zi_left">
+                                校长信箱</div>
+                        </div>
+                        <div class="shang_right_right_nr">
+                                        <a href="post.aspx">
+                            <img src="images/yx.jpg" style="height: 100%; width: 100%;"/>
+                            </a>
+                            <table class="dl" width="100%" border="0" style="display: none;">
+                                
+                                
+                                <tr>
+                                    <td height="20">
+                                        <img src="images/xian.jpg" width="210" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="20" align="center">
+                                        <a href="post.aspx">
+                                            <img src="images/xinxiang_03.jpg" width="210" /></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="left">
+                
+                <div class="left_one">
+                    <div class="left_one_bt">
+                        <div class="zi">
+                            办事指南
+                        </div>
+                    </div>
+                    <div class="left_one_nr" id="divBSZN">
+                        
+                                <a href="show.aspx?info_lb=149&info_id=110&flag=149">
+                                    <img src="uploadfiles/1010211156158490.jpg" /></a>
+                            
+                                <a href="show.aspx?info_lb=150&info_id=111&flag=150">
+                                    <img src="uploadfiles/1010211155159060.jpg" /></a>
+                            
+                                <a href="show.aspx?info_lb=71&info_id=113&flag=71">
+                                    <img src="uploadfiles/1010211155157850.jpg" /></a>
+                            
+                                <a href="show.aspx?info_lb=72&info_id=114&flag=72">
+                                    <img src="uploadfiles/1010211155158930.jpg" /></a>
+                            
+                                <a href="show.aspx?info_lb=73&info_id=162&flag=73">
+                                    <img src="uploadfiles/1010211155159270.jpg" /></a>
+                            
+                                <a href="show.aspx?info_lb=148&info_id=360&flag=148">
+                                    <img src="uploadfiles/1010211155160210.jpg" /></a>
+                            						
+                    </div>
+                </div>
+                <!--left_one -->
+                <div class="left_two">
+                    
+                    <div class="left_two_bt">
+                        <div class="zi">
+                            快速通道
+                        </div>
+                    </div>
+                    <div class="left_two_nr" style="padding-top:0;height:auto;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td align="left">
+                                    <a href="http://info.sjtu.edu.cn/index.aspx?jatkt=rejected" target="_blank">
+                                        <img src="images/jiaodaoa.jpg" /></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <a href="http://txl.poffice.sjtu.edu.cn/" target="_blank">
+                                        <img src="images/dianzitongxunlu.jpg" /></a>
+                                </td>
+                            </tr>
+                           
+                            
+                             <tr>
+                                <td align="left">
+                                    <a href="http://poffice.sjtu.edu.cn/routine/" target="_blank"> 
+                                       <img src="images/tb2.jpg" /> </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <a href="http://xxgk.sjtu.edu.cn/" target="_blank">
+                                        <img src="images/xinxigk.jpg" /></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <a href="http://www.sjtu.edu.cn" target="_blank">
+                                        <img src="images/tb1.jpg" /></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--left_two -->
+            </div>
+            <!--left -->
+             
+            
+            <div class="right">
+<div class="right_two">
+<div class="right_two_bt">
+  <div class="zi_left">校长介绍</div>
+  <div class="zi_right">  <a href="news.aspx?info_lb=4&flag=4">
+                                <img src="images/more_03.jpg" /></a></div>
+</div>
+<div class="right_two_nr">
+ 
+                                <img src="uploadfiles/11110404131411160.png" width="135" height="159" /></a>
+                                <p><o:p> &nbsp;&nbsp;&nbsp; 张杰，中国科学院院士，德国科学院院士，第三世界科学院院士，英国皇家工程院外籍院士，美国科学院外籍院士。现任上海交通大学校长。中国共产党第17届、18届中央委员会候补委员。张杰教授于1988年在中国科学院物理研究所获博士学位。1989年至1998年期间在英国牛津大学等国际著名教学、科研机构工作。1999年1月起任中国科学院物理研究所研究员、光物理重点实验室主任、副所长，2003年任中国科学院基础科学局局长，2006年11月至今出任上海交通大学校长。</o:p></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;"><span</a>
+                            </div>
+</div>
+<div class="right_one">
+<div class="right_one_left">
+<div class="right_one_left_bt">
+  
+<div class="zi_left">校办介绍</div>
+<div class="zi_right"><a href="content.aspx?info_lb=3&flag=3">
+                                    <img src="images/more_03.jpg" /></a></div>
+</div>
+<div class="right_one_left_nr">
+ 
+                                    <img src="uploadfiles/101029104726063430.jpg" width="105" height="124" /></a>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;校长办公室是学校行政工作的综合办事机构，是学校行政工作运转过程中承上启下、联系左右、沟通内外的枢纽。校长办公室紧紧围绕学校中心工作，秉承&ldquo;学生第一，教师第一，服务第一&rdquo;的工作理念，认真做好综合协调、公文流转、调查研究、督查督办、联络接待、信息公开、法律事务、规范化建设、徐汇校区综合管理、多校区协调管理和领导交办的其他工作，当...
+                                </div>
+</div><!--right_one_left -->
+<div class="right_one_right">
+  <div class="right_one_right_bt">
+  
+  
+  
+  <div class="zi_left">通知公告</div>
+  <div class="zi_right"><a href="news.aspx?info_lb=42&flag=42">
+                                    <img src="images/more_03.jpg" /></a></div>
+  </div>
+  <div class="right_one_right_nr">
+     <table class="xw" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                
+                                        <tr>
+                                            <td width="8%" align="center">
+                                                <img src="images/tubiao.jpg" />
+                                            </td>
+                                            <td width="63%">
+                                                <a title='上海交通大学关于2015年暑假工作安排的通知' target='_blank' href="show.aspx?info_lb=42&info_id=2366&flag=42">
+                                                    上海交通大学关于2...</a>
+                                            </td>
+                                            <td width="29%">
+                                                2015-07-20
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="8%" align="center">
+                                                <img src="images/tubiao.jpg" />
+                                            </td>
+                                            <td width="63%">
+                                                <a title='上海交通大学120周年校庆公告' target='_blank' href="show.aspx?info_lb=42&info_id=2085&flag=42">
+                                                    上海交通大学120...</a>
+                                            </td>
+                                            <td width="29%">
+                                                2015-04-12
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="8%" align="center">
+                                                <img src="images/tubiao.jpg" />
+                                            </td>
+                                            <td width="63%">
+                                                <a title='上海交通大学 关于2015年寒假工作安排的通知' target='_blank' href="show.aspx?info_lb=42&info_id=1875&flag=42">
+                                                    上海交通大学 关于...</a>
+                                            </td>
+                                            <td width="29%">
+                                                2015-01-13
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="8%" align="center">
+                                                <img src="images/tubiao.jpg" />
+                                            </td>
+                                            <td width="63%">
+                                                <a title='上海交通大学关于2015年节假日放假的通知' target='_blank' href="show.aspx?info_lb=42&info_id=1849&flag=42">
+                                                    上海交通大学关于2...</a>
+                                            </td>
+                                            <td width="29%">
+                                                2014-12-25
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="8%" align="center">
+                                                <img src="images/tubiao.jpg" />
+                                            </td>
+                                            <td width="63%">
+                                                <a title='上海交通大学关于2014年国庆节放假的通知' target='_blank' href="show.aspx?info_lb=42&info_id=1602&flag=42">
+                                                    上海交通大学关于2...</a>
+                                            </td>
+                                            <td width="29%">
+                                                2014-09-25
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td width="8%" align="center">
+                                                <img src="images/tubiao.jpg" />
+                                            </td>
+                                            <td width="63%">
+                                                <a title='上海交通大学关于2014年暑假工作安排的通知' target='_blank' href="show.aspx?info_lb=42&info_id=1361&flag=42">
+                                                    上海交通大学关于2...</a>
+                                            </td>
+                                            <td width="29%">
+                                                2014-07-03
+                                            </td>
+                                        </tr>
+                                    
+                            </table>
+  </div>
+  </div><!--right_one_right -->
+</div><!--right_one -->
+</div>
+          
+        </div>
+        <!--content -->
+        
+  <div class="footer">
+  版权所有：2010年 上海交通大学校长办公室   上海市东川路800号 200240   技术支持：上海维程   沪ICP备020861<span style='display:none;'>制作人：吴昌军;QQ:94629125</span>
+<p>您是第&nbsp;<span style="color:Red">2452269</span>&nbsp;位访问者</p>
+
+  </div>
+
+
+    </div>
+    <!--box -->
+    </form>
+	<SCRIPT type="text/javascript">
+	<!--
+		$(function(){
+			var itemLink = $("#divBSZN").find("a");
+			itemLink.eq(4).before(itemLink.last());//.hide();
+		});
+	//-->
+	</SCRIPT>
+</body>
+</html>
+

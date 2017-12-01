@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta http-equiv="content-language" content="utf-8" />
+<meta name="robots" content="all" />
+<title>全国党建云平台</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="368918" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<link href="/img/MAIN/2013/09/113681/netcpc20130902.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<script src="/img/MAIN/2013/09/113681/js_library/jquery-1.7.1.min.js" type="text/javascript" ></script>
+<script src="http://bbs1.people.com.cn/sns/newjs/common/jquery.rmw.global.js" language="javascript" type="text/javascript" charset="UTF-8"></script>
+<script src="http://bbs1.people.com.cn/sns/newjs/common/newsNotify.js" language="javascript" type="text/javascript" charset="UTF-8"></script>
+<script src="http://bbs1.people.com.cn/sns/newjs/pages/www.news.js" language="javascript" type="text/javascript" charset="UTF-8"></script>
+<script src="http://71bbs.people.com.cn/js_library/71bbs/china.js" type="text/javascript" ></script>
+<script src="/img/MAIN/2013/09/113681/js_library/dzbCommon.js" type="text/javascript" ></script>
+<script src="/img/2011lh/jcarousellite_1.0.1.min.js" type="text/javascript" language="javascript"></script>
+<script language="JavaScript">
+$(document).ready(function(){
+	$(".jCarouselLite").jCarouselLite({
+    btnNext: ".prev",
+    btnPrev: ".next",
+	speed: 1000,
+	auto: 2000,
+	vertical:true
+    });
+	$.ajax({
+url:'http://71bbs.people.com.cn/dzbTop.do?type=1',
+dataType:'jsonp',
+success:function(data){
+var doc = $.parseXML(data);
+var items = $(doc).find('item');
+var loop = items.length;
+var content_c ="";
+for(var i=0;i<loop;i++)
+{
+	var t = i+1;
+var title = items.eq(i).children('title').text();
+var link = items.eq(i).children('link').text();
+var opTimes = items.eq(i).children('opTimes').text();
+content_c +="<li><span class='nub'>"+t+"</span><a href="+link+" target='_blank'>"+title+"</a><b>"+opTimes+"</b></li>";
+}
+$("#huoyue").html(content_c);
+}
+});
+	$.ajax({
+url:'http://71bbs.people.com.cn/dzbTop.do?type=2',
+dataType:'jsonp',
+success:function(data){
+var doc = $.parseXML(data);
+var items = $(doc).find('item');
+var loop = items.length;
+var content_c ="";
+for(var i=0;i<loop;i++)
+{
+	var t = i+1;
+var title = items.eq(i).children('title').text();
+var link = items.eq(i).children('link').text();
+var opTimes = items.eq(i).children('opTimes').text();
+content_c +="<li><span class='nub'>"+t+"</span><a href="+link+" target='_blank'>"+title+"</a><b>"+opTimes+"</b></li>";
+}
+$("#guanzhu").html(content_c);
+}
+});
+	$.ajax({
+url:'http://71bbs.people.com.cn/dzbTop.do?type=3',
+dataType:'jsonp',
+success:function(data){
+var doc = $.parseXML(data);
+var items = $(doc).find('item');
+var loop = items.length;
+var content_c ="";
+for(var i=0;i<loop;i++)
+{
+var t = i+1;
+var title = items.eq(i).children('title').text();
+var link = items.eq(i).children('link').text();
+var opTimes = items.eq(i).children('opTimes').text();
+content_c +="<li><span class='nub'>"+t+"</span><a href="+link+" target='_blank'>"+title+"</a><b>"+opTimes+"</b></li>";
+}
+$("#gesheng").html(content_c);
+}
+});
+	});
+	$.ajax({
+url:'http://71bbs.people.com.cn/dzbApi.do?action=dzbGonggao',
+dataType:'jsonp',
+jsonp:'callback',
+		success:function(data){	   
+		   data = eval('(' + data + ')');	
+		   $("#gonggao").html(data.items[0]);
+		},
+		error: function(){
+		}
+});
+	$.ajax({
+		type: "POST",
+		url:"http://71bbs.people.com.cn/zuixin.do",
+		dataType:"jsonp",
+		jsonp:'callback',
+		success:function(data){	   
+		   data = eval('(' + data + ')');
+		   var jsonp_c="";
+		  $.each(data.items,function(index,oj){
+			  if(index<11){
+				  			  jsonp_c +="<li><a href=\"http://71bbs.people.com.cn"+oj.permalink+"\" target=\"_blank\">"+oj.title+"</a> <span>( "+oj.boardName+"&nbsp;"+oj.fmtCreateTime+")</span></li>";
+				  }
+		   })
+		   $("#zuixin_d").html(jsonp_c);
+		   $("#zuixin_d li:odd").addClass("t1");
+		},
+		error: function(){
+		}
+	})
+</script>
+</head>
+<body>
+<!--头部-->
+<div class="top_nav_c">
+<div class="top_nav m0 w980"><span><a href="http://cpc.people.com.cn/yun/" target="_blank" target='_blank'>首页</a>&nbsp;<a href="http://71bbs.people.com.cn/help/index.html" target="_blank" target='_blank'>帮助</a> <a href="http://71bbs.people.com.cn/gltl.do" target="_blank" target='_blank'>管理条例</a> <a href="http://71bbs.people.com.cn/personInfo.do" target="_blank" target='_blank'>网友家园</a><a href="http://71bbs.people.com.cn/index.do" target="_blank" target='_blank'>七一社区</a><a href="http://71.people.com.cn/GB/385334/index.html" target='_blank'>非公</a></span><a href="http://www.people.com.cn" target="_blank"><img src="/img/MAIN/2013/09/113681/images/rmw_logo.jpg" alt="" /></a><a href="http://cpc.people.com.cn" target="_blank"><img src="/img/MAIN/2013/09/113681/images/cpc_logo.jpg" alt="" /></a>
+</div>
+</div>
+<div class="w980 m0 header clearfix"><img src="/NMediaFile/2015/0701/MAIN201507011531180234747270026.jpg" alt=""/>
+<div class="select_list">
+      <select id="select_c" name="select_c">
+        <option>选择省份</option>
+        <option>北京</option>
+      </select>
+      <select id="select_c1" name="select_c1">
+        <option>选择城市</option>
+        <option>北京</option>
+      </select>
+      <input type="text" class="input_c" /><input id="search" type="image" src="/img/MAIN/2013/09/113681/images/search.jpg"  />
+   </div>
+</div>
+<div class="gonggao clear"><span>公告:</span><em id="gonggao"><a href="http://dangjian.people.com.cn/n/2014/0306/c117092-24545082.html" target="_blank" target='_blank'><b><font color="#ff0000">欢迎加入中国共产党新闻网党建云平台</font></b></a></em></div>
+<div class="content clearfix">
+  <!--左侧-->
+  <div class="left fl">
+    <div class="login">
+       <div class="title"><h3>登录</h3></div>
+       <div id="login_c">
+       <form id="loginForm" action="http://passport.people.com.cn/_login.do">
+       <input type="hidden" name="rememberMe" value="1">
+       <input type="hidden" name="retUrl" value="refer">
+       <p>&nbsp;账号&nbsp;<input name="userName" type="text" size="25" /></p>
+       <p>&nbsp;密码&nbsp;<input name="password" type="password" size="25"  /></p>
+       <p>&nbsp;&nbsp;<a id="login" href="" target="_blank"><img src="/img/MAIN/2013/09/113681/images/denglu.jpg" alt="" border="0" /></a><a href="http://71bbs.people.com.cn/register.do" target="_blank">注册</a>|<a href="http://passport.people.com.cn/findPsw_selectType.do" target="_blank">找回密码</a></p>
+       </form>
+       </div>
+       <p class="tc"><a href="http://dangjian.people.com.cn/n/2014/0306/c117092-24545082.html" target="_blank"><img src="/NMediaFile/2014/1030/MAIN201410301018512344305860860.jpg" width="216" height="43" alt="" alt=""/></a>
+</p>
+     </div>
+     <div class="tuijian mt10">
+     <div class="title"><h3>地方党建云平台</h3></div>
+      <img src="/img/MAIN/2013/09/113681/images/up.jpg" alt="" class="prev" border="0" />
+      <div class="jCarouselLite">
+        <ul><li><h4 style="text-align: left;"><a href="http://71bbs.people.com.cn/yun/beijing/dongcheng/qianmen" target="_blank" target='_blank'><font color="#000000">
+北京市东城区前门街道党建云平台</font></a></h4>　　 2015年是党的94周年华诞，也是世界反法西斯战争和中国人民抗日战争胜利70周年，前门街道工委突出“讲、学、访”深入开展纪念建党94周年系列活动。</li><li><h4><a href="http://71bbs.people.com.cn/yun/hubei/enshi/xianfeng" target='_blank'>湖北省咸丰县党建云平台</a></h4>　　干部能上能下规定的出台，既向那些襟怀坦荡、心中有党、勤政为民的有识之士伸来了“橄榄枝”，又向那些庸而无为、堕落腐化者亮出了“达摩剑”。</li><li><h4><a href="http://71bbs.people.com.cn/yun/jilin/tonghua/liuhe" target='_blank'>吉林省柳河县党建云平台</a></h4>　　要始终坚持唯才是用，做到“人尽其才，才尽其用”。谁拥有人才，谁就拥有未来；谁拥有人才优势，谁就拥有竞争优势。要拥有人才优势，就要重视人才工作，要在人才工作的精髓“育引留用”</li></ul>
+      </div>
+       <img src="/img/MAIN/2013/09/113681/images/down.jpg" class="next" alt="" border="0" />
+     </div>
+     <!--星级党组织版主-->
+     <div class="banzhu mt10 clearfix">
+      <div class="title"><h3>星级党建云平台版主</h3></div>
+               <ul><li><a href="http://71bbs.people.com.cn/yun/jilin/jilin/nedu" target="_blank"><img src="/NMediaFile/2015/1019/MAIN201510191040128525185393756.jpg" width="70" height="70" alt="" alt="张学亮&#13;"/></a><a href="http://71bbs.people.com.cn/yun/jilin/jilin/nedu" target="_blank">张学亮
+</a></li>
+<li><a href="http://71bbs.people.com.cn/yun/xinjiang/changji/hutubi" target="_blank"><img src="/NMediaFile/2015/0824/MAIN201508241558413773733415941.jpg" width="70" height="70" alt="" alt="罗干"/></a><a href="http://71bbs.people.com.cn/yun/xinjiang/changji/hutubi" target="_blank">罗干</a></li>
+<li><a href="http://71bbs.people.com.cn/yun/guangdong/qingyuan/yingde" target="_blank"><img src="/NMediaFile/2015/0824/MAIN201508241515419814806042964.jpg" width="70" height="70" alt="" alt="罗东文"/></a><a href="http://71bbs.people.com.cn/yun/guangdong/qingyuan/yingde" target="_blank">罗东文</a></li>
+<li><a href="http://71bbs.people.com.cn/yun/jilin/yanbian/hunchun" target="_blank"><img src="/NMediaFile/2015/0416/MAIN201504160939522083993271592.png" width="70" height="70" alt="" alt="程亮"/></a><a href="http://71bbs.people.com.cn/yun/jilin/yanbian/hunchun" target="_blank">程亮</a></li>
+<li><a href="http://71bbs.people.com.cn/yun/heilongjiang/jixi/xkhncjw" target="_blank"><img src="/NMediaFile/2015/0416/MAIN201504160938058154013949949.png" width="70" height="70" alt="" alt="张庆礼"/></a><a href="http://71bbs.people.com.cn/yun/heilongjiang/jixi/xkhncjw" target="_blank">张庆礼</a></li>
+<li><a href="http://71bbs.people.com.cn/yun/guangdong/meizhou/jiaoling" target="_blank"><img src="/NMediaFile/2015/0416/MAIN201504160934149135967899182.png" width="70" height="70" alt="" alt="姚雁明"/></a><a href="http://71bbs.people.com.cn/yun/guangdong/meizhou/jiaoling" target="_blank">姚雁明</a></li>
+</ul>
+     </div>
+  </div>
+  <!--右侧-->
+  <div class="right fl">
+     <div class="map_flash">
+      <iframe src="http://71bbs.people.com.cn/dzbHtml/party-organization-online.html" width="719" height="619" frameborder="0" scrolling="no"></iframe>
+     </div>
+     <div class="dongtai">
+     <div class="title1 clearfix clear"><h3>最新党建云平台动态</h3></div>
+         <ul id="zuixin_d">
+         </ul>
+         <!---->
+     </div>
+  </div>
+</div>
+<!--第二屏内容-->
+<div class="p2_content clearfix clear mt10">
+   <div class="p2_box fl">
+     <div class="title"><h3>最活跃党建云平台</h3></div>
+     <ul id="huoyue">
+     </ul>
+   </div>
+   <div class="p2_box fl ml15">
+     <div class="title"><h3>最受关注云平台信息</h3></div>
+     <ul id="guanzhu">
+     </ul>
+   </div>
+   <div class="p2_box fr">
+     <div class="title"><h3>各省市活跃度排行</h3></div>
+     <ul id="gesheng">
+     </ul>
+   </div>
+</div>
+<!--版权-->
+ <div class="copyright clearfix m10">
+     <style type="text/css">
+#copyright{width:980px; margin:0px auto; font-size:12px; text-align:center; padding:20px 0; line-height:180%; clear:both;}
+</style>
+<div id="copyright">人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br />
+Copyright &copy; 1997-2015 by www.people.com.cn. all rights reserved</div>
+</div> 
+<!--<script type="text/javascript">
+$(document).ready(function() {
+    $("#select_c").selectbox();
+    $("#select_c1").selectbox();
+  });
+</script>-->
+<script src="/css/2010tianrun/webdig_test.js"
+language="javascript" type="text/javascript"></script>
+</body>
+</html>

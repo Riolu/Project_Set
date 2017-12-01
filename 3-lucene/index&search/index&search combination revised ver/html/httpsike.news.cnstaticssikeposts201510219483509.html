@@ -1,0 +1,2214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta property="wb:webmaster" content="ce164a7aefc59ac8" />
+<meta property="qc:admins" content="2275327226566573636" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="keywords" content="思客,新华网,原创,专栏,作者,智库,专家,社科院,评论,网评,媒体,博客,时政,国际,财经,文学,文化,教育,军事,李稻葵：中国经济新增长点怎么“发光”？">
+<meta name="description" content="思客，新华网的自媒体深阅读平台。汇聚有深度、有态度、有品质的原创内容。力求在浮躁的时代倾听思想，在碎片化的当下沉淀深度。在这里，影响有影响力的人，成为有影响力的人。,短期内重点领域必须加快改革，催生新增长点，用新增长点应对当前的周期性下滑的因素，让动力能够尽快转换。">
+
+<title>
+李稻葵：中国经济新增长点怎么“发光”？-思客
+</title>
+	
+<!--[if IE]>
+<script type="text/javascript">
+(function(){if(!/*@cc_on!@*/0)return;
+var e = "abbr,article,aside,audio,bb,canvas,datagrid,datalist,details,dialog,eventsource,figure,footer,hgroup,header,mark,menu,meter,nav,output,progress,section,time,video".split(','),   
+i=0,
+length=e.length;
+while(i<length){
+    document.createElement(e[i++])   
+}
+})();
+</script>  
+<![endif]-->
+<style>
+article,aside,dialog,footer,header,section,footer,nav,figure,menu {display:block;}
+
+#collectBox{width:1px;height:1px;border:1px red solid;z-index:2;position:fixed;top:0px;right:0px;background:#a0a0a0;}
+</style>
+
+	<link rel="stylesheet" type="text/css" href="http://sike.news.cn/resources/themes/sike/css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://image.sike.news.cn/resources/themes/sike/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="http://sike.news.cn/resources/themes/sike/css/cssnml.css">
+	<link rel="stylesheet" type="text/css" href="http://image.sike.news.cn/resources/themes/sike/css/cssauto.css">
+	
+<link rel="Shortcut Icon" href="http://sike.news.cn/resources/themes/sike/img/favicon.ico" >
+<link rel="Bookmark" href="http://sike.news.cn/resources/themes/sike/img/favicon.ico" >
+
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/jquery.lazyload.min.js"></script>
+
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/jquery.cookie.js"></script>
+
+<script>
+
+var JPlaceHolder = {
+    //检测
+    _check : function(){
+        return 'placeholder' in document.createElement('input');
+    },
+    //初始化
+    init : function(){
+        if(!this._check()){
+            this.fix();
+        }
+    },
+    //修复
+    fix : function(){
+        jQuery(':input[placeholder]').each(function(index, element) {
+            var self = $(this), txt = self.attr('placeholder');
+            self.wrap($('<div></div>').css({position:'relative', zoom:'1', border:'none', background:'none', padding:'none', margin:'none'}));
+            var pos = self.position(), h = self.outerHeight(true), paddingleft = self.css('padding-left');
+            var holder = $('<span></span>').text(txt).css({position:'absolute', left:pos.left, top:pos.top, height:h, lienHeight:h, paddingLeft:paddingleft, color:'#aaa'}).appendTo(self.parent());
+            self.focusin(function(e) {
+                holder.hide();
+            }).focusout(function(e) {
+                if(!self.val()){
+                    holder.show();
+                }
+            });
+            holder.click(function(e) {
+                holder.hide();
+                self.focus();
+            });
+        });
+    }
+};
+//执行
+jQuery(function(){
+    JPlaceHolder.init();    
+});
+
+</script>
+
+<script>
+var homeurl = 'http://sike.news.cn';
+var ajaxurl = '/ajax-recv.php';
+var tbase = 'http://sike.news.cn/resources/themes/sike';
+var current_user_id = '0';
+
+$.fn.extend({
+	setCursorPosition: function (position) {
+		if (this.lengh == 0) return this;
+		return $(this).setSelection(position, position);
+	},
+	setSelection: function (selectionStart, selectionEnd) {
+		if (this.lengh == 0) return this;
+		input = this[0];
+
+		if (input.createTextRange) {
+			var range = input.createTextRange();
+			range.collapse(true);
+			range.moveEnd('character', selectionEnd);
+			range.moveStart('character', selectionStart);
+			range.select();
+		} else if (input.setSelectionRange) {
+			input.focus();
+			input.setSelectionRange(selectionStart, selectionEnd);
+		}
+
+		return this;
+	},
+	focusEnd: function () {
+		this.setCursorPosition(this.val().length);
+	}
+});
+
+function showMsgBox(content, action, hidebox) {
+	$('#popup_msg_content').html(content);
+	toggleWindow('popup_error_box', hidebox);
+
+	if (action.ok) {
+		$('#popup_msg_ok').show();
+		$('#popup_msg_ok').die().live('click', action.ok);
+	}
+	if (action.cancel) {
+		$('#popup_msg_cancel').show();
+		$('#popup_msg_cancel').die().live('click', action.cancel);
+	}
+}
+
+function pageName() {
+	var a = location.href;
+	var b = a.split("/");
+	var c = b.slice(b.length-1, b.length).toString(String).split("?");
+	return c.slice(0, 1);
+}
+
+//解决页面下方多出background问题
+function resolve_background() {
+	if($("#totop").height() > $(".bgall").height()){
+		$("body").css("height",$(".bgall").height());
+	}
+}
+
+function MoveBox(obj) {
+	var divTop = $(obj).offset().top;
+	var divLeft = $(obj).offset().left;
+	$(obj).css({ 
+		// "position": "absolute", 
+		"z-index": "500", 
+		"left": divLeft + "px", 
+		"top": divTop + "px",
+		"border": "1px solid #F00"
+	});
+	$(obj).animate({ 
+		"left": ($("#collectBoxCont").offset().left - $("#collectBoxCont").width()) + "px", 
+		"top": ($(document).scrollTop() + 30) + "px", 
+		"width": "100px", 
+		"height": "70px" 
+	}, 500, function () {
+		$(obj).animate({ 
+			"left": $("#collectBoxCont").offset().left + "px", 
+			"top": $("#collectBoxCont").offset().top + "px" 
+		}, 500).fadeTo(0, 0.1).hide(0);
+	});
+}
+
+jQuery(document).ready(function ($) {
+	
+	function init() {
+		var bgall = $('.bgall');
+		var bgallOffset = bgall.offset();
+		bgall.css('min-height', $(window).height() - bgallOffset.top);
+		var clientWidth = document.body.clientWidth; //获取当前窗口的宽度
+		var isMove = clientWidth >= width; //宽度是否大于500
+		if (isMove) { //如果宽度大于500，监听滚动事件
+			if(pname == 'tank' || pname == 'tanker' || pname == 'theme'){
+				var nav = $('#navbar');
+				nav.removeClass('nav1,navadd,navbar-static-top').addClass('nav2,navbar-fixed-top');
+				
+				var logo_zk = 'http://sike.news.cn/resources/themes/sike' + '/img/logozk.png';
+				$("title").html('思客-智库');
+				$("#navmain_sike_tank").show();
+				$("#navmain_sike").hide();
+				$("#logo-image").attr("src",logo_zk);
+				$("#logo-image").parent().attr("href",'http://sike.news.cn/tank');
+			}else{
+				var nav = $('#navbar');
+				if (nav.hasClass('nav2')) {
+					nav.removeClass('nav2');
+					nav.addClass('nav1');
+					nav.addClass('navadd');
+					nav.removeClass('navbar-fixed-top');
+					nav.addClass('navbar-static-top');
+					$('#logo-image').attr('src', tbase + '/img/logo1.png');
+				}
+			}
+
+			if (typeof ($('#rank-list').attr('class')) == 'undefined') {
+				return false;
+			}
+			//设置最右侧的div为fixed
+			var rankList = $('#rank-list'); //获取推读div对象，替换文档时候注意此ID
+			var atrsJoin = $('#atrs_join'); //获取参与我们div对象，替换文档时候注意此ID
+			var rankListTop = $(rankList).offset().top; //获取推读div距离文档头的高度
+			var atrsJoinTop = $(atrsJoin).offset().top - rankListTop; //获取参与我们和推读排行之间的距离
+			$(window).bind('scroll', menu_bar = function() {
+				var scrollTop = $(window).scrollTop(); //获取滚动条距离文档头的距离
+				if (scrollTop > rankListTop) { //判断是否滚动到要监听的div
+					//推读排行
+					$(rankList).css('position', 'fixed');
+					$(rankList).css('top', '0px');
+				} else {
+					$(rankList).css('position', 'static');
+					$(rankList).css('top', '');
+				}
+			});
+			
+		} else {
+			
+			//设置导航为nav2等
+			var nav = $('#navbar');
+			nav.removeClass('nav1');
+			nav.removeClass('navadd');
+			nav.addClass('nav2');
+			nav.removeClass('navbar-static-top');
+			nav.addClass('navbar-fixed-top');
+			$('#logo-image').attr('src', tbase + '/img/logo3.png');
+			//解决手机端内部跳转问题
+			$('a').removeAttr('target');
+
+			if(pname == 'tank' || pname == 'tanker' || pname == 'theme'){
+				var logo_zk = 'http://sike.news.cn/resources/themes/sike' + '/img/logozk.png';
+				$("title").html('思客-智库');
+				$("#navmain_sike_tank").show();
+				$("#navmain_sike").hide();
+				$("#logo-image").attr("src",logo_zk);
+				$("#logo-image").parent().attr("href",'http://sike.news.cn/tank');
+			}
+		}
+	}
+	var width = 767;
+
+	$(window).resize(function () {
+		init();
+	});
+
+	init();
+
+	$('#myTab a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+	})
+	
+	$(".mctext").click(function () {
+		var kd = $(this).next('.kdlists');
+		$(this).siblings().next('.kdlists').slideUp();
+		if (kd.is(':visible')) {
+			$(this).next('.kdlists').slideUp();
+		} else {
+			$(this).next('.kdlists').slideDown();
+		}
+	});
+
+	$("#back-to-top").hide();
+
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > 100) {
+			$("#back-to-top").fadeIn(1500);
+		} else {
+			$("#back-to-top").fadeOut(1500);
+		}
+	});
+
+	$("#backtop").click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 1000);
+		return false;
+	});
+
+// 	lazyload
+	$('img.lazy').lazyload({
+		effect: 'fadeIn'
+	});
+
+// 	注册
+	$('#register_email, #register_username, #register_password').blur(function() {
+		var id = $(this).attr('id');
+		var name = $(this).attr('rel');
+		var value = $(this).val();
+		
+		if(name == 'password'){
+			value = $.base64.btoa(value);
+		}
+		
+		$.ajax({
+			type: 'POST',
+			url: 'http://login.home.news.cn/api/sike/regVerify.do',
+			data: {
+				name: name,
+				value: value
+			},
+			dataType: 'jsonp',
+			jsonp: 'jsonpCallback',
+			success: function(res) {
+				if (res.code == 200) {
+					$('#' + id + '_succico').show();
+					$('#' + id + '_errico, #' + id + '_tips').hide();
+				} else {
+					$('#' + id + '_succico').hide();
+					$('#' + id + '_errico').show();
+					$('#' + id + '_tips').html(res.msg);
+					$('#' + id + '_tips').show();
+				}
+			}
+		});
+	});
+	$('#register_check_password').blur(function() {
+		var id = $(this).attr('id');
+		var password = $('#register_password').val();
+		var check_password = $(this).val();
+		if (check_password == '') {
+			$('#' + id + '_succico').hide();
+			$('#' + id + '_errico').show();
+			$('#' + id + '_tips').html('输入的确认密码不能为空');
+			$('#' + id + '_tips').show();
+			return false;
+		}
+		if (password == check_password) {
+			$('#' + id + '_succico').show();
+			$('#' + id + '_errico, #' + id + '_tips').hide();
+		} else {
+			$('#' + id + '_succico').hide();
+			$('#' + id + '_errico').show();
+			$('#' + id + '_tips').html('两次输入的密码不一致');
+			$('#' + id + '_tips').show();
+		}
+		return false
+	});
+	$('#register_new_user').click(function() {
+		var username = $('#register_username').val();
+		var password = $('#register_password').val();
+		var email = $('#register_email').val();
+		
+		jQuery.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'register_new_user',
+				username: username,
+				password: password,
+				email: email
+			},
+			dataType: 'json',
+			success: function(res) {
+				if (res.code == 200) {
+					window.location.href = '/';
+				} else {
+					showMsgBox(res.msg, {
+						ok: function() {
+							toggleWindow('register_user_box', 'popup_error_box');
+							return false;
+						},
+						cancel: function() {
+							toggleWindow('popup_error_box');
+							return false;
+						}
+					}, 'register_user_box');
+				}
+			}
+		});
+		return false
+	});
+
+// 	登录
+	$('#do_login').click(function() {
+		var username = $('#login_username').val();
+		var password = $('#login_password').val();
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'user_signon',
+				username: username,
+				password: password
+			},
+			dataType: 'json',
+			success: function(res) {
+				if (res.code == 200) {
+					location.reload();
+				} else {
+					toggleWindow('login_msg_box');
+					showMsgBox(res.msg, {
+						ok: function() {
+							toggleWindow('login_msg_box', 'popup_error_box');
+							return false;
+						},
+						cancel: function() {
+							toggleWindow('popup_error_box');
+							return false;
+						}
+					}, 'register_user_box');
+					$('#popup_msg_cancel').hide();
+				}
+			}
+		});
+		return false;
+	});
+
+// 	退出登录
+	$('#do_logout,#do_logout_small').click(function() {
+		var is_remove = $.removeCookie('ak-1');
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'user_signout'
+			},
+			dataType: 'json',
+			success: function(res) {
+				$.cookie('is_third_login','1');
+				window.location.reload();
+			}
+		});
+		return false;
+	});
+
+	// 	用户头像滑动显示
+	$("#user_zone_closed,#user_login_nav").hover(function(){
+		$('#user_login_nav').show();
+	},function(){
+		$('#user_login_nav').hide();
+	});
+	
+// 	用户飘浮
+	$("div.tx36 img:not(.small_author_pic)").die().live("hover",function(event){
+		if(event.type =='mouseenter'){
+			$(this).parent().parent().find(".yin_tx").css("margin-top","");
+			if($(this).offset().top - $(window).scrollTop() + $(this).parent().parent().find(".yin_tx").height() > $(window).height()){
+				var num = $(this).offset().top - $(window).scrollTop() + $(this).parent().parent().find(".yin_tx").height() - $(window).height();
+				$(this).parent().parent().find(".yin_tx").css("margin-top",0-num);
+			}
+			$(".yin_tx").hide();
+			if(280 + $(this).offset().left > $(window).width()){
+				$(this).parent().parent().find(".yin_tx").css("left",280-$(this).parent().parent().find("#floatview").width()).show();
+			}else{
+				$(this).parent().parent().find(".yin_tx").show();
+			}
+			
+		}else{
+			
+		}
+	})
+
+	$(".txAndfloat_view,div.tx40").die().live("hover",function(event){
+		if(event.type == 'mouseenter'){
+			$(this).find(".yin_tx").css("margin-top","");
+			if($(this).offset().top - $(window).scrollTop() + $(this).find(".yin_tx").height() > $(window).height()){
+				var num = $(this).offset().top - $(window).scrollTop() + $(this).find(".yin_tx").height() - $(window).height();
+				$(this).find(".yin_tx").css("margin-top",0-num-60);
+			}
+			
+			$(".yin_tx").hide();
+			if(280 + $(this).offset().left > $(window).width()){
+				$(this).find(".yin_tx").css("left",280-$(this).find("#floatview").width()).show();
+			}else{
+				$(this).find(".yin_tx").show();
+			}
+		}else{
+			$(this).find(".yin_tx").hide();
+		}
+	})
+	
+	
+	//先清除然后添加hover事件
+	$(".yin_tx").die().live("hover",function(event){
+		if(event.type == 'mouseenter'){
+			$(".yin_tx").hide();
+			$(this).show();
+		}else{
+			$(".yin_tx").hide();
+		}
+	});
+	
+// 	稍后阅读
+	$('.readit, #footer_readit,#marked_small').die().live('click', function () {
+		var can_click = true;
+		var readit_this = $(this);
+		if ($.trim($(this).text()) != '稍后阅读' && $.trim($(this).text()) != '取消收藏' && $.trim($(this).text()) != '已加书签') {
+			return false;
+		}
+		if (!can_click) {
+			return false;
+		}
+
+		var is_footer = $(this).attr('rel');
+		
+		can_click = false;
+		var postid = $(this).attr('data');
+		if ($.trim($(this).text()) == '稍后阅读') {
+			jQuery.ajax({
+				type: 'POST',
+				url: ajaxurl,
+				data: {
+					action: 'add_bookmark',
+					postid: postid
+				},
+				dataType: 'json',
+				success: function (res) {
+					can_click = true;
+					if (res.code == false) {
+						if (res.msg == '您还未登录') {
+							showMsgBox('给文章加个书签，有空的时候一气呵成读完才叫畅快。', {
+								ok: function () {
+									toggleWindow('login_msg_box', 'popup_error_box');
+									return false;
+								},
+								cancel: function () {
+									toggleWindow('popup_error_box');
+									return false;
+								}
+							});
+							$('#popup_msg_cancel').hide();
+							$('#popup_msg_ok').text('我要登录');
+						} else {
+
+						}
+						return false;
+					}
+					readit_this.after('<div id="shyd_'+postid+'" style="display:none;color:red;float:left;">书签+1</div>');
+					$('#shyd_'+postid).animate({opacity: 'show'}, 400).delay(2000).animate({opacity: 'hide'}, 2000,function() {$('#shyd_'+postid).remove();});
+
+					
+					readit_this.html('已加书签');
+					if(readit_this.attr('id') == 'marked_small'){
+						readit_this.removeClass('marked');
+					}else{
+						readit_this.addClass('readited');
+					}
+					
+				}
+			});
+		}
+
+		if ($(this).text() == '取消收藏' || $.trim($(this).text()) == '已加书签') {
+			readit_this = $(this);
+			jQuery.ajax({
+				type: 'POST',
+				url: ajaxurl,
+				data: {
+					action: 'delete_bookmark',
+					postid: postid
+				},
+				dataType: 'json',
+				success: function (res) {
+					can_click = true;
+					if (res.code == false) {
+						showMsgBox(res.msg, {
+							ok: function () {
+								toggleWindow('popup_error_box');
+								return false;
+							},
+							cancel: function () {
+								toggleWindow('popup_error_box');
+								return false;
+							}
+						});
+						return false;
+					}
+					readit_this.text('稍后阅读');
+					if(readit_this.attr('id') == 'marked_small'){
+						readit_this.addClass('marked');
+					}else{
+						readit_this.removeClass('readited');
+					}
+				}
+			});
+		}
+
+		return false;
+	});
+	
+// 	推荐
+	$('#fab_button').click(function () {
+		if ($('.btn_tjian').hasClass('btn_tjianed')) {
+			return false;
+		}
+		var postid = $(this).attr('data');
+		var current_user_id = $(this).attr('current_user_id');
+		var count = $("#fab_count").text();
+		if (postid == '' || current_user_id == '') {
+			return false;
+		}
+		jQuery.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'add_fab',
+				postid: postid,
+				current_user_id: current_user_id,
+				count: count
+			},
+			dataType: 'json',
+			success: function (res) {
+				if (res.code == 'false' || res.code == false) {
+					showMsgBox(res.msg, {
+						ok: function () {
+							toggleWindow('popup_error_box');
+							return false;
+						},
+						cancel: function () {
+							toggleWindow('popup_error_box');
+							return false;
+						}
+					});
+					$("#popup_msg_cancel").remove();
+				} else {
+					$('#fab_count, #fab_count1').html(res.code);
+					$('.btn_tjian').addClass('btn_tjianed');
+					$('#fab_button h4').text("已推荐");
+				}
+
+			}
+		});
+	});
+
+	$('#fab_button h4').click(function() {
+		if($(this).text() == '已推荐') {
+			showMsgBox("您已推荐过此文", {
+				ok: function() {toggleWindow('popup_error_box'); return false;},
+				cancel: function() {toggleWindow('popup_error_box'); return false;}
+			});
+		}
+	});
+	
+	$('#img').attr('src',tbase + '/img/logo1.png');
+	var m_st, m_po= 1;
+	var m_tpot=1;
+	var	pname =pageName();
+	if(pname=='handwriting'||
+		pname=='order'||
+		pname=='comment'||
+		pname=='recommend'||
+		pname=='contribute'||
+		pname=='ctrbtcheck'||
+		pname=='ctrbtdraft'||
+		pname=='ctrbtbin'||
+		pname=='useredit'||
+		pname=='search'||
+		pname=='subject-article'||
+		pname=='404'||
+		pname == 'tank' || 
+		pname == 'tanker' || 
+		pname == 'theme'){
+		$("#navbar").removeClass('navbar-static-top nav1 navadd')
+		.addClass('navbar-fixed-top nav2');
+		$('#logo-image').attr('src', tbase + '/img/logo3.png'); 
+		$('#user_login_nav').removeClass().addClass("dropdown-menu");
+	}
+	<!--if(pname=='subject') $(".rightcon").css("top","382px");临时 谷歌浏览器-->
+	$(window).scroll(function () {
+	var	pname =pageName();
+
+	if(pname == 'tank' || pname == 'tanker' || pname == 'theme')
+		return false;
+	
+	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+	document.getElementById("navbar").style.display = 'block';
+	if (m_st > m_po) {
+		if(m_tpot>m_st){
+			$('#img').attr('src', tbase + '/img/logo3.png'); 
+			$('#user_login_nav').removeClass().addClass("dropdown-menu");
+			$("#navbar").removeClass('navbar-static-top nav1 navadd').addClass('navbar-fixed-top nav2');
+			$("#logo-image").attr('src', tbase + '/img/logo3.png');
+		}
+		else{
+			$('#navbar').hide();
+		}
+	} else {
+		if(pname=='handwriting'||
+				pname=='order'||
+				pname=='comment'||
+				pname=='recommend'||
+				pname=='contribute'||
+				pname=='ctrbtcheck'||
+				pname=='ctrbtdraft'||
+				pname=='ctrbtbin'||
+				pname=='useredit'||
+				pname=='search'||
+				pname=='subject-article'||
+				pname=='404'||
+				pname == 'tank' || 
+				pname == 'tanker' || 
+				pname == 'theme'
+					){
+			$("#navbar").removeClass('navbar-static-top nav1 navadd').addClass('navbar-fixed-top nav2');
+			$('#logo-image').attr('src', tbase + '/img/logo3.png'); 
+			$('#user_login_nav').removeClass().addClass("dropdown-menu");
+		}
+		else{
+			var clientWidth = document.body.clientWidth; //获取当前窗口的宽度
+			if(clientWidth > width){
+				$("#navbar").removeClass('navbar-fixed-top nav2').addClass('navbar-static-top nav1 navadd')
+				$('#logo-image').attr('src', tbase + '/img/logo1.png'); 
+				$('#user_login_nav').removeClass().addClass("dropdown-menu");
+			}
+		}
+	}
+	m_tpot = m_st;
+	
+	});
+	
+	$('.ipt_serh').keydown(function(e){
+		if(e.keyCode==13){
+		   var search = $('.ipt_serh').val();
+		   search = encodeURIComponent(search);
+		   if($.trim($('.ipt_serh').val()) != '' &&
+				   $.trim($('.ipt_serh').val()) != null){
+
+			   var url =  "http://"+window.location.host+"/search?search="+encodeURIComponent(search);
+			   window.location.href=url;
+			   return false;
+		   }else{
+			   showMsgBox("请输入搜索词!", {
+					ok: function() {toggleWindow('popup_error_box'); return false;},
+					cancel: function() {toggleWindow('popup_error_box'); return false;}
+				});
+		   }
+		}
+	});
+
+	$('.btn_serh').click(function(){
+	   var search = $('.ipt_serh').val();
+	   search = encodeURIComponent(search);
+	   if($.trim($('.ipt_serh').val()) != '' &&
+			   $.trim($('.ipt_serh').val()) != null){
+		   var url =  "http://"+window.location.host+"/search?search="+encodeURIComponent(search);
+		   window.location.href=url;
+		   return false;
+	   }else{
+		   showMsgBox("请输入搜索词!", {
+				ok: function() {toggleWindow('popup_error_box'); return false;},
+				cancel: function() {toggleWindow('popup_error_box'); return false;}
+			});
+	   }
+	});
+
+	//点击头像跳转到修改页
+	$('#bindfloat').click(function(){
+		window.location.href="/user?userid="+current_user_id;
+	});
+
+	$('.btn_serhxs').click(function(){
+		window.location.href= 'http://sike.news.cn/search';
+	});
+
+	// 手机端显示
+	$("#user_zone_closed_small,#user_login_nav_small").toggle(function(){
+		$('#user_login_nav_small').show();
+		$("#dropdown_small").addClass("open");
+	},function(){
+		$('#user_login_nav_small').hide();
+		$("#dropdown_small").removeClass("open");
+	});
+
+	//解决手机端跳转问题
+	$("#user_login_nav_small li a").click(function(){
+		window.location.href=$(this).attr("href");
+	});
+
+	$('#login_username, #login_password').keydown(function(e){
+		if(e.keyCode==13){
+			$('#do_login').click();
+		}
+	});
+
+	if(pname == 'tank' || pname == 'tanker' || pname == 'theme'){
+
+		var logo_zk = 'http://sike.news.cn/resources/themes/sike' + '/img/logozk.png';
+		$("title").html('思客-智库');
+		$("#navmain_sike_tank").show();
+		$("#navmain_sike").hide();
+		$("#logo-image").attr("src",logo_zk);
+		$("#logo-image").parent().attr("href",'http://sike.news.cn/tank');
+	}
+
+	//订阅推荐作者
+	$("#subscribe_recommend_author").live('click',function () {
+		
+		var _this = $(this);
+		var author_id = $(this).attr('data');
+		
+		if($(this).hasClass('zz_sxhbtn_ok')){
+			return false;
+		}
+		
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'add_Subscription',
+				author_id: author_id,
+				user_id: current_user_id
+			},
+			dataType: 'json',
+			success: function(res) {
+				if(res == true){
+					_this.text("已订阅").addClass("zz_sxhbtn_ok");
+				}else{
+					showMsgBox('属于你的思想邮箱，订阅内容、重磅文章一个都不会少。', {
+						ok: function () {
+							toggleWindow('login_msg_box', 'popup_error_box');
+							return false;
+						},
+						cancel: function () {
+							toggleWindow('popup_error_box');
+							return false;
+						}
+					});
+					$('#popup_msg_cancel').hide();
+					$('#popup_msg_ok').text('我要登录');
+				}
+			}
+		});
+		return false;
+	});
+
+
+	$("#ord_guide_button").click(function(){
+		$("#ord_guide").toggle();
+	  	$("#ord_guide_box").toggle();
+	});
+	
+	$('#close_ord_guide_box').live('click', function() {
+		$("#ord_guide").hide();
+	  	$("#ord_guide_box").hide();
+	});
+
+	$('.set_order_category').click(function() {
+		if($(this).hasClass("checkit")){
+			$(this).removeClass("checkit");
+		}else{
+			$(this).addClass("checkit");
+		}
+	});
+
+	$('#order_category_submit').click(function() {
+		var selected = new Array();
+		$(".checkit").each(function() {
+			selected.push($(this).attr("data"));
+		});
+		
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'add_order_category',
+				category_ids: selected,
+				user_id: current_user_id
+			},
+			dataType: 'json',
+			success: function(res) {
+				window.location.href = window.location.host + '/ordlist';
+			}
+		});
+		
+	});
+	
+})
+
+//分页
+function page_str(pagenum,total_count,type){
+
+	var str = '';
+
+	var pagenum = parseInt(pagenum);
+	var total_count = parseInt(total_count);
+	
+	if(total_count > 1 && pagenum != 1){
+		str += '<a href="javascript:;" class="click_page_'+type+'" rel = "'+(pagenum-1)+'">&lt;&nbsp;</a>';
+	}
+	
+	for (var i=1; i<= total_count; i++)
+	{
+		if(i == pagenum){
+			str += "<a href='javascript:;' class='click_page_"+type+" now' rel = "+i+">"+i+"</a>";
+		}else{
+			if(((pagenum-i) < 3 && (pagenum-i) > 0) 
+					|| ((i-pagenum) < 3 && (i-pagenum) > 0)){
+				str += "<a href='javascript:;' class='click_page_"+type+"' rel = "+i+">"+i+"</a>";
+			}else if(i==1
+					|| i==total_count){
+				str += "<a href='javascript:;' class='click_page_"+type+"' rel = "+i+">"+i+"</a>";
+			}else if((pagenum-i) == 3 || (i-pagenum) == 3){
+				str += "...";
+			}
+		}
+	}
+	if(total_count > 1 && pagenum != total_count ){
+		str += '<a href="javascript:;" class="click_page_'+type+'" rel = "'+(pagenum+1)+'">&nbsp;&gt;</a>';
+	}
+	return str;
+}
+
+function addBookmarkOver(_this){
+	delay(1000);
+	_this.text('已加书签').addClass('readited');
+	$('#shyd_'+postid).remove();
+}
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?09326dea8707366ed6d27f4b1f398828";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta name='robots' content='noindex,follow' />
+<link rel="alternate" type="application/rss+xml" title="思客 &raquo; 李稻葵：中国经济新增长点怎么“发光”？评论Feed" href="http://sike.news.cn/statics/sike/posts/2015/10/219483509.html/feed" />
+<link rel='prev' title='幸福该何处安放，城市还是乡镇？' href='http://sike.news.cn/statics/sike/posts/2015/10/219483701.html' />
+<link rel='next' title='周其仁：没有创新能力就没有生存能力' href='http://sike.news.cn/statics/sike/posts/2015/10/219483790.html' />
+<link rel='canonical' href='http://sike.news.cn/statics/sike/posts/2015/10/219483509.html' />
+<link rel='shortlink' href='http://sike.news.cn/?p=219483509' />
+<style>
+html { margin-top: 0 !important; }
+* html body { margin-top: 0 !important; }
+@media screen and ( max-width: 782px ) {
+	html { margin-top: 0 !important; }
+	* html body { margin-top: 0 !important; }
+}
+</style>
+</head>
+
+<body id="totop">
+
+
+<nav class="navbar navbar-default navbar-static-top nav1 navadd" id="navbar">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand logo2" href="http://sike.news.cn">
+                 <img src="http://sike.news.cn/resources/themes/sike/img/logo1.png" id="logo-image">
+              </a>
+              
+            </div>
+
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+  			<!-- <a href="javascript:;" class="btn_serhxs visible-xs"><img src="/img/btn_ser1.png"></a> -->
+            	            <ul class="nav navbar-nav navbar-right visible-xs hidden-sm hidden-md hidden-lg">
+                <li><a href="http://sike.news.cn/statics/sike/posts/2015/07/219478973.html" >加入思客</a></li>
+				<li><a href="#" id="popups_action_btn1" onclick="toggleWindow('login_msg_box');return false;" rel="login_msg_box">注册 / 登录</a></li>
+				<li class="visible-xs"><a href="/search" style="display:block">搜索</a></li>
+              </ul> 
+                        
+            <ul class="nav navbar-nav navmain" id="navmain_sike">
+              <!-- <li class="active"><a href="http://sike.news.cn">首页</a>
+  </li> -->
+  <li><a target="_blank" href="http://www.news.cn/" class="hidden-xs">新华网</a>
+  <a href="http://3g.news.cn/" class="visible-xs hidden-lg hidden-md hidden-sm">新华网</a></li>
+  <li ><a href="http://sike.news.cn/thinker-page">思享汇</a></li>
+  <li><a target="_blank" href="http://sike.news.cn/jiangtang/index.html">讲堂</a></li>
+  <li ><a href="http://sike.news.cn/author">作者</a></li>
+  <li ><a href="http://sike.news.cn/rank">排行</a></li>
+  <li ><a href="http://sike.news.cn/subject">精品</a>
+<!--   <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">精品 <span class="caret"></span></a> -->
+<!--   <ul role="menu" class="dropdown-menu"> -->
+<!--    <li><a href="">专题活动1</a></li>-->
+<!--   <li><a href="#">专题活动2</a></li> -->
+<!--   <li><a href="#">专题活动3</a></li> -->
+<!--   </ul> -->
+  </li>
+  <li><a target="_blank" href="http://sike.news.cn/tank">智库</a></li>
+  
+  		<li><a href="javascript:void(0)" onclick="toggleWindow('login_msg_box');return false;">我的订阅</a></li>
+		
+  
+                              </ul>
+              
+            <ul class="nav navbar-nav navmain" id="navmain_sike_tank" style="display: none">
+                <li class="active"><a href="http://sike.news.cn/tank">首页</a></li>
+                <li><a href="http://sike.news.cn/tanker">成员</a></li>
+                 <li><a href="http://sike.news.cn/theme">主题</a></li>
+            <li><a target="_blank" href="http://sike.news.cn">思客</a></li>
+            <li><a target="_blank" href="http://www.news.cn/" class="hidden-xs">新华网</a></li>
+             </ul>
+             
+              
+              	            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li><a href="http://sike.news.cn/statics/sike/posts/2015/07/219478973.html" class="btn_yh">加入思客</a></li>
+				<li><a href="#" class="btn_yh" id="popups_action_btn1" onclick="toggleWindow('login_msg_box');return false;" rel="login_msg_box" class="btn_yh" style="display:block">注册 / 登录</a></li>
+              </ul> 
+                          
+                <a href="javascript:;" class="visible-md visible-sm fr" style="margin:10px 10px 0 0"><img src="http://sike.news.cn/resources/themes/sike/img/btn_ser2.png"></a>
+                
+                <form role="search" class="hidden-md hidden-sm hidden-xs navbar-form navbar-right" id="header_search">
+                <div class="form-group yin_serh">
+                  <input type="text" class="form-control ipt_serh">
+                  <a href="/search" class="btn btn-default btn_serh" title="搜索">搜索</a>
+                </div> 
+              </form>
+                         
+            </div>
+            
+            
+          </div>
+        </nav><style>
+	body{background-image:url(http://image.sike.news.cn/resources/themes/sike/img/img_cot.jpg);}
+</style>
+	
+
+
+<style>
+.txt_zw .icon { float: left; padding-right: 5px; }
+@media (max-width: 1919px){body{background-size:auto; background-position:top center}}
+@media (min-width: 1920px){body{background-size:100%; background-position:top center}}
+</style>
+<script>
+
+$(document).ready(function(){
+	 getCommentList(1);//分页
+	$("img").removeAttr('title');
+
+
+
+
+	$('.detail-readit').die().live('click', function () {
+		var readit_this = $(this);
+		
+		can_click = false;
+		var postid = $(this).attr('data');
+		if ($(this).attr('title') == '稍后阅读') {
+			jQuery.ajax({
+				type: 'POST',
+				url: ajaxurl,
+				data: {
+					action: 'add_bookmark',
+					postid: postid
+				},
+				dataType: 'json',
+				success: function (res) {
+					can_click = true;
+					if (res.code == false) {
+						if (res.msg == '您还未登录') {
+							showMsgBox('您尚未登录，请登录后进行操作', {
+								ok: function () {
+									toggleWindow('login_msg_box', 'popup_error_box');
+									return false;
+								},
+								cancel: function () {
+									toggleWindow('popup_error_box');
+									return false;
+								}
+							});
+						} else {
+
+						}
+						return false;
+					}
+
+// 					$("#show_add_bookmark").animate({opacity: 'show'}, 400).delay(2000).animate({opacity: 'hide'}, 2000);
+
+					readit_this.after('<div id="shyd_'+postid+'" style="display:none;color:red;float:left;">书签+1</div>');
+					$('#shyd_'+postid).animate({opacity: 'show'}, 400).delay(2000).animate({opacity: 'hide'}, 2000,function() {$('#shyd_'+postid).remove();});
+
+					readit_this.attr('title', '取消收藏');
+					readit_this.addClass('readited');
+				}
+			});
+		}
+
+		if ($(this).attr('title') == '取消收藏') {
+			readit_this = $(this);
+			jQuery.ajax({
+				type: 'POST',
+				url: ajaxurl,
+				data: {
+					action: 'delete_bookmark',
+					postid: postid
+				},
+				dataType: 'json',
+				success: function (res) {
+					can_click = true;
+					if (res.code == false) {
+						showMsgBox(res.msg, {
+							ok: function () {
+								toggleWindow('popup_error_box');
+								return false;
+							},
+							cancel: function () {
+								toggleWindow('popup_error_box');
+								return false;
+							}
+						});
+						return false;
+					}
+					readit_this.attr('title', '稍后阅读');
+					readit_this.removeClass('readited');
+				}
+			});
+		}
+
+		return false;
+	});
+
+	resolve_background();
+
+
+
+	$("#recommend_subscribe_category").click(function () {
+
+		var _this = $(this);
+		var term_id = $(this).attr('rel');
+		if($(this).hasClass('zz_sxhbtn_ok')){
+			return false;
+		}
+		
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'add_Subscription',
+				author_id: term_id,
+				user_id: current_user_id,
+				type: 'category'
+			},
+			dataType: 'json',
+			success: function(res) {
+				if(res == true){
+					_this.text("已订阅").addClass("zz_sxhbtn_ok");
+				}else{
+					showMsgBox('属于你的思想邮箱，订阅内容、重磅文章一个都不会少。', {
+						ok: function () {
+							toggleWindow('login_msg_box', 'popup_error_box');
+							return false;
+						},
+						cancel: function () {
+							toggleWindow('popup_error_box');
+							return false;
+						}
+					});
+					$('#popup_msg_cancel').hide();
+					$('#popup_msg_ok').text('我要登录');
+				}
+			}
+		});
+		return false;
+	});
+
+	$("#show_second_comment").live("click",function () {
+		$(this).parent().find(".ml10").toggle();
+		$(this).parent().parent().find("#second_comments").toggle();
+		return false;
+	});
+
+	$("#show_all_second_comments").live("click",function () {
+		$(this).parent().find("div.pl_one2").show();
+		$(this).hide();
+		return false;
+	});
+	
+	
+});
+function getCommentList(currentpage){
+	var post_id=219483509;	
+	var totalnum=3;
+
+	var everypagenum=5;
+
+	var count=totalnum - (currentpage-1)*everypagenum + 1;//
+	
+	$.ajax({ 
+		type: 'POST',
+		url: ajaxurl,
+		beforeSend: function() {
+			$("#txt_plq").html("加载中...");
+		},
+		complete: function() {
+		},
+		data: {
+			action: 'get_pageing_html',
+			totalnum :totalnum,
+			everypagenum :everypagenum,
+			currentpage :currentpage,
+			post_id : post_id
+		},
+		dataType: 'json',
+		success: function(data) {
+			var jsondata=eval(data);
+			var result=jsondata.result;
+			var pagedata=jsondata.pagedata;
+			var resultstr="";
+		      for(var o in result){ 
+		   	  count=count-1;
+
+		  	var username="";
+		   	if(result[o].user_id != 0 && result[o].is_contributor == 1){
+		      	 username = '<a target="_blank" href="' + homeurl + '/user?userid='+(result[o].user_id)+'">'+result[o].display_name
+ 		      	  +'&nbsp;:&nbsp;</a>';
+ 		    }else{
+ 		    	  username = result[o].display_name+'&nbsp;:&nbsp;';
+			}
+	   	  
+ 			var comment_count = result[o].second_comments.length;
+ 			var comment_str = '';
+			if(comment_count > 0){
+				comment_str = '<a class="ml10" id="show_second_comment" href="javascript:;">'+comment_count+' 次回应</a>';
+			}else{
+				comment_str = '<a class="ml10" id="show_second_comment" href="javascript:;">回应</a>';
+			}
+
+			comment_str += '<a class="ml10" id="show_second_comment" href="javascript:;" style="display:none">收起</a>';
+ 			
+		   	resultstr +='<div class="pl_one"><div class="tx50pl">';
+		   	resultstr +='<img src="'+result[o].user_photo+'">';
+		   	resultstr +='</div>';
+		   	resultstr +='<div class="div_nml"><div class="div_nml">'+username;
+		   	resultstr += result[o].comment_content;
+            resultstr +='</div>';
+            resultstr +='<div class="pl_date">'+result[o].comment_date + comment_str +'<span>'+count+'楼</span></div>';
+            resultstr +='<div class="pl2div" id="second_comments" style="display:none">';
+            resultstr +='<span class="caret"></span>';
+
+            if(comment_count > 0){
+            	for(var i=0;i<comment_count;i++){
+                	
+            		var second_comment_username="";
+        		   	if(result[o].second_comments[i].user_id != 0 && result[o].second_comments[i].is_contributor == 1){
+        		   		second_comment_username = '<a target="_blank" href="' + homeurl + '/user?userid='+(result[o].second_comments[i].user_id)+'">'+result[o].second_comments[i].display_name
+         		      	  +'&nbsp;:&nbsp;</a>';
+         		    }else{
+         		    	second_comment_username = result[o].second_comments[i].display_name+'&nbsp;:&nbsp;';
+        			}
+
+					if(i > 4){
+						resultstr +='<div class="pl_one2" style="display:none">';
+					}else{
+						resultstr +='<div class="pl_one2">';
+					}
+            		
+            		resultstr +='<div class="tx50pl"><img src="'+result[o].second_comments[i].user_photo+'"></div>';
+            		resultstr +='<div class="div_nml">';
+            		resultstr +='<div class="div_nml">'+second_comment_username;
+            		resultstr +=result[o].second_comments[i].comment_content;
+                    resultstr +='</div>';
+                    resultstr +=' <div class="pl_date">'+result[o].second_comments[i].comment_date+'<span></span></div>';
+                    resultstr +='</div>';
+                    resultstr +='</div>';
+                }
+
+                if(comment_count > 5){
+                	resultstr +='<a class="btn_sallpl" id="show_all_second_comments" href="javascript:;">展开全部回应↓</a>';
+                }
+				
+			}
+           
+            resultstr +='<div class="rebkdiv"> <textarea class="comment_content" id="comment_content_'+result[o].comment_ID+'" cols="100" placeholder="撰写一条回应" class="txte100"></textarea>';
+            resultstr +='<div class="div_nml">';
+            resultstr +='<p class="fl hidden-xs">您还能输入&nbsp;<span class="txt_m">300</span>&nbsp;字</p>';      
+            resultstr +='<a class="btn_submit fr" href="javascript:addComment('+result[o].comment_ID+');">发送</a>';
+            resultstr +='</div></div></div></div></div>';
+		    }
+				 
+			$("#txt_plq").html(resultstr);
+			$("#pagenum").html(pagedata);
+		}
+	});
+}
+
+function addComment(comment_parent){
+
+	if(comment_parent == null ||
+			comment_parent == '' ){
+		comment_parent = 0;
+	}
+	
+	var comment_content=$('#comment_content_'+comment_parent).val();
+	
+	if($.trim(comment_content)==''){
+
+		showMsgBox("回应不能为空！", {
+			ok: function() {toggleWindow('popup_error_box'); return false;},
+			cancel: function() {toggleWindow('popup_error_box'); return false;}
+		});
+		return;
+	}
+
+	var comment_author='匿名';
+	var comment_author_email='';
+	var comment_author_url ='';
+	var uid = '0';
+	
+	$.ajax({ 
+		type: 'POST',
+		url: ajaxurl,
+		beforeSend: function() {
+			$('#subcomment').attr('href','javascript:void(0);'); 
+        	$('#subcomment').text('发布中..'); 
+		},
+		data: {
+			action: 'add_comment',
+			uid :uid,
+			comment_post_ID: '219483509',
+			comment_author : comment_author,
+			comment_author_email : comment_author_email,
+			comment_author_url : comment_author_url,
+			comment_content : comment_content,
+			comment_parent : comment_parent,
+			user_ID : uid
+		},
+		dataType: 'json',
+		success: function(data) {
+				if(data.result =='later'){
+					showMsgBox("缓一缓，有好想法不怕等。", {
+						ok: function() {toggleWindow('popup_error_box'); return false;},
+						cancel: function() {toggleWindow('popup_error_box'); return false;}
+					});
+				}else if(data.result == false){
+			    	 showMsgBox("发布失败！", {
+						ok: function() {toggleWindow('popup_error_box'); return false;},
+						cancel: function() {toggleWindow('popup_error_box'); return false;}
+					});
+			   }else{
+				   showMsgBox("发布成功!请等待管理员审核！", {
+						ok: function() {toggleWindow('popup_error_box'); return false;},
+						cancel: function() {toggleWindow('popup_error_box'); return false;}
+					});
+				   $('#comment_content_'+comment_parent).val('');
+			   }
+				$('#subcomment').attr('href','javascript:addComment();'); 
+	        	$('#subcomment').text('发布'); 
+		}
+	});
+}
+
+function share2() {
+window.open("http://t.home.news.cn/share.jsp?"
+	+ temp.join('&'), "_blank", "width=615,height=505");
+}
+
+var _w = 109 , _h = 16;
+var cUrl=document.location.href;
+var regexp1 = /http:\/\/.*\/c_([0-9]+).htm/g;
+var id = cUrl.replace(regexp1,'$1');
+var regexp2 = /(.+\/)(\w+\.\w+)(?:\?.+)?/g;
+var tempstr;
+var pic1="";
+var arEls = document.getElementsByTagName("img");
+for( var i=0;i<arEls.length;i++ ){
+       tempstr=arEls[i].src.replace(regexp2, '$2');  
+       if(tempstr.indexOf(id)>=0)
+       pic1+=arEls[i].src+",";
+}
+
+var param = {
+  url:'' || location.href,/**分享url的路径(可选,默认为所在页面的href)*/
+  type:'6',
+  appkey:'', /**您申请的应用appkey,显示分享来源(可选)4dd7a69ed7de049c2f45c8d6a335e75b*/
+  title:''|| '李稻葵：中国经济新增长点怎么“发光”？', /**分享的文字内容(可选，默认为所在页面的title)*/
+  pic:pic1, /**分享图片的路径(可选)*/
+  rnd:new Date().valueOf()
+}
+var temp = [];
+for( var p in param ){
+  temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )  
+}
+
+$(document).ready(function(){
+	$(".comment_content").live('keyup',function(){
+	   var len = $(this).val().length;   
+	   if(len > 300){    
+		   $(".txt_m").text(0);  
+		   $(this).val($(this).val().substring(0,300));
+		   return false;   
+		}   
+		var num = 300 - len;   
+		$(this).parent().find('span.txt_m').text(num);  
+	}); 
+
+	$("#footer_readit").show();
+ 	$("#footer_readit").attr('data',219483509);
+ 	
+});
+
+
+function isWeiXin(){
+	var ua = window.navigator.userAgent.toLowerCase();
+	if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+		return true;
+	}else{
+		return false;
+	}
+}
+if(isWeiXin()){
+	var onBridgeReady = function() {
+    var wxTitle1 = '李稻葵：中国经济新增长点怎么“发光”？',
+        wxDesc1 ='',
+        _imgurl1 = 'http://sike.news.cn/hot/logo/sikeweixin120.jpg',
+        linkUrl1 = document.location.href;
+    // 分享到朋友圈;
+    WeixinJSBridge.on('menu:share:timeline', function(argv) {
+        WeixinJSBridge.invoke('shareTimeline', {
+            "img_url": _imgurl1,
+            "img_width": "120",
+            "img_height": "120",
+            "link": linkUrl1,
+            "desc": wxDesc1,
+            "title": wxTitle1
+        }, function() {});
+    })
+    WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+        WeixinJSBridge.invoke('sendAppMessage', {
+            "img_url": _imgurl1,
+            "link": linkUrl1,
+            "desc": wxDesc1,
+            "title": wxTitle1
+        }, function() {})
+    })
+    WeixinJSBridge.on('menu:share:weibo', function(argv) {
+        WeixinJSBridge.invoke('shareWeibo', {
+            "content": wxDesc1,
+            "url": linkUrl1
+        }, function(res) {});
+    })
+}
+
+	$(function(){
+		if (document.addEventListener) {
+			document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+		} else if (document.attachEvent) {
+			document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+			document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+		}
+	}); 
+}
+
+</script>
+
+<link rel="stylesheet" href="http://image.sike.news.cn/resources/themes/sike/css/medium-editor.css">
+<link rel="stylesheet" href="http://image.sike.news.cn/resources/themes/sike/css/medium-editor-themes-default.css">
+<link rel="stylesheet" href="http://image.sike.news.cn/resources/themes/sike/css/medium-editor-insert-plugin.css">
+
+
+<div class="img_cot">
+	<div class="row col-lg-8 col-md-8 col-sm-8 col-xs-12 img_zz">
+	<h3>李稻葵：中国经济新增长点怎么“发光”？</h3>
+    <div class="tx80">
+	            <a href="/user?userid=8299679" target="_blank">
+					<img src="http://tpic.home.news.cn/userIcon/m/lidaokui01" class=" img-circle">
+             	</a> 
+
+            	<p class="thename"><a href="/user?userid=8299679" target="_blank">李稻葵</a></p>
+                <a href="/user?userid=8299679" target="_blank">
+					<p><span class=" hidden-xs">清华大学中国与世界经济研究中心主任</span></p>
+             	</a>              
+            </div>  
+     </div>
+</div>
+
+
+
+<div class="container-fluid pageall">
+<div class="bgall"> 
+
+<div class="row col-lg-8 col-md-8 col-sm-8 col-xs-12 container2">
+<p class="thedate2">发表于&nbsp;&nbsp;10/23 06:30&nbsp;&nbsp; <span data-icon="&#xe94e;">约8分钟</span></p>
+	<div class="txt_zw">
+    	<p><div class="medium-insert-images"><span style="font-size: 18px;"></span><figure contenteditable="false" class="">
+    <img src="http://image.sike.news.cn/uploads/2015/10/1444809150-8903.jpeg" alt="" class="">
+        
+<figcaption contenteditable="true" class="">新的经济增长点在哪里？</figcaption></figure></div><blockquote><span style="font-size: 18px;">　　<i>近日，清华大学中国与世界经济研究中心主任李稻葵在长安讲坛发表演讲，本文根据演讲内容整理。</i></span></blockquote><p class=""><span style="font-size: 18px;"><br></span></p><p><span style="font-size: 18px;">　　中国经济有增长潜力，中国经济是周期性的下降。我们可以把眼光放得远一点，观察中国经济未来5、6年或者10年，到底哪些方面是新增长点。我认为至少有三个新增长点。</span><br></p><p class=""><span style="font-size: 18px;">　　</span></p><h2>中国经济的三个新增长点<br></h2><p class=""><span style="font-size: 18px;"><br></span></p><p class=""><span style="font-size: 18px;">　　<b>第一个是基础设施建设</b>。中国老百姓至少城里的老百姓缺的是公共设施。比如北京市民家里电视机尺寸平均比英国伦敦家庭的要大，住房面积恐怕也不比伦敦差，家里的整洁程度肯定比美国、英国都要好，进门要脱鞋，装修很漂亮，但是差的就是出门环境很糟，空气污染、堵车，刮风下雨路上就有大麻烦。很多地方的基础设施质量很差，稍微有一点地震，房子就垮了，学校也垮了。2013年中国每百人移动电话拥有量是88%，美国是93%。但是每百人的宽带拥有量，中国只有13%，美日欧是33%，这个是数量级的差距。宽带是公共产品，手机是私人产品。</span></p><p class=""><span style="font-size: 18px;">　　据IMF的数据，2010年中国人均基础设施拥有量仅仅是西欧的38%，北美地区的23%，日本、韩国的18%。根据这个数字，我做了一个测算，假设花20年时间把人均基础设施量赶上西欧，未来5年我们平均每年可以拉动GDP1.5%；如果我们要赶上北美，每年拉动GDP3.1%；如果赶上日、韩，每年可以拉动3.9%。这个数字目前的确是一个缺口。</span></p><p class=""><span style="font-size: 18px;">　　<b>第二个增长点是产能更新</b>。我们都知道柴静的片子火了一把，柴静不是搞研究的，从炼钢到炒菜都算空气污染那怎么行。我认为应该用宏观的角度看经济，宏观的因素是复杂的，1+1不等于2，从宏观看问题和微观看是不一样的。APEC会议期间，北京周边的工厂先停产半个月，开会期间北京实行了单双号限制，这时候出现了“APEC蓝天”。这个宏观实验告诉我们，治理空气污染，还是抓周边炼钢、炼铁等重化工业管用。今年春节期间，尽管北京几乎成了空城，开车的人很少，到处畅通无阻，30日和大年初一还是出现了严重雾霾。为什么呢？就是周边的工厂没有停产，这就是宏观的例子。</span></p><p class=""><span style="font-size: 18px;">　　泰国的曼谷堵车比北京还厉害，他们的车和排放标准都比咱们低，但是人家到处是蓝天白云，主要是泰国没有搞重工业，都是装配业。我问他们，你们只给别人装配汽车和摩托车，不搞自己的品牌，不搞自主创新能行吗？泰国人说，给人家搞装配有啥不好的，干嘛非要搞什么自主创新？不管怎么讲，这三个宏观的例子告诉我们，北京的大气污染主要是由周边的重化工业带来的。在北京周边有3亿吨的钢铁生产，怎么办？应该给他们政策，搞置换把破钢铁厂炸掉，引导投资用德国克虏伯的技术，去建世界上最先进的沿海钢铁厂，而且比曹妃甸还要好，水是零排放，自我循环各种空气指标比城里搞的还好，降尘量是城里正常降尘量的一半。如果我们一年转一亿吨的生产能力，按曹妃甸的投资规模至少要8千亿人民币固定资产投资，这个相当于今年高铁的开工量。咱们现在是10亿吨的生产能力，至少搞5年把一半转移出来。但是这个事不要政府干，政府不能直接投资，政府只干一件事，就是狠抓狠罚那些污染企业，让它没有办法生产。同时给河北省政策，让他们在河北沿海深水港建钢铁厂，这是新增长点。</span></p><p class=""><span style="font-size: 18px;">　　我再讲一个例子，发电的事。作为负面典型，有一个产业被骂得很凶，就是光伏产业。政府前两年支持光伏产业，现在光伏生产能力过剩，无锡尚德都破产了。但是有一条大家没有看到，今天的光伏产业已经非常成熟，已经是一条产业链了。我反复求证，问了很多人，在内蒙古现在有很多地方，沙漠上已经建成了大面积的光伏发电厂，而且可以上网。上网之后电价足够高，以至于这种投资年回报率达到8%。现在的瓶颈是内蒙古人不愿意把地给你，沙漠一旦能发电就值钱了，就要坐地要价了。不管怎么说这个产业成熟了，光伏的电比风能的电还好，白天用电量高时它发电，晚上没有阳光了，人们都睡觉了它也不发电了，跟我们作息是一致的。</span></p><p class=""><span style="font-size: 18px;">　　在博鳌开会，我问比尔盖茨怎么看未来的能源？他说能源没问题，能源很便宜，比如风能，到处都有，但是它并不可靠，我们需要的是可靠的能源，而可靠的能源价格是贵的。光能就是一个比较可靠的能源，需要大力发展，这又是一个新增长点。</span></p><p class=""><span style="font-size: 18px;">　　<b>第三消费，经济结构调整的第一个征兆，就是消费开始往上走了。</b>根据我们的分析，再过四五年，消费占GDP的比重应该能够达到50%左右，这就很好了，那时候消费就成为我们的增长动力了。</span></p><p class=""><span style="font-size: 18px;">　　我觉得，很多搞经济学的同行偏于悲观，他们不太愿意讲新增长点。我反复讲这个事，可能不光有经济学理念的不同，还有一点不同，就是他们不是学工程出身的，不关注工程的事，他们看的总是不行的产业。我更愿意看朝气蓬勃往上走的产业，愿意看到新技术能取代旧技术。我的观点是一定要看到发展的一面，一定要看到沉舟侧畔千帆过，向前看向远处看。经济增长就是旧产业不断被淘汰，新产业不断涌现的过程。</span></p><p class=""><span style="font-size: 18px;"><br></span></p><h2>中国经济新增长点怎么造？<br></h2><p class=""><span style="font-size: 18px;"><br></span></p><p class="" data-find="_8"><span style="font-size: 18px;" data-find="_7">　　我认为要干三件事。<b>第一件事，要改革投融资体制，这是当务之急。</b>当下基础设施建设的的确确是一个增长点，问题是我们没有找到一条为基础设施建设投资的融资方式。我们搞的是各个地方政府自己成立一个投资公司，由政府拿地给他抵押去银行借钱。银行借的都是三、五年短期的钱，有的时候甚至更短，而且利息很高。我们的国民储蓄率是美国的3倍，可是我们的贷款利率也非常高，动则在6%以上，而美国有3%、4%就了不起了。我们的银行大都是中短期贷款，用中短期贷款给那些二、三十年长期项目，等于就是自杀，非常荒唐，这就是融资成本高的基本原因。当务之急就是要改革投融资体制，要学习世界银行的基本办法，成立一系列长期投资建设基金。这个基金首先由政府拿一笔钱做担保，拿这个担保向市场发长期债。一旦有政府担保，利率低了，债务利率就能下来。国家开发银行4%、5%的利率。然后到各个地方搞客观评估，不让地方政府自己说了算。哪个项目好，就给哪个项目投，项目不行就不投。这种长期债务要公开，资本市场投资者不断监督这些投资基金的运行模式。</span></p><p class=""><span style="font-size: 18px;">　　<b>第二是正向激励。</b>对地方官员不能只抓反腐，抓反腐很重要，除了这个以外，还要讲正面激励，谁干的好就要奖励。到了年底，凡是做的好的，地级书记给县级书记发奖金，不要越级发，得客观评价。政府不能没有激励，也不能光靠提拔干部来激励。有研究组织行为学的人讲，光靠提拔是不行的，我们还是需要正向激励，要加大正向激励的力度。</span></p><p class=""><span style="font-size: 18px;">　　<b>第三，环保升级。</b>要给环保部一点自己的基金，环保部认为是靠谱的项目，他们可以自己来补贴。环保部不仅要有牙齿，还要有钱包。如果环保部只是抓违规的话，就变成了人人恨的高级城管了，如果把环境保护部转变为环境保护与发展部，把环保跟发展放在一起就厉害了。否则环保永远搞不好，永远不受欢迎。</span></p><p class=""><span style="font-size: 18px;">　　下面我总结一下，第一，经济结构已经向好，对这一点我的看法坚定不移，主要是市场力量在起作用，应精心呵护。第二，长期增长潜力仍然较高，不要被当前的短期下降模糊了视线。第三，短期增速下降具有明显周期因素，既有国际因素，也有房地产因素，也有一些必要的短期干部素质调整、党的建设的因素。第四，短期内重点领域必须加快改革，催生新增长点，用新增长点应对当前的周期性下滑的因素，让动力能够尽快转换。</span></p><div class="medium-insert-images"><span style="font-size: 18px;"></span><figure contenteditable="false">
+    <img src="http://image.sike.news.cn/uploads/2015/10/1444808715-4892.jpeg" alt="">
+        
+</figure><figure contenteditable="false">
+    <img src="http://image.sike.news.cn/uploads/2015/10/1444808719-4899.jpeg" alt="">
+        
+</figure></div><p class=""><a href="http://sike.news.cn/statics/sike/posts/2015/03/218976976.html" style="font-size: 18px;">李稻葵：中国制造，树立品牌形象是关键</a><br></p><p class=""><span style="font-size: 18px;"><a href="http://sike.news.cn/statics/sike/posts/2015/09/219483154.html">代表德国模式的是宝马，不是大众</a></span></p><p class=""><span style="font-size: 18px;"><a href="http://sike.news.cn/statics/sike/posts/2015/08/219479473.html">现在的问题不是没钱，是不知往哪花</a></span></p></p>
+    </div>
+    <div style="clear: both;"></div>
+<!--     <div class="skshengm"> ( 文章为作者独立观点，不代表新华网立场。)</div> -->
+    
+    <div class="div_infor" id="step1"  data-step="1" data-intro="独特的社交化读推系统，你可以把好文章推荐给小伙伴，让好文章被更多人看到。">		
+	<a 
+	class="btn_tjian"	 href="javascript:void(0)" id="fab_button" data="219483509" current_user_id="0">
+    	<h4>推荐</h4>        <p id="fab_count">
+        12</p>
+    </a>
+    </div>
+    <div class="div_tjian">
+   	<p>有<span id="fab_count1">
+     12     </span> 位网友推荐了本文</p>
+     </div>
+    
+    
+	<div class="sharediv clearfix">
+    	<div class="fl">
+        <span><i data-icon="&#xe9ce;"></i>7828</span>&nbsp;次阅读&nbsp;&nbsp;&nbsp;&nbsp;<span><i data-icon="&#xe970;"></i>3</span>&nbsp;次回应
+    	</div>
+    	
+        <div class="fr"> 
+       <div role="group" class="btn-group btn-group-vertical fr">
+        	<a class="dropdown-toggle btn_sharemore" role="button" aria-expanded="false" data-toggle="dropdown" href="javascript:void(0);">更多</a>
+             <ul role="menu" class="dropdown-menu">
+             <!-- <img class="sz_jup0" src="img/zs_jup0.png" style="margin:-10px 0 0 0; top:0;"> -->
+              <li><a style="z-index:999999" href="javascript:share2();"><img src="http://sike.news.cn/resources/themes/sike/img/ico_sk.jpg">新华微博</a></li>
+              <li><a style="z-index:999999" href="javascript:window.open('http://widget.renren.com/dialog/share?resourceUrl='+encodeURIComponent(document.location)
+			+'&appkey=649106854&site=http://www.xinhuanet.com/ 
+			&pic='+encodeURI('')+'&title='+encodeURI('李稻葵：中国经济新增长点怎么“发光”？') ,'', 'width=700, height=680, top=0, left=0, 
+			toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' ); void 0;"><img src="http://sike.news.cn/resources/themes/sike/img/ico_rr.jpg">人人网</a></li>
+              <li><a style="z-index:999999" href="javascript:void(0);" onclick="window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(document.location)+
+				'&appkey=649106854');return false;" title="分享到QQ空间"><img src="http://sike.news.cn/resources/themes/sike/img/ico_qzone.jpg">QQ空间</a></li>
+            </ul>
+            </div>
+        	<a href="javascript:void((function(s,d,e,r,l,p,t,z,c){
+			var%20f='http://v.t.sina.com.cn/share/share.php?appkey=649106854',
+			u=z||d.location,
+			p=['&url=',e(u),'
+				&title=',e(t||d.title),'
+				&source=',e(r),'
+				&sourceUrl=',e(l),'
+				&content=',c||'gb2312','
+				&pic=','
+				&searchPic=true',e(p||'')].join('');
+			function%20a(){
+				if(!window.open([f,p].join(''),
+								'mb',
+								['toolbar=0,
+									status=0,
+									resizable=1,
+									width=600,
+									height=430,
+									left=',(s.width-600)/2,',
+									top=',(s.height-430)/2].join('')))
+					u.href=[f,p].join('');
+				};
+				if(/Firefox/.test(navigator.userAgent))
+					setTimeout(a,0);
+				else%20
+					a();
+			})
+			(screen,document,encodeURIComponent,'','','','李稻葵：中国经济新增长点怎么“发光”？','','utf-8'));" class="btn_sharexl">新浪</a>
+        	<a href="/qrcode.php?id=219483509" id="shareToWeixin" target="_blank" class="btn_sharewx">微信</a>
+        	<a href="#" class="detail-readit icon icon-bookmarks " data="219483509" title="稍后阅读"></a>
+        </div>
+    </div> 
+    
+    
+    
+    
+    <div class="div_infor huiline">
+    	<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 dif_part">
+        	<h4>作者</h4>
+              <div class="tx100">
+              	<a href="/user?userid=8299679" target="_blank">
+            	<img src="http://tpic.home.news.cn/userIcon/m/lidaokui01">
+            	</a>
+            	<div class="a_tx100">
+                	<a href="/user?userid=8299679" target="_blank">李稻葵</a>
+                	<p>清华大学中国与世界经济研究中心主任&nbsp;/&nbsp; 41 篇文章</p>
+                							<a class="zz_sxhbtn" id="subscribe_recommend_author" data="8299679" href="javascript:void(0);">+ 订阅</a>
+					            	</div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 fr dif_part">
+        	<h4>所属思享汇</h4>
+              <div class="tx100">
+                <a target="_blank" href="http://sike.news.cn/statics/sike/category/%E8%B4%A2%E7%BB%8F">
+            	<img src="http://tpic.home.news.cn/xhBlog/xhpic001/M05/04/35/wKhTglMUOJgEAAAAAAAAAAAAAAA304.jpg" class="bdr20">
+            	</a>
+            	<div class="a_tx100">
+                	<a target="_blank" href="http://sike.news.cn/statics/sike/category/%E8%B4%A2%E7%BB%8F">财经</a>
+                	<p>更加轻松、好看、有用、时尚的财经资讯及全球金融市场行情。</p>
+                	
+                							<a href="javascript:void(0);" rel="639" id="recommend_subscribe_category" class="zz_sxhbtn">+ 订阅</a>
+					                	
+            	</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    
+        <div class="div_infor" id="div_infor_comment">
+   	  <h4>回应<a name="comment"></a></h4>
+            <textarea class="txte100 comment_content" id="comment_content_0" placeholder="撰写一条回应" cols="100"></textarea>
+            <div class="div_nml" style="font-size:1.2em">
+            	  <p class="fl">您还能输入&nbsp;<span class="txt_m">300</span>&nbsp;字</p>
+        		 <a href="javascript:addComment();" class="btn_submit fr" id="subcomment">发送</a>
+            </div>
+       
+    </div>
+        
+    <!--回应区-->
+    <div class="txt_plq" id="txt_plq">
+	  
+	</div>
+    
+     <!--回应区 end-->
+     
+      <div class="pagenum" id="pagenum"></div> 
+
+</div><!--container end-->
+
+</div>
+</div>
+<script>
+// $('.dropdown-toggle').toggle(function(){
+// 	$('.dropdown-menu').css('display','block');
+// },function(){
+// 	$('.dropdown-menu').css('display','none');
+// });
+</script>
+<script>
+function toggleWindow(windowID, windowHide){
+	if (windowHide) {
+		$('#' + windowHide).hide();
+	}
+// 	$('#' + windowID).toggle();
+	$('#' + windowID).toggle(0, function() {
+// 		$('input').placeholder();
+	});
+	return false;
+}
+
+</script>
+
+<script>
+function toQzoneLogin()
+{
+	var protocol = window.location.protocol;
+	var host = window.location.host;
+	var A=window.open(protocol + "//" +host+"/resources/mods/sike-third/qq/oauth/qq_login.php","TencentLogin","width=450,height=320,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+} 
+</script>
+
+<div id='popup_error_box' class="black-overlay" id="" style="display:none;">
+	<div style="display: block;" id="tan_tz" class="tongz">
+      <div class="close">
+              	<i onclick="toggleWindow('popup_error_box')"></i>
+              </div>
+    <h4>提示信息</h4>
+    	<div style="display:block;" class="div_tongz">
+        	
+            <p id="popup_msg_content">服务异常</p>
+             <div class=" btns_div">
+             <a class="btn_submit" id="popup_msg_ok" href="#">确定</a>
+             <a class="btn_cancel" id="popup_msg_cancel" href="#">取消</a>
+             
+             </div>
+            
+           
+        </div>
+    </div>
+</div>
+
+<!--登录窗口-->
+<div id='login_msg_box' class="black-overlay" style="display:none;">
+	<!--main-->
+	<div id="login_frame1" style="margin-top:-215px;display:block;">
+    	<div class="col-lg-12 col-md-12 col-xs-8 col-sm-8 login" style="display:block;">
+        	<div class="holder">
+            
+               <div class="logo3"><img src="http://sike.news.cn/resources/themes/sike/img/logo3.jpg"></div>
+                <form class="mail-login" method="post" id="user_login_form" action="">
+                	<input type="hidden" name="redirect_to" value="http://sike.news.cn/statics/sike/posts/2015/10/219483509.html" />
+                	<input class="clear-input" type="text" placeholder="注册邮箱/用户名" name="log" id="login_username">
+                    <input class="clear-input" type="password" placeholder="密码" name="pwd" id="login_password" autocomplete="off">
+                    <label><input class="fl" name="rememberme" type="checkbox" id="login_save_password" value="forever">记住密码</label>
+                  	<a class="btn_submit" id="do_login" onclick="return false;" href="#">
+						登录思客
+					</a>
+                </form>
+                
+                <div class="with-line">使用第三方帐号登录</div>
+                <div class="buttons">
+            		<a class="weibo" rel="nofollow" title="新浪微博帐号登录" href="https://api.weibo.com/oauth2/authorize?client_id=3583909335&redirect_uri=http%3A%2F%2Fsike.news.cn%2Fresources%2Fmods%2Fsike-third%2Fsina%2Fcallback.php&response_type=code"></a>
+ 					<a class="qzone" rel="nofollow" title="腾讯QQ帐号登录" href="#" onclick='toQzoneLogin()'></a>
+              	</div>
+              	 
+                <div class="switch-back">
+                 	<a class="reset-password" href="http://login.home.news.cn/getPwd.do">忘记密码&gt;&gt;</a>
+                    还没有思客帐号？
+					<a href="javascript:void(0)" onClick="toggleWindow('register_user_box', 'login_msg_box')">点击注册&gt;&gt;</a>
+                    <div style="clear:both;"></div>
+                </div>    
+              </div>
+              <div class="close">
+              	<i class="popups_action_btn" onclick="toggleWindow('login_msg_box');return false" rel="login_msg_box"></i>
+              </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <!--main over-->
+</div>
+
+<div id='forget_password_box' class="black-overlay" style="display:none;">
+    <!--找回密码-->
+    <div id="login_frame2" style="height:auto; margin-top: -137px;display:none;">
+    	<div class="holder">
+        	<div class="with-line">找回密码</div>
+            <div class="reset" style="display: block;">
+            	<form class="reset-form">
+        			<p><input class="clear-input" type="password" placeholder="注册邮箱" name="email" style="margin-bottom:10px;width:100%;"><i data-icon="&#xe603;" class="red"></i></p>
+                     <p class="red">邮箱格式不正确</p>
+                      <div><input class="clear-input input-captcha" type="text" placeholder="验证码" name="email">
+                      
+                    <a class="captcha" title="换一个">
+                    <!-- 	<img src="http://sike.news.cn/resources/themes/sike/img/ValidatorCode.php.png"><i data-icon="&#xe603;" class="red"></i> -->
+                    </a></div>
+                    
+                     <p class="red">验证码不正确</p>
+        			<p><a class="btn_submit" onclick="return false;" href="#">
+						找回密码
+					</a></p>
+            	</form>
+                <a class="back" onClick="toggleWindow('login_frame1')">想起来了&gt;&gt;</a>
+            </div>    
+        </div>
+    	<div class="close">
+              	<i onClick="toggleWindow()"></i>
+        </div>
+    </div>
+    <!--找回密码 over-->
+</div>
+
+
+<div id='register_user_box' class="black-overlay" style="display:none;">
+    <!--注册-->
+  
+    <!--使用邮箱注册-->
+    <div id="login_frame4" style="margin-top:-215px;">
+    	<div class="col-lg-12 col-md-12 col-xs-8 col-sm-8 login" style="display:block;">
+        	<div class="holder">
+            	<div class="with-line">使用邮箱注册</div>
+                 <form class="mail-login">
+                	<p><input class="clear-input" type="text" placeholder="邮箱" name="email" id="register_email" rel="email">
+                		<i data-icon="&#xe603;" id="register_email_errico" class="red" style="display:none;"></i>
+                		<i data-icon="&#xe602;" id="register_email_succico" class="green" style="display:none;"></i>
+                	</p>
+                    <p class="red" id="register_email_tips" style="display:none;">邮箱格式不正确</p>
+                    
+                    <p><input class="clear-input" type="text" placeholder="用户名" name="username" id="register_username" rel="username">
+                    	<i data-icon="&#xe603;" id="register_username_errico" class="red" style="display:none;"></i>
+                    	<i data-icon="&#xe602;" id="register_username_succico" class="green" style="display:none;"></i>
+                    </p>
+                    <p class="red" id="register_username_tips" style="display:none;">已存在该用户</p>
+                    
+                    <p><input class="clear-input" type="password" placeholder="密码" name="password" id="register_password" rel="password" autocomplete="off">
+                    	<i data-icon="&#xe603;" id="register_password_errico" class="red" style="display:none;"></i>
+                    	<i data-icon="&#xe602;" id="register_password_succico" class="green" style="display:none;"></i>
+                    </p>
+                    <p class="red" id="register_password_tips" style="display:none;">已存在该用户</p>
+                    
+                    <p><input class="clear-input" type="password" placeholder="确认密码" name="check_password" id="register_check_password" autocomplete="off">
+                    	<i data-icon="&#xe603;" id="register_check_password_errico" class="red" style="display:none;"></i>
+                    	<i data-icon="&#xe602;" id="register_check_password_succico" class="green" style="display:none;"></i>
+                    </p>
+                    <p class="red" id="register_check_password_tips" style="display:none;">已存在该用户</p>
+                    
+                    
+                    <div>
+                    <p><input class="clear-input input-captcha" id="register_captcha" type="text" placeholder="验证码" name="yzm">
+                    <a class="captcha" title="换一个">
+                    	<img src="/captcha/captcha.php"><!-- <i data-icon="&#xe602;" class="green"> --></i>
+                    </a></p></div>
+                   
+                    <p class="red" style="display:none">验证码不正确</p>
+                  	<p><a class="btn_submit" onclick="return false;" id="register_new_user" href="#">
+						注册
+					</a></p>
+                </form>
+                <div class="switch-back">
+                 	<a class="reset-password" href="javascript:void(0)" onClick="toggleWindow('login_msg_box', 'register_user_box');">返回登录&gt;&gt;</a>
+					
+                    <div style="clear:both;"></div>
+                </div>    
+              </div>
+              <div class="close">
+              	<i onClick="toggleWindow('register_user_box');return false;"></i>
+              </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <!--使用邮箱注册 over-->
+</div>
+
+
+<div id='ord_guide_box' class="black-overlay" style="display:none;">
+<!--订阅引导-->
+ <div id='ord_guide'>
+    
+    	<div class="col-lg-12 col-md-12 col-xs-8 col-sm-8 login">
+        	<div class="holder">
+            
+              <h4>思客欢迎您，请挑选您感兴趣的<span class="bltxt">思享汇</span>吧！</h4>
+              
+              <div aria-labelledby="home-tab" id="home" class="tab-pane fade in bqas active" role="tabpanel">
+            
+        	
+        	        		<a href="javascript:;" class="set_order_category" data="657">互联网</a>
+        		        		<a href="javascript:;" class="set_order_category" data="649">体育</a>
+        		        		<a href="javascript:;" class="set_order_category" data="656">军事</a>
+        		        		<a href="javascript:;" class="set_order_category" data="652">历史</a>
+        		        		<a href="javascript:;" class="set_order_category" data="647">国际</a>
+        		        		<a href="javascript:;" class="set_order_category" data="651">娱乐</a>
+        		        		<a href="javascript:;" class="set_order_category" data="648">媒体融合</a>
+        		        		<a href="javascript:;" class="set_order_category" data="659">征文</a>
+        		        		<a href="javascript:;" class="set_order_category" data="653">情感</a>
+        		        		<a href="javascript:;" class="set_order_category" data="650">教育</a>
+        		        		<a href="javascript:;" class="set_order_category" data="640">文化</a>
+        		        		<a href="javascript:;" class="set_order_category" data="663">智库报告</a>
+        		        		<a href="javascript:;" class="set_order_category" data="646">楼市</a>
+        		        		<a href="javascript:;" class="set_order_category" data="643">法治</a>
+        		        		<a href="javascript:;" class="set_order_category" data="654">演讲</a>
+        		        		<a href="javascript:;" class="set_order_category" data="658">热点</a>
+        		        		<a href="javascript:;" class="set_order_category" data="662">自媒体</a>
+        		        		<a href="javascript:;" class="set_order_category" data="639">财经</a>
+        		        	</div>
+               <div class="btn_more"><a href="javascript:;" id="order_category_submit">完成</a></div>
+                
+              </div>
+              <div class="close">
+              	<i id="close_ord_guide_box"></i>
+              </div>
+            <div style="clear:both;"></div>
+        </div>
+</div><!--订阅引导 ending-->
+</div><div style="display:none"><div id="fwl">010020040520000000000000011103170219483509</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020040520000000000000011103170219483509")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020040520000000000000011103170219483509" border="0" /></noscript></div>﻿<div class="footer">
+版权所有 © 2000 - 2015 XINHUANET.com 新华网<br />
+</div> 
+
+<div class="fd_btns" id="back-to-top">
+	<a href="javascript:void(0)" id="footer_bookmark" rel="1" class="read" title="书签"><i>我的书签</i></a>
+	<a href="#totop" id="backtop"><img src="http://sike.news.cn/resources/themes/sike/img/btn_back.png"></a>
+    <a id="smgz"><img src="http://sike.news.cn/resources/themes/sike/img/btn_ewm.png"></a>
+    <div class="yin_ewm" id="yin_ewm" >
+    	<p>扫码关注<span class="bltxt">思客</span></p>
+        <img src="http://sike.news.cn/resources/themes/sike/img/img_ewm.jpg">
+    </div>
+</div>
+
+<div style="display:none; cursor:pointer;" role="alert" class="alert alert-warning alertnew" id="show_add_bookmark" onclick="window.location='/handwriting';">
+	<span style=" font-size:16px;line-height:1.42857">
+	书签+1</span>
+</div> 
+
+<script>
+function toggleWindow(windowID, windowHide){
+	if (windowHide) {
+		$('#' + windowHide).hide();
+	}
+// 	$('#' + windowID).toggle();
+	$('#' + windowID).toggle(0, function() {
+// 		$('input').placeholder();
+	});
+	return false;
+}
+
+</script>
+
+<script>
+function toQzoneLogin()
+{
+	var protocol = window.location.protocol;
+	var host = window.location.host;
+	var A=window.open(protocol + "//" +host+"/resources/mods/sike-third/qq/oauth/qq_login.php","TencentLogin","width=450,height=320,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+} 
+</script>
+
+<div id='popup_error_box' class="black-overlay" id="" style="display:none;">
+	<div style="display: block;" id="tan_tz" class="tongz">
+      <div class="close">
+              	<i onclick="toggleWindow('popup_error_box')"></i>
+              </div>
+    <h4>提示信息</h4>
+    	<div style="display:block;" class="div_tongz">
+        	
+            <p id="popup_msg_content">服务异常</p>
+             <div class=" btns_div">
+             <a class="btn_submit" id="popup_msg_ok" href="#">确定</a>
+             <a class="btn_cancel" id="popup_msg_cancel" href="#">取消</a>
+             
+             </div>
+            
+           
+        </div>
+    </div>
+</div>
+
+<!--登录窗口-->
+<div id='login_msg_box' class="black-overlay" style="display:none;">
+	<!--main-->
+	<div id="login_frame1" style="margin-top:-215px;display:block;">
+    	<div class="col-lg-12 col-md-12 col-xs-8 col-sm-8 login" style="display:block;">
+        	<div class="holder">
+            
+               <div class="logo3"><img src="http://sike.news.cn/resources/themes/sike/img/logo3.jpg"></div>
+                <form class="mail-login" method="post" id="user_login_form" action="">
+                	<input type="hidden" name="redirect_to" value="http://sike.news.cn/statics/sike/posts/2015/10/219483509.html" />
+                	<input class="clear-input" type="text" placeholder="注册邮箱/用户名" name="log" id="login_username">
+                    <input class="clear-input" type="password" placeholder="密码" name="pwd" id="login_password" autocomplete="off">
+                    <label><input class="fl" name="rememberme" type="checkbox" id="login_save_password" value="forever">记住密码</label>
+                  	<a class="btn_submit" id="do_login" onclick="return false;" href="#">
+						登录思客
+					</a>
+                </form>
+                
+                <div class="with-line">使用第三方帐号登录</div>
+                <div class="buttons">
+            		<a class="weibo" rel="nofollow" title="新浪微博帐号登录" href="https://api.weibo.com/oauth2/authorize?client_id=3583909335&redirect_uri=http%3A%2F%2Fsike.news.cn%2Fresources%2Fmods%2Fsike-third%2Fsina%2Fcallback.php&response_type=code"></a>
+ 					<a class="qzone" rel="nofollow" title="腾讯QQ帐号登录" href="#" onclick='toQzoneLogin()'></a>
+              	</div>
+              	 
+                <div class="switch-back">
+                 	<a class="reset-password" href="http://login.home.news.cn/getPwd.do">忘记密码&gt;&gt;</a>
+                    还没有思客帐号？
+					<a href="javascript:void(0)" onClick="toggleWindow('register_user_box', 'login_msg_box')">点击注册&gt;&gt;</a>
+                    <div style="clear:both;"></div>
+                </div>    
+              </div>
+              <div class="close">
+              	<i class="popups_action_btn" onclick="toggleWindow('login_msg_box');return false" rel="login_msg_box"></i>
+              </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <!--main over-->
+</div>
+
+<div id='forget_password_box' class="black-overlay" style="display:none;">
+    <!--找回密码-->
+    <div id="login_frame2" style="height:auto; margin-top: -137px;display:none;">
+    	<div class="holder">
+        	<div class="with-line">找回密码</div>
+            <div class="reset" style="display: block;">
+            	<form class="reset-form">
+        			<p><input class="clear-input" type="password" placeholder="注册邮箱" name="email" style="margin-bottom:10px;width:100%;"><i data-icon="&#xe603;" class="red"></i></p>
+                     <p class="red">邮箱格式不正确</p>
+                      <div><input class="clear-input input-captcha" type="text" placeholder="验证码" name="email">
+                      
+                    <a class="captcha" title="换一个">
+                    <!-- 	<img src="http://sike.news.cn/resources/themes/sike/img/ValidatorCode.php.png"><i data-icon="&#xe603;" class="red"></i> -->
+                    </a></div>
+                    
+                     <p class="red">验证码不正确</p>
+        			<p><a class="btn_submit" onclick="return false;" href="#">
+						找回密码
+					</a></p>
+            	</form>
+                <a class="back" onClick="toggleWindow('login_frame1')">想起来了&gt;&gt;</a>
+            </div>    
+        </div>
+    	<div class="close">
+              	<i onClick="toggleWindow()"></i>
+        </div>
+    </div>
+    <!--找回密码 over-->
+</div>
+
+
+<div id='register_user_box' class="black-overlay" style="display:none;">
+    <!--注册-->
+  
+    <!--使用邮箱注册-->
+    <div id="login_frame4" style="margin-top:-215px;">
+    	<div class="col-lg-12 col-md-12 col-xs-8 col-sm-8 login" style="display:block;">
+        	<div class="holder">
+            	<div class="with-line">使用邮箱注册</div>
+                 <form class="mail-login">
+                	<p><input class="clear-input" type="text" placeholder="邮箱" name="email" id="register_email" rel="email">
+                		<i data-icon="&#xe603;" id="register_email_errico" class="red" style="display:none;"></i>
+                		<i data-icon="&#xe602;" id="register_email_succico" class="green" style="display:none;"></i>
+                	</p>
+                    <p class="red" id="register_email_tips" style="display:none;">邮箱格式不正确</p>
+                    
+                    <p><input class="clear-input" type="text" placeholder="用户名" name="username" id="register_username" rel="username">
+                    	<i data-icon="&#xe603;" id="register_username_errico" class="red" style="display:none;"></i>
+                    	<i data-icon="&#xe602;" id="register_username_succico" class="green" style="display:none;"></i>
+                    </p>
+                    <p class="red" id="register_username_tips" style="display:none;">已存在该用户</p>
+                    
+                    <p><input class="clear-input" type="password" placeholder="密码" name="password" id="register_password" rel="password" autocomplete="off">
+                    	<i data-icon="&#xe603;" id="register_password_errico" class="red" style="display:none;"></i>
+                    	<i data-icon="&#xe602;" id="register_password_succico" class="green" style="display:none;"></i>
+                    </p>
+                    <p class="red" id="register_password_tips" style="display:none;">已存在该用户</p>
+                    
+                    <p><input class="clear-input" type="password" placeholder="确认密码" name="check_password" id="register_check_password" autocomplete="off">
+                    	<i data-icon="&#xe603;" id="register_check_password_errico" class="red" style="display:none;"></i>
+                    	<i data-icon="&#xe602;" id="register_check_password_succico" class="green" style="display:none;"></i>
+                    </p>
+                    <p class="red" id="register_check_password_tips" style="display:none;">已存在该用户</p>
+                    
+                    
+                    <div>
+                    <p><input class="clear-input input-captcha" id="register_captcha" type="text" placeholder="验证码" name="yzm">
+                    <a class="captcha" title="换一个">
+                    	<img src="/captcha/captcha.php"><!-- <i data-icon="&#xe602;" class="green"> --></i>
+                    </a></p></div>
+                   
+                    <p class="red" style="display:none">验证码不正确</p>
+                  	<p><a class="btn_submit" onclick="return false;" id="register_new_user" href="#">
+						注册
+					</a></p>
+                </form>
+                <div class="switch-back">
+                 	<a class="reset-password" href="javascript:void(0)" onClick="toggleWindow('login_msg_box', 'register_user_box');">返回登录&gt;&gt;</a>
+					
+                    <div style="clear:both;"></div>
+                </div>    
+              </div>
+              <div class="close">
+              	<i onClick="toggleWindow('register_user_box');return false;"></i>
+              </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <!--使用邮箱注册 over-->
+</div>
+
+
+<div id='ord_guide_box' class="black-overlay" style="display:none;">
+<!--订阅引导-->
+ <div id='ord_guide'>
+    
+    	<div class="col-lg-12 col-md-12 col-xs-8 col-sm-8 login">
+        	<div class="holder">
+            
+              <h4>思客欢迎您，请挑选您感兴趣的<span class="bltxt">思享汇</span>吧！</h4>
+              
+              <div aria-labelledby="home-tab" id="home" class="tab-pane fade in bqas active" role="tabpanel">
+            
+        	
+        	        		<a href="javascript:;" class="set_order_category" data="657">互联网</a>
+        		        		<a href="javascript:;" class="set_order_category" data="649">体育</a>
+        		        		<a href="javascript:;" class="set_order_category" data="656">军事</a>
+        		        		<a href="javascript:;" class="set_order_category" data="652">历史</a>
+        		        		<a href="javascript:;" class="set_order_category" data="647">国际</a>
+        		        		<a href="javascript:;" class="set_order_category" data="651">娱乐</a>
+        		        		<a href="javascript:;" class="set_order_category" data="648">媒体融合</a>
+        		        		<a href="javascript:;" class="set_order_category" data="659">征文</a>
+        		        		<a href="javascript:;" class="set_order_category" data="653">情感</a>
+        		        		<a href="javascript:;" class="set_order_category" data="650">教育</a>
+        		        		<a href="javascript:;" class="set_order_category" data="640">文化</a>
+        		        		<a href="javascript:;" class="set_order_category" data="663">智库报告</a>
+        		        		<a href="javascript:;" class="set_order_category" data="646">楼市</a>
+        		        		<a href="javascript:;" class="set_order_category" data="643">法治</a>
+        		        		<a href="javascript:;" class="set_order_category" data="654">演讲</a>
+        		        		<a href="javascript:;" class="set_order_category" data="658">热点</a>
+        		        		<a href="javascript:;" class="set_order_category" data="662">自媒体</a>
+        		        		<a href="javascript:;" class="set_order_category" data="639">财经</a>
+        		        	</div>
+               <div class="btn_more"><a href="javascript:;" id="order_category_submit">完成</a></div>
+                
+              </div>
+              <div class="close">
+              	<i id="close_ord_guide_box"></i>
+              </div>
+            <div style="clear:both;"></div>
+        </div>
+</div><!--订阅引导 ending-->
+</div> 
+ 
+         <!--幻灯片-->
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/touchScroll.js"></script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/touchslider.dev.js"></script>
+<script>
+function editor(){
+// 	document.getElementById("readers").className='';
+// 	document.getElementById("editor_chie").className='now';
+// 	document.getElementById("subscription").className='';
+
+	$('#readers').removeClass('now');
+	$('#editor_chie').addClass('now');
+	$('#subscription').removeClass('now');
+	
+	$('.editor').show();
+	$('.reader').hide();
+	$('.subscription').hide();
+	$('#sub_btn_more').hide();
+}
+function reader(){
+// 	document.getElementById("editor_chie").className='';
+// 	document.getElementById("readers").className='now';
+// 	document.getElementById("subscription").className='';
+
+	$('#editor_chie').removeClass('now');
+	$('#readers').addClass('now');
+	$('#subscription').removeClass('now');
+
+	$('.reader').show();
+	$('.editor').hide();
+	$('.subscription').hide();
+	$('#sub_btn_more').hide();
+}
+function subscribe(){
+// 	document.getElementById("editor_chie").className=''
+// 	document.getElementById("readers").className=''
+// 	document.getElementById("subscription").className='now';
+
+	$('#editor_chie').removeClass('now');
+	$('#subscription').addClass('now');
+	$('#readers').removeClass('now');
+
+	$('.reader').hide();
+	$('.editor').hide();
+	$('.subscription').show();
+	$('#sub_btn_more').show();
+}
+
+</script>
+<script type="text/javascript">
+     var active=0,
+	as = $('#pagenavi a');
+
+	//var t1=new TouchScroll({id:'wrapper','width':5,'opacity':0.7,color:'#555',minLength:20});
+
+    var t2=new TouchSlider({id:'slider', speed:600, timeout:6000, before:function(index){
+		as[active].className='';
+		active=index;
+		as[active].className='active';
+	}});
+
+	for(var i=0;i<as.length;i++){	
+		(function(){
+			var j=i;
+			as[i].onclick=function(){
+				t2.slide(j);
+				return false;
+			}
+		})();
+
+
+		//alert(as[i].innerHTML);
+	}
+
+
+  var active1=0,
+	as1 = $('#pagenavi1 a');
+
+	var t3=new TouchSlider({id:'slider1', speed:600, timeout:6000, before:function(index){
+			as1[active1].className='';
+			active1=index;
+			as1[active1].className='active';
+		}});
+
+
+	for(var i=0;i<as1.length;i++){
+		//alert(as[i].html());
+
+		(function(){
+			var j=i;
+			as1[i].onclick=function(){
+				t3.slide(j);
+				return false;
+			}
+		})();
+	}
+	
+</script> 
+<script type="text/javascript">
+$(document).ready(
+	function () {
+		$('#smgz').click(function(){	
+			if(document.getElementById("yin_ewm").style.display=="block"){
+				$(".yin_ewm").css("display","none");
+			}
+			else{
+				$(".yin_ewm").css("display","block");
+			}
+		});
+
+
+		var is_login =  '';
+		
+		$('#footer_bookmark').click(function(){
+			if(is_login){
+				var url =  "http://"+window.location.host+"/handwriting";
+				 window.location.href=url;
+			}else{
+				showMsgBox('您尚未登录，请登录后进行操作', {
+					ok: function () {
+						toggleWindow('login_msg_box', 'popup_error_box');
+						return false;
+					},
+					cancel: function () {
+						toggleWindow('popup_error_box');
+						return false;
+					}
+				});
+			}
+		});
+		
+		
+	})
+	
+
+</script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://image.sike.news.cn/resources/themes/sike/js/bootstrap-ie.js"></script>
+</body>
+</html>

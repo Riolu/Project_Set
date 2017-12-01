@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<!-- This site is optimized with the Yoast SEO plugin v2.3.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Integrations - Analytics Platform - Piwik</title>
+<link rel="canonical" href="http://piwik.org/integrate/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Integrations - Analytics Platform - Piwik" />
+<meta property="og:description" content="Piwik currently can easily integrate with 65+ technologies including Content Managing Systems, Online Shops, Forums, Frameworks and more." />
+<meta property="og:url" content="http://piwik.org/integrate/" />
+<meta property="og:site_name" content="Analytics Platform - Piwik" />
+<meta property="article:publisher" content="https://www.facebook.com/Piwik" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/media/piwik.png" />
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"\/wp-includes\/js\/wp-emoji.js?ver=4.3","twemoji":"\/wp-includes\/js\/twemoji.js?ver=4.3"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" href="/wp-content/plugins/multilingual-press-pro/css/frontend.css?ver=4.3">
+<link rel="stylesheet" href="/wp-content/plugins/cc-syntax-highlight/highlight/tomorrow-night.css">
+<link rel="stylesheet" href="/wp-content/themes/piwik/assets/css/main.min.css?ver=4e6facf06b484b7a4e30141789370add">
+<script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/highlight.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js'></script>
+<script>window.jQuery || document.write('<script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/modernizr-2.6.2.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.backstretch.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.dlmenu.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/bootstrap-slider.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.swfobject.1-1-1.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/youTubeEmbed-jquery-1.0.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/url_builder.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.sticky.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.validate.min.js'></script>
+
+  <link rel="alternate" type="application/rss+xml" title="Analytics Platform - Piwik Feed" href="http://piwik.org/feed/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+    <!--[if lt IE 9]>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/html5shiv.js"></script>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="page page-id-15933 page-parent integrate-tpl integrate">
+
+  <!--[if lt IE 7]><div class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+  <button class="navbar-toggle-menu" type="button" data-toggle="collapse" data-target=".sidebar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+<div class="sidebar affix" role="complementary">
+
+	<aside>
+		<div id="side-wrap">
+			<div id="side-main">
+				<header class="banner" role="banner">
+					<a class="page-title brand" href="http://piwik.org/"> <i class="ficon-piwik_logo header-logo"></i> Open Analytics Platform </a>
+					<!-- languages -->
+					<div class="language-widget ui-dropdown">
+											</div>
+				</header>
+
+				<nav class="nav-main dl-menuwrapper" id="menu" role="navigation">
+					<ul id="menu-sidebar-header-original" class="nav"><li class="active dropdown menu-learn-more"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Learn more <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-what-is-piwik"><a href="http://piwik.org/what-is-piwik/">What is Piwik?</a></li>
+	<li class="menu-features"><a href="http://piwik.org/features/">Features</a></li>
+	<li class="active menu-integrations active"><a href="http://piwik.org/integrate/">Integrations</a></li>
+	<li class="menu-log-analytics"><a href="http://piwik.org/log-analytics/">Log Analytics</a></li>
+	<li class="menu-roadmap"><a href="http://piwik.org/roadmap/">Roadmap</a></li>
+	<li class="menu-changelog"><a href="http://piwik.org/changelog/">Changelog</a></li>
+	<li class="menu-enterprise"><a target="_blank" href="https://piwik.pro/enterprise/?pk_source=Piwik.org&#038;pk_medium=Enterprise_Menu_link&#038;pk_campaign=PO_Enterprise">Enterprise</a></li>
+</ul>
+</li>
+<li class="dropdown menu-community"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://">Community <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-get-involved"><a href="http://piwik.org/get-involved/">Get involved</a></li>
+	<li class="menu-translators"><a href="http://piwik.org/translations/">Translators</a></li>
+	<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+	<li class="menu-contact-the-team"><a href="http://piwik.org/contact/">Contact the team</a></li>
+</ul>
+</li>
+<li class="dropdown menu-help"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Help <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-user-guides"><a href="http://piwik.org/docs">User Guides</a></li>
+	<li class="menu-faq"><a href="http://piwik.org/faq">FAQ</a></li>
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-consulting"><a href="http://piwik.org/consulting/">Consulting</a></li>
+	<li class="menu-issue-tracker"><a target="_blank" href="https://github.com/piwik/piwik/issues">Issue tracker</a></li>
+</ul>
+</li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org/">Marketplace</a></li>
+<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-hosting"><a href="http://piwik.org/hosting/">Hosting</a></li>
+<li class="dropdown menu-about"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://piwik.org/about/">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-jobs-were-hiring"><a href="http://piwik.org/jobs/">Jobs (we&#8217;re hiring!)</a></li>
+	<li class="menu-history"><a href="http://piwik.org/history/">History</a></li>
+	<li class="menu-press"><a href="http://piwik.org/press/">Press</a></li>
+	<li class="menu-testimonials"><a href="http://piwik.org/testimonials">Testimonials</a></li>
+	<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+	<li class="menu-team"><a href="http://piwik.org/team/">Team</a></li>
+</ul>
+</li>
+<li class="menu-blog"><a href="http://piwik.org/blog/">Blog</a></li>
+</ul>				</nav>
+				<div style="clear: both"> </div>
+			</div>
+		</div>
+		<div class="content-info side-footer" role="contentinfo">
+			<ul id="menu-sidebar-footer" class="nav"><li class="menu-download"><a href="http://piwik.org/download/">Download</a></li>
+<li class="menu-demo"><a target="_blank" href="http://demo.piwik.org">Demo</a></li>
+</ul>			<form role="search" method="get" class="form-inline" action="http://piwik.org/">
+  <div class="form-group search-form">
+    <input type="search" value="" name="s" class="ui-search-field form-control" placeholder="Search phrase...">
+    <label class="hide">Search for:</label>
+     <button type="submit" class="btn-search"><i class="ficon-search"></i></button>
+  </div>
+</form>
+			<div class="side-footer-bottom">
+				<hr class="separate">
+				<a href="http://piwik.pro/?pk_source=Piwik.org&pk_medium=Banner_link&pk_campaign=PO_Explore_Piwik_Pro" title="Explore our professional services at Piwik PRO" class="page-switch">
+					<span class="piwik_logo">Piwik Pro - Explore our business offer</span>
+					<span class="text">Explore our business offer.</span>
+				</a>
+			</div>
+			<div style="clear: both"> </div>
+
+		</div>
+	</aside><!-- /.sidebar -->
+
+</div>
+   <div class="container-content">
+        <header class="page-header default text-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Integrations</h1>
+                                
+                <p>Piwik currently can easily integrate with 65+ technologies including Content Managing Systems, Online Shops, Forums, Frameworks and more.</p>
+            </div>
+        </div>
+    </div>
+</header>
+    
+     <div class="wrap container-main" role="document">
+      <article>
+   <div class="container">
+          <div class="container text-center">
+
+    <div class="row mb60">
+        <div class="col-lg-10 col-lg-offset-1">
+            <nav id="sticky">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h3 id="content-management-systems" class="title">
+            Content Management Systems        </h3>
+    </div>
+</div><div class="row"><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/wordpress.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Andr. Br.kling</strong></p>
+            <p>Built for <strong><a href="http://wordpress.org" target="_blank">WordPress</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://wordpress.org/extend/plugins/wp-piwik/" target="_blank">WP-Piwik Wordpress Plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin adds a new Stats dashboard to your WordPress admin area. It's also able to add and customize the Piwik tracking code to your blog using wp_footer, and provides support for Multi Sites Networks.        </p>
+    </section>
+    <footer>
+        <a href="http://wordpress.org/extend/plugins/wp-piwik/" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/typo3.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Kay Strobach</strong></p>
+            <p>Built for <strong><a href="http://typo3.org/" target="_blank">TYPO3</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://piwik.org/blog/2008/06/new-plugin-typo3-integration/">TYPO3 Extension piwik-integrate</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This Piwik plugin will auto setup the userrights in the backend. It will also auto create sites in Piwik if configured in TYPO3. It will add Piwik widgets to the TYPO3 frontend. It will also add the Piwik Tracking code.        </p>
+    </section>
+    <footer>
+        <a href="http://piwik.org/blog/2008/06/new-plugin-typo3-integration/">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/Silex.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Yannick Dominguez</strong></p>
+            <p>Built for <strong><a href="http://projects.silexlabs.org/" target="_blank">Silex</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://exchange.silexlabs.org/?p=977" target="_blank">Silex plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Silex.        </p>
+    </section>
+    <footer>
+        <a href="http://exchange.silexlabs.org/?p=977" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/03/moodle.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>David Bezemer</strong></p>
+            <p>Built for <strong><a href="http://moodle.org" target="_blank">Moodle</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://moodle.org/plugins/view.php?plugin=local_analytics" target="_blank">Moodle Analytics</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Moodle Analytics is a plugin that lets you integrate the Piwik tracking in your Moodle learning platform.         </p>
+    </section>
+    <footer>
+        <a href="http://moodle.org/plugins/view.php?plugin=local_analytics" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/Movable-Type.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Movable Type</strong></p>
+            <p>Built for <strong><a href="http://movabletype.com/" target="_blank">Movable Type</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://led24.de/en/piwik-movabletype/" target="_blank">Movable Type Piwik module</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin provides a small code to insert in the Movable Type footer file to enable Piwik tracking.        </p>
+    </section>
+    <footer>
+        <a href="http://led24.de/en/piwik-movabletype/" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/pimcore.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Thomas Keil, Weblizards</strong></p>
+            <p>Built for <strong><a href="http://www.pimcore.org/" target="_blank">Pimcore</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.pimcore.org/resources/extensions/detail/Piwik" target="_blank">Pimcore Module for Piwik Analytics</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This module automatically adds the Piwik tracking code to your Pimcore website. It also adds two portlets to the welcome page that display the visitor and page statistics. Also, some reports are added to pimcore’s Reports &amp; Marketing section, that provide statistics to each individual documents, to QR-Codes and to the site as such. The module is multisite enabled.        </p>
+    </section>
+    <footer>
+        <a href="http://www.pimcore.org/resources/extensions/detail/Piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2015/03/craft-logo.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Matt Green</strong></p>
+            <p>Built for <strong><a href="http://buildwithcraft.com/" target="_blank">Craft </a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/mattgreen110/piwik-for-craft" target="_blank">Piwik Plugin For Craft</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin allows you to add tracking code to Craft using twig with optional parameters from the Piwik tracking API.
+
+        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/mattgreen110/piwik-for-craft" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/drupal.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Alexander Hass</strong></p>
+            <p>Built for <strong><a href="http://drupal.org/" target="_blank">Drupal</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://drupal.org/project/piwik" target="_blank">Piwik integrate for Drupal</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This module automatically adds the Piwik tracking code to your Drupal website. It can also selectively track certain users, roles and pages and provide direct access to statistics in the reports section using Piwik widgets and API.        </p>
+    </section>
+    <footer>
+        <a href="http://drupal.org/project/piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/DotNetNuke.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Alberto Velo</strong></p>
+            <p>Built for <strong><a href="http://www.dotnetnuke.com/" target="_blank">DotNetNuke</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://albe.ihnet.it/Software/DNNPiwik" target="_blank">DNNP DotNetNuke plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code. It also permits you to pick which roles you don’t want to track.        </p>
+    </section>
+    <footer>
+        <a href="http://albe.ihnet.it/Software/DNNPiwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/dotclear.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Olivier Meunier</strong></p>
+            <p>Built for <strong><a href="http://www.dotclear.net/" target="_blank">Olivier Meunier</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://plugins.dotaddict.org/dc2/details/piwik" target="_blank">Dotclear2 Plugin Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin integrates Piwik statistical tool in Dotclear.        </p>
+    </section>
+    <footer>
+        <a href="http://plugins.dotaddict.org/dc2/details/piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/pivotx.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Hans F. Nordhaug</strong></p>
+            <p>Built for <strong><a href="http://pivotx.net/" target="_blank">PivotX</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://extensions.pivotx.net/entry/35/piwik" target="_blank">PiwotX Extension</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in PivotX.        </p>
+    </section>
+    <footer>
+        <a href="http://extensions.pivotx.net/entry/35/piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/eZ-Publish.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Björn Dieding</strong></p>
+            <p>Built for <strong><a href="http://ez.no/" target="_blank">eZ Publish</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://projects.ez.no/xrowpiwik" target="_blank">eZ Publish module</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This extension integrates eZ Publish with Piwik analytics.         </p>
+    </section>
+    <footer>
+        <a href="http://projects.ez.no/xrowpiwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/CMSmadesimple.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Jos</strong></p>
+            <p>Built for <strong><a href="http://www.cmsmadesimple.org/" target="_blank">CMS Made Simple</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://dev.cmsmadesimple.org/projects/piwik" target="_blank">Piwik Integration for CMS Made Simple</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Integrate Piwik Open Source Web Analytics to your CMS Made Simple website. This module can auto-include the Piwik tracking code and it embeds the Piwik
+dashboard to the CMS Made Simple admin panel.        </p>
+    </section>
+    <footer>
+        <a href="http://dev.cmsmadesimple.org/projects/piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/getsimple_logo.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>zeu</strong></p>
+            <p>Built for <strong><a href="http://get-simple.info/" target="_blank">GetSimple CMS</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://get-simple.info/extend/plugin/piwik-stats-plugin/452/" target="_blank">Piwik stats plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Piwik plugin is a very simple and tiny plugin to add piwik code to your GS pages.        </p>
+    </section>
+    <footer>
+        <a href="http://get-simple.info/extend/plugin/piwik-stats-plugin/452/" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/joomla.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>nfr</strong></p>
+            <p>Built for <strong><a href="http://www.joomla.org/" target="_blank">Joomla</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://extensions.joomla.org/extensions/site-management/analytics/site-analytics-cloud-based/10422" target="_blank">Joomla Extension</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            nfrPiwik is a plug-in that will add the tracking-code for Piwik into your Joomla website, providing powerful analytics to Joomla users.        </p>
+    </section>
+    <footer>
+        <a href="http://extensions.joomla.org/extensions/site-management/analytics/site-analytics-cloud-based/10422" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/spip.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>jsb, kent1</strong></p>
+            <p>Built for <strong><a href="http://www.spip.net/" target="_blank">SPIP</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.spip-contrib.net/Piwik,2860" target="_blank">SPIP Contrib Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin will implement the javascript needed for Piwik to manage your site statistics in SPIP.        </p>
+    </section>
+    <footer>
+        <a href="http://www.spip-contrib.net/Piwik,2860" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/contao.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Andreas Isaak</strong></p>
+            <p>Built for <strong><a href="http://www.contao.org/en/" target="_blank">Contao (TYPOLight)</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.contao.org/en/extension-list/view/PiwikTrackingTag.en.html" target="_blank">Contao Extension</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Contao, with a few options to customise the code: include backend and/or frontend users, use the page title instead of the alias, list the 404 error pages separately, and set which file extensions are used for the category download.        </p>
+    </section>
+    <footer>
+        <a href="http://www.contao.org/en/extension-list/view/PiwikTrackingTag.en.html" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/elgg.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Conlabz GmbH</strong></p>
+            <p>Built for <strong><a href="http://www.elgg.org" target="_blank">Elgg</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://community.elgg.org/pg/plugins/release/295816/developer/cschneider/piwik-open-source-analytics" target="_blank">Elgg Plugin Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin adds the Piwik tracking code to your elgg installation and shows the administrator the page visits of the last 30 days in a graph.        </p>
+    </section>
+    <footer>
+        <a href="http://community.elgg.org/pg/plugins/release/295816/developer/cschneider/piwik-open-source-analytics" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/Mediawiki-Logo.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Isaac S.nchez Barrera</strong></p>
+            <p>Built for <strong><a href="http://www.mediawiki.org/" target="_blank">MediaWiki</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.mediawiki.org/wiki/Extension:Piwik_Integration" target="_blank">Mediawiki Extension Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This extension inserts the Piwik tracking code to the bottom of every page. It excludes the views of the users with ‘bot’ privileges (bots) and the ‘protect’ privileges (sysops). It also adds a Special Page with selected reports.        </p>
+    </section>
+    <footer>
+        <a href="http://www.mediawiki.org/wiki/Extension:Piwik_Integration" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/redaxo.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>DECAF</strong></p>
+            <p>Built for <strong><a href="http://www.redaxo.org/" target="_blank">Redaxo CMS</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.redaxo.org/de/download/addons/?addon_id=774" target="_blank">Redaxo Plugin for Piwik integration</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin adds a new Stats addon to your Redaxo CMS, which automatically adds the Piwik tracking code to your Redaxo website pages, and allows you to choose
+between JS and PHP tracking method. The addon shows a nice short graphical overview within the Redaxo admin section and logs you into the PIWIK backend with one click.        </p>
+    </section>
+    <footer>
+        <a href="http://www.redaxo.org/de/download/addons/?addon_id=774" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/joomla.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Yireo</strong></p>
+            <p>Built for <strong><a href="http://www.joomla.org/" target="_blank">Joomla!</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.yireo.com/software/joomla-extensions/piwik" target="_blank">Integrate the Piwik HTTP API into Joomla!</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Piwik offers non-JavaScript-based statistics, based on an PHP API, which bypasses the new cookie-regulations of the EU. This plugin does not offer the JavaScript-based solution, it only offers the PHP API. And it works great!        </p>
+    </section>
+    <footer>
+        <a href="http://www.yireo.com/software/joomla-extensions/piwik" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2015/04/SharePoint-logo-e1428629988677.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Piwik PRO</strong></p>
+            <p>Built for <strong><a href="http://sharepoint.microsoft.com" target="_blank">Sharepoint</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://piwik.pro/sharepoint-analytics/?pk_source=Piwik_org&amp;pk_medium=CTA_link&amp;pk_campaign=SharePoint_Integration" target="_blank">Sharepoint Analytics</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Integrate Piwik web analytics with your SharePoint service and learn more about the productivity of your employees and overall user engagement.        </p>
+    </section>
+    <footer>
+        <a href="http://piwik.pro/sharepoint-analytics/?pk_source=Piwik_org&amp;pk_medium=CTA_link&amp;pk_campaign=SharePoint_Integration" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/modx.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Thomas Jakobi</strong></p>
+            <p>Built for <strong><a href="http://modx.com/" target="_blank">MODX</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.partout.info/piwik_modx_en.html" target="_blank">MODx Module</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This module/plugin inserts the Piwik Tracking code at the end of the html code generated by MODX and shows a few widgets in the MODX backend.        </p>
+    </section>
+    <footer>
+        <a href="http://www.partout.info/piwik_modx_en.html" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/dokuwiki.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Heikki Hokkanen</strong></p>
+            <p>Built for <strong><a href="http://www.dokuwiki.org/ " target="_blank">DokuWiki</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://wiki.fealdia.org/projects/dokuwiki/piwik" target="_blank">DokuWiki plugin for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin allows you to track visitors statistics of your DokuWiki installation using Piwik. There is an option to exclude admin/users from the statistics.        </p>
+    </section>
+    <footer>
+        <a href="http://wiki.fealdia.org/projects/dokuwiki/piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/TextPattern.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Christian Sandberg</strong></p>
+            <p>Built for <strong><a href="http://textpattern.org/" target="_blank">TextPattern</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://textpattern.org/plugins/1070/csb_piwik" target="_blank">TextPattern Piwik Plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin will generate the JavaScript code for the Piwik open source web analytics tool. It can ignore your own visits by setting a cookie in the admin panel.        </p>
+    </section>
+    <footer>
+        <a href="http://textpattern.org/plugins/1070/csb_piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/Plone.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Plone</strong></p>
+            <p>Built for <strong><a href="http://plone.org/" target="_blank">Plone</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://forum.piwik.org/read.php?2,42011,page=1#msg-42401" target="_blank">Instructions to setup Piwik on Plone</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            There is not yet a plugin to integrate Piwik in Plone automatically, but click on the link to see the simple instructions to include the tracking code in all pages.        </p>
+    </section>
+    <footer>
+        <a href="http://forum.piwik.org/read.php?2,42011,page=1#msg-42401" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/04/mura_logo.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Guust Nieuwenhuis</strong></p>
+            <p>Built for <strong><a href="http://www.getmura.com/" target="_blank">Mura CMS</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/Lagaffe/MuraPiwik" target="_blank">Mura CMS</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Mura CMS plugin for Piwik integration.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/Lagaffe/MuraPiwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/kooboo.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>XITASO GmbH</strong></p>
+            <p>Built for <strong><a href="http://kooboo.com/" target="_blank">Kooboo CMS</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/XITASO/KoobooPiwikPlugin" target="_blank">Kooboo Piwik Plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin allows easy integration of Piwik with Kooboo CMS.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/XITASO/KoobooPiwikPlugin" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"></div></div><div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h3 id="ecommerce-online-shops" class="title">
+            Ecommerce - Online Shops        </h3>
+    </div>
+</div><div class="row"><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/magento.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Adrian Speyer</strong></p>
+            <p>Built for <strong><a href="http://www.magentocommerce.com/" target="_blank">Magento</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.magentocommerce.com/magento-connect/catalog/product/view/id/13253/" target="_blank">Magento Extension for Piwik Ecommerce tracking</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Magento and sets up Ecommerce tracking.
+Features: Tracking of products detail pages viewed, impressions of categories viewed, information from your Carts: Product in carts, Items abandoned carts (lost revenue), Information on Orders: revenue, subtotal, tax, shipping, Conversion rates by sku, category, and more!        </p>
+    </section>
+    <footer>
+        <a href="http://www.magentocommerce.com/magento-connect/catalog/product/view/id/13253/" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/virtuemart.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Virtuemart.net</strong></p>
+            <p>Built for <strong><a href="http://www.virtuemart.net/" target="_blank">Virtuemart</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://extensions.virtuemart.net/extensions-virtuemart-2/statistics/piwik-for-virtuemart2-detail" target="_blank">Ecommerce Analytics for Virtuemart</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            The Plugin Piwik for VirtueMart 2 integrates the Piwik eCommerce tracking in your VirtueMart shop. Just enable the plugin, no template adjustements are needed. The following tracking features are included: information from the cart (product in carts, items abandoned carts), information on orders (revenue, subtotal, tax, shipping), conversion rates by sku, category, products.        </p>
+    </section>
+    <footer>
+        <a href="http://extensions.virtuemart.net/extensions-virtuemart-2/statistics/piwik-for-virtuemart2-detail" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/12/OpenCart.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Kevin Bibby</strong></p>
+            <p>Built for <strong><a href="http://www.opencart.com/" target="_blank">OpenCart</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://inanecoding.co.uk/piwik-opencart-ecommerce-vqmod/" target="_blank">OpenCart</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in OpenCart and sets up full Ecommerce tracking (product views, cart updates and abandonment, and ecommerce order tracking).        </p>
+    </section>
+    <footer>
+        <a href="http://inanecoding.co.uk/piwik-opencart-ecommerce-vqmod/" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/prestashop.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Christian M. Jensen</strong></p>
+            <p>Built for <strong><a href="http://www.prestashop.com/" target="_blank">PrestaShop</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/cmjnisse/piwikanalyticsjs-prestashop" target="_blank">PrestaShop extension for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This module integrates the Piwik Tracking code in the Prestashop and automatically tracks Ecommerce activity: product and category page views, cart updates, ecommerce orders and all the standard Piwik reports. 
+        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/cmjnisse/piwikanalyticsjs-prestashop" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/Oxid-esale.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Joscha Krug</strong></p>
+            <p>Built for <strong><a href="http://www.oxid-esales.com/" target="_blank">Oxid esales</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/jkrug/marmPiwik" target="_blank">Oxid Analyse Plugin for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            The Plugin for OXID eShop integrates the Piwik eCommerce tracking in the output of OXID eShop. No template adjustements are needed. After activation it could be configured easily inside the OXID eShop backend.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/jkrug/marmPiwik" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/zencart.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Stephan Miller</strong></p>
+            <p>Built for <strong><a href="http://www.zen-cart.com/" target="_blank">Zen Cart</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/eristoddle/Piwik-Ecommerce-for-Zen-Cart-1.5" target="_blank">Zen Cart Plugin for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This Plugin adds the Piwik Ecommerce Tracking code in your Zen Cart Store pages, and loads the Piwik Dashboard in the ZenCart Reports menu.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/eristoddle/Piwik-Ecommerce-for-Zen-Cart-1.5" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/osCommerce.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Stefan Kanitz</strong></p>
+            <p>Built for <strong><a href="http://www.oscommerce.com/" target="_blank">osCommerce</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://addons.oscommerce.com/info/8269" target="_blank">osCommerce e-Commerce Analytics</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin makes it possible to use Piwik for your osCommerce Shop and sets up Ecommerce tracking: product &amp; category views, cart updates, orders, and all standard Piwik tracking.        </p>
+    </section>
+    <footer>
+        <a href="http://addons.oscommerce.com/info/8269" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/12/logo-woocommerce.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Piwik PRO</strong></p>
+            <p>Built for <strong><a href="http://www.woothemes.com/woocommerce/" target="_blank">WooCommerce (Wordpress)</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://wordpress.org/plugins/woocommerce-piwik-integration/" target="_blank">WooCommerce Piwik integration</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            The Piwik integration plugin allows you to seamlessly integrate your Piwik Cloud or self-hosted Piwik with the WooCommerce plugin. Integrating Piwik with your WooCommerce store will enable you to get web and ecommerce analytics – orders, purchased items, abandoned carts, plus much more.         </p>
+    </section>
+    <footer>
+        <a href="http://wordpress.org/plugins/woocommerce-piwik-integration/" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/xtcommerce.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong> Daniel Schumacher / Favor-IT.net</strong></p>
+            <p>Built for <strong><a href="http://www.xt-commerce.com/" target="_blank">xt:Commerce</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://addons.xt-commerce.com/index.php?page=product&amp;info=4913" target="_blank">Piwik for xt:Commerce 4</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Plugin that will integrate the Piwik Analytics tracking code to measure Ecommerce activity in your xt:Commerce shop.        </p>
+    </section>
+    <footer>
+        <a href="http://addons.xt-commerce.com/index.php?page=product&amp;info=4913" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"></div></div><div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h3 id="photo-galleries-forums-webmails" class="title">
+            Photo galleries, Forums, Webmails...        </h3>
+    </div>
+</div><div class="row"><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/Status.net_.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Evan Prodromou</strong></p>
+            <p>Built for <strong><a href="http://status.net/" target="_blank">Status.net</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://status.net/open-source/add-ons/piwik-analytics" target="_blank">Status.net Add-on</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Status.net.        </p>
+    </section>
+    <footer>
+        <a href="http://status.net/open-source/add-ons/piwik-analytics" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2015/10/confluence_logo-e1445228837728.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>smartics.de</strong></p>
+            <p>Built for <strong><a href="http://www.atlassian.com/software/confluence/" target="_blank">Atlassian Confluence</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://marketplace.atlassian.com/plugins/de.smartics.piwik.atlassian.confluence.smartics-piwik" target="_blank">Confluence Integration for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            An add-on that will provide your team with powerful analytics for your Team Collaboration Platform Confluence.        </p>
+    </section>
+    <footer>
+        <a href="http://marketplace.atlassian.com/plugins/de.smartics.piwik.atlassian.confluence.smartics-piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/vanilla.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Adrian Speyer</strong></p>
+            <p>Built for <strong><a href="http://vanillaforums.org/" target="_blank">Vanilla Forum</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://vanillaforums.org/addon/piwik-plugin" target="_blank">Vanilla Forum Piwik Analytics Plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin will add the Piwik Tracking code to your Vanilla Forums pages.         </p>
+    </section>
+    <footer>
+        <a href="http://vanillaforums.org/addon/piwik-plugin" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/01/gallery3.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Yusef Maali</strong></p>
+            <p>Built for <strong><a href="http://gallery.menalto.com/" target="_blank">Gallery3</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/usef/gallery3-modules-piwik" target="_blank">Gallery3 Module</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This module makes it easy to keep track visitors on your Photo Gallery running Gallery3 using Piwik.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/usef/gallery3-modules-piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/06/xenforo1.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Christian Hoffmann</strong></p>
+            <p>Built for <strong><a href="http://xenforo.com/" target="_blank">XenForo</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://xenforo.com/community/resources/h-piwikintegrate.183/" target="_blank">Piwik integrate for XenForo</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            The Piwik integrate lets you track xenForo forum with Piwik.        </p>
+    </section>
+    <footer>
+        <a href="http://xenforo.com/community/resources/h-piwikintegrate.183/" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/bulletin.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>JJ</strong></p>
+            <p>Built for <strong><a href="http://www.vbulletin.org" target="_blank">VBulletin plugin</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.vbulletin.org/forum/showthread.php?t=231615&amp;page=2" target="_blank">Vbulletin Addon to integrate Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in VBulletin.        </p>
+    </section>
+    <footer>
+        <a href="http://www.vbulletin.org/forum/showthread.php?t=231615&amp;page=2" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/phpBB.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Kevin/Board III Portal</strong></p>
+            <p>Built for <strong><a href="http://www.phpbb.com/" target="_blank">phpBB</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.board3.de/viewtopic.php?f=10&amp;t=2393" target="_blank">phpBB setup Instructions to track with Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin allows Piwik integrate into phpbb.        </p>
+    </section>
+    <footer>
+        <a href="http://www.board3.de/viewtopic.php?f=10&amp;t=2393" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/roundcube.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Florian Beer</strong></p>
+            <p>Built for <strong><a href="http://roundcube.net/" target="_blank">Roundcube</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://blog.no-panic.at/projects/roundcube-webmail-piwik-analytics-plugin/" target="_blank">Roundcube Webmail Plugin Piwik Analytics</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Roundcube Webmail.        </p>
+    </section>
+    <footer>
+        <a href="http://blog.no-panic.at/projects/roundcube-webmail-piwik-analytics-plugin/" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/sonar.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>David Jones</strong></p>
+            <p>Built for <strong><a href="http://www.sonarsource.org/" target="_blank">Sonar</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://docs.codehaus.org/display/SONAR/Piwik+Plugin" target="_blank">Sonar Plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This Piwik Plugin measures individuals browsing activity of the Sonar instance.        </p>
+    </section>
+    <footer>
+        <a href="http://docs.codehaus.org/display/SONAR/Piwik+Plugin" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/08/ilias-e1376473944427.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Peter Boden</strong></p>
+            <p>Built for <strong><a href="http://www.ilias.de/" target="_blank">ILIAS</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/pebosi/ilias-piwik" target="_blank">Piwik integrate for ILIAS</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Use Piwik Web-Analytics to track ILIAS usage.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/pebosi/ilias-piwik" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/09/mediagoblin_dark_medium.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>ayleph</strong></p>
+            <p>Built for <strong><a href="http://mediagoblin.org/" target="_blank">GNU MediaGoblin</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/ayleph/mediagoblin-piwik" target="_blank">Gnu MediaGoblin Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin lets you measure GNU MediaGoblin usage with Piwik.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/ayleph/mediagoblin-piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2015/10/ox_logo_black.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Open-Xchange</strong></p>
+            <p>Built for <strong><a href="http://www.open-xchange.com" target="_blank">Open-Xchange</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://oxpedia.org/wiki/index.php?title=AppSuite:Metrics" target="_blank">Track user behavior in Open-Xchange</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            OX App Suite is a device independent middleware platform that integrates messaging, collaboration and 3rd-party cloud-based applications into a single browser interface.        </p>
+    </section>
+    <footer>
+        <a href="http://oxpedia.org/wiki/index.php?title=AppSuite:Metrics" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/jenkins.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Christophe Furmaniak</strong></p>
+            <p>Built for <strong><a href="http://jenkins-ci.org/" target="_blank">Hudson / Jenkins</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://wiki.hudson-ci.org/display/HUDSON/Piwik+Analytics+Plugin" target="_blank">Jenkins Module</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically adds the Piwik Analytics tracking script to all web pages that are served by the Hudson installation.        </p>
+    </section>
+    <footer>
+        <a href="http://wiki.hudson-ci.org/display/HUDSON/Piwik+Analytics+Plugin" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2015/02/Logo-LimeSurvey.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Steve Cohen</strong></p>
+            <p>Built for <strong><a href="http://limesurvey.org" target="_blank">Limesurvey</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/SteveCohen/Piwik-for-Limesurvey" target="_blank">Piwik for LimeSurvey</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin integrates Piwik into Limesurvey to measure surveys usage and interactions (paradata).
+
+        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/SteveCohen/Piwik-for-Limesurvey" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/mantis.gif" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Lapinkiller</strong></p>
+            <p>Built for <strong><a href="http://www.mantisbt.org" target="_blank">Mantis</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/Jguilbaud/mantispluginPiwik#readme" target="_blank">Mantis Plugin Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Mantis.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/Jguilbaud/mantispluginPiwik#readme" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/simplemachines.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>folding</strong></p>
+            <p>Built for <strong><a href="http://www.simplemachines.org/" target="_blank">Simple Machines Forum</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.simplemachines.org/community/index.php?topic=381722.0" target="_blank">Simple Machines Piwik instructions</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin will install the Piwik Tracking code in the Simple Machine Forum pages.        </p>
+    </section>
+    <footer>
+        <a href="http://www.simplemachines.org/community/index.php?topic=381722.0" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/trac.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Quentin Drouet</strong></p>
+            <p>Built for <strong><a href="http://trac.edgewall.org/" target="_blank">Trac</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://technique.arscenic.org/services-web/subversion-et-trac/ameliorer-et-optimiser-trac/article/trac-and-piwik-traffic-analysis-of" target="_blank">Piwik4Trac</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Trac.        </p>
+    </section>
+    <footer>
+        <a href="http://technique.arscenic.org/services-web/subversion-et-trac/ameliorer-et-optimiser-trac/article/trac-and-piwik-traffic-analysis-of" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/mybb.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>querschlaeger</strong></p>
+            <p>Built for <strong><a href="http://www.mybb.com/" target="_blank">MyBB</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://mods.mybb.com/view/piwik" target="_blank">Piwik Mod for MyBB</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin adds the Piwik tracking code to really every page of your MyBB. You can also count attachment downloads with this modification.        </p>
+    </section>
+    <footer>
+        <a href="http://mods.mybb.com/view/piwik" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"></div></div><div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h3 id="programming-language-platforms-and-frameworks" class="title">
+            Programming language, Platforms and Frameworks        </h3>
+    </div>
+</div><div class="row"><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/php.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Piwik team</strong></p>
+            <p>Built for <strong><a href="http://php.net" target="_blank">PHP</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://developer.piwik.org/guides/querying-the-reporting-api#call-the-piwik-api-in-php" target="_blank">PHP Client for Analytics API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Piwik is written in PHP5, it is possible to use the underlying PHP classes directly within your project, making it easy to use and call the Piwik APIs.        </p>
+    </section>
+    <footer>
+        <a href="http://developer.piwik.org/guides/querying-the-reporting-api#call-the-piwik-api-in-php" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/11/Android_Robot1.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Alexey Subbotin </strong></p>
+            <p>Built for <strong><a href="http://android.com/" target="_blank">Android Apps</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/piwik/piwik-sdk-android" target="_blank">Android SDK for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Use the Piwik Android SDK to measure how users are navigating and using your Android Mobile apps.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/piwik/piwik-sdk-android" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/csharp-logo.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Julien Moumné</strong></p>
+            <p>Built for <strong><a href="http://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29" target="_blank">C#</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/piwik/piwik-dotnet-api" target="_blank">C# Client for Analytics API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            C# client for the Piwik Analytics API, letting you access any analytics report or manage Piwik websites from your C# project.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/piwik/piwik-dotnet-api" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/django.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Peter Bittner</strong></p>
+            <p>Built for <strong><a href="http://www.djangoproject.com/" target="_blank">Django</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://pythonhosted.org/django-analytical/services/piwik.html" target="_blank">Django</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            The django-analytical application integrates analytics services into a Django project, and also supports Piwik out-of-the-box.        </p>
+    </section>
+    <footer>
+        <a href="http://pythonhosted.org/django-analytical/services/piwik.html" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/Symfony2.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Paweł Barański</strong></p>
+            <p>Built for <strong><a href="http://symfony.com" target="_blank">Symfony</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/devhelp/piwik-bundle" target="_blank">Symfony Bundle for API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Allows to create multiple Piwik API clients as Symfony services.
+
+        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/devhelp/piwik-bundle" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/gwt.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Michel</strong></p>
+            <p>Built for <strong><a href="http://developers.google.com/web-toolkit/" target="_blank">Google Web Toolkit</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.xind-media.nl/blog/gwt-wrapper-for-piwik/" target="_blank">GWT Wrapper for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Ever wanted to use Piwik on your GWT enabled sites? This library implements a java class for GWT allowing you to use Piwik functionality such a recording page hits, outbound link clicks and goals.        </p>
+    </section>
+    <footer>
+        <a href="http://www.xind-media.nl/blog/gwt-wrapper-for-piwik/" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/11/AngularJS-small.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Mike Spainhower</strong></p>
+            <p>Built for <strong><a href="http://angularjs.org" target="_blank">AngularJS</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/mike-spainhower/angular-piwik" target="_blank">Angular-piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Angular-piwik provides the features of the Piwik Javascript tracker for angular projects. Tracking actions can be done declaratively as attributes of the ngp-piwik html element or programmatically using the Piwik angular service.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/mike-spainhower/angular-piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/09/twig-logo-e1410919748735.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Matthieu Napoli</strong></p>
+            <p>Built for <strong><a href="http://twig.sensiolabs.org/" target="_blank">Twig</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/mnapoli/PiwikTwigExtension" target="_blank">Piwik integration with Twig</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This Twig extension allows you to integrate the Piwik tracking code easily in your web application.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/mnapoli/PiwikTwigExtension" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/php.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Piwik team</strong></p>
+            <p>Built for <strong><a href="http://php.net" target="_blank">PHP</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://piwik.org/docs/tracking-api/">PHP Client for Tracking API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Piwik provides a PHP5 Tracking API Client class to easily track any visit, page view, action, goal, custom variable, or ecommerce interaction in your Piwik server.        </p>
+    </section>
+    <footer>
+        <a href="http://piwik.org/docs/tracking-api/">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/11/ios-logo.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Mattias Levin</strong></p>
+            <p>Built for <strong><a href="http://developer.apple.com/devcenter/ios/" target="_blank">iOS Apps</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/piwik/piwik-sdk-ios" target="_blank">iOS SDK for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Use the official Piwik iOS SDK to measure how users are navigating and using your iOS Mobile apps.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/piwik/piwik-sdk-ios" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/ruby1.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Achillefs Charmpilas, Rodrigo Tassinari de Oliveira</strong></p>
+            <p>Built for <strong><a href="http://rubygems.org/gems/autometal-piwik" target="_blank">Ruby</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://rubygems.org/gems/autometal-piwik" target="_blank">Ruby Client for Piwik API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin installs a simple Ruby client for the Piwik API        </p>
+    </section>
+    <footer>
+        <a href="http://rubygems.org/gems/autometal-piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/nodejs.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>sandfox</strong></p>
+            <p>Built for <strong><a href="http://nodejs.org" target="_blank">Node.js</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/sandfox/nodejs-piwik" target="_blank">Node.js wrapper for Analytics API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This is a node.js module to access Piwik Analytics API.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/sandfox/nodejs-piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/Silverlight.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Christoph Walcher</strong></p>
+            <p>Built for <strong><a href="http://www.silverlight.net/" target="_blank">Silverlight</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/saintedlama/Piwik-Tracking" target="_blank">Silverlight Piwik tracking</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Silverlight.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/saintedlama/Piwik-Tracking" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/zend.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Marcus St.hr</strong></p>
+            <p>Built for <strong><a href="http://framework.zend.com/manual/en/zend.controller.plugins.html" target="_blank">Zend Framework</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/daFish/Zend_Service_Piwik#readme" target="_blank">Zend Service Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This component can be used to query your Piwik Installation via the API.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/daFish/Zend_Service_Piwik#readme" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/objective-c.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>mattiaslevin</strong></p>
+            <p>Built for <strong><a href="http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/" target="_blank">Objective-C</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/mattiaslevin/PiwikTracker" target="_blank">PiwikTracker for Objective-C</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            A PiwikTracker framework in Objective-C for sending events to a Piwik server.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/mattiaslevin/PiwikTracker" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2013/11/zend.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Andreas Heigl</strong></p>
+            <p>Built for <strong><a href="http://framework.zend.com/" target="_blank">Zend Framework 2</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/heiglandreas/piwik#readme" target="_blank">Zend Framework 2</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This module integrates the Piwik JavaScript tracking code into all WebViews of your ZF2 website.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/heiglandreas/piwik#readme" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/java.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Piwik team</strong></p>
+            <p>Built for <strong><a href="http://java.net" target="_blank">Java</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/piwik/piwik-java-tracking" target="_blank">Java Client for Tracking API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This Java class makes it easy to track any visit, page, goal, ecommerce activity using the Tracking API        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/piwik/piwik-java-tracking" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/11/appcelerator-titanium-mobile-developpement.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Manuel Lehner</strong></p>
+            <p>Built for <strong><a href="http://www.appcelerator.com/titanium/" target="_blank">Appcelerator Titanium</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/manumaticx/ti.piwik" target="_blank">Appcelerator Titanium Module for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Use the Piwik Analytics Module for Titanium to measure how users are navigating and consuming your Mobile apps built using Appcelerator Titanium.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/manumaticx/ti.piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/django.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Raphael Jasjukaitis</strong></p>
+            <p>Built for <strong><a href="http://www.djangoproject.com/" target="_blank">Django</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://pypi.python.org/pypi/django-piwik/" target="_blank">Python Library for Piwik</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in your Django templates.        </p>
+    </section>
+    <footer>
+        <a href="http://pypi.python.org/pypi/django-piwik/" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/nodejs.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Frederic Hemberger </strong></p>
+            <p>Built for <strong><a href="http://www.nodejs.org/" target="_blank">Node.js </a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/fhemberger/piwik-tracker" target="_blank">Node.js wrapper for Tracking API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This is a Node.js wrapper for Tracking API.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/fhemberger/piwik-tracker" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/symfony.gif" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Anush Ramani, Vasil G.</strong></p>
+            <p>Built for <strong><a href="http://www.symfony-project.org/plugins/sfPiwikPlugin" target="_blank">Symfony</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://www.symfony-project.org/plugins/sfPiwikPlugin" target="_blank">Symfony Piwik Plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Symfony.        </p>
+    </section>
+    <footer>
+        <a href="http://www.symfony-project.org/plugins/sfPiwikPlugin" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/laravel.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Rob Brazier</strong></p>
+            <p>Built for <strong><a href="http://laravel.com/" target="_blank">Laravel</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://robbrazier.com/portfolio/laravel-piwik" target="_blank">Laravel Piwik Bundle</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This bundle for Laravel allows easy access to the Piwik Analytics API.        </p>
+    </section>
+    <footer>
+        <a href="http://robbrazier.com/portfolio/laravel-piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/12/mojolicious-black.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Nils Diewald</strong></p>
+            <p>Built for <strong><a href="http://mojolicio.us/" target="_blank">Mojolicious</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://search.cpan.org/dist/Mojolicious-Plugin-Piwik/" target="_blank">Piwik plugin for Mojolicious</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Mojolicious::Plugin::Piwik is a simple plugin for embedding Piwik Analysis in your Mojolicious app.        </p>
+    </section>
+    <footer>
+        <a href="http://search.cpan.org/dist/Mojolicious-Plugin-Piwik/" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"><div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/python.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Nicolas Kuttler</strong></p>
+            <p>Built for <strong><a href="http://python.org/" target="_blank">Python</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/piwik/piwik-python-api" target="_blank">Python Client for Tracking API and Analytics API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Python implementation of the Piwik tracking and the analytics API. You can use it to track visitors, ecommerce, actions, goals, generate reports and much more.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/piwik/piwik-python-api" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/csharp-logo.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Julien Moumné</strong></p>
+            <p>Built for <strong><a href="http://github.com/piwik/piwik-dotnet-tracker" target="_blank">C#</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/piwik/piwik-dotnet-tracker" target="_blank">C# Client for Tracking API</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            C# implementation of the Piwik Tracking API, to track visitors, page views, downloads, ecommerce activity, and more.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/piwik/piwik-dotnet-tracker" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/Ruby-on-rails1.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Fabian Becker</strong></p>
+            <p>Built for <strong><a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://rubygems.org/gems/piwik_analytics" target="_blank">Ruby on Rails Piwik Gem</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Ruby on Rails.        </p>
+    </section>
+    <footer>
+        <a href="http://rubygems.org/gems/piwik_analytics" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/Symfony2.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Webfactory GmbH</strong></p>
+            <p>Built for <strong><a href="http://symfony.com/" target="_blank">Symfony2</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/webfactory/piwik-bundle" target="_blank">Symfony2 Piwik Bundle </a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            A Symfony2 Bundle that helps you to use the Piwik Open Analytics Platform with your project.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/webfactory/piwik-bundle" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/Zikula.gif" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Fabian W.rtz</strong></p>
+            <p>Built for <strong><a href="http://zikula.org/" target="_blank">Zikula</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://github.com/phaidon/Piwik" target="_blank">Zikula module</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin automatically inserts the Piwik Tracking code in Zikula.        </p>
+    </section>
+    <footer>
+        <a href="http://github.com/phaidon/Piwik" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2014/11/AngularJS-small.png" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Luis Farzati</strong></p>
+            <p>Built for <strong><a href="http://angularjs.org/" target="_blank">AngularJS</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://luisfarzati.github.io/angulartics/" target="_blank">Angulartics</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            Angulartics is a Vendor-agnostic analytics for AngularJS applications. Just add Angulartics to your app dependencies and you'll get automatic pageview tracking for your application routes.        </p>
+    </section>
+    <footer>
+        <a href="http://luisfarzati.github.io/angulartics/" target="_blank">Download</a>
+    </footer>
+</div>
+<div class="box box-md box-software">
+    <header>
+        <figure>
+            <img src="http://piwik.org/wp-content/uploads/2012/11/grails2.jpg" />        </figure>
+        <div class="description">
+            <p>Developed by <strong>Karol Balejko</strong></p>
+            <p>Built for <strong><a href="http://grails.org/plugin/piwik" target="_blank">Grails</a></strong></p>
+        </div>
+        <h4>
+            <a href="http://grails.org/plugin/piwik" target="_blank">Grails Plugin</a>
+        </h4>
+    </header>
+    <section>
+        <p>
+            This plugin can be used to integrate Piwik open source web analytics in Grails application. The plugin is written in Groovy/Grails without any dependencies on external libraries.        </p>
+    </section>
+    <footer>
+        <a href="http://grails.org/plugin/piwik" target="_blank">Download</a>
+    </footer>
+</div>
+</div><div class="col-lg-3"></div></div>
+
+    Please note that these plugins, addons and modules linked to on this page are built by third party developers NOT members of the Piwik team. The source code has not been reviewed by the core team, nor did we test them ourselves. Therefore, please use these with caution and report any issues you may experience to the original developer. Keeping the list up to date <br /><br /> To report a broken link, or to submit a new Plugin <a href="mailto:hello@piwik.org">please get in touch</a>. See also the guide <a href="/integrate/how-to/">Best practises for Integration Plugins.
+
+</a></div>
+     </div>
+</article>
+     </div><!-- /.wrap -->
+
+   <div class="wrapper-body">
+<div class="row extra-foot">
+    <div class="container">
+        <div class="col-md-6 anyquest">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/piwik_help.jpg" class="any-q">
+            <h3>Any questions? </h3>
+            <p>Many answers and more information about Piwik You can find here:</p>
+            <ul class="inline">
+                <li><a href="/docs/">User Guides</a></li>
+                <li><a href="http://forum.piwik.org/">Forums</a></li>
+                <li><a href="/faq/">FAQs</a></li>
+	            <li><a href="http://piwik.pro?pk_source=Piwik.org&pk_medium=footer_link&pk_campaign=PO_Pro_Solutions" target="_blank">PRO Solutions</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/socials.png" class="socials">
+            <h3>We are social </h3>
+            <p>Follow us:</p>
+            <ul class="inline">
+                <li><a href="/newsletter/">Newsletter</a></li>
+                <li><a href="http://www.facebook.com/Piwik">Facebook</a></li>
+                <li><a href="http://twitter.com/piwik">Twitter</a></li>
+                <li><a href="http://www.linkedin.com/groups?gid=867857" target="_blank">Linkedin</a></li>
+                <li><a href="https://github.com/piwik/piwik">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="container footer-page footer-updated">
+    <div class="row">
+        <div class="col-lg-11 col-md-11 foot-cc">
+            <a href="http://piwik.org/thank-you-all/"><img src="http://piwik.org/wp-content/themes/piwik/assets/img/cc.png" class="clearcode"></a>
+            <span class="pworg">Piwik.org. &copy; 2015</span>
+            <ul id="menu-footer" class="nav"><li class="menu-piwik-cloud"><a href="http://piwik.org/hosting/">Piwik Cloud</a></li>
+<li class="menu-privacy"><a href="http://piwik.org/privacy/">Privacy</a></li>
+<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+<li class="menu-developers"><a target="_blank" href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org">Marketplace</a></li>
+<li class="menu-credits"><a href="http://piwik.org/thank-you-all/">Credits</a></li>
+</ul>            <span class="respect">Piwik respects your privacy and gives you full control over your data.</span>
+        </div>
+    </div>
+</footer>
+</div>
+   </div>
+  <!-- Piwik -->
+<!-- Load Piwik.js from demo2 for continuous testing -->
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/") + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker((("https:" == document.location.protocol) ? "https://demo.piwik.org/" : "http://demo.piwik.org/") + "piwik.php", 1);
+piwikTracker.setCookieDomain('*.piwik.org');
+
+if(document.domain != 'piwik.org') {
+  piwikTracker.setDocumentTitle(document.domain + "/" + document.title);
+}
+
+// Set the domain the visitor landed on, in the Custom Variable
+if(!piwikTracker.getCustomVariable(1)) { 
+  piwikTracker.setCustomVariable(1, "Domain landed", document.domain );
+}
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();  
+} catch( err ) {}
+</script><noscript><p><img src="http://demo.piwik.org/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+
+
+<!-- We're tracking data in demo2.piwik.org for purpose of testing Piwik. Signed: the Piwik core team -->
+<script type="text/javascript">
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/");
+    try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.setCookieDomain('*.piwik.org');
+        // Track Javascript Errors as Events
+        piwikTracker.enableJSErrorTracking();
+        
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+</script>
+  <script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/syntax_highlight.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/scripts.min.js?ver=160b62610afbe732febb44f9896f3afd'></script>
+
+  <div id="fb-root"></div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 1.400 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-10-28 00:07:25 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

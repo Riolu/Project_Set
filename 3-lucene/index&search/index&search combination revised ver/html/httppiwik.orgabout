@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<!-- This site is optimized with the Yoast SEO plugin v2.3.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>What is Piwik? - Analytics Platform - Piwik</title>
+<link rel="canonical" href="http://piwik.org/what-is-piwik/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What is Piwik? - Analytics Platform - Piwik" />
+<meta property="og:description" content="Piwik is an open analytics platform currently used by individuals, companies and governments all over the world. With Piwik, your data will always be yours. Learn why Piwik is the right web analytics tool for you below." />
+<meta property="og:url" content="http://piwik.org/what-is-piwik/" />
+<meta property="og:site_name" content="Analytics Platform - Piwik" />
+<meta property="article:publisher" content="https://www.facebook.com/Piwik" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/illustration/web-analytics.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/illustration/ecommerce-analytics.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/illustration/serverlog-analytics.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/illustration/intranet-analytics.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/features/screen-1.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/features/screen.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/features/screen-6.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/features/screen-2.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/features/screen-3.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/features/screen-4.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik//assets/img/features/screen-5.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/logos/oxid.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/logos/magento.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/logos/prestashop.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/logos/xtcommerce.png" />
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"\/wp-includes\/js\/wp-emoji.js?ver=4.3","twemoji":"\/wp-includes\/js\/twemoji.js?ver=4.3"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" href="/wp-content/plugins/multilingual-press-pro/css/frontend.css?ver=4.3">
+<link rel="stylesheet" href="/wp-content/plugins/cc-syntax-highlight/highlight/tomorrow-night.css">
+<link rel="stylesheet" href="/wp-content/themes/piwik/assets/css/main.min.css?ver=4e6facf06b484b7a4e30141789370add">
+<script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/highlight.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js'></script>
+<script>window.jQuery || document.write('<script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/modernizr-2.6.2.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.backstretch.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.dlmenu.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/bootstrap-slider.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.swfobject.1-1-1.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/youTubeEmbed-jquery-1.0.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/url_builder.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.sticky.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.validate.min.js'></script>
+
+  <link rel="alternate" type="application/rss+xml" title="Analytics Platform - Piwik Feed" href="http://piwik.org/feed/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+    <!--[if lt IE 9]>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/html5shiv.js"></script>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="page page-id-102 page-about-tpl what-is-piwik">
+
+  <!--[if lt IE 7]><div class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+  <button class="navbar-toggle-menu" type="button" data-toggle="collapse" data-target=".sidebar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+<div class="sidebar affix" role="complementary">
+
+	<aside>
+		<div id="side-wrap">
+			<div id="side-main">
+				<header class="banner" role="banner">
+					<a class="page-title brand" href="http://piwik.org/"> <i class="ficon-piwik_logo header-logo"></i> Open Analytics Platform </a>
+					<!-- languages -->
+					<div class="language-widget ui-dropdown">
+											</div>
+				</header>
+
+				<nav class="nav-main dl-menuwrapper" id="menu" role="navigation">
+					<ul id="menu-sidebar-header-original" class="nav"><li class="active dropdown menu-learn-more"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Learn more <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="active menu-what-is-piwik active"><a href="http://piwik.org/what-is-piwik/">What is Piwik?</a></li>
+	<li class="menu-features"><a href="http://piwik.org/features/">Features</a></li>
+	<li class="menu-integrations"><a href="http://piwik.org/integrate/">Integrations</a></li>
+	<li class="menu-log-analytics"><a href="http://piwik.org/log-analytics/">Log Analytics</a></li>
+	<li class="menu-roadmap"><a href="http://piwik.org/roadmap/">Roadmap</a></li>
+	<li class="menu-changelog"><a href="http://piwik.org/changelog/">Changelog</a></li>
+	<li class="menu-enterprise"><a target="_blank" href="https://piwik.pro/enterprise/?pk_source=Piwik.org&#038;pk_medium=Enterprise_Menu_link&#038;pk_campaign=PO_Enterprise">Enterprise</a></li>
+</ul>
+</li>
+<li class="dropdown menu-community"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://">Community <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-get-involved"><a href="http://piwik.org/get-involved/">Get involved</a></li>
+	<li class="menu-translators"><a href="http://piwik.org/translations/">Translators</a></li>
+	<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+	<li class="menu-contact-the-team"><a href="http://piwik.org/contact/">Contact the team</a></li>
+</ul>
+</li>
+<li class="dropdown menu-help"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Help <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-user-guides"><a href="http://piwik.org/docs">User Guides</a></li>
+	<li class="menu-faq"><a href="http://piwik.org/faq">FAQ</a></li>
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-consulting"><a href="http://piwik.org/consulting/">Consulting</a></li>
+	<li class="menu-issue-tracker"><a target="_blank" href="https://github.com/piwik/piwik/issues">Issue tracker</a></li>
+</ul>
+</li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org/">Marketplace</a></li>
+<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-hosting"><a href="http://piwik.org/hosting/">Hosting</a></li>
+<li class="dropdown menu-about"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://piwik.org/about/">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-jobs-were-hiring"><a href="http://piwik.org/jobs/">Jobs (we&#8217;re hiring!)</a></li>
+	<li class="menu-history"><a href="http://piwik.org/history/">History</a></li>
+	<li class="menu-press"><a href="http://piwik.org/press/">Press</a></li>
+	<li class="menu-testimonials"><a href="http://piwik.org/testimonials">Testimonials</a></li>
+	<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+	<li class="menu-team"><a href="http://piwik.org/team/">Team</a></li>
+</ul>
+</li>
+<li class="menu-blog"><a href="http://piwik.org/blog/">Blog</a></li>
+</ul>				</nav>
+				<div style="clear: both"> </div>
+			</div>
+		</div>
+		<div class="content-info side-footer" role="contentinfo">
+			<ul id="menu-sidebar-footer" class="nav"><li class="menu-download"><a href="http://piwik.org/download/">Download</a></li>
+<li class="menu-demo"><a target="_blank" href="http://demo.piwik.org">Demo</a></li>
+</ul>			<form role="search" method="get" class="form-inline" action="http://piwik.org/">
+  <div class="form-group search-form">
+    <input type="search" value="" name="s" class="ui-search-field form-control" placeholder="Search phrase...">
+    <label class="hide">Search for:</label>
+     <button type="submit" class="btn-search"><i class="ficon-search"></i></button>
+  </div>
+</form>
+			<div class="side-footer-bottom">
+				<hr class="separate">
+				<a href="http://piwik.pro/?pk_source=Piwik.org&pk_medium=Banner_link&pk_campaign=PO_Explore_Piwik_Pro" title="Explore our professional services at Piwik PRO" class="page-switch">
+					<span class="piwik_logo">Piwik Pro - Explore our business offer</span>
+					<span class="text">Explore our business offer.</span>
+				</a>
+			</div>
+			<div style="clear: both"> </div>
+
+		</div>
+	</aside><!-- /.sidebar -->
+
+</div>
+   <div class="container-content">
+        <header class="page-header default text-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>What is Piwik?</h1>
+                                
+                <p>Piwik is an open analytics platform currently used by individuals, companies and governments all over the world. With Piwik, your data will always be yours. Learn why Piwik is the right web analytics tool for you below.</p>
+            </div>
+        </div>
+    </div>
+</header>
+    
+     <div class="wrap container-main" role="document">
+      <article>
+   <div class="container">
+          <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <div id="features-player">
+            <iframe id="video" width="100%" height="575" src="https://www.youtube.com/embed/OslfF_EH81g" frameborder="0" allowfullscreen style="display: none"></iframe>
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <nav id="sticky">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li>
+                        <a href="#why-choose-piwik">Why choose Piwik?</a>
+                    </li>
+                    <li>
+                        <a href="#what-can-i-use-piwik-for">What can I use Piwik for?</a>
+                    </li>
+                    <li>
+                        <a href="#profile-your-audience">Profile your audience</a>
+                    </li>
+                    <li>
+                        <a href="#websites-that-use-piwik">Websites that use Piwik</a>
+                    </li>
+                    <li>
+                        <a href="#discover-your-users-journey">Discover your users&#8217; journey</a>
+                    </li>
+                    <li>
+                        <a href="#measure-your-goals-and-increase-conversions">Measure your goals and increase conversions</a>
+                    </li>
+                    <li>
+                        <a href="#piwik-values">Piwik values</a>
+                    </li>
+                    <li>
+                        <a href="#mobile">Piwik Mobile App</a>
+                    </li>
+                    <li>
+                        <a href="#piwik-pro-solutions">Piwik PRO Solutions</a> 
+                    </li>
+                    <li>
+                        <a href="#any-questions">Any questions?</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h2 id="why-choose-piwik">Why choose Piwik?</h2>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-12">
+        <div class="table table-border-inside table-no-shadow features-table">
+            <div class="table-row">
+                <div class="table-cell">
+                    <div>
+                        <div><i class="icons-features-free-software"></i>
+                            <h3>Free software</h3>
+                            <p>Piwik is and always will be a free and open source software with transparent GPL license.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-cell">
+                    <div>
+                        <div><i class="icons-features-no-limit-storage"></i>
+                            <h3>No data storage limits</h3>
+                            <p>It&#8217;s totally up to you how much data you store and for how long.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-cell last">
+                    <div>
+                        <div><i class="icons-features-large-community"></i>
+                            <h3>Community support</h3>
+                            <p>Join our vibrant community and help contribute to developing a better and free analytics platform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-row last">
+                <div class="table-cell">
+                    <div>
+                        <div><i class="icons-features-use-on-the-go"></i>
+                            <h3>Use Piwik on the go</h3>
+                            <p>View data in your browser or on the go with our Android and iOS applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-cell">
+                    <div>
+                        <div><i class="icons-features-international-solution"></i>
+                            <h3>Worldwide accessibility</h3>
+                            <p>Piwik is available in 53 languages and supports all time zones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-cell last">
+                    <div>
+                        <div><i class="icons-features-fast-installation"></i>
+                            <h3>5 minute installation and 1 click updates</h3>
+                            <p>Get started within minutes, even if you are an inexperienced user.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h2 id="what-can-i-use-piwik-for">What can I use Piwik for?</h2>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-12">
+        <ul class="btn-group btn-group-justified tabs-navigations">
+            <li class="btn active"><a href="#web-analytics" data-toggle="tab">Web Analytics</a></li>
+            <li class="btn"><a href="#ecommerce-analytics" data-toggle="tab">Ecommerce Analytics</a></li>
+            <li class="btn"><a href="#server-log-analytics" data-toggle="tab">Server Log Analytics</a></li>
+            <li class="btn"><a href="#intranet-analytics" data-toggle="tab">Intranet Analytics</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="web-analytics">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12 text-center">
+                        <img class="rwd-img" alt="Web Analytics" src="/wp-content/themes/piwik/assets/img/illustration/web-analytics.png" />
+                    </div>
+                    <div class="col-sm-8 col-xs-12">
+                        <h4 class="media-heading">Web analytics</h4>
+                        Whether your site has a few visits per day or a few million, Piwik can help you gather and analyze important information about your users. Track Key Performance Indicators such as visits, goal conversion rates, downloads, keywords and many more. Expand Piwik functionality by adding new plugins from the Piwik Marketplace.
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="ecommerce-analytics">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12 text-center">
+                        <img class="rwd-img" alt="Ecommerce Analytics" src="/wp-content/themes/piwik/assets/img/illustration/ecommerce-analytics.png" />
+                    </div>
+                    <div class="col-sm-8 col-xs-12">
+                        <h4 class="media-heading">Ecommerce Analytics</h4>
+                        Integrate Piwik with your ecommerce software in order to analyze revenue, orders, conversion rates, average order values and detailed product statistics. See which products are the most popular and the highest conversion rates. With Piwik, you can view in real time the detailed Ecommerce log, showing all visits that have made a purchase on your website, including those visitors who have abandoned their shopping cart with products left in them. <a href="/docs/ecommerce-analytics/">See how to set up eCommerce tracking</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="server-log-analytics">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12 text-center">
+                        <img class="rwd-img" alt="Server Log Analytics" src="/wp-content/themes/piwik/assets/img/illustration/serverlog-analytics.png" />
+                    </div>
+                    <div class="col-sm-8 col-xs-12">
+                        <h4 class="media-heading">Server Log Analytics</h4>
+                        Use Piwik to make sense of your web server log data. All web servers generate access log files which contain all of the requests made to the server. You can import and analyse your web server logs using Piwik! In the same dashboard you will be able to analyze visit details, including IP address, URL, user agent, referrer URL, search keywords, campaign information and more. If you&#8217;re running a hosting company, you can even provide your customers with a modern and powerful analytics tool using Piwik. <a href="/docs/log-analytics-tool-how-to/">See how to set up Log Analytics</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="intranet-analytics">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12 text-center">
+                        <img class="rwd-img" alt="Intranet analytics" src="/wp-content/themes/piwik/assets/img/illustration/intranet-analytics.png" />
+                    </div>
+                    <div class="col-sm-8 col-xs-12">
+                        <h4 class="media-heading">Intranet Analytics</h4>
+                        Intranet websites hosted on an internal network generally have important security and privacy requirements, as is the case with governments, enterprise portals or universities intranets. They often require that the statistics software be hosted within the company&#8217;s or institution&#8217;s own infrastructure. Now there&#8217;s a better solution &#8211; Piwik is the ideal choice for intranet analytics. <a href="/intranet-analytics/">Read more about Intranet Analytics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h1>Features</h1>
+        Piwik prides itself on continually innovating and improving the analytics experience for users. Please read below for an introductory tour to some of the ever-expanding features Piwik offers. Otherwise, you can <a href="/features/">access the complete list of features in Piwik Analytics</a>.
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h2 id="profile-your-audience">Profile your audience</h2>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <p>Full insight on your users and their engagement on your site.</p>
+    </div>
+</div>
+<div class="features-custom-view article-1">
+    <div class="row">
+        <div class="col-lg-5 col-lg-offset-1 col-md-6 text-1">
+            <h3>Standard visitor metrics and annotations</h3>
+            <p>All the standard reports you would expect from a state of the art analytics package. Make notes on the charts to describe and remember all the key events of your site&#8217;s history. <a href="/docs/piwik-tour/">Read more</a></p>
+            <img class="screen" alt="" src="/wp-content/themes/piwik/assets/img/features/screen-1.png" />
+        </div>
+        <div class="col-lg-5 col-md-6 text-2 article-text">
+            <img class="screen" alt="" src="/wp-content/themes/piwik/assets/img/features/screen.png" />
+            <h4>Customizable dashboard</h4>
+            <p>Most important information you truly care about all in one place. <a href="/docs/piwik-tour/#creating-and-customizing-a-new-dashboard">Read more</a></p>
+            <img class="screen screen-6" alt="" src="/wp-content/themes/piwik/assets/img/features/screen-6.png" />
+        </div>
+    </div>
+</div>
+<div class="features-custom-view article-2">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="case-1 col-lg-3 article-text">
+                <h4>Real time data</h4>
+                <p>View details about your visitors in real time as they enter your website. <a href="/docs/real-time/">Read more</a></p>
+            </div>
+            <div class="case-2 col-lg-3 article-text">
+                <h4>History explorer</h4>
+                <p>View historical values of almost any metrics relevant to your website or app, and compare several dimensions at once. <a href="/docs/row-evolution/">Read more</a></p>
+            </div>
+            <div class="case-3 col-lg-3 article-text">
+                <h4>Geolocation</h4>
+                <p>Find out where your visitors come from, in particular their country, region and city. All your visitors are displayed on the live interactive map. <a href="/docs/geo-locate/">Read more</a></p>
+            </div>
+            <img class="screen screen-2" alt="" src="/wp-content/themes/piwik/assets/img/features/screen-2.png" />
+        </div>
+    </div>
+</div>
+
+<!-- Websites -->
+
+
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h2 id="discover-your-users-journey">Discover your users&#8217; journey</h2>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <p>Learn about your users&#8217; behavior &#8211; where they come from, what they are doing and where they are going.</p>
+    </div>
+</div>
+<div class="features-custom-view article-3">
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <img class="rwd-img" alt="" src="/wp-content/themes/piwik/assets/img/features/screen-3.png" />
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-6 col-lg-offset-3">
+            <p>Plus many more features to give you further insights.</p>
+        </div>
+    </div>
+    <div class="row article-text-medium">
+        <div class="col-lg-5 col-lg-offset-1 ">
+            <h4>Referrers analysis</h4>
+            <p>Analyze traffic by its source &#8211; be it websites, search engines and keywords, social networks or campaigns.</p>
+            <h4>Page overlay</h4>
+            <p>Observe the effectiveness of links within the context of the webpage.</p>
+            <img alt="" src="/wp-content/themes/piwik/assets/img/features/screen-4.png" />
+        </div>
+        <div class="col-lg-5">
+            <h4>Monitoring of downloaded files</h4>
+            <p>Piwik automatically tracks your file downloads (70+ popular filetypes supported).</p>
+            <h4>Outlinks</h4>
+            <p>See which links to external domains were clicked by your visitors most often.</p>
+            <h4>404 pages</h4>
+            <p>See which URLs are leading to 404 error page and repair broken links easier.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <blockquote>
+                The feature we use the most in Piwik is the Email and SMS Reports which automatically keeps our clients up to date on their Key Performance Indicators such as: Visits, Keywords and Goals Conversions Rates and Revenue.
+                <small><span>John Brett</span></small>
+            </blockquote>
+        </div>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h2 id="measure-your-goals-and-increase-conversions">Measure your goals and increase conversions</h2>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <p>Monitoring for your online campaigns and your sales.</p>
+    </div>
+</div>
+<div class="features-custom-view article-4">
+    <div class="row">
+        <img class="screen" alt="" src="/wp-content/themes/piwik//assets/img/features/screen-5.png" />
+    </div>
+    <div class="row article-text-medium">
+        <div class="col-lg-4 column-1">
+            <h4>Analytics for Ecommerce</h4>
+            <p>Track orders, cart updates, product views and many more on the specific tab dedicated to Ecommerce.</p>
+            <h4>Campaign tracking</h4>
+            <p>Analyse your marketing campaigns to see how effective they are and how much revenue they generate.</p>
+            <h4>Wide range of traffic sources supported</h4>
+            <p>You can track campaigns like Google AdWords, Facebook Ads, display ads, Tweets, affiliate links and links in newsletters to mention just a few.</p>
+        </div>
+        <div class="col-lg-5 col-lg-offset-1">
+            <h4>Goal conversion tracking</h4>
+            <p>You can set specific goals of what you want users to achieve on your website. Measure almost anything and check whether your business objectives are met.</p>
+            <h4>Scheduled email reports</h4>
+            <p>Keep your colleagues or customers up-to-date by sending them regular email reports with the information they need.</p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h3>Easy integration</h3>
+            <p>Magento, PrestaShop, osCommerce &#8211; these are just a few Ecommerce Platforms that Piwik can easily integrate with.</p>
+        </div>
+    </div>
+    <div class="row">
+        <section class="logos grayscale-off">
+            <div class="row">
+                <img class="logo" alt="" src="/wp-content/themes/piwik/assets/img/logos/oxid.png" />
+                <img class="logo" alt="" src="/wp-content/themes/piwik/assets/img/logos/magento.png" />
+                <img class="logo" alt="" src="/wp-content/themes/piwik/assets/img/logos/prestashop.png" />
+                <img class="logo" alt="" src="/wp-content/themes/piwik/assets/img/logos/xtcommerce.png" />
+            </div>
+        </section>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h2 id="piwik-values">Piwik values</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        <div class="box box-list text-center">
+            <header><i class="icons-features-customizable media-object-header"></i>
+                <h3>Customizable</h3>
+            </header>
+            <section>
+                <ul>
+                    <li><i class="ficon-checkmark"></i> Use plugins to extend the power of Piwik</li>
+                    <li><i class="ficon-checkmark"></i> Tailor the look &amp; feel (white labeling)</li>
+                    <li><i class="ficon-checkmark"></i> Embed any report on websites, apps or e-mails</li>
+                    <li><i class="ficon-checkmark"></i> Get full access to your data by flexible web API</li>
+                </ul>
+            </section>
+            <footer><a href="/customizable/">Read more</a></footer>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <div class="box box-list text-center">
+            <header><i class="icons-features-reliable media-object-header"></i>
+                <h3>Reliable</h3>
+            </header>
+            <section>
+                <ul>
+                    <li><i class="ficon-checkmark"></i> Established piece of software (6+ years)</li>
+                    <li><i class="ficon-checkmark"></i> Ready for high-traffic websites (1,000,000+ pageviews)</li>
+                    <li><i class="ficon-checkmark"></i> Actively supported by core developers and community</li>
+                    <li><i class="ficon-checkmark"></i> Premium support is available if you need it</li>
+                </ul>
+            </section>
+            <footer><a href="/reliability/">Read more</a></footer>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        <div class="box box-list text-center">
+            <header><i class="icons-features-secure media-object-header"></i>
+                <h3>Secure</h3>
+            </header>
+            <section>
+                <ul>
+                    <li><i class="ficon-checkmark"></i> Regular external security reviews</li>
+                    <li><i class="ficon-checkmark"></i> Bug Bounty Program to help identify security gaps</li>
+                    <li><i class="ficon-checkmark"></i> Regular automatic tests</li>
+                    <li><i class="ficon-checkmark"></i> Constantly updated software</li>
+                </ul>
+            </section>
+            <footer><a href="/security/">Read more</a></footer>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <div class="box box-list text-center">
+            <header><i class="icons-features-privacy media-object-header"></i>
+                <h3>Respecting privacy</h3>
+            </header>
+            <section>
+                <ul>
+                    <li><i class="ficon-checkmark"></i> No spying</li>
+                    <li><i class="ficon-checkmark"></i> No privacy violation</li>
+                    <li><i class="ficon-checkmark"></i> No data gathering for marketing purposes</li>
+                    <li><i class="ficon-checkmark"></i> You are in control of everything</li>
+                </ul>
+            </section>
+            <footer><a href="/privacy/">Read more</a></footer>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile -->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box box-lg box-background box-dark box-piwikpro box-piwikpro-lg text-center footer-outside">
+            <header>
+                <h3 id="piwik-pro-solutions">Piwik PRO Solutions</h3>
+            </header>
+            <section>
+                <p>Take your Piwik to the next level with Piwik PRO. Check what Piwik PRO can offer you and your business. Our client base includes corporations, SMEs and governments.</p>
+                <ul class="cases">
+                    <li class="col-lg-4">
+                        <i class="icons-piwik_hosting"></i>
+                        <h1><a style="color: white;" href="http://piwik.pro/cloud" target="new">Cloud</a></h1>
+                        <p>We host, maintain and support Piwik on cloud infrastructure.</p>
+                    </li>
+                    <li class="col-lg-4">
+                        <i class="icons-piwik_onpremises"></i>
+                        <h1><a style="color: white;" href="http://piwik.pro/enterprise" target="new">Enterprise</a></h1>
+                        <p>We deploy, maintain and support Piwik on your infrastructure.</p>
+                    </li>
+                    <li class="col-lg-4">
+                        <i class="icons-piwik_services"></i>
+                        <h1><a style="color: white;" href="http://piwik.pro/professional-services" target="new">Professional Services</a></h1>
+                        <p>We provide Piwik analytics training, consultancy and custom development services.</p>
+                    </li>
+                </ul>
+            </section>
+            <footer><a class="btn btn-primary btn-lg col-lg-6" href="http://piwik.pro" target="new">Visit Piwik PRO for more details</a>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<!-- Questions -->
+
+     </div>
+</article>
+     </div><!-- /.wrap -->
+
+   <div class="wrapper-body">
+<div class="row extra-foot">
+    <div class="container">
+        <div class="col-md-6 anyquest">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/piwik_help.jpg" class="any-q">
+            <h3>Any questions? </h3>
+            <p>Many answers and more information about Piwik You can find here:</p>
+            <ul class="inline">
+                <li><a href="/docs/">User Guides</a></li>
+                <li><a href="http://forum.piwik.org/">Forums</a></li>
+                <li><a href="/faq/">FAQs</a></li>
+	            <li><a href="http://piwik.pro?pk_source=Piwik.org&pk_medium=footer_link&pk_campaign=PO_Pro_Solutions" target="_blank">PRO Solutions</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/socials.png" class="socials">
+            <h3>We are social </h3>
+            <p>Follow us:</p>
+            <ul class="inline">
+                <li><a href="/newsletter/">Newsletter</a></li>
+                <li><a href="http://www.facebook.com/Piwik">Facebook</a></li>
+                <li><a href="http://twitter.com/piwik">Twitter</a></li>
+                <li><a href="http://www.linkedin.com/groups?gid=867857" target="_blank">Linkedin</a></li>
+                <li><a href="https://github.com/piwik/piwik">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="container footer-page footer-updated">
+    <div class="row">
+        <div class="col-lg-11 col-md-11 foot-cc">
+            <a href="http://piwik.org/thank-you-all/"><img src="http://piwik.org/wp-content/themes/piwik/assets/img/cc.png" class="clearcode"></a>
+            <span class="pworg">Piwik.org. &copy; 2015</span>
+            <ul id="menu-footer" class="nav"><li class="menu-piwik-cloud"><a href="http://piwik.org/hosting/">Piwik Cloud</a></li>
+<li class="menu-privacy"><a href="http://piwik.org/privacy/">Privacy</a></li>
+<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+<li class="menu-developers"><a target="_blank" href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org">Marketplace</a></li>
+<li class="menu-credits"><a href="http://piwik.org/thank-you-all/">Credits</a></li>
+</ul>            <span class="respect">Piwik respects your privacy and gives you full control over your data.</span>
+        </div>
+    </div>
+</footer>
+</div>
+   </div>
+  <!-- Piwik -->
+<!-- Load Piwik.js from demo2 for continuous testing -->
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/") + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker((("https:" == document.location.protocol) ? "https://demo.piwik.org/" : "http://demo.piwik.org/") + "piwik.php", 1);
+piwikTracker.setCookieDomain('*.piwik.org');
+
+if(document.domain != 'piwik.org') {
+  piwikTracker.setDocumentTitle(document.domain + "/" + document.title);
+}
+
+// Set the domain the visitor landed on, in the Custom Variable
+if(!piwikTracker.getCustomVariable(1)) { 
+  piwikTracker.setCustomVariable(1, "Domain landed", document.domain );
+}
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();  
+} catch( err ) {}
+</script><noscript><p><img src="http://demo.piwik.org/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+
+
+<!-- We're tracking data in demo2.piwik.org for purpose of testing Piwik. Signed: the Piwik core team -->
+<script type="text/javascript">
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/");
+    try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.setCookieDomain('*.piwik.org');
+        // Track Javascript Errors as Events
+        piwikTracker.enableJSErrorTracking();
+        
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+</script>
+  <script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/syntax_highlight.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/scripts.min.js?ver=160b62610afbe732febb44f9896f3afd'></script>
+
+  <div id="fb-root"></div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.476 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-10-28 00:02:09 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

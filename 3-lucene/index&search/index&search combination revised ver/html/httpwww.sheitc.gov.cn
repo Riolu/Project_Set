@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="GBK"/>
+    <meta content="text/html; charset=gb2312" http-equiv="Content-Type"/>
+    <meta http-equiv="refresh" content="300;url=/">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="keywords" content="首页"/>
+    <meta name="description" content="首页"/>
+    <title>上海市经济和信息化委员会</title>
+<link rel="stylesheet" href="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/css/reset.css" >
+<link rel="stylesheet" charset="gbk" href="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/css/layout.css" >
+<link rel="stylesheet" href="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/css/screen.css" >
+<link rel="stylesheet" href="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/css/style.css">
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/jqueryui/js/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/jqueryui/flick/jquery-ui-1.10.4.custom.min.css">
+    <script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/jqueryui/js/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/jqueryui/js/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/jqueryui/js/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/jqueryui/js/jquery.ui.menu.min.js"></script>
+    <script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/jqueryui/js/jquery.ui.autocomplete.min.js"></script>
+    <style>
+        .ui-autocomplete {max-height: 300px;overflow-y: auto;overflow-x: hidden;}
+        * html .ui-autocomplete {height: 300px;}
+    </style>
+</head>
+<body class="body_bg_3">
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/js/cookies.js"></script>
+<script>if(getCookie("gwideal_date_person")=="day"){document.body.className="body_bg_1";}else if(getCookie("gwideal_date_person")=="night"){document.body.className="body_bg_2";}else{if(getCookie("gwideal_date")=="day"){document.body.className="body_bg_1";}else if(getCookie("gwideal_date")=="night"){document.body.className="body_bg_2";}else{document.body.className="body_bg_1";}}</script>
+<!--header start-->
+<div class="header">
+    <ul class="nav" id="home_ul">
+        <li id="home_li1" class="sel"><a href="/" class="a_1"><i></i>HOME</a></li>
+        <li id="home_li2"><a href='#' class="a_2"><i></i>信息公开</a></li>
+        <li id="home_li3"><a href='#' class="a_3"><i></i>新闻中心</a></li>
+        <li id="home_li4"><a href='#' class="a_4"><i></i>公共服务</a></li>
+        <li id="home_li5"><a href='#' class="a_5"><i></i>互动平台</a></li>
+    </ul>
+    <div class="logo"><a href="/" title="上海市经济和信息化委员会"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/logo.png" alt="上海市经济和信息化委员会"/></a></div>
+</div>
+<!--header end-->
+<!--search start-->
+<div class="search">
+    <form action="/cms/ArtiSearch.do" id="searchForm" method="post" onsubmit="return dosearch();">
+        <div class="search_hot_1">【上海城市精神：海纳百川 追求卓越 开明睿智 大气谦和】</div>
+        <div class="search_t">
+            <span>;）侬好！</span>
+            <p>
+                <input name="" type="button" class="btn_1" title="点击搜索" onclick="searchSite('/cms/ArtiSearch.do')">
+                <input name="searchKey" id="searchKey" type="text" class="input_1" value="搜索经信委在线数据信息库"
+                       onFocus="if (value =='搜索经信委在线数据信息库'){value =''}" onBlur="if (value ==''){value='搜索经信委在线数据信息库'}">
+            </p>
+            <i><a style="cursor: pointer;" onclick="searchSite('/cms/AdvancedSearch.do');">全文检索</a></i>
+        </div>
+    </form>
+    <div class="search_hot">
+        热门搜索: <a href="javascript:hotSearch('四新');">四新</a> | <a href="javascript:hotSearch('新能源');">新能源</a> | <a href="javascript:hotSearch('智慧城市');">智慧城市</a> | <a href="javascript:hotSearch('创意产业');">创意产业</a> | <a href="javascript:hotSearch('移动通信');">移动通信</a> | <a href="javascript:hotSearch('十三五');">十三五</a>
+    </div>
+</div>
+        <script>
+            function searchSite(url) {
+                if($("#searchKey").val()=="搜索经信委在线数据信息库") {
+                    alert("请输入关键字!");
+                    return;
+                }
+                /*var wbEncode= getCookie("targetEncoding" + cookieDomain.replace(/\./g,""));
+                if ( wbEncode == 1) {
+                    $("#searchKey").val(translateText($("#searchKey").val()));
+                }*/
+                $("#searchForm").attr("action",url);
+                $("#searchForm").submit();
+            }
+            function dosearch() {
+                if($("#searchKey").val()=="搜索经信委在线数据信息库" || $("#searchKey").val()=="") {
+                    alert("请输入关键字!");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+<!--search end-->
+<!--main start-->
+<div class="home_contentslider">
+    <a class="home_leftBtn" id="left" style="display:none" title="上一区块"></a>
+
+    <div class="home_scrolllist" id="scrolllist">
+        <div class="home_scrolllist_in" id="scrolllist_in">
+            <!--home start-->
+            <div class="home home_1" id="home1">
+                <!--top3 start-->
+                <div class="clearfix h173">
+
+                    <div class="pic_bg">
+                        <div class="pic a1" id='pic'>
+                            <!-- 图片新闻 -->
+                            <ul>
+                                <li><a href="http://www.sheitc.gov.cn:80/gydt/668276.htm"  title="第五届上海市信息安全活动周日前在徐家汇启动"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/upload/article/image/2015_4/10_26/ob3tig7cblfx.jpg" alt="第五届上海市信息安全活动周日前在徐家汇启动"/>
+                                    <div></div><b>第五届上海市信息安全活动周日前在徐家汇启动</b></a>
+                                </li>
+                                <li><a href="http://www.sheitc.gov.cn:80/gydt/668229.htm"  title="首届两化融合创新高峰论坛暨2015年上海“互联网+制造业”大会日前在沪召开"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/upload/article/image/2015_4/10_26/7o1gig7b2v7z.jpg" alt="首届两化融合创新高峰论坛暨2015年上海“互 . . ."/>
+                                    <div></div><b>首届两化融合创新高峰论坛暨2015年上海“互 . . .</b></a>
+                                </li>
+                                <li><a href="http://www.sheitc.gov.cn:80/gydt/668268.htm"  title="市日前成立智慧医疗产业创新联盟并举行精准医疗高峰论坛"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/upload/article/image/2015_4/10_22/ao3xig206eaa.jpg" alt="市日前成立智慧医疗产业创新联盟并举行精准医疗 . . ."/>
+                                    <div></div><b>市日前成立智慧医疗产业创新联盟并举行精准医疗 . . .</b></a>
+                                </li>
+                                <li><a href="http://www.sheitc.gov.cn:80/zxxx/668267.htm"  title="完善新能源汽车产业链 上海先进昨与比亚迪签建设战略产业联盟合作协议"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/upload/article/image/2015_4/10_22/2ih7ig1w97dv.jpg" alt="完善新能源汽车产业链 上海先进昨与比亚迪签建 . . ."/>
+                                    <div></div><b>完善新能源汽车产业链 上海先进昨与比亚迪签建 . . .</b></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="w32 m_l1">
+                        <div class="hotnew_bg"></div>
+                        <div class="hotnew_txt">
+                            <h1 class="home_tit"><span><a href="/ttxw/index.htm" title="头条新闻更多">
+                                <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="头条新闻更多"/></a></span>头条新闻 </h1>
+                            <dl>
+                                <h2><a href="http://www.sheitc.gov.cn:80/ttxw/668235.htm"  title="第17届中国国际工业博览会记者采访报名通知">第17届中国国际工业博览会记者 . . .</a></h2>
+                                <div>各新闻单位：  第十七届中国国际工业博览会将于2015年11月3日至7日在国家会展中心（上海）（青浦区崧泽大道333号，地铁2号线徐泾东站）. . .</div>
+                            </dl>
+                        </div>
+                    </div>
+
+
+                    <div class="w32">
+                        <div class="home_wztj_bg"></div>
+                        <div class="home_wztj_txt">
+                            <h1 class="home_tit"><span><a href="###" title="网站统计更多" id="wztj_tips"><img
+                                    src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="网站统计更多"/></a></span>网站统计</h1>
+
+                            <div class="txt_1 a2">
+                                <ul>
+											        	<li><span>3,345次 【上周】</span><p>站内搜索引擎使用次数</p></li>
+											        	<li><span>4条 【上周】</span><p>新增政府信息公开数</p></li>
+											        	<li><span>15次 【上周】</span><p>网上办事受理次数</p></li>
+											        	<li><span>1,052,389次 【上周】</span><p>网站浏览量</p></li>
+											        	<li><span>100,020次 【上周】</span><p>移动门户浏览量</p></li>
+											        	<li><span>215ms 【上周】</span><p>网站平均响应时间</p></li>
+											        	<li><span>公共服务 【上周】</span><p>最受关注栏目</p></li>
+											        	<li><span>150,341次 【上周】</span><p>日均访问网站浏览量</p></li>
+											        	<li><span>14,080人 【上周】</span><p>日均访问网站人次</p></li>
+											        	<li><span>0处 【上周】</span><p>网站错别字纠错</p></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--top3 end-->
+
+                <!--bot3 start-->
+                <div class="cl h173 ma_b_30">
+
+                    <div class="home_ztlm">
+                        <div class="home_ztlm_bg"></div>
+                        <div class="home_ztlm_txt">
+                            <h1 class="home_tit"><span><a href="/ztlm/index.htm" title="专题专栏更多">
+                                <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="专题专栏更多"/></a></span>专题专栏</h1>
+                            <div class="txt_2 a3" id="txt">
+                                <ul>
+                                <li>
+                                        <h1><a href="http://soda.datashanghai.gov.cn"  title="2015上海开放数据创新应用大赛">2015上海开放数据创新应用大赛</a></h1>
+                                        <div>由上海市经济和信息化委员会、上海市交通委员会主办，中国工业设计研究院承办的“游族杯”上海开放数据创新应用大赛（SODA），以城市交通为主题，. . .</div>
+                                </li>
+                                <li>
+                                        <h1><a href="/sxzl/index.htm"  title="四新专栏">四新专栏</a></h1>
+                                        <div>“四新”即为新产业、新业态、新技术、新模式；主要发布关于四新的产业动态、业界导向等信息。</div>
+                                </li>
+                                <li>
+                                        <h1><a href="/2015ppyq4/index.htm" target="_blank" title="2015年第四次上海品牌园区推选活动">2015年第四次上海品牌园区推选活动</a></h1>
+                                        <div>上海国家级和市级开发区、产业园区、产业基地、产业区块、特色产业园区（生产性服务业功能区、创意产业园区、信息产业园区、物流园区）、现代农业园区. . .</div>
+                                </li>
+                                <li>
+                                        <h1><a href="http://enjoy.eastday.com/2014smartcity/index.html" target="_blank" title="2014年智慧城市体验周">2014年智慧城市体验周</a></h1>
+                                        <div>由市经济信息化委、市智慧城市建设领导小组办公室主办的第三届上海市智慧城市体验周暨第四届信息安全活动周于2014年10月27日-11月6日举行. . .</div>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="w24 yytjpt">
+                        <div class="homt_cypt_bg"></div>
+                        <div class="homt_cypt_txt_1">
+
+                            <h1 class="home_tit">
+                            	<span><a href="/yypt/index.htm" title="应用平台推荐更多"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="应用平台推荐更多"/></a></span>应用平台推荐
+                            </h1>
+
+                            <h2>【行业服务】—</h2>
+
+                            <h3><a href="http://cytrz.sheitc.gov.cn/" target="_blank" title="上海市产业投融资综合服务平台">上海市产业投融资综合服务平台</a></h3>
+                        </div>
+                    </div>
+
+                    <div class="w24">
+                        <div class="homt_cypt_bg"></div>
+                        <div class="homt_cypt_txt_2">
+                            <h1 class="home_tit"><span><a href="/shgyzyjjzb/index.htm" title="工业经济数据统计更多">
+                                <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="工业经济数据统计更多"/></a></span>工业经济数据统计</h1>
+                            <ul>
+                                <li><a id="cysj_tips_1" href="###">【重点行业总产值】</a></li>
+                                <li><a id="cysj_tips_2" href="###">【工业走势图】</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!--bot3 end-->
+                <!--home nav start-->
+                <div class="home_nav">
+                    <div class="home_nav_bg"></div>
+                    <div class="home_nav_in">
+                        <ul>
+                            <li><a href="/jggk/index.htm" title="机构职能"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/home_nav_1.png" alt="机构职能"/>机构职能</a>
+                            </li>
+                            <li><a href="/jgld/index.htm" title="委内领导"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/home_nav_2.png" alt="委内领导"/>委内领导</a>
+                            </li>
+                            <li>
+                                <a href="###" class="homenav" title="官方微信"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/home_nav_4.png" alt="官方微信" />官方微信</a>
+                                <div class="homehover homeweinxin">
+                                    <div class="homeweinxin_1">
+                                        <p>微信号：sheitc</p>
+                                        <span><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/weixin.jpg" alt="微信号" /></span>
+                                    </div>
+                                    <i></i>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="###" class="homenav" title="官方微博"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/home_nav_5.png" alt="官方微博" />官方微博</a>
+                                <div class="homehover homeweinbo">
+                                    <div class="homeweinbo_1">
+                                        <iframe width="291" height="335" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=291&height=335&fansRow=2&ptype=1&speed=300&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=2665496671&verifier=ff6a8f14&colors=d6f3f7,ffffff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+                                    </div>
+                                    <i></i>
+                                </div>
+                            </li>
+                            </li>
+                            <li><a href="###" class="homenav" title="移动门户"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/home_nav_6.png" alt="移动门户" />移动门户</a>
+                                <div class="homehover homeweinxin">
+                                    <div class="homeweinxin_1">
+                                        <p>移动门户</p>
+                                        <span><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/ewm.jpg" alt="移动门户" /></span>
+                                    </div>
+                                    <i></i>
+                                </div>
+                            </li>
+                            <li><a href="/cms/feedrss.do" target="_blank" title="RSS">
+                                <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/home_nav_7.png" alt="RSS"/>RSS
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--home nav end-->
+            </div>
+            <!--home end-->
+
+<!--INFORMATION start-->
+<div class="home_cont home_1" id="home2">
+    <!--title start-->
+    <dl class="title_tit">
+        <dt><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/title_icon_1.png" alt="" /></dt>
+        <dd>
+            <h1>信息公开</h1>
+            <h2>GOVERMENT INFORMATION</h2>
+        </dd>
+    </dl>
+    <!--title end-->
+    <!--information top 3 start-->
+    <div class="h173 cl">
+
+        <div class="w32">
+            <div class="xxgk_bg_1"></div>
+            <div class="homenews_xxgk">
+                <h1 class="home_tit"><span><a href="/zxgkxx/index.htm">
+                    <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>最新信息公开</h1>
+                <dl>
+                    <dt><a href="http://www.sheitc.gov.cn:80/cyfz/668258.htm"  title="上海市经济信息化委关于实施2015年度电子商务“双推”工程的通知">上海市经济信息化委关于实施2015年 . . .</a></dt>
+                    <dd>各有关单位： 为落实上海科技创新中心建设要求，大力发展“四新”经济、服务型制造，进一步激发产业互联网应用领域的创新活力，营造“互联网+”与实. . .</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="w32 m_l1">
+            <div class="xxgk_bg_1"></div>
+            <div class="homenews_gk">
+                <h1 class="home_tit"><span><a href="/gg/index.htm">
+                    <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>公示公告</h1>
+                <dl>
+                    <dt><a href="http://www.sheitc.gov.cn:80/gg/668293.htm"  title="2015年上海市产业转型升级发展专项资金（品牌经济发展）拟支持项目公示">2015年上海市产业转型升级发展专项 . . .</a></dt>
+                    <dd>为加强本市自主品牌建设和发展，进一步推动企业“创新驱动、转型发展”，提高产业核心竞争力，根据《上海市产业转型升级发展专项资金管理办法》（沪经. . .</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="w32">
+
+            <div class="w49 mr_1" onClick="window.location.href='/zfxxgkgd/index.htm'">
+                <div class="xxgk_bg"></div>
+                <div class="xxgk_txt">
+                    <h1 class="home_tit_1">政府信息公开规定</h1>
+                </div>
+            </div>
+
+            <div class="w49" onClick="window.location.href='zfxxgkzn/index.htm'">
+                <div class="xxgk_bg"></div>
+                <div class="xxgk_txt_1">
+                    <h1 class="home_tit_1">政府信息公开指南</h1>
+                </div>
+            </div>
+
+            <div class="w49 mr_1" onClick="window.location.href='/zfxxgknb/index.htm'">
+                <div class="xxgk_bg"></div>
+                <div class="xxgk_txt_8">
+                    <h1 class="home_tit_1">政府信息公开年报</h1>
+                </div>
+            </div>
+
+            <div class="w49" id="xxgkgzjd_tips">
+                <div class="xxgk_bg"></div>
+                <div class="xxgk_txt_2">
+                    <h1 class="home_tit_1">信息公开受理/公众监督</h1>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--information top 3 end-->
+
+    <!--information bot 3 start-->
+    <div class="h173 cl">
+
+        <div class="w32">
+            <div class="xxgk_bg_2"></div>
+            <div class="home_ysq">
+                <h1 class="home_tit"><span><a href="/ysqgk/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>依申请公开</h1>
+                <div id="infoapplycount_div">建站以来共有【11463】次<br/>请求公开信息</div>
+            </div>
+        </div>
+
+        <div class="m_l1 zfxxgk">
+            <div class=" h166">
+                <div class="w49 mr_1" onClick="window.location.href='/jggk/index.htm'">
+                    <div class="xxgk_bg_3"></div>
+                    <div class="xxgk_txt_3">
+                        <h1 class="home_tit">机构职能</h1>
+                    </div>
+                </div>
+
+                <div class="w49" onClick="window.location.href='/zcfg/index.htm'">
+                    <div class="xxgk_bg_3"></div>
+                    <div class="xxgk_txt_4">
+                        <h1 class="home_tit">政策法规</h1>
+                    </div>
+                </div>
+
+                <div class="w49 mr_1" onClick="window.location.href='/gzjh/index.htm'">
+                    <div class="xxgk_bg_3"></div>
+                    <div class="xxgk_txt_5">
+                        <h1 class="home_tit">规划计划</h1>
+                    </div>
+                </div>
+
+                <div class="w49" onClick="window.location.href='/jjyx/index.htm'">
+                    <div class="xxgk_bg_3"></div>
+                    <div class="xxgk_txt_6">
+                        <h1 class="home_tit">业务类</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="zfxxgk_tit">
+                <div class="zfxxgk_tit_bg"></div>
+                <div class="zfxxgk_txt"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/zfxxgk.png" alt="政府信息公开目录" /></div>
+            </div>
+
+        </div>
+
+        <div class="w32">
+
+            <div class="w49 mr_1" onClick="window.location.href='/bmczys/index.htm'">
+                <div class="xxgk_bg_3"></div>
+                <div class="xxgk_txt_7">
+                    <h1 class="home_tit">部门财政预算</h1>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--information bot 3 end-->
+
+</div>
+<!--INFORMATION end--><!--news center start-->
+<div class="home_cont home_1" id="home3">
+    <!--title start-->
+    <dl class="title_tit">
+        <dt><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/title_icon_2.png" alt="" /></dt>
+        <dd>
+            <h1>新闻中心</h1>
+            <h2>INFOERMATIN CENTER</h2>
+        </dd>
+    </dl>
+    <!--title end-->
+
+    <!--news center top 3 start-->
+    <div class="h173 cl">
+
+        <div class="w32">
+            <div class="news_bg_1"></div>
+            <div class="newstop_1">
+                <h1 class="home_tit"><span><a href="/xwfb/index.htm">
+                    <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>新闻发布</h1>
+                <dl class="newstop_txt">
+                    <dt><a href="http://www.sheitc.gov.cn:80/zxxx/668267.htm"  title="完善新能源汽车产业链 上海先进昨与比亚迪签建设战略产业联盟合作协议">完善新能源汽车产业链 上海先进昨 . . .</a></dt>
+                    <dd>　10月21日上午, 上海先进半导体制造股份有限公司与深圳比亚迪微电子有限公司在上海锦江小礼堂举行了“建设战略产业联盟合作协议”签约仪式。上. . .</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="w32 m_l1">
+            <div class="news_bg_1"></div>
+            <div class="newstop_2">
+                <h1 class="home_tit"><span><a href="/gydt/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>产业动态</h1>
+                <dl class="newstop_txt">
+                    <dt><a href="http://www.sheitc.gov.cn:80/gydt/668301.htm"  title="2015年度上海物联网大会暨中国制造2025高峰论坛">2015年度上海物联网大会暨中国 . . .</a></dt>
+                    <dd>在上海市经济和信息化委员会、上海市国有资产监督管理委员会的指导和支持下，由上海市物联网行业协会等发起举办“2015年度上海物联网大会暨中国制. . .</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="w32">
+            <div class="news_bg_1"></div>
+            <div class="newstop_3">
+                <h1 class="home_tit"><span><a href="/jjyw/index.htm">
+                    <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>经济要闻</h1>
+                <dl class="newstop_txt">
+                    <dt><a href="http://www.sheitc.gov.cn:80/jjyw/668297.htm"  title="我国纺织行业面临的国内外挑战愈发严峻">我国纺织行业面临的国内外挑战愈发 . . .</a></dt>
+                    <dd>　　当前，我国经济告别高速增长，进入结构转型、创新驱动的新常态。在新旧动能转换阶段，包括纺织业在内的实体制造业面临较大困难和下行压力。在国内. . .</dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+    <!--news center top 3 end-->
+    <!--news center center 3 start-->
+    <div class="h173 cl">
+
+        <div class="w32">
+            <div class="news_bg_2"></div>
+            <div class="news_video">
+                <h1 class="home_tit"><span><a href="/spxw/index.htm">
+                    <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>视频新闻</h1>
+                <div><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/video_img.jpg" alt="" /></div>
+            </div>
+        </div>
+
+        <div class="w32 m_l1">
+            <div class="news_bg_2"></div>
+            <div class="newsbot_1">
+                <h1 class="home_tit"><span><a href="/yjbg/index.htm">
+                    <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>研究报告</h1>
+                <dl class="newstop_txt">
+                    <dt><a href="http://www.sheitc.gov.cn:80/yjbg/668259.htm"  title="市统计局局长解析“上海今年前三季度GDP同比增6.8%”">市统计局局长解析“上海今年前三季度G . . .</a></dt>
+                    <dd>　　按IMF新规要求，中国GDP亮出季报数据，2015年三季度是第一次。而上海也紧随全国之后于昨天公布数据：今年前三季度GDP同比增长6.8. . .</dd>
+                </dl>
+            </div>
+        </div>
+        <!--新闻发言人 start-->
+        <div class="w32">
+            <div class="news_bg_3"></div>
+            <div class="newsbot_2 leader">
+                <div class="xwfyr leaderin">
+                    <div class="xwfyr_1">
+                        <h1 class="home_tit">新闻发言人</h1>
+                        <dl class="newstop_txt">
+                            <dt>戎之勤 【Rong Zhi Qin】<br/>秘书长</dt>
+                            <dd><Br/>新闻联络电话：23112794</dd>
+                        </dl>
+                    </div>
+
+                    <div class="xwfyr_2 leader_hover">
+                        <ul>
+                            <li>发言人助理<br/>林主恩：办公室副主任</li>
+                            <li>联络员<br/>杨勤伟：办公室</li>
+                        </ul>
+                        <p><a href="http://www.shio.gov.cn/shxwb/xwfb/node170/index.html" target="_blank">[各委办局新闻发言人]</a>
+                            &nbsp;&nbsp;&nbsp;<a href="mailto:yangqw@sheitc.gov.cn" target="_blank">[联系我们]</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--新闻发言人 end-->
+    </div>
+    <!--news center center 3 end-->
+    <!--news bot start-->
+    <div class=" h115">
+        <div class="w32">
+            <div class="news_bg_4"></div>
+            <div class="newsbot_3">
+                <h1 class="home_tit"><span>
+                    <a href="/shgyxx/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>上海工业信息</h1>
+                <p><a href="http://www.sheitc.gov.cn:80/shgyxx/668017.htm"  title="上海工业信息 2015年第69期">上海工业信息 2015年第69期</a></p>
+            </div>
+        </div>
+                        <div class="w32  m_l1">
+                        
+                       	  <div class="w49_2  mr_1">
+                           	<div class="news_bg_4"></div>
+                              <div class="newsbot_4" onClick="window.location.href='/qxjjdt/index.htm'">
+                                  <h1 class="home_tit">区县经济</h1>  
+                              </div>
+                            </div>
+
+                            <div class="w49_2 ">
+                                <div class="news_bg_5"></div>
+                                <div class="newsbot_5" onClick="window.location.href='/sxzl/index.htm'">
+                                    <h1 class="home_tit">四新专栏</h1>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+    </div>
+    <!--news bot end-->
+  
+</div>
+<!--news center end--><!--public service start-->
+<div class="home_cont home_1"  id="home4">
+    <!--title start-->
+    <dl class="title_tit">
+        <dt><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/title_icon_3.png" alt="" /></dt>
+        <dd>
+            <h1>公共服务</h1>
+            <h2>PUBLIC SERVICE</h2>
+        </dd>
+    </dl>
+    <!--title end-->
+    <!--service top start-->
+    <div class="h173">
+
+        <div class="w32">
+            <div class="service_bg_1"></div>
+            <div class="service_txt_1">
+                <h1 class="home_tit"><span><a href="/wsbs/deptWeb_getAllowList.do?bean.type=2">
+                    <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>行政审批服务</h1>
+                <ul>
+                    <li id="shz_li">审核中的事项【129】项</li>
+                    <li id="slz_li">正在受理中的事项【417】项</li>
+                    <li id="ybj_li">已办结事项【9216】</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="w32 m_l1">
+            <div class="service_bg_1"></div>
+            <div class="ztsearch">
+                <h1 class="home_tit">行政审批服务-状态查询</h1>
+                <ul>
+                    <li>
+                        <input id="wsbs_code1" type="text" value="请输入受理号" onFocus="if (value =='请输入受理号'){value =''}"
+                               onBlur="if (value ==''){value='请输入受理号'}">
+                    </li>
+                    <li>
+                        <input id="wsbs_mobile1" type="text" value="请输入手机号码" onFocus="if (value =='请输入手机号码'){value =''}"
+                               onBlur="if (value ==''){value='请输入手机号码'}">
+                    </li>
+                    <p>
+                        <input id="wsbs_yzm1" type="text" class="ipnut" value="验证码" onFocus="if (value =='验证码'){value =''}"
+                              onBlur="if (value ==''){value='验证码'}">
+                        <img src="/ValidateCode.svl" onclick='this.src="/ValidateCode.svl?"+Math.random();'
+                             alt="若看不清，请点击图片刷新。" id="pic_yzm1"/>
+                        <input onclick="queryWsbs(1);" type="button"  value="查询" class="btn">
+                    </p>
+                </ul>
+            </div>
+        </div>
+
+        <div class="w32">
+            <div class="w49 mr_1" onclick="window.location='/wsbs/deptWeb_getAllowList.do?bean.type=10&bean.menu=10'">
+                <div class="service_bg_2"></div>
+                <div class="service_txt_2">
+                    <h1 class="home_tit">其他事项</h1>
+                </div>
+            </div>
+
+            <div class="w49" onClick="window.location.href='/wsbs/deptWeb_toZxzxLink.do?bean.menu=8'">
+                <div class="service_bg_2"></div>
+                <div class="service_txt_3">
+                    <h1 class="home_tit">在线咨询</h1>
+                </div>
+            </div>
+
+            <div class="w49 mr_1" onClick="window.location.href='/wsbs/deptWeb_getResultPublishList.do?bean.menu=7'">
+                <div class="service_bg_2"></div>
+                <div class="service_txt_4">
+                    <h1 class="home_tit">结果公布</h1>
+                </div>
+            </div>
+
+            <div class="w49" onClick="window.location.href='/wsbs/deptWeb_toZxtsLink.do?bean.menu=9'">
+                <div class="service_bg_2"></div>
+                <div class="service_txt_5">
+                    <h1 class="home_tit">在线投诉</h1>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--service top end-->
+    <!--service bot start-->
+    <div class="h173">
+
+        <div class="w32">
+            <div class="service_bg_3"></div>
+            <div class="service_txt_6">
+                <h1 class="home_tit"><span><a href="/zxzjtzgg/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a>
+                </span>专项资金服务</h1>
+                <h2>【通知公告】</h2>
+                <dl class="newstop_txt">
+                    <dt><a href="http://www.sheitc.gov.cn:80/zxzjtzgg/668025.htm"  title="上海市经济信息化委、市财政局、市国税局、市地税局、上海海关关于印发《第二十一批上海市认定企业技术中心名单》的通知">上海市经济信息化委、市财政局、市国税 . . .</a></dt>
+                    <dd>各有关单位： 为了推进本市企业技术中心建设，根据《上海市企业技术中心管理办法》（沪经信技〔2015〕214号）的规定，经. . .</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="w32 m_l1">
+            <div class="service_bg_3"></div>
+            <div class="service_txt_7">
+                <h1 class="home_tit"><span><a href="/hyfw/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>行业服务</h1>
+                <div class="service_text_t">共有<i id="index_hyfw_count">【12】</i>个行业服务平台</div>
+                <div class="service_text a5">
+                    <ul>
+                        <li>
+                            <span><a href="http://cytrz.sheitc.gov.cn/" target="_blank" title="上海市产业投融资综合服务平台">【上海市产业投融资综合服务平台】</a></span>
+                        </li>
+                        <li>
+                            <span><a href="http://114.141.186.196:8088/default/" target="_blank" title="上海市软件和信息服务业统计系统">【上海市软件和信息服务业统计系统】</a></span>
+                        </li>
+                        <li>
+                            <span><a href="/zxzjtzgg/index.htm"  title="专项资金项目管理与服务平台">【专项资金项目管理与服务平台】</a></span>
+                        </li>
+                        <li>
+                            <span><a href="/shsgjjkfq/index.htm"  title="上海市开发区信息管理服务平台">【上海市开发区信息管理服务平台】</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="w32">
+            <div class="service_bg_4"></div>
+            <div class="service_txt_8">
+                <h1 class="home_tit"><span><a href="/bmcx/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>便民查询</h1>
+                                <div class="service_text_t">共有<i id="index_bmcx_count">【7】</i>项便民查询</div>
+                                <div class="service_text a6">
+                                    <ul>
+                                        <li><span>
+                                     <a href="/jsjbdyb/index.htm"  title="计算机病毒查询">【计算机病毒查询】</a>
+                                        </span></li>
+                                        <li><span>
+                                     <a href="http://www.shcredit.gov.cn/" target="_blank" title="个人信用服务平台">【个人信用服务平台】</a>
+                                        </span></li>
+                                        <li><span>
+                                     <a href="http://edu.sheitc.gov.cn/" target="_blank" title="工业和信息化继续教育证书查询">【工业和信息化继续教育证书查询】</a>
+                                        </span></li>
+                                        <li><span>
+                                     <a href="http://www.shbicycle.com/plist.asp" target="_blank" title="电动自行车产品目录查询">【电动自行车产品目录查询】</a>
+                                        </span></li>
+                                    </ul>
+                                </div> 
+            </div>
+        </div>
+    </div>
+    <!--service bot end-->
+</div>
+<!--public service end--><!--互动平台 start-->
+<div class="home_cont home_1" id="home5">
+    <!--title start-->
+    <dl class="title_tit">
+        <dt><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/title_icon_4.png" alt="" /></dt>
+        <dd>
+            <h1>互动平台</h1>
+            <h2>INTERACTION PLATFORM</h2>
+        </dd>
+    </dl>
+    <!--title end-->
+    <!--互动平台 top start-->
+    <div class="h173">
+
+        <div class="w32">
+            <div class="hdpt_bg_1"></div>
+            <div class="hdpt_txt_1">
+                <h1 class="home_tit"><span><a href="/zrxxtb/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>主任信箱</h1>
+                <h2>【来信选登】</h2>
+                <dl class="newstop_txt">
+                    <dt><a href="http://www.sheitc.gov.cn:80/lxxd/667786.htm"  title="怎么申请软件企业认定">怎么申请软件企业认定</a></dt>
+                    <dd>你好！我公司刚成立，主要有软件开发和软件的销售，现在软件开发有即征即退，需要有软. . .</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="w32 m_l1">
+            <div class="hdpt_bg_2"></div>
+            <div class="hdpt_txt_4">
+                <h1 class="home_tit"><span><a href="/zxft/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>在线访谈</h1>
+                <div class="hdpt_pic a4">
+                    <ul>
+                        <li><a href="http://leaders.people.com.cn/GB/124571/392850/index.html" target="_blank"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/upload/article/image/2015_2/4_21/g6qfi8qw8r4c.jpg" alt="上海市经济和信息化委员会主任李耀新做客人民网  加快上海“四新”经济发展  打造具有全球影响力科创中心" /></a></li>
+                        <li><a href="http://chat.sh.gov.cn/Chatting/html/261/index.html" target="_blank"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/upload/article/image/2014_4/12_9/9vsli3gy2s2d.jpg" alt="刘健：智慧城市，走进美好生活" /></a></li>
+                        <li><a href="http://sh.eastday.com/gdbb/shxytx/index.html" target="_blank"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/upload/article/image/2014_4/12_5/ak1ii3axihnq.jpg" alt="周波：社会信用体系建设情况报告专题询问" /></a></li>
+                        <li><a href="http://www.shjxdw.cn/xyzgm/syp/" target="_blank"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/upload/article/image/2014_4/12_5/a0n3i3axnphw.jpg" alt="相约“中国梦”网络访谈活动" /></a></li>
+                     </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="w32">
+
+            <div class="w49_1 mr_2" onClick="window.location.href='/wsbs/deptWeb_toZxzxLink.do?bean.menu=8'">
+                <div class="hdpt_bg_2"></div>
+                <div class="hdpt_txt_2">
+                    <h1 class="home_tit">网上咨询</h1>
+                    <div><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/pic_bg_30.png" alt="网上咨询" /></div>
+                </div>
+            </div>
+
+            <div class="w49_1"  onclick="window.location.href='/wsbs/deptWeb_toZxtsLink.do?bean.menu=9'">
+                <div class="hdpt_bg_2"></div>
+                <div class="hdpt_txt_2">
+                    <h1 class="home_tit">网上投诉</h1>
+                    <div><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/pic_bg_31.png" alt="网上投诉" /></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--互动平台 top end-->
+    <!--互动平台 bot start-->
+    <div class="h173">
+        <div class="w32">
+            <div class="hdpt_bg_2"></div>
+            <div class="hdpt_txt_3">
+                <h1 class="home_tit"><span><a href="/wsdc/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/more.png" alt="" /></a></span>网上调查</h1>
+                <div class="hdpt_txt_3_t clearfix">
+                    2015年6月15日至9月23日电力高峰期间实施夏季有序用电预案，工业企业采取错避峰、轮休、让电措施，优先确保居民用电，您对政府的这项举措持何态度？ 
+                </div>
+                <div class="hdpt_txt_3_btn">
+                    <input onclick="window.location='/cms/toVoteTopic.jspx?topicId=63';" type="button" value="投票">
+                </div>
+            </div>
+        </div>
+
+        <div class="w32 m_l1">
+            <div class="hdpt_bg_3"></div>
+            <div class="ztsearch_1">
+                <h1 class="home_tit">咨询/投诉查询</h1>
+                <ul>
+                    <li><input id="wsbs_code2" type="text" value="请输入受理号"
+                               onFocus="if (value =='请输入受理号'){value =''}" onBlur="if (value ==''){value='请输入受理号'}"></li>
+                    <li><input id="wsbs_mobile2" type="text" value="请输入手机号码"
+                               onFocus="if (value =='请输入手机号码'){value =''}" onBlur="if (value ==''){value='请输入手机号码'}"></li>
+                    <p><input id="wsbs_yzm2" type="text" class="ipnut" value="验证码"
+                              onFocus="if (value =='验证码'){value =''}" onBlur="if (value ==''){value='验证码'}">
+                        <img src="/ValidateCode.svl" onclick='this.src="/ValidateCode.svl?"+Math.random();'
+                             alt="若看不清，请点击图片刷新。" id="pic_yzm2"/>
+                        <input name="" type="button"  value="查询" class="btn" onclick="queryWsbs(2)">
+                    </p>
+                </ul>
+            </div>
+        </div>
+
+        <div class="w32">
+
+            <div class="w49_1 mr_2"  onclick="window.location.href='/yxbz/index.htm'">
+                <div class="hdpt_bg_1"></div>
+                <div class="hdpt_txt_2">
+                    <h1 class="home_tit">便民问答</h1>
+                    <div><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/pic_bg_32.png" alt="便民问答" /></div>
+                </div>
+            </div>
+
+            <div class="w49_1"  onclick="window.location.href='/hdptwszx/index.htm'">
+                <div class="hdpt_bg_1"></div>
+                <div class="hdpt_txt_2">
+                    <h1 class="home_tit">网上征询</h1>
+                    <div><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/pic_bg_34.png" alt="网上征询" /></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--互动平台 bot end-->
+</div>
+<!--互动平台 end-->
+        </div>
+    </div>
+    <a class="home_rightBtn" id="right" title="下一区块"></a>
+</div>
+<script>
+    var chnlpath = "main";
+</script>
+<!--main end-->
+<div id="cysj_tip1" style="display: none;">
+	  <div  class="xzsp_warp clearfix">
+  	 <div class="xzsp_tips_tit"><span>重点行业总产值（1-8月份）</span></div>
+     	<div class="cysj_tit_1"></div>
+        <h3 class="view_tit_1">【来源：市经信委   发布日期：2015-07-30】</h3>
+        <div class="cysj_chart_img "><p style="text-align: center"><img width="581" height="312" src="http://www.sheitc.gov.cn:80/res_base/sheitc_gov_cn_www/upload/article/image/2015_3/9_29/qzgsif4rcau9.jpg" alt="" /></p></div>
+  </div> 
+  </div> 
+<div id="cysj_tip2" style="display: none;">
+  <div  class="xzsp_warp clearfix">
+  	 <div class="xzsp_tips_tit"><span>工业走势图（8月份）</span></div>
+     	<div class="cysj_tit_1"></div>
+        <h3 class="view_tit_1">【来源：市经信委   发布日期：2015-06-30】</h3>
+        <div class="cysj_chart_img "><p style="text-align: center"><img width="581" height="312" src="http://www.sheitc.gov.cn:80/res_base/sheitc_gov_cn_www/upload/article/image/2015_3/9_29/drubif4rd1yk.jpg" alt="" /></p></div>
+  </div> 
+ </div>
+        <div id="xxgkgzjd_div" style="display: none;">
+            <div class="xzsp_warp clearfix">
+                <div class="xzsp_tips_tit"><span>信息公开受理/公众监督</span></div>
+                <div class="xxgk_gzjd_tips mr_2">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_3">
+                        <tr>
+                            <th colspan="2" scope="col">信息公开受理</th>
+                        </tr>
+                        <tr>
+                            <td>受理部门</td>
+                            <td>上海市经济和信息化委员会</td>
+                        </tr>
+                        <tr>
+                            <td>受理地点</td>
+                            <td>上海市世博村路300号5号楼</td>
+                        </tr>
+                        <tr>
+                            <td>受理时间</td>
+                            <td>周一至周五 上午9:00-11:00</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>　　　　　下午1:30-4:30</td>
+                        </tr>
+                        <tr>
+                            <td>咨询电话</td>
+                            <td>021-23119393 Fax:60801950</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="xxgk_gzjd_tips">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_3 table_3_1">
+                        <tr>
+                            <th colspan="2" scope="col">公众监督</th>
+                        </tr>
+                        <tr>
+                            <td>受理部门</td>
+                            <td>上海市经济和信息化委员会</td>
+                        </tr>
+                        <tr>
+                            <td>受理地点</td>
+                            <td>上海市世博村路300号5号楼</td>
+                        </tr>
+                        <tr>
+                            <td>受理时间</td>
+                            <td>周一至周五 上午9:00-11:00</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>　　　　　下午1:30-4:30</td>
+                        </tr>
+                        <tr>
+                            <td>咨询电话</td>
+                            <td>021-23119393 Fax:60801950</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+<div id="wztj_div" style="display: none;">
+  <div class="xzsp_warp clearfix">
+  	 <div class="xzsp_tips_tit"><span>网站统计</span></div>
+     
+     <div class="wztj_tips ">
+         <ul>
+        	<li><span>3,345次 【上周】</span>站内搜索引擎使用次数</li>
+        	<li><span>4条 【上周】</span>新增政府信息公开数</li>
+        	<li><span>15次 【上周】</span>网上办事受理次数</li>
+        	<li><span>1,052,389次 【上周】</span>网站浏览量</li>
+        	<li><span>100,020次 【上周】</span>移动门户浏览量</li>
+        	<li><span>215ms 【上周】</span>网站平均响应时间</li>
+        	<li><span>公共服务 【上周】</span>最受关注栏目</li>
+        	<li><span>150,341次 【上周】</span>日均访问网站浏览量</li>
+        	<li><span>14,080人 【上周】</span>日均访问网站人次</li>
+        	<li><span>0处 【上周】</span>网站错别字纠错</li>
+
+         	
+        </ul>
+        
+     </div>
+    </div>
+  </div>  
+
+<script>var basepath = "http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/",base="";</script>
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/js/jscroll.js"></script>
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/js/jquery.js" ></script>
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/js/TipsWindow.js" ></script>
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/js/scrolltopcontrol.js" ></script>
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/js/pic.js" ></script>
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/js/date.js"></script>
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/js/app.js"></script>
+<script src="/front_res/tab_wsbs_gb2312.js" type="text/javascript"></script>
+<script>
+    function search_gopage(url) {
+        $("#searchForm").attr("action",url);
+        $("#searchForm").submit();
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#weibo_tips").click(function(){
+            $.TipsWindow({
+                ___content:"iframe:/html/weibo_tips.html",
+                //___content:"url:get?page/index_map.html",
+                ___width:"370",
+                ___height:"400",
+                ___drag:"___boxTitle",
+                ___showbg:true
+            });
+        });
+
+        $("#weixin_tips").click(function(){
+            $.TipsWindow({
+                ___content:"iframe:/html/weixin_tips.html",
+                ___width:"170",
+                ___height:"170",
+                ___drag:"___boxTitle",
+                ___showbg:true
+            });
+        });
+        $("#link_tips").click(function(){
+            $.TipsWindow({
+                ___content:"iframe:/html/link_tips.html",
+                //___content:"url:get?page/index_map.html",
+                ___width:"980",
+                ___height:"470",
+                ___drag:"___boxTitle",
+                ___showbg:true
+            });
+        });
+        $("#yddyy_tips").click(function(){
+            $.TipsWindow({
+                ___content:"iframe:/html/yddyy_tips.html",
+                ___width:"170",
+                ___height:"170",
+                ___drag:"___boxTitle",
+                ___showbg:true
+            });
+        });
+    })
+
+</script>
+<script>
+    $(document).ready(function () {
+        if ($.browser.version == "6.0") {
+            ie6();
+        }
+    });
+    function ie6(){
+        $.TipsWindow({
+            ___content:"iframe:/html/ie6tips.html",
+            ___width:"978",
+            ___height:"468",
+            ___drag:"___boxTitle",
+            ___showbg:true
+        });
+    };
+
+</script>
+
+<!--footernav strat-->
+<div class="footernav">
+    <div class="footnav">
+        <ol>
+            <li class="li_1">
+                <b>
+                    <p>
+                        <span id="time">18:46PM</span>
+                        <span>北京时间</span>
+                    </p>
+                    <div id="dd">01</div>
+                </b>
+            </li>
+            <li class="li_2"><a href="/wsbs/deptWeb_toZxzxLink.do?bean.menu=8" title="网上咨询"><i>网上咨询</i><span>OnlineConsult</span></a></li>
+        </ol>
+        <ul>
+            <li><a href="/sybz/index.htm" title="使用帮助"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/icon_1.png" alt="使用帮助" class="img" /><span>使用帮助</span></a></li>
+            <!--<li><a href="#"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/icon_2.png" alt=""  class="img"/><span>平台应用</span></a></li>-->
+            <li class="bdsharebuttonbox"  data-tag="share_1"><a  class="bds_more" data-cmd="more" href="#" title="在线分享"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/icon_3.png" alt="在线分享" class="img" /><span>在线分享</span></a></li>
+            <li>
+                <a href="#" class="homenav" ><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/icon_4.png" alt="背景设置" class="img" /><span>背景设置</span></a>
+                <div class="homehover ptsjcont">
+                    <p>更改背景</p>
+                    <div>
+                        <a href="###" class="a" id="b1" ><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/body_bg_1_min.jpg" alt="白天背景" /></a>
+                        <a href="###" class="a" id="b2" ><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/body_bg_2_min.jpg" alt="傍晚背景"/></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="homenav" title="语言设置"><i>Language</i><span>语言设置</span></a>
+                <div class="homehover Language">
+                    <a id="GB_BIG" href="#" class="a">繁體版</a>
+                    <!--<a href="http://english.sheitc.gov.cn/jsp/english/english/index.jsp" title="ENGLISH VERSION" class="a">ENGLISH</a>-->
+                    <a href="http://115.28.93.188/sheitc/" title="无障碍" class="a">无障碍</a>
+                </div>
+            </li>
+            <li class="footnav_menu"><a href="#" title="系统介绍更多"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/title_nav_icon_1.png" alt="系统介绍更多"  class="img"/><span>MORE</span></a></li>
+        </ul>
+    </div>
+    <!--提示层 start-->
+    <div class="footernav_breadCrumb ">
+
+        <div class="footernav_breadCrumb_in clearfix">
+
+            <div class="breadCrumb_r clearfix">
+                <ul>
+                    <!--<li><a href="#"><img src="images/icon_6.png" alt="" />开发者</a></li>-->
+                    <li><a href="###" id="weibo_tips"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/icon_7.png" alt="微博" />微博</a></li>
+                    <!--<li><a href="#"><img src="images/icon_8.png" alt="" />图片</a></li>-->
+                    <li><a href="###" id="link_tips"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/icon_12.png" alt="友情链接" />友情链接</a></li>
+                    <li><a href="http://webmail.sheitc.gov.cn/exchange" target="_blank">
+                        <img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/icon_13.png" alt="公务邮箱" />公务邮箱</a></li>
+                </ul>
+                <ul>
+                    <li><a href="###" id="yddyy_tips"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/icon_9.png" alt="移动端应用" />移动端应用</a></li>
+                    <li><a href="###" id="weixin_tips"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/icon_10.png" alt="微信" />微信</a></li>
+                    <li><a href="/map/index.htm"><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/map.png" alt="网站地图" />网站地图</a></li>
+                </ul>
+            </div>
+
+            <div class="breadCrumb_l clearfix">
+                <ul class="ul_1">
+                    <h2>关于我们</h2>
+                    <li>上海市经济和信息化委员会版权所有</li>
+                    <li>地址: 上海市世博村路300号5号楼<br/>邮编:200125 电话:23111111</li>
+                    <li>工作时间: 周一至周五<br/>上午:9:00-11:30 下午13:30 - 18:00 </li>
+                    <li>邮箱：<a href="mailto:webmaster@shec.gov.cn">webmaster@sheitc.gov.cn</a></li>
+                </ul>
+                <ul>
+                    <h2>网站荣誉</h2>
+                    <div class="demo">
+                        <div id="wzrj_txt">
+                                <li>2015年4月，获上海市人民政府办公厅颁发2014年度 “上海市优秀政府网站”</li>
+                                <li>2014年12月，上海市经济和信息化委员会网站被评为“2014年上海市重点网站运行安全保障”优秀网站</li>
+                                <li>2014年11月，上海经信委政务微信荣获2014互联网政务创新奖</li>
+                                <li>2014年3月，获上海市人民政府办公厅颁发2013年度 “上海市优秀政府网站”；</li>
+                                <li>2013年11月，获上海市网络与信息安全协调小组办公室颁发2013年上海市重点网站运行安全“优秀工作单位”；</li>
+                                <li>2013年4月，获上海市人民政府办公厅颁发2012年度 “上海市优秀政府网站”；</li>
+                                <li>2012年4月，获上海市人民政府办公厅颁发 “政府网站优秀集体”；</li>
+                                <li>2011年3月，获上海市人民政府办公厅颁发2010年度上海政府网站 “优秀案例奖”，主题：构建制度与科学融合的专项资金管理与服务信息系统</li>
+                                <li>2010年4月，荣获上海市人民政府办公厅颁发的2009年上海市政府部门“综合优秀网站”</li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+        <div class="foot">
+            <ul>
+                <div style="padding-bottom: 10px;">
+                <script type="text/javascript">
+                    document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/02/000/0000/60490714/CA020000000604907140002.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                </div>
+                <span><img src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/images/copy.jpg" alt="版权" /></span>
+                <p>&copy;上海市经济和信息化委员会<br/>Shanghai Municipal Commission Of Economy and Informatization&nbsp;&nbsp;（建议使用1280*768以上分辨率）</p>
+            </ul>
+        </div>
+
+    </div>
+    <!--提示层 end-->
+
+</div>
+<!--footernav end-->
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"tag":"share_1","bdSize":32,bdCustomStyle:"color:red"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<script type="text/javascript">
+    var defaultEncoding = "2";
+    var translateDelay = "50";
+    var cookieDomain = "";
+    var msgToTraditionalChinese = "繁體中文";
+    var msgToSimplifiedChinese = "简体中文";
+    var translateButtonId = "GB_BIG";
+</Script>
+
+<script type="text/javascript" src="http://www.sheitc.gov.cn/res_base/sheitc_gov_cn_www/v3/js/GB_BIG.js"></script>
+<script type="text/javascript">translateInitilization();</Script>
+<script type='text/javascript' src='http://static.gridsumdissector.com/js/Clients/GWD-801500-D08127/gs.js'></script><script type="text/javascript">
+    $(document).ready(function() {
+
+        $("#xxgk_gzjd_tips").click(function(){
+            $.TipsWindow({
+                ___content:"iframe:xxgk_gzjd_tips.html",
+                //___content:"url:get?page/index_map.html",
+                ___width:"980",
+                ___height:"400",
+                ___drag:"___boxTitle",
+                ___showbg:true
+            });
+        });
+        $("#ztcxjg_tips").click(function(){
+            $.TipsWindow({
+                ___content:"iframe:ztcxjg_tips.html",
+                //___content:"url:get?page/index_map.html",
+                ___width:"980",
+                ___height:"430",
+                ___drag:"___boxTitle",
+                ___showbg:true
+            });
+        });
+
+
+        $("#cysj_tips_1").click(function(){
+            $.TipsWindow({
+                ___content:"id:cysj_tip1",
+                //___content:"url:get?page/index_map.html",
+                ___width:"980",
+                ___height:"550",
+                ___drag:"___boxTitle",
+                ___showbg:true
+            });
+        });
+        $("#cysj_tips_2").click(function(){
+            $.TipsWindow({
+                ___content:"id:cysj_tip2",
+                //___content:"url:get?page/index_map.html",
+                ___width:"980",
+                ___height:"550",
+                ___drag:"___boxTitle",
+                ___showbg:true
+            });
+        });
+ $("#xxgkgzjd_tips").click(function(){       
+        $.TipsWindow({
+            ___content: "id:xxgkgzjd_div",
+            //___content:"url:get?page/index_map.html",
+            ___width: "980",
+            ___height: "400",
+            ___drag: "___boxTitle",
+            ___showbg: true
+        });
+      });
+ $("#wztj_tips").click(function(){       
+        $.TipsWindow({
+            ___content: "id:wztj_div",
+            //___content:"url:get?page/index_map.html",
+            ___width: "980",
+            ___height: "550",
+            ___drag: "___boxTitle",
+            ___showbg: true
+        });
+      });
+
+        $.post("/wsbs/caseWeb_countInfoApply.do",function(data) {
+            if(data) {
+                $("#infoapplycount_div").html("建站以来共有【"+data.count+"】次<br/>请求公开信息");
+            }
+        });
+        
+        $.post("/wsbs/itemWeb_countItem.do", function(data) {
+            if(data) {
+                $("#shz_li").html("审核中的事项【"+data.shz+"】项");
+                $("#slz_li").html("正在受理中的事项【"+data.slz+"】项");
+                $("#ybj_li").html("已办结事项【"+data.ybj+"】项");
+            }
+        });
+        $.post("/cms/countArticle.do?chnlid=915",function(data) {
+            if(data) {
+                $("#index_hyfw_count").html("【"+data.count+"】");
+            }
+        });
+        $.post("/cms/countArticle.do?chnlid=916",function(data) {
+            if(data) {
+                $("#index_bmcx_count").html("【"+data.count+"】");
+            }
+        });
+        // autocomplete
+        $( "#searchKey" ).autocomplete({
+            select: function(event, ui) {
+                $("#searchKey").val(ui.item.value);
+                $("#searchForm").attr("action","/cms/ArtiSearch.do");
+                $("#searchForm").submit();
+            }
+        });
+        $.post("/cms/keywordsuggest.do",function(data) {
+            if(data) {
+                $( "#searchKey" ).autocomplete( "option", "source", data);
+            }
+        });
+    })
+</script>
+
+</body>
+</html>

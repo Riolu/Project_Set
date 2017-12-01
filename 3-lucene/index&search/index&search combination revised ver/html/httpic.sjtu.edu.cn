@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7" lang="zh-CN"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="zh-CN"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+<!-- Basic Page Needs
+	================================================== -->
+
+	<meta charset ="UTF-8" />
+	<title>上海交通大学 微电子学院: Home</title>
+
+	<meta name="description" content="" />
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" href="http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/css/new_sidebar.css" type="text/css" media="screen"/>
+<script type="text/javascript" src="http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/mango.js"></script>
+<script type="text/javascript" src="http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/fake-element.js"></script>
+<script>
+  $(function(){
+    
+    var $container = $('#container');
+    
+    
+      // add randomish size classes
+      $container.find('.element').each(function(){
+        var $this = $(this),
+            number = parseInt( $this.find('.number').text(), 10 );
+        if ( number % 7 % 2 === 1 ) {
+          $this.addClass('width2');
+        }
+        if ( number % 3 === 0 ) {
+          $this.addClass('height2');
+        }
+      });
+    
+    $container.isotope({
+      itemSelector : '.element',
+      masonry : {
+        columnWidth : 310
+		//??????
+      },
+      masonryHorizontal : {
+        rowHeight: 120
+      },
+      cellsByRow : {
+        columnWidth : 310,
+        rowHeight : 240
+      },
+      cellsByColumn : {
+        columnWidth : 310,
+        rowHeight : 240
+      },
+      getSortData : {
+        symbol : function( $elem ) {
+          return $elem.attr('data-symbol');
+        },
+        category : function( $elem ) {
+          return $elem.attr('data-category');
+        },
+        number : function( $elem ) {
+          return parseInt( $elem.find('.number').text(), 10 );
+        },
+        weight : function( $elem ) {
+          return parseFloat( $elem.find('.weight').text().replace( /[\(\)]/g, '') );
+        },
+        name : function ( $elem ) {
+          return $elem.find('.name').text();
+        }
+      }
+    });
+    
+    
+      var $optionSets = $('#options .option-set'),
+          $optionLinks = $optionSets.find('a');
+
+      $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+          return false;
+        }
+        var $optionSet = $this.parents('.option-set');
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+  
+        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+        var options = {},
+            key = $optionSet.attr('data-option-key'),
+            value = $this.attr('data-option-value');
+        // parse 'false' as false boolean
+        value = value === 'false' ? false : value;
+        options[ key ] = value;
+        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+          // changes in layout modes need extra logic
+          changeLayoutMode( $this, options )
+        } else {
+          // otherwise, apply new options
+          $container.isotope( options );
+        }
+        
+        return false;
+      });
+
+
+    
+      // change layout
+      var isHorizontal = false;
+      function changeLayoutMode( $link, options ) {
+        var wasHorizontal = isHorizontal;
+        isHorizontal = $link.hasClass('horizontal');
+
+        if ( wasHorizontal !== isHorizontal ) {
+          // orientation change
+          // need to do some clean up for transitions and sizes
+          var style = isHorizontal ? 
+            { height: '80%', width: $container.width() } : 
+            { width: 'auto' };
+          // stop any animation on container height / width
+          $container.filter(':animated').stop();
+          // disable transition, apply revised style
+          $container.addClass('no-transition').css( style );
+          setTimeout(function(){
+            $container.removeClass('no-transition').isotope( options );
+          }, 100 )
+        } else {
+          $container.isotope( options );
+        }
+      }
+
+
+    
+      // change size of clicked element
+
+	  
+	  $container.delegate( '.element', 'click', function(){
+		$('.large').toggleClass('large');
+        $(this).toggleClass('large');
+        $container.isotope('reLayout');
+      });
+	  
+	  $container.delegate( '.large', 'click', function(){
+        $(this).toggleClass('large');
+        $container.isotope('reLayout');
+      });
+
+      // toggle variable sizes of all elements
+      $('#toggle-sizes').find('a').click(function(){
+        $container
+          .toggleClass('variable-sizes')
+          .isotope('reLayout');
+        return false;
+      });
+
+
+    
+      $('#insert a').click(function(){
+        var $newEls = $( fakeElement.getGroup() );
+        $container.isotope( 'insert', $newEls );
+
+        return false;
+      });
+
+      $('#append a').click(function(){
+        var $newEls = $( fakeElement.getGroup() );
+        $container.append( $newEls ).isotope( 'appended', $newEls );
+
+        return false;
+      });
+
+
+    var $sortBy = $('#sort-by');
+    $('#shuffle a').click(function(){
+      $container.isotope('shuffle');
+      $sortBy.find('.selected').removeClass('selected');
+      $sortBy.find('[data-option-value="random"]').addClass('selected');
+      return false;
+    });
+
+
+  });
+</script>
+	<link rel="alternate" type="application/rss+xml" title="上海交通大学 微电子学院 RSS Feed" href="http://ic.sjtu.edu.cn/ic/feed/" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="http://ic.sjtu.edu.cn/ic/xmlrpc.php" />
+	<link rel="shortcut icon" type="image/x-icon" href="http://ic.sjtu.edu.cn/ic/wp-content/uploads/2012/12/logo161.png" />
+<!-- Mobile Specific
+================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" media="screen, print" href="http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/style.css" />
+	
+	<link rel="stylesheet" href="http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/css/lightboxed.css" type="text/css" media="screen" id="layout"/>
+
+
+
+
+<!-- Fonts
+	================================================== -->
+			<link href='http://fonts.useso.com/css?family=' rel='stylesheet' type='text/css'>
+	<!-- Java Script
+	================================================== -->
+
+	<link rel="alternate" type="application/rss+xml" title="上海交通大学 微电子学院 &raquo; Feed" href="http://ic.sjtu.edu.cn/ic/feed/" />
+<link rel="alternate" type="application/rss+xml" title="上海交通大学 微电子学院 &raquo; 评论Feed" href="http://ic.sjtu.edu.cn/ic/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/ic.sjtu.edu.cn\/ic\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='ai1ec_style-css'  href='//ic.sjtu.edu.cn/ic/wp-content/plugins/all-in-one-event-calendar/cache/0fc64dfa_ai1ec_parsed_css.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='layerslider_css-css'  href='http://ic.sjtu.edu.cn/ic/wp-content/plugins/LayerSlider/css/layerslider.css?ver=3.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='pp-woocommerce-css'  href='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/css/woocommerce.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='metro-buttons-style-css'  href='http://ic.sjtu.edu.cn/ic/wp-content/plugins/metro-buttons/button.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='http://ic.sjtu.edu.cn/ic/wp-content/plugins/tablepress/css/default.min.css?ver=1.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelementjs-styles-css'  href='http://ic.sjtu.edu.cn/ic/wp-content/plugins/media-element-html5-video-and-audio-player/mediaelement/mediaelementplayer.css?ver=4.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/plugins/LayerSlider/js/layerslider.kreaturamedia.jquery.js?ver=3.5.0'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/plugins/LayerSlider/js/jquery-easing-1.3.js?ver=1.3.0'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/plugins/media-element-html5-video-and-audio-player/mediaelement/mediaelement-and-player.min.js?ver=2.1.3'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ic.sjtu.edu.cn/ic/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ic.sjtu.edu.cn/ic/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3.1" />
+<link rel='canonical' href='http://ic.sjtu.edu.cn/ic/' />
+<link rel='shortlink' href='http://ic.sjtu.edu.cn/ic/' />
+<link rel="stylesheet" href="/ic/wp-content/plugins/widgetkit/cache/widgetkit-a067bef7.css" />
+<script src="/ic/wp-content/plugins/widgetkit/cache/widgetkit-bb57b47f.js"></script>
+<style type='text/css' id='Responsive_Column_Widgets_1.2.3' >
+            .responsive_column_widgets_box .widget {
+                padding: 4px;
+                width: auto;
+                height: auto;
+            }
+
+            .responsive_column_widgets_column_hide {
+                display: none !important;
+            }
+            
+            /* REMOVE MARGINS AS ALL GO FULL WIDTH AT 240 PIXELS */
+            @media only screen and (max-width: 240px) {
+                .responsive_column_widgets_column { 
+                    margin: 1% 0 1% 0;
+                }
+            }
+            
+            /*  GROUPING  ============================================================================= */
+            .responsive_column_widgets_box:before,
+            .responsive_column_widgets_box:after {
+                content: '';
+                display: table;
+            }
+            .responsive_column_widgets_box:after {
+                clear:both;
+            }
+            .responsive_column_widgets_box {
+                float: none;
+                width: 100%;        
+                margin-left: auto;
+                margin-right: auto;
+                zoom:1; /* For IE 6/7 (trigger hasLayout) */
+            }
+
+            /* GRID COLUMN SETUP  */
+            .responsive_column_widgets_column {
+                display: block;
+                float: left;
+                margin: 1% 0 1% 1.6%;                
+            }     
+            
+            /* all browsers except IE6 and lower */
+            .responsive_column_widgets_column:first-child { 
+                margin-left: 0; 
+            }
+            
+            /* 
+             * Remove the left margin of the first column. This should be done after all setting margins of columns for IE8. 
+             * If declared earlier and there is a rule setting left margin of first columns, then it takes effect instead in IE8.
+             */
+            .responsive_column_widgets_column_1 {
+                margin-left: 0px;
+                clear: left;
+            }            
+            
+            /*  GRID  ============================================================================= */
+            .element_of_1 { width: 100%; }
+            .element_of_2 { width: 49.2%; }
+            .element_of_3 { width: 32.2%; }
+            .element_of_4 { width: 23.8%; }
+            .element_of_5 { width: 18.72%; }
+            .element_of_6 { width: 15.33%; }
+            .element_of_7 { width: 12.91%; }
+            .element_of_8 { width: 11.1%; }
+            .element_of_9 { width: 9.68%; }
+            .element_of_10 { width: 8.56%; }
+            .element_of_11 { width: 7.63%; }
+            .element_of_12 { width: 6.86%; }
+            
+            /*  GRID for Col-spans ============================================================================= */
+             .element_2_of_2 { width: 100%; }
+ .element_2_of_3 { width: 66%; }
+ .element_3_of_3 { width: 100%; }
+ .element_2_of_4 { width: 49.2%; }
+ .element_3_of_4 { width: 74.6%; }
+ .element_4_of_4 { width: 100%; }
+ .element_2_of_5 { width: 39.04%; }
+ .element_3_of_5 { width: 59.36%; }
+ .element_4_of_5 { width: 79.68%; }
+ .element_5_of_5 { width: 100%; }
+ .element_2_of_6 { width: 32.26%; }
+ .element_3_of_6 { width: 49.19%; }
+ .element_4_of_6 { width: 66.12%; }
+ .element_5_of_6 { width: 83.05%; }
+ .element_6_of_6 { width: 100%; }
+ .element_2_of_7 { width: 27.42%; }
+ .element_3_of_7 { width: 41.93%; }
+ .element_4_of_7 { width: 56.44%; }
+ .element_5_of_7 { width: 70.95%; }
+ .element_6_of_7 { width: 85.46%; }
+ .element_7_of_7 { width: 100%; }
+ .element_2_of_8 { width: 23.8%; }
+ .element_3_of_8 { width: 36.5%; }
+ .element_4_of_8 { width: 49.2%; }
+ .element_5_of_8 { width: 61.9%; }
+ .element_6_of_8 { width: 74.6%; }
+ .element_7_of_8 { width: 87.3%; }
+ .element_8_of_8 { width: 100%; }
+ .element_2_of_9 { width: 20.96%; }
+ .element_3_of_9 { width: 32.24%; }
+ .element_4_of_9 { width: 43.52%; }
+ .element_5_of_9 { width: 54.8%; }
+ .element_6_of_9 { width: 66.08%; }
+ .element_7_of_9 { width: 77.36%; }
+ .element_8_of_9 { width: 88.64%; }
+ .element_9_of_9 { width: 100%; }
+ .element_2_of_10 { width: 18.72%; }
+ .element_3_of_10 { width: 28.88%; }
+ .element_4_of_10 { width: 39.04%; }
+ .element_5_of_10 { width: 49.2%; }
+ .element_6_of_10 { width: 59.36%; }
+ .element_7_of_10 { width: 69.52%; }
+ .element_8_of_10 { width: 79.68%; }
+ .element_9_of_10 { width: 89.84%; }
+ .element_10_of_10 { width: 100%; }
+ .element_2_of_11 { width: 16.86%; }
+ .element_3_of_11 { width: 26.09%; }
+ .element_4_of_11 { width: 35.32%; }
+ .element_5_of_11 { width: 44.55%; }
+ .element_6_of_11 { width: 53.78%; }
+ .element_7_of_11 { width: 63.01%; }
+ .element_8_of_11 { width: 72.24%; }
+ .element_9_of_11 { width: 81.47%; }
+ .element_10_of_11 { width: 90.7%; }
+ .element_11_of_11 { width: 100%; }
+ .element_2_of_12 { width: 15.32%; }
+ .element_3_of_12 { width: 23.78%; }
+ .element_4_of_12 { width: 32.24%; }
+ .element_5_of_12 { width: 40.7%; }
+ .element_6_of_12 { width: 49.16%; }
+ .element_7_of_12 { width: 57.62%; }
+ .element_8_of_12 { width: 66.08%; }
+ .element_9_of_12 { width: 74.54%; }
+ .element_10_of_12 { width: 83%; }
+ .element_11_of_12 { width: 91.46%; }
+ .element_12_of_12 { width: 100%; }
+            
+            /* Responsive Column Widget Box Widget */
+            .widget_box_widget .responsive_column_widgets_box {
+                margin-top: 0px;
+            }
+            .responsive_column_widgets_column.widget_box_widget { 
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+            
+            /* Twenty Thirteen support */
+            .site-main .responsive_column_widgets_box.widget-area {
+                width: 100%;
+                margin-right: auto;
+                float: none;
+            }
+            .widget_box_widget div.widget {
+                background:none;
+            }            
+            
+            /* Twenty Fourteen Support */
+            .responsive_column_widgets_box.content-sidebar {
+                padding: 0;
+            }
+        </style>
+<style type="text/css" id="style_custom_responsive_column_widgets_6f58cb8b3e8020a3d510e71b90e5d6a6">.responsive_column_widgets { display: inline-block; width: 100%; }</style>
+<style type='text/css' class='style_responsive_column_widgets_6f58cb8b3e8020a3d510e71b90e5d6a6'>@media only screen and (min-width: 1px) and (max-width: 600px) {
+.responsive_column_widgets .responsive_column_widgets_column {                
+                margin-left: 1.6%;
+            }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_1 { width:100%; clear: left; margin: 1% 0 1% 0; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_2 { width:49.2%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_3 { width:32.2%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_4 { width:23.8%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_5 { width:18.72%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_6 { width:15.33%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_7 { width:12.91%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_8 { width:11.1%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_9 { width:9.68%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_10 { width:8.56%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_11 { width:7.63%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_of_12 { width:6.86%; display: block; float:left; } 
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_2 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_3 { width: 66%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_3 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_4 { width: 49.2%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_4 { width: 74.6%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_4_of_4 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_5 { width: 39.04%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_5 { width: 59.36%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_4_of_5 { width: 79.68%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_5_of_5 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_6 { width: 32.26%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_6 { width: 49.19%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_4_of_6 { width: 66.12%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_5_of_6 { width: 83.05%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_6_of_6 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_7 { width: 27.42%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_7 { width: 41.93%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_4_of_7 { width: 56.44%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_5_of_7 { width: 70.95%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_6_of_7 { width: 85.46%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_7_of_7 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_8 { width: 23.8%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_8 { width: 36.5%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_4_of_8 { width: 49.2%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_5_of_8 { width: 61.9%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_6_of_8 { width: 74.6%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_7_of_8 { width: 87.3%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_8_of_8 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_9 { width: 20.96%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_9 { width: 32.24%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_4_of_9 { width: 43.52%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_5_of_9 { width: 54.8%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_6_of_9 { width: 66.08%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_7_of_9 { width: 77.36%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_8_of_9 { width: 88.64%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_9_of_9 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_10 { width: 18.72%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_10 { width: 28.88%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_4_of_10 { width: 39.04%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_5_of_10 { width: 49.2%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_6_of_10 { width: 59.36%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_7_of_10 { width: 69.52%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_8_of_10 { width: 79.68%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_9_of_10 { width: 89.84%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_10_of_10 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_11 { width: 16.86%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_11 { width: 26.09%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_4_of_11 { width: 35.32%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_5_of_11 { width: 44.55%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_6_of_11 { width: 53.78%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_7_of_11 { width: 63.01%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_8_of_11 { width: 72.24%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_9_of_11 { width: 81.47%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_10_of_11 { width: 90.7%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_11_of_11 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_2_of_12 { width: 15.32%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_3_of_12 { width: 23.78%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_4_of_12 { width: 32.24%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_5_of_12 { width: 40.7%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_6_of_12 { width: 49.16%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_7_of_12 { width: 57.62%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_8_of_12 { width: 66.08%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_9_of_12 { width: 74.54%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_10_of_12 { width: 83%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_11_of_12 { width: 91.46%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_element_12_of_12 { width: 100%; }
+ .responsive_column_widgets .responsive_column_widgets_column_600_1 { 
+                    clear: left; 
+                    margin-left: 0px; 
+                } 
+                
+ .responsive_column_widgets .responsive_column_widgets_column_600_hide { display: none; } 
+}
+@media only screen and (min-width: 602px) {
+            .responsive_column_widgets .responsive_column_widgets_column.responsive_column_widgets_column_1 {
+                margin-left: 0px;
+            }
+        }
+</style> <style type="text/css">
+
+ 
+  #logo {
+          }
+
+  #tagline {
+      }
+
+  #header {
+    min-height: 100px;
+  }
+
+    .post-icon { display: none; }
+    .post-content { margin: 22px 0 0; }
+    
+      h2.logo,
+      h1.logo {
+        font-family: ;
+      }
+      h2.logo a,
+      h1.logo a {
+        color: ;
+        font-family: ;
+        font-style: ;
+        font-variant: ;
+        font-weight: ;
+        font-size: ;
+      }
+       #backtotop a:hover,.feature-circle.blue,.prev:hover, .next:hover,.mr-rotato-prev:hover, .mr-rotato-next:hover,.flex-direction-nav a:hover,
+      .post .flex-direction-nav a:hover, .project .flex-direction-nav a:hover { background-color: ; }
+
+          h1, h2, h3, h4, h5, h6 {
+        color:        }
+         a:hover, a:focus { color: ; }
+
+          a, a:visited { color:  ; }
+
+            body { font-size: 12px }
+          #navigation ul li a:hover,
+      #navigation ul li:hover > a,
+      #bolded-line,
+      .button.gray:hover,
+      .button.light:hover,
+      .price_slider_wrapper .ui-slider-horizontal .ui-slider-range,
+      .button.color,
+      .onsale,
+      input[type="submit"] {
+        background: #8e1c1c;
+      }
+      .blog-sidebar .widget #twitter-blog li a,
+      a, a:hover,
+      .testimonials-author,
+      .shop-item span.price,
+      a.post-entry {
+        color: #8e1c1c      }
+
+      #navigation > div > ul > li.current-menu-item > a,
+      .pricing-table .color-3 h3, .color-3 .sign-up,
+      .flex-direction-nav .flex-prev:hover,
+      .flex-direction-nav .flex-next:hover,
+      .slider .tp-leftarrow:hover,
+      .slider .tp-rightarrow:hover,
+      #scroll-top-top a,
+      .quantity .plus:hover,#content .quantity .plus:hover,.quantity .minus:hover,#content .quantity .minus:hover,
+      .post-icon {
+        background-color:#8e1c1c;
+      }
+
+      .mr-rotato-prev:hover,
+      .mr-rotato-next:hover,
+      li.current,
+      .tagcloud a:hover {
+        background-color: #8e1c1c;
+        border-color: #8e1c1c;
+      }
+
+      #filters a:hover,
+      .selected,
+      .wp-pagenavi .current,
+      .pagination .current,
+      #portfolio-navi a:hover {
+        background-color: #8e1c1c !important;
+        border: 1px solid #8e1c1c !important;
+      }
+      .pricing-table .color-3 h4 {
+        background-color:#8e1c1c;
+        opacity:0.8
+      }
+
+              .image-overlay-link, .image-overlay-zoom {
+        background-color: rgba(0,0,0,0.7);
+       }
+
+ 
+ #navigation ul li a { color: #ffffff; }
+
+ 
+      #post-2{
+text-indent:2em;
+}
+#navigation { margin-bottom: 4px; }
+.page-template-template-home-flex-php .slider, .home .slider { margin-bottom: 10px; }
+.post-description p{
+text-indent:2em;
+font-size: 14px;
+color: black;
+line-height: 180%;
+}
+body {text-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;}
+.post-title h1 a {
+font-size: 24px;
+line-height: 30px;
+font-weight: bold;
+color: #000000;
+}
+.post-701{padding-left:10px;}
+#footer-bottom { margin-top: 3px;}
+#page-title h1 { display:none;}
+/* #footer-bottom {margin-top: 4px; padding-top:6px; padding-bottom:16px;} */
+/* #email
+================================================== */	
+.email_input{width:100%; padding-top:48px; }
+.email_input input{width:38%; height:24px; line-height:24px; border:1px solid #E1E1E1;font-size:12px;background:#F8F8F8;padding:0 3px;margin:0; margin-right:2px; display:inline;}
+.email_input .input_password{width:30%;height:24px; line-height:24px; border:1px solid #E1E1E1;font-size:12px;background:#F8F8F8;padding:0 3px;margin:0; margin-right:2px; display:inline;}
+.email_input .input_img{  width:auto;  margin-bottom:-8px;border:0;}
+
+/* home page*/
+.ai1ec-calendar-toolbar { display:none;}
+.ai1ec-pagination { display:none;}
+.ai1ec-views-dropdown {display:none;}
+.ai1ec-no-results { display:none;}
+.pull-right { display:none;}
+#ai1ec-print-button { display:none;}
+#ai1ec-agenda-collapse-all { display:none;}
+#ai1ec-agenda-expand-all { display:none;}
+.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+color: #000000;
+font-size: 12px;
+font-weight: bolder;}
+.listing-item .title {color: #000000;}
+.listing-item {padding-bottom:2px; padding-left:4px; font-size:13px;}      </style>
+      <style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #727272; background-image: url('http://ic.sjtu.edu.cn/ic/wp-content/uploads/2014/05/furley_bg.png'); background-repeat: repeat; background-position: top center; background-attachment: fixed; }
+</style>
+
+
+</head>
+  <body class="home page page-id-701 page-template page-template-template-home-flex page-template-template-home-flex-php custom-background sbright boxed light">
+<!-- Wrapper Start -->
+<div id="wrapper">
+
+
+<!-- Header
+================================================== -->
+
+<!-- 960 Container -->
+<div class="container ie-dropdown-fix">
+
+<!-- Header -->
+	<div id="header">
+				<!-- Logo -->
+		<div class="twelve  columns">
+			<div id="logo">
+														<h1><a href="http://ic.sjtu.edu.cn/ic/" title="上海交通大学 微电子学院" rel="home">
+						<img src="http://ic.sjtu.edu.cn/ic/wp-content/uploads/2012/12/logo_microe.png" alt="上海交通大学 微电子学院"/>
+					</a></h1>
+					
+								<div id="tagline"></div>				<div class="clear"></div>
+			</div>
+		</div>
+
+		<!-- Social / Contact -->
+		<div class="four  columns">
+       <!-- 	<div class="email_input">
+            <form action="http://mail.ic.sjtu.edu.cn:3000/WorldClient.dll?View=Main" method="post" target="_new">
+            <input name="User" placeholder="@ic.sjtu.edu.cn">
+            <input type="password" name="Password" placeholder="******" class="input_password">
+            <input type="image" src="/ic/wp-content/themes/Centum/images/input_mail.gif" name="Logon" class="input_img">              
+            </form>
+            </div> -->
+
+			
+
+			<div class="clear"></div>
+								</div>
+
+	</div>
+	<!-- Header / End -->
+
+<!-- Navigation -->
+	<div class="sixteen columns">
+
+		<div id="navigation">
+			<div id="mainmenu-cont" class="menu-navi_menu-container"><ul id="menu-navi_menu" class="dropmenu main-menu"><li id="menu-item-2300" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-2300"><a href="http://ic.sjtu.edu.cn/ic">首页</a><ul class="sub-menu">	<li id="menu-item-2442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2442"><a href="http://ic.sjtu.edu.cn/english">School of MicroElectronics (English Version)</a></li>	<li id="menu-item-2534" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2534"><a href="http://202.120.46.8">旧版网站</a></li></ul></li><li id="menu-item-2291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2291"><a href="#">学院概况</a><ul class="sub-menu">	<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105"><a href="http://ic.sjtu.edu.cn/ic/intro/">学院简介</a></li>	<li id="menu-item-1259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1259"><a href="http://ic.sjtu.edu.cn/ic/intro/%e5%ad%a6%e9%99%a2%e9%a2%86%e5%af%bc/">学院领导</a></li>	<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="http://ic.sjtu.edu.cn/ic/intro/%e6%9c%ba%e6%9e%84%e8%ae%be%e7%bd%ae/">行政机构</a></li></ul></li><li id="menu-item-2292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2292"><a href="#">师资队伍</a><ul class="sub-menu">	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="http://ic.sjtu.edu.cn/ic/faculty/%e6%95%99%e5%b8%88%e5%90%8d%e5%bd%95/">教师名录</a></li>	<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="http://ic.sjtu.edu.cn/ic/faculty/%e5%ae%a2%e5%ba%a7%e6%95%99%e6%8e%88/">客座教授</a></li>	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="http://ic.sjtu.edu.cn/ic/faculty/%e4%ba%ba%e6%89%8d%e6%8b%9b%e8%81%98/">人才招聘</a></li></ul></li><li id="menu-item-2293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2293"><a href="#">人才培养</a><ul class="sub-menu">	<li id="menu-item-2895" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2895"><a href="#">招生工作</a>	<ul class="sub-menu">		<li id="menu-item-1314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1314"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e6%8b%9b%e7%94%9f%e5%b7%a5%e4%bd%9c/%e6%9c%ac%e7%a7%91%e7%94%9f%e6%8b%9b%e7%94%9f/">本科生招生</a></li>		<li id="menu-item-1312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1312"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e6%8b%9b%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%85%a8%e6%97%a5%e5%88%b6%e7%a1%95%e5%a3%ab%e6%8b%9b%e7%94%9f/">全日制硕士招生</a></li>		<li id="menu-item-1329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1329"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e6%8b%9b%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%8d%9a%e5%a3%ab%e7%a0%94%e7%a9%b6%e7%94%9f%e6%8b%9b%e7%94%9f/">博士招生</a></li>		<li id="menu-item-1313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1313"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e6%8b%9b%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9c%a8%e8%81%8c%e5%b7%a5%e7%a8%8b%e7%a1%95%e5%a3%ab%e6%8b%9b%e7%94%9f/">在职工程硕士招生</a></li>	</ul></li>	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-81"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/">培养工作</a>	<ul class="sub-menu">		<li id="menu-item-1317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1317"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/%e6%9c%ac%e7%a7%91%e7%94%9f%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/">本科生培养工作</a></li>		<li id="menu-item-1315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1315"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/%e5%85%a8%e6%97%a5%e5%88%b6%e7%a1%95%e5%a3%ab%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/">全日制硕士培养工作</a></li>		<li id="menu-item-1332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1332"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/%e5%8d%9a%e5%a3%ab%e7%a0%94%e7%a9%b6%e7%94%9f%e5%9f%b9%e5%85%bb/">博士培养</a></li>		<li id="menu-item-1316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1316"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/%e5%9c%a8%e8%81%8c%e5%b7%a5%e7%a8%8b%e7%a1%95%e5%a3%ab%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/">在职工程硕士培养工作</a></li>	</ul></li>	<li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%ba%e5%9c%b0%e5%bb%ba%e8%ae%be/">基地建设</a></li>	<li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%ae%9e%e9%aa%8c%e5%b9%b3%e5%8f%b0/">实验平台</a></li></ul></li><li id="menu-item-2294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2294"><a href="#">科研学术</a><ul class="sub-menu">	<li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="http://ic.sjtu.edu.cn/ic/%e7%a7%91%e7%a0%94%e5%9b%a2%e9%98%9f/%e5%b0%84%e9%a2%91%e5%92%8c%e6%a8%a1%e6%8b%9f%e9%9b%86%e6%88%90%e7%94%b5%e8%b7%af%e8%ae%be%e8%ae%a1%e6%8a%80%e6%9c%af/">射频和模拟集成电路设计技术</a></li>	<li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="http://ic.sjtu.edu.cn/ic/%e7%a7%91%e7%a0%94%e5%9b%a2%e9%98%9f/%e6%95%b0%e5%ad%97%e7%94%b5%e8%b7%af%e8%ae%be%e8%ae%a1%e5%92%8csoc%e6%8a%80%e6%9c%af/">数字电路设计和SOC技术</a></li>	<li id="menu-item-3120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3120"><a href="http://icat.sjtu.edu.cn">Innovative Computer Architecture and Technology</a></li>	<li id="menu-item-3720" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3720"><a href="http://ic.sjtu.edu.cn/seas">智慧电子与系统研究中心</a></li>	<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="http://ic.sjtu.edu.cn/ic/%e7%a7%91%e7%a0%94%e5%9b%a2%e9%98%9f/%e7%94%9f%e7%89%a9%e7%94%b5%e8%b7%af%e4%b8%8e%e7%b3%bb%e7%bb%9f%e5%ae%9e%e9%aa%8c%e5%ae%a4/">生物电路与系统实验室</a></li>	<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a href="http://ic.sjtu.edu.cn/ic/%e7%a7%91%e7%a0%94%e5%9b%a2%e9%98%9f/%e5%85%88%e8%bf%9b%e4%bd%93%e7%b3%bb%e7%bb%93%e6%9e%84%e7%a0%94%e7%a9%b6/">先进体系结构研究</a></li>	<li id="menu-item-3123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3123"><a href="http://ic.sjtu.edu.cn/ic/semi">半导体器件与工艺</a></li>	<li id="menu-item-1219" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1219"><a href="http://ic.sjtu.edu.cn/ic/msda">混合信号设计自动化实验室Mixed-Signal Design Automation Research Lab</a></li></ul></li><li id="menu-item-2296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2296"><a href="#">合作交流</a><ul class="sub-menu">	<li id="menu-item-2896" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2896"><a href="#">国际交流</a>	<ul class="sub-menu">		<li id="menu-item-1322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1322"><a href="http://ic.sjtu.edu.cn/ic/%e5%90%88%e4%bd%9c%e4%ba%a4%e6%b5%81/%e5%9b%bd%e9%99%85%e4%ba%a4%e6%b5%81/%e4%ba%a4%e6%b5%81%e6%b4%bb%e5%8a%a8/">交流活动</a></li>		<li id="menu-item-1323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1323"><a href="http://ic.sjtu.edu.cn/ic/%e5%90%88%e4%bd%9c%e4%ba%a4%e6%b5%81/%e5%9b%bd%e9%99%85%e4%ba%a4%e6%b5%81/%e8%81%94%e5%90%88%e5%8a%9e%e5%ad%a6/">联合办学</a></li>	</ul></li>	<li id="menu-item-98" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-98"><a href="http://ic.sjtu.edu.cn/ic/%e5%90%88%e4%bd%9c%e4%ba%a4%e6%b5%81/%e4%bc%81%e4%b8%9a%e5%90%88%e4%bd%9c/">企业合作</a></li></ul></li><li id="menu-item-2297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2297"><a href="#">学生工作</a><ul class="sub-menu">	<li id="menu-item-1283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1283"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e8%83%bd%e4%bb%8b%e7%bb%8d/">职能介绍</a></li>	<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%ad%a6%e7%94%9f%e4%ba%8b%e5%8a%a1/">学生事务</a></li>	<li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%ad%a6%e7%94%9f%e5%85%9a%e5%bb%ba/">学生党建</a></li>	<li id="menu-item-1282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1282"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9b%a2%e5%ad%a6%e6%b4%bb%e5%8a%a8/">团学活动</a>	<ul class="sub-menu">		<li id="menu-item-1548" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1548"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9b%a2%e5%ad%a6%e6%b4%bb%e5%8a%a8/%e5%ad%a6%e9%99%a2%e5%9b%a2%e5%a7%94%e7%ae%80%e4%bb%8b/">学院团委简介</a></li>		<li id="menu-item-1547" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1547"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9b%a2%e5%ad%a6%e6%b4%bb%e5%8a%a8/%e5%9b%a2%e5%ad%a6%e9%a3%8e%e9%87%87/">团学风采</a></li>		<li id="menu-item-1546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1546"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9b%a2%e5%ad%a6%e6%b4%bb%e5%8a%a8/%e5%9b%a2%e5%ad%a6%e5%8a%a8%e6%80%81/">团学动态</a></li>	</ul></li>	<li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-104"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e4%b8%9a%e5%8f%91%e5%b1%95/">职业发展</a>	<ul class="sub-menu">		<li id="menu-item-1545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1545"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e4%b8%9a%e5%8f%91%e5%b1%95/%e7%94%9f%e6%b6%af%e7%82%b9%e7%81%af/">生涯点灯</a></li>		<li id="menu-item-1544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1544"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e4%b8%9a%e5%8f%91%e5%b1%95/%e5%b0%b1%e4%b8%9a%e5%85%ac%e5%91%8a/">就业公告</a></li>		<li id="menu-item-1543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1543"><a href="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e4%b8%9a%e5%8f%91%e5%b1%95/%e5%b0%b1%e4%b8%9a%e6%b5%81%e7%a8%8b/">就业流程</a></li>	</ul></li></ul></li><li id="menu-item-2299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2299"><a href="#">校友之家</a><ul class="sub-menu">	<li id="menu-item-1310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1310"><a href="http://ic.sjtu.edu.cn/ic/%e6%a0%a1%e5%8f%8b%e4%b9%8b%e5%ae%b6/%e6%a0%a1%e5%8f%8b%e5%90%8d%e5%bd%95/">校友名录</a>	<ul class="sub-menu">		<li id="menu-item-2764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2764"><a href="http://ic.sjtu.edu.cn/ic/%e5%be%ae%e7%94%b5%e5%ad%90%e5%ad%a6%e9%99%a22013%e5%b1%8a%e6%9c%ac%e7%a7%91%e6%af%95%e4%b8%9a%e7%94%9f%e7%95%99%e5%bf%b5/">微电子学院2013届本科生</a></li>	</ul></li>	<li id="menu-item-1311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1311"><a href="http://ic.sjtu.edu.cn/ic/%e6%a0%a1%e5%8f%8b%e4%b9%8b%e5%ae%b6/%e6%a0%a1%e5%8f%8b%e6%b4%bb%e5%8a%a8/">校友活动</a></li></ul></li><li id="menu-item-2298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2298"><a href="#">办事指南</a><ul class="sub-menu">	<li id="menu-item-1307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1307"><a href="http://ic.sjtu.edu.cn/ic/%e5%8a%9e%e4%ba%8b%e6%8c%87%e5%8d%97/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb%e7%b1%bb/">人才培养类</a></li>	<li id="menu-item-1308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1308"><a href="http://ic.sjtu.edu.cn/ic/%e5%8a%9e%e4%ba%8b%e6%8c%87%e5%8d%97/%e4%ba%ba%e4%ba%8b%e5%a4%96%e4%ba%8b%e7%b1%bb/">人事外事类</a></li>	<li id="menu-item-1305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1305"><a href="http://ic.sjtu.edu.cn/ic/%e5%8a%9e%e4%ba%8b%e6%8c%87%e5%8d%97/%e7%a7%91%e7%a0%94%e4%ba%8b%e5%8a%a1%e7%b1%bb/">科研事务类</a></li>	<li id="menu-item-1306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1306"><a href="http://ic.sjtu.edu.cn/ic/%e5%8a%9e%e4%ba%8b%e6%8c%87%e5%8d%97/%e8%b4%a2%e5%8a%a1%e8%a1%8c%e6%94%bf%e7%b1%bb/">财务行政类</a></li></ul></li></ul></div>			<select class="selectnav"><option value="/">Select Page</option><option value="http://ic.sjtu.edu.cn/ic" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-2300">首页</option><option value="http://ic.sjtu.edu.cn/english" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2442">&#151; School of MicroElectronics (English Version)</option><option value="http://202.120.46.8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2534">&#151; 旧版网站</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2291">学院概况</option><option value="http://ic.sjtu.edu.cn/ic/intro/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105">&#151; 学院简介</option><option value="http://ic.sjtu.edu.cn/ic/intro/%e5%ad%a6%e9%99%a2%e9%a2%86%e5%af%bc/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1259">&#151; 学院领导</option><option value="http://ic.sjtu.edu.cn/ic/intro/%e6%9c%ba%e6%9e%84%e8%ae%be%e7%bd%ae/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106">&#151; 行政机构</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2292">师资队伍</option><option value="http://ic.sjtu.edu.cn/ic/faculty/%e6%95%99%e5%b8%88%e5%90%8d%e5%bd%95/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110">&#151; 教师名录</option><option value="http://ic.sjtu.edu.cn/ic/faculty/%e5%ae%a2%e5%ba%a7%e6%95%99%e6%8e%88/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109">&#151; 客座教授</option><option value="http://ic.sjtu.edu.cn/ic/faculty/%e4%ba%ba%e6%89%8d%e6%8b%9b%e8%81%98/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108">&#151; 人才招聘</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2293">人才培养</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2895">&#151; 招生工作</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e6%8b%9b%e7%94%9f%e5%b7%a5%e4%bd%9c/%e6%9c%ac%e7%a7%91%e7%94%9f%e6%8b%9b%e7%94%9f/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1314">&#151; &#151; 本科生招生</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e6%8b%9b%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%85%a8%e6%97%a5%e5%88%b6%e7%a1%95%e5%a3%ab%e6%8b%9b%e7%94%9f/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1312">&#151; &#151; 全日制硕士招生</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e6%8b%9b%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%8d%9a%e5%a3%ab%e7%a0%94%e7%a9%b6%e7%94%9f%e6%8b%9b%e7%94%9f/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1329">&#151; &#151; 博士招生</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e6%8b%9b%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9c%a8%e8%81%8c%e5%b7%a5%e7%a8%8b%e7%a1%95%e5%a3%ab%e6%8b%9b%e7%94%9f/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1313">&#151; &#151; 在职工程硕士招生</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-81">&#151; 培养工作</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/%e6%9c%ac%e7%a7%91%e7%94%9f%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1317">&#151; &#151; 本科生培养工作</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/%e5%85%a8%e6%97%a5%e5%88%b6%e7%a1%95%e5%a3%ab%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1315">&#151; &#151; 全日制硕士培养工作</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/%e5%8d%9a%e5%a3%ab%e7%a0%94%e7%a9%b6%e7%94%9f%e5%9f%b9%e5%85%bb/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1332">&#151; &#151; 博士培养</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/%e5%9c%a8%e8%81%8c%e5%b7%a5%e7%a8%8b%e7%a1%95%e5%a3%ab%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1316">&#151; &#151; 在职工程硕士培养工作</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%ba%e5%9c%b0%e5%bb%ba%e8%ae%be/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82">&#151; 基地建设</option><option value="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%ae%9e%e9%aa%8c%e5%b9%b3%e5%8f%b0/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83">&#151; 实验平台</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2294">科研学术</option><option value="http://ic.sjtu.edu.cn/ic/%e7%a7%91%e7%a0%94%e5%9b%a2%e9%98%9f/%e5%b0%84%e9%a2%91%e5%92%8c%e6%a8%a1%e6%8b%9f%e9%9b%86%e6%88%90%e7%94%b5%e8%b7%af%e8%ae%be%e8%ae%a1%e6%8a%80%e6%9c%af/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93">&#151; 射频和模拟集成电路设计技术</option><option value="http://ic.sjtu.edu.cn/ic/%e7%a7%91%e7%a0%94%e5%9b%a2%e9%98%9f/%e6%95%b0%e5%ad%97%e7%94%b5%e8%b7%af%e8%ae%be%e8%ae%a1%e5%92%8csoc%e6%8a%80%e6%9c%af/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94">&#151; 数字电路设计和SOC技术</option><option value="http://icat.sjtu.edu.cn" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3120">&#151; Innovative Computer Architecture and Technology</option><option value="http://ic.sjtu.edu.cn/seas" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3720">&#151; 智慧电子与系统研究中心</option><option value="http://ic.sjtu.edu.cn/ic/%e7%a7%91%e7%a0%94%e5%9b%a2%e9%98%9f/%e7%94%9f%e7%89%a9%e7%94%b5%e8%b7%af%e4%b8%8e%e7%b3%bb%e7%bb%9f%e5%ae%9e%e9%aa%8c%e5%ae%a4/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95">&#151; 生物电路与系统实验室</option><option value="http://ic.sjtu.edu.cn/ic/%e7%a7%91%e7%a0%94%e5%9b%a2%e9%98%9f/%e5%85%88%e8%bf%9b%e4%bd%93%e7%b3%bb%e7%bb%93%e6%9e%84%e7%a0%94%e7%a9%b6/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92">&#151; 先进体系结构研究</option><option value="http://ic.sjtu.edu.cn/ic/semi" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3123">&#151; 半导体器件与工艺</option><option value="http://ic.sjtu.edu.cn/ic/msda" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1219">&#151; 混合信号设计自动化实验室Mixed-Signal Design Automation Research Lab</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2296">合作交流</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2896">&#151; 国际交流</option><option value="http://ic.sjtu.edu.cn/ic/%e5%90%88%e4%bd%9c%e4%ba%a4%e6%b5%81/%e5%9b%bd%e9%99%85%e4%ba%a4%e6%b5%81/%e4%ba%a4%e6%b5%81%e6%b4%bb%e5%8a%a8/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1322">&#151; &#151; 交流活动</option><option value="http://ic.sjtu.edu.cn/ic/%e5%90%88%e4%bd%9c%e4%ba%a4%e6%b5%81/%e5%9b%bd%e9%99%85%e4%ba%a4%e6%b5%81/%e8%81%94%e5%90%88%e5%8a%9e%e5%ad%a6/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1323">&#151; &#151; 联合办学</option><option value="http://ic.sjtu.edu.cn/ic/%e5%90%88%e4%bd%9c%e4%ba%a4%e6%b5%81/%e4%bc%81%e4%b8%9a%e5%90%88%e4%bd%9c/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-98">&#151; 企业合作</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2297">学生工作</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e8%83%bd%e4%bb%8b%e7%bb%8d/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1283">&#151; 职能介绍</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%ad%a6%e7%94%9f%e4%ba%8b%e5%8a%a1/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102">&#151; 学生事务</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%ad%a6%e7%94%9f%e5%85%9a%e5%bb%ba/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103">&#151; 学生党建</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9b%a2%e5%ad%a6%e6%b4%bb%e5%8a%a8/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1282">&#151; 团学活动</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9b%a2%e5%ad%a6%e6%b4%bb%e5%8a%a8/%e5%ad%a6%e9%99%a2%e5%9b%a2%e5%a7%94%e7%ae%80%e4%bb%8b/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1548">&#151; &#151; 学院团委简介</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9b%a2%e5%ad%a6%e6%b4%bb%e5%8a%a8/%e5%9b%a2%e5%ad%a6%e9%a3%8e%e9%87%87/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1547">&#151; &#151; 团学风采</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e5%9b%a2%e5%ad%a6%e6%b4%bb%e5%8a%a8/%e5%9b%a2%e5%ad%a6%e5%8a%a8%e6%80%81/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1546">&#151; &#151; 团学动态</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e4%b8%9a%e5%8f%91%e5%b1%95/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-104">&#151; 职业发展</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e4%b8%9a%e5%8f%91%e5%b1%95/%e7%94%9f%e6%b6%af%e7%82%b9%e7%81%af/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1545">&#151; &#151; 生涯点灯</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e4%b8%9a%e5%8f%91%e5%b1%95/%e5%b0%b1%e4%b8%9a%e5%85%ac%e5%91%8a/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1544">&#151; &#151; 就业公告</option><option value="http://ic.sjtu.edu.cn/ic/%e5%ad%a6%e7%94%9f%e5%b7%a5%e4%bd%9c/%e8%81%8c%e4%b8%9a%e5%8f%91%e5%b1%95/%e5%b0%b1%e4%b8%9a%e6%b5%81%e7%a8%8b/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1543">&#151; &#151; 就业流程</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2299">校友之家</option><option value="http://ic.sjtu.edu.cn/ic/%e6%a0%a1%e5%8f%8b%e4%b9%8b%e5%ae%b6/%e6%a0%a1%e5%8f%8b%e5%90%8d%e5%bd%95/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1310">&#151; 校友名录</option><option value="http://ic.sjtu.edu.cn/ic/%e5%be%ae%e7%94%b5%e5%ad%90%e5%ad%a6%e9%99%a22013%e5%b1%8a%e6%9c%ac%e7%a7%91%e6%af%95%e4%b8%9a%e7%94%9f%e7%95%99%e5%bf%b5/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2764">&#151; &#151; 微电子学院2013届本科生</option><option value="http://ic.sjtu.edu.cn/ic/%e6%a0%a1%e5%8f%8b%e4%b9%8b%e5%ae%b6/%e6%a0%a1%e5%8f%8b%e6%b4%bb%e5%8a%a8/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1311">&#151; 校友活动</option><option value="#" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2298">办事指南</option><option value="http://ic.sjtu.edu.cn/ic/%e5%8a%9e%e4%ba%8b%e6%8c%87%e5%8d%97/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb%e7%b1%bb/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1307">&#151; 人才培养类</option><option value="http://ic.sjtu.edu.cn/ic/%e5%8a%9e%e4%ba%8b%e6%8c%87%e5%8d%97/%e4%ba%ba%e4%ba%8b%e5%a4%96%e4%ba%8b%e7%b1%bb/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1308">&#151; 人事外事类</option><option value="http://ic.sjtu.edu.cn/ic/%e5%8a%9e%e4%ba%8b%e6%8c%87%e5%8d%97/%e7%a7%91%e7%a0%94%e4%ba%8b%e5%8a%a1%e7%b1%bb/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1305">&#151; 科研事务类</option><option value="http://ic.sjtu.edu.cn/ic/%e5%8a%9e%e4%ba%8b%e6%8c%87%e5%8d%97/%e8%b4%a2%e5%8a%a1%e8%a1%8c%e6%94%bf%e7%b1%bb/" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1306">&#151; 财务行政类</option></select>
+			<!-- Search Form -->
+				</div>
+		<div class="clear"></div>
+
+	</div>
+	<!-- Navigation / End -->
+
+</div>
+<!-- 960 Container / End -->
+<!-- 960 Container -->
+<div class="container">
+
+	<!-- Flexslider -->
+	<div class="sixteen columns">
+		<section class="slider">
+			<div class="flexslider home">
+				<ul class="slides">
+					<li><img src="http://ic.sjtu.edu.cn/ic/wp-content/uploads/2013/09/welcome2013.jpg" alt="" /><div class="slide-caption"><p>欢迎2014级新同学!</p></div></li><li><img src="http://ic.sjtu.edu.cn/ic/wp-content/uploads/2012/12/sawan-主页960.jpg" alt="" /><div class="slide-caption"><p>加拿大国家工程院、工程研究院两院院士Mohamad Sawan教授为交大学生授课</p></div></li><li><img src="http://ic.sjtu.edu.cn/ic/wp-content/uploads/2012/12/足球960.png" alt="" /><div class="slide-caption"><p>微电子学院院队在希望杯比赛中</p></div></li>					<!-- Slide -->
+				</ul>
+			</div>
+		</section>
+	</div>
+	<!-- Flexslider / End -->
+
+</div>
+<!-- 960 Container / End -->
+<!-- 960 Container -->
+<div class="container">
+	<div class="post home post-701 page type-page status-publish hentry" id="post-701" >
+		<p><div class="five columns  alpha">
+<ul class="tabs-nav"><li><a href="#tab1"><i class="mini-ico-th-large"></i> 科研团队</a></li>
+<li><a href="#tab2"><i class="mini-ico-th"></i> 精品课程</a></li></ul>
+<div class="tabs-container"><div class="tab-content" id="tab1"><div class="arrow_list"></p>
+<ul>
+<li>
+<h5><a href="http://ic.sjtu.edu.cn/ic/carfic">射频和模拟集成电路设计</a></h5>
+</li>
+<li>
+<h5><a title="数字电路设计和SOC技术" href="http://ic.sjtu.edu.cn/ic/%e7%a7%91%e7%a0%94%e5%9b%a2%e9%98%9f/%e6%95%b0%e5%ad%97%e7%94%b5%e8%b7%af%e8%ae%be%e8%ae%a1%e5%92%8csoc%e6%8a%80%e6%9c%af/">数字电路设计和SOC技术</a></h5>
+</li>
+<li>
+<h5><a href="http://ic.sjtu.edu.cn/ic/semi/">半导体器件与工艺</a></h5>
+</li>
+<li>
+<h5><a title="先进体系结构研究" href="http://icat.sjtu.edu.cn">先进体系结构研究</a></h5>
+</li>
+<li>
+<h5><a href="http://ic.sjtu.edu.cn/bicasl">生物电路与系统</a></h5>
+</li>
+<li>
+<h5><a href="http://ic.sjtu.edu.cn/ic/msda">混合信号设计自动化</a></h5>
+</li>
+</ul>
+<p></div></div>
+<div class="tab-content" id="tab2"><a class="metro-button mtr-small mtr-emerald mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/dic/" title="" target="_self">数字集成电路设计</a><a class="metro-button mtr-small mtr-yellow mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/analogdesign/" title="" target="_self">模拟集成电路设计</a><a class="metro-button mtr-small mtr-magenta mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/mm/" title="" target="_self">Multimedia</a><a class="metro-button mtr-small mtr-cyan mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/ppsa/" title="" target="_self">光电原理与传感器应用</a><a class="metro-button mtr-small mtr-red mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/rf/" title="" target="_self">Intro RFIC Design</a><a class="metro-button mtr-small mtr-cobalt mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/vlsi/" title="" target="_self">VLSI数字通信原理</a><a class="metro-button mtr-small mtr-brown mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/coa/" title="" target="_self">计算机组成与嵌入式</a><a class="metro-button mtr-small mtr-steel mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/spd/" title="" target="_self">半导体物理与器件</a></div></div>
+</div><div class="seven columns  alpha"> <div class="headline no-margin"><h3>  <a class="metro-button mtr-small mtr-crimson mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/blog/category/news-bulletin/news/" title="" target="_self">新闻动态</a></h3></div><ul class="display-posts-listing"><li class="listing-item"><a class="title" href="http://ic.sjtu.edu.cn/ic/blog/2015/10/10/%e7%8e%8b%e5%9b%bd%e5%85%b4%e5%89%af%e6%95%99%e6%8e%88%e5%bd%93%e9%80%89%e5%9b%bd%e9%99%85%e6%9c%9f%e5%88%8atbiocas%e5%89%af%e6%80%bb%e7%bc%96%e8%be%91/">王国兴副教授当选国际期刊TBioCAS副总编辑</a> <span class="date">( 2015-10-10 )</span></li><li class="listing-item"><a class="title" href="http://ic.sjtu.edu.cn/ic/blog/2015/05/19/%e4%b8%8a%e6%b5%b7%e4%ba%a4%e5%a4%a7%e9%a1%be%e9%97%ae%e6%95%99%e6%8e%88%e9%bb%98%e7%bd%95%e9%bb%98%e5%be%b7%e2%80%a2%e8%90%a8%e6%97%ba%e8%8e%b7%e4%b8%8a%e6%b5%b7%e5%b8%82%e5%9b%bd%e9%99%85%e7%a7%91/">上海交大顾问教授默罕默德•萨旺获上海市国际科技合作奖</a> <span class="date">( 2015-5-19 )</span></li><li class="listing-item"><a class="title" href="http://ic.sjtu.edu.cn/ic/blog/2015/04/14/3765/">微纳电子学系侯中宇获2015年上海交通大学校长奖</a> <span class="date">( 2015-4-14 )</span></li></ul></p>
+<p><div class="headline low-margin"><h3>  <a class="metro-button mtr-small mtr-crimson mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/blog/category/news-bulletin/bulletin/" title="" target="_self">通知公告</a></h3></div><ul class="display-posts-listing"><li class="listing-item"><a class="title" href="http://ic.sjtu.edu.cn/ic/blog/2015/09/16/2016%e5%b9%b4%e6%8b%9b%e6%94%b6%e6%8e%a8%e8%8d%90%e5%85%8d%e8%af%95%e6%94%bb%e8%af%bb%e7%a1%95%e5%a3%ab%e7%a0%94%e7%a9%b6%e7%94%9f%e6%9c%ac%e7%a7%91%e7%9b%b4%e5%8d%9a%e7%94%9f%e7%9a%84%e9%80%9a/">2016年招收推荐免试攻读硕士研究生/本科直博生的通知</a> <span class="date">( 2015-9-16 )</span></li><li class="listing-item"><a class="title" href="http://ic.sjtu.edu.cn/ic/blog/2015/06/09/2015%e5%b9%b4%e5%9c%a8%e8%81%8c%e5%b7%a5%e7%a8%8b%e7%a1%95%e5%a3%ab%e6%8b%9b%e7%94%9f%e7%ae%80%e7%ab%a0/">2015年在职工程硕士招生简章</a> <span class="date">( 2015-6-9 )</span></li><li class="listing-item"><a class="title" href="http://ic.sjtu.edu.cn/ic/blog/2015/05/21/2015%e5%b9%b4ic%e7%b2%be%e8%8b%b1%e5%a4%8f%e4%bb%a4%e8%90%a5%e6%8b%9b%e5%8b%9f%e5%85%ac%e5%91%8a/">2015年IC精英夏令营招募公告</a> <span class="date">( 2015-5-21 )</span></li></ul><br />
+</div></p>
+<div class="four columns  omega"></p>
+<p><a class="metro-button mtr-medium mtr-red mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/blog/2014/05/30/2014%e5%9c%a8%e8%81%8c%e5%b7%a5%e7%a8%8b%e7%a1%95%e5%a3%ab%e6%8b%9b%e7%94%9f%e7%ae%80%e7%ab%a0//" title="" target="_self">2015 在职工程硕士 招生</a></p>
+<p><a class="metro-button mtr-medium mtr-mauve mtr-square mtr-alignleft" href="http://ic.sjtu.edu.cn/ic/blog/2013/11/22/%e5%be%ae%e7%94%b5%e5%ad%90%e5%ad%a6%e9%99%a2%e6%88%90%e5%8a%9f%e4%b8%be%e5%8a%9e%e6%9a%96%e8%8a%af%e6%9a%96%e6%84%8f%e5%b8%88%e7%94%9f%e8%8a%82/" title="" target="_self">“暖芯暖意” &#8211; 师生节活动</a></p>
+<hr />
+<p><div class="circle_list"></p>
+<ul>
+<li><a href="http://edalab.sjtu.edu.cn">网上课程</a> / <a href="http://ic.sjtu.edu.cn/ic/faculty/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/">人才招聘</a> / <a href="http://ic.sjtu.edu.cn/ic/%e4%ba%ba%e6%89%8d%e5%9f%b9%e5%85%bb/%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/%e5%9c%a8%e8%81%8c%e5%b7%a5%e7%a8%8b%e7%a1%95%e5%a3%ab%e5%9f%b9%e5%85%bb%e5%b7%a5%e4%bd%9c/">在职工程硕士</a></li>
+<li><a href="http://www.sjtu.edu.cn/">上海交通大学</a> / <a href="http://jwc.sjtu.edu.cn">教务处</a> / <a href="http://www.gs.sjtu.edu.cn">研究生院</a></li>
+</ul>
+<p></div><br />
+</div><br class="clear" />
+	</div>
+	<!-- Post -->
+</div>
+</div>
+<!-- Wrapper / End -->
+
+
+<!-- Footer Start -->
+<div id="footer">
+
+	<!-- 960 Container -->
+	<div class="container">
+
+		<div class="four columns">
+			 <div id="text-6" class="widget widget_text">			<div class="textwidget"><li><a href="http://202.120.46.8">旧版网站</a> </li>
+<li><a href="http://ic.sjtu.edu.cn/english/">English Version</a></li></div>
+		</div>		</div>
+
+		<div class="four columns">
+			<div id="text-3" class="widget widget_text">			<div class="textwidget"><p>地址：上海市闵行区东川路600号<br />
+邮编：200240</p>
+</div>
+		</div>		</div>
+
+
+		<div class="four columns">
+			<div id="text-5" class="widget widget_text">			<div class="textwidget"><p>电话：86-21-34204546<br />
+传真：86-21-34204719</p>
+</div>
+		</div>		</div>
+
+		<div class="four columns">
+			<div id="search-3" class="widget widget_search"><div class="search">
+	<form method="get" id="searchform" action="http://ic.sjtu.edu.cn/ic/">
+		<input name="s" id="s" placeholder=""  type="text" class="text"/>
+	</form>
+</div></div>		</div>
+
+		<div class="sixteen columns">
+			<div id="footer-bottom">
+				© Copyright  2013 上海交通大学微电子学院   沪交ICP备 05164 05179				<div id="scroll-top-top"><a href="#"></a></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- 960 Container End -->
+
+</div>
+<!-- Footer End -->
+
+
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/jquery.flexslider-min.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/twitter.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/tooltip.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/effects.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/fancybox.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/carousel.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/jquery.isotope.min.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://ic.sjtu.edu.cn/ic/wp-content/themes/Centum/js/custom.js?ver=4.3.1'></script>
+
+</body>
+</html>

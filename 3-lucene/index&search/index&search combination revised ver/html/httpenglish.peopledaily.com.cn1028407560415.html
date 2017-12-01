@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta name="copyright" content="" />
+<meta name="description" content="&nbsp;&nbsp;Aboutus　&nbsp;IntroductiontoPeople.cnPeople.cn,foundedonJan.1,1997,isalarge-scaleinforma" />
+<meta name="keywords" content="" />
+<meta name="filetype" content="0">
+<meta name="publishedtype" content="1">
+<meta name="pagetype" content="1">
+<meta name="catalogs" content="F_102840">
+<meta name="contentid" content="F_7560415">
+<meta name="publishdate" content="2011-08-04">
+<meta name="author" content="F_467">
+<meta name="source" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>About us - People's Daily Online</title>
+<link href="/img/2011english/page.css" type="text/css" rel="stylesheet" media="all" />
+<script src="/css/searchforeign.js"></script>
+<script src="/img/2011english/list.js" language="javascript" type="text/javascript"></script>
+<script src="/css/2006english/content.js" language="javascript" type="text/javascript"></script>
+<script src="/img/2011english/swfobject.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function AXzhz(hideme)
+{
+var AX=document.all(hideme); //声明一个变量
+AX.style.display=AX.style.display=="none"?"":"none"; //判断是否隐藏
+}
+//-->
+</script>
+<script language="javascript" type="text/javascript" src="/css/2006english/content.js"></script>
+<!--留言-->
+<script language="javascript" type="text/javascript">
+<!--
+function clearliuyan1(){
+	var isIE=true;
+	var link="http://comments.people.com.cn/bbs_new/app/src/main/?action=list&uid=102840";
+	if(!document.all)isIE=false;
+	if(isIE){
+	try{
+		document.domain = "people.com.cn";
+			var iframedocument=document.getElementById("liuyan1").contentWindow.document;
+			var content=iframedocument.getElementById("pn").innerText;
+			document.getElementById("people_show_bbs_count").textContent='(<a href="'+ link +'">'+ content +'comments</a>)';
+			if(parseInt(content)!=0){document.getElementById("bbscount1").innerText=content;}
+		}catch(ex){}
+	}
+	else{
+		try{
+		document.domain = "people.com.cn";//
+			var iframedocument=document.getElementById("liuyan1").contentWindow.document;
+			var content=iframedocument.getElementById("pn").textContent;
+			document.getElementById("people_show_bbs_count").textContent='(<a href="'+ link +'">'+ content +'comments</a>)';
+			if(parseInt(content)!=0){document.getElementById("bbscount1").textContent=content;}
+		}catch(ex){}
+	}
+}
+-->
+</script>
+<script language="javascript" type="text/javascript">
+<!--
+function go(){
+if (document.form1.content.value==null || document.form1.content.value=="" ) {
+		alert("Please write your message!");
+		return;
+	}
+	 else {
+		document.form1.submit();
+		}
+}
+function chakan()
+{
+window.open(url="http://posts.people.com.cn/bbs_new/app/src/main/?action=list&bid=4371684&channel_id=102840&id=7560415&lang=english");
+}
+-->
+</script>
+</head>
+<body>
+<!--ad-->
+<div class="width980 ad01 clear"><script type="text/javascript">
+var isIE = (document.all) ? true : false;
+
+var $ = function (id) {
+	return "string" == typeof id ? document.getElementById(id) : id;
+};
+
+var Class = {
+	create: function() {
+		return function() { this.initialize.apply(this, arguments); }
+	}
+}
+
+var Extend = function(destination, source) {
+	for (var property in source) {
+		destination[property] = source[property];
+	}
+}
+
+var Bind = function(object, fun) {
+	return function() {
+		return fun.apply(object, arguments);
+	}
+}
+
+var Each = function(list, fun){
+	for (var i = 0, len = list.length; i < len; i++) { fun(list[i], i); }
+};
+
+
+//ie only
+var RevealTrans = Class.create();
+RevealTrans.prototype = {
+  initialize: function(container, options) {
+	this._img = document.createElement("img");
+	this._a = document.createElement("a");
+	
+	this._timer = null;//计时器
+	this.Index = 0;//显示索引
+	this._onIndex = -1;//当前索引
+	
+	this.SetOptions(options);
+	
+	this.Auto = !!this.options.Auto;
+	this.Pause = Math.abs(this.options.Pause);
+	this.Duration = Math.abs(this.options.Duration);
+	this.Transition = parseInt(this.options.Transition);
+	this.List = this.options.List;
+	this.onShow = this.options.onShow;
+	
+	//初始化显示区域
+	this._img.style.visibility = "hidden";//第一次变换时不显示红x图
+	this._img.style.width = this._img.style.height = "100%"; this._img.style.border = 0;
+	this._img.onmouseover = Bind(this, this.Stop);
+	this._img.onmouseout = Bind(this, this.Start);
+	isIE && (this._img.style.filter = "revealTrans()");
+	
+	this._a.target = "_blank";
+	
+	$(container).appendChild(this._a).appendChild(this._img);
+  },
+  //设置默认属性
+  SetOptions: function(options) {
+	this.options = {//默认值
+		Auto:		true,//是否自动切换
+		Pause:		5000,//停顿时间(微妙)
+		Duration:	1,//变换持续时间(秒)
+		Transition:	23,//变换效果(23为随机)
+		List:		[],//数据集合,如果这里不设置可以用Add方法添加
+		onShow:		function(){}//变换时执行
+	};
+	Extend(this.options, options || {});
+  },
+  Start: function() {
+	clearTimeout(this._timer);
+	//如果没有数据就返回
+	if(!this.List.length) return;
+	//修正Index
+	if(this.Index < 0 || this.Index >= this.List.length){ this.Index = 0; }
+	//如果当前索引不是显示索引就设置显示
+	if(this._onIndex != this.Index){ this._onIndex = this.Index; this.Show(this.List[this.Index]); }
+	//如果要自动切换
+	if(this.Auto){
+		this._timer = setTimeout(Bind(this, function(){ this.Index++; this.Start(); }), this.Duration * 1000 +   this.Pause);
+	}
+  },
+  //显示
+  Show: function(list) {
+	if(isIE){
+		//设置变换参数
+		with(this._img.filters.revealTrans){
+			Transition = this.Transition; Duration = this.Duration; apply(); play();
+		}
+	}
+	this._img.style.visibility = "";
+	//设置图片属性
+	this._img.src = list.img; this._img.alt = list.text;
+	//设置链接
+	!!list["url"] ? (this._a.href = list["url"]) : this._a.removeAttribute("href");
+	//附加函数
+	this.onShow();
+  },
+  //添加变换对象
+  Add: function(sIimg, sText, sUrl) {
+	this.List.push({ img: sIimg, text: sText, url: sUrl });
+  },
+  //停止
+  Stop: function() {
+	clearTimeout(this._timer);
+  }
+};
+
+
+</script>
+<style type="text/css">
+.container{
+	width:980px;
+	height:80px;
+	border:0;
+	position:relative;
+        overflow:hidden;
+}
+
+
+</style>
+<div id="idShow" class="container"></div>
+<script>
+var r = new RevealTrans("idShow");
+//添加变换对象
+
+r.Add('/mediafile/201207/11/F201207111509358128132852.jpg', ' ', '  http://english.people.com.cn/102775/205557/index.html');
+r.Start();
+
+r.Add('/mediafile/201204/16/F201204161541533265025480.jpg', ' ', '  http://english.people.com.cn/102775/100668/204459/index.html');
+r.Start();
+
+r.Add('/mediafile/201112/31/F201112311327216291559115.jpg', ' ', '  http://english.people.com.cn/102775/203908/index.html');
+r.Start();
+
+r.Add('/mediafile/201005/17/F201005170803181194618522.jpg', ' ', '  http://en.ynta.gov.cn/default.aspx');
+r.Start();
+
+</script></div>
+<!--nav-->
+<div class="nav01 clear">
+	<div class="width980 clear">
+    	<div class="nav01_left"><a href="http://english.peopledaily.com.cn/" target="_blank"><img src="/img/2011english/images/logo.gif" alt="" /></a></div>
+        <div class="nav01_right">
+        	<p class="one"><span><a style="cursor:hand;" onclick="var strHref=window.location.href;this.style.behavior='url(#default#homepage)';this.setHomePage('http://english.peopledaily.com.cn/');" href="#">Set as Homepage</a>|<a href="http://shifu.people.com.cn/register.php" target="_blank">Register</a>|<a href="http://shifu.people.com.cn/logging.php?action=login" target="_blank">Sign In</a></span><em><a href="http://www.people.com.cn/" target="_blank">Chinese</a>|<a href="http://www.people.com.cn/BIG5/" target="_blank">Big 5</a>|<a href="http://french.peopledaily.com.cn/" target="_blank">French</a>|<a href="http://russian.people.com.cn/" target="_blank">Russian</a>|<a href="http://spanish.peopledaily.com.cn/" target="_blank">Spanish</a>|<a href="http://j.people.com.cn/" target="_blank">Japanese</a>|<a href="http://arabic.people.com.cn/" target="_blank">Arabic</a>|<a href="http://kr.people.com.cn/" target="_blank">Korean</a></em></p>
+            <p class="two"><span><a href="/90785/index.html" target="_blank">China Politics</a>|<a href="/102775/index.html" target="_blank">Special Coverage</a>|<a href="/102759/index.html" target="_blank">PD Online Database</a>|<a href="http://shifu.people.com.cn/" target="_blank">Forum</a></span><em><a href="mailto:english@people.cn" target="_blank"><img src="/img/2011english/images/icon03.gif" alt="" />Feedback</a><a href="http://www.people.com.cn/rss/opml_en.xml" target="_blank"><img src="/img/2011english/images/icon04.gif" alt="" />RSS</a></em></p>
+        </div>
+  	</div>
+</div>
+<div class="width980 nav02 clear">
+	<div><form action="http://search.people.com.cn/rmw/GB/foreignsearch/languagesearch.jsp" name="MLSearch" method="post" onSubmit="if(getParameter_DJ(document.MLSearch)==false) return false;">
+<input type="hidden" name="language" value="2"/>
+<input type="hidden" name="sitename" value="english"/>
+<input type="hidden" name="XMLLIST">&nbsp;<img src="/img/2011english/images/icon06.gif" alt="" />&nbsp;<input type="text" name="names" id="names" class="one" value="" />&nbsp;<input type="image" name="button" id="button" value="search" src="/img/2011english/images/icon05.gif" /></form></div>
+    <p><a href="/90783/index.html" target="_blank" class="one">Photos</a><a href="/90786/index.html" target="_blank">Military</a><a href="/90883/index.html" target="_blank">Foreign Affairs</a><a href="/business/index.html" target="_blank">Business</a><a href="/90882/index.html" target="_blank">Society</a><a href="/90782/index.html" target="_blank">Life&Culture</a><a href="/205040/index.html" target="_blank">Travel</a><a href="/202936/index.html" target="_blank">Science</a></p>
+</div>
+<!--new-->
+<div class="width978 news clear">
+	<div class="news_left">
+    	<b><a href="/102842/index.html" target="_blank">Latest News:</a>&nbsp;&nbsp;</b>
+        <div>
+        	<ul id="listmar"><li><a href='/n/2014/1125/c90882-8813687.html' target=_blank>Driver's license reform aims at curbing graft</a></li>
+<li><a href='/n/2014/1125/c90000-8813686.html' target=_blank>Report outlines regional terror crackdown</a></li>
+<li><a href='/n/2014/1125/c90777-8813680.html' target=_blank>Kitty exhibition held in Minsk</a></li>
+<li><a href='/n/2014/1125/c90777-8813679.html' target=_blank>Islamic State conflict high on New Zealand-U.S. defense talks agenda</a></li>
+<li><a href='/n/2014/1125/c90779-8813677.html' target=_blank>Anti-doping agency says no cover-up of Sun's ban</a></li>
+<li><a href='/n/2014/1125/c90777-8813675.html' target=_blank>Australian women under represented in management: report</a></li>
+<li><a href='/n/2014/1125/c90777-8813674.html' target=_blank>Daily life of DPRK's capital</a></li>
+<li><a href='/n/2014/1125/c90777-8813673.html' target=_blank>EU to fund Myanmar's development programs</a></li>
+<li><a href='/n/2014/1125/c90882-8813668.html' target=_blank>Restaurant explosion kills 3 in east China</a></li>
+<li><a href='/n/2014/1125/c90782-8813657.html' target=_blank>Newly-married Gao Yuanyuan expects for special role</a></li>
+
+</ul>
+        </div>
+    </div>
+    <div class="news_right"></div>
+    <script type="text/javascript">
+	<!--   
+	new simpleScroll("listmar",25,10,1);   
+	-->
+    </script>
+</div>
+<!--d2-->
+<div class="width980 d3_content clearfix clear">
+   		<h2 class="p2_1 d2_1 clear"><span><a href="http://english.peopledaily.com.cn/" target="_blank">People's Daily Online</a>&gt;&gt;<a href="http://english.people.com.cn/102840/">Help</a></span><em></em></h2>
+            <p>
+	&nbsp;</p>
+<br />
+<p>
+	<meta content="zh-cn" http-equiv="Content-Language" />
+</p>
+<p>
+	<meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+</p>
+<p>
+	<title></title>
+</p>
+<table border="0" cellpadding="0" cellspacing="0" height="76" width="960">
+	<tbody>
+		<tr>
+			<td bgcolor="#C91714" height="70" width="916">
+				<p align="left">
+					<font color="#FFFFFF" face="Arial Black" size="6">&nbsp;</font><font color="#FFFFFF" face="Arial" size="6">About us</font></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	　</p>
+<table border="0" id="table1" width="960">
+	<tbody>
+		<tr>
+			<td align="left" bgcolor="#EAEAEA" height="50px">
+				<font face="Arial">&nbsp;Introduction to People.cn</font></td>
+		</tr>
+		<tr>
+			<td align="left" height="50px">
+				<font face="Arial">People.cn, founded on Jan. 1, 1997, is a large-scale information interaction platform constructed by People’s Daily – one of the world’s top ten newspapers. It is also one of the largest comprehensive Internet media on the Internet. As a leading key news website in China, it upholds the belief "authority and strength originate from the people". With "authority, popularity and credibility" as tenet, it takes "multiple languages, all media forms, globalization and full coverage" as objectives, and "disseminating China’s news and covering world news" as its mission. On June 20, 2008, during his inspection tour of People.cn, President Hu Jintao said, "People.cn has played a unique role in advocating the Party's belief, guiding public opinion and warmly serving netizens since inception."<br />
+				<br />
+				People.cn offers 16 versions in 15 languages including Chinese (simplified and traditional), Mongolian, Tibetan, Uygur, Kazakh, Korean, Yi, Zhuang, English, Japanese, French, Spanish, Russian, Arabic and Korean. It publishes news in the form of text, picture, animation, audio and video, BBS, blog, microblog, podcast, talk bar, mobile phone, RSS and webcast. Empowered by no less than 70 bureaus home and abroad, it publishes news the moment they take place to global Internet users covering politics, economy, society and culture around the clock.<br />
+				<br />
+				Qiangguo Forum (Strong China Forum), regarded as “the most renowned forum in Chinese language”, is the first forum on politics built by Chinese Internet media. On June 20, 2008, General Secretary of the Central Committee of the Chinese Communist Party Hu Jintao talked with netizens through Qiangguo Forum. He said, "Although I am too busy to browse the Internet every day, I try to spend some time on the web. I would particularly like to say that Qiangguo Forum of People.cn is one of the websites I choose to visit."<br />
+				<br />
+				Launched on July 1, 2006, the News of Communist Party of China website features six sections: news release, theories, database of Party history, interaction, online services and multiple language services. Aside from traditional and simplified Chinese versions, it publishes news in Mongolian, Tibetan, Uygur, Kazakh, Korean, Yi, Zhuang, English, Japanese and Russian, making it the most comprehensive and systematic website about the Communist Party of China (CPC).<br />
+				<br />
+				The central websites group comprising CPC News, NPC News, China Government News, CPPCC News, Trade Union News as well as Women's Federation News has become a crucial way to release important news of China, interpret government policies and laws, and facilitate exchanges between the government and the general public.<br />
+				<br />
+				The message board for local leaders is a message system for leader and cadres nationwide, enabling government and Party officials at province and city level to communicate with netizens on their own web pages. So far, the service has been extended to 2,200 officials at county level nationwide. As of June 2012, a total of 51 provincial Party chiefs and provincial governors and nearly 1,000 officials at mayor and county level have responded to netizens’ messages publicly. A total of 19 provinces, autonomous regions and cities have institutionalized the handling of netizens’ message by issuing documents. In 2011 alone, 45,000 issues reported on the message board got replies for officials and were resolved. It has become the first choice for netizens to contact officials to express their opinions, and the most eye-catching platform where officials and general public can communicate with each other.<br />
+				<br />
+				People.cn launched microblog service in February 2010, becoming the first central website that offers the service. With functions such as information sharing, news tweet, tie up with mobile phone and instant messengers, it has attracted 5 million users. With political contents as a distinctive feature, it aims the elite groups of society, strives to forge the voice of authority and is dedicated to broadening the new channel for communication between Party and government departments and the people. More than 4,000 Party and government departments (including six ministries and commissions), 6,000 officials (60 at or above vice minister level) have communicated with Internet users through the microblog, making it the first choice of the officials who want to know about ideas and suggestions from the people.<br />
+				<br />
+				Following the tide of digitalization and all media, People.cn is striving to build an interactive system featuring web 2.0 technologies. The rich and varied new media service including TV, blog, mobile phone internet, mobile phone forum, mobile phone television, mobile phone newspaper, mobile phone game, mobile phone cartoon, mobile phone music and mobile phone short message service. In 2012, People.cn launched an App for mobile phone users, opening the era of palm reading.<br />
+				<br />
+				People.cn has been granted the license for publication of audio-visual programs through the Internet or other information network, license for radio and TV program production and business operation, and license for video and audio programs for 3G phones. To further improve the ability for live web casting and timely coverage, People.cn is equipped with satellite-mounted vehicle and equipment for 3G wireless broadcast. The website is the only Internet media that performed live broadcast of the launch of the Shenzhou-9 spacecraft.<br />
+				<br />
+				Peoples.cn has set up "People.cn Scholarship" in Renmin University, Peking University, Tsinghua University, China University of Communications, Wuhan University, Fudan University, Nanjing University, Huazhong University of Science and Technology, Beijing University of Posts and Telecommunications and Central Academy of Fine Arts, in an effort to boost ties with the academic circle, and encourage the faculties and students to study Internet media. Peoples.cn is also a teaching base for the Party School of the Communist Party of China and National School of Administration.<br />
+				<br />
+				People.cn owns three companies – Peopleyuqing.com, People Video, and Huanqiu.com - and has established local branches in provinces and cities across China. It has strived to promote global deployment by setting up bureaus and studios in Japan, the United States, West Coast of the United States, South Korea, the United Kingdom and South Africa, which significantly boosts its ability to disseminate internationally and influence.<br />
+				<br />
+				On April 27, 2012, People.cn went public at the Shanghai Stock Exchange (code: 603000), setting two records at the capital market of China by becoming the first news website listed on the A share market and the first media company that went on public as a whole on the A share market.<br />
+				<br />
+				In the past decade, People.cn's influence has kept on growing at home and abroad. It has formed a stable and extensive readers group consisting of users from 200 countries and regions in the world. The website has been awarded the "most influential news website", "the most respected central website in China", “the most valuable new media” and "the most professional news website in China’s wireless Internet". It has been multi-time winner of "self-discipline award in Internet industry"; "Qiangguo Forum", "Peoples' Commentary" and "News of Communist Party of China" were awarded "brand programs of China's Internet service. “ The website has also won a number of national honors including “National advanced unit of spiritual civilization construction”, “National model small home for workers”, and “National youth civilization unit.” (Based on information as of July 2012.)</font><br />
+				　</td>
+		</tr>
+		<tr>
+			<td align="left" bgcolor="#EAEAEA" height="50px">
+				<font face="Arial">&nbsp;People's Daily Online English Edition</font></td>
+		</tr>
+		<tr>
+			<td align="left" height="50px">
+				<font face="Arial">Mail Address: Jintaixi Road #2, Chaoyang District, Beijing, 100733, People's Republic of China </font>
+				<p>
+					<font face="Arial">Email:</font> <font face="Arial"> <a href="mailto:englishpd@163.com">englishpd@163.com</a></font></p>
+				<p>
+					<font face="Arial">Tel: +8610-65363691 </font></p>
+			</td>
+		</tr>
+		<tr>
+			<td height="1px">
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p align="left" style="line-height: 150%">
+	<font face="Arial"><font color="#C91714"><b>&nbsp;&nbsp;&nbsp; </b> </font></font></p>
+<br />
+
+</div>
+<!--copyright-->
+<div id="copyright"><a href="/102840/7560415.html"  target="_blank">About Us</a>| <a href="/102840/7560413.html"  target="_blank">Contact Us</a>| <a href="/102840/7560418.html"  target="_blank">Site Map</a>| <a href="/102840/7560414.html"  target="_blank">Advertise on site</a>| <a href="/102840/7832549.html"  target="_blank">Job Offer</a><br>
+Copyright by People's Daily Online, All Rights Reserved 
+</div>
+<img src="http://58.68.146.44:8000/d.gif?id=7560415" width=0 height=0>
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>

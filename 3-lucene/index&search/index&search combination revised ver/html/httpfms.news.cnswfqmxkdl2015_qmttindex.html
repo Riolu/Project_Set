@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta content="width=device-width,user-scalable=no" name="viewport"> 
+<meta name="keywords"content="全媒头条,新华网,小康,十三五,民生">
+<meta name="”format-detection”" content="”telephone=no”">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<title>改革为全面建成小康催生强大动力</title>
+<script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,0); } 
+</script>
+<script type="text/javascript" src="http://fms.news.cn/swf/xxfsd2015_qmtt/js/jquery.min.js"></script>
+
+<!-- bxSlider Javascript file -->
+<script src="http://fms.news.cn/swf/xxfsd2015_qmtt/js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link rel="stylesheet" href="http://fms.news.cn/swf/xxfsd2015_qmtt/css/jquery.bxslider.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="http://fms.news.cn/swf/xxfsd2015_qmtt/css/animate.css">
+<script src="http://fms.news.cn/swf/xxfsd2015_qmtt/js/modernizr.custom.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.bxslider').bxSlider({
+		  auto: true,
+		  autoControls: false
+		});
+	    var wid = $(window).width();
+	    if (wid > 600) {
+	    	$('#open').click(function(){
+				$('#zdg #zdg_con .none').fadeIn();
+				$('#zdg #zdg_con #open').fadeOut();
+				$('#zdg #zdg_con #close').fadeIn();
+		    });
+		    $('#close').click(function(){
+				$('#zdg #zdg_con .none').fadeOut();
+				$('#zdg #zdg_con #close').fadeOut();
+				$('#zdg #zdg_con #open').fadeIn();
+		    });
+	    }else{
+	    	$('#open').click(function(){
+		        $('#div2').fadeIn();
+		        $('.main,.top,.body_bg,#sp,.footer').hide();
+		        $('body').animate({'scrollTop':0});
+		    });
+		    $('#back').click(function(){
+		        $('#div2').hide();
+		        $('.main,.top,.body_bg,#sp,.footer').fadeIn();
+		        $('body').animate({'scrollTop':1400});
+		    });
+	    };
+	    $(".nav").hover(function(){
+			$(this).find(".content").stop().slideDown();
+		},function(){
+			$(this).find(".content").stop().hide();
+		});
+		var elm = $('.sidebar'); 
+	    var startPos = $(elm).offset().top; 
+	    $.event.add(window, "scroll", function() { 
+	        var p = $(window).scrollTop(); 
+	        $(elm).css('position',((p) > startPos) ? 'fixed' : 'static'); 
+	        $(elm).css('top',((p) > startPos) ? '50px' : ''); 
+	    });
+	    var vsrc = '<iframe id="iframe1" src="http://vod.xinhuanet.com/v/vod.html?vid=332716" width="620" height="470" scrolling="no" frameborder="0"></iframe>';
+        $(".vid_src").click(function(){
+            $(this).html(vsrc);
+        });
+        var html = $('#zdg_con').html();
+        $('#div2_con').append(html)
+
+        $('#share,.share-con').hover(function(){
+        	$(this).find(".share-con").show();
+        },function(){
+			$(this).find(".share-con").hide();
+		})
+	});
+</script>
+</head>
+
+<body>
+    <!--导航条-->
+	<div class="top">
+	    <div class="top_con">
+	    	<div class="left fl">
+	    	    <a href="http://www.xinhuanet.com/politics/qmtt/index.htm" target="_blank"><img src="images/logo222.png"></a>
+			</div>
+			<div class="right fr">
+    	    	<p><a href="http://www.news.cn/" target="_blank">新华网</a>出品</p>
+    	    	<div class="nav">
+			        <img src="images/nav.jpg">
+			        <div class="content">
+			            <ul  class="wid_600">
+			                <li><a href="#zdg">主打稿</a></li>
+			                <li><a href="#one">高清图集</a></li>
+			    	    	<li><a href="#three">相关链接</a></li>
+			    	    	<!-- <li><a href="#four">“数据小康”和“全面小康”还差在哪</a></li> -->
+			    	    	<li><a href="#five">相关专题</a></li>
+			            </ul>
+			        </div>
+			    </div>
+			</div>
+	    </div>
+	</div>
+
+	<!--封面标题图-->
+	<div class="body_bg">
+		<img src="images/bg.jpg">
+	</div>
+
+	<!--自适应width=600-->
+	<div id="div2">
+		<div id="div2_con"></div>
+    	<div id="back">
+	    	<p>【返回】</p>
+	    </div>
+	</div><!--div2,end-->
+	<div id="share">
+        <p class="nc_icon1">一键分享</p>
+        <div class="share-con">
+			<a title="复制链接" href="javascript:void(0)" onclick="copyLink()"><span class="copylink"></span></a>
+			<a title="分享到腾讯微博" href="javascript:void(0)" onclick="postToWb();"><span class="tengxunweibo"></span></a>
+			<a title="分享到新浪微博" href="javascript:void(0);"><span class="xinlang"></span></a>
+			<a title="分享到搜狐微博" href="javascript:void((function(s,d,e,r,l,p,t,z,c){var f='http://t.sohu.com/third/post.jsp?',u=z||d.location,p=['&url=',e(u),'&title=',e(t||d.title),'&content=',c||'gb2312','&pic=',e(p||'')].join('');function%20a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=660,height=470,left=',(s.width-660)/2,',top=',(s.height-470)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,'','','','','','utf-8'));"><span class="sohu"></span></a>
+			<a title="分享到网易微博" href="javascript:void(0);"><span class="wangyi"></span></a>
+			<a title="分享到Qzone空间" href="javascript:void(0);"><span class="qqzone"></span></a>
+			<a title="分享到朋友社区" href="javascript:void(0);"><span class="qqpengyou"></span></a>
+			<a title="分享到人人网" href="javascript:void(0);"><span class="renren"></span></a>
+			<a title="分享到微信" href="javascript:void(0);"><span class="kaixin"></span></a>
+			<a title="分享到淘江湖" href="javascript:void(0);"><span class="taojianghu"></span></a>
+			<a title="分享到豆瓣" href="javascript:void(0);"><span class="douban"></span></a>
+			<a title="分享到百度收藏" href="javascript:void(0);"><span class="baidusoucang"></span></a>
+		</div>
+    </div>
+	<div class="main">
+	    <!--左侧悬浮导航-->
+	    <div class="sidebar">
+	    	<ul>
+	    		<li><a href="#zdg"><p>主打稿</p></a></li>
+	    		<li><a href="#one"><p>高清图集</p></a></li>
+    	    	<li><a href="#three"><p>相关链接</p></a></li>
+    	    	<!-- <li><a href="#four"><p>“数据小康”和“全面小康”还差在哪</p></a></li> -->
+    	    	<li><a href="#five"><p>相关专题</p></a></li>
+	    	</ul>
+	    </div>
+	    <!-- <a href="http://comment.home.news.cn/nc/1-1116938679.html" class="nc_icon" id="nc_icon" target="_blank">我要评论</a> -->
+
+
+	    <!--主打稿-->
+	    <div id="zdg">
+	        <!--模块标题-->
+	    	<div class="main_head">
+				<div class="fl">
+					<p class="txt">主打稿</p>
+				</div>
+				<div class="fr">
+					<p>2015年10月27日</p>
+				</div>
+			</div>
+			<!--模块内容-->
+			<div id="zdg_con">
+				<div class="main_con">
+				    <div class="main_p">
+				    	<p>新华网北京１０月２７日电（记者赵晓辉、杨维汉、李延霞）改革激发活力，改革催生动力。</p>
+						<p>站在“十二五”即将收官、“十三五”即将开启的历史节点，面对新形势新问题新变化，中国将沿着全面深化改革之路，蹄急而步稳地坚定前行。</p>
+				    	<div class="vid_src">
+					    	<img src="images/111.jpg">
+					    </div>
+				    </div>
+				    <div class="main_con_head">
+					    <h2>“十二五”：改革“催化”强大发展动力</h2>
+				    </div>
+				    <div class="main_p">
+				    	<p>４８岁的王守森是安徽省肥东县合浦村村民，从１９８８年就开始在外打工的他，如今回乡承包了４０００多亩的土地，成为当地有名的种粮大户，收入比以前翻了五六倍。</p>
+						<p>流转给王守森土地的１０００多户农民，不仅获得了更高的租金收入，还有了空闲时间外出打工，收入节节攀高。</p>
+						<p>给王守森和乡亲们带来变化的是一项重大改革——农村土地制度改革。在这项旨在激活农村生产要素潜力、促进农民增收的改革推动下，广大农村的生产方式和生产关系正在发生重大变化。</p>
+						<p>而这，仅仅是“十二五”以来我国一系列重大改革举措的一个缩影。</p>
+						<p>“十二五”期间，我国经济社会发展面临着前所未有的复杂局面。世界经济处在金融危机后的深度调整期，复苏有待时日；中国经济告别３０多年来的超高速增长，“三期叠加”的阵痛持续加深，多重困难和挑战相互交织。</p>
+						<p>以习近平同志为总书记的党中央准确把握我国发展的阶段性特征和突出矛盾，保持战略定力，紧紧抓住经济体制改革的“牛鼻子”全面深化改革，加快转方式、调结构、稳增长的步伐。</p>
+						<p>经济换挡减速，改革快马加鞭。党的十八届三中全会的召开，掀起了全面深化改革的大潮，财税、金融、价格、投资、国企、科技等一批具有标志性、关键性、引领性的改革举措密集推出：</p>
+						<p>——财税体制改革率先攻坚，助力现代服务业与战略性新兴产业松绑提速；</p>
+						<p>——价格改革平稳推进，成品油、天然气、铁路运输等领域价格市场化程度显著提高；</p>
+						<p>——金融改革步伐加快，存款保险制度建立，利率市场化改革基本完成，积极发展民营银行和互联网金融，更好疏通经济血脉；</p>
+						<p>改革的“催化剂”，为站在历史关口的中国经济注入新的动力和活力，在国内外环境发生深刻变化的“十二五”期间，中国经济成功实现换挡调速、平稳前行，令世界瞩目。</p>
+						<p>英国《每日电讯报》刊文说，中国心甘情愿地采取全面的深度改革措施，来构建一个增长稍缓但质优的繁荣社会。中国在新常态时代成功转变增长模式将令自身和全世界受益。</p>
+						<p>民生连着民心，民心牵系国运。在推进经济转型升级的大棋局下，党中央从人民群众最关心、最期待的问题入手，不断推出一系列改革举措促进社会公平正义，增进人民福祉：</p>
+						<p>不断扩大公立医院改革试点、深化考试招生制度改革、统一的城乡居民基本养老保险制度在全国范围内初步建立，一项项重大改革举措，以前所未有的力度惠及百姓生活的方方面面。</p>
+						<p>改革，还体现在政府的“自我革命”。本届政府成立至今，已取消和下放８００多项行政审批事项，全部取消非行政许可审批。从推进地方政府权力清单制度到实施“三证合一”登记制度……一系列事关简政放权的改革取得实质性进展，大大激发了市场活力。</p>
+						<p>面对前所未有的严峻挑战，在各项行之有效的改革和声势浩大的转变中，中国实现了经济增长速度领先全球、经济结构优化升级、人民福祉大幅增加、绿色发展成效显著。</p>
+						<p>“环顾世界，没有一个国家能够像当今中国这样，以一种说到做到、只争朝夕的方式全面推进改革进程。”新加坡《联合早报》评价。</p>
+				    </div>
+				    <!--隐藏内容-->
+				    <div class="none">
+					    <div class="main_con_head">
+						    <h2>“十三五”：全面建成小康需要全面深化改革</h2>
+					    </div>
+					    <div class="main_p">
+					    	<div class="lh_img">
+						    	<img src="images/lh1.jpg">
+						    </div>
+					    	<p>“凡是过去，皆为序章”。</p>
+							<p>改革催生的不竭动力让中国在“十二五”时期交出了不俗答卷。站在新的历史起点上，中国这艘巨轮将承载着亿万人民的小康梦想破浪前行。</p>
+							<p>新的历史时期，迎来新的发展机遇。</p>
+							<p>在一些经济学家看来，未来五年，世界经济将从低速调整进入到温和增长期；新兴市场国家中可能会有一批经济体先后进入到中上等或者高收入国家；世界第三次科技革命将会带来很多机遇，以生物、信息、新材料技术、新能源技术为核心的产业技术革命将会催生新的经济增长点……</p>
+							<p>变化中有机遇，更有挑战。</p>
+							<p>环顾国际，今后一个时期，世界政治经济环境仍然比较复杂。世界经济在调整分化，主要经济体需求萎缩，深度融入世界市场的中国经济难以独善其身。</p>
+							<p>“一方面，一些发达国家实施工业４．０和再工业化战略，吸引高端制造不断回流，将会继续对中国形成高压效应；另一方面，一批中低收入国家利用劳动力、土地、环境资源和汇率，大力发展制造业，以比较优势吸引中低端制造业向这些国家转移，由此进一步强化对中国的供给替代效应。”国家发展改革委宏观经济研究院副院长马晓河说。</p>
+							<p>审视国内，一些深层次矛盾和问题不断显现，下行压力仍然较大，市场需求总体依然不振，工业领域价格和企业效益低迷，新旧增长动力接替尚需时日，结构调整阵痛仍会持续。</p>
+							<p>经济结构改革的作用正在显现，但仍需向深层次推动。</p>
+							<p>未来几年，产能过剩矛盾依然存在，结构调整、转型升级还要打一场攻坚仗。“在出口困难的情况下，如果消费没有大幅度增长，产能过剩矛盾可能还会持续。”马晓河说。</p>
+							<p>新矛盾新问题日益凸显，经济社会发展压力加大。</p>
+							<p>未来几年，可以预期的是，劳动成本继续上升，年轻和廉价的劳动力不断减少。人口红利的不断减弱，势必引起社会养老成本的增加。</p>
+							<p>俄罗斯高等经济学院东方学教研室主任阿列克谢·马斯洛夫认为，在可预见的未来，每个工作的中国人需要养活更多的退休人员。中国将不得不拿出更多资金养活老年人，这是阻碍中国经济增长的一个重要因素，要求从根本上改变经济结构和社会结构。</p>
+							<p>未来五年是全面建成惠及十几亿人口小康社会的决定性阶段，也是全国人民共享改革成果的重要时期。新的历史发展阶段对发展有着更高的诉求。</p>
+							<p>着眼未来，我们要实现更高质量的发展。</p>
+							<p>中国经济不仅要努力保持中高速增长，更要实现更加高效高质的增长，推动产业发展向中高端迈进，促进创新发展，让发展潜力充分释放，挖掘经济持续增长的新动能。</p>
+							<p>着眼未来，我们要实现更全面的发展。</p>
+							<p>在实现经济“双中高”的同时，努力实现经济、社会、环境协调发展，实现人与社会、人与自然和谐相处。</p>
+							<p>着眼未来，我们要实现更公平的发展。</p>
+							<p>发展的最终目的是为了人民。在消除贫困、保障民生的同时，维护社会公平正义，保证人人享有发展机遇、享有发展成果。</p>
+							<p>“改革进入深水区，制度约束已经成为中国经济发展的重要障碍。唯有继续深化改革开放，进一步释放制度红利，才是未来中国经济发展主要的‘动力源’。”北京工商大学经济学院教授周清杰说。</p>
+					    </div>
+					    <div class="main_con_head">
+						    <h2>砥砺奋进 攻坚克难</h2>
+					    </div>
+					    <div class="main_p">
+					    	<p>发展中的问题只有通过发展才能解决。当前，只有通过改革才能激发发展潜力，增强增长动力，培育新的核心竞争力，实现新的发展目标。</p>
+							<p>不久前，贵州省提高了一项补助标准——扶贫生态移民的贫困户，由之前的每人１．２万元提高到２万元。“十三五”期间，深山区、石山区１００多万贫困人口将“挪出穷窝”。</p>
+							<p>面对７０００多万贫困人口，“十三五”时期，扶贫将从原来的“大水漫灌”转为“精准滴灌”，国务院扶贫办副主任洪天云表示，只有改革，才能打通扶贫的“最后一公里”。</p>
+							<p>“十三五”时期是向全面建成小康社会冲刺的五年。攻坚克难，唯有改革。</p>
+							<p>“‘十三五’的时间点特别值得关注。”新加坡南洋理工大学副教授周兆呈说，过去几年，中国在改革的顶层设计上动作很大，接下来的“十三五”改革答卷，大家充满期待。</p>
+							<p>改革，必须放眼长远、夯实基础——</p>
+							<p>全面深化改革总目标，是摆在共产党人面前的时代命题。未来５年，从顶层设计的“蓝图”落实到“施工图”，需要更清晰的改革思路、缜密的改革布局、有力的改革举措，保障改革政策举措“落地生根”。</p>
+							<p>改革，需要向市场要活力，用创新驱动点燃发展“引擎”——</p>
+							<p>行政审批制度改革、财税体制改革、商事制度改革、金融领域改革、国有企业改革、新一轮土地制度改革、实施创新驱动发展战略……只有以全面深化改革主动适应新常态，才能更好引领中国经济发展步入新阶段。</p>
+							<p>改革，必须消除壁垒，维护社会公平正义——</p>
+							<p>一项户籍制度改革，延续半个世纪，关系亿万人口，涉及教育、医疗、就业、养老、住房等方方面面，可谓牵一发动全身；“精准扶贫”已上升为国家战略，一系列“超常规”改革政策举措蓄势待发；司法体制改革不再局限于机制性、技术性的修补，敢于向积存多年的顽瘴痼疾开刀……这些百姓心中所想所盼，在“十三五”全面建成小康社会的壮美画卷上，必将留下浓墨重彩。</p>
+							<p>改革，必须打通“最后一公里”，使发展成果更好共享——</p>
+							<p>全面建成小康，归根结底是不断增强人民群众的获得感、满足感、幸福感。更稳定的工作，更满意的收入，更可靠的社会保障，更高水平的医疗卫生服务，更舒适的居住条件……破解13亿人老有所养、病有所医、住有所居、学有所教、劳有所得的“世界性难题”，需要改革成果更好落地。</p>
+							<p>发展越关键，改革越迫切。展望“十三五”，13亿中国人民将继续吹响全面深化改革的最强音，砥砺奋进，攻坚克难，实现全面建成小康社会的宏伟目标。</p>
+				    	</div>
+				    </div>
+				    <div id="open">
+				    	<h3>———— 全文 ————</h3>
+				    </div>
+				    <div id="close">
+				    	<h3>———— 收起 ————</h3>
+				    </div>
+			    </div>
+			</div>
+	    </div>
+	    <div id="one">
+	    	<div class="main_head">
+	    		<div class="fl">
+	    			<p class="img">高清图集</p>
+	    		</div>
+	    	</div>
+	    	<div class="main_con">
+	    		<ul class="bxslider">
+	    			<li>
+	    				<img src="images/1.jpg">
+					    <p>在广西环江毛南族自治县大安乡可爱新村，一名老人站在新居家门口（2015年3月11日摄）。自2014年7月1日起，广西将城乡居民基本养老保险基础养老金最低标准由原来每人每月75元提高至90元。</p>
+	    			</li>
+	    			<li>
+	    				<img src="images/2.jpg">
+					    <p>一名老人在贵州省丹寨县扬武乡扶贫生态移民安置区的敬老院内纺织编织锦带（2014年1月9日摄）。一系列“精准扶贫”措施的推进，扶贫效果显著。2014年，贵州省减少贫困人口170万人，新增11个县、159个乡镇减贫摘帽。</p>
+	    			</li>
+	    			<li>
+	    				<img src="images/3.jpg">
+					    <p>这是上海自贸区的航拍照片（2015年9月19日摄）。上海自贸区在境外投资体制方面的创新，以及金融改革的先行先试，大大助推了企业“走出去”的步伐。</p>
+	    			</li>
+	    			<li>
+	    				<img src="images/4.jpg">
+					    <p>在宁夏贺兰县政务大厅，一名经营业主展示刚刚领到的“三证合一”营业执照（2015年5月12日摄）。“三证合一”是工商营业执照、组织机构代码证和税务登记证三证合一登记制度的简称，这一制度大幅简化办事流程，提高审批效能，有效激发社会投资创业活力。</p>
+	    			</li>
+	    			<li>
+	    				<img src="images/5.jpg">
+					    <p>河北省沧州市中心医院工作人员在药房内为患者取药（2015年5月31日摄）。根据国家发改委等部门《关于印发推进药品价格改革意见的通知》要求，2015年6月1日起，我国取消绝大部分药品政府定价，完善药品采购机制，发挥医保控费作用，药品实际交易价格主要由市场竞争形成。</p>
+	    			</li>
+	    			<li>
+	    				<img src="images/6.jpg">
+					    <p>在甘肃山丹县位奇镇高寨村一种植大户流转种植基地，工作人员在挑选马铃薯（2015年9月24日摄）。近年来，山丹县推动土地流转规模经营，形成“县有中心、乡有站、村有点”的三级土地流转服务体系，采用多种方式盘活农村土地资源。当地土地流转面积由2010年的10.8万亩逐渐增长到2015年的26.9万亩。</p>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    </div>
+
+
+        <div id="three" class="link_more">
+        	<div class="main_head">
+				<div class="fl">
+					<p class="txt">相关链接</p>
+				</div>
+			</div>
+		    <div class="main_con">
+		        <!--链接稿-->
+			    <div class="link">
+			    	<div class="fl link_img">
+			    		<img src="images/link1.jpg">
+			    	</div>
+			    	<div class="fr link_txt">
+			    		<div class="link_txt_til">
+			    			<p>新华社评论员：让全面小康照亮我们的梦想</p>
+			    		</div>
+			    		<p class="link_txt_con">新华网北京１０月２７日电 金秋的阳光普照大地，令人感到温暖而充实。这是收获的季节，也是规划未来的时刻。正在北京召开的党的十八届五中全会，研究关于制定“十三五”规划的建议，为中国未来５年乃至更长远的发展谋篇布局，举国关注，举世瞩目。在网上，在街巷，在工厂，在乡村，在全球各个角落，人们以各种方式关注这次重要会议。“下个五年值得期待”“‘十三五’规划与每个人密切相关”“冲刺２０２０”……人们的感言中，道出了共同的心声——全面建成小康，让中国梦更加精彩，让我们的生活更加美好。</p>
+			    		<div class="link_all">
+			    			<a href="http://news.xinhuanet.com/fortune/2015-10/27/c_128364575.htm" target="_blank"><p>查看全文</p></a>
+			    		</div>
+			    	</div>
+			    </div>
+			    <div class="link" style="border:0px">
+			    	<div class="fl link_img">
+			    		<img src="images/link2.jpg">
+			    	</div>
+			    	<div class="fr link_txt">
+			    		<div class="link_txt_til">
+			    			<p>五中全会六大看点</p>
+			    		</div>
+			    		<p class="link_txt_con">新华网北京１０月２６日电  根据今年１０月１２日中央政治局会议的决定，党的十八届五中全会于１０月２６日至２９日在北京召开。关于这次全会，视点君为你梳理六大看点——</p>
+			    		<div class="link_all">
+			    			<a href="http://news.xinhuanet.com/fortune/2015-10/26/c_1116942019.htm" target="_blank"><p>查看全文</p></a>
+			    		</div>
+			    	</div>
+			    </div>
+		    </div>
+        </div>
+
+        <!-- <div id="four" class="sjt">
+        	<div class="main_head">
+        				<div class="fl">
+        					<p class="img">“数据小康”和“全面小康”还差在哪？</p>
+        				</div>
+        			</div>
+        		    <div class="main_con">
+        		        链接
+        		        <div class="pic">
+        		        	<a href="http://news.xinhuanet.com/fortune/2015-09/24/c_128262915.htm" target="_blank"><img src="images/tj.jpg"></a>
+        		        </div>
+        		    </div>
+        </div> -->
+
+ 	
+		<div id="five" class="sjt">
+        	<div class="main_head">
+				<div class="fl">
+					<p class="img">专题：回眸十二五 展望十三五</p>
+				</div>
+			</div>
+		    <div class="main_con" style="background:none">
+		        <!--链接-->
+		        <div class="pic">
+		        	<a href="http://www.xinhuanet.com/fortune/jjssw/index.htm" target="_blank"><img  style="margin:0 auto" src="images/special_img.jpg"></a>
+		        </div>
+		    </div>
+        </div>
+
+        
+
+        
+	    
+	    
+
+	    <!--版权-->
+	    <div class="footer">
+	    	<p>Copyright  2000 - 2015 XINHUANET.com　All Rights Reserved.</p>
+	    	<p>版权所有：<a href="http://www.news.cn/" target="_blank">新华网</a></p>
+	    </div>
+	</div>
+	<script type="text/javascript" src="PC_share.js"></script>
+	<script src="http://fms.news.cn/swf/xxfsd2015_qmtt/js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+	<div style="display:none"><div id="fwl">010020050630000000000000011200000000000000</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020050630000000000000011200000000000000")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020050630000000000000011200000000000000" border="0" /></noscript></div>
+	
+</body>
+</html>

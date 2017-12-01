@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html id="ng-app" lang="en" ng-app="piwikApp">
+    <head>
+                        <meta charset="utf-8">
+            <title>Piwik Forums - Web Analytics Reports - Piwik</title>
+            <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1"/>
+            <meta name="viewport" content="initial-scale=1.0"/>
+            <meta name="generator" content="Piwik - free/libre analytics platform"/>
+            <meta name="description" content="Web Analytics report for Piwik&#x20;Forums - Piwik"/>
+            <meta name="apple-itunes-app" content="app-id=737216887" />
+            <meta name="google-play-app" content="app-id=org.piwik.mobile2">
+                            <meta name="robots" content="noindex,nofollow">
+            
+                <link rel="shortcut icon" href="plugins/CoreHome/images/favicon.ico"/>
+            <script type="text/javascript">
+    var piwik = {};
+    piwik.token_auth = "anonymous";
+    piwik.piwik_url = "http://demo.piwik.org/";
+    piwik.cacheBuster = "71a553a995217c339e558a6a86135db6";
+
+    piwik.numbers = {
+        patternNumber: "#,##0.###",
+        patternPercent: "#,##0%",
+        patternCurrency: "¤#,##0.00",
+        symbolPlus: "+",
+        symbolMinus: "-",
+        symbolPercent: "%",
+        symbolGroup: ",",
+        symbolDecimal: "."
+    };
+
+    piwik.userLogin = "anonymous";
+    piwik.idSite = "7";
+    piwik.siteName = "Piwik\x20Forums";
+    piwik.siteMainUrl = "http\x3A\x2F\x2Fforum.piwik.org";
+    piwik.period = "day";
+    piwik.currentDateString = "2015-10-27";
+    piwik.startDateString = "2015-10-27";
+    piwik.endDateString = "2015-10-27";
+    piwik.minDateYear = 2008;
+    piwik.minDateMonth = parseInt("12", 10);
+    piwik.minDateDay = parseInt("01", 10);
+    piwik.maxDateYear = 2015;
+    piwik.maxDateMonth = parseInt("10", 10);
+    piwik.maxDateDay = parseInt("28", 10);
+    piwik.language = "en";
+    piwik.hasSuperUserAccess = 0;
+    piwik.config = {};
+    piwik.config = {"action_url_category_delimiter":"\/","autocomplete_min_sites":5,"datatable_export_range_as_day":"rss","datatable_row_limits":["5","10","25","50","100","250","500"]};
+    piwik.languageName = 'English';
+var piwikUsageTracking = {"targets":[{"url":"https:\/\/demo-anonymous.piwik.org\/piwik.php","idSite":3}],"visitorCustomVariables":[{"id":1,"name":"Access","value":"anonymous"}],"trackingDomain":"http:\/\/demo-anonymous.piwik.org","exampleDomain":"http:\/\/example.com"};
+
+</script>
+                <link rel="stylesheet" type="text/css" href="index.php?module=Proxy&amp;action=getCss&amp;cb=bdc5acd161992ba3e010a61f5d48dc2d" />
+
+    <script type="text/javascript">
+var translations = {"CorePluginsAdmin_NoZipFileSelected":"Please select a ZIP file.","General_InvalidDateRange":"Invalid Date Range, Please Try Again","General_Loading":"Loading...","General_Show":"show","General_Hide":"hide","General_Website":"Website","General_ChooseWebsite":"Choose website","Intl_Year_Short":"yr.","General_MultiSitesSummary":"All Websites","General_SearchNoResults":"No results","CoreHome_YouAreUsingTheLatestVersion":"You are using the latest version of Piwik!","CoreHome_IncludeRowsWithLowPopulation":"Rows with low population are hidden %s Show all rows","CoreHome_ExcludeRowsWithLowPopulation":"All rows are shown %s Exclude low population","CoreHome_DataTableIncludeAggregateRows":"Aggregate rows are hidden %s Show them","CoreHome_DataTableExcludeAggregateRows":"Aggregate rows are shown %s Hide them","CoreHome_Default":"default","CoreHome_PageOf":"%1$s of %2$s","CoreHome_FlattenDataTable":"The report is hierarchical %s Make it flat","CoreHome_UnFlattenDataTable":"The report is flat %s Make it hierarchical","CoreHome_ExternalHelp":"Help (opens in new tab)","CoreHome_ClickToEditX":"Click to edit %s","CoreHome_Menu":"Menu","SitesManager_NotFound":"No websites found for","Annotations_ViewAndAddAnnotations":"View and add annotations for %s...","General_RowEvolutionRowActionTooltipTitle":"Open Row Evolution","General_RowEvolutionRowActionTooltip":"See how the metrics for this row changed over time","Annotations_IconDesc":"View notes for this date range.","Annotations_IconDescHideNotes":"Hide notes for this date range.","Annotations_HideAnnotationsFor":"Hide annotations for %s...","General_LoadingPopover":"Loading %s...","General_LoadingPopoverFor":"Loading %s for","Intl_Month_Short_StandAlone_1":"Jan","Intl_Month_Short_StandAlone_2":"Feb","Intl_Month_Short_StandAlone_3":"Mar","Intl_Month_Short_StandAlone_4":"Apr","Intl_Month_Short_StandAlone_5":"May","Intl_Month_Short_StandAlone_6":"Jun","Intl_Month_Short_StandAlone_7":"Jul","Intl_Month_Short_StandAlone_8":"Aug","Intl_Month_Short_StandAlone_9":"Sep","Intl_Month_Short_StandAlone_10":"Oct","Intl_Month_Short_StandAlone_11":"Nov","Intl_Month_Short_StandAlone_12":"Dec","Intl_Month_Long_StandAlone_1":"January","Intl_Month_Long_StandAlone_2":"February","Intl_Month_Long_StandAlone_3":"March","Intl_Month_Long_StandAlone_4":"April","Intl_Month_Long_StandAlone_5":"May","Intl_Month_Long_StandAlone_6":"June","Intl_Month_Long_StandAlone_7":"July","Intl_Month_Long_StandAlone_8":"August","Intl_Month_Long_StandAlone_9":"September","Intl_Month_Long_StandAlone_10":"October","Intl_Month_Long_StandAlone_11":"November","Intl_Month_Long_StandAlone_12":"December","Intl_Day_Short_StandAlone_1":"Mon","Intl_Day_Short_StandAlone_2":"Tue","Intl_Day_Short_StandAlone_3":"Wed","Intl_Day_Short_StandAlone_4":"Thu","Intl_Day_Short_StandAlone_5":"Fri","Intl_Day_Short_StandAlone_6":"Sat","Intl_Day_Short_StandAlone_7":"Sun","Intl_Day_Long_StandAlone_1":"Monday","Intl_Day_Long_StandAlone_2":"Tuesday","Intl_Day_Long_StandAlone_3":"Wednesday","Intl_Day_Long_StandAlone_4":"Thursday","Intl_Day_Long_StandAlone_5":"Friday","Intl_Day_Long_StandAlone_6":"Saturday","Intl_Day_Long_StandAlone_7":"Sunday","Intl_Day_Min_StandAlone_1":"Mo","Intl_Day_Min_StandAlone_2":"Tu","Intl_Day_Min_StandAlone_3":"We","Intl_Day_Min_StandAlone_4":"Th","Intl_Day_Min_StandAlone_5":"Fr","Intl_Day_Min_StandAlone_6":"Sa","Intl_Day_Min_StandAlone_7":"Su","General_And":"and","General_Search":"Search","General_Clear":"Clear","General_MoreDetails":"More Details","General_Help":"Help","General_Id":"Id","General_Name":"Name","General_JsTrackingTag":"JavaScript Tracking Code","General_Yes":"Yes","General_No":"No","General_Edit":"Edit","General_Delete":"Delete","General_Default":"Default","General_LoadingData":"Loading data...","General_ErrorRequest":"Oops\u2026 there was a problem during the request. Maybe the server had a temporary issue, or maybe you requested a report with too much data. Please try again. If this error occurs repeatedly please %scontact your Piwik administrator%s for assistance.","General_YourChangesHaveBeenSaved":"Your changes have been saved.","General_LearnMore":"%1$slearn more%2$s","CoreHome_UndoPivotBySubtable":"This report has been pivoted %s Undo pivot","CoreHome_PivotBySubtable":"This report is not pivoted %s Pivot by %s","CoreHome_QuickAccessTitle":"Search for %s. Shortcut: Press 'f' to search.","CoreHome_Segments":"Segments","CoreHome_MenuEntries":"Menu entries","SitesManager_Sites":"Websites","General_MetricsToPlot":"Metrics to plot","General_MetricToPlot":"Metric to plot","General_RecordsToPlot":"Records to plot","General_SaveImageOnYourComputer":"To save the image on your computer, right click on the image and select \"Save Image As...\"","General_ExportAsImage":"Export as Image","General_NoDataForGraph":"No data for this graph.","Widgetize_OpenInNewWindow":"Open in a new window","Dashboard_LoadingWidget":"Loading widget, please wait...","General_TransitionsRowActionTooltipTitle":"Open Transitions","General_TransitionsRowActionTooltip":"See what visitors did before and after viewing this page","Dashboard_AddPreviewedWidget":"Click to add widget to the dashboard","Dashboard_WidgetPreview":"Widget preview","Dashboard_Maximise":"Maximise","Dashboard_Minimise":"Minimise","Dashboard_WidgetNotFound":"Widget not found","Dashboard_DashboardCopied":"Current dashboard successfully copied to selected user.","Dashboard_Dashboard":"Dashboard","Dashboard_RemoveDefaultDashboardNotPossible":"The default dashboard cannot be removed","General_Close":"Close","General_Refresh":"Refresh","General_ColumnNbVisits":"Visits","General_ColumnPageviews":"Pageviews","General_ColumnRevenue":"Revenue","General_TotalVisitsPageviewsActionsRevenue":"(Total: %s visits, %s pageviews, %s actions, %s revenue)","General_EvolutionSummaryGeneric":"%1$s in %2$s compared to %3$s in %4$s. Evolution: %5$s","General_AllWebsitesDashboard":"All Websites dashboard","General_NVisits":"%s visits","MultiSites_Evolution":"Evolution","SitesManager_AddSite":"Add a new website","General_Next":"Next","General_Previous":"Previous","General_GoTo":"Go to %s","Dashboard_DashboardOf":"Dashboard of %s","Actions_SubmenuSitesearch":"Site Search","MultiSites_LoadingWebsites":"Loading websites","General_Pagination":"%s - %s of %s","General_ClickToSearch":"Click to search","Goals_AddGoal":"Add Goal","Goals_UpdateGoal":"Update Goal","Goals_DeleteGoalConfirm":"Are you sure you want to delete the Goal %s?","Goals_Ecommerce":"Ecommerce","Goals_Optional":"(optional)","UserCountry_FatalErrorDuringDownload":"A fatal error occurred while downloading this file. There might be something wrong with your internet connection, with the GeoIP database you downloaded or Piwik. Try downloading and installing it manually.","UserCountry_SetupAutomaticUpdatesOfGeoIP":"Setup automatic updates of GeoIP databases","General_Done":"Done","Feedback_ThankYou":"Thank you for helping us to make Piwik better!","Feedback_RateFeatureTitle":"Do you like the '%s' feature? Please rate and leave a comment","Feedback_RateFeatureThankYouTitle":"Thank you for rating '%s'!","Feedback_RateFeatureLeaveMessageLike":"We are glad you like it! Please let us know what you like the most or if you have a feature request.","Feedback_RateFeatureLeaveMessageDislike":"We are sorry to hear you don't like it! Please let us know how we can improve.","Feedback_SendFeedback":"Send Feedback","Feedback_RateFeatureSendFeedbackInformation":"Your Piwik platform will send us (the Piwik team) an email (including your email address) so we can get in contact with you if you have any question.","General_Ok":"Ok","General_Cancel":"Cancel","General_OrCancel":"or %s Cancel %s","General_Save":"Save","UsersManager_DeleteConfirm":"Are you sure you want to delete the user %s?","UsersManager_ConfirmGrantSuperUserAccess":"Do you really want to grant '%s' Super User access? Warning: the user will have access to all websites and will be able to perform administrative tasks.","UsersManager_ConfirmProhibitOtherUsersSuperUserAccess":"Do you really want to remove Super User access from '%s'? The user will lose all permissions and access to all websites. Make sure to set permissions to needed websites afterwards if necessary.","UsersManager_ConfirmProhibitMySuperUserAccess":"%s, do you really want to remove your own Super User access? You will lose all permissions and access to all websites and will be logged out from Piwik.","General_Actions":"Actions","General_PaginationWithoutTotal":"%s - %s","SitesManager_OnlyOneSiteAtTime":"You can only edit one website at a time. Please Save or Cancel your current modifications to the website %s.","SitesManager_DeleteConfirm":"Are you sure you want to delete the website %s?","SitesManager_Urls":"URLs","SitesManager_ExcludedIps":"Excluded IPs","SitesManager_ExcludedParameters":"Excluded Parameters","SitesManager_ExcludedUserAgents":"Excluded User Agents","SitesManager_Timezone":"Time zone","SitesManager_Currency":"Currency","SitesManager_ShowTrackingTag":"View Tracking code","SitesManager_AliasUrlHelp":"It is recommended, but not required, to specify the various URLs, one per line, that your visitors use to access this website. Alias URLs for a website will not appear in the Referrers > Websites report. Note that it is not necessary to specify the URLs with and without 'www' as Piwik automatically considers both.","SitesManager_OnlyMatchedUrlsAllowed":"Only track visits and actions when the action URL starts with one of the above URLs.","SitesManager_OnlyMatchedUrlsAllowedHelp":"When enabled, Piwik will only track internal actions when the Page URL is one of the known URLs for your website. This prevents people from spamming your analytics with URLs for other websites.","SitesManager_KeepURLFragmentsLong":"Keep Page URL fragments when tracking Page URLs","SitesManager_HelpExcludedIps":"Enter the list of IPs, one per line, that you wish to exclude from being tracked by Piwik. You can use wildcards, eg. %1$s or %2$s","SitesManager_ListOfQueryParametersToExclude":"Enter the list of URL Query Parameters, one per line, to exclude from the Page URLs reports.","SitesManager_PiwikWillAutomaticallyExcludeCommonSessionParameters":"Piwik will automatically exclude the common session parameters (%s).","SitesManager_GlobalExcludedUserAgentHelp1":"Enter the list of user agents to exclude from being tracked by Piwik.","SitesManager_GlobalListExcludedUserAgents_Desc":"If the visitor's user agent string contains any of the strings you specify, the visitor will be excluded from Piwik.","SitesManager_GlobalExcludedUserAgentHelp2":"You can use this to exclude some bots from being tracked.","SitesManager_WebsitesManagement":"Websites Management","SitesManager_MainDescription":"Your Web Analytics reports need Websites! Add, update, delete Websites, and show the JavaScript to insert in your pages.","SitesManager_YouCurrentlyHaveAccessToNWebsites":"You currently have access to %s websites.","SitesManager_SuperUserAccessCan":"A user with Super User access can also %s specify global settings%s for new websites.","SitesManager_EnableSiteSearch":"Site Search tracking enabled","SitesManager_DisableSiteSearch":"Do not track Site Search","SitesManager_SearchUseDefault":"Use %sdefault%s Site Search parameters","SitesManager_SiteSearchUse":"You can use Piwik to track and report what visitors are searching in your website's internal search engine.","SitesManager_SearchKeywordLabel":"Query parameter","SitesManager_SearchCategoryLabel":"Category parameter","SitesManager_YourCurrentIpAddressIs":"Your current IP address is %s","SitesManager_SearchKeywordParametersDesc":"Enter a comma separated list of all query parameter names containing the site search keyword.","SitesManager_SearchCategoryParametersDesc":"You may enter a comma-separated list of query parameters specifying the search category.","SitesManager_CurrencySymbolWillBeUsedForGoals":"The Currency symbol will be displayed next to Goals revenues.","SitesManager_ChangingYourTimezoneWillOnlyAffectDataForward":"Changing your time zone will only affect data going forward, and will not be applied retroactively.","SitesManager_AdvancedTimezoneSupportNotFound":"Advanced timezones support was not found in your PHP (supported in PHP>=5.2). You can still choose a manual UTC offset.","SitesManager_ChooseCityInSameTimezoneAsYou":"Choose a city in the same time zone as you.","SitesManager_UTCTimeIs":"UTC time is %s.","SitesManager_EnableEcommerce":"Ecommerce enabled","SitesManager_NotAnEcommerceSite":"Not an Ecommerce site","SitesManager_EcommerceHelp":"When enabled, the \"Goals\" report will have a new \"Ecommerce\" section.","SitesManager_PiwikOffersEcommerceAnalytics":"Piwik allows for advanced Ecommerce Analytics tracking & reporting. Learn more about %s Ecommerce Analytics%s.","SitesManager_GlobalWebsitesSettings":"Global websites settings","SitesManager_GlobalListExcludedIps":"Global list of Excluded IPs","SitesManager_ListOfIpsToBeExcludedOnAllWebsites":"The IPs below will be excluded from being tracked on all websites.","SitesManager_GlobalListExcludedQueryParameters":"Global list of Query URL parameters to exclude","SitesManager_ListOfQueryParametersToBeExcludedOnAllWebsites":"The Query URLs parameters below will be excluded from URLs on all websites.","SitesManager_GlobalListExcludedUserAgents":"Global list of user agents to exclude","SitesManager_EnableSiteSpecificUserAgentExclude_Help":"If you need to exclude different user agents for different websites, check this box, click save and %1$sadd the user agents above%2$s.","SitesManager_EnableSiteSpecificUserAgentExclude":"Enable website specific user agent exclusion.","SitesManager_KeepURLFragments":"Page URL fragments tracking","SitesManager_KeepURLFragmentsHelp":"If the checkbox below is unchecked, Page URL fragments (everything after the %1$s) will be removed when tracking: %2$s will be tracked as %3$s","SitesManager_KeepURLFragmentsHelp2":"You can also override this setting for individual websites above.","SitesManager_TrackingSiteSearch":"Tracking Internal Site Search","SitesManager_SearchParametersNote":"Note: the Query parameters and Category parameters will be used only for websites which have Site Search enabled but left these parameters empty.","SitesManager_SearchParametersNote2":"To disable Site Search for new websites, leave these two fields empty.","SitesManager_SearchCategoryDesc":"Piwik can also track the Search category for each internal site search keyword.","SitesManager_DefaultTimezoneForNewWebsites":"Default Time zone for new websites","SitesManager_SelectDefaultTimezone":"You can select the time zone to select by default for new websites.","SitesManager_DefaultCurrencyForNewWebsites":"Default Currency for new websites","SitesManager_SelectDefaultCurrency":"You can select the currency to set by default for new websites.","SitesManager_AddMeasurable":"Add a new measurable","SitesManager_XManagement":"Manage %s","SitesManager_ChooseMeasurableTypeHeadline":"What would you like to measure?","General_Measurables":"Measurables","ScheduledReports_ReportSent":"Report sent","ScheduledReports_ReportUpdated":"Report updated","UserCountryMap_WithUnknownRegion":"%s with unknown region","UserCountryMap_WithUnknownCity":"%s with unknown city","General_UserId":"User ID","Live_VisitorProfile":"Visitor profile","Live_NoMoreVisits":"There are no more visits for this visitor.","Live_ShowMap":"show map","Live_HideMap":"hide map","Live_PageRefreshed":"Number of times this page was viewed \/ refreshed in a row.","Live_RowActionTooltipTitle":"Open segmented Visitor Log","Live_RowActionTooltipDefault":"Show Visitor Log segmented by this row","Live_RowActionTooltipWithDimension":"Show Visitor Log segmented by this %s","Live_SegmentedVisitorLogTitle":"Visitor Log showing visits where %s is \"%s\"","Intl_Today":"Today","General_OverlayRowActionTooltipTitle":"Open Page Overlay","General_OverlayRowActionTooltip":"See analytics data directly on your website (opens new tab)","CustomAlerts_InvalidMetricValue":"Value must be numeric"};
+if (typeof(piwik_translations) == 'undefined') { var piwik_translations = new Object; }for(var i in translations) { piwik_translations[i] = translations[i];} 
+</script><script type="text/javascript" src="index.php?module=Proxy&amp;action=getCoreJs&amp;cb=71a553a995217c339e558a6a86135db6"></script>
+<script type="text/javascript" src="index.php?module=Proxy&amp;action=getNonCoreJs&amp;cb=71a553a995217c339e558a6a86135db6"></script>
+
+
+            <!--[if IE]>
+            <link rel="stylesheet" type="text/css" href="plugins/Morpheus/stylesheets/ieonly.css?cb=bdc5acd161992ba3e010a61f5d48dc2d" />
+            <![endif]-->
+        
+
+    <!--[if lt IE 9]>
+    <script language="javascript" type="text/javascript" src="libs/jqplot/excanvas.min.js"></script>
+    <![endif]-->
+    </head>
+    <!--[if lt IE 9 ]>
+    <body id="" ng-app="app" class="old-ie ">
+    <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <body id="" ng-app="app" class="">
+    <!--<![endif]-->
+
+        
+            <script type="text/javascript">
+        $(function () {
+        $('body').css("display", "none");
+        if (self == top) {
+            var theBody = document.getElementsByTagName('body')[0];
+            theBody.style.display = 'block';
+        } else { top.location = self.location; }
+    });
+    </script>
+        <noscript>
+    <div id="javascriptDisabled">JavaScript must be enabled in order for you to use Piwik in standard view.<br />However, it seems JavaScript is either disabled or not supported by your browser.<br />To use standard view, enable JavaScript by changing your browser options, then <a href="">try again</a>.<br /></div>
+</noscript>
+
+        <div id="root">
+                
+    <div id="header" class="container-fluid">
+    <a href="#main" tabindex="0" class="accessibility-skip-to-content">Skip to content</a>
+    <div id="topRightBar" class="navbar row">
+        <div class="navbar-header col-md-3">
+            <span class="toggle-second-menu icon-menu-hamburger"></span>
+            <span id="logo">
+    <a href="index.php" title="Piwik # free/libre analytics platform">
+            <img src='http://demo.piwik.org/plugins/Morpheus/images/logo.svg' alt="Piwik" class="ie-hide default-piwik-logo" />
+        <!--[if lt IE 9]>
+            <img src='http://demo.piwik.org/plugins/Morpheus/images/logo-header.png' alt="Piwik" />
+    <![endif]--></a>
+</span>
+
+            <!-- we need to put button to toggle nav for responsiveness here -->
+
+        </div>
+        <div class="collapse navbar-collapse col-md-9" id="navbar-collapse1">
+            
+<ul class="navbar-right">
+
+    
+    
+                        
+    <li><a title="View Web Analytics reports for Piwik Forums."               class="topBarElem active"
+               id="topmenu-corehome"
+               href="index.php?module=CoreHome&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday">                    Dashboard
+            </a></li><li><a title="Compare Web Analytics stats for all of your Websites."               class="topBarElem "
+               id="topmenu-multisites"
+               href="index.php?module=MultiSites&amp;action=index&amp;idSite=3&amp;period=day&amp;date=yesterday">                    All Websites
+            </a></li><li><span class="topBarElem"><div class="languageSelection"
+         ng-cloak
+         menu-title="English"
+         piwik-menudropdown><a class="item"
+            href="?module=Proxy&amp;action=redirect&amp;url=http://piwik.org/translations/">About Piwik translations</a><a class="item "
+               value="am"
+               title="አማርኛ (Amharic)">አማርኛ</a><a class="item "
+               value="ar"
+               title="العربية (Arabic)">العربية</a><a class="item "
+               value="be"
+               title="Беларуская (Belarusian)">Беларуская</a><a class="item "
+               value="bg"
+               title="Български (Bulgarian)">Български</a><a class="item "
+               value="bn"
+               title="বাংলা (Bengali)">বাংলা</a><a class="item "
+               value="bs"
+               title="Bosanski (Bosnian)">Bosanski</a><a class="item "
+               value="ca"
+               title="Català (Catalan)">Català</a><a class="item "
+               value="cs"
+               title="Čeština (Czech)">Čeština</a><a class="item "
+               value="cy"
+               title="Cymraeg (Welsh)">Cymraeg</a><a class="item "
+               value="da"
+               title="Dansk (Danish)">Dansk</a><a class="item "
+               value="de"
+               title="Deutsch (German)">Deutsch</a><a class="item "
+               value="el"
+               title="Ελληνικά (Greek)">Ελληνικά</a><a class="item active"
+               value="en"
+               title="English (English)">English</a><a class="item "
+               value="es"
+               title="Español (Spanish)">Español</a><a class="item "
+               value="et"
+               title="Eesti (Estonian)">Eesti</a><a class="item "
+               value="eu"
+               title="Euskara (Basque)">Euskara</a><a class="item "
+               value="fa"
+               title="فارسی (Persian)">فارسی</a><a class="item "
+               value="fi"
+               title="Suomi (Finnish)">Suomi</a><a class="item "
+               value="fr"
+               title="Français (French)">Français</a><a class="item "
+               value="gl"
+               title="Galego (Galician)">Galego</a><a class="item "
+               value="he"
+               title="עברית (Hebrew)">עברית</a><a class="item "
+               value="hi"
+               title="हिन्दी (Hindi)">हिन्दी</a><a class="item "
+               value="hr"
+               title="Hrvatski (Croatian)">Hrvatski</a><a class="item "
+               value="hu"
+               title="Magyar (Hungarian)">Magyar</a><a class="item "
+               value="id"
+               title="Indonesia (Indonesian)">Indonesia</a><a class="item "
+               value="is"
+               title="Íslenska (Icelandic)">Íslenska</a><a class="item "
+               value="it"
+               title="Italiano (Italian)">Italiano</a><a class="item "
+               value="ja"
+               title="日本語 (Japanese)">日本語</a><a class="item "
+               value="ka"
+               title="ქართული (Georgian)">ქართული</a><a class="item "
+               value="ko"
+               title="한국어 (Korean)">한국어</a><a class="item "
+               value="lt"
+               title="Lietuvių (Lithuanian)">Lietuvių</a><a class="item "
+               value="lv"
+               title="Latviešu (Latvian)">Latviešu</a><a class="item "
+               value="nb"
+               title="Norsk bokmål (Norwegian Bokmål)">Norsk bokmål</a><a class="item "
+               value="nl"
+               title="Nederlands (Dutch)">Nederlands</a><a class="item "
+               value="nn"
+               title="Nynorsk (Norwegian Nynorsk)">Nynorsk</a><a class="item "
+               value="pl"
+               title="Polski (Polish)">Polski</a><a class="item "
+               value="pt-br"
+               title="Português do Brasil (Brazilian Portuguese)">Português do Brasil</a><a class="item "
+               value="pt"
+               title="Português (Portuguese)">Português</a><a class="item "
+               value="ro"
+               title="Română (Romanian)">Română</a><a class="item "
+               value="ru"
+               title="Русский (Russian)">Русский</a><a class="item "
+               value="sk"
+               title="Slovenčina (Slovak)">Slovenčina</a><a class="item "
+               value="sl"
+               title="Slovenščina (Slovenian)">Slovenščina</a><a class="item "
+               value="sq"
+               title="Shqip (Albanian)">Shqip</a><a class="item "
+               value="sr"
+               title="Српски (Serbian)">Српски</a><a class="item "
+               value="sv"
+               title="Svenska (Swedish)">Svenska</a><a class="item "
+               value="ta"
+               title="தமிழ் (Tamil)">தமிழ்</a><a class="item "
+               value="te"
+               title="తెలుగు (Telugu)">తెలుగు</a><a class="item "
+               value="th"
+               title="ไทย (Thai)">ไทย</a><a class="item "
+               value="tl"
+               title="Filipino (Tagalog)">Filipino</a><a class="item "
+               value="tr"
+               title="Türkçe (Turkish)">Türkçe</a><a class="item "
+               value="uk"
+               title="Українська (Ukrainian)">Українська</a><a class="item "
+               value="vi"
+               title="Tiếng Việt (Vietnamese)">Tiếng Việt</a><a class="item "
+               value="zh-cn"
+               title="简体中文 (Simplified Chinese)">简体中文</a><a class="item "
+               value="zh-tw"
+               title="繁體中文 (Traditional Chinese)">繁體中文</a><form action="index.php?module=LanguagesManager&amp;action=saveLanguage" method="post"><input type="hidden" name="language" id="language"><input type="hidden" name="token_auth" value="anonymous"/></form></div></span></li><li><a title="anonymous"               class="topBarElem "
+               id="topmenu-scheduledreports"
+               href="index.php?module=ScheduledReports&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday"><span class="icon-user"></span></a></li><li><a title="Help"               class="topBarElem "
+               id="topmenu-feedback"
+               href="index.php?module=Feedback&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday"><span class="icon-help"></span></a></li><li><a title="Sign in"               class="topBarElem "
+               id="topmenu-login"
+               href="index.php?module=Login&amp;idSite=7&amp;period=day&amp;date=yesterday"><span class="icon-sign-in"></span></a></li>
+</ul>        </div>
+    </div>
+</div>
+    <div class="ui-confirm" id="alert">
+        <h2></h2>
+        <input role="yes" type="button" value="Ok"/>
+    </div>
+
+    
+
+    <div class="page">
+
+                                    <div id="secondNavBar" class="Menu--dashboard">
+        <div id="search" ng-cloak>
+            <div piwik-quick-access class="borderedControl"></div>
+        </div>
+        <ul class="navbar">
+                                                                                                                                                                                                                                                                                                                                                    
+                                    <li id="" class="menuTab">
+
+                        <a class="item" href="">
+                            <span class="menu-icon icon-reporting-dashboard"></span>Dashboard
+                            <span class="hidden">
+                             Menu
+                           </span>
+                        </a>
+                        <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>
+            <a class="item" href="#module=Dashboard&amp;action=embeddedIndex&amp;idSite=7&amp;period=day&amp;date=yesterday&amp;idDashboard=1">
+                Dashboard
+            </a>
+        </li>
+    
+                                                                                    </ul>
+                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    <li id="" class="menuTab">
+
+                        <a class="item" href="">
+                            <span class="menu-icon icon-reporting-visitors"></span>Visitors
+                            <span class="hidden">
+                             Menu
+                           </span>
+                        </a>
+                        <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>
+            <a class="item" href="#module=VisitsSummary&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Overview
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Live&amp;action=indexVisitorLog&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Visitor Log
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=CustomVariables&amp;action=menuGetCustomVariables&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Custom Variables
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=DevicesDetection&amp;action=devices&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Devices
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=DevicesDetection&amp;action=software&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Software
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=UserCountry&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Locations
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=VisitFrequency&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Engagement
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=VisitTime&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Times
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=UserCountryMap&amp;action=realtimeWorldMap&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Real-time Map
+            </a>
+        </li>
+    
+                                                                                    </ul>
+                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    <li id="" class="menuTab">
+
+                        <a class="item" href="">
+                            <span class="menu-icon icon-reporting-actions"></span>Actions
+                            <span class="hidden">
+                             Menu
+                           </span>
+                        </a>
+                        <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>
+            <a class="item" href="#module=Actions&amp;action=menuGetPageUrls&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Pages
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Actions&amp;action=menuGetEntryPageUrls&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Entry pages
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Actions&amp;action=menuGetExitPageUrls&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Exit pages
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Actions&amp;action=menuGetPageTitles&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Page titles
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Actions&amp;action=indexSiteSearch&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Site Search
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Actions&amp;action=menuGetOutlinks&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Outlinks
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Actions&amp;action=menuGetDownloads&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Downloads
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Events&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Events
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Contents&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Contents
+            </a>
+        </li>
+    
+                                                                                    </ul>
+                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    <li id="" class="menuTab">
+
+                        <a class="item" href="">
+                            <span class="menu-icon icon-reporting-referer"></span>Referrers
+                            <span class="hidden">
+                             Menu
+                           </span>
+                        </a>
+                        <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>
+            <a class="item" href="#module=Referrers&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Overview
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Referrers&amp;action=allReferrers&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                All Referrers
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Referrers&amp;action=getSearchEnginesAndKeywords&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Search Engines &amp; Keywords
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Referrers&amp;action=indexWebsites&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Websites &amp; Social
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Referrers&amp;action=menuGetCampaigns&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Campaigns
+            </a>
+        </li>
+    
+                                                                                    </ul>
+                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                    <li id="?module=Goals&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday" class="menuTab">
+
+                        <a class="item" href="">
+                            <span class="menu-icon icon-reporting-goal"></span>Goals
+                            <span class="hidden">
+                             Menu
+                           </span>
+                        </a>
+                        <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>
+            <a class="item" href="#module=Goals&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Overview
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Goals&amp;action=goalReport&amp;idSite=7&amp;period=day&amp;date=yesterday&amp;idGoal=1">
+                New user registration
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Goals&amp;action=goalReport&amp;idSite=7&amp;period=day&amp;date=yesterday&amp;idGoal=2">
+                User login
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Goals&amp;action=goalReport&amp;idSite=7&amp;period=day&amp;date=yesterday&amp;idGoal=3">
+                Read the &quot;Please read&quot; post
+            </a>
+        </li>
+    
+                                                                                                                                            <li>
+            <a class="item" href="#module=Goals&amp;action=editGoals&amp;idSite=7&amp;period=day&amp;date=yesterday">
+                Manage Goals
+            </a>
+        </li>
+    
+                                                                                    </ul>
+                    </li>
+                                    </ul>
+    </div>
+
+        
+        <div class="pageWrap">
+
+            <a name="main"></a>
+
+            <div class="top_controls">
+                    <div class="top_bar_sites_selector piwikTopControl">
+    <div piwik-siteselector class="sites_autocomplete"></div>
+</div>    <div id="periodString" piwik-expand-on-click class="piwikTopControl piwikSelector borderedControl periodSelector">
+    <a id="date" class="title" title="Choose&#x20;date">
+        <span class="icon icon-calendar"></span>
+        2015-10-27
+    </a>
+    <div id="periodMore" class="dropdown">
+        <div class="period-date">
+            <div id="datepicker"></div>
+        </div>
+        <div class="period-range" style="display:none;">
+            <div id="calendarRangeFrom">
+                <h6>From<input tabindex="1" type="text" id="inputCalendarFrom" name="inputCalendarFrom"/></h6>
+
+                <div id="calendarFrom"></div>
+            </div>
+            <div id="calendarRangeTo">
+                <h6>To<input tabindex="2" type="text" id="inputCalendarTo" name="inputCalendarTo"/></h6>
+
+                <div id="calendarTo"></div>
+            </div>
+        </div>
+        <div class="period-type">
+            <h6>Period</h6>
+			<span id="otherPeriods">
+                            <input type="radio" name="period" id="period_id_day" value="index.php?module=CoreHome&amp;action=index&amp;idSite=7&amp;period=day&amp;date=yesterday" checked="checked" />
+                <label for="period_id_day">day</label>
+                <br/>
+                            <input type="radio" name="period" id="period_id_week" value="index.php?module=CoreHome&amp;action=index&amp;idSite=7&amp;period=week&amp;date=yesterday" />
+                <label for="period_id_week">week</label>
+                <br/>
+                            <input type="radio" name="period" id="period_id_month" value="index.php?module=CoreHome&amp;action=index&amp;idSite=7&amp;period=month&amp;date=yesterday" />
+                <label for="period_id_month">month</label>
+                <br/>
+                            <input type="radio" name="period" id="period_id_year" value="index.php?module=CoreHome&amp;action=index&amp;idSite=7&amp;period=year&amp;date=yesterday" />
+                <label for="period_id_year">year</label>
+                <br/>
+                            <input type="radio" name="period" id="period_id_range" value="index.php?module=CoreHome&amp;action=index&amp;idSite=7&amp;period=range&amp;date=yesterday" />
+                <label for="period_id_range">date range</label>
+                <br/>
+            			</span>
+            <input tabindex="3" type="submit" value="Apply" id="calendarApply" class="btn"/>
+                        <div id="ajaxLoadingCalendar" style="display:none;">
+    <div class="loadingPiwik">
+        <img src="plugins/Morpheus/images/loading-blue.gif" alt="Loading data..." />Loading data...
+    </div>
+    <div class="loadingSegment">
+        Processing segmented visitor data may take a few minutes...
+    </div>
+</div>
+
+        </div>
+    </div>
+    <div class="period-click-tooltip" style="display:none;">Click again to change the period.</div>
+</div>
+    <div class="segmentEditorPanel piwikTopControl borderedControl piwikSelector"
+        data-props="{&quot;availableSegments&quot;:[{&quot;idsegment&quot;:&quot;4&quot;,&quot;name&quot;:&quot;Logged in users&quot;,&quot;definition&quot;:&quot;customVariableName3==Forum%20status;customVariableValue3==LoggedIn%20user&quot;,&quot;login&quot;:&quot;root&quot;,&quot;enable_all_users&quot;:&quot;1&quot;,&quot;enable_only_idsite&quot;:&quot;7&quot;,&quot;auto_archive&quot;:&quot;1&quot;,&quot;ts_created&quot;:&quot;2013-05-23 04:26:47&quot;,&quot;ts_last_edit&quot;:&quot;2013-05-23 10:08:59&quot;,&quot;deleted&quot;:&quot;0&quot;},{&quot;idsegment&quot;:&quot;18&quot;,&quot;name&quot;:&quot;Non bouncers&quot;,&quot;definition&quot;:&quot;actions&gt;=2&quot;,&quot;login&quot;:&quot;root&quot;,&quot;enable_all_users&quot;:&quot;1&quot;,&quot;enable_only_idsite&quot;:&quot;7&quot;,&quot;auto_archive&quot;:&quot;1&quot;,&quot;ts_created&quot;:&quot;2013-05-30 06:21:31&quot;,&quot;ts_last_edit&quot;:null,&quot;deleted&quot;:&quot;0&quot;},{&quot;idsegment&quot;:&quot;78&quot;,&quot;name&quot;:&quot;URL contains \/forum.piwik.org\/list.php?2&quot;,&quot;definition&quot;:&quot;pageUrl=@%2Fforum.piwik.org%2Flist.php%3F2&quot;,&quot;login&quot;:&quot;root&quot;,&quot;enable_all_users&quot;:&quot;1&quot;,&quot;enable_only_idsite&quot;:&quot;7&quot;,&quot;auto_archive&quot;:&quot;0&quot;,&quot;ts_created&quot;:&quot;2015-09-08 21:30:04&quot;,&quot;ts_last_edit&quot;:null,&quot;deleted&quot;:&quot;0&quot;},{&quot;idsegment&quot;:&quot;79&quot;,&quot;name&quot;:&quot;URL Contains forum.piwik.org\/list.php?2&quot;,&quot;definition&quot;:&quot;pageUrl=@forum.piwik.org%2Flist.php%3F2&quot;,&quot;login&quot;:&quot;root&quot;,&quot;enable_all_users&quot;:&quot;1&quot;,&quot;enable_only_idsite&quot;:&quot;7&quot;,&quot;auto_archive&quot;:&quot;0&quot;,&quot;ts_created&quot;:&quot;2015-09-08 21:31:12&quot;,&quot;ts_last_edit&quot;:&quot;2015-09-08 21:42:37&quot;,&quot;deleted&quot;:&quot;0&quot;},{&quot;idsegment&quot;:&quot;80&quot;,&quot;name&quot;:&quot;URL contains list.php?2&quot;,&quot;definition&quot;:&quot;pageUrl=@list.php%3F2&quot;,&quot;login&quot;:&quot;root&quot;,&quot;enable_all_users&quot;:&quot;1&quot;,&quot;enable_only_idsite&quot;:&quot;7&quot;,&quot;auto_archive&quot;:&quot;0&quot;,&quot;ts_created&quot;:&quot;2015-09-08 21:33:07&quot;,&quot;ts_last_edit&quot;:null,&quot;deleted&quot;:&quot;0&quot;}],&quot;segmentTranslations&quot;:{&quot;General_OperationEquals&quot;:&quot;Equals&quot;,&quot;General_OperationNotEquals&quot;:&quot;Not Equals&quot;,&quot;General_OperationAtMost&quot;:&quot;At most&quot;,&quot;General_OperationAtLeast&quot;:&quot;At least&quot;,&quot;General_OperationLessThan&quot;:&quot;Less than&quot;,&quot;General_OperationGreaterThan&quot;:&quot;Greater than&quot;,&quot;General_OperationContains&quot;:&quot;Contains&quot;,&quot;General_OperationDoesNotContain&quot;:&quot;Does not contain&quot;,&quot;General_OperationIs&quot;:&quot;Is&quot;,&quot;General_OperationIsNot&quot;:&quot;Is not&quot;,&quot;SegmentEditor_DefaultAllVisits&quot;:&quot;All visits&quot;,&quot;General_DefaultAppended&quot;:&quot;(default)&quot;,&quot;SegmentEditor_AddNewSegment&quot;:&quot;Add new segment&quot;,&quot;General_Edit&quot;:&quot;Edit&quot;,&quot;General_Search&quot;:&quot;Search&quot;,&quot;General_SearchNoResults&quot;:&quot;No results&quot;},&quot;isSegmentNotAppliedBecauseBrowserArchivingIsDisabled&quot;:0,&quot;selectedSegment&quot;:&quot;&quot;,&quot;authorizedToCreateSegments&quot;:false}"
+    data-params="[]">
+<div class="SegmentEditor" style="display:none;">
+    <div class="segmentationContainer listHtml" title="Choose&#x20;a&#x20;segment">
+        <a class="title"><span class="icon icon-segment"></span><span class="segmentationTitle"></span></a>
+        <div class="dropdown dropdown-body">
+            <div class="segmentFilterContainer">
+                <input class="segmentFilter" type="text" value="Search"/>
+                <span/>
+            </div>
+            <ul class="submenu">
+                <li>Select a segment of visitors:
+                    <div class="segmentList">
+                        <ul>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+                            <ul class="submenu">
+                <li>
+                                            <span class='youMustBeLoggedIn'>You must be logged in to create and edit custom visitor segments.
+                        <br/>&rsaquo; <a href='index.php?module=Login'>Sign in</a> </span>
+                                    </li>
+                </ul>
+                    </div>
+    </div>
+
+    <div class="initial-state-rows"><div class="segment-add-row initial"><div>
+        <span>+ Drag & Drop condition</span>
+    </div></div>
+    <div class="segment-and">AND</div>
+    <div class="segment-add-row initial"><div>
+        <span>+ Drag & Drop condition</span>
+    </div></div>
+    </div>
+
+    <div class="segment-row-inputs">
+        <div class="segment-input metricListBlock">
+            <select title="Choose a segment" class="metricList">
+                                <optgroup label="Campaigns">
+                                            <option data-type="dimension" value="campaignId">Campaign Id</option>
+                                            <option data-type="dimension" value="campaignContent">Content</option>
+                                            <option data-type="dimension" value="campaignKeyword">Keyword</option>
+                                            <option data-type="dimension" value="campaignMedium">Medium</option>
+                                            <option data-type="dimension" value="campaignName">Name</option>
+                                            <option data-type="dimension" value="campaignSource">Source</option>
+                                    </optgroup>
+                                <optgroup label="Actions">
+                                            <option data-type="dimension" value="outlinkUrl">Clicked URL</option>
+                                            <option data-type="dimension" value="contentName">Content Name</option>
+                                            <option data-type="dimension" value="contentPiece">Content Piece</option>
+                                            <option data-type="dimension" value="contentTarget">Content Target</option>
+                                            <option data-type="dimension" value="downloadUrl">Download URL</option>
+                                            <option data-type="dimension" value="entryPageUrl">Entry Page URL</option>
+                                            <option data-type="dimension" value="entryPageTitle">Entry Page title</option>
+                                            <option data-type="dimension" value="exitPageTitle">Exit Page Title</option>
+                                            <option data-type="dimension" value="exitPageUrl">Exit Page URL</option>
+                                            <option data-type="dimension" value="contentInteraction">Interaction</option>
+                                            <option data-type="dimension" value="siteSearchKeyword">Keyword (Site Search)</option>
+                                            <option data-type="dimension" value="pageTitle">Page Name</option>
+                                            <option data-type="dimension" value="pageUrl">Page URL</option>
+                                    </optgroup>
+                                <optgroup label="Events">
+                                            <option data-type="dimension" value="eventAction">Event Action</option>
+                                            <option data-type="dimension" value="eventCategory">Event Category</option>
+                                            <option data-type="dimension" value="eventName">Event Name</option>
+                                    </optgroup>
+                                <optgroup label="Referrers">
+                                            <option data-type="dimension" value="referrerKeyword">Keyword</option>
+                                            <option data-type="dimension" value="referrerName">Referrer Name</option>
+                                            <option data-type="dimension" value="referrerType">Referrer Type</option>
+                                            <option data-type="dimension" value="referrerUrl">Referrer URL</option>
+                                    </optgroup>
+                                <optgroup label="Visit Location">
+                                            <option data-type="dimension" value="city">City</option>
+                                            <option data-type="dimension" value="continentCode">Continent</option>
+                                            <option data-type="dimension" value="countryCode">Country</option>
+                                            <option data-type="dimension" value="languageCode">Language</option>
+                                            <option data-type="dimension" value="latitude">Latitude</option>
+                                            <option data-type="dimension" value="longitude">Longitude</option>
+                                            <option data-type="dimension" value="provider">Provider</option>
+                                            <option data-type="dimension" value="regionCode">Region</option>
+                                    </optgroup>
+                                <optgroup label="Visit (metrics)">
+                                            <option data-type="metric" value="daysSinceFirstVisit">Days since first visit</option>
+                                            <option data-type="metric" value="daysSinceLastEcommerceOrder">Days since last Ecommerce order</option>
+                                            <option data-type="metric" value="daysSinceLastVisit">Days since last visit</option>
+                                            <option data-type="metric" value="actions">Number of Actions</option>
+                                            <option data-type="metric" value="searches">Number of Internal Searches</option>
+                                            <option data-type="metric" value="visitCount">Number of visits</option>
+                                            <option data-type="metric" value="events">Total events</option>
+                                            <option data-type="metric" value="visitDuration">Visit Duration (in seconds)</option>
+                                    </optgroup>
+                                <optgroup label="Visit">
+                                            <option data-type="metric" value="visitIp">Visitor IP</option>
+                                            <option data-type="dimension" value="browserCode">Browser</option>
+                                            <option data-type="dimension" value="browserEngine">Browser engine</option>
+                                            <option data-type="dimension" value="browserVersion">Browser version</option>
+                                            <option data-type="dimension" value="deviceType">Device type</option>
+                                            <option data-type="dimension" value="visitLocalHour">Local time</option>
+                                            <option data-type="dimension" value="operatingSystemCode">Operating system</option>
+                                            <option data-type="dimension" value="operatingSystemVersion">Operating system version</option>
+                                            <option data-type="dimension" value="resolution">Resolution</option>
+                                            <option data-type="dimension" value="visitServerHour">Server time</option>
+                                            <option data-type="dimension" value="userId">User ID</option>
+                                            <option data-type="dimension" value="visitEcommerceStatus">Visit Ecommerce status at the end of the visit</option>
+                                            <option data-type="dimension" value="visitId">Visit ID</option>
+                                            <option data-type="dimension" value="visitConvertedGoalId">Visit converted a specific Goal Id</option>
+                                            <option data-type="dimension" value="visitConverted">Visit converted at least one Goal</option>
+                                            <option data-type="dimension" value="visitorType">Visit type</option>
+                                            <option data-type="dimension" value="visitorId">Visitor ID</option>
+                                    </optgroup>
+                                <optgroup label="Custom Variables">
+                                            <option data-type="dimension" value="customVariableName">Custom Variable name (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableName1">Custom Variable name 1 (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableName2">Custom Variable name 2 (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableName3">Custom Variable name 3 (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableName4">Custom Variable name 4 (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableName5">Custom Variable name 5 (scope visit)</option>
+                                            <option data-type="dimension" value="customVariablePageName">Custom Variable name (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageName1">Custom Variable name 1 (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageName2">Custom Variable name 2 (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageName3">Custom Variable name 3 (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageName4">Custom Variable name 4 (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageName5">Custom Variable name 5 (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageValue">Custom Variable value (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageValue1">Custom Variable value 1 (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageValue2">Custom Variable value 2 (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageValue3">Custom Variable value 3 (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageValue4">Custom Variable value 4 (scope page)</option>
+                                            <option data-type="dimension" value="customVariablePageValue5">Custom Variable value 5 (scope page)</option>
+                                            <option data-type="dimension" value="customVariableValue">Custom Variable value (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableValue1">Custom Variable value 1 (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableValue2">Custom Variable value 2 (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableValue3">Custom Variable value 3 (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableValue4">Custom Variable value 4 (scope visit)</option>
+                                            <option data-type="dimension" value="customVariableValue5">Custom Variable value 5 (scope visit)</option>
+                                    </optgroup>
+                            </select>
+        </div>
+        <div class="segment-input metricMatchBlock">
+            <select title="Matches">
+                <option value="==">Equals</option>
+                <option value="!=">Not Equals</option>
+                <option value="<=">At most</option>
+                <option value=">=">At least</option>
+                <option value="<">Less than</option>
+                <option value=">">Greater than</option>
+                <option value="=@">Contains</option>
+                <option value="!@">Does not contain</option>
+            </select>
+        </div>
+        <div class="segment-input metricValueBlock">
+            <input type="text" title="Value">
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="segment-rows">
+        <div class="segment-row">
+            <a href="#" class="segment-close"></a>
+            <a href="#" class="segment-loading"></a>
+        </div>
+    </div>
+    <div class="segment-or">OR</div>
+    <div class="segment-add-or"><div>
+                        <a href="#"> + Add <span>OR</span> condition </a>
+        </div>
+    </div>
+    <div class="segment-and">AND</div>
+    <div class="segment-add-row"><div>
+                        <a href="#">+ Add <span>AND</span> condition</a>
+        </div>
+    </div>
+    <div class="segment-element borderedControl expanded">
+        <div class="segment-nav">
+            <h4 class="visits">
+                <span class="icon-segment"></span><span class="available_segments"><strong>
+                <select class="available_segments_select"></select>
+            </strong></span></h4>
+            <div class="scrollable">
+            <ul>
+                                <li data="visit">
+                    <a class="metric_category" href="#">Campaigns</a>
+                    <ul style="display:none;">
+                                                    <li data-metric="campaignId"><a class="ddmetric" href="#">Campaign Id</a></li>
+                                                    <li data-metric="campaignContent"><a class="ddmetric" href="#">Content</a></li>
+                                                    <li data-metric="campaignKeyword"><a class="ddmetric" href="#">Keyword</a></li>
+                                                    <li data-metric="campaignMedium"><a class="ddmetric" href="#">Medium</a></li>
+                                                    <li data-metric="campaignName"><a class="ddmetric" href="#">Name</a></li>
+                                                    <li data-metric="campaignSource"><a class="ddmetric" href="#">Source</a></li>
+                                            </ul>
+                </li>
+                                <li data="visit">
+                    <a class="metric_category" href="#">Actions</a>
+                    <ul style="display:none;">
+                                                    <li data-metric="outlinkUrl"><a class="ddmetric" href="#">Clicked URL</a></li>
+                                                    <li data-metric="contentName"><a class="ddmetric" href="#">Content Name</a></li>
+                                                    <li data-metric="contentPiece"><a class="ddmetric" href="#">Content Piece</a></li>
+                                                    <li data-metric="contentTarget"><a class="ddmetric" href="#">Content Target</a></li>
+                                                    <li data-metric="downloadUrl"><a class="ddmetric" href="#">Download URL</a></li>
+                                                    <li data-metric="entryPageUrl"><a class="ddmetric" href="#">Entry Page URL</a></li>
+                                                    <li data-metric="entryPageTitle"><a class="ddmetric" href="#">Entry Page title</a></li>
+                                                    <li data-metric="exitPageTitle"><a class="ddmetric" href="#">Exit Page Title</a></li>
+                                                    <li data-metric="exitPageUrl"><a class="ddmetric" href="#">Exit Page URL</a></li>
+                                                    <li data-metric="contentInteraction"><a class="ddmetric" href="#">Interaction</a></li>
+                                                    <li data-metric="siteSearchKeyword"><a class="ddmetric" href="#">Keyword (Site Search)</a></li>
+                                                    <li data-metric="pageTitle"><a class="ddmetric" href="#">Page Name</a></li>
+                                                    <li data-metric="pageUrl"><a class="ddmetric" href="#">Page URL</a></li>
+                                            </ul>
+                </li>
+                                <li data="visit">
+                    <a class="metric_category" href="#">Events</a>
+                    <ul style="display:none;">
+                                                    <li data-metric="eventAction"><a class="ddmetric" href="#">Event Action</a></li>
+                                                    <li data-metric="eventCategory"><a class="ddmetric" href="#">Event Category</a></li>
+                                                    <li data-metric="eventName"><a class="ddmetric" href="#">Event Name</a></li>
+                                            </ul>
+                </li>
+                                <li data="visit">
+                    <a class="metric_category" href="#">Referrers</a>
+                    <ul style="display:none;">
+                                                    <li data-metric="referrerKeyword"><a class="ddmetric" href="#">Keyword</a></li>
+                                                    <li data-metric="referrerName"><a class="ddmetric" href="#">Referrer Name</a></li>
+                                                    <li data-metric="referrerType"><a class="ddmetric" href="#">Referrer Type</a></li>
+                                                    <li data-metric="referrerUrl"><a class="ddmetric" href="#">Referrer URL</a></li>
+                                            </ul>
+                </li>
+                                <li data="visit">
+                    <a class="metric_category" href="#">Visit Location</a>
+                    <ul style="display:none;">
+                                                    <li data-metric="city"><a class="ddmetric" href="#">City</a></li>
+                                                    <li data-metric="continentCode"><a class="ddmetric" href="#">Continent</a></li>
+                                                    <li data-metric="countryCode"><a class="ddmetric" href="#">Country</a></li>
+                                                    <li data-metric="languageCode"><a class="ddmetric" href="#">Language</a></li>
+                                                    <li data-metric="latitude"><a class="ddmetric" href="#">Latitude</a></li>
+                                                    <li data-metric="longitude"><a class="ddmetric" href="#">Longitude</a></li>
+                                                    <li data-metric="provider"><a class="ddmetric" href="#">Provider</a></li>
+                                                    <li data-metric="regionCode"><a class="ddmetric" href="#">Region</a></li>
+                                            </ul>
+                </li>
+                                <li data="visit">
+                    <a class="metric_category" href="#">Visit (metrics)</a>
+                    <ul style="display:none;">
+                                                    <li data-metric="daysSinceFirstVisit"><a class="ddmetric" href="#">Days since first visit</a></li>
+                                                    <li data-metric="daysSinceLastEcommerceOrder"><a class="ddmetric" href="#">Days since last Ecommerce order</a></li>
+                                                    <li data-metric="daysSinceLastVisit"><a class="ddmetric" href="#">Days since last visit</a></li>
+                                                    <li data-metric="actions"><a class="ddmetric" href="#">Number of Actions</a></li>
+                                                    <li data-metric="searches"><a class="ddmetric" href="#">Number of Internal Searches</a></li>
+                                                    <li data-metric="visitCount"><a class="ddmetric" href="#">Number of visits</a></li>
+                                                    <li data-metric="events"><a class="ddmetric" href="#">Total events</a></li>
+                                                    <li data-metric="visitDuration"><a class="ddmetric" href="#">Visit Duration (in seconds)</a></li>
+                                            </ul>
+                </li>
+                                <li data="visit">
+                    <a class="metric_category" href="#">Visit</a>
+                    <ul style="display:none;">
+                                                    <li data-metric="visitIp"><a class="ddmetric" href="#">Visitor IP</a></li>
+                                                    <li data-metric="browserCode"><a class="ddmetric" href="#">Browser</a></li>
+                                                    <li data-metric="browserEngine"><a class="ddmetric" href="#">Browser engine</a></li>
+                                                    <li data-metric="browserVersion"><a class="ddmetric" href="#">Browser version</a></li>
+                                                    <li data-metric="deviceType"><a class="ddmetric" href="#">Device type</a></li>
+                                                    <li data-metric="visitLocalHour"><a class="ddmetric" href="#">Local time</a></li>
+                                                    <li data-metric="operatingSystemCode"><a class="ddmetric" href="#">Operating system</a></li>
+                                                    <li data-metric="operatingSystemVersion"><a class="ddmetric" href="#">Operating system version</a></li>
+                                                    <li data-metric="resolution"><a class="ddmetric" href="#">Resolution</a></li>
+                                                    <li data-metric="visitServerHour"><a class="ddmetric" href="#">Server time</a></li>
+                                                    <li data-metric="userId"><a class="ddmetric" href="#">User ID</a></li>
+                                                    <li data-metric="visitEcommerceStatus"><a class="ddmetric" href="#">Visit Ecommerce status at the end of the visit</a></li>
+                                                    <li data-metric="visitId"><a class="ddmetric" href="#">Visit ID</a></li>
+                                                    <li data-metric="visitConvertedGoalId"><a class="ddmetric" href="#">Visit converted a specific Goal Id</a></li>
+                                                    <li data-metric="visitConverted"><a class="ddmetric" href="#">Visit converted at least one Goal</a></li>
+                                                    <li data-metric="visitorType"><a class="ddmetric" href="#">Visit type</a></li>
+                                                    <li data-metric="visitorId"><a class="ddmetric" href="#">Visitor ID</a></li>
+                                            </ul>
+                </li>
+                                <li data="visit">
+                    <a class="metric_category" href="#">Custom Variables</a>
+                    <ul style="display:none;">
+                                                    <li data-metric="customVariableName"><a class="ddmetric" href="#">Custom Variable name (scope visit)</a></li>
+                                                    <li data-metric="customVariableName1"><a class="ddmetric" href="#">Custom Variable name 1 (scope visit)</a></li>
+                                                    <li data-metric="customVariableName2"><a class="ddmetric" href="#">Custom Variable name 2 (scope visit)</a></li>
+                                                    <li data-metric="customVariableName3"><a class="ddmetric" href="#">Custom Variable name 3 (scope visit)</a></li>
+                                                    <li data-metric="customVariableName4"><a class="ddmetric" href="#">Custom Variable name 4 (scope visit)</a></li>
+                                                    <li data-metric="customVariableName5"><a class="ddmetric" href="#">Custom Variable name 5 (scope visit)</a></li>
+                                                    <li data-metric="customVariablePageName"><a class="ddmetric" href="#">Custom Variable name (scope page)</a></li>
+                                                    <li data-metric="customVariablePageName1"><a class="ddmetric" href="#">Custom Variable name 1 (scope page)</a></li>
+                                                    <li data-metric="customVariablePageName2"><a class="ddmetric" href="#">Custom Variable name 2 (scope page)</a></li>
+                                                    <li data-metric="customVariablePageName3"><a class="ddmetric" href="#">Custom Variable name 3 (scope page)</a></li>
+                                                    <li data-metric="customVariablePageName4"><a class="ddmetric" href="#">Custom Variable name 4 (scope page)</a></li>
+                                                    <li data-metric="customVariablePageName5"><a class="ddmetric" href="#">Custom Variable name 5 (scope page)</a></li>
+                                                    <li data-metric="customVariablePageValue"><a class="ddmetric" href="#">Custom Variable value (scope page)</a></li>
+                                                    <li data-metric="customVariablePageValue1"><a class="ddmetric" href="#">Custom Variable value 1 (scope page)</a></li>
+                                                    <li data-metric="customVariablePageValue2"><a class="ddmetric" href="#">Custom Variable value 2 (scope page)</a></li>
+                                                    <li data-metric="customVariablePageValue3"><a class="ddmetric" href="#">Custom Variable value 3 (scope page)</a></li>
+                                                    <li data-metric="customVariablePageValue4"><a class="ddmetric" href="#">Custom Variable value 4 (scope page)</a></li>
+                                                    <li data-metric="customVariablePageValue5"><a class="ddmetric" href="#">Custom Variable value 5 (scope page)</a></li>
+                                                    <li data-metric="customVariableValue"><a class="ddmetric" href="#">Custom Variable value (scope visit)</a></li>
+                                                    <li data-metric="customVariableValue1"><a class="ddmetric" href="#">Custom Variable value 1 (scope visit)</a></li>
+                                                    <li data-metric="customVariableValue2"><a class="ddmetric" href="#">Custom Variable value 2 (scope visit)</a></li>
+                                                    <li data-metric="customVariableValue3"><a class="ddmetric" href="#">Custom Variable value 3 (scope visit)</a></li>
+                                                    <li data-metric="customVariableValue4"><a class="ddmetric" href="#">Custom Variable value 4 (scope visit)</a></li>
+                                                    <li data-metric="customVariableValue5"><a class="ddmetric" href="#">Custom Variable value 5 (scope visit)</a></li>
+                                            </ul>
+                </li>
+                            </ul>
+            </div>
+            <div class="custom_select_search">
+                <a href="#"></a>
+                <input type="text" aria-haspopup="true" aria-autocomplete="list" role="textbox" autocomplete="off" class="inp ui-autocomplete-input segmentSearch" value="Search" length="15">
+            </div>
+        </div>
+        <div class="segment-content">
+            <div class="segment-top" style="display:none">
+                This segment is visible to: <span class="enable_all_users"><strong>
+                        <select class="enable_all_users_select">
+                            <option selected="1" value="0">me</option>
+                            <option value="1">all users</option>
+                        </select>
+                    </strong></span>
+
+                and displayed for<span class="visible_to_website"><strong>
+                        <select class="visible_to_website_select">
+                            <option selected="" value="7">this website only</option>
+                            <option value="0">all websites</option>                        </select>
+                    </strong></span>
+                and <span class="auto_archive"><strong>
+                        <select class="auto_archive_select">
+                                                        <option selected="1" value="0">segmented reports are processed in real time (default)</option>
+                                                        <option  value="1">segmented reports are pre-processed (faster, requires cron) </option>
+                        </select>
+                    </strong></span>
+
+            </div>
+            <h3>Name: <span  class="segmentName"></span> <a class="editSegmentName" href="#">edit</a></h3>
+        </div>
+        <div class="segment-footer">
+            <div piwik-rate-feature title="Segment Editor" style="display:inline-block;float: left;margin-top: 2px;margin-right: 10px;"></div>
+            <span class="segmentFooterNote">The Segment Editor was <a class='crowdfundingLink' href='http://crowdfunding.piwik.org/custom-segments-editor/' rel='noreferrer' target='_blank'>crowdfunded</a> with the awesome support of 80 companies and Piwik users worldwide!</span>
+            <a class="delete" href="#">Delete</a>
+            <a class="close" href="#">Close</a>
+            <button class="saveAndApply">Save &amp; Apply</button>
+        </div>
+    </div>
+</div>
+<div class="segmentListContainer">
+<div class="ui-confirm segment-delete-confirm">
+    <h2>Are you sure you want to delete this segment?</h2>
+    <input role="yes" type="button" value="Yes"/>
+    <input role="no" type="button" value="No"/>
+</div>
+<div class="ui-confirm pleaseChangeBrowserAchivingDisabledSetting">
+    <h2>Segment '' not applied</h2>
+        <input role="yes" type="button" value="Ok"/>
+    <p class="description">
+        You are requesting data for the Custom Segment '', this Piwik configuration currently prevents real time processing of reports for performance reasons.
+        <br/>
+        Your segmented analytics reports will be available later. We apologize for the inconvenience.
+            </p>
+</div>
+</div></div>
+<script>$(document).ready(function () { require('piwik/UI').SegmentSelectorControl.initElements(); });</script>
+    <div class="dashboard-manager piwikSelector borderedControl piwikTopControl dashboardSettings"
+             piwik-expand-on-click=""
+        data-props="[]"
+    data-params="[]">
+<a class="title" title="Manage&#x20;dashboard"><span class="icon icon-arrow-bottom"></span>Dashboard </a>
+<ul class="dropdown submenu">
+    <li>
+        <div class="addWidget">Add a widget</div>
+        <ul class="widgetpreview-categorylist"></ul>
+    </li>
+        <li>
+        <div class="manageDashboard">Manage dashboard</div>
+        <ul>
+                        <li data-action="resetDashboard">Reset dashboard</li>
+                        <li data-action="showChangeDashboardLayoutDialog">Change dashboard layout</li>
+                    </ul>
+    </li>
+        </ul>
+<ul class="widgetpreview-widgetlist"></ul>
+<div class="widgetpreview-preview"></div></div>
+<script>$(document).ready(function () { require('piwik/UI').DashboardManagerControl.initElements(); });</script>    
+
+<div piwik-expand-on-hover
+     id="header_message"
+     class="piwikSelector borderedControl header_info isPiwikDemo "
+        >
+
+    <a class="title" href="#">
+                    You are viewing the demo of Piwik
+            </a>
+
+    <div class="dropdown">
+                    <a href='http://piwik.org/'>Download</a> the full version! Check out <a href='http://piwik.org'>piwik.org</a>
+            <br/>
+                            
+        
+        You are currently using Piwik 2.15.0.
+    </div>
+</div>
+
+<div style="clear:right"></div>
+            </div>
+
+                            <div id="notificationContainer">
+    </div>
+            
+                            <div id="loadingError">Oops… there was a problem during the request. Maybe the server had a temporary issue, or maybe you requested a report with too much data. Please try again. If this error occurs repeatedly please contact your Piwik administrator for assistance.</div>
+    
+    <div id="ajaxLoadingDiv" style="display:none;">
+    <div class="loadingPiwik">
+        <img src="plugins/Morpheus/images/loading-blue.gif" alt="Loading data..." />Loading data...
+    </div>
+    <div class="loadingSegment">
+        Processing segmented visitor data may take a few minutes...
+    </div>
+</div>
+
+
+    <div id="content" class="home">
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+    </div>
+        </div>
+
+    
+    
+
+        <div id="bottomAd" style="font-size: 2px;">&nbsp;</div>
+<script type="text/javascript">
+    if ('undefined' === (typeof hasBlockedContent) || hasBlockedContent !== false) {
+                (function () {
+                        var body = document.getElementsByTagName('body');
+
+            if (!body || !body[0]) {
+                return;
+            }
+
+            var bottomAd = document.getElementById('bottomAd');
+            var wasMostLikelyCausedByAdblock = false;
+
+            if (!bottomAd) {
+                wasMostLikelyCausedByAdblock = true;
+            } else if (bottomAd.style && bottomAd.style.display === 'none') {
+                wasMostLikelyCausedByAdblock = true;
+            } else if ('undefined' !== (typeof bottomAd.clientHeight) && bottomAd.clientHeight === 0) {
+                wasMostLikelyCausedByAdblock = true;
+            }
+
+            if (wasMostLikelyCausedByAdblock) {
+                var warning = document.createElement('h3');
+                warning.innerHTML = 'In\x20case\x20you\x20are\x20using\x20an\x20ad\x20blocker,\x20please\x20disable\x20it\x20for\x20this\x20site\x20to\x20make\x20sure\x20Piwik\x20works\x20without\x20any\x20issues.';
+
+                body[0].appendChild(warning);
+                warning.style.color = 'red';
+                warning.style.fontWeight = 'bold';
+                warning.style.marginLeft = '16px';
+                warning.style.marginBottom = '16px';
+            }
+        })();
+    }
+</script>    </body>
+</html>

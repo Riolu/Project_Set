@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Study in Shanghai</title>
+<link href="/hongbull.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.8.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+                        $(function(){
+                        $(":input").focus(function(){
+                            if($(this).val() ==this.defaultValue){  
+                            $(this).val("");           
+                                } 
+                        }).blur(function(){
+                        if ($(this).val() == '') {
+                        $(this).val(this.defaultValue);
+                                 }
+                        });
+                                        })
+                    
+-->
+
+</script>
+</head>
+
+<body>
+<div id="site">
+	<!--Top Bar 开始-->
+      <div id="top_bar">
+<form name=search_js1 method=post action='/e/search/index.php' > 
+<input name="show" type="hidden" value="title,smalltext,newstext,writer">
+   	  <div id="top_bar_Search">
+      	<div id="top_bar_Search_input"><input name="keyboard" id="sh1" class="top_Search_input" type="text" value="Search" />
+        </div>
+        <div id="top_bar_Search_BT">
+        <input name="" onclick="su();" type="button" class="top_Search_BT" style="cursor:hand"/>
+        </div>
+</form>
+<script>
+function su(){
+var key =$.trim(document.getElementById("sh1").value);
+
+if(key!='' && key!='Search'){
+document.search_js1.submit();
+}else{
+alert('Please enter the keywords!');
+}
+}
+</script>
+   	  </div>
+      <div id="top_Item_app"><a href="http://en.study-shanghai.org/appsh/" class="Font_14_Green">App</a></div>
+      <div id="top_Item_English"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Item_中文"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Logo"><img src="/images/logo.png" />
+      </div>
+    </div>
+    <!--Top Bar 结束-->
+    
+    <!--Banner 开始-->
+    <div id="Banner">
+		<div id="Banner_pic"><img src="/images/Banner4.png" /></div>
+  </div>
+  <script>
+  var Banner_count=3;
+  var Banner_Max =4;
+  var Banner_list = new Array("images/Banner1.png","images/Banner2.png","images/Banner3.png","images/Banner4.png"); 
+
+	$(document).ready(function(){
+ 		$("#Banner_left").click(function(){
+			
+    		if( Banner_count>1 ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count--;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+		
+ 		$("#Banner_right").click(function(){
+			
+    		if( Banner_count<Banner_Max ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count++;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+	});
+
+
+  </script>
+  <!--Banner 结束-->
+  <!--Menu 开始-->
+  <div id="nav" class="nav">
+  <ul class="first">
+<li class="a"><a class="fir" href="/"><span><img src="/images/Menu_Icon_home_on.png" style="margin-right:5px;"/>Home</span></a>
+    <li class="b"><a class="fir" href="/sis/"><span>Study in Shanghai</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+       <ul class="second" style="display: none;">
+          <li><a href="/sis/ws/2014-02-21/26.html"><span>Why Shanghai</span></a></li>
+          <li><a href="/sis/universities/"><span>Universities</span></a></li>
+          <li><a href="/sis/courses/"><span>Courses</span></a></li>
+          <li><a href="/sis/tutors/"><span>Faculty</span></a></li>
+          <li><a href="/e/action/ListInfo/?classid=19&oper=1"><span>Student Stories</span></a></li>
+        </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+    <li class="c"><a class="fir" href="/ag/"><span>Application Guide</span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ag/lr/"><span>Regulations</span></a></li>
+          <li><a href="/ag/visa/"><span>FAQs</span></a></li>
+          <li><a href="http://www.study-shanghai.org/Scholarship_en.asp"><span>Scholarships</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_3_en"><span>Applying Online</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_STA_en"><span>Status Check</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="d"><a class="fir" href="/ds/"><span>Discover Shanghai </span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ds/cl/"><span>Cultural Life</span></a></li>
+          <li><a href="/ds/museums/"><span>Museums</span></a></li>
+          <li><a href="/ds/living/"><span>Living</span></a></li>
+          <li><a href="/ds/sights/"><span>Sights</span></a></li>
+          <li><a href="/ds/itineraries/"><span>Itineraries</span></a></li> 
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="e"><a class="fir" href="/nc/news/"><span>News Center </span>  </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/nc/news/"><span>News</span></a></li>
+          <li><a href="/nc/Specials/"><span>Specials</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+    <li class="f"><a  class="fir" href="/lc/"><span>Learn Chinese</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/lc/lm/"><span>Mandarin</span></a></li>
+          <li><a href="/lc/ls/"><span>Shanghai Dialect</span></a></li>
+          <li><a href="/lc/hsk/"><span>HSK</span></a></li>
+        </ul>  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+<li class="g"><a class="fir" href="/is/"><span>International Schools</span></a>
+            <ul class="second" style="display: none;">
+              <li>
+                <a href="/is/is"><span>International School</span></a>
+              </li>
+              <li>
+                <a href="/is/id"><span>International Division of Local School</span></a>
+              </li>
+              <li>
+                <a href="/is/asc"><span>After School Class</span></a>
+              </li>
+            </ul>
+          </li>
+  </ul>  
+</div><div class="cb"></div>
+  <!--Menu 结束-->
+  <div id="NavBar">
+  <a href="/index.html">Home</a>&nbsp;>&nbsp;<a href="/tou/">Terms of Use</a> </div>  
+<div class="cb"></div>
+
+  <!--Content 开始-->
+  <div id="Content">
+	<div id="End_full">
+  		<div id="End_page_full">
+        	
+       <div id="End_page_top_title">
+         Terms of Use          </div>
+          <div class="End_page_top_datatime">Updated: 2014-04-07 </div>
+          <div class="End_page_top_datatime">  (<a href='http://cn.study-shanghai.org/' target=_blank>study-shanghai.org</a>)</div>
+          <div id="End_page_top_content">
+
+<p>UNLESS OTHERWISE SPECIFIED BY THIS WEBSITE OR APPROVED BY &quot;STUDY IN SHANGHAI', YOU MUST NOT DOWNLOAD, COPY, REPRODUCE, PUBLISH, TRANSMIT, DISTRIBUTE OR RESELL ANY PICTURES FROM THIS WEBSITE IN ANY FORMAT OR BY ANY MEANS. FOR APPROVAL OF AFFORMENTIONED ACTIVITY, PLEASE EMAIL US AT <a href="mailto:admin@study-shanghai.org">admin@study-shanghai.org</a>.</p>
+<p>BY USING THIS WEBSITE, YOU ARE BOUND BY THE TERMS AND CONDITIONS STATED HEREIN.</p>
+<p>1. Information</p>
+<p>Access to information, data, contents, photos, pictures, videos, audios and other materials and items, tangible or intangible, on this Website we grant you are non-exclusive, non-transferable and limited, and shall be in accordance with the Terms and Conditions.</p>
+<p>2. Change of Terms and Conditions</p>
+<p>We may change, add to or delete terms from the Terms and Conditions from time to time with our sole discretion without notice or liability to you. By continuing to use this Website following such modifications to the Terms and Conditions, you agree to be bound by such modifications.</p>
+<p>3. Changes to the Website</p>
+<p>We may, at our sole discretion and at any time, without prior notice to you, add, amend or remove material from this Website, or alter the presentation, substance, or functionality of this Website.</p>
+<p>4. User Conduct on this Website</p>
+<p>As a condition of your use of this Website, you may not</p>
+<p>A. trespass, break into, access, use or attempt to trespass, break into, access or use any other parts and/or database areas of our servers;</p>
+<p>B. restrict or inhibit any other users from properly using this Website;</p>
+<p>C. publish or transmit any information that is against the law, including but not limited to Constitution of the People's Republic of China, endangering national security, declassifying state secret, subverting the government, undermining national unity, harming national honor and interests, reducing national credit, inciting ethnic hatred, ethnic discrimination, damaging ethnic relationships, inciting illegal mobs, disrupting social order, undermining national religious policies, preaching evil cults or feudal superstition, spreading rumors, disturbing social stability, spreading pornography, obscenity, gambling, violence, murder, terrorism, abetting crimes, insulting, libel and infringing other peoples&rsquo; legal rights or interests, carrying out activities as an illegal organization, contain contents discriminating race, color, sex, sexual orientation, religion, nationality, region, disability or social-economic status; or any other activity that is against any law or administrative regulation.</p>
+<p>D. post or transmit any advertisements, solicitations, chain letters, pyramid schemes, investment opportunities, schemes or other unsolicited commercial communication, or engage in spamming or flooding;</p>
+<p>E. post or transmit any information or software which contains a virus, trojan horse or any other harmful software or digital contents.</p>
+<p>F. post, publish, transmit, reproduce, distribute or in any way exploit any information obtained from this Website for commercial purposes without our prior written permission (unless otherwise specified by us in this Website or pursuant to a separate license granted by us);</p>
+<p>5. Third Party Information</p>
+<p>The contents of the Website may contain information provided by third parties or other sources. We are not responsible for any outdated information. We do not independently verify the information provided by such third parties or sources and users are warned about their reliability and accuracy. We are not responsible for this information and user discretion is advised.</p>
+<p>6. Prohibition of Access</p>
+<p>While we shall use commercially reasonable efforts to provide users with access to this Website twenty-four (24) hours per day, we cannot guarantee your access and you acknowledge that we make no representation or warranty that this Website will be available. You do not guarantee the compatibility of the users' hardware and software with the Website. We reserve the right to suspend this Website to upgrade or modify this Website, and/or restrict your access to use this Website. We shall not be responsible for any loss or damage you may incur as a result of any such suspension or restriction.</p>
+<p>7. Links to and from This Website</p>
+<p>Links on this Website may take you to other websites and you acknowledge and agree that we have no responsibility for the accuracy or availability of any information provided by these linked websites. Providing links to other websites does not constitute an endorsement or recommendation of such websites or their contents.</p>
+<p>8. Intellectual Property</p>
+<p>All intellectual property rights contained in this Website belong to us or have been lawfully licensed to us for use on this Website. While you may download or print materials from this Website for your personal, non-commercial use, it remains the property of the Website, unless otherwise stated.<br />
+Unless otherwise specified in the Website or pursuant to a separate license granted by &quot;Study In Shanghai&quot;, you are not allowed to upload, download, post, publish, reproduce, transmit or distribute in any way, any contents of this Website or create derivative works. You agree that we are free to use, disclose, adopt and modify any ideas, concepts, know-how, proposals, suggestions, comments and other communications and information provided by you pertaining to the Website without any compensation to you. You hereby waive and agree to waive all rights and claims about any consideration, fees, royalties, charges and/or other compensation pertaining to our use, disclosure, adoption and/or modification of your feedbacks.</p>
+<p>9.Limited Liability and Warranty</p>
+<p>All Information is for your general reference only. We do not take any responsibility whatsoever for the contents of the Website. Your access to and use of our website is at your own risk. Presenting third party products, events or services on the Website does not constitute or imply our endorsement or recommendation.<br />
+We do not guarantee or assume any responsibility and the users of the Website acknowledge that we do not guarantee the following:</p>
+<p>A. the Information on this Website is accurate, adequate, current or reliable, or may be used for any purpose other than general reference or as specified in any separate license granted by us;</p>
+<p>B. the information on this Website is free of defects, errors, omissions, viruses or anything which may change, erase, add to or damage your software, data or equipment；</p>
+<p>C. messages sent through the internet will be free from interception, corruption or loss;</p>
+<p>D. access to this Website will be available or be uninterrupted;</p>
+<p>E. defects on the Website will be corrected.<br />
+In no event shall we be liable to you or any other person for any direct, indirect, incidental, special, punitive or consequential damages, including any loss of business or profit arising from any use, or inability to use, errors or omissions on this Website or information herein, even if we have been advised of the possibility of such damages.</p>
+<p>You will exercise and rely solely on your own skill and judgment in your use of this Website and the interpretation of the information herein. You are responsible for ensuring your use of this Website and interpretation of the information herein complies with all applicable laws.</p>
+<p>10. Indemnity</p>
+<p>You agree to defend, indemnify and hold us, our employees, agents, officers, directors, agents, contractors, suppliers and other representatives harmless from and against all liabilities, damages, claims, actions, costs and expenses (including legal fees), in connection with or arising from your breach of these Terms of Conditions and/or your use of this Website.</p>
+<p>11. Responsibilities</p>
+<p>No waiver of any breach under the Terms and Conditions will be interpreted as allowance of another waiver of such breach.</p>
+<p>12. Governing Law and Jurisdiction</p>
+<p>The Terms and Conditions shall be governed by the law of the Constitution of the People's Republic of China and other relative laws. You agree to submit to the exclusive jurisdiction of each level of the&nbsp;Shanghai People's Court.</p>
+<p>Last Updated: March 13, 2014</p>
+<p>Copyright&nbsp;Study In Shanghai&nbsp;2014</p>
+<p>&nbsp;</p>
+          </div>
+        </div>
+        <div id="blank_bar_h13">
+        </div>
+  <!--底部按钮 开始-->
+      <div class="Learn_Bottom_menu_full">
+      <div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="http://studyinshanghai.cndy.org/e/action/ListInfo/?classid=19&oper=1"><img src="/images/Learn_Icon1.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="http://studyinshanghai.cndy.org/e/action/ListInfo/?classid=19&oper=1">Student Stories</a></div>
+        </div>
+
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="http://studyinshanghai.cndy.org/lc/"><img src="/images/Learn_Icon2.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="http://studyinshanghai.cndy.org/lc/">Learn Chinese</a></div>
+        </div>
+        
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="/appsh/"><img src="/images/Learn_Icon3.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right2">
+          <a href="#">APP</a></div>
+        </div>
+
+    </div>
+    <!--底部按钮 结束-->    
+	</div>
+  </div>
+  <!--Content 结束-->
+        <div id="bottom_bar">
+  	<div id="bottom_left"></div>
+    <div id="bottom_content">
+    	<div id="bottom_content1">
+        	<ul>
+            <li><a href="http://en.study-shanghai.org/sitemap/2014-03-13/442.html" class="Font_12_fff">Sitemap</a></li>
+            <li><a href="http://en.study-shanghai.org/tou/2014-04-07/655.html" class="Font_12_fff">Terms of Use</a></li>
+            <li><a href="http://en.study-shanghai.org/cu/2014-04-07/656.html" class="Font_12_fff">Contact Us</a></li>
+            <li><a href="http://en.study-shanghai.org/lk/2014-03-13/441.html" class="Font_12_fff">Links</a></li>
+            </ul>
+        </div>
+        <div class="cb"></div>
+        <span>Copyright 2013 Shanghai Municipal Education Commission. All rights reserved.</span>
+    </div>    
+    <div id="bottom_right"></div>
+  </div>
+<div style="dispaly:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1252937499'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D1252937499%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<script type="text/javascript" src="/js/nav.js"></script>
+  
+</div> 
+</body>
+</html>

@@ -1,0 +1,2096 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta content="all" name="robots" />
+<title>中央国家机关法治人物和法治故事--党建--人民网</title>
+<meta name="keywords" content="中央国家机关 法治人物  法治故事 中央国家机关工委 " />
+<meta name="description" content="" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="399259" />
+<!-- 调用样式表 -->
+<link rel="stylesheet"  href="/img/MAIN/2015/09/115871/page.css" type="text/css" media="all"  charset="utf-8" />
+
+<script src="/img/MAIN/2015/09/115871/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="/img/MAIN/2015/09/115871/js/jquery.jdt.js" type="text/javascript"></script>
+<script>
+$(function(){
+	$("#box3").Tab({
+		ChangeTime:3000,//转播时间
+		Obutton : true // true：数字、圆点；false：缩略图
+	});
+
+})
+</script>
+<script type="text/javascript">
+function postMsg()
+{
+	if (document.form1.content.value==null || document.form1.content.value=="") {
+		alert("请填写留言。");
+		return;
+	} else {
+		document.form1.submit();
+		return false;
+	}
+}
+</script>
+<script type="text/javascript">
+function setCookie1(objName)
+{		
+	var bn='95953';
+	document.cookie= objName+"="+bn;		 
+} 
+function setCookie(objName)
+{
+	var exdate=new Date();
+	var t=exdate.getTime();
+	exdate.setTime(exdate.getTime()+6000);//投票间隔时间，可改
+	var bn=exdate.getTime()+6000;
+	document.cookie= objName+"="+bn+";expires="+exdate.toGMTString(); 
+}
+function getCookie(objName)
+{
+	var arrStr = document.cookie.split("; ");   
+
+	for(var i = 0;i < arrStr.length;i ++)
+	{    
+		var temp = arrStr[i].split("=");    
+		if(temp[0] == objName) 
+		return unescape(temp[1]);
+	} 
+}
+$(document).ready(function(){
+    $.getJSON("http://gp.people.com.cn/yangshuo/20120224button/json.php?type=338&callback=?",function(data){//每一个投票对应一个type的
+		 for(var i = 0; i < data.length; i++)
+        {
+             $("#"+data[i].vid).html(data[i].bnum);
+        }
+    });  
+    $("img.button1").click(function(){
+         var voteId = $(this).attr("voteId");
+		 if(getCookie("bt"+voteId) == null||getCookie("bt"+voteId) =='95953'){
+         setCookie1("bt"+voteId);
+	     var a = parseInt($("#"+voteId).text()) ,b = 1;	
+	     var num= a + b;	 
+	     $("#"+voteId).text(num);
+	     var t=getCookie("bt"+voteId);
+	    $.ajax({
+	         type:"get", 
+	         url: "http://littlepoll.people.com.cn/2012ys/iptp12/tp.php?id=" + voteId+"&t="+t+"&type=338",//每一个投票对应一个type的值
+	         dataType:"jsonp",    
+	         cache: false,
+	         success:function(data){
+				 if(data.b==1)
+				{
+				     alert("感谢您的参与！");
+				     $("#"+voteId).text(num);
+				}
+				else if(data.b==7)
+				{
+				     alert("此IP已到达投票上限，请明天再行投票！");
+				}
+				else if(data.b==2)
+				{
+				    alert("投票已结束。");
+//alert("您的投票次数过多！");
+			    }
+			 }
+	    });
+    
+	     setCookie("bt"+voteId);
+        }
+         else
+        {
+	         alert('您太快了，请休息一下！！');
+	    }
+    });
+}); 	
+</script>
+</head>
+
+<body>
+<div class="clearfix p1_bg">
+<div class="w980 toppic clearfix"><p>　法治人物激荡心灵,法治故事感人肺腑。为进一步贯彻落实党的十八届四中全会精神，推进依法治国和法治政府建设，中央国家机关工委在中央国家机关开展了法治人物、法治故事征集宣传展示活动。</p></div>
+<!--p1-->
+<div class="p1_content clearfix w980" style="display:block;">
+  <div class="fl">
+     <div id="box3">
+        <ul>
+            
+        </ul>
+    </div>
+  </div>
+  <div class="fr">
+     <h1><a href='/n/2015/0918/c399132-27606072.html' target="_blank">关于法治人物、法治故事展示评选启事</a></h1>
+     <p class="gray">&nbsp;&nbsp;&nbsp;&nbsp;中央国家机关法治人物、法治故事展示评选活动由中央国家机关工委与中国法学会、全国普法办、人民网联合主办。<span style="font-family: 宋体; line-height: 24px;">诚邀广大网友对法治人物、法治故事点赞投票，主办方将根据投票结果评选出“中央国家机关最受网民欢迎的法治人物”和“中央国家机关最受网民欢迎的法治故事”，并在12月4日中央电视台国家宪法日晚会上公布受表彰名单。</span><div><b>　　活动时间：</b>10月8日——10月31日</div><div><b>　　活动规则：</b>为确保此次活动公开公平公正，活动期间严禁恶意刷票行为,刷票严重的,将取消展示推荐评选资格，请大家严格遵守活动规则。&nbsp;</div></p>
+
+    
+  </div>
+</div>
+<!--p1 end-->
+<!--p2-->
+<div class="p2_con w980 clearfix" style="display:none;">
+  
+  <div class="fl">
+     <dl class="clearfix">
+        <dt></dt>
+        <dd>
+           <ul>
+              
+           </ul>
+        </dd>
+     </dl>
+  </div>
+  <div class="fr">
+     
+  </div>
+</div>
+<!--p2 end-->
+</div>
+<!--p3-->
+<div class="clearfix p3_con w980" style="display:block;">
+  <h1>法治人物</h1>
+  <div class="zs_list clearfix">
+  
+  </div>  
+  <ul class="clearfix">
+    <li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600549.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300644498372535879227.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘斌</b>全国人大法工委</i></div>
+<div class="fr">
+<b>学法守法无止境  用法护法有所为</b>
+<p>他是法学知识殿堂里的求学者，也曾是大学校园里的传道者……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35191" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600546.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300644501121113678543.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王历磊</b>全国人大法工委</i></div>
+<div class="fr">
+<b>“新、急、难、繁”敢担当</b>
+<p>他总是加班加点，用个人的休息时间来弥补“急”事上缺少的时间……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35192" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600545.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300644505110168982890.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吴晓华</b>全国人大法工委</i></div>
+<div class="fr">
+<b>平凡岗位上专心立法工作的平凡人</b>
+<p>20多年来，他干一行爱一行，为立法工作默默无闻地辛勤耕耘……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35193" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600543.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300644502556879599162.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王曙光</b>全国人大法工委</i></div>
+<div class="fr">
+<b>执着追求  默默奉献的“立法人”</b>
+<p>她从事立法工作二十余年，对工作充满激情，被戏称为“工作狂”……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35194" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600539.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300644503815449043322.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王翔</b>全国人大法工委</i></div>
+<div class="fr">
+<b>王翔同志先进事迹</b>
+<p>王翔勤奋学习，默默奉献，以自己的实际行动践行了“做合格的立法人，当好参谋助手”要求……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35195" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600533.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300644499952392978341.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>石宏</b>全国人大法工委</i></div>
+<div class="fr">
+<b>致力民事立法 当好参谋助手</b>
+<p>石宏同志在立法工作繁忙的情况下，注重党的文件和理论学习……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35196" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600531.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300644496894234834514.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李寿伟</b>全国人大法工委</i></div>
+<div class="fr">
+<b>一位资深刑事“立法人”的故事</b>
+<p>1994年从北京大学法律系毕业后到刑法室工作至今已经有22个年头……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35197" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600524.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300644506720111564731.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>喻世红</b>全国人大法工委</i></div>
+<div class="fr">
+<b>甘当苦力，为立法做好服务保障</b>
+<p>从部队转业来到全国人大常委会法制工作委员会工作，迄今已整20个年头……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35198" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600521.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300644508322562027777.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>袁杰</b>全国人大法工委</i></div>
+<div class="fr">
+<b>精耕细作立法事  率先垂范带头人</b>
+<p>她始终爱岗敬业、甘当苦力，以身作则、率先垂范，在平凡的岗位……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35199" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0915/c399092-27588729.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292237121947888105362.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>何帆</b>最高法司改领导小组办公室</i></div>
+<div class="fr">
+<b>何帆同志先进事迹</b>
+<p>除了法官和改革者，何帆还有另一个身份：知名译者……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35339" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0915/c399092-27588725.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292237126245186634122.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>任能能</b>最高法刑事审判第五庭</i></div>
+<div class="fr">
+<b>任能能同志先进事迹</b>
+<p>作为一名死刑复核法官，任能能专业知识扎实，审判业务娴熟……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35340" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0915/c399092-27588724.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292237127325707630305.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>徐德芳</b>最高法立案庭</i></div>
+<div class="fr">
+<b>播撒阳光 无悔使命</b>
+<p>徐德芳，一名80后法官助理，同时也是一位2岁孩子的母亲……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35341" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0915/c399092-27588723.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292237124627019096344.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>黄永维</b>国家法官学院</i></div>
+<div class="fr">
+<b>法治精神牢记心中</b>
+<p>黄永维同志2012年11月到国家法官学院工作，担任国家法官学院院长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35342" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0915/c399092-27588690.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292237133483191542424.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>阎巍</b>最高法行政审判庭</i></div>
+<div class="fr">
+<b>不让天平在这里失衡</b>
+<p>具有行政法学博士后并获得中国社会科学院副研究员职称的法官……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35343" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0915/c399093-27588639.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292235338232733165424.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>高晓力</b>最高法第一巡回法庭</i></div>
+<div class="fr">
+<b>宝剑锋从磨砺出</b>
+<p>做一名法官，维护社会公平正义，是她学生时代的梦想……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35344" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604459.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300654103436372609407.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张敬艳</b>山东省菏泽市人民检察院</i></div>
+<div class="fr">
+<b>把公平正义的阳光洒进百姓心田</b>
+<p>路，是我们自己走出来的，只要对百姓有利，就要大胆去尝试……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35345" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604448.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300654101544029307215.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>丁殿勤</b>新疆昌吉州检察院</i></div>
+<div class="fr">
+<b>铁骨铮铮肃贪蠹  热血忠魂谱人生</b>
+<p>丁殿勤的性格就是拼命三郎，因连续数日的工作劳累，病倒在办案一线……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35346" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604442.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300654099932999169806.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘龙清</b>福建省漳州市人民检察院</i></div>
+<div class="fr">
+<b>一刀一笔刻公正</b>
+<p>文证审查是检察官法医一项比重很大的工作。刘龙清16年来纠正错误鉴定369件，奠定了在漳州……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35347" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604440.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300654098365209371835.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陈永明</b>浙江省宁波市人民检察院</i></div>
+<div class="fr">
+<b>一名公诉人的铁肩正道</b>
+<p>单独承办各类刑事案件242件，其中174人被判无期徒刑以上刑罚，无一错案……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35348" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604433.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300654097084633749653.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>彭少勇</b>河北省保定市人民检察院</i></div>
+<div class="fr">
+<b>一个现代版“刀下留人”的真实故事</b>
+<p>“只服从法律和事实，坚决排除非法证据。”彭少勇最终下定决心……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35349" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603226.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300648323788429123030.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>周海燕</b>外交部办公厅</i></div>
+<div class="fr">
+<b>用信念成就事业，用平凡演绎精彩</b>
+<p>20多年来，因为对法律的热爱，她不断挑战自我，完成了从一名外语……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35171" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603140.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300648322023991463920.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吴海文</b>外交部条法司</i></div>
+<div class="fr">
+<b>用法干外交 条约法律人</b>
+<p>吴海文同志具备丰富的法律外交历练，先后在驻澳门特区公署……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35172" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603111.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300648320452903758956.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>尹文强</b>外交部边海司</i></div>
+<div class="fr">
+<b>用法服务南海外交工作</b>
+<p>尹文强同志作为边海司南海事务处处长，活学活用国际法，用好用足……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35173" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27602963.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300648318985775447889.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>周露露</b>外交部条法司</i></div>
+<div class="fr">
+<b>立法为公 用法为民</b>
+<p>不要以为她仅仅是一名普通的瘦弱的女性，当你真正靠近她，了解她强大……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35174" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594714.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247551349564959534.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吴保喜</b>徐州市价格认证中心</i></div>
+<div class="fr">
+<b>坚守法规底线  还原价格真相</b>
+<p>时时表明自己是价格鉴证师，就是事事标明自己的工作准则和职业价值……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35272" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594707.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247550127851527184.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>卢润波</b>湖北省孝感市发改委</i></div>
+<div class="fr">
+<b>勤恳“修补匠”</b>
+<p>孝感市发改委顺应改革的潮流，将行政审批科与政策法规科合并，卢润波担任科长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35273" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594703.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247548351996478128.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陈国忠</b>秦皇岛市节能监察监测中心</i></div>
+<div class="fr">
+<b>港城节能卫士</b>
+<p>他已经有25年的工作经历，但是正式进入节能系统刚满六年，在这六年的时间里……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35274" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594697.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247545409695848704.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>阿依丁·哈布拉克</b>新疆阿勒泰地区发改委</i></div>
+<div class="fr">
+<b>阿依丁·哈布拉克先进事迹</b>
+<p>价格监督检查涉及到经济建设的各行各业，具有法律的严肃性和政策性……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35275" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592864.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244226594919856646.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陈伟聪</b>北大附中</i></div>
+<div class="fr">
+<b>为培养未来公民而努力</b>
+<p>每个新学期的第一周，北大附中的孩子们都会期盼着能选上自己心仪的选修课……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35299" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592840.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244228017215246815.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>常生龙</b>上海市虹口区教育局</i></div>
+<div class="fr">
+<b>用法治推进学校制度建设</b>
+<p>他有一个梦想，就是期待教育行政部门要切实放权给学校，让学校能够依法办学、……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35300" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27590459.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292238440318941358363.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张红霞</b>广东省通信管理局</i></div>
+<div class="fr">
+<b>依法监管践行者</b>
+<p>2000年进入广东省通信管理局，现任广东省通信管理局政策法规处处长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35337" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27590382.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292238438941021200839.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王巍</b>黑龙江省通信管理局</i></div>
+<div class="fr">
+<b>王巍同志先进事迹</b>
+<p>自2009年入局工作以来，王巍同志勤勉敬业、恪尽职守……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35338" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/1008/c399092-27673330.html" target="_blank"><img src="/NMediaFile/2015/1008/MAIN201510081614195558996095540.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吴朝伟</b>国家民委政策法规司</i></div>
+<div class="fr">
+<b>民族法治建设的实践者</b>
+<p>我国8.5万个城市社区中，生活着2000万以上的少数民族，包括1000万……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35191" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597792.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292249418367363967041.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>郑建桥</b>上海出入境边防检查总站</i></div>
+<div class="fr">
+<b>“法治公正”的守护人</b>
+<p>他有国门卫士的忠诚，也有文明使者的友好；他有公正执法的严谨……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35263" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597735.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292249416232795599149.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张鹤龙</b>北京出入境边防检查总站</i></div>
+<div class="fr">
+<b>为新时代普法精兵点赞</b>
+<p>法治社会，人人生活于法制规则之中，作为一线的执勤执法民警，不仅要懂法用法……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35264" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597643.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292249414744559778940.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>尤小文</b>公安部经侦局</i></div>
+<div class="fr">
+<b>猎狐缉捕队长</b>
+<p>“猎狐行动”是全国公安机关缉捕境外在逃经济犯罪嫌疑人的专项行动，在这些外逃的“狐狸”中……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35265" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0930/c399092-27653065.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509301542239165017143088.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李剑涛</b>公安部治安管理局</i></div>
+<div class="fr">
+<b>做新媒体时代的法治理念践行者传播者</b>
+<p>李剑涛，“公安部打四黑除四害”官方微博负责人……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35331" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597577.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292249413259382682162.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>徐永</b>公安部治安管理局</i></div>
+<div class="fr">
+<b>崇尚法治 服务民生 </b>
+<p>如何破解公安执法管理与行业发展、群众利益出现的矛盾，一连几天，徐永始终在思考这个问题……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35266" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597532.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292249411520340955364.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>艾尼瓦尔·努尔顿</b>新疆克州边防支队盖孜边境检查站</i></div>
+<div class="fr">
+<b>边境一线的执法尖兵</b>
+<p>他始终视驻地为故乡，把群众当亲人，坚持深入辖区体民意、走访百家察民情……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35267" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597518.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292249410005726552427.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>柳佳</b>公安部刑侦局</i></div>
+<div class="fr">
+<b>智勇双全  刑警本色</b>
+<p>从警11年来，他一直奋战在侦查破案、打击犯罪的前沿，先后荣立二等功1次……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35268" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597475.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292249406521468475637.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>锁正杰</b>公安部法制局</i></div>
+<div class="fr">
+<b>法治铸警魂</b>
+<p>他怀着对建设社会主义法治国家的坚定信仰和对公安法制事业的无限热爱，默默奋斗在工作岗位上……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35269" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597460.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292249404314106646933.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李玫瑾</b>公安部公安大学</i></div>
+<div class="fr">
+<b>洞悉心灵的工程师</b>
+<p>在公众的眼里，她是冷静分析案情的学者；在刑警的眼里，她是剖析犯罪心理的专家……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35270" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597439.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292249400976616676582.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李健军</b>广西边防总队</i></div>
+<div class="fr">
+<b>在法治边防建设中贡献力量</b>
+<p>党性修养高，政治立场坚定，坚持高标准、严要求，树立正确的世界观……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35271" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600421.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300643281438803843528.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>邵兴平</b>民政部民间组织管理局</i></div>
+<div class="fr">
+<b>邵兴平同志先进事迹</b>
+<p>始终以高度责任感认真履职，兢兢业业、任劳任怨、无私奉献……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35204" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600419.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300643280515208037028.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>尹静</b>民政部政策法规司</i></div>
+<div class="fr">
+<b>平凡法律人民政法制路</b>
+<p>研究生毕业后，尹静考入政府法制工作队伍，迄今已逾十年……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35205" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27590887.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701272122339486685.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>杨彦萍</b>中国法律援助基金会</i></div>
+<div class="fr">
+<b>向贫弱者播撒法治阳光</b>
+<p>杨彦萍作为法律援助志愿者，曾到四川和海南提供法律援助……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35329" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27590856.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300700310047928952567.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>徐彻</b>司法部司法鉴定科学技术研究所</i></div>
+<div class="fr">
+<b>徐彻同志先进事迹</b>
+<p>1987年7月参加工作，生前任司法部司法鉴定科学技术研究所刑事技术研究室副主任……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35330" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27590808.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300700308746926523404.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张鸣</b>广东省监狱局</i></div>
+<div class="fr">
+<b>张鸣同志先进事迹</b>
+<p>中共党员，1960年11月出生，1976年参加工作,生前为广东省监狱局刑罚执行处处长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35331" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27590786.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300700307152745705443.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张健辉</b>广西第六强制隔离戒毒所医院</i></div>
+<div class="fr">
+<b>张健辉同志先进事迹</b>
+<p>先后任广西第二劳教所办事员、科员、医院副院长，广西第六强制隔离戒毒所医院院长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35332" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27590751.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292240128911106465922.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王俊峰</b>中华全国律师协会会长</i></div>
+<div class="fr">
+<b>王俊峰同志先进事迹</b>
+<p>作为全国律协的会长，王俊峰带领全国律协，认真落实司法部部署……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35333" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27590736.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300700306029105518659.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>郭华嘉</b>天津市河东区司法局</i></div>
+<div class="fr">
+<b>郭华嘉同志先进事迹</b>
+<p>1958年6月出生，2007年8月任天津河东区司法局东新街道司法所所长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35334" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600156.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259579321489724258.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王均锋</b>山东省沂源县南鲁山镇国土资源所</i></div>
+<div class="fr">
+<b>心中有法也有情</b>
+<p>他用责任和忠诚写下了一名国土卫士的使命之歌……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35224" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592696.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244222864450855973.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>孟祥民</b>山东省淄博市淄川区环保分局</i></div>
+<div class="fr">
+<b>站着是座山 躺下是条河</b>
+<p>孟祥民同志生前是山东省淄博市淄川区环保分局监察大队监察一科科长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35302" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604409.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300653279079936744754.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>金耀东</b>北京市住建委</i></div>
+<div class="fr">
+<b>将全心付法治</b>
+<p>金耀东同志在立法、执法、行政复议、多元调解、普法工作等方面……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35350" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604392.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300653276350674122525.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>蔡文强</b>安徽省宿州市城市管理行政执法局</i></div>
+<div class="fr">
+<b>让群众感受执法文明</b>
+<p>在城管执法战线上已奋斗了20余个春秋，是一位城管战线上的老战士……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35351" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604386.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300653287222674517953.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王硪</b>重庆市土地房屋权属登记中心</i></div>
+<div class="fr">
+<b>百姓心中的“明星”</b>
+<p>他是土地房屋登记的“能人”，不论多复杂的产权登记问题，一经他手……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35352" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604370.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300653285977967374354.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王德强</b>住房城乡建设部法规司</i></div>
+<div class="fr">
+<b>依法行政  为民复议</b>
+<p>王德强，今年32岁，是住房城乡建设部法规司行政复议处一名工作人员……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35353" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604361.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300653284646725550325.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>熊欣华</b>上海市城市管理行政执法局</i></div>
+<div class="fr">
+<b>忠于职守  不辱使命</b>
+<p>他全身心投身于城管执法工作，辛勤耕耘了十八个年头，忠于职守……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35354" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604345.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300653282708424466755.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陆长明</b>河北省秦皇岛市住房保障和房产管理局</i></div>
+<div class="fr">
+<b>做依法行政的带头人</b>
+<p>依法管理、依法办事，才能保证行政管理的统一性、连续性和稳定性……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35144" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604337.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300653280619848078207.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>董之益</b>上海市静安区曹家渡城管大队</i></div>
+<div class="fr">
+<b>“猫和老鼠”共“舞”</b>
+<p>如何让城区有序，让百姓满意，是城管工作的难题，多年来曹家渡城管……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35145" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604317.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300653274916170912167.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>程德旺</b>安徽省建设稽查局</i></div>
+<div class="fr">
+<b>一片丹心稽查情</b>
+<p>高大端庄，和蔼可亲中透着威严。如果不介绍的话，你很难把他和……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35146" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600371.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300639193095490081910.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>解曼莹</b>交通运输部水运局</i></div>
+<div class="fr">
+<b>巾帼红颜 立法先锋</b>
+<p>充分利用航道资源、发展水运，不仅能节省土地资源，还可以节约能源……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35211" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600367.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300639191818098393179.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>周艾燕</b>交通运输部科学研究院</i></div>
+<div class="fr">
+<b>交通法治科研的追梦人</b>
+<p>从1995年步入中国政法大学法学殿堂的那一刻起，法律从此成为她的信仰……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35212" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600332.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300639190300790243921.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>彭卫东</b>长江航运公安局上海分局</i></div>
+<div class="fr">
+<b>法治交通路上的追梦人</b>
+<p>参加工作近三十年来，始终致力于传播法治理念，投身法治交通公安建设……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35213" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600321.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300639187535504625005.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吴延国</b>交通运输部海事局</i></div>
+<div class="fr">
+<b>中国海上“福尔摩斯”</b>
+<p>他对保障海上安全、维护好国家和人民的利益有着深刻的认识……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35214" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399092-27600313.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701290715962150148.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>包继来</b>交通运输部海事局</i></div>
+<div class="fr">
+<b>做法治海事建设的排头兵</b>
+<p>包继来，男，1974年10月出生，汉族，江苏连云港人，硕士研究生……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35215" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600302.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300639188865472103699.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>朱可欣</b>交通运输部海事局</i></div>
+<div class="fr">
+<b>法治精神助推海事建设</b>
+<p>注重研究上位法，注重调查研究，广泛听取意见，做到科学立法……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35216" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600301.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300639186339180116398.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李恩洪</b>交通运输部海事局</i></div>
+<div class="fr">
+<b>法治海事建设先遣兵</b>
+<p>没有船员，全球一半人挨饿，另一半人受冻，维护好船员的利益是……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35217" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600377.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300639184822470317763.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>初北平</b>大连海事大学</i></div>
+<div class="fr">
+<b>海事中国话语权积极倡导者</b>
+<p>倡导中国话语权在海洋领域的构建……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35210" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27602736.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300646571608326626265.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>罗尖</b>水利部太湖流域管理局</i></div>
+<div class="fr">
+<b>为了太湖永葆美丽</b>
+<p>为保障太湖流域水安全、维护省际边界平安稳定作出了突出的贡献……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35178" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27602617.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300646569364905570648.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>邹洁玉</b>水利部海河水利委员会</i></div>
+<div class="fr">
+<b>点滴汇川扬法治之歌</b>
+<p>8:30上班铃响，已坐在办公桌前的邹洁玉翻开了自己的厚厚的记事本……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35179" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27602573.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300646567794450843940.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘伟年</b>淮委沂沭泗水利管理局沂沭河水利管理局</i></div>
+<div class="fr">
+<b>沂蒙山上一棵挺拔青松</b>
+<p>他，温文尔雅、个子不高，但宽厚坚实的肩膀却承载着500余公里……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35180" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27602526.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300646565869795401108.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张道强</b>黄委山东聊城东阿黄河河务局</i></div>
+<div class="fr">
+<b>50万字的步步较量</b>
+<p>他—以军人的敏锐观察着黄河水利的方方面面，他—用16年经历亲身……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35181" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27602423.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300646563612791146663.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>郭留锋</b>长江委水政监察总队鄂赣大队</i></div>
+<div class="fr">
+<b>“锋”芒出鞘守大江</b>
+<p>11年前，刚从警校毕业的郭留锋，通过层层选拔，从老家河南……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35182" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27590663.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300700303120851463262.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>于方</b>商务部条法司</i></div>
+<div class="fr">
+<b>国际规则领域的探索者</b>
+<p>于方是科班出身，做学生时的梦想是做律师，职业理想是做法官……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35335" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27590591.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292238441867036449670.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>周云雷</b>商务部世贸司</i></div>
+<div class="fr">
+<b>接轨国际规则彰显形象</b>
+<p>周云雷，毕业于北京大学法学院，现任商务部世贸司通报审议处副处长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35336" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592490.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292242469369026274426.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吴琨</b>人民卫生出版社</i></div>
+<div class="fr">
+<b>柔肩担重任  法治兴人卫</b>
+<p>从无到有，万事待兴，摆在她面前的是繁芜杂乱的各项法务工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35308" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592479.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292242465929955939086.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>石琦</b>国家卫生计生委宣传司</i></div>
+<div class="fr">
+<b>依法控烟  促进健康</b>
+<p>从事健康促进和控烟工作5年，她始终严格要求自己，立足本职岗位……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35309" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27592468.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701284145291682790.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>范戎春</b>国家卫生计生委机关服务局</i></div>
+<div class="fr">
+<b>让情与法在保卫中升华</b>
+<p>为了维护国家机关的尊严，保护依法上访者权益，他沉着冷静……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35310" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27592464.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701280701561443064.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>魏亮瑜</b>北京医院医患关系办公室</i></div>
+<div class="fr">
+<b>魏亮瑜同志先进事迹</b>
+<p>凌晨2点，北京医院医患关系办公室的会议室里，一场医患沟通会仍在进……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35311" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600602.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300645333163776171974.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李斌</b>人民银行征信管理局</i></div>
+<div class="fr">
+<b>谱信用法治新篇</b>
+<p>李斌同志的血液里流淌着大庆铁姑娘的基因。她的父母都是新中国……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35187" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600601.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300645331885711346637.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>汤旸</b>人民银行营业管理部</i></div>
+<div class="fr">
+<b>坚守法治，埋头奉献</b>
+<p>汤旸刚满26岁，进入营业管理部就一头扎进了人民银行的法律事务工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35188" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600595.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300645330263971300836.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陆正来</b>人民银行福州中心支行</i></div>
+<div class="fr">
+<b>做一名敬业爱岗的国库监管员</b>
+<p>以强烈的工作责任心和时代责任感，坚持学习，勤奋工作，奋勇开拓……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35189" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600585.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300645328865046717145.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张劲</b>人民银行广州分行</i></div>
+<div class="fr">
+<b>法治思维践行者 基层央行护航人</b>
+<p>法治思维和创新精神就像是他生命中两条并行不悖的主线，始终贯穿……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35190" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600614.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300646169805574733474.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>卢荻</b>审计署郑州特派办</i></div>
+<div class="fr">
+<b>法律的守护人　质量的把关者</b>
+<p>审计署郑州特派办法规处有这样一位审理人员，有人说她业务熟练……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35183" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600612.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300646168538590497096.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李艳平</b>审计署长沙特派办</i></div>
+<div class="fr">
+<b>护“法”使者</b>
+<p>凭着一颗对审计法规事业的执着追求，李艳平在审计法制工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35184" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600611.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300646166668038286988.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>柳威</b>审计署武汉特派办</i></div>
+<div class="fr">
+<b>审计“工兵”</b>
+<p>十年磨一剑，从一名法律专业的学生，逐渐成长为法规审理的业务骨干……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35185" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399093-27600610.html" target="_blank"><img src="/NMediaFile/2015/1008/MAIN201510081712318150454555384.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>杨晓</b>审计署企业审计司</i></div>
+<div class="fr">
+<b>执法律之器  扬审计之威</b>
+<p>他在学校就学了经济法第二专业，此后一直对法律非常执着……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35186" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399093-27592643.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292242478543853581041.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>马超</b>石家庄海关法规处</i></div>
+<div class="fr">
+<b>做普法战线上的笃行者</b>
+<p>马超就职的法制科只有两名同志，却肩负着关区法治宣传教育培训……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35303" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592605.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292242477284732753815.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>韦佳</b>宁波海关法规处</i></div>
+<div class="fr">
+<b>为了法治的梦想</b>
+<p>多为执法解决一个问题，多为企业解释一遍法规，就是在推动法治的进步……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35304" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592527.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292242473875757928625.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>蔡华萍</b>广州海关法规处</i></div>
+<div class="fr">
+<b>法治改革道路上孺子牛</b>
+<p>在10年海关法治工作中，她擅长运用法治思维，破解海关改革中的沉疴……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35305" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592511.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292242472783839443704.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>任士民</b>拱北海关缉私局</i></div>
+<div class="fr">
+<b>缉私尖兵  法治精英</b>
+<p>自参加工作以来，他始终怀着对法治执着追求的信念，尊法学法守法用法……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35306" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592451.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292241121997982803724.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王海峰</b>河南省驻马店市工商局</i></div>
+<div class="fr">
+<b>红盾丹心</b>
+<p>他被国家工商总局表彰为全国工商系统优秀工商行政管理人员……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35312" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592402.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292241120156401780420.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>沈志峰</b>浙江省海宁市市场监督管理局</i></div>
+<div class="fr">
+<b>铸就精彩的法制人生</b>
+<p>2000年沈志峰同志由消费者权益保护科科长转任法规科科长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35313" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592391.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292241118165621666481.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李锏锋</b>辽宁省沈阳市于洪区工商局</i></div>
+<div class="fr">
+<b>忠于职守 默默耕耘</b>
+<p>在执法一线，他不畏艰辛、勇于担当，越是硬任务，越是有危险，越要走在同志们的前面……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35314" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592333.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292241116582423555056.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>高小超</b>山西省晋中市工商局</i></div>
+<div class="fr">
+<b>若无扎根基层心 怎来春华秋实果</b>
+<p>去年11月，一本书的面世在三晋工商系统引起了一场不小的震动……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35315" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27592291.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701279288232258333.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>方黎</b>湖北省荆州市工商局</i></div>
+<div class="fr">
+<b>“剑客之花”方黎的消费维权路</b>
+<p>她是荆州市消费者心中最美的工商卫士，行走在大街小巷、田野村庄……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35316" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592285.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292241115197086888729.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陈梅芳</b>福建省泉州市工商局</i></div>
+<div class="fr">
+<b>陈梅芳同志先进事迹</b>
+<p>勤勤恳恳、踏踏实实地耕耘着，以自己的实际行动践行着泉州市工商局执法如山……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35317" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27592021.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509301427560077443633621.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王翔翥</b>河北省涉县消费者协会</i></div>
+<div class="fr">
+<b>真诚铺就维权路 热心服务老区人</b>
+<p>2003年，通过竞争上岗，王翔翥被选拔到涉县消费者协会秘书长这个岗位……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35318" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599729.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259572515434087187.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>方原民</b>镇江检验检疫局</i></div>
+<div class="fr">
+<b>“傻人”方原民</b>
+<p>几十年的风雨历程中，在从事检验检测执法把关过程中,没有太多的传奇……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35227" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599364.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259570931978403883.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>熊信坚</b>上海市质量技术监督局</i></div>
+<div class="fr">
+<b>无惧无畏的铁血硬汉</b>
+<p>我是当过兵的人，连死都不怕，还会怕你吗？如果你还不好好守法，你还会再进去……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35228" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599348.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259569628908299734.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王大风</b>深圳检验检疫局</i></div>
+<div class="fr">
+<b>利剑出鞘</b>
+<p>深夜10点半，随着行动总指挥一声令下，王大风与其他办案人员闪电般冲入大厦28楼的一个房间……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35229" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599336.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259568222492614925.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李龙梅</b>江苏省盐城市质量技术监督局</i></div>
+<div class="fr">
+<b>执法者的追求</b>
+<p>李龙梅，盐城市首届十大法治人物，系统内的业务标杆。在质监工作23年……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35230" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599294.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259563178614741590.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李立超</b>北京市质监局</i></div>
+<div class="fr">
+<b>让特设监管闪耀法治之光</b>
+<p>在北京市质监局特种设备安全监察处李立超的桌上，摆放着一本《特种设备安全法》……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35231" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599287.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259561637818271978.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>黄凯</b>湖北省荆州市质量技术监督局</i></div>
+<div class="fr">
+<b>守护古城“天平”的质监卫士</b>
+<p>一个荆楚大地的儿子，用一身正气守护百姓心中“天平”的质监卫士……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35232" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598005.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292250386385304782696.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王玉卿</b>国家安全生产应急指挥中心</i></div>
+<div class="fr">
+<b>安全生产应急管理法制道路上的跋涉者</b>
+<p>缺乏强有力的法的约束，一些人就会存在试探、触碰政策底线的侥幸心理……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35258" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597985.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292250384167369736907.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>裘凯栋</b>国家安监总局监管三司</i></div>
+<div class="fr">
+<b>裘凯栋同志先进事迹</b>
+<p>积极贯彻落实国家有关安全生产和危险化学品安全生产的法律、法规和政策……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35259" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599177.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256054958840769786.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>徐景和</b>食品药品监管总局法制司</i></div>
+<div class="fr">
+<b>以现代法治精神助推食品药品安全</b>
+<p>在食品药品监管者坚定而慈祥的眼里，每个人的生命就是整个世界……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35233" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599171.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256053177957808588.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吕强</b>陕西省西安市食品药品监管局</i></div>
+<div class="fr">
+<b>为西安市食品药品监管事业保驾护航</b>
+<p>“民以食为天，食以安为先”，在任职之后，他深知责任重大，任务艰巨……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35234" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599162.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256051579646664160.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吴腮忠</b>江西省食品药品监督管理局</i></div>
+<div class="fr">
+<b>保障人民饮食用药安全的法治先锋</b>
+<p>五年的顽强斗争，他成功逆转了这起一审败诉的重大药品违法案件……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35235" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598828.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256049990845887822.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘文斌</b>湖北省食品药品监督管理局</i></div>
+<div class="fr">
+<b>法治引领监管创新</b>
+<p>湖北省食品药品监管局用法治思维和法治方式指导、谋划和推进食品药品监管工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35236" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598823.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256048747465329434.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>冀玮</b>北京市食品药品监督管理局</i></div>
+<div class="fr">
+<b>恪尽职守，求真务实</b>
+<p>在工作岗位上始终严谨求实，勤奋刻苦，兢兢业业，恪尽职守，无私奉献……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35237" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27591262.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701276078271773863.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李鹏华</b>河南省汝阳县统计局</i></div>
+<div class="fr">
+<b>统计执法的魅力</b>
+<p>从事统计工作屈指数来，二十载有余，普通工作，平凡事迹，数海泛舟，浪花多多……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35322" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27591235.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701274698090378179.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>郭化明</b>河南省洛阳市统计局</i></div>
+<div class="fr">
+<b>统计法伴我行</b>
+<p>记得我刚刚参加工作，领导交给我的第一个任务就是“打电话，催报表”……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35323" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27591220.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701273338922072909.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李娟</b>河南省新安县统计局</i></div>
+<div class="fr">
+<b>坚定信仰 与法同行</b>
+<p>几度艰辛、几度磨练，造就了统计人豁达的性格。我们淡泊名利，甘于平淡……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35324" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27591199.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292240134548848454910.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘关民</b>河南省洛阳市洛龙区统计局</i></div>
+<div class="fr">
+<b>统计法的“护法使者”</b>
+<p>作为一名奋斗在一线的老兵，刘关民是当之无愧的“护法使者”……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35325" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27591161.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292240133328412781431.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>肖广义</b>国家统计局北京调查总队</i></div>
+<div class="fr">
+<b>20年磨一剑出鞘自锋芒</b>
+<p>统计法治工作既是统计事业发展的基础，也是发展的保障……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35326" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27591123.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292240131992150844795.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>孙劲松</b>国家统计局巴中调查队</i></div>
+<div class="fr">
+<b>为了统计法的尊严</b>
+<p>说到《建立调查关系告知制度》，“孙劲松”这三个字可谓无人不知……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35327" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27590992.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292240130628370923942.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陈忠东</b>北京市统计局执法大队</i></div>
+<div class="fr">
+<b>做统计执法的急先锋</b>
+<p>1990年，23岁的陈忠东大学毕业，进入北京市统计局工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35328" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399092-27598801.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701289357121588826.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陈春华</b>湖南省林业厅</i></div>
+<div class="fr">
+<b>林业法治的功勋建设者</b>
+<p>《湖南省长株潭城市群生态绿心地区保护条例》陈春华功不可没……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35238" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598791.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256047270964978268.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王佩</b>河南省林业厅</i></div>
+<div class="fr">
+<b>推进全省依法治林</b>
+<p>王佩先后参与了河南省森林防火条例、河南省湿地保护条例的起草……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35239" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598786.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256045386081363450.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王景义</b>黑龙江省林业厅</i></div>
+<div class="fr">
+<b>绿色的守护者</b>
+<p>无论在黑龙江省林业厅机关各执法处室，还是在地方林业法治战线……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35240" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593555.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244229708570856861.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>哈洪江</b>新疆知识产权局</i></div>
+<div class="fr">
+<b>勇于担当，奋发进取</b>
+<p>哈洪江，是在新疆从事专利行政执法工作时间最长的一位干部……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35296" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592873.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244231330676628260.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王连洁</b>北京市保护知识产权举报投诉服务中心</i></div>
+<div class="fr">
+<b>绿叶对根的情意</b>
+<p>知识产权保护战线老兵，见证首都知识产权事业从无到有，蓬勃发展……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35298" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599851.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259576898275178164.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陆国栋</b>国家宗教局政法司</i></div>
+<div class="fr">
+<b>于细微处见精神</b>
+<p>陆国栋同志在平凡的工作岗位中，努力学习、勤于思考，扎实工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35225" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27599842.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259575459867678391.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李良贺</b>国家宗教局</i></div>
+<div class="fr">
+<b>佛教事务的"不二法门"</b>
+<p>“国有国法，家有家规”，对于宗教来说,“国有国法，教有教规”……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35226" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597955.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292250382412897378834.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>朱呈义</b>国家机关事务管理局</i></div>
+<div class="fr">
+<b>助力机关事务法治建设</b>
+<p>一直学习法律专业，重点研修民商法，对很多法律问题有较深的研究……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35260" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597940.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292250380577125426234.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>向科</b>国家机关事务管理局</i></div>
+<div class="fr">
+<b>甘做法治建设的马前卒</b>
+<p>四年来，他勤学好问、恪尽职守，逐步从初出茅庐的大学生……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35261" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600262.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300639183493958625136.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>樊晓音</b>国务院港澳办</i></div>
+<div class="fr">
+<b>法治理想一起追</b>
+<p>先后在中央政府驻香港联络办和国务院港澳办从事对港政策、法律研究……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35218" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600215.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300639181636228060765.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>程远</b>国务院港澳办交流司</i></div>
+<div class="fr">
+<b>港澳办里的法治追梦人</b>
+<p>大楼六层的办公室里，一名青年干部正眉头紧蹙，紧张起草着材料……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35219" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600209.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259586396026715180.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>宋洪流</b>国务院法制办信息中心</i></div>
+<div class="fr">
+<b>法制战线耕耘"老黄牛"</b>
+<p>在我们身边，也有这么一位“老黄牛”式的人物：数十年如一日……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35220" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600198.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259584497016461484.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>陈培勇</b>国务院法制办社会管理法制司</i></div>
+<div class="fr">
+<b>法制援疆奉真情</b>
+<p>陈培勇意识到，自己不能再坚持下去了，继续坚持，身体要出大问题……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35221" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600189.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259582923227583847.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王宛生</b>国务院法制办农林城建资源环保法制司</i></div>
+<div class="fr">
+<b>漫漫人生路 悠悠法制情</b>
+<p>宛生同志于1991年8月分配到国务院法制局工作，一干就是二十四年……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35222" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600173.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292259581031352899997.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘长春</b>国务院法制办财金司</i></div>
+<div class="fr">
+<b>立法立身 为国为民</b>
+<p>司长刘长春是个几乎天天加班、总是最晚一个离开办公室的人……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35223" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604145.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300651249663848242973.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>盛彦清</b>中科院烟台海岸带研究所</i></div>
+<div class="fr">
+<b>治污到防污宣法到护法</b>
+<p>凭着对环境炽热的爱、对专业不倦的追求，将环境保护学术论文写在……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35154" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604129.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300651248682973884941.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李小娟</b>中科院计算技术研究所</i></div>
+<div class="fr">
+<b>坚守法律志不移 马不扬鞭自奋蹄</b>
+<p>立足本职，兢兢业业，矢志不渝，通过创新计算所的知识产权保护和运用……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35155" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604119.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300651246414560264523.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张文</b>中科院高能物理所</i></div>
+<div class="fr">
+<b>后勤服务社会化改制</b>
+<p>积极学法并运用法律知识做好各项管理工作，化解矛盾……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35156" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603409.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650064682224066147.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>田禾</b>中国社会科学院法学所</i></div>
+<div class="fr">
+<b>合力推动司法公开</b>
+<p>第一次见到田禾的人，多少会有些意外，很难把面前这位和蔼文弱……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35166" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598119.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292252593904077766640.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李勇</b>国家行政学院法学教研部</i></div>
+<div class="fr">
+<b>李勇同志先进事迹</b>
+<p>注重教研部老师内功提升，积极督促、帮助教师苦练内功，提高教学……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35257" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594380.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247079908665195743.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>周仕伦</b>四川省凉山州防震减灾局</i></div>
+<div class="fr">
+<b>凭信念坚守用执着担当</b>
+<p>在夜深人静的时候，钻研学习成为他永无止境的追求……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35276" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594372.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247077737563250453.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>褚鑫杰</b>湖北省地震局</i></div>
+<div class="fr">
+<b>矢志普法 严格执法</b>
+<p>褚鑫杰同志自我加压，加强学习，在湖北省防震减灾普法、协助立法……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35277" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594364.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247075481548333156.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘庆国</b>安徽省宣城市地震局</i></div>
+<div class="fr">
+<b>防震减灾法治工作的“领头雁”</b>
+<p>以实际行动推动了法律法规的出台和落实……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35278" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594192.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247074257167880173.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘上京</b>黑龙江省七台河市地震局</i></div>
+<div class="fr">
+<b>刘上京同志先进事迹</b>
+<p>从事防震减灾事业十五年来，始终工作在法制工作一线，对普法守法……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35279" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594184.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247072379853508353.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张锐</b>山西省浮山县地震局</i></div>
+<div class="fr">
+<b>铁面无私勇担当</b>
+<p>说起张锐，地震局的同事们都异口同声地称他是一位爱岗敬业的好同志……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35280" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593726.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244232729399231906.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>孟庆凯</b>云南省昆明市气象局</i></div>
+<div class="fr">
+<b>气象法治尖兵</b>
+<p>十多年来，他脚踏自行车深入学校、社区为群众宣传气象法律法规……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35291" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593682.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244235427423586675.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王维刚</b>陕西省气象局</i></div>
+<div class="fr">
+<b>奉献气象法治建设</b>
+<p>他是一个土生土长、地地道道的西北汉子，骨子里带有一种“犟”脾气……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35292" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593671.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244236904477913003.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王志锋</b>山西省临汾市气象局</i></div>
+<div class="fr">
+<b>奋斗的青春最美丽</b>
+<p>王志锋用自己的实际行动践行着“以人为本”服务宗旨，将严格执法……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35293" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593644.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244234187414838355.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>潘兵会</b>山东省气象局</i></div>
+<div class="fr">
+<b>青春与气象法治同行</b>
+<p>稳重、真诚、认真、上进，这是潘兵会的同事和领导对她的印象……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35294" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593621.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244238940226098586.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>薛喜全</b>辽宁省丹东市气象执法大队</i></div>
+<div class="fr">
+<b>气象法制一线的排头兵</b>
+<p>“ 年轻”是每个人对这位气象法制战线上的老兵薛喜全的第一印象……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35295" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593543.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244240773265276286.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张宏基</b>北京市气象局</i></div>
+<div class="fr">
+<b>青春在法治事业中绽放</b>
+<p>北京市气象灾害防治立法，他已经持续努力推动近四年了……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35297" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603377.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300649118002795050061.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>范宇</b>中国证监会市场监管部</i></div>
+<div class="fr">
+<b>用法治为市场保驾护航</b>
+<p>范宇同志于2002年加入证监会工作，先后在证监会法律部、风险处置……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35167" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603357.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300649116624275311498.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>赖朝晖</b>中国证监会公司债券监管部</i></div>
+<div class="fr">
+<b>赖朝晖同志先进事迹</b>
+<p>从1996年踏入大学校门，直到2006年离校，整整十年，赖朝晖同志……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35168" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27594161.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509301636072972730556630.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>罗华</b>新疆保监局</i></div>
+<div class="fr">
+<b>扎根边疆 勇担责任</b>
+<p>她怀着对保险监管事业的一片赤诚之心，全身心地投入到监管事业中……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35281" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594127.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247089305815186575.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>欧阳丽莉</b>广西保监局</i></div>
+<div class="fr">
+<b>法治，让保险更美好</b>
+<p>别谢我，要谢就谢一站式调处让老百姓得到了实实在在的好处……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35282" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27594039.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247091651793425480.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>龚梅寒</b>重庆保监局</i></div>
+<div class="fr">
+<b>践行法治精神</b>
+<p>作为一名监管干部，她始终对法律满怀敬畏之心，对群众满怀赤忱之意……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35283" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593988.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247087982737523164.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>缪晨</b>江苏保监局</i></div>
+<div class="fr">
+<b>谱写依法监管新篇章</b>
+<p>自参加工作以来，缪晨始终怀着对公平正义执着追求的信念，爱岗敬业……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35284" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27593970.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701285356975083088.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>姜涛</b>湖北保监局</i></div>
+<div class="fr">
+<b>保险法治正当时</b>
+<p>姜涛自中南政法经济法研究生毕业后进入湖北保监局，用自身努力和工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35285" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593965.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247086494485647198.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>付志飞</b>河南保监局</i></div>
+<div class="fr">
+<b>护法的路上立志腾飞</b>
+<p>当你面对她，她不疾不徐的谈吐，志存高远的胸怀，运用娴熟的专业知识……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35286" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593951.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247084690813009756.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>周洋</b>唐山保监分局</i></div>
+<div class="fr">
+<b>用法治守护保监事业</b>
+<p>用行动和坚守追求着自己的法治理想，践行保险监管核心价值理念……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35287" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593831.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247082862603299222.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>姜俊</b>广东保监局</i></div>
+<div class="fr">
+<b>学法懂法 才能执法护法</b>
+<p>中山大学硕士研究生毕业，现担任广东保监局保险中介监管处检查科长……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35288" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593797.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247081316051349051.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>姚琴</b>安徽保监局</i></div>
+<div class="fr">
+<b>保险监管法制领域的默默耕耘者</b>
+<p>查处分离有关制度的建立为行政处罚的科学化、规范化奠定了基础……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35289" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592501.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292242471047465498608.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王国骞</b>国家自然科学基金委员会政策局</i></div>
+<div class="fr">
+<b>法治工作铺路石</b>
+<p>对于一名纯粹社会科学专业背景的人到自然科学领域工作本身就是一种挑战……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35307" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600517.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300643287006119044889.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李合生</b>南水北调中线建管局河南分局</i></div>
+<div class="fr">
+<b>做法律的认真践行者</b>
+<p>南水北调中线干线工程已经正式通水，从充水试验到正式通水运行，工程沿线涌现出一批……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35200" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600509.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300643285879760879229.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>徐大怀</b>北京市南水北调大宁管理处</i></div>
+<div class="fr">
+<b>徐大怀同志先进事迹</b>
+<p>充分发挥个人的主观能动性，全身心的投入到维护南水北调工程安全运行的工作之中……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35201" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600462.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300643284375765234846.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>谢飞</b>北京市南水北调拆迁办</i></div>
+<div class="fr">
+<b>依法拆迁保供水</b>
+<p>加强政策理论学习，不断加强自身理论水平和党性修养，增强政治敏锐性和鉴别力……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35202" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600454.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300643283217073108777.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>鲁璐</b>国务院南水北调办环境保护司</i></div>
+<div class="fr">
+<b>保障南水北调水质安全</b>
+<p>鲁璐，2011年7月进入国务院南水北调办环境保护司，从事水污染防治工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35203" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600381.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300642252418830843188.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李虎</b>中国国际经济贸易仲裁委员会仲裁院</i></div>
+<div class="fr">
+<b>国际仲裁的追梦人</b>
+<p>先后在法律事务部和贸仲委从事涉外法律和商事仲裁工作，至今20年有余……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35209" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27602947.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300648316772948945921.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>杨顺德</b>南宁铁路公安局</i></div>
+<div class="fr">
+<b>点燃自己 照亮他人</b>
+<p>杨顺德,现在是南宁铁路公安局柳州公安处一名普遍的铁路民警……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35175" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27602924.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300648314979545291603.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张承先</b>南昌铁路公安局</i></div>
+<div class="fr">
+<b>刻苦钻研获殊荣</b>
+<p>他把所有业余时间时间都用在学习法律上，并于2004年完成了西南政法……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35176" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598271.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292253001061227037874.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>韩丹</b>中非发展基金法律部</i></div>
+<div class="fr">
+<b>践行法律梦  成就非洲梦</b>
+<p>晚上6点多，在结束了一天的工作后，韩丹匆匆赶回家收拾好行李，与家人简单的道别后就赶往机场……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35253" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598264.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292252599236859940929.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>洛桑曲珍</b>国家开发银行西藏分行</i></div>
+<div class="fr">
+<b>弘扬老西藏精神 雪域高原上的普法战士</b>
+<p>她带队在零下25度，平均海拔5000米的加吾村达婉组行程500多公里……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35254" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598213.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292252597057560788706.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>兰柳仁</b>国家开发银行广西分行</i></div>
+<div class="fr">
+<b>在金融事业中实现价值</b>
+<p>学以致用，勇于担当，经过六年的锤炼，他已成长为分行青年员工中知法守法的先锋……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35255" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598166.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292252595078359818365.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>林承果</b>国家开发银行法律事务局</i></div>
+<div class="fr">
+<b>守护开行贷款安全</b>
+<p>2004年7月，林承果加入国开行法律事务局，开始从事依法收贷工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35256" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603671.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650072058399948198.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>赵廷军</b>中国农业银行内控与法律合规部</i></div>
+<div class="fr">
+<b>谦谦君子 循法而动</b>
+<p>翻开赵廷军的人生履历，既有令人敬羡的夺目光环，也有感人至深的……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35161" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603667.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650070430473245630.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>文介平</b>中国农业银行深圳市分行</i></div>
+<div class="fr">
+<b>咬定普法不放松</b>
+<p>他作为单位法务工作带头人，凭着一颗强烈的事业心和求真务实的精神……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35162" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603658.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650069274493200509.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>史涛</b>中国农业银行山东省分行</i></div>
+<div class="fr">
+<b>金融战线“护法使者”</b>
+<p>在农行这片沃土中，他就像一个农人，每一天都在田间耕耘……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35163" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603642.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650067285027913354.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李思婧</b>中国农业银行重庆市分行</i></div>
+<div class="fr">
+<b>做法治银行的践行者</b>
+<p>作为重庆农行法律事务部的领头羊，李思婧深谙“一流银行，法治先行”……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35164" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603501.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650065505569496796.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>郭一芳</b>中国农业银行山西省分行</i></div>
+<div class="fr">
+<b>做法治农行忠实践行者</b>
+<p>用满腔的热情和无悔的行动，见证农行法治的进步和完善……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35165" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27593784.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292247070277050383723.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>沈异新</b>中国银行江苏省分行</i></div>
+<div class="fr">
+<b>服务创造价值</b>
+<p>人如其名，爱学习、爱思考的沈异新求异求新，他对法律有着独到的理解……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35290" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27592819.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292244224736933545573.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>汤晓东</b>交通银行法律合规部</i></div>
+<div class="fr">
+<b>汤晓东同志先进事迹</b>
+<p>合规文化是确保商业银行依法合规经营和稳健发展的基石……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35301" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604308.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300652187286404305884.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李小建</b>中信证券法律部</i></div>
+<div class="fr">
+<b>银证合作业务权利义务</b>
+<p>李小建同志与中信证券法律部的其他同志逐步在法律部内部形成了一个……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35147" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604305.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300652185704414901624.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李丹梅</b>中信地产</i></div>
+<div class="fr">
+<b>行路致远  砥砺前行</b>
+<p>李丹梅同志，北京大学法学院硕士毕业，2002年任职中信集团法律部……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35148" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604298.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300652184496357728908.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李曙光</b>中信银行济南分行</i></div>
+<div class="fr">
+<b>勇扛法律旗帜的银行人</b>
+<p>研究法学理论知识，发表多篇论文，先后获得“泉城十佳青年律师”……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35149" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604289.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300652183240516529303.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>钱红瑛</b>中信重工法律合规部</i></div>
+<div class="fr">
+<b>维护企业利益铿锵玫瑰</b>
+<p>她，精明干练、口若悬河，如果看不到她坚毅的眼神、不在审判现场……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35150" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604283.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300652181920094434009.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>类凡</b>中信信托信托业务七部</i></div>
+<div class="fr">
+<b>为受益人最大利益服务</b>
+<p>高级信托经理，从事信托业务5年，工作业绩突出……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35151" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604190.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300652179897839537947.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张荣昕</b>中信集团法律合规部</i></div>
+<div class="fr">
+<b>爱岗敬业的行家里手</b>
+<p>18年来，不管在哪个岗位，她始终勤奋学习，爱岗敬业，精益求精……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35152" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27604178.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300652177915885065982.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>邹列强</b>中信集团法律合规部</i></div>
+<div class="fr">
+<b>多姿多彩  有滋有味</b>
+<p>邹列强，中信集团法律合规部高级资深公司律师，中国人民大学法学博士……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35153" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27597836.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292250379012448885060.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>王秀芳</b>光大证券法律合规部</i></div>
+<div class="fr">
+<b>投身公司法律事务，争做普法宣传楷模</b>
+<p>她深深懂得公司法务对依法合规经营、防范法律诉讼风险的重要性……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35262" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603912.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650455306055797829.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>杨路</b>中国人保公司北京市分公司</i></div>
+<div class="fr">
+<b>9年人保创业路 甘洒热血铸春秋</b>
+<p>他的一生尽管只有四十四载，却是积极进取、无私奉献的一生……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35157" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603868.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650453252421556325.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>冉勇</b>中国人保公司重庆市开县支公司</i></div>
+<div class="fr">
+<b>理赔上的行家里手，诉讼中的调解达人</b>
+<p>在人保财险连续工作27年，其中专门从事保险理赔工作19年……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35158" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603711.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650451516185711816.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>张旸</b>中国人保公司青岛市南支公司</i></div>
+<div class="fr">
+<b>行动践行法律"女汉子"</b>
+<p>张旸，今年27岁，是一位2014年8月份刚刚毕业并加入人保财险青岛……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35159" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603699.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300650450559984174543.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>戴杰龙</b>中国人保公司宁波市分公司</i></div>
+<div class="fr">
+<b>求索行知路  用心著华章</b>
+<p>戴杰龙，也许远没想到自己之后的跨行就业步子一迈就是这般大……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35160" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27602873.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300648313771762477596.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吴璇</b>中国太平保险集团风管合规部</i></div>
+<div class="fr">
+<b>为“依法治企”贡献力量</b>
+<p>吴璇梦想当一名律师，仗义执言。而选择学习法律，是她一生无悔的选择……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35177" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27591746.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701278064323680971.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>林国宁</b>重庆市奉节县大树镇信访办</i></div>
+<div class="fr">
+<b>危难时刻显本色</b>
+<p>哀乐低徊、花圈簇拥……2014年9月15日晚上8时，奉节县殡仪馆……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35319" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27591468.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292240136000129422230.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>高平珍</b>河南省平顶山市信访局</i></div>
+<div class="fr">
+<b>把信访群众当家人</b>
+<p>为党旗坚守，做百姓亲人，高平珍说这是她坚守信访岗位的动力之源……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35320" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0916/c399092-27591306.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292240137319740039408.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>吴菊芬</b>四川省仁寿县信访局</i></div>
+<div class="fr">
+<b>百姓满意才是满分</b>
+<p>吴菊芬遇到不讲理的部门，随时能向县委领导请示，不用再跟对方吵了……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35321" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399092-27598732.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300701287998480039785.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>于涛</b>国家粮食局政策法规司</i></div>
+<div class="fr">
+<b>积极做好粮食法制工作</b>
+<p>2006年以来，于涛一直在国家粮食局政策法规司法规处从事粮食法制工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35241" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598723.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256043264794615479.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘斌</b>陕西省西安市粮食局</i></div>
+<div class="fr">
+<b>耐得住平凡  即成为标杆</b>
+<p>从部队到粮食稽查，二十多年的工作经历，改变的只是工作单位……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35242" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598712.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256041031103001474.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>潘峰</b>山东省粮食局</i></div>
+<div class="fr">
+<b>奉献粮食执法事业</b>
+<p>潘峰自法律研究生毕业以来，一直从事粮食执法工作，十年如一日……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35243" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598700.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256039033571909448.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>虎攀</b>宁夏彭阳县粮食局</i></div>
+<div class="fr">
+<b>做维护粮食流通市场秩序的守护者</b>
+<p>虎攀同志以高度的责任感，以“六五”普法活动为契机……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35244" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598691.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256037332006512276.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>徐祖银</b>江西省奉新县粮食局</i></div>
+<div class="fr">
+<b>粮食执法战线上的“排头兵”</b>
+<p>奉新县是粮食主产区，粮食经纪人数量多，分布范围广，流动性大……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35245" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598687.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256032476679336847.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>覃鹏</b>湖北省荆州市荆州区粮食局</i></div>
+<div class="fr">
+<b>甘洒汗水护粮法</b>
+<p>2004年《粮食流通管理条例》颁布后，湖北省荆州市荆州区粮食局成立了政策法规科……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35246" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598679.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256030462396133537.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>岳玉君</b>河北省怀来县粮食局</i></div>
+<div class="fr">
+<b>爱岗敬业 执法为民的女股长</b>
+<p>成绩和荣誉非但没有让她骄傲自满，反而更加鼓励和鞭策着她……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35247" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598670.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256028768496955911.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>尚金锁</b>柏粮集团</i></div>
+<div class="fr">
+<b>铸就“诚信大厦”管好“天下粮仓”</b>
+<p>粮食熏蒸，人在仓内时间不得超过半小时，他却一口气干了两个多小时……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35248" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598653.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256027475940726453.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>徐菱</b>广东省粮食局</i></div>
+<div class="fr">
+<b>不断推动依法行政工作</b>
+<p>徐菱同志结合全省粮食流通监督检查工作实际，积极参与相关规范性文件制定……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35249" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598626.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256026194098805339.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>韦节友</b>北京市大兴区商务委</i></div>
+<div class="fr">
+<b>落实制度保安全</b>
+<p>7年来，他充分发挥部队干一行、爱一行、钻一行的优良作风……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35250" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598622.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256024790251529711.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>杨增权</b>安徽省粮食局</i></div>
+<div class="fr">
+<b>法治“粮心”塑风骨</b>
+<p>“在其位，谋其职，尽其责。”杨增权常以此鞭策自己，劝诫他人……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35251" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27598347.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509292256022608867097002.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>刘平</b>安徽省来安县粮食局</i></div>
+<div class="fr">
+<b>无怨无悔，甘当粮食卫士</b>
+<p>他将一腔热血奉献给了粮食事业上，用一腔赤诚维护着粮食市场秩序……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35252" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603339.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300649115094625976685.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>周天方</b>河南省烟草专卖局</i></div>
+<div class="fr">
+<b>卷烟打假维法路上的坚强斗士</b>
+<p>他，是制假分子的“眼中钉”、“肉中刺”，不敢带女儿上街，有人叫嚣……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35169" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0918/c399092-27603321.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300649113444052453924.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>倪建钢</b>浙江省安吉县烟草专卖局</i></div>
+<div class="fr">
+<b>他是百姓心中的“老娘舅”</b>
+<p>一辆破旧的自行车陪着倪建钢，走遍了安吉梅溪的山山水水……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35170" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600413.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300642258375416429831.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>李暄</b>《中国民航报》·《民航法制》</i></div>
+<div class="fr">
+<b>用笔杆子为法治民航“发声”</b>
+<p>在《中国民航报》编辑部说起法制，第一个想到的人就是李暄……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35206" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600408.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300642256983176528236.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>孙虎</b>民航新疆管理局</i></div>
+<div class="fr">
+<b>孙虎同志先进事迹</b>
+<p>发挥“较真”风格，针对修订的法律法规，自觉开展修订前后的比较学习……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35207" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="/n/2015/0917/c399092-27600388.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509300642255635060802794.jpg" width="135" height="180" border="0"/></a><em></em><i class="withe"><b>包随义</b>中国民用航空局航空安全办公室</i></div>
+<div class="fr">
+<b>民航安全法治普法使者</b>
+<p>提到包随义，熟悉他的人都说，“写”是他的强项。从23岁进入民航工作……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35208" /></a></span></div>
+    </li>
+
+  </ul>
+</div>
+<!--p3 end-->
+<!--p3-->
+<div class="clearfix p4_con w980">
+  <h1>法治故事</h1>
+  <ul class="clearfix"><li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399093-27603187.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291508554008765596001.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>外交部</b>外事管理司</i></div>
+<div class="fr">
+<b>推进全面依法治国 外管司在行动</b>
+<p>在外交部，有这样一个单位，它是外交部人数最少的司局之一……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35451" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399093-27603212.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291508360150522823382.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>外交部</b>条法司三处</i></div>
+<div class="fr">
+<b>外交条法尖兵  国家利益卫士</b>
+<p>条法司三处主要负责反腐败国际追逃追赃、司法合作类条约谈判……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35450" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27594453.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291850385407773756599.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>安徽省</b>发改委</i></div>
+<div class="fr">
+<b>引领公共资源交易改革</b>
+<p>2014年10月27日，《安徽省公共资源交易监督管理办法》，获安徽省政府常务会议通过……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35484" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27594458.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291850257551789870728.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>国家发改委</b>地区司</i></div>
+<div class="fr">
+<b>《国家以工代赈管理办法》修订纪实</b>
+<p>2014年12月27日，徐绍史签署第19号令，颁布《国家以工代赈管理办法》……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35483" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27594472.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291850156387920191761.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>陕西省汉中市</b>发改委</i></div>
+<div class="fr">
+<b>依托“双五”建设平台 铸就优秀发改团队</b>
+<p>“十二五”是天汉大地加快“三市”建设，实现跨越式发展的起步阶段……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35482" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27594605.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291850071344672334283.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>鹰潭市</b>价格监督检查局</i></div>
+<div class="fr">
+<b>加强法治宣传 建设法治机关</b>
+<p>鹰潭市价格监督检查局成立于1984年4月，前身是鹰潭市物价检查所……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35481" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27590486.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291921277731888819918.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>重庆市通信管理局</b>政策法规处</i></div>
+<div class="fr">
+<b>螺丝钉的汗水与收获</b>
+<p>规范行政处罚裁量权，对减轻、从轻、从重、不予处罚、处罚幅度所适用的具体情形进行细化、量化……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35500" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27590415.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291921229136505675132.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>工信部</b>全国无线电管理机构</i></div>
+<div class="fr">
+<b>铸就利剑斩黑手</b>
+<p>2014年，全国无线电管理机构开展了打击整治非法生产销售和使用“伪基站”违法犯罪活动专项行动……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35501" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0915/c399093-27588623.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291921179742628581861.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>财政部</b>条法司</i></div>
+<div class="fr">
+<b>沿法治的道路前行</b>
+<p>条法司通过修订起草预算法、贯彻执行预算法以法律手段化解地方债风险，成为依法行政的典型范例……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35502" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600140.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291535078363289926892.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>国土资源部</b>违法线索处理中心</i></div>
+<div class="fr">
+<b>12336在行动</b>
+<p>她是国土资源部联系人民群众的桥梁；她是社会各界了解国土资源主管部门执法为民的重要窗口……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35470" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600145.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291534587701030127728.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>福建省</b>国土资源厅</i></div>
+<div class="fr">
+<b>以法为据 靠法止争</b>
+<p>“请相信法律能帮你解决问题。”这是福建省国土资源厅执法干部面对上访诉求人最常说的话语……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35469" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600148.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291534500559409894559.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>天津市</b>国土资源和房屋管理局</i></div>
+<div class="fr">
+<b>以规范用文促依法行政</b>
+<p>公文是法定机关与组织在公务活动中，按照特定的体系形成书面材料，高效性、严肃性成为公文发布者……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35468" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399092-27602292.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291529211575144489406.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>水利部</b>东平河务局</i></div>
+<div class="fr">
+<b>防洪山体禁采 守法成公约</b>
+<p>初夏，位于山东东平县银山镇石碣村的一处山场已是满眼绿意……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35455" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27590620.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291921323208193876154.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>商务部</b>条法司</i></div>
+<div class="fr">
+<b>没有硝烟的战争</b>
+<p>在世界贸易组织舞台上，活跃着这样一批法律人，他们通过争端解决案件实践规则、维护规则……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35499" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399092-27600598.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291529563114255720240.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>人民银行</b>科技司</i></div>
+<div class="fr">
+<b>清理合同，维护权益</b>
+<p>在网络和信息化时代，人民银行依托信息系统，履行中央银行职责，制定货币政策……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35457" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600606.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291529368267961764183.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>审计署</b>预算执行审理团队</i></div>
+<div class="fr">
+<b>依法履职尽责 严把审计质量关</b>
+<p>他们善于学习，认真钻研，不断提高审理工作的质量和效率……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35456" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600294.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291533027356400612995.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>国务院国资委</b>综合局</i></div>
+<div class="fr">
+<b>立法为先 执法必严 依法完善</b>
+<p>十多年来，国资委综合局认真承担业绩考核工作职能……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35462" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600289.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291532505786539396901.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>国务院国资委</b>政策法规局</i></div>
+<div class="fr">
+<b>中央企业法治建设</b>
+<p>中央企业依法治企的系统合力初步形成，为开展法治工作提供了有力的支持……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35463" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27592567.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291852299774989814164.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国海关</b>知识产权保护展示厅</i></div>
+<div class="fr">
+<b>春风化雨  润物无声</b>
+<p>知识产权保护展示厅位于浙江省义乌市，是首家大型综合性知识产权保护展示平台……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35491" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27591829.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291854179713475445682.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>天津滨海新区市场和质量监督管理局</b>法制处</i></div>
+<div class="fr">
+<b>大法治工作模式的引擎</b>
+<p>大法治工作模式是以区市场监管局法制处为中心，通过网络、微信等新媒介工具，将办案人员连接……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35496" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27591896.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291854178275947774387.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>北京丰台工商分局</b>彩虹消费维权服务队</i></div>
+<div class="fr">
+<b>风雨彩虹 维权先锋</b>
+<p>消费维权是工商行政管理部门维护民生安全、推动科学消费、保障社会稳定的重要职责……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35495" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27591912.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291854176609530317827.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>河南省开封市</b>工商局</i></div>
+<div class="fr">
+<b>打击“1040工程”传销</b>
+<p>开封市工商部门根据群众举报，发现一个“1040工程”传销团伙在开封活动……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35494" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27591930.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291854175461721836474.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>福建省三明市</b>工商局</i></div>
+<div class="fr">
+<b>练好内功 铿锵前行</b>
+<p>三明市工商局在推进法治工商建设中，注重加强法制人才培养，打造了一支素质过硬的公职律师队伍……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35493" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27592038.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291852493851155746967.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>重庆市</b>工商局</i></div>
+<div class="fr">
+<b>红盾利剑在农田上闪光</b>
+<p>张长春没有想到，他喃喃的一句自语，被敏锐的工商人所捕捉，从而揭开了一个涉及假种子130多吨……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35492" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399092-27599756.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291536527958780898204.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>大连</b>出入境检验检疫局</i></div>
+<div class="fr">
+<b>蹊跷的“旧麻袋”</b>
+<p>大连检验检疫局卫生检疫处王潇发现入境全申报系统中的一条普通的进口货物信息有异常……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35472" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399092-27598810.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291537070032179981566.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>新疆</b>星星峡森林植物检疫检查站</i></div>
+<div class="fr">
+<b>铸造林业有害生物检疫铜墙铁壁</b>
+<p>随着新疆开展生态建设和发展特色林果业，要从内地大量引进各种苗木……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35473" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27598049.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291538049166211094392.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>国务院</b>参事室</i></div>
+<div class="fr">
+<b>为科学民主决策服务</b>
+<p>新的历史时期，参事们更加积极发挥自身有较大社会影响和广泛社会联系的优势……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35475" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600233.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291534131098252952376.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>国务院港澳事务办公室</b>法律司</i></div>
+<div class="fr">
+<b>展法律之翼</b>
+<p>百年离别造成的鸿沟和差异虽大，但永恒不变的是香港同胞那黑色的眼晴……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35465" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600271.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291533509926269906403.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>国务院港澳事务办公室</b>政研司</i></div>
+<div class="fr">
+<b>一国两制白皮书诞生记</b>
+<p>国务院新闻办发表《“一国两制”在香港特别行政区的实践》白皮书……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35464" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399092-27600180.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291534339770192462284.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>国务院法制办</b>复议司</i></div>
+<div class="fr">
+<b>复议群像</b>
+<p>国务院法制办复议司组建于2006年，今年才九岁，是那样年轻……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35467" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27594405.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291921458647355814666.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>湖南省</b>岳阳市地震局</i></div>
+<div class="fr">
+<b>韧性的较量</b>
+<p>地震工作实行的是预防为主、防御与救助相结合的方针，地震执法事关人民生命财产安全……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35485" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27592572.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291852213424216689769.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>昆明海关</b>驻邮局办事处</i></div>
+<div class="fr">
+<b>妥善处置知识产权案件</b>
+<p>昆明海关依据《商标法》和《知识产权海关保护条例》，合理区分民事侵权行为和违法海关法行为……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35490" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27594400.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291851121790038303888.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>云南省地震局</b>监测中心</i></div>
+<div class="fr">
+<b>守护我们的“听诊器”</b>
+<p>地震观测台站犹如地震人的“听诊器”，它的品质越高，对大地脉搏的辨析能力也就越强……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35486" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27592598.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291852085801993653821.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>南京海关</b>法规处</i></div>
+<div class="fr">
+<b>传播法治精神的海关先锋</b>
+<p>南京海关有这样一支优秀敬业、无私奉献的法制队伍，用实际行动默默回答了这些问题……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35489" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27592631.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291851580687083080777.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>上海海关</b>法规处</i></div>
+<div class="fr">
+<b>法治时代的推动者们</b>
+<p>一如以往历次重大改革政策的出台，上海自贸区的设立同样点燃了无数人的财富梦想……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35488" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399093-27603933.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291506223057507181624.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国银监会</b>信托监督管理部</i></div>
+<div class="fr">
+<b>加强信托制度体系建设</b>
+<p>自1979年10月第一家信托投资公司成立至今，中国信托业已经走过三十余年改革发展历程……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35446" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399093-27603944.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291505449374354555153.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国银监会</b>审慎规制局</i></div>
+<div class="fr">
+<b>锻造法治银行业的基石</b>
+<p>对于日益融入全球化的中国银行业而言，监管规则在很大程度上影响着我们的业务版图……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35445" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27593791.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291851397255574913418.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国银行陕西省分行</b>法律服务团队</i></div>
+<div class="fr">
+<b>青春在法制中闪光</b>
+<p>中国银行股份有限公司陕西省分行法律服务团队是一支年轻的队伍，人员年龄平均30岁……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35487" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399092-27603363.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291507284119007992957.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国证监会</b>上市公司监管部</i></div>
+<div class="fr">
+<b>用心应诉、缘法前行</b>
+<p>用心应诉、依法维权，上市部用自己的法治故事，为这一难题的破解添加了新的注脚……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35449" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600445.html" target="_blank"><img src="/NMediaFile/2015/0930/MAIN201509301436284931140358994.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>山东省</b>《山东省南水北调条例》</i></div>
+<div class="fr">
+<b>开启地方依法管理事迹</b>
+<p>山东省是一个水资源严重短缺和降水时空分布不均并存的省份，人均水资源占有量为322立方米……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35458" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600435.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291530356184736053318.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>南水北调</b>新乐管理处</i></div>
+<div class="fr">
+<b>非法穿越南水北调工程案</b>
+<p>城市化离不开基础配套建设，南北走向的京石段干渠成了部分基础建设绕不过去的障碍……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35459" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399093-27603391.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291507130948560368858.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国残联</b>法制讲座</i></div>
+<div class="fr">
+<b>让法治的阳光照亮残疾人事业发展之路</b>
+<p>要将法制讲座制度化，提高干部尊法学法守法用法、依法办事的素质……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35448" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399093-27602811.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291528574600598682556.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>宋庆龄基金会</b>宋庆龄故居管理中心</i></div>
+<div class="fr">
+<b>守法今日，筑梦未来</b>
+<p>花木掩映，碧水环绕，燕去鸿来，国家名誉主席宋庆龄同志故居静谧地坐落在后海北沿……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35454" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399092-27602902.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291509109738315568620.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>铁路公安局</b>警卫处</i></div>
+<div class="fr">
+<b>铁路警卫事业的忠诚守护者</b>
+<p>他们坚持学习先行、理论武装，坚持大胆实践、工作创新，坚持转变作风……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35452" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399092-27598238.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291537508980632926644.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>国家开发银行</b>海南分行</i></div>
+<div class="fr">
+<b>观海听涛 扬法治之帆</b>
+<p>从制度入手，用制度管人，将规章制度的制定、执行作为合规经营的基础……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35474" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399092-27599801.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291536404528159480429.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>黄岛</b>检验检疫局</i></div>
+<div class="fr">
+<b>无所遁形的“李鬼”</b>
+<p>透过雨水模糊的车窗，黄岛检验检疫局调查人员一脸焦急地搜索着路上的行人……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35471" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27597324.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291636598878954491405.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国进出口银行总行</b>评估审查部</i></div>
+<div class="fr">
+<b>把好合规“总闸门”</b>
+<p>评估审查部作为中国进出口银行重大信贷项目的专业审查、把关部门，就像法官……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35476" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27597025.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291636508196356918660.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国进出口银行</b>交通运输融资部</i></div>
+<div class="fr">
+<b>化解境外破产项目风险</b>
+<p>2014年8月，根据美国破产法院判决，中国进出口银行美国A公司5艘船舶不良贷款项目……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35477" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27596997.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291636426792430348199.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国进出口银行会计管理部</b>中间业务二处保函团队</i></div>
+<div class="fr">
+<b>业务一线的法律践行者</b>
+<p>加入WTO以来，与世界的接触更加密切，国际贸易愈加频繁，企业“走出去”的脚步越来越快……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35478" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27596965.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291636331586145292628.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国进出口银行</b>法律事务部</i></div>
+<div class="fr">
+<b>银企共赢化解风险</b>
+<p>虽然风险化解与处置工作取得了阶段性成果，但CH公司面临的经营困境并未实质性改善……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35479" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27596926.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291636218629126031860.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国进出口银行</b>法律人非诉讼法律服务团队</i></div>
+<div class="fr">
+<b>以信念和专业铸就防线</b>
+<p>法律事务部是进出口银行法律实践的排头兵，非诉讼法律事务是法律事务部法律工作的重要组成部分……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35480" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399093-27604272.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291505237921512212516.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中信建设</b>非洲区风险管控团队</i></div>
+<div class="fr">
+<b>小团队 大智慧</b>
+<p>在中信建设非洲区，提起法律方面的工作，大家会立马想起那支短小精干的队伍——风险管控部……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35444" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0918/c399093-27603683.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291506577080308535386.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国人保</b>湖南省分公司</i></div>
+<div class="fr">
+<b>用法治净化保险市场</b>
+<p>这是一群无名英雄，他们所往之处，无不以团队的形式出现，团结、坚毅，他们的足迹遍布三湘四水……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35447" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399093-27591556.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291921415414607615585.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>重庆市</b>武隆县铁矿乡</i></div>
+<div class="fr">
+<b>“上访乡”如何实现“零上访”</b>
+<p>重庆市武隆县铁矿乡曾是远近闻名的“上访乡”，矛盾此起彼伏……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35497" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0916/c399092-27591520.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291921365805206227364.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>山西省</b>信访局</i></div>
+<div class="fr">
+<b>“电视信访”搭建化解矛盾的“连心桥”</b>
+<p>十八届三中全会提出，要改革信访工作制度，实行网上受理信访制度……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35498" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600396.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291921504800301199106.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>中国民航局</b>青岛空管站</i></div>
+<div class="fr">
+<b>用法治思维促进安全</b>
+<p>安全是民航的生命线，没有安全就不可能做到飞行正常，更谈不上科学发展……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35461" /></a></span></div>
+    </li>
+<li>
+<div class="fl"><a href="http://dangjian.people.com.cn/n/2015/0917/c399093-27600403.html" target="_blank"><img src="/NMediaFile/2015/0929/MAIN201509291530599478092006528.jpg" width="135" height="92" border="0"/></a><em></em><i class="withe"><b>民航局</b>中国民航大学法学院</i></div>
+<div class="fr">
+<b>民航普法“正规军”</b>
+<p>中国民航大学法学院自2001年开始法学专业招生以来，一直秉承普法育人的教育理念……[全文]</p>
+<span><img src="/img/MAIN/2015/09/115871/images/icon01.png" class="button1" voteid="35460" /></a></span></div>
+    </li>
+</ul>
+</div>
+<!--p3 end-->
+<div class="bg_bt clearfix" style="display:block;">
+<!--p4-->
+<div class="clearfix p5_con w980">
+  <h1>互动评论</h1>
+  <div class="box clearfix">
+  <div class="fl">
+  	<iframe id="zhongban"0 width="650" height="650"  frameborder="0" scrolling="no" src="http://t.people.com.cn/openLiveShow.action?ie=utf-8&ptopic=%25E6%25B3%2595%25E6%25B2%25BB&stopic=%25E6%25B3%2595%25E6%25B2%25BB&width=650&height=650&nickNames=&gid=0&roll=0&interval=3000&appkey=9450803942&input=1&vip=1&moderated=1&title=1"></iframe>
+  </div>
+  <div class="fr">
+     <h2>欢迎网友发表留言和评论：</h2>
+     <form name="form1" onSubmit="return checkboard()" action="http://comments.people.com.cn/bbs_new/app/src/main/?action=parse_publish&op=ins&nid=399259" method="post">
+     <ul class="ly1">
+        <li><textarea name="content" cols="" rows=""></textarea></li>
+        <li>昵称<input name="yonghuming" type="text" /></li>
+        <li><a href="JavaScript:postMsg();"><img src="/img/MAIN/2015/09/115871/images/icon03.gif" width="107" height="32" /></a><a href="http://comments.people.com.cn/bbs_new/app/src/main/?action=list&nid=399259" target="_blank"><img src="/img/MAIN/2015/09/115871/images/icon04.gif" width="107" height="32" /></a></li>
+     </ul>
+     </form>
+     <div class="ly2">
+     <ul><li>乔国平:投票</li><li>惜缘:不错</li><li>网友:栋梁之材</li><li>梦瑶:郭一芳，加油</li><li>乐乐:郭一芳投一票</li><li>小学生:优秀的人们</li><li>说真话:安徽程德旺是住建系统的优秀执法卫士。</li><li>郭一芳:国家真正的栋梁</li><li>郭一芳:你是我们的骄傲</li><li>相信:安徽程德旺真是好样的。</li><li>手工拉票Q878879652:加油加油加油！</li><li>姗姗:郭一芳  支持你</li><li>网友:任士民好同志！</li><li>情之缘:人民的好公仆</li><li>朱建廷:郭一芳，我们支持你</li><li>郭一芳:你是最棒的</li><li>网友:弘扬正气</li><li>创业者:中科院计算所李小娟，支持你，为大家办了很多实事！</li><li>竹天:以法为据，靠法止争，值得点赞。</li><li>船行海洋:南京海关法规处好样的！</li><li>程德旺:人民的好公仆</li><li>网友:卢润波是人民的好干部。</li><li>萍安相伴:程德旺工作严谨，执法严明，为民热情！好样的！</li><li>付芝兵:安徽程德旺，建设稽查执法战线的先锋。</li><li>付芝兵:安徽程德旺，军队转业干部的骄傲。</li><li>淡定大王:程德旺从部队到地方，脱下的是军装，不变的是一颗对为党忠诚、忠实执法、热情为民的赤诚之心！为你点赞！</li><li>柳佳:这个活动好。</li><li>柳佳:我坚信你是最好的。</li><li>需要涨票Q2280070529:很棒</li><li>需要涨票Q2280070529:支持支持支持支持支持支持</li></ul>
+     </div>
+  </div>
+  </div>
+</div>
+<!--p4 end-->
+
+<!--copyright-->
+<style type="text/css">
+#copyright{width:980px; margin:0px auto; font-size:12px; text-align:center; padding:20px 0; line-height:180%; clear:both;}
+</style>
+<div id="copyright">人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br />
+Copyright &copy; 1997-2015 by www.people.com.cn. all rights reserved</div>
+<!--copyright end-->
+
+</div>
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>

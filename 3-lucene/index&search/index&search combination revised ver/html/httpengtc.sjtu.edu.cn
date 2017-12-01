@@ -1,0 +1,649 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8;"/> 
+<title>:: 上海交通大学工程训练中心::</title>
+<script type="text/javascript" src="customer/js/changimages.js"></script>
+<link href="customer/css/index4.css" rel="stylesheet" type="text/css" /> 
+<link href="customer/css/home_menu.css" rel="stylesheet" type="text/css" /> 
+<link href="customer/css/slide2.css" rel="stylesheet"  type="text/css" media="screen"/>
+
+
+<script src="customer/js/jquery144.min.js" type="text/javascript"></script>
+<script src="customer/js/jdMarquee.js" type="text/javascript" ></script>
+<script src="customer/js/jquery.slide-zool.js" type="text/javascript" ></script>
+<script src="customer/js/swfobject2.js" type="text/javascript" ></script>
+<script src="customer/js/wxs.js" type="text/javascript" charset="gb2312"></script>
+<script src="customer/js/jqFancyTransitions.1.8.min.js" type="text/javascript"  charset="gb2312"></script>
+
+
+
+
+
+<!--[if IE 6]>
+<link href="customer/css/index4_ie6.css" rel="stylesheet" type="text/css" />
+<link href="customer/css/home_menu_ie6.css" rel="stylesheet" type="text/css" />
+<script src="customer/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script src="http://lady.qq.com/js/acermao/iepng.js"></script>
+
+
+<script language="javascript" type="text/javascript">
+
+//EvPNG.fix('div, ul, img, li, input, a'); 
+  DD_belatedPNG.fix('*');
+
+</script>
+
+<![endif]--> 
+
+<style type="text/css">
+<!--
+body {
+	background:url(customer/images/main_bg.jpg) repeat;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.topNewsPic {
+	margin: 0px 0px 0px 0px; 
+	width: 217px;  
+	height: 145px; 
+	overflow: hidden; 
+	padding:0px 0px;
+	border:3px solid #5a70a2;
+}
+.topNewsPic img {
+	width:217px; 
+	height:145px;
+}
+
+.topNewsPic2 {
+	margin: 0px 0px 0px 5px; 
+	width: 220px;  
+	height: 147px; 
+	overflow: hidden; 
+	padding:0px 0px;
+	border:3px solid #5a70a2;
+}
+.topNewsPic2 img {
+	width:220px; 
+	height:147px;
+}
+
+
+
+-->
+</style>
+<script type="text/javascript">
+
+function H$(i) {return document.getElementById(i)}
+function H$$(c, p) {return p.getElementsByTagName(c)}
+var slider33 = function () {
+function init (o) {
+  this.id = o.id;
+  this.at = o.auto ? o.auto : 3;
+  this.o = 0;
+  this.pos();
+}
+init.prototype = {
+  pos : function () {
+   clearInterval(this.__b);
+   this.o = 0;
+   var el = H$(this.id), li = H$$('li', el), l = li.length;
+   var _t = li[l-1].offsetHeight;
+   var cl = li[l-1].cloneNode(true);
+  // cl.style.opacity = 0; cl.style.filter = 'alpha(opacity=0)';
+   el.insertBefore(cl, el.firstChild);
+   el.style.top = -_t + 'px';
+   this.anim();
+  },
+  anim : function () {
+   var _this = this;
+   this.__a = setInterval(function(){_this.animH()}, 5);
+  },
+  animH : function () {
+   var _t = parseInt(H$(this.id).style.top), _this = this;
+   if (_t >= -1) {
+    clearInterval(this.__a);
+    H$(this.id).style.top = 0;
+    var list = H$$('li',H$(this.id));
+    H$(this.id).removeChild(list[list.length-1]);
+    this.__c = setInterval(function(){_this.animO()}, 20);
+    //this.auto();
+   }else {
+    var __t = Math.abs(_t) - Math.ceil(Math.abs(_t)*.07);
+    H$(this.id).style.top = -__t + 'px';
+   }
+  },
+  animO : function () {
+   this.o += 2;
+   if (this.o == 100) {
+    clearInterval(this.__c);
+    //H$$('li',H$(this.id))[0].style.opacity = 1;
+    //H$$('li',H$(this.id))[0].style.filter = 'alpha(opacity=100)';
+    this.auto();
+   }else {
+   // H$$('li',H$(this.id))[0].style.opacity = this.o/100;
+   // H$$('li',H$(this.id))[0].style.filter = 'alpha(opacity='+this.o+')';
+   }
+  },
+  auto : function () {
+   var _this = this;
+   this.__b = setInterval(function(){_this.pos()}, this.at*500);
+  }
+}
+return init;
+}();
+
+</script> 
+<script type="text/javascript">
+
+
+    var TotalHotScreen=10;
+	var TotalHotScreen2=5;
+    var TotalHotScreen_dev=6;
+jQuery(document).ready(function(){
+	//jQuery("#i_1").addClass("current2");
+	
+	
+	//实验室列表文字
+    Labs_Return_BySelfStyle("labs_my"," <li> <a id=\"focus_{AddAdd}\" class=\"up\"  href='model/twogradepage/LookShiYanShi.aspx?lid={LabInfoID}' target='_blank' >{Name}</a> </li>",18,TotalHotScreen);
+	
+	//实验室风采
+	Labs_Return_BySelfStyle("HotSearchList"," <li><a href=\"model/twogradepage/LookShiYanShi.aspx?lid={LabInfoID}\" target=\"_blank\" > <span class=\"s2\" id='test{AddAdd}'>{Name}</span><img src=\"{picpath}\" width=180 height=130 /></a></li>",20,16,1);
+
+	//实验室轮番 文字
+	Labs_Return_BySelfStyle("labs_my2"," <li> <a id=\"focus_{AddAdd}\" class=\"up\" onmouseover=\"show_focus_image({AddAdd});\" onclick=\"setClick();\" href='model/twogradepage/LookShiYanShi.aspx?lid={LabInfoID}' target='_blank' >{Name}</a> </li>",18,TotalHotScreen2);
+    
+	//实验室轮番 图片
+	Labs_Return_BySelfStyle("HotSearchList2"," <div id=\"switch_{AddAdd}\"><a onclick=\"setClick();\" href='model/twogradepage/LookShiYanShi.aspx?lid={LabInfoID}' target=\"_blank\" ><img alt=\"{Name}\" src=\"{picpath}\"></a></div>",18,TotalHotScreen);
+
+
+    //仪器最新预约
+    //Devs_Pre("divDevsPre","<tr><td>{UserName}</td><td>{DevName}</td><td>{SubmitDate}</td></tr>",-1, -1, "", "",0,5);
+	
+    //文字新闻
+    //News_Return_BySelfStyle("imgADPlayer"," <li><span>{publicTime}</span></span> <a  href=\"{url}\" target=\"_blank\" >{title}</a> </li>",20,5,'新闻动态',0,0,0,458,222);
+
+    //文字图片新闻
+	//News_Return_BySelfStyle("imgADPlayer","<img border=\"1\" border-color=\"#000\"  alt=\"<i> <a href='{url}'>{title}</a></i>\" src=\"{PicPath}\"> <a href=\"{url}\"></a>",20,5,'新闻动态',0,0,0,482,222);
+    //GetAdv();
+
+    GetClock("Clock");
+	
+	//仪器设备轮番 文字
+	//Devs_Return_BySelfStyle("labs_my_dev"," <li> <a id=\"dev_focus_{AddAdd}\" class=\"up\"  href='model/TwoGradePage/NewsEquipment.aspx?OpenID={OpenID}&id={DevID}' target='_blank' >{Name}</a> </li>",18,TotalHotScreen_dev);
+    //仪器设备轮番 图片
+	//Devs_Return_BySelfStyle("HotSearchList_dev"," <div id=\"dev_switch_{AddAdd}\"><a onclick=\"setClick_dev();\" href='model/twogradepage/NewsEquipment.aspx?OpenID={OpenID}&id={DevID}'   target=\"_blank\" ><img alt=\"{Name}\" src=\"{picpath}\"></a></div>",18,TotalHotScreen_dev);
+    
+	//仪器设备轮番 文字
+	 Devs_Return_BySelfStyle("labs_my_dev"," <li> <a id=\"dev_focus_{AddAdd}\" class=\"up\" onmouseover=\"show_focus_image_dev({AddAdd});\" onclick=\"setClick_dev();\"  href='model/TwoGradePage/NewsEquipment.aspx?OpenID={OpenID}&id={DevID}' target='_blank' >{Name}</a> </li>",18,TotalHotScreen_dev);
+     //设备轮番 图片
+     Devs_Return_BySelfStyle("HotSearchList_dev"," <div id=\"dev_switch_{AddAdd}\"><a onclick=\"setClick_dev();\" href='model/twogradepage/NewsEquipment.aspx?OpenID={OpenID}&id={DevID}'   target=\"_blank\" ><img alt=\"{Name}\" src=\"{picpath}\"></a></div>",18,TotalHotScreen_dev);
+	
+	
+	jQuery("#nav li").has("ul").hover(function(){
+		jQuery(this).addClass("current2").children("ul").stop(false,true).slideToggle(true);
+	}, function() {
+		jQuery(this).removeClass("current2").children("ul").stop(false,true).slideToggle(false);
+	});
+     
+	//jQuery('.flexslider').flexslider({animation: "fade",controlsContainer: ".flex-container",pauseOnAction: false });
+	
+	//new slider33({id:'slider33'})
+
+	
+
+   
+    /*jQuery("#slide5").jdMarquee({
+				deriction:"left",
+				//width:(screen.width>=1280)?480:440,
+				width:1000,
+				height:166,
+				space:0,
+				step:1,
+				speed:500, //无缝滚动1000
+				delay: 20, //无缝滚动20
+				stay: 50, //无缝滚动50   5000
+				auto: true,
+				control:true,
+				_back:"#goback5",
+				_front:"#forward5"
+				
+			});*/
+			
+	
+ 
+	
+   
+})
+     var CurrentHotScreen_dev = 0;
+      function setHotQueryList_dev(screen){
+            var Vmotion = "forward" ;
+            var MaxScreen = TotalHotScreen_dev ;
+            if (screen >= MaxScreen) {
+                screen = 0 ;
+                Vmotion = "reverse" ;
+            }
+            cleanallstyle_dev();
+            $("#dev_focus_"+screen).addClass("up") ;
+    
+          if(null!=hot_query_td_dev.filters){
+            hot_query_td_dev.filters[0].apply();
+            hot_query_td_dev.filters[0].motion = Vmotion;
+          }
+          for (i=0;i<MaxScreen;i++) {
+            $("#dev_switch_"+i).hide() ;
+          }
+          $("#dev_switch_"+screen).show() ;
+          if(null!=hot_query_td_dev.filters){
+            hot_query_td_dev.filters[0].play();
+          }
+            CurrentHotScreen_dev = screen ;
+        }
+        
+        
+        function refreshHotQuery_dev(){
+            refreshHotQueryTimer_dev = null;
+            setHotQueryList_dev(CurrentHotScreen_dev+1);
+            refreshHotQueryTimer_dev = setTimeout('refreshHotQuery_dev();', 5000);
+        }
+        function cleanallstyle_dev() {
+            for (i=0;i<TotalHotScreen_dev;i++) {
+                $("#dev_focus_"+i).removeClass("forward");
+            }
+        }
+        
+        
+        function show_focus_image_dev(index) {
+            clearTimeout(refreshHotQueryTimer_dev);
+            
+            setHotQueryList_dev(index);
+            
+            refreshHotQueryTimer_dev = setTimeout('refreshHotQuery_dev();', 5000);
+        }
+        
+        
+        function setClick_dev() {
+            clearTimeout(refreshHotQueryTimer_dev);
+        }
+       
+        
+      var refreshHotQueryTimer_dev = null;
+      var hot_query_td_dev =  $('#HotSearchList_dev');
+      setHotQueryList_dev(CurrentHotScreen_dev);
+      refreshHotQueryTimer_dev = setTimeout('refreshHotQuery_dev();', 5000);
+	  
+	  //---------------------------------------------------------------------//
+	  var CurrentHotScreen = 0;
+		  function setHotQueryList(screen){
+				var Vmotion = "forward" ;
+				var MaxScreen = TotalHotScreen ;
+				if (screen >= MaxScreen) {
+					screen = 0 ;
+					Vmotion = "reverse" ;
+				}
+				cleanallstyle();
+				$("#focus_"+screen).addClass("up") ;
+		
+			  if(null!=hot_query_td.filters){
+				hot_query_td.filters[0].apply();
+				hot_query_td.filters[0].motion = Vmotion;
+			  }
+			  for (i=0;i<MaxScreen;i++) {
+				$("#switch_"+i).hide() ;
+			  }
+			  $("#switch_"+screen).show() ;
+			  if(null!=hot_query_td.filters){
+				hot_query_td.filters[0].play();
+			  }
+				CurrentHotScreen = screen ;
+			}
+        
+        
+			function refreshHotQuery(){
+				refreshHotQueryTimer = null;
+				setHotQueryList(CurrentHotScreen+1);
+				refreshHotQueryTimer = setTimeout('refreshHotQuery();', 5000);
+			}
+			
+			function cleanallstyle() {
+				for (i=0;i<TotalHotScreen;i++) {
+					$("#focus_"+i).removeClass("forward");
+				}
+			}
+        
+			
+			function show_focus_image(index) {
+				clearTimeout(refreshHotQueryTimer);
+				
+				setHotQueryList(index);
+				
+				refreshHotQueryTimer = setTimeout('refreshHotQuery();', 5000);
+			}
+        
+        
+			function setClick() {
+				clearTimeout(refreshHotQueryTimer);
+			}
+       
+			
+		  var refreshHotQueryTimer = null ;
+		  var hot_query_td =  $('#HotSearchList2');
+		  setHotQueryList(CurrentHotScreen);
+		  refreshHotQueryTimer = setTimeout('refreshHotQuery();', 5000);
+	  	
+</script> 
+<script type="text/javascript">
+function NeiSearch()
+{
+    var key=document.getElementById('key').value;
+    window.location.href='model/TwoGradePage/pgsearch.aspx?key='+escape(key);
+    //document.getElementById('aspnetForm').action='pgsearch.aspx';
+    //document.getElementById('aspnetForm').submit();
+}
+</script> 
+</head>
+
+<body>
+<div id="mainblock2">
+   <div id="mainblock3">
+    <div id=head class="header_bg" style="padding-top:0px;"> 
+
+                <div style="float:right; background:url(Customer/images/search_bg.png) no-repeat left top; width:182px; height:23px; margin-top:80px; margin-right:10px;_margin-right:0px;">
+                <input name="key" id="key" type="text" style="border: 0px solid #bbbbbb; width: 130px; *width: 130px; *float:left; height: 18px; margin-top:0px; margin-left:15px; background:none" />
+                <input class="search_btn4" type="botton" onclick="NeiSearch()" value="" style="margin-left: 0px; *float:left;" />
+
+                </div>
+                <div class="english_link">
+                    <table width="180" border="0" cellpadding="0" cellspacing="0">
+                        <tr>                                                     
+ 			<td align="right" style="width:110px">
+                                <script type="text/javascript" src="home/template/user.aspx"></script>
+                            </td>
+			<td style="width:70px">
+                                <a href="http://202.120.50.233/"><img src="Customer/images/ENGLISH_BTN.png" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+       
+     </div>
+     <div style="width:1000px; margin:0 auto">
+    	 <div class="menu" style="_margin:0 0 0 0px">
+                      <ul id="nav">
+                         <script src="home/template/headIndex.aspx" type="text/javascript"></script>					
+                     </ul>    
+                
+        </div>
+        <div class="header_right f_14b" id="Clock" style="display:none"></div>
+      </div>  
+       
+
+    
+    </div>
+</div>
+<div class="indexShow" style="">
+	<div id="contentnr1" style="height: 332px; background-image: url(customer/images/i_bj.jpg); margin:0 auto; width: 1018px; overflow: hidden;*overflow: hidden;">
+      <div id="newschange" class="juzhong" style="height: 32px; background-image: url(customer/images/i_bj.jpg); margin-left: 9px; width: 1000px; background-position: 50% 50%; ">
+		<div class="sauder-feature SauderFeaturesInit" style="text-align:center">
+    <div class="childwrapper" style="width: 1000px; height: 332px; *height: 332px;overflow: hidden; *overflow: hidden;">
+      <div class="lengthener" style="width: 5000px;*overflow: hidden;overflow: hidden;">
+        <div class="shadow-top"></div>
+        <script type="text/javascript" src="home/template/indexPic.aspx"></script>
+
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="customer/js/modernizr-1.6.min.js"></script>
+<script type="text/javascript" src="customer/js/jq.sauder.features.js"></script>
+	<script type="text/javascript" src="customer/js/global.js"></script> 
+       </div>   
+	</div>
+</div>
+<div id="mainblock">
+    <div class="mid_content clearfix" id="home_mid">
+    <div class="right_col">
+        <div class="box-weight margin_b" style="width:276px;">
+            <div class="box-weight-title" style="background-image:url(customer/images/tzgg_top.jpg)">
+               <a style="float: right; margin-right: 10px; margin-top:2px" href="model/twogradepage/newsmore.aspx?columnid=66"
+                            target="_blank"><span style="font-size:10px"><img  style="margin-top:10px"src="customer/images/more3.gif" width="35" height="9" align="absmiddle" /></span></a>                 
+                            <div class="box-weight-title-legend"></div>
+                </div>
+                        <div class="box-weight-con" style="border-bottom: none; height:135px; _height:135px; width:276px;overflow:hidden; "> 
+                          <div class="news2" style="margin-top:0px; padding-top:2px; margin-left:2px; _margin-left:5px; *margin-top:6px; margin-top:5px !important;">
+                    <ul>
+                             <!--通知公告调用开始--->
+    
+                                <script src="home/template/notice.aspx" type="text/javascript"></script>
+    
+                                <!--通知公告调用结束--->
+                        
+    
+                    </ul>
+                  </div>
+               
+              </div>
+               <div class="box-weight-bottom" style="background-image:url()"></div>
+              <div class="clearB"></div>
+              </div>
+        
+          
+          
+          
+         <div class="box-weight margin_b" style="width:276px;">
+            <div class="box-weight-title" style="background-image:url(customer/images/ztbd_top.jpg)">
+        
+                            <div class="box-weight-title-legend"></div>
+                </div>
+                   <div class="box-weight-con" style="border-bottom: none; height:185px; _height:185px; width:276px;"> 
+                     <div style="margin-top:5px; margin-left:5px;">
+<script src="home/template/ztbd.aspx" type="text/javascript"></script>
+</div>
+                          <div class="news4" style="margin-top:0px; padding-top:2px; margin-left:2px; _margin-left:5px; height:75px; overflow:hidden;">
+                    <ul id="slider333">
+                             <!--通知公告调用开始--->
+    
+                                <script src="home/template/lblm.aspx?type=专题报道" type="text/javascript"></script>
+    
+                                <!--通知公告调用结束--->
+                        
+    
+                    </ul>
+                  </div>
+               
+              </div>
+               <div class="box-weight-bottom" style="background-image:url()"></div>
+              <div class="clearB"></div>
+              </div>
+    
+    
+    </div><!--rightcol end--->
+    
+    <div class="left_col">
+
+          <div class="box-weight margin_b" style="width:257px; margin-left:0px;">
+                <div class="box-weight-con" style="border-bottom: none; height:375px; _height:375px; width:255px">
+                    <div class="" style="padding-top:7px;_padding-top:7px;" id="daohang">
+                   <!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="219" height="245">
+                      <param name="movie" value="customer/flash/daohang.swf">
+                      <param name="quality" value="high">
+                      <param name="wmode" value="transparent">
+                      <embed src="customer/flash/daohang.swf" width="219" height="377" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>
+                    </object>-->
+                    
+                    </div>
+                   <!--<script type="text/javascript">				
+						var so = new SWFObject("customer/flash/daohang.swf", "movie", "219", "377", "8", "#ffffff", "high");
+								so.useExpressInstall('js/expressinstall.swf');
+								so.addParam("wmode", "transparent");
+								so.addParam("menu", "false");
+								so.write("daohang");
+								
+					</script>-->
+					<script src="home/template/indexFlash.aspx" type="text/javascript"></script>
+                </div>
+          <div class="clearB"></div>
+          </div>
+          
+          <div class="box-weight margin_b" style="width:257px; display:none">
+                <div class="box-weight-title" style="background-image:url(customer/images/jxzy_top.jpg)">
+                        
+               <div class="box-weight-title-legend"></div>
+            </div>
+           <div class="box-weight-con" style="border-bottom: none; height:184px; _height:184px; width:255px; ">
+               <div class="kejian" style="padding-top:5px">
+                         <ul>
+                            <!--教学课件调用开始--->
+    
+                                <script src="home/template/teachkj.aspx" type="text/javascript"></script>
+    
+                            <!--教学课件调用结束--->
+
+                       </ul>
+                
+                       </div>     
+           
+          </div>
+           <div class="box-weight-bottom" style="background-image:url()"></div>
+          <div class="clearB"></div>
+          </div>
+          
+          
+          
+     </div> <!--leftcol end--->  
+     
+     <div class="main">      
+          <div class="box-weight margin_b" style="width:425px; margin-left:5px;_margin-left:3px;">
+            <div class="box-weight-title" style="background:url(customer/images/zxdt_top.jpg)  no-repeat;">
+                        <a style="float: right; margin-right: 10px; margin-top:2px" href="model/twogradepage/newsmore.aspx?columnid=65"
+                            target="_blank"><span style="font-size:10px"><img  style="margin-top:10px"src="customer/images/more3.gif" width="35" height="9" align="absmiddle" /></span></a>
+                        <div class="box-weight-title-legend"></div>
+            </div>
+           <div class="box-weight-con" style="border-bottom: none; height:218px; width:425px">
+               
+                <div class="news" style="padding-top:5px; _padding-top:5px;padding-left:0px; _padding-left:0px;width:425px;height:208px; height:220px!important;"">
+                <ul>
+                  <!--新闻动态开始--->
+    
+                        <script src="home/template/news.aspx" type="text/javascript"></script>
+    
+                  <!--新闻动态结束--->
+    
+                </ul>
+                
+              </div>             
+           
+          </div>
+           <div class="box-weight-bottom" style="background-image:url()"></div>
+          <div class="clearB"></div>
+          </div>
+          
+          <div class="box-weight margin_b" style="width:425px; margin-left:5px;_margin-left:3px; display:none">
+            <div class="box-weight-title" style="background:url(customer/images/fwzn_top.jpg)  no-repeat;">
+                        <a style="float: right; margin-right: 10px; margin-top:2px" href="model/twogradepage/newsmore.aspx?columnid=86"
+                            target="_blank"><span style="font-size:10px"><img  style="margin-top:10px"src="customer/images/more3.gif" width="35" height="9" align="absmiddle" /></span></a>
+                        <div class="box-weight-title-legend"></div>
+            </div>
+           <div class="box-weight-con" style="border-bottom: none; height:190px; width:425px;">
+               
+                <div class="news" style="padding-top:5px; _padding-top:5px;padding-left:0px; _padding-left:0px;width:425px;height:180px; ">
+                <ul>
+                  <!--新闻动态开始--->
+    
+                        <script src="home/template/lblm.aspx?type=服务指南" type="text/javascript"></script>
+    
+                  <!--新闻动态结束--->
+    
+                </ul>
+                
+              </div>             
+           
+          </div>
+           <div class="box-weight-bottom" style="background-image:url()"></div>
+          <div class="clearB"></div>
+          </div>
+          
+          
+          
+      </div>  <!--maincol end--->      
+        <!--<script src="customer/js/jquery-1.6.2.min.js" type="text/javascript"></script>   -->   
+ <script type="text/javascript">
+function Labs_Return_BySelfStyle_CallBack()
+	{
+			 jQuery("#slide2").jdMarquee({
+				deriction:"left",
+				//width:(screen.width>=1280)?480:440,
+				width:190,
+				height:154,
+				space:5,
+				step:1,
+				speed:5000, //无缝滚动1000
+				delay: 20, //无缝滚动20
+				stay:50,
+				auto: true,
+				control:true,
+				_front:"#brands-right b",
+				_back:"#brands-left b"
+			});
+
+	}
+	</script> 
+       <div class="box-weight clearL" style="width:1000px; margin-bottom:0px; margin-left:0px; _margin-left:0px;margin-top:15px !important; ">
+            <div class="box-weight-title" style="background:url(customer/images/syszs_top.jpg)  no-repeat">
+              
+               <div class="box-weight-title-legend"></div>
+            </div>
+                <div class="box-weight-con" style="height:160px; padding:10px 0 0 4px">
+                <div id="slide2">
+                    <ul id="HotSearchList">
+                     
+                    </ul>
+					
+                </div>
+        
+                </div>
+            <div class="box-weight-bottom" style="background-image:url()"></div>
+          <div class="clearB"></div>
+          </div>
+        
+        
+    </div>
+</div>
+<div style="width:100%; border-top:2px #234e77 solid;display:none">
+<div class="box-weight" style="width:1000px; margin-bottom:0px; margin:0 auto; float:none; display:none">
+            <div class="box-weight-title" style="background:url(customer/images/yqlj_top.jpg)  no-repeat">
+              
+               <div class="box-weight-title-legend"></div>
+            </div>
+                <div class="box-weight-con" style="height:25px; padding:0px 0 0 4px;width:980px; overflow:hidden">
+                <div class="friend_url" style="margin-top:0px; padding-top:0px; margin-left:5px; _margin-left:5px">
+                    <ul>
+                       <!--友情连接调用开始--->
+        
+                         <script src="home/template/links.aspx" type="text/javascript"></script>
+        
+                       <!--友情连接调用结束--->
+                    </ul>
+              </div>
+                </div>
+
+          <div class="clearB"></div>
+          </div>
+</div>
+<div class="footer_bg" style="margin-top:10px; _margin-top:10px;"></div>
+<div class="footer_banner"> 
+          <div class="f_b_box"> 
+                <div class="f_cc" style="display:block">         
+
+  <span class="s1" style="display:none">上海交通大学工程训练中心 © 版权所有  &nbsp;&nbsp;<br/>地址：中国·上海 闵行区东川路800号 &nbsp;&nbsp; 电话：021-54742932 &nbsp;&nbsp; 邮编：200240
+</span>    
+                </div> 
+                
+            </div> 
+	</div>
+ 
+</body>
+</html>

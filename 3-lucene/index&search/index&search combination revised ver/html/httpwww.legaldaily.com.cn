@@ -1,0 +1,1377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+<meta name="renderer" content="webkit"> 
+<meta name="keywords" content="中国共产党新闻,中央政法委,司法部,法制网,法制日报,新闻中心,时政,社会,中央政法领导,地方,地方领导,地方政法领导,经济,能源环保,新农村,教育,科技,文化,娱乐,直播,访谈,视频,观点,理论,传媒,国际军事,台湾,港澳,汽车,房产,IT,家电,体育,健康,律师查询,司法鉴定,律所查询,法律问题解答,律师在线解答" >
+<link rel="stylesheet" type="text/css" href="tongyong/css/2014.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon" >
+<script type="text/javascript" src="tongyong/js/data-2014.js"></script>
+<script type="text/javascript" src="tongyong/js/jquery.tintin.js"></script>
+<script type="text/javascript" src="tongyong/js/jquery.tintin_rotation.js"></script>
+<script type="text/javascript">
+//图片滚动 调用方法 imgscroll({speed: 30,amount: 1,dir: "up"});
+$.fn.imgscroll = function(o){
+	var defaults = {
+		speed: 40,
+		amount: 0,
+		width: 1,
+		dir: "left"
+	};
+	o = $.extend(defaults, o);
+	
+	return this.each(function(){
+		var _li = $("li", this);
+		_li.parent().parent().css({overflow: "hidden", position: "relative"}); //div
+		_li.parent().css({margin: "0", padding: "0", overflow: "hidden", position: "relative", "list-style": "none"}); //ul
+		_li.css({position: "relative", overflow: "hidden"}); //li
+		if(o.dir == "left") _li.css({float: "left"});
+		
+		//初始大小
+		var _li_size = 0;
+		for(var i=0; i<_li.size(); i++)
+			_li_size += o.dir == "left" ? _li.eq(i).outerWidth(true) : _li.eq(i).outerHeight(true);
+		
+		//循环所需要的元素
+		if(o.dir == "left") _li.parent().css({width: (_li_size*3)+"px"});
+		_li.parent().empty().append(_li.clone()).append(_li.clone()).append(_li.clone());
+		_li = $("li", this);
+
+		//滚动
+		var _li_scroll = 0;
+		function goto(){
+			_li_scroll += o.width;
+			if(_li_scroll > _li_size)
+			{
+				_li_scroll = 0;
+				_li.parent().css(o.dir == "left" ? { left : -_li_scroll } : { top : -_li_scroll });
+				_li_scroll += o.width;
+			}
+				_li.parent().animate(o.dir == "left" ? { left : -_li_scroll } : { top : -_li_scroll }, o.amount);
+		}
+		
+		//开始
+		var move = setInterval(function(){ goto(); }, o.speed);
+		_li.parent().hover(function(){
+			clearInterval(move);
+		},function(){
+			clearInterval(move);
+			move = setInterval(function(){ goto(); }, o.speed);
+		});
+	});
+};
+</script>
+<title>法制网</title>
+<style type="text/css">
+<!--
+html,body,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,object,iframe,form,blockquote,fieldset,input,textarea,code,address,caption,cite,code,em,i,ins{margin:0;padding:0;font-style:normal;}
+
+.navbc { width:1000px; float:left; clear:both;}
+.navbcpic { width:998px; float:left; clear:both; margin-top:10px; border:1px #d4e0e7 solid}
+.navbcad { width:1000px; float:left; margin:10px 0px; clear:both;}
+.navbc-bo { width:1000px; float:left; border-bottom:2px #007cc3 solid; margin-top:10px;}
+.navbc-bottom { width:1000px; float:left; clear:both; text-align:center;}
+
+/*透明标题样式*/
+.img-120 { position: relative; display: block; height:86px; width: 120px; margin: 0 auto; border: 1px solid #e1e1e1;}
+.img-120 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 120px; padding: 0px 0; border-top: 0px solid #e1e1e1; text-align:center; }
+
+.img-172 { position: relative; display: block; height:112px; width: 170px; margin: 0 auto; border: 1px solid #e1e1e1; }
+.img-172 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 170px; padding: 0px 0; border-top: 0px solid #999;  text-align:center; }
+
+.img-140 { position: relative; display: block; height:94px; width: 138px; margin: 0 auto; border: 1px solid #e1e1e1; }
+.img-140 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 138px; padding: 0px 0; border-top: 0px solid #999;  text-align:center; }
+
+.img-140-1 { position: relative; display: block; height:200px; width: 138px; margin: 0 auto;  border: 1px solid #e1e1e1;}
+.img-140-1 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 138px; padding: 0px 0; border-top: 0px solid #999;  text-align:center; }
+
+.img-140-2 { position: relative; display: block; height:94px; width: 138px; margin: 0 auto; border: 1px solid #999; border: 1px solid #e1e1e1; }
+.img-140-2 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 138px; padding: 0px 0; border-top: 1px solid #999;  text-align:center; }
+
+.img-140-3 { position: relative; display: block; height:100px; width: 138px; margin: 0 auto;  border: 1px solid #e1e1e1;}
+.img-140-3 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 138px; padding: 0px 0; border-top: 0px solid #999;  text-align:center; }
+
+.img-68 { position: relative; display: block; height:102px; width: 83px; margin: 0 auto; border: 1px solid #e1e1e1; }
+.img-68 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 83px; padding: 0px; border-top: 0px solid #999;  text-align:center; }
+
+.img-1581 { position: relative; display: block; height:136px; width: 161px; margin: 0 auto;  border: 1px solid #e1e1e1;}
+.img-1581 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 161px; padding: 0px 0; border-top: 0px solid #999;  text-align:center; }
+
+.img-1582 { position: relative; display: block; height:110px; width: 156px; margin: 0 auto;  border: 1px solid #e1e1e1;}
+.img-1582 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 156px; padding: 0px 0; border-top: 0px solid #999;  text-align:center; }
+
+.img-332 { position: relative; display: block; height:194px; width: 324px; margin: 0 auto;  border: 1px solid #e1e1e1;}
+.img-332 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 324px; padding: 0px 0; border-top: 0px solid #999;  text-align:center; }
+
+.img-92 { position: relative; display: block; height:76px; width: 92px; margin: 0 auto;}
+.img-92 cite { background: #333; -moz-opacity:.75; filter:alpha(opacity=75); opacity:.75; color: #fff; position: absolute; bottom: 0; left: 0; width: 92px; padding: 0px 0; border-top: 0px solid #999;  text-align:center; }
+
+/*nav*/
+
+.navtop {width:1400px; height:34px; background:url(http://www.legaldaily.com.cn/tongyong/images/2014-fzwgb-001.png);}
+.navbctop { width:1000px; height:34px; margin:0px auto; padding:0px; clear:both; background:url(http://www.legaldaily.com.cn/tongyong/images/2014-fzwgb-001.png);}
+.navbctop-1 { width:950px; float:left; padding-left:50px; display:inline;}
+.navbctop-dt { width:100px; margin:0px 2px; float:left; text-align:left; line-height:34px; display:inline;}
+.navbctop-dd { width:210px; height:34px; margin:0px 10px; float:left; line-height:34px; text-align:left; display:inline;}
+.navbctop-dd1 { width:30px; height:18px; line-height:34px; float:left; text-align:left; margin-top:5px; cursor:pointer; display:inline;} 
+
+input[type="text"] {position:relative; margin-top:5px; background-color:#fff; border:1px #ccc solid; height:18px; line-height:18px; width:200px;}
+input[type="hidden"]{ display:none;}
+input[type="submit"]{background-color:blue; color:white;}
+input[type="reset"]{background-color:navy;color:white;}
+input[type="radio"]{/*In FF,Some radio style like background-color not been supported*/margin:10px;}
+input[type="checkbox"]{/*In FF,Some checkbox style like background-color not been supported*/margin:10px;}
+input[type="button"]{background-color:lightblue;}
+select{position:relative;margin-top:4px;font-size:13px;width:200px;line-height:20px; border:1px #ccc solid; height:20px;} 
+
+.toplogo { height:102px; width:192px; border:0px; float:left;}
+#time { width:133px; height:102px; float:left; border:0px red solid;}
+#time ul { width:133px; padding:0px 0px; text-align:center; color:#a72213; padding-top:20px;}
+
+#menu {width:658px; float:left; height:83px; padding-top:19px; padding-left:15px;}
+#menu ul {width:65px; float:left; margin:0px; padding:0px;}
+#menu ul li {width:65px; float:left; text-align:center; font-size:12px; color:#454343;}
+.menudiv { width:2px; height:68px; background-image:url(http://www.legaldaily.com.cn/tongyong/images/2014-fzwgb-004.png); background-repeat:no-repeat; float:left;}
+
+.navsec {width:1000px; float:left; border-top:1px #cedbe3 solid; border-bottom:3px #0b84ce solid; margin-bottom:4px;}
+.navsec80 { width:80px; float:left; font-size:12px; font-weight:bold; color:#454343; margin-left:50px;letter-spacing:2px;}
+#menusec {width:820px; float:left;}
+#menusec ul {padding:0px; margin:0px;}
+#menusec ul li {width:26px; float:left; text-align:center; font-size:12px; color:#454343;}
+.menusec {font-size:12px; color:#454343; font-weight:bold;}
+
+/**ping**/
+.p1 {width:240px; float:left; border:1px #cedbe3 solid;}
+.p1-bg {width:240px; height:83px; float:left; background-image:url(http://www.legaldaily.com.cn/tongyong/images/2014-fzwgb-005.png);background-repeat:no-repeat; }
+#p1 {width:240px; float:left;}
+#p1 ul {margin:0px; padding:0px; float:left;}
+#p1 ul li {width:80px; height:29px; float:left;}
+.p2 {width:752px; float:left; margin-left:4px; border:1px #cedbe3 solid;}
+.p2-1 {width:560px; float:left; margin:2px 6px 0px 6px; display:inline;}
+.p2-1-pic { width:548px; float:left;}
+.p2-1-c {width:180px; float:left; padding:4px 3px 2px 3px; line-height:20px; display:inline;}
+
+.p2-2 {width:174px; float:left; margin:2px 6px 0px 0px; display:inline;}
+.p2-2-pic {width:174px; float:left;}
+.p2-2-c {width:174px; float:left; padding-top:6px; padding-bottom:2px; line-height:21px; display:inline;}
+
+
+.p3 {width:805px; float:left; text-align:center;}
+.p3-more {width:735px; float:left; text-align:left; height:30px; line-height:30px; overflow:hidden;}
+.p3-more-1 {width:70px; float:left; text-align:left; height:30px; line-height:30px;}
+.p3-ri {width:455px; float:left; margin-top:10px;}
+.p3-ri-1 {width:435px; float:left; margin:0px 10px; padding:0px; display:inline;}
+.p3-ri-1-ri {width:300px; float:left; margin:15px 0px 0px 0px;}
+.p3-ri-1-pic {width:135px; float:left; margin:15px 0px 0px 0px;}
+
+#p3-le {width:340px; float:left; margin-top:10px;padding-right:10px; text-align:left; display:inline;}
+#p3-le dl {width:340px; float:left;}
+#p3-le dt {width:340px; float:left; margin:2px 0px;}
+#p3-le dd {width:340px; float:left; margin:2px 0px;}
+
+#p3-ri{width:435px; float:left; margin:10px 10px 0px 10px; border-bottom:2px #007cc3 solid; display:inline;}
+#p3-ri ul {margin:0px; padding:0px; float:left; text-align:left;}
+#p3-ri ul li {width:195px; height:30px; float:left; line-height:30px; letter-spacing:5px; text-indent:10px;}
+#p3-ri span { float:right;}
+
+.p3-1 {width:195px; float:left; }
+.p3-1-dl { width:195px; float:left;}
+.p3-1-dt { width:185px; float:left; margin:2px 4px 0px 5px; text-align:center; display:inline;}
+.p3-1-dd { width:64px; float:left; margin:1px 0px 1px 8px; display:inline;}
+.p3-1-dd1 { width:120px;float:left; margin:1px 1px 1px 2px; display:inline;}
+
+.p3-2 { width:195px; float:left;  display:inline;}
+.p3-2-1 { width:195px; float:left; padding:1px 0px; display:inline; text-align:center;}
+
+.p3-2-pic  { width:72px; float:left; text-align:center; margin:2px 8px 2px 17px; display:inline;}
+.p3-2-pic-1  { width:72px; float:left; text-align:center; margin:2px 15px 2px 9px; display:inline;}
+.p3-2-dl { width:195px; float:left;}
+.p3-2-dt { width:185px; float:left; padding:1px 0px 1px 10px;}
+.p3-2-dd { width:185px; float:left; padding:1px 0px 1px 10px;}
+
+.p4-le-ul { width:348px; float:left; border:1px #c7d4dc solid; height:30px; line-height:30px;}
+.p4-le-li {  width:90px; float:left; text-align:center; line-height:30px; height:30px;}
+.p4-le-li2 {  width:250px; float:left; text-align:left; line-height:30px; height:30px;}
+/*hotword*/
+#scrollWrap1{width:250px;height:26px;overflow:hidden;background:#E6F6F6;}
+#scrollMsg li{height:26px;line-height:26px;overflow:hidden;padding:0px;} 
+
+.p4-ri-ul {width:638px; float:left; border:1px #c7d4dc solid; margin-left:10px;}
+.p4-ri-li { width:80px; float:left; text-align:center; line-height:30px; height:30px;}
+.p4-ri-li2 { width:550px; float:left; text-align:left; line-height:30px; height:30px;}
+
+.p5-ul { width:1000px; float:left; margin-top:10px;}
+.p5-li { width:100px; height:28px; float:left; background-color:#007cc3; margin-left:10px; margin-right:380px; text-align:center; line-height:28px;}
+.p5-li-yu { width:100px; height:28px; float:left; background-color:#007cc3; margin-left:10px; margin-right:671px; text-align:center; line-height:28px;}
+.p5-li-law { width:100px; height:28px; float:left; background-color:#007cc3; margin-left:10px; margin-right:563px; text-align:center; line-height:28px;}
+.p5-li-hd { width:100px; height:28px; float:left; background-color:#007cc3; margin-left:10px; margin-right:580px; text-align:center; line-height:28px;}
+.p5-li-pic { width:100px; height:28px; float:left; background-color:#007cc3; margin-left:10px; margin-right:610px; text-align:center; line-height:28px;}
+.p5-li2 { float:left; text-align:center; line-height:28px; padding:0px 3px;}
+
+
+.p5-1{ width:212px; float:left; margin:10px 0px 0px 0px;}
+.p5-1-le {width:210px; float:left; border:1px #d4e0e7 solid; margin-bottom:7px; margin-top:0px;}
+.p5-1-lesecond{ width:210px; float:left; border:1px #d4e0e7 solid; margin-bottom:5px; margin-top:10px;}
+.p5-1-le-dt {width:195px; float:left; padding-left:15px; margin-top:14px; line-height:26px;}
+.p5-1-le-dd {width:205px; float:left; padding-left:5px; margin:5px 0px; line-height:26px; text-align:center;}
+.p5-1-le-dd-1 {width:205px; float:left; padding-left:5px; margin:0px; line-height:26px;}
+.p5-1-le-dddf {width:205px; float:left; padding-left:5px; margin-top:10px; margin-bottom:5px; line-height:26px;}
+.p5-1-le-ddad {width:205px; float:left; padding-left:5px; margin-top:10px; line-height:26px;}
+.p5-1-le-li {width:100px; float:left; margin-top:10px; padding-left:8px;}
+.p5-1-le-li1 {width:40px; height:20px; margin:15px 3px 0px 2px; text-align:center; float:left; border:1px #ccc dashed; line-height:20px;}
+
+.p5-2 { width:384px; float:left; margin:10px 0px 0px 10px;}
+.p5-2-dl { width:384px; float:left; margin:0px;}
+.p5-2-dt { width:70px; float:left; text-align:left; margin:0px; height:26px; line-height:26px;}
+.p5-2-dt1 { width:310px; float:left; text-align:left; margin:0px; height:26px; line-height:26px;}
+.p5-2-dd { width:380px; float:left; text-align:left; margin:4px 0px; height:26px; line-height:26px;}
+
+.p5-3 { width:384px; float:left; margin:10px 0px 0px 10px;}
+.p5-3-dl { width:384px; float:left; margin-top:10px;}
+.p5-3-dlsecond { width:384px; float:left; margin-top:15px;}
+.p5-3-dlthird { width:384px; float:left; margin-top:15px;}
+.p5-3-dlfifth { width:384px; float:left; margin-top:18px;}
+.p5-3-dlfirth { width:384px; float:left; margin-top:17px;}
+.p5-3-dlsix { width:384px; float:left; margin-top:18px;}
+
+.p5-3-dl-pic { width:384px; float:left; margin:0px; text-align:right;}
+
+.p5-3-dt { width:175px; float:left; padding-left:15px; padding-right:110px; padding-bottom:5px; height:26px; line-height:26px; border-bottom:1px #007cc3 solid;}
+.p5-3-dt1 { width:84px; float:left; text-align:left; margin:0px; height:26px; padding-bottom:5px; line-height:26px; border-bottom:1px #007cc3 solid;}
+.p5-3-dt-1 { width:175px; float:left; padding-left:15px; padding-right:100px; padding-bottom:5px; height:26px; line-height:26px; border-bottom:1px #007cc3 solid;}
+.p5-3-dt1-1 { width:94px; float:left; text-align:left; margin:0px; height:26px; padding-bottom:5px; line-height:26px; border-bottom:1px #007cc3 solid;}
+
+.p5-3-dt2 { width:384px; margin-top:10px; text-align:center; float:left;}
+.p5-3-dt3 { width:120px; float:left; margin:0px; text-align:left; padding-left:15px; padding-right:20px; padding-bottom:5px; border-bottom:1px #007cc3 solid;}
+.p5-3-dt4 { width:229px; float:left; margin:0px; text-align:center; border-bottom:1px #007cc3 solid; padding-bottom:5px;}
+.p5-3-dt5 { width:35px; height:92px; float:left; padding-bottom:5px;}
+.p5-3-dt6 { width:340px; float:left; padding-bottom:5px;}
+
+.p5-3-ul { width:229px; float:left; margin:0px; text-align:center;}
+.p5-3-li { float:left; margin:0px; text-align:center; padding:0px 3px;}
+
+.p5-3-dd { width:380px; float:left; text-align:left; margin:0px; line-height:26px;}
+.p5-3-dd1 { width:380px; float:left; text-align:left; margin-top:10px; line-height:26px;}
+.p5-3-dd1-lspic { width:380px; float:left; text-align:center;}
+.p5-3-dd1sp { width:380px; float:left; text-align:left; margin-top:15px; line-height:26px;}
+.p5-3-dd1gz { width:380px; float:left; text-align:left; margin-top:0px; line-height:26px;}
+.p5-3-dd2 { width:160px; float:left; text-align:left; margin-top:10px; line-height:26px; padding:0px 0px 0px 15px; display:inline;}
+.p5-3-dd3 { width:200px; float:left; text-align:left; margin-top:10px; line-height:26px; padding:0px 0px 0px 0px; display:inline; }
+.p5-3-dd4 { width:380px; float:left; text-align:center; margin:0px;}
+.p5-3-dd5 { width:190px; float:left; text-align:left; margin-top:20px; line-height:26px;}
+
+.p5-3-dd2jm { width:150px; float:left; text-align:left; margin-top:10px; line-height:26px; padding:0px 0px 0px 15px; display:inline;}
+.p5-3-dd3jm { width:215px; float:left; text-align:left; margin-top:10px; line-height:26px; padding:0px 0px 0px 0px; display:inline; }
+
+.p5-3-dd6 { width:70px; float:left; text-align:left; line-height:27px; padding-left:15px; display:inline;}
+.p5-3-dd7 { width:364px; float:left; padding-right:10px; text-align:left; line-height:27px; display:inline;}
+.p5-3-dd61 { width:70px; float:left; text-align:left; margin-top:10px; line-height:27px; padding-left:15px; display:inline;}
+.p5-3-dd71 { width:285px; float:left; padding-right:10px; margin-top:10px; text-align:left; line-height:27px; display:inline;}
+.line1 { width:384px; border:none; border-top:1px dashed #ccc; float:left; height:1px;}
+.line2 { width:285px; border:none; border-top:1px dashed #ccc; float:left; height:1px;}
+
+.p6-1 { width:332px; margin:0px 10px; float:left; display:inline;}
+.p6-1-dl { width:332px; float:left;}
+.p6-1-dt { width:332px; float:left;}
+.p6-1-dd { width:332px; float:left;}
+.p6-1-ddsecond { width:332px; float:left; margin-top:10px;}
+.p6-2 { width:286px; margin:0px; float:left;}
+.p6-2-dl { width:286px; float:left;}
+.p6-2-dt { width:286px; float:left; margin-top:10px;}
+.p6-2-dtsecond { width:286px; float:left;}
+.p6-2-dt1 { width:286px; float:left; text-align:center;}
+.p6-2-dd { width:286px; float:left;}
+.p6-3 { width:345px; margin-left:10px; float:left; display:inline;}
+.p6-3-dl { width:345px; float:left;}
+.p6-3-dt { width:345px; float:left;}
+.p6-3-dtsecond { width:345px; float:left; height:50px; background-image:url(http://www.legaldaily.com.cn/tongyong/images/2014-fzwgb-051.png);}
+.p6-3-dd { width:345px; float:left;}
+
+.tdad { width:160px; padding:15px 3px 5px 3px; float:left; text-align:center;}
+
+/**top-rotation**/
+.tintin-rotation{margin:0 auto; padding:0px 0px;}
+.tintin-rotation-btn,.tintin-rotation-title,.tintin-rotation-focus,.tintin-rotation-t,.tintin-rotation-btn{position:absolute}
+.tintin-rotation-title{position:absolute;width:100%;height:43px;line-height:43px;background:#000;filter:alpha(opacity=40);-moz-opacity:0.4;-khtml-opacity:0.4;opacity:0.4;left:0;bottom:0;_bottom:-1px;z-index:1; text-align:center;}
+.tintin-rotation-t{color:#fff;font-size:16px;font-family:microsoft yahei;z-index:2;bottom:0;left:10px;line-height:43px}
+.tintin-rotation-focus span,.tintin-rotation-btn span{background:url(http://www.legaldaily.com.cn/tongyong/images/2014-0704ico.png) no-repeat;display:block;}
+.tintin-rotation-focus{height:43px;line-height:43px;right:20px;bottom:0;z-index:2}
+.tintin-rotation-focus span{width:12px;height:12px;line-height:12px;float:left;margin-left:5px;position:relative;top:14px;cursor:pointer;background-position:-24px -126px;text-indent:-9999px}
+.tintin-rotation-btn{width:100%;height:43px;top:50%;margin-top:-20px;}
+.tintin-rotation-btn span{width:43px;height:43px;cursor:pointer;filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity:0.3;opacity:0.3;position:relative}
+.tintin-rotation-btn .left_btn{background-position:-1px -2px;float:left;left:10px;}
+.tintin-rotation-btn .right_btn{background-position:-1px -49px;float:right;right:10px;}
+.tintin-rotation-btn span.hover{filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity:0.8;opacity:0.8;}
+.tintin-rotation-focus span.hover{background-position:-10px -126px}
+.rotation_list{width:0;height:0;overflow:hidden;}
+
+/* scrollleft */
+.scrollleft{width:650px;margin:0px 5px; height:30px; display:inline; float:left;}
+.scrollleft li{float:left;margin-left:5px;display:inline;text-align:left;line-height:30px;}
+.scrollleft img{width:85px;height:102px; margin:0px 0px;}
+
+/* scrollleft1 */
+.scrollleft1{width:540px;margin:0px 5px; height:30px; display:inline; float:left;}
+.scrollleft1 li{float:left;margin-left:5px;display:inline;width:100%;text-align:left;line-height:30px;}
+.scrollleft1 img{width:130px;height:30px;padding:10px;border:solid 1px #ddd;}
+
+/* scrollleft2 */
+.scrollleft2{width:340px;padding:0px;margin:0px;}
+.scrollleft2 li{float:left;display:inline;width:85px;text-align:center;line-height:19px; margin:0px 2px;}
+.scrollleft2 img{width:85px;height:102px; margin:0px 0px;}
+
+/* scrollleft3 */
+.scrollleft3{width:700px;margin:0px 5px; height:30px; display:inline; float:left;}
+.scrollleft3 li{float:left;margin-left:5px;display:inline;width:100%;text-align:left;line-height:30px;}
+.scrollleft3 img{width:130px;height:30px;padding:10px;border:solid 1px #ddd;}
+
+
+/*18*/
+.menu18 { margin-left:20px; width:650px; float:left; line-height:30px; margin-top:5px;}
+.menu18 ul { list-style:none; float:left; line-height:30px;}
+.menu18 li { list-style:none; float:left; line-height:30px;}
+
+.navbc18 { width:998px; float:left; clear:both; border:1px solid #e4c7a1;}
+.navbc181 { width:998px; float:left; clear:both; background-color:#f1efd2;}
+/*yuqing*/
+.yq369 {width:369px; height:125px; background-image:url("http://www.legaldaily.com.cn/tongyong/images/2014-fzwgb-017-2-1.png"); background-repeat:no-repeat;}
+.yq180 { width:158px; height:80px; margin:35px 0px 0px 15px; float:left; border:0px red solid;}
+.yq50 { width:40px; height:20px; margin:2px; float:left; border:0px red solid;}
+.yq60 { width:70px; height:20px; margin: 0px 2px 2px 2px; float:left;}
+.yq601 { width:45px; height:20px; margin:6px 2px 2px 2px; float:left;}
+.yq1801 { width:180px; height:80px; margin:35px 0px 0px 0px; float:left; border:0px red solid;}
+
+.yq120 { width:100px; height:20px; margin:2px; float:left;}
+
+.yq85 { width:65px; height:20px; float:left; margin:8px 5px 5px 5px;}
+.yq851 { width:80px; height:20px; margin:3px 2px 2px 4px; float:left; border:0px red solid;}
+
+/*zhuanquyangshi*/
+#showtable{
+margin-top:1px;
+}
+
+#showtable td{
+padding-left:5px;
+padding-right:5px;
+line-height:150%;
+border-right:1px solid #ffffff;
+border-left:0px solid #ffffff;
+border-bottom:1px solid #ffffff;
+}
+-->
+</style>
+<base target="_blank" >
+</head>
+<body> 
+	<div id="div1400">
+	
+	<div class="div1400">
+	  <iframe charset="utf-8" name="I1" width=1400 height=170 align=top frameborder=0 marginwidth=0 marginheight=0 scrolling=no src='frame/2014top-1.html'></iframe></div><div id="div1000">
+			<div class="navbc">
+				<div class="p1">
+				  <a href="http://law365.legaldaily.com.cn/ecard/"><img src="index/tplimg/26689.files/20150916/20150925-2.jpg" width="239" height="107" border="0" ></a> </div>
+				<div class="p2">
+					<div class="p2-1">
+						<div class="p2-1-pic"><a href="The_analysis_of_public_opinion/node_42588.htm"><img src="index/tplimg/26689.files/20150519/2014-zygbyqgif-1.gif" width="560" height="60" ></a></div>
+						<div class="p2-1-c">
+							<!--begin 1602059-5957-1-->				<span class="dotgray">·</span><a class="f12 black03" href="index_article/content/2010-11/10/content_2346340.htm?node=5957" target="_blank">诚征全国各地广告代理</a>				<br>								<span class="dotgray">·</span><a class="f12 black03" href="http://opinion.legaldaily.com.cn/content/2013-10/31/content_4980077.htm?node=42591" target="_blank">政法舆情危机应对手册</a>				<br>				<!--end 1602059-5957-1--></div>
+						  <div class="p2-1-c">
+							<!--begin 1602060-5957-1-->				<span class="dotgray">·</span><a class="f12 black03" href="gsjdw/node_8292.htm?node=8021" target="_blank">甘肃戒毒宣传报道</a><br>								<span class="dotgray">·</span><a class="f12 black03" href="http://www.legalinfo.gov.cn/zhuanti/node_75768.htm?node=5957" target="_blank">全国百家网站知识竞赛</a><br>				<!--end 1602060-5957-1-->
+						  </div>
+						  <div class="p2-1-c">
+						    <!--begin 1602061-5957-1--><span class="dotgray">·</span><a class="f12 black03" href="http://photo.legalinfo.gov.cn/comic/index01.htm?node=5957" target="_blank">全国法制动漫作品展示</a><br><span class="dotgray">·</span><a class="f12 black03" href="http://www.legalinfo.gov.cn/zhuanti/node_54408.htm?node=7863" target="_blank">全国“六五”普法成果展</a><br><!--end 1602061-5957-1--></div>
+					</div>
+					<div class="p2-2">
+						<div class="p2-2-pic">
+							<a href="http://www.legaldaily.cn/xwzx/content/2015-04/13/content_6041982.htm?node=75582" target="_blank"><img src="index/tplimg/26689.files/new.png" border="0"></a>
+						</div>
+          				<div class="p2-2-c">
+          				  <!--begin 1602062-5957-1--><span class="dotgary">·</span><a class="f12 black03" href="http://www.spp.gov.cn/ztk/2014/qzzxadjcg/index.shtml" target="_blank">群众最喜爱的检察官评选</a><br><span class="dotgary">·</span><a class="f12 black03" href="xwzx/content/2015-08/04/content_6204071.htm?node=53628" target="_blank">"中国普法"有奖微活动进行中</a><br><!--end 1602062-5957-1--></div>
+					</div>
+				</div>
+			</div>
+			
+		    
+			<div class="navbc">
+				<div class="p3">
+					<div class="p3">
+					  <!--begin 1602063-5954-1--><div style="padding:0px;"><a href="index_article/content/2015-10/28/content_6326934.htm?node=5954" target="_blank"><img width="792" height="80" src="index/images/attachement/jpg/site4/20151028/d43d7ecb6d12179a49900e.jpg" border="0"></a></div><!--end 1602063-5954-1--></div>
+					<div class="p3-more">
+					  <!--begin 1602064-6148-1--><div style="float:left; text-align:left; padding:0px 5px;"><span class="f13 black03">[</span><a class="f13 black03" href="index_article/content/2015-08/12/content_6326936.htm?node=6148" target="_blank">《公安机关涉案财物管理若干规定》全文<span class="f13 black03">]</span></a></div><div style="float:left; text-align:left; padding:0px 5px;"><span class="f13 black03">[</span><a class="f13 black03" href="index_article/content/2015-04/23/content_6326937.htm?node=6148" target="_blank">[图解]司法机关内部人员过问案件追责规定<span class="f13 black03">]</span></a></div><div style="float:left; text-align:left; padding:0px 5px;"><span class="f13 black03">[</span><a class="f13 black03" href="index_article/content/2015-02/13/content_6326938.htm?node=6148" target="_blank">政法干警违纪违法典型案件<span class="f13 black03">]</span></a></div><!--end 1602064-6148-1--></div>
+					<div class="p3-more-1"><a class="f13 black02" href="News_Center/node_33868.htm">》更多</a></div>
+					<div class="p3">
+						<div class="p3-ri">
+							<div class="tintin-rotation">
+							<!--begin 1602065-6139-1-->			<li>			<span title="法制日报社社长邵炳芳一行在广西调研">			<a href="index/content/2015-10/28/content_6327367.htm?node=6139" target="_blank"><img width="435" height="253" src="index/images/attachement/jpg/site4/20151028/00fff5bea39d179a792228.jpg" border="0"></a>			</span>			</li>						<li>			<span title="广西政法委书记温卡华会见法制日报社邵炳芳社长一行">			<a href="index/content/2015-10/27/content_6326786.htm?node=6139" target="_blank"><img width="435" height="253" src="index/images/attachement/jpg/site4/20151027/00251157c36317999a571c.jpg" border="0"></a>			</span>			</li>						<li>			<span title="郑州16年前特大抢劫银行案告破 匪首已成亿万富豪">			<a href="index/content/2015-10/27/content_6326644.htm?node=6139" target="_blank"><img width="435" height="253" src="index/images/attachement/jpg/site4/20151027/00251157c36317997bb115.jpg" border="0"></a>			</span>			</li>						<li>			<span title="武汉轨道交通举办收缴违禁物品陈列展">			<a href="index/content/2015-10/28/content_6326952.htm?node=6139" target="_blank"><img width="435" height="253" src="index/images/attachement/jpg/site4/20151028/d43d7ecb6d12179a534b04.jpg" border="0"></a>			</span>			</li>						<li>			<span title="直击：地震后的阿富汗">			<a href="index/content/2015-10/28/content_6327030.htm?node=6139" target="_blank"><img width="435" height="253" src="index/images/attachement/jpg/site4/20151028/d43d7ecb6d12179a666611.jpg" border="0"></a>			</span>			</li>			<!--end 1602065-6139-1-->
+							<script type="text/javascript">
+			$(".tintin-rotation").tintin_rotation({auto:true});
+			</script>
+						  	</div>
+							<div id="p3-ri">
+							  <ul>
+								<li><a class="f16 b blue001" href="commentary/node_34228.htm">评论</a></li>
+								<li><span><a class="f12 black" href="commentary/node_34228.htm">更多</a></span></li>
+							  </ul>
+							</div>
+							<div class="p3-ri-1">
+								<div class="p3-ri-1-ri">
+									<ul>
+									  <li>
+										<!--begin 1602066-33188-1-->					<div style="width:100%; text-align:center;">					<a class="f14 b black02" href="commentary/content/2015-10/28/content_6327115.htm?node=33188" target="_blank">让全面小康照亮我们的梦想</a>					</div>					<!--end 1602066-33188-1-->
+									  </li>
+									  <li>
+										<!--begin 1602067-33188-1-->					<div style="width:100%; text-align:left; line-height:30px;">					<span class="dotgary">·</span><a class="f14 black02" href="commentary/content/2015-10/28/content_6327257.htm?node=33188" target="_blank">创新经济需要法治保障</a>					</div>										<div style="width:100%; text-align:left; line-height:30px;">					<span class="dotgary">·</span><a class="f14 black02" href="commentary/content/2015-10/28/content_6327158.htm?node=33188" target="_blank">为“四个全面”提供法治保障</a>					</div>										<div style="width:100%; text-align:left; line-height:30px;">					<span class="dotgary">·</span><a class="f14 black02" href="commentary/content/2015-10/28/content_6327330.htm?node=33188" target="_blank">高速“超时费”就是一种乱收费</a>					</div>										<div style="width:100%; text-align:left; line-height:30px;">					<span class="dotgary">·</span><a class="f14 black02" href="commentary/content/2015-10/28/content_6327845.htm?node=33188" target="_blank">云时代，保护个人隐私不能飘在天上</a>					</div>										<div style="width:100%; text-align:left; line-height:30px;">					<span class="dotgary">·</span><a class="f14 black02" href="commentary/content/2015-10/27/content_6325879.htm?node=33188" target="_blank">十八届五中全会 适应新常态的关键性盛会</a>					</div>					<!--end 1602067-33188-1-->
+									  </li>
+									</ul>
+							  </div>
+								  <div class="p3-ri-1-pic">
+									<!--begin 1602068-33188-1-->					<div class="img-120" style="margin:5px; ">					<a href="commentary/content/2015-10/27/content_6326714.htm?node=33188" target="_blank"><img width="120" height="86" src="index/images/attachement/jpg/site4/20151027/7427eae7999617997ef615.jpg" border="0"></a>					<cite style="text-align:center;">					<a class="f12 white" href="commentary/content/2015-10/27/content_6326714.htm?node=33188" target="_blank">改善民生是首要目标</a>					</cite>					</div>										<div class="img-120" style="margin:5px; ">					<a href="commentary/content/2015-10/27/content_6326645.htm?node=33188" target="_blank"><img width="120" height="86" src="index/images/attachement/jpg/site4/20151027/7427eae7999617997b490f.jpg" border="0"></a>					<cite style="text-align:center;">					<a class="f12 white" href="commentary/content/2015-10/27/content_6326645.htm?node=33188" target="_blank">是真糊涂还是装糊涂</a>					</cite>					</div>					<!--end 1602068-33188-1-->
+								  </div>
+							</div>
+						</div>
+						<div id="p3-le">
+								<dl>
+									<dt>
+									  <!--begin 1602069-5955-1-->					<ul>					<li>					<span class="dotgray">·</span><a class="f14 b black02" href="index_article/content/2015-10/28/content_6326933.htm?node=5955" target="_blank"><A class="f14 b black02" href="index_article/content/2015-10/28/content_6326932.htm?node=5955" target=_blank>习近平谋划“十三五”的足迹</A> <A class="f14 b black02" href="index_article/content/2015-10/27/content_6325207.htm?node=5955" target=_blank>推动改革迈向纵深</A></a>					</li>					</ul>					<!--end 1602069-5955-1-->
+                                    <dd><!--begin 1602070-5955-1-->					<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327602.htm?node=5955" target="_blank"><A class="f14 black02" href="index_article/content/2015-10/28/content_6327600.htm?node=5955" target=_blank>四中全会以来全面依法治国实现大变革</A> <A class="f14 black02" href="index_article/content/2015-10/28/content_6327599.htm?node=5955" target=_blank>图说这一年</A></a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/27/content_6326854.htm?node=5955" target="_blank">赵大程:建设完备的法援工作体系 满足群众法援需求</a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6326950.htm?node=5955" target="_blank"><A class="f14 black02" href="zfzz/node_75646.htm" target=_blank>最高法二巡司改探秘：便民只有更近</A> <A class="f14 black02" href="index_article/content/2015-10/28/content_6326948.htm?node=5955" target=_blank>首次高校开庭</A></a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6326969.htm?node=5955" target="_blank">反腐专家称:新版"最严党纪"传递持续高压反腐信号</a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327596.htm?node=5955" target="_blank"><A class="f14 black02" href="index_article/content/2015-10/28/content_6327595.htm?node=5955" target=_blank>国防部向美提出严正交涉</A> <A class="f14 black02" href="index_article/content/2015-10/28/content_6327594.htm?node=5955" target=_blank>是谁见不得南海风平浪静</A></a>					</li>					</ul>					<!--end 1602070-5955-1--></dd>
+								</dl>
+								<dl>
+									<dt><!--begin 1602071-5955-1-->					<ul>					<li>					<span class="dotgray">·</span><a class="f14 b black02" href="index_article/content/2015-10/28/content_6326942.htm?node=5955" target="_blank"><A class="f14 b black02" href="index/content/2015-10/28/content_6327016.htm?node=20908" target=_blank>下月起朋友圈发假消息可判7年</A> <A class="f14 b black02" href="rdlf/node_78778.htm" target=_blank>聚焦刑(九)实施</A></a>					</li>					</ul>					<!--end 1602071-5955-1--></dt>
+									<dd><!--begin 1602072-5955-1-->					<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327399.htm?node=5955" target="_blank"><A class="f14 black02" href="index_article/content/2015-10/27/content_6326730.htm?node=5955" target=_blank>我国首次在藏区开展针对5省藏区的检察官培训</A> <A class="f14 black02" href="Procuratorate/node_77668.htm?node=53979" target=_blank>专题</A></a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327559.htm?node=5955" target="_blank"><A class="f14 black02" href="index_article/content/2015-10/28/content_6327519.htm?node=5955" target=_blank>养老金并轨:多地设10年过渡期</A> <A class="f14 black02" href="index_article/content/2015-10/27/content_6326866.htm?node=5955" target=_blank>养老金全国统筹方案</A></a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327456.htm?node=5955" target="_blank"><A class="f14 black02" href="zt/node_78430.htm" target=_blank>[热议]</A> <A class="f14 black02" href="index_article/content/2015-10/28/content_6327394.htm?node=5955" target=_blank>多家出租车企业称私家车接入专车扰乱秩序</A></a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327723.htm?node=5955" target="_blank">【争议】深圳下月起机动车违法45天未处理将被停驶</a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6326978.htm?node=5955" target="_blank">携程去哪儿合并涉垄断? 律师:应及时披露执法信息</a>					</li>					</ul>					<!--end 1602072-5955-1--></dd>
+								</dl>
+											<dl>
+									<dt><!--begin 1602073-5955-1-->					<ul>					<li>					<span class="dotgray">·</span><a class="f14 b black02" href="index_article/content/2015-10/28/content_6327823.htm?node=5955" target="_blank">广东肇庆市原常务副市长刘惠祥涉严重违纪被查</a>					</li>					</ul>					<!--end 1602073-5955-1--></dt>
+									<dd><!--begin 1602074-5955-1-->					<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327048.htm?node=5955" target="_blank">女教师遇害案续：文化部将严查网吧接纳未成年人</a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327490.htm?node=5955" target="_blank">湖南省委巡视组通报：临湘市官员吸毒情况比较严重</a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327571.htm?node=5955" target="_blank">山西打掉城乡黑恶犯罪集团150个 有人大代表涉案</a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6326983.htm?node=5955" target="_blank">【质疑】赴港团过关费成潜规则？ 最高时达数百元</a>					</li>					</ul>										<ul>					<li>					<span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/28/content_6327676.htm?node=5955" target="_blank">广州海关破4亿洋酒走私案 查获"路易老爷"5万余支</a>					</li>					</ul>					<!--end 1602074-5955-1--></dd>
+								</dl>
+					  </div>
+					</div>
+				</div>
+				<div class="p3-1">
+					<div style="border:1px #cedbe3 solid; width:183px; margin:2px 5px 0px 5px; float:left;">
+					<div style="width:173px; margin:4px 0px 0px 8px; float:left;"><a class="f14 b blue001" href="leader/node_34048.htm">高层动态</a><span>·</span><a class="f14 b blue001" href="Personnel_matters/node_78108.htm">政法人事</a></div>
+					<div style="width:173px; margin:2px 0px 2px 8px; float:left;">
+					  <!--begin 1602075-33028-1--><span class="dotblue">.</span><a class="f13 black02" href="leader/content/2015-10/27/content_6325846.htm?node=33028" target="_blank">习近平主持17次深改组会议</a><br><span class="dotblue">.</span><a class="f13 black02" href="leader/content/2015-10/26/content_6321898.htm?node=33028" target="_blank">孟建柱：深化执法安全合作</a><br><span class="dotblue">.</span><a class="f13 black02" href="leader/content/2015-10/23/content_6318538.htm?node=33028" target="_blank">孟建柱强调：创新社会治理</a><br><span class="dotblue">.</span><a class="f13 black02" href="leader/content/2015-10/09/content_6299039.htm?node=33028" target="_blank">孟建柱在京会见好警嫂夫妇</a><br><span class="dotblue">.</span><a class="f13 black02" href="leader/content/2015-10/15/content_6305739.htm?node=33028" target="_blank">吴爱英：加强理论实践研究</a><br><!--end 1602075-33028-1--></div>
+					</div>
+				</div>
+				<div class="p3-1">
+				<dt class="p3-1-dt">
+				  <!--begin 1602076-70816-1--><div style="margin:3px 0px;"><a href="zt/node_77249.htm?node=70816" target="_blank"><img width="180" height="33" src="index/images/attachement/jpg/site4/20151012/d43d7ecb6d101785a89b01.jpg" border="0"></a></div><!--end 1602076-70816-1--></dt>
+<dt class="p3-1-dt">
+				  <!--begin 1602077-70816-1--><div style="margin:3px 0px;"><a href="http://www.12377.cn" target="_blank"><img width="180" height="33" src="index/images/attachement/gif/site4/20150116/d43d7ecb6d101622d20601.gif" border="0"></a></div><!--end 1602077-70816-1--></dt>
+              
+                  <dl class="p3-1-dl"><dd class="p3-1-dd">
+                    <!--begin 1602078-70814-1--><a href="zfzz/node_78068.htm?node=70814" target="_blank"><img width="64" height="66" src="index/images/attachement/png/site4/20150918/d43d7ecb6d101766144827.png" border="0"></a><!--end 1602078-70814-1-->
+                    </dd>
+                    <dd class="p3-1-dd1">
+                      <!--begin 1602079-70814-1--><div style="line-height:20px; text-indent:15px;text-align:left;"><a class="f13 black02 kt" href="zfzz/node_78068.htm?node=70814" target="_blank"><STRONG><FONT face=楷体>特别报道：加强社会治安防控体系建设</FONT></STRONG></a><br></div><!--end 1602079-70814-1-->
+                    </dd>
+                  </dl>
+              </div>
+				<div class="p3-2">
+					<dl class="p3-2-dl">
+					<dt class="p3-2-dt">
+					  <!--begin 1602080-70816-1--><span class="dotblue">.</span><a class="f13 blue001" href="zt/node_70064.htm?" target="_blank">学习贯彻习近平重要讲话精神</a><br><span class="dotblue">.</span><a class="f13 blue001" href="rdlf/node_78778.htm?node=70816" target="_blank">聚焦刑法修正案（九）</a><br><span class="dotblue">.</span><a class="f13 blue001" href="zt/node_78197.htm?node=70816" target="_blank">中国梦-梦想进行时</a><br><span class="dotblue">.</span><a class="f13 blue001" href="zt/node_69936.htm?node=56249" target="_blank">推进诚信建设制度化</a><br><span class="dotblue">.</span><a class="f13 blue001" href="http://fxsczx.cntv.cn/" target="_blank">“发现双创之星”活动官网</a><br><!--end 1602080-70816-1-->
+					</dt>
+					</dl>
+					<div class="p3-2-1" style="padding:0px;">
+				  <dt class="p3-1-dt">
+				    <!--begin 1602081-70816-1--><div style="margin:3px  0px  5px 0px;"><a href="locality/node_76053.htm?node=70816" target="_blank"><img width="180" height="47" src="index/images/attachement/jpg/site4/20150507/d43d7ecb6d1016b56d7808.jpg" border="0"></a></div><!--end 1602081-70816-1--></div>
+					<div class="p3-2-pic"><a href="xwzx/content/2013-11/19/content_5689320.htm?node=53908"><img src="tongyong/images/20150211.jpg" border="0"></a></div>
+					<div class="p3-2-pic-1"><a href="xwzx/content/2013-11/19/content_5689320.htm?node=53908"><img src="tongyong/images/20150211-1.png" border="0" ></a></div>
+					<div class="p3-2-pic"><a class="f12 black02" href="xwzx/content/2013-11/19/content_5689320.htm?node=53908">法制网微信</a></div>
+					<div class="p3-2-pic-1"><a class="f12 black02" href="xwzx/content/2013-11/19/content_5689320.htm?node=53908">法制网微博</a></div>
+			  </div>
+			</div>
+			<div class="navbc">
+					<ul class="p4-le-ul">
+						<li class="p4-le-li f14 b black02">法制热词：</li>
+						<li class="p4-le-li2"><div id="scrollWrap1"> 
+	<ul id="scrollMsg"> 
+		<li>
+		  <!--begin 1602082-70768-1--><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/28/content_6327394.htm?node=5955" target="_blank">出租车改革</a></span><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/28/content_6327676.htm?node=5955" target="_blank">洋酒走私案</a></span><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/28/content_6327048.htm?node=5955" target="_blank">官员吸毒</a></span><!--end 1602082-70768-1-->
+		</li>
+		<li><!--begin 1602083-70768-1--><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/28/content_6327519.htm?node=5955" target="_blank">养老金并轨</a></span><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index/content/2015-10/28/content_6327016.htm?node=20908" target="_blank">刑(九)实施</a></span><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/27/content_6326864.htm?node=5955" target="_blank">微信传销</a></span><!--end 1602083-70768-1--></li>
+		<li><!--begin 1602084-70768-1--><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/27/content_6326257.htm?node=5955" target="_blank">抢劫银行案</a></span><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/27/content_6326254.htm?node=5955" target="_blank">最低工资上调</a></span><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/27/content_6326863.htm?node=5955" target="_blank">行业协会脱钩</a></span><!--end 1602084-70768-1--></li>
+		<li><!--begin 1602085-70768-1--><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/27/content_6326866.htm?node=5955" target="_blank">养老金统筹</a></span><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/27/content_6326854.htm?node=5955" target="_blank">法律援助</a></span><span style="padding:0px 5px; line-height:30px;"><a class="f13 black02" href="index_article/content/2015-10/27/content_6325860.htm?node=5954" target="_blank">危险驾驶罪</a></span><!--end 1602085-70768-1--></li>
+</ul>
+		  </div><script type="text/javascript">
+try{ 
+	var isStoped = false; 
+	var oScroll = document.getElementById("scrollWrap1"); 
+	with(oScroll){ 
+		noWrap = true; 
+	} 
+
+	oScroll.onmouseover = new Function('isStoped = true'); 
+	oScroll.onmouseout = new Function('isStoped = false'); 
+
+	var preTop = 0; 
+	var curTop = 0; 
+	var stopTime = 0; 
+	var oScrollMsg = document.getElementById("scrollMsg");
+
+	oScroll.appendChild(oScrollMsg.cloneNode(true)); 
+	init_srolltext();
+	
+}catch(e){} 
+
+function init_srolltext(){ 
+	oScroll.scrollTop = 0; 
+	setInterval('scrollUp()', 15); 
+}
+
+function scrollUp(){ 
+	if(isStoped)
+	return; 
+	curTop += 1; 
+	if(curTop == 27){ 
+		stopTime += 1; 
+		curTop -= 1; 
+		if(stopTime == 180){ 
+			curTop = 0; 
+			stopTime = 0; 
+		} 
+	}else{ 
+		preTop = oScroll.scrollTop; 
+		oScroll.scrollTop += 1; 
+		if(preTop == oScroll.scrollTop){ 
+			oScroll.scrollTop = 0; 
+			oScroll.scrollTop += 1; 
+		} 
+	} 
+}
+</script>
+		  				</li>
+					</ul>
+					<ul class="p4-ri-ul">
+						<li class="p4-ri-li"><a class="f14 b black02" href="node_20908.htm">滚动新闻：</a></li>
+						<li class="p4-ri-li2">
+								<div class="scrollleft1">
+									<ul>
+								  	<li>
+								  	  <!--begin 1602086-20908-1--><span class="dotgray">·</span><a class="f13 black02" href="index/content/2015-10/28/content_6327810.htm?node=20908" target="_blank">广东肇庆市原常务副市长刘惠祥接受组织调查</a><span class="dotgray">·</span><a class="f13 black02" href="index/content/2015-10/28/content_6327804.htm?node=20908" target="_blank">城管执法，如何走出“信任危机”</a><span class="dotgray">·</span><a class="f13 black02" href="index/content/2015-10/28/content_6327796.htm?node=20908" target="_blank">习主席访英、“十三五”与中国经济脊梁</a><span class="dotgray">·</span><a class="f13 black02" href="index/content/2015-10/28/content_6327761.htm?node=20908" target="_blank">有烟草企业因捐赠之名做广告 专家呼吁不让慈善活动成烟草营销地盘</a><span class="dotgray">·</span><a class="f13 black02" href="index/content/2015-10/28/content_6327741.htm?node=20908" target="_blank">平阳法院集中宣判9起“高速换卡”诈骗案 “最狠的”司机偷逃过路费17万元</a><span class="dotgray">·</span><a class="f13 black02" href="index/content/2015-10/28/content_6327693.htm?node=20908" target="_blank">【争议】深圳下月起机动车违法45天未处理将被停驶</a><!--end 1602086-20908-1-->
+								  	</li>
+									</ul>
+				  		  </div>
+						  
+			  			</li>
+					</ul>
+			</div>
+			<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".scrollleft").imgscroll({
+		speed: 40,    //图片滚动速度
+		amount: 0,    //图片滚动过渡时间
+		width: 1,     //图片滚动步数
+		dir: "left"   // "left" 或 "up" 向左或向上滚动
+	});
+});
+$(".scrollleft1").imgscroll({
+		speed: 40,    //图片滚动速度
+		amount: 0,    //图片滚动过渡时间
+		width: 1,     //图片滚动步数
+		dir: "left"   // "left" 或 "up" 向左或向上滚动
+	});
+$(".scrollleft2").imgscroll({
+		speed: 40,    //图片滚动速度
+		amount: 0,    //图片滚动过渡时间
+		width: 1,     //图片滚动步数
+		dir: "left"   // "left" 或 "up" 向左或向上滚动
+	});
+	$(".scrollleft3").imgscroll({
+		speed: 40,    //图片滚动速度
+		amount: 0,    //图片滚动过渡时间
+		width: 1,     //图片滚动步数
+		dir: "left"   // "left" 或 "up" 向左或向上滚动
+	});
+</script>
+			<div class="navbc-bo">
+				<ul class="p5-ul">
+					<li class="p5-li"><a class="f18 b white" href="News_Center/node_33868.htm">新闻中心</a></li>
+					<li class="p5-li2"><a class="f12 black03" href="zfzz/node_53408.htm">政法</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="rdlf/node_33988.htm">立法</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="Court/node_53928.htm">法院</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="Procuratorate/node_53948.htm">检察</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="Police/node_53648.htm">公安</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="The_administration_of_justice/node_54048.htm">司法</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="executive/node_32088.htm">政府</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="fxjy/node_70648.htm">法学</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="legal_case/node_33788.htm">案件</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="society/node_55528.htm">社会</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="international/node_34028.htm">环球</a></li>
+				</ul>
+			</div>
+			<div class="navbc">
+				<div class="p5-1">
+					<dl class="p5-1-lesecond">
+						<dt class="p5-1-le-dt"><a class="f14 b blue001" href="zt/node_55728.htm">专题新闻</a></dt>
+						<dd class="p5-1-le-dd">
+						  <!--begin 1602087-56249-1--><div style="float:left;padding:2px 0px 2px  10px;"><a href="IT/node_74429.htm?node=56249" target="_blank"><img width="78" height="60" src="index/images/attachement/jpg/site4/20150225/d43d7ecb6d101657468d01.jpg" border="0"></a></div><div style="float:left; width:105px;margin-left:5px; line-height:20px; text-align:left;"><a class="f12 black02" href="IT/node_74429.htm?node=56249" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;中国网络正版音乐促进联盟成立</a></div><!--end 1602087-56249-1-->
+						</dd>
+						<dd class="p5-1-le-dd-1">
+						  <!--begin 1602088-56249-1--><span>·</span><a class="f13 black02" href="zt/node_73388.htm?node=56249" target="_blank">讲好法治故事 传播法治声音</a><br><span>·</span><a class="f13 black02" href="zt/content/2015-10/22/content_6316609.htm?node=73108" target="_blank">居住证来啦准备好"领证"了吗</a><br><span>·</span><a class="f13 black02" href="zt/node_78430.htm?node=56249" target="_blank">"网络约租车"新规大家怎么看</a><br><!--end 1602088-56249-1-->
+						</dd>
+						
+						<dd class="p5-1-le-dd" style="text-align:left;">
+						  <!--begin 1602089-70815-1--><a class="f12 black02" href="The_administration_of_justice/node_78248.htm?node=70815" target="_blank">【聚焦】第二届中欧法律援助研讨会</a><!--end 1602089-70815-1-->
+						</dd>
+						<dd class="p5-1-le-dd" style="text-align:left; margin: 0px;">
+						  <!--begin 1602090-70815-1--><a class="f12 black02" href="zt/node_75173.htm?node=70815" target="_blank"><A class="f12 black02" title="" href="index/content/2015-05/23/content_6094681.htm?node=55112" target=_blank>【E周刊】</A><A class="f12 black02" title="" href="zt/node_78496.htm" target=_blank>居住证|反腐新规|反转新闻</A></a><!--end 1602090-70815-1-->
+						</dd>
+						<dd class="p5-1-le-dd">
+						  <!--begin 1602091-56249-1--><a href="The_administration_of_justice/node_77888.htm?node=56249" target="_blank"><img width="200" height="70" src="index/images/attachement/jpg/site4/20150910/d43d7ecb6d12175b81f505.jpg" border="0"></a><!--end 1602091-56249-1-->
+						</dd>
+					</dl>
+					<dl class="p5-1-lesecond" style=" margin-top:3px; margin-bottom:5px; border:0px;"><iframe charset="utf-8" name="I1" width=210 height=60 align=top frameborder=0 marginwidth=0 marginheight=0 scrolling=no src='tongyong/20150807_search.html'></iframe></dl>
+					<dl class="p5-1-lesecond">
+						<dt>
+							<ul>
+								<li class="p5-1-le-li "><a class="f14 b blue001" href="locality/node_37230.htm">地方新闻</a></li>
+								<li class="p5-1-le-li1"><a class="f12 black02" href="locality/node_36388.htm">运城</a></li>
+								<li class="p5-1-le-li1"><a class="f12 black02" href="City_window/node_43088.htm">清远</a></li>
+							</ul>
+						</dt>
+						<dd class="p5-1-le-dddf">
+						  <!--begin 1602092-37230-1--><div><a href="http://www.legaldaily.cn/locality/node_78628.htm?node=37230" target="_blank"><img width="200" height="65" src="index/images/attachement/jpg/site4/20150929/d43d7ecb6d041774744709.jpg" border="0"></a></div><!--end 1602092-37230-1-->
+						</dd>
+						<dd class="p5-1-le-dddf">
+						  <!--begin 1602093-37230-1--><span>·</span><a class="f13 black02" href="locality/content/2015-10/26/content_6321774.htm?node=75068" target="_blank">从严治党有“抓手”</a><br><span>·</span><a class="f13 black02" href="locality/content/2015-10/26/content_6324161.htm?node=37230" target="_blank">快递实名制，你准备好了吗？</a><br><span>·</span><a class="f13 black02" href="locality/content/2015-10/27/content_6324354.htm?node=37230" target="_blank">湖南三名中小学生弑师事件调查</a><br><span>·</span><a class="f13 black02" href="http://www.legaldaily.cn/locality/content/2015-10/27/content_6324607.htm?node=37230" target="_blank">砀山虐童案女童生母同居男被拘</a><br><!--end 1602093-37230-1-->
+						</dd>
+					</dl>
+			  </div>
+				<div class="p5-2">
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="zfzz/node_53408.htm">·[政法]</a></dt>
+						<dt class="p5-2-dt1">
+						  <!--begin 1602094-54672-1--><a class="f14 black02" href="zfzz/node_53408.htm?node=54672" target="_blank">孟建柱:打造一个更加紧密的地区安全命运共同体</a><!--end 1602094-54672-1-->
+						</dt>
+						<dd class="p5-2-dd">
+						  <!--begin 1602095-54672-1--><span class="dotgray">·</span><a class="f14 black02" href="zfzz/node_53408.htm?node=54672" target="_blank">司改试点迈出新步伐 8家法检试点经验成司改鲜活样本</a><!--end 1602095-54672-1-->
+						</dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="rdlf/node_33988.htm">·[立法]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602096-33048-1--><a class="f14 black02" href="rdlf/node_33988.htm?node=33048" target="_blank">房地产税开征：如何设计合理考验立法者智慧</a><!--end 1602096-33048-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602097-33048-1--><span class="dotgray">·</span><a class="f14 black02" href="rdlf/node_33988.htm?node=33048" target="_blank">京津冀立法协同项目急需先立着手启动 环保成优先项</a><!--end 1602097-33048-1-->
+						</span></dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="Court/node_53928.htm">·[法院]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602098-54671-1--><a class="f14 black02" href="Court/content/2015-10/27/content_6324966.htm?node=54671" target="_blank">最高法沈德咏会见巴西高等司法法院院长法尔康</a><!--end 1602098-54671-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602099-54671-1--><span class="dotgray">·</span><a class="f14 black02" href="Court/node_53928.htm?node=54671" target="_blank">最高法印发审理黑社会性质组织犯罪案件工作座谈会纪要</a><!--end 1602099-54671-1-->
+						</span></dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="Procuratorate/node_53948.htm">·[检察]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602100-54670-1--><a class="f14 black02" href="Procuratorate/node_53948.htm?node=54670" target="_blank">最高检贯彻中央第六次西藏工作座谈会重要举措</a><!--end 1602100-54670-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602101-54670-1--><span class="dotgray">·</span><a class="f14 black02" href="Court/node_53928.htm?node=54670" target="_blank">陕西省检察机关提起公益诉讼试点工作实施方案正式公布</a><!--end 1602101-54670-1-->
+						</span></dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="Police/node_53648.htm">·[公安]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602102-54668-1--><a class="f14 black02" href="Police/node_53648.htm?node=54668" target="_blank">新型毒品化身“奶茶、咖啡”海南临高缴毒六公斤</a><!--end 1602102-54668-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602103-54668-1--><span class="dotgray">·</span><a class="f14 black02" href="Police/node_53648.htm?node=54668" target="_blank">16年前震惊全国的银行劫案告破 劫匪已成为亿万富豪</a><!--end 1602103-54668-1-->
+						</span></dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="The_administration_of_justice/node_54048.htm">·[司法]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602104-54669-1--><a class="f14 black02" href="The_administration_of_justice/node_54048.htm?node=54669" target="_blank">赵大程:建设完备的法援工作体系 满足群众需求</a><!--end 1602104-54669-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602105-54669-1--><span class="dotgray">·</span><a class="f14 black02" href="The_administration_of_justice/node_54048.htm?node=54669" target="_blank">浙江杭州市出台全国首个全面规范法律援助工作地方标准</a><!--end 1602105-54669-1-->
+						</span></dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="executive/node_32088.htm">·[政府]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602106-33108-1--><a class="f14 black02" href="executive/node_32088.htm?node=33108" target="_blank">【图解】居住证来啦！你准备好“领证”了吗？</a><!--end 1602106-33108-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602107-33108-1--><span class="dotgray">·</span><a class="f14 black02" href="executive/content/2015-10/28/content_6327766.htm?node=33108" target="_blank"><a href="executive/content/2015-10/28/content_6327765.htm" class="bt_link" target="_blank"><a href="executive/content/2015-10/28/content_6327045.htm" class="f14 black02" target="_blank">环评法实施12年刚性难体现</a> <a href="executive/content/2015-10/28/content_6327232.htm" class="f14 black02" target="_blank">环保部拟推责任追究办法</a></a></a><!--end 1602107-33108-1-->
+						</span></dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="fxjy/node_70648.htm">·[法学]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602108-70948-1--><a class="f14 black02" href="fxjy/content/2015-10/12/content_6301333.htm?node=70948" target="_blank">法学专家评南京虐童案：孩子是属于国家的</a><!--end 1602108-70948-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602109-70948-1--><span class="dotgray">·</span><a class="f14 black02" href="fxjy/node_70648.htm?node=70948" target="_blank">刑法修正案(九)下月实施 医闹、替考最高获刑7年</a><!--end 1602109-70948-1-->
+						</span></dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="legal_case/node_33788.htm">·[案件]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602110-33128-1--><a class="f14 black02" href="legal_case/node_33788.htm?node=33128" target="_blank">江苏宿迁"与女生喝酒"男子非教师 涉猥亵被刑拘</a><!--end 1602110-33128-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602111-33128-1--><span class="dotgray">·</span><a class="f14 black02" href="legal_case/content/2015-10/27/content_6325429.htm?node=33128" target="_blank"><A class="f14 black02" href="legal_case/node_33788.htm" target=_blank>苹果店上演"狸猫换太子"&nbsp;</A><A class="f14 black02" href="legal_case/node_33788.htm" target=_blank>哈尔滨疑发生情杀案一对父女亡</A></a><!--end 1602111-33128-1-->
+						</span></dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="society/node_55528.htm">·[社会]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602112-33148-1--><a class="f14 black02" href="society/node_55528.htm?node=33148" target="_blank">男子花百万为“小三”购房 妻子索房款获支持</a><!--end 1602112-33148-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602113-33148-1--><span class="dotgray">·</span><a class="f14 black02" href="society/content/2015-10/27/content_6325039.htm?node=33148" target="_blank"><A class="f14 black02" href="society/node_55528.htm" target=_blank>“最大份炒饭”因浪费食物无效</A> <A class="f14 black02" href="society/node_55528.htm" target=_blank>“奇葩式”创纪录何时休?</A></a><!--end 1602113-33148-1-->
+						</span></dd>
+					</dl>
+					<dl class="p5-2-dl">
+						<dt class="p5-2-dt"><a class="f14 b black02" href="international/node_34028.htm">·[环球]</a></dt>
+						<dt class="p5-2-dt1"><span class="div280">
+						  <!--begin 1602114-33149-1--><a class="f14 black02" href="international/node_34028.htm?node=33149" target="_blank">全球奇葩离婚法律：周日对妻子皱眉或面临离婚</a><!--end 1602114-33149-1-->
+						</span></dt>
+						<dd class="p5-2-dd"><span class="div380">
+						  <!--begin 1602115-33149-1--><span class="dotgray">·</span><a class="f14 black02" href="international/content/2015-10/27/content_6324692.htm?node=33149" target="_blank"><A class="f14 black02" href="international/node_34028.htm" target=_blank>奥巴马政府气候变化政策面临诉讼</A>&nbsp; <A class="f14 black02" href="international/node_34028.htm" target=_blank>苹果因WiFi助手遭索赔</A></a><!--end 1602115-33149-1-->
+						</span></dd>
+					</dl>
+			  </div>
+				<div class="p5-3">
+					<dl class="p5-3-dl">
+						<dt class="p5-3-dt-1"><a class="f16 b blue001" href="direct_seeding/node_76936.htm">访谈</a><a class="f16 b blue001" href="direct_seeding/node_76936.htm">·直播</a></dt>
+						<dt class="p5-3-dt1-1"><a class="f12 black02" href="video/node_44129.htm">法治"短评快"</a></dt>
+						<dt class="p5-3-dt2">
+                        <!--begin 1602116-33168-1--><a class="f16 b black02" href="video/content/2015-10/23/content_6319234.htm?node=44129" target="_blank">三少年弑师再曝留守之殇</a><!--end 1602116-33168-1-->
+						</dt>
+						<dd class="p5-3-dd1">
+							<!--begin 1602117-33168-1--><div class="img-172" style="margin:5px; float:left "><a href="video/content/2015-10/13/content_6303502.htm?node=44129" target="_blank"><img width="170" height="112" src="index/images/attachement/jpg/site4/20151021/4437e626702417917e5a01.jpg" border="0"></a><cite><a class="f13 white" href="video/content/2015-10/13/content_6303502.htm?node=44129" target="_blank">芜湖餐馆爆炸再敲警钟</a></cite></div><div class="img-172" style="margin:5px; float:left "><a href="video/content/2015-10/09/content_6298404.htm?node=44129" target="_blank"><img width="170" height="112" src="index/images/attachement/jpg/site4/20151021/4437e626702417917f6602.jpg" border="0"></a><cite><a class="f13 white" href="video/content/2015-10/09/content_6298404.htm?node=44129" target="_blank">"天价大虾"扇了谁的脸?</a></cite></div><!--end 1602117-33168-1-->
+						</dd>
+						<dd class="p5-3-dd1sp">
+						  <!--begin 1602118-33168-1--><a class="f14 black02" href="video/content/2015-10/21/content_6314442.htm?node=44129" target="_blank">·实名制下仍补票有悖法治精神</a><br><a class="f14 black02" href="video/content/2015-10/16/content_6309233.htm?node=44129" target="_blank">·女学生被逼跪地吃垃圾 校园暴力何时休</a><br><a class="f14 black02" href="video/content/2015-09/29/content_6292316.htm?node=44129" target="_blank">·“失联”冷冻胚胎存废让医院陷两难</a><br><a class="f14 black02" href="video/content/2015-09/18/content_6275322.htm?node=44129" target="_blank">·动物保护志愿者高速路拦狗的道德与法律</a><br><!--end 1602118-33168-1-->
+						</dd>
+					</dl>
+					<dl class="p5-3-dlsecond">
+						<dt class="p5-3-dt3"><a class="f16 b blue001" href="video/node_44108.htm">法制影视在线</a></dt>
+						<dt class="p5-3-dt4">
+							<ul class="p5-3-ul">
+							  <li class="p5-3-li"><a class="f12 black02" href="video/node_44111.htm">今日快"曝"</a></li>
+							  <li class="p5-3-li f12 black02">/</li>
+							  <li class="p5-3-li"><a class="f12 black02" href="video/node_25209.htm">升闻天下</a></li>
+							  <li class="p5-3-li f12 black02">/</li>
+							  <li class="p5-3-li"><a class="f12 black02" href="video/node_44128.htm">一周看点</a></li>
+							</ul>
+						</dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602119-32751-1--><a class="f16 b black02" href="video/content/2015-10/27/content_6325748.htm?node=32751" target="_blank">湖南三少年劫杀女教师案启动追责 两局长被查</a><!--end 1602119-32751-1-->
+						</dt>
+						<dd class="p5-3-dd2">
+						  <!--begin 1602120-32752-1--><div class="img-140" style="margin:5px;"><a href="video/content/2015-10/23/content_6320785.htm?node=44128" target="_blank"><img width="138" height="94" src="index/images/attachement/jpg/site4/20151010/4437e62670241783351a02.jpg" border="0"></a><cite><a class="f13 white" href="video/content/2015-10/23/content_6320785.htm?node=44128" target="_blank">一周视频新闻回顾</a></cite></div><!--end 1602120-32752-1-->
+						</dd>
+						<dd class="p5-3-dd3">
+						  <!--begin 1602121-44111-1--><a class="f14 black02" href="video/content/2015-10/27/content_6325636.htm?node=44111" target="_blank">·湖南一运钞车坠桥3人死亡</a><br><a class="f14 black02" href="video/content/2015-10/27/content_6325678.htm?node=44111" target="_blank">·女教师夜跑被害案嫌犯落网</a><br><a class="f14 black02" href="video/content/2015-10/26/content_6323458.htm?node=44111" target="_blank">·下月起替考作弊或被判刑</a><br><a class="f14 black02" href="video/content/2015-10/23/content_6319264.htm?node=44111" target="_blank">·小伙高速上砸车救下一家3口</a><br><!--end 1602121-44111-1-->
+						</dd>
+						<dd class="p5-3-dd1sp">
+							<!--begin 1602122-34128-1--><a class="f14 black02" href="video/content/2015-10/28/content_6327755.htm?node=34128" target="_blank">·中央纪委通报5起党风廉政建设责任追究典型案件</a><br><a class="f14 black02" href="video/content/2015-10/28/content_6327795.htm?node=34128" target="_blank">·扣满12分发生交通事故 法院支持保险公司不赔偿</a><br><a class="f14 black02" href="video/node_44110.htm?node=34128" target="_blank">·扬州“最大份炒饭”吉尼斯世界纪录无效引反思</a><br><a class="f14 black02" href="video/content/2015-10/27/content_6325219.htm?node=34128" target="_blank">·消费者反映“流量不清零”后消耗更快 移动回应</a><br><!--end 1602122-34128-1-->
+						</dd>
+					</dl>
+			  </div>
+			</div>
+			<div class="navbcad">
+				<div style="float:left; width:322px; height:75px;"><!--begin 1602123-74329-1--><a href="Social_management/node_76688.htm?node=74329" target="_blank"><img width="320" height="75" src="index/images/attachement/jpg/site4/20150723/d43d7ecb6d10171ac76d01.jpg" border="0"></a><!--end 1602123-74329-1--></div>
+				<div style="float:left; width:322px; height:75px; margin:0px 17px;">
+				  <!--begin 1602124-74329-1--><a href="zt/node_69648.htm?node=74329" target="_blank"><img width="320" height="75" src="index/images/attachement/gif/site4/20150120/d43d7ecb6d1016284b7606.gif" border="0"></a><!--end 1602124-74329-1-->
+				</div>
+				<div style="float:left; width:322px; height:75px;"><!--begin 1602125-74329-1--><a href="http://dianshiju.cntv.cn/special/kzsl70/index.shtml" target="_blank"><img width="320" height="75" src="index/images/attachement/jpg/site4/20150601/d43d7ecb6d1016d6144707.jpg" border="0"></a><!--end 1602125-74329-1--></div>
+			</div>
+			<div class="navbc-bo">
+				<ul class="p5-ul">
+					<li class="p5-li-yu"><a class="f18 b white" href="News_Center/node_33868.htm">舆情服务</a></li>
+					<li class="p5-li2"><a class="f12 black03" href="http://opinion.legaldaily.com.cn/">舆情监测</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="The_analysis_of_public_opinion/node_70870.htm">舆情报告</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="The_analysis_of_public_opinion/node_42589.htm">调查</a></li>
+				</ul>
+			</div>
+			<div class="navbc">
+				<div class="p5-1">
+					<dl class="p5-1-le">
+						<dt class="p5-1-le-dt"><a class="f14 b blue001" href="The_analysis_of_public_opinion/node_42589.htm">调查</a></dt>
+						<dd class="p5-1-le-dd"><iframe charset="utf-8" name="I1" width=196 height=385 align=top frameborder=0 marginwidth=0 marginheight=0 scrolling=no src='tongyong/survey/20150812.html' target="_blank"></iframe></dd>
+					</dl>
+				</div>
+				<div class="p5-2">
+					<dl class="p5-3-dl">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="http://opinion.legaldaily.com.cn/">舆情监测</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="http://opinion.legaldaily.com.cn/">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602126-41188-1--><a class="f16 b black02" href="index/content/2015-10/18/content_6309514.htm?node=20908" target="_blank">晋中市政法综治干部提升舆情处置能力培训班</a><!--end 1602126-41188-1-->
+						</dt>
+						<dd class="p5-3-dd2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><!--begin 1602127-41189-1--><div class="img-140-2" style="margin:5px;"><a href="The_analysis_of_public_opinion/content/2014-07/01/content_5641500.htm?node=42599" target="_blank"><img width="138" height="94" src="index/images/attachement/gif/site4/20140718/d43d7ecb6dce1532ce3d0b.gif" border="0"></a><cite><a class="f13 white" href="The_analysis_of_public_opinion/content/2014-07/01/content_5641500.htm?node=42599" target="_blank">010-84772882-8058</a></cite></div><!--end 1602127-41189-1--></td>
+  </tr>
+
+</table>
+
+						  
+						</dd>
+						<dd class="p5-3-dd3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><!--begin 1602128-41190-1--><span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-10/19/content_6311435.htm?node=5955" target="_blank">晋中市政法综治干部提升舆情处置能力培训班参观法制日报</a><br><span class="dotgray">·</span><a class="f14 black02" href="The_analysis_of_public_opinion/content/2015-09/02/content_6253036.htm?node=41190" target="_blank">舆论聚焦刑九等多项草案审议</a><br><span class="dotgray">·</span><a class="f14 black02" href="The_analysis_of_public_opinion/content/2015-08/11/content_6214074.htm?node=41190" target="_blank">谨防舆情处置烂尾再引发舆情</a><br><!--end 1602128-41190-1--></td>
+  </tr>
+  <tr>
+    <td><!--begin 1602129-41190-1--><span class="dotgray">·</span><a class="f14 b red" href="The_analysis_of_public_opinion/content/2015-08/10/content_6212329.htm?node=41190" target="_blank">《政法舆情》2015年第39期</a><br><!--end 1602129-41190-1--></td>
+  </tr>
+</table>
+</dd>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602130-36448-1--><span class="dotgray">·</span><a class="f14 black02" href="The_analysis_of_public_opinion/content/2015-10/27/content_6325158.htm?node=36448" target="_blank">慎防金融风险引发群体性维权事件</a><br><span class="dotgray">·</span><a class="f14 black02" href="The_analysis_of_public_opinion/content/2015-10/27/content_6325155.htm?node=36448" target="_blank">三起涉案财物扣押纠纷引发关注</a><br><span class="dotgray">·</span><a class="f14 black02" href="The_analysis_of_public_opinion/content/2015-10/27/content_6325154.htm?node=36448" target="_blank">湖南林大吉失踪案引关注 警方办案程序遭疑</a><br><span class="dotgray">·</span><a class="f14 black02" href="The_analysis_of_public_opinion/content/2015-10/27/content_6325156.htm?node=36448" target="_blank">天津北辰发生爆炸 警惕“8•12”爆炸的舆情辐射效应</a><br><!--end 1602130-36448-1-->
+						</dd>
+					</dl>
+					<dl class="p5-3-dl">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="190" valign="top"><iframe charset="utf-8" name="I1" width=190 height=120 align=top frameborder=0 marginwidth=0 marginheight=0 scrolling=no src='http://yuqing.legaldaily.com.cn/opinion/index.php/m_login' target="_blank"></iframe></td>
+              <td width="194" valign="top" style="padding-left:10px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style="padding-bottom:5px;"><a href="The_analysis_of_public_opinion/node_70869.htm"><img src="tongyong/images/2014-fzwsyyq-003.png" width="87" height="21" border="0" ></a></td>
+                </tr>
+                <tr>
+                  <td>|
+                        <!--begin 1602131-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862437.htm?node=70869" target="_blank">付&nbsp;&nbsp;萌</a><!--end 1602131-70869-1-->
+                    |
+                    <!--begin 1602132-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862429.htm?node=70869" target="_blank">钟杏梅</a><!--end 1602132-70869-1-->
+                    |
+                    <!--begin 1602133-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862425.htm?node=70869" target="_blank">王&nbsp;&nbsp;灿</a><!--end 1602133-70869-1-->
+                    |</td>
+                </tr>
+                <tr>
+                  <td>|
+                        <!--begin 1602134-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862428.htm?node=70869" target="_blank">车海星</a><!--end 1602134-70869-1-->
+                    |
+                    <!--begin 1602135-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862420.htm?node=70869" target="_blank">李思明</a><!--end 1602135-70869-1-->
+                     |
+                    <!--begin 1602136-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862422.htm?node=70869" target="_blank">车智良</a><!--end 1602136-70869-1-->
+                    |</td>
+                </tr>
+                <tr>
+                  <td>|
+                        <!--begin 1602137-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862414.htm?node=70869" target="_blank">李佳慧</a><!--end 1602137-70869-1-->
+                  |
+                    <!--begin 1602138-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862418.htm?node=70869" target="_blank">焦晓丽</a><!--end 1602138-70869-1-->                   |
+                    <!--begin 1602139-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862410.htm?node=70869" target="_blank">王&nbsp;&nbsp;媛</a><!--end 1602139-70869-1-->
+                    |</td>
+                </tr>
+                <tr>
+                  <td>|
+                    <!--begin 1602140-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862416.htm?node=70869" target="_blank">彭晓月</a><!--end 1602140-70869-1-->                   |
+                    <!--begin 1602141-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862427.htm?node=70869" target="_blank">李&nbsp; 倩</a><!--end 1602141-70869-1-->                    |
+                    <!--begin 1602142-70869-1--><a class="f12 black02" href="The_analysis_of_public_opinion/content/2014-11/27/content_5862431.htm?node=70869" target="_blank">王&nbsp; 佳</a><!--end 1602142-70869-1-->
+                    |</td>
+                </tr>
+              </table></td>
+            </tr>
+          </table>
+        </dl>
+			  </div>
+				<div class="p5-2">
+					<dl class="p5-3-dl">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="The_analysis_of_public_opinion/node_70870.htm">舆情报告</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="The_analysis_of_public_opinion/node_70870.htm">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602143-70870-1--><a class="f16 b black02" href="http://opinion.legaldaily.com.cn/content/2015-10/08/content_6296440.htm?node=42598" target="_blank">2015年三季度政法机关舆情应对能力摘星榜</a><!--end 1602143-70870-1-->
+						</dt>
+						<dd class="p5-3-dd2">
+						  <!--begin 1602144-70870-1--><div class="img-140-2" style="margin:5px;"><a href="http://opinion.legaldaily.com.cn/content/2015-10/08/content_6296440.htm?node=42598" target="_blank"><img width="138" height="94" src="index/images/attachement/gif/site4/20151008/4437e653fba417802fc24a.gif" border="0"></a><cite><a class="f13 white" href="http://opinion.legaldaily.com.cn/content/2015-10/08/content_6296440.htm?node=42598" target="_blank">三季度应对能力摘星榜</a></cite></div><!--end 1602144-70870-1-->
+						</dd>
+						<dd class="p5-3-dd3">
+						  <!--begin 1602145-70870-1--><span class="dotgray">·</span><a class="f14 black02" href="http://opinion.legaldaily.com.cn/content/2015-10/08/content_6296440.htm?node=42598" target="_blank">本季度，法制网舆情监测中心根据拟合出的新型舆情处置效果评估模型，筛选出12个与政法机关相关的热点舆情案例...</a><br><!--end 1602145-70870-1-->
+						</dd>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602146-70870-1--><span class="graydot">·</span><a class="f14 black02" href="The_analysis_of_public_opinion/content/2014-12/31/content_5967267.htm?node=70870" target="_blank">2014年最受关注的法律法规</a><br><span class="graydot">·</span><a class="f14 black02" href="The_analysis_of_public_opinion/content/2015-01/16/content_5955528.htm?node=70870" target="_blank">2014涉法网络舆情人物研究报告</a><br><span class="graydot">·</span><a class="f14 black02" href="http://opinion.legaldaily.com.cn/content/2015-01/20/content_5935543.htm?node=42598" target="_blank">2014年度政法机关舆情处置能力榜</a><br><span class="graydot">·</span><a class="f14 black02" href="http://www.legaldaily.cn/xwzx/content/2015-04/13/content_6041982.htm?node=75582" target="_blank">【政法新媒体建设】第32期政法微信影响力周榜</a><br><!--end 1602146-70870-1-->
+						</dd>
+					</dl>
+					<dl class="p5-3-dl-pic">
+						<div class="yq369">
+				<form method="post" action="http://119.255.22.166/zyFront/login">
+
+			<ol>
+				<li class="yq180">
+					<dl style="float:left;">
+						<dd>
+							<ol>
+								<li class="yq50 f12 black02">用户名</li>
+								<li class="yq120"><input  class="input-block-level" type="text" value="" name="username" placeholder="请输入用户名" style="width:95px; height:20px; line-height:20px; margin:2px; border:1px #c8c9ca solid;"></li>
+							</ol>
+						</dd>
+						<dd style="float:left;">
+							<ol>
+								<li class="yq50 f12 black02">密码</li>
+								<li class="yq120"><input  class="input-block-level" type="password" value="" name="password" placeholder="请输入密码" style="width:95px; height:20px; line-height:20px; float:left; margin:2px; border:1px #c8c9ca solid;"></li>
+							</ol>
+						</dd>
+						<dd>
+							<ol>
+								<li class="yq85 f12 b black02"><input name="submit" type="submit" / style="width:65px; height:20px; border:1px #c8c9ca solid; line-height:20px; background-color:#FFFFFF; color:#666666;" value="登录" ></li>
+								<li class="yq85 f12 b black02"><a href="The_analysis_of_public_opinion/content/2014-07/01/content_5641500.htm?node=42599"><input type="button" name="试用" value="试用" style="width:65px; height:20px; border:1px #c8c9ca solid; line-height:20px; background-color:#FFFFFF; color:#666666;"></a></li>
+							</ol>
+						</dd>
+					</dl>
+				</li>
+				<li class="yq1801">
+					<dl style="float:left;">
+						<dd style="float:left;">
+							<ol>
+								<li class="yq50 f12 black02">验证码</li>
+								<li class="yq60"><input class="verifycode" type="text" placeholder="请输入验证码" name="captcha" style=" width:70px; height:20px; line-height:20px;border:1px #c8c9ca solid;background-color:#FFFFFF; "></li>
+								<li class="yq601"><img class="verifyimage" src="http://119.255.22.166/zyFront/images/captcha.jpg" style="width:50px; height:20px; line-height:20px;"></li>
+							</ol>
+						</dd>
+						<dd style="float:left;">
+							<ol>
+								<li class="yq851 center">【<a class="f12 b black02"  href="The_analysis_of_public_opinion/content/2014-07/01/content_5641500.htm?node=42599">舆情服务</a>】</li>
+								<li class="yq851 center">【<a class="f12 b black02"  href="http://opinion.legaldaily.com.cn/content/2014-11/03/content_5829923.htm?node=42602">功能介绍</a>】</li>
+							</ol>
+						</dd>
+						<dd>
+							<ol>
+								<li class="yq851  center">【<a class="f12 b black02" href="http://opinion.legaldaily.com.cn/content/2014-11/03/content_5829984.htm?node=42602">舆情培训</a>】</li>
+								<li class="yq851  center">【<a class="f12 b black02"  href="http://opinion.legaldaily.com.cn/content/2014-11/03/content_5829993.htm?node=42602">联系方式</a>】</li>
+							</ol>
+						</dd>
+					</dl>
+				</li>
+			</ol>
+			</form>
+		</div>
+					</dl>
+			  </div>
+			</div>
+			<div class="navbc-bo">
+				<ul class="p5-ul">
+					<li class="p5-li-law"><a class="f18 b white" href="http://law365.legaldaily.com.cn/ecard/">法律资讯</a></li>
+					<li class="p5-li2"><a class="f12 black03" href="http://law365.legaldaily.com.cn/ecard/">法律问答</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="report_supervise/node_31908.htm">举报监督</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="Lawyer/node_34468.htm">律师</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="Notarization/node_34308.htm">公证</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="integrity-observe/node_42748.htm">诚信观察</a></li>
+				</ul>
+			</div>
+			<div class="navbc">
+				<div class="p5-1">
+					<dl class="p5-1-le">
+						<dt class="p5-1-le-dt"><a class="f14 b blue001" href="http://epaper.legaldaily.com.cn/public/dianzhibao-2011.php">数字报</a></dt>
+						<dd class="p5-1-le-dd">
+						  <iframe src='http://epaper.legaldaily.com.cn/public/dianzhibao-2011.php' name="iframeid" width="196" marginwidth="0" height="320" marginheight="0" align="top" scrolling="No" frameborder="0"  charset="utf-8" target="_blank" id="iframeid"></iframe>
+						</dd>
+					</dl>
+					<dl class="p5-1-le">
+						<dt class="p5-1-le-dt"><a class="f14 b blue001" href="Arbitration/node_77089.htm">仲裁</a>						</dt>
+						<dd class="p5-1-le-dd">
+						  <!--begin 1602147-77089-1--><div style="text-align:center;"><a class="f13 b black02" href="Arbitration/content/2015-09/03/content_6254481.htm?node=77089" target="_blank">仲裁法实施20年的理论与实践</a></div><!--end 1602147-77089-1-->
+						</dd>
+						<dd class="p5-1-le-dd-1">
+						  <!--begin 1602148-77089-1--><span class="dotgray">·</span><a class="f13 black02" href="Arbitration/content/2015-09/01/content_6254480.htm?node=77089" target="_blank">深圳仲裁委20年光辉历程回眸</a><br><span class="dotgray">·</span><a class="f13 black02" href="Arbitration/content/2015-08/29/content_6254479.htm?node=77089" target="_blank">沿线涉外争议解决应首选仲裁</a><br><span class="dotgray">·</span><a class="f13 black02" href="Arbitration/content/2015-06/25/content_6150666.htm?node=77089" target="_blank">中国仲裁业学术评价体系将出炉</a><br><span class="dotgray">·</span><a class="f13 black02" href="Arbitration/content/2015-06/13/content_6150665.htm?node=77089" target="_blank">去年全国仲裁受案量超11万件</a><br><span class="dotgray">·</span><a class="f13 black02" href="Arbitration/content/2015-06/13/content_6150664.htm?node=77089" target="_blank">仲裁机构两化试点受案量激增</a><br><!--end 1602148-77089-1-->
+						</dd>
+						<dd class="p5-1-le-dd-1"><a href="http://www.arbitrationweek.org/"><img src="index/tplimg/26689.files/2015_zgzcz.jpg" border="0" ></a></dd>
+
+					</dl>
+			  </div>
+				<div class="p5-2">
+					<dl class="p5-3-dl">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="http://law365.legaldaily.com.cn/ecard/">法律问答</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="http://law365.legaldaily.com.cn/ecard/">更多</a></dt>
+						<dd class="p5-3-dd4">
+							<iframe src='http://law365.legaldaily.com.cn/ecard/iframe/fzw_2011/flfw2.php' name="I1" width="357" marginwidth="0" height="278" marginheight="0" align="top" scrolling="No" frameborder="0" id="iframeid1" charset="utf-8"></iframe>
+						</dd>
+					</dl>
+					<dl class="p5-3-dl">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="Lawyer/node_75868.htm">律师</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="Lawyer/node_75868.htm">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602149-32988-1--><a class="f16 b black02" href="Lawyer/content/2015-10/28/content_6327017.htm?node=32988" target="_blank">赵大程:建设完备的法援工作体系 满足法援需求</a><!--end 1602149-32988-1-->
+						</dt>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602150-32988-1--><span class="dotgray">·</span><a class="f14 black02" href="Lawyer/content/2015-10/28/content_6327002.htm?node=32988" target="_blank">律师被要求快递单上填身份证号 起诉邮政获立案</a><br><span class="dotgray">·</span><a class="f14 black02" href="Lawyer/content/2015-10/19/content_6309852.htm?node=32988" target="_blank">相声演员姜昆在美国被起诉 律师：未参与活动</a><br><!--end 1602150-32988-1-->
+						</dd>
+						<dd class="p5-3-dd1-lspic">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							  <tr>
+								<td style="text-align:left; padding-left:6px;"><img src="index/tplimg/26689.files/20150916/2015_lspd_119.png" width="353" height="50" ></td>
+							  </tr>
+							</table>
+
+						</dd>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602151-32988-1--><div class="img-172" style="margin:5px; float:left "><a href="Lawyer/content/2015-10/12/content_6301041.htm?node=32988" target="_blank"><img width="170" height="117" src="index/images/attachement/jpg/site4/20151012/24050f444f95178562a401.JPG" border="0"></a><cite><a class="f13 white" href="Lawyer/content/2015-10/12/content_6301041.htm?node=32988" target="_blank">21亿元律师函太离奇</a></cite></div><div class="img-172" style="margin:5px; float:left "><a href="Lawyer/content/2015-09/14/content_6266271.htm?node=32988" target="_blank"><img width="170" height="117" src="index/images/attachement/jpg/site4/20150914/d43d7ed43e15176069b602.jpg" border="0"></a><cite><a class="f13 white" href="Lawyer/content/2015-09/14/content_6266271.htm?node=32988" target="_blank">做有智慧、肯担当的好律师</a></cite></div><!--end 1602151-32988-1-->
+						</dd>
+					</dl>
+				</div>
+				<div class="p5-2">
+					<dl class="p5-3-dl">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="integrity-observe/node_42748.htm">诚信观察</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="integrity-observe/node_42748.htm">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602152-70769-1--><a class="f16 b black02" href="index_article/content/2015-09/22/content_6279655.htm?node=5955" target="_blank">最高法明确违法审判必须追责7情形</a><!--end 1602152-70769-1-->
+						</dt>
+						<dd class="p5-3-dd2">
+						  <!--begin 1602153-77097-1--><div class="img-140" style="margin:5px;"><a href="integrity-observe/content/2015-09/22/content_6280107.htm?node=77097" target="_blank"><img width="138" height="94" src="index/images/attachement/jpg/site4/20150922/7427eae7972d176b07f805.jpg" border="0"></a><cite><a class="f13 white" href="integrity-observe/content/2015-09/22/content_6280107.htm?node=77097" target="_blank">记者暗访洗涤业黑幕</a></cite></div><!--end 1602153-77097-1-->
+						</dd>
+						<dd class="p5-3-dd3">
+						  <!--begin 1602154-70769-1--><span class="dotgray">·</span><a class="f14 black02" href="integrity-observe/content/2015-09/22/content_6280250.htm?node=70769" target="_blank">让暴力拆迁成不敢碰触高压线</a><br><span class="dotgray">·</span><a class="f14 black02" href="integrity-observe/content/2015-09/22/content_6280214.htm?node=70769" target="_blank">所有刑事案讯问过程录音录像</a><br><span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-09/22/content_6279655.htm?node=5955" target="_blank">食品药品安全法治会议今召开</a><br><span class="dotgray">·</span><a class="f14 black02" href="integrity-observe/content/2015-09/22/content_6280235.htm?node=70769" target="_blank">变相提高票价的景区将被查</a><br><!--end 1602154-70769-1-->
+						</dd>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602155-70769-1--><span class="dotgray">·</span><a class="f14 black02" href="integrity-observe/content/2015-09/22/content_6280169.htm?node=70769" target="_blank">河北交警被无牌车拖行致骨折 暴力抗法为何频发</a><br><span class="dotgray">·</span><a class="f14 black02" href="index_article/content/2015-09/21/content_6279471.htm?node=5955" target="_blank">淮南警方：大学生扶老人事件互有接触 学生负主责</a><br><span class="dotgray">·</span><a class="f14 black02" href="integrity-observe/content/2015-09/22/content_6280060.htm?node=70769" target="_blank">连云港：征地现场多城管围殴村民 致1名村民重伤</a><br><span class="dotgray">·</span><a class="f14 black02" href="integrity-observe/content/2015-09/22/content_6280146.htm?node=70769" target="_blank">河南民警与女子争吵掏枪被免职 曾称打死你白打</a><br><!--end 1602155-70769-1-->
+						</dd>
+					</dl>
+					<dl class="p5-3-dlfirth">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="Notarization/node_34308.htm">公证</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="Notarization/node_34308.htm">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602156-70770-1--><a class="f16 b black02" href="Notarization/content/2015-10/27/content_6324424.htm?node=70770" target="_blank">农村土地经营权流转公证国际研讨会在京举行</a><!--end 1602156-70770-1-->
+						</dt>
+						<dd class="p5-3-dd1gz">
+						  <!--begin 1602157-70770-1--><div style="float;left; margin:10px 0px; line-height:26px;"><span class="dotgray">·</span><a class="f14 black02" href="Notarization/content/2015-10/27/content_6324356.htm?node=70770" target="_blank">保全公证帮助公民合法维护权益</a><br><span class="dotgray">·</span><a class="f14 black02" href="Notarization/content/2015-10/26/content_6321773.htm?node=70770" target="_blank">八大公证处首推“支付宝上办公证”</a><br><span class="dotgray">·</span><a class="f14 black02" href="Notarization/content/2015-10/23/content_6318507.htm?node=70770" target="_blank">济南：手持继承公证书房产为何难过户</a><br><span class="dotgray">·</span><a class="f14 black02" href="Notarization/content/2015-10/23/content_6318489.htm?node=70770" target="_blank">上海：公证员审查基本不靠“刷脸”仪器</a><br></div><!--end 1602157-70770-1-->
+						</dd>
+						<hr class="line1">
+						<dd class="p5-3-dd1gz">
+						<!--begin 1602158-70770-1--><div style="float;left; line-height:26px;"><span class="dotgray">·</span><a class="f14 black02" href="Notarization/content/2015-10/23/content_6318480.htm?node=70770" target="_blank">溧水大轰炸幸存者口述证言进行法律公证</a><br><span class="dotgray">·</span><a class="f14 black02" href="Notarization/content/2015-10/23/content_6318525.htm?node=70770" target="_blank">黄昏恋婚前应财产公证 精神赡养应出细则</a><br><span class="dotgray">·</span><a class="f14 black02" href="Notarization/content/2015-10/23/content_6318514.htm?node=70770" target="_blank">首个老年人公益法律服务中心在成都成立</a><br><span class="dotgray">·</span><a class="f14 black02" href="Notarization/content/2015-10/22/content_6315762.htm?node=70770" target="_blank">领奖先交公证费骗局被成都退休老公安识破</a><br></div><!--end 1602158-70770-1-->
+						</dd>
+					</dl>
+			  </div>
+			</div>
+			<div class="navbcad"><!--begin 1602159-74330-1--><a href="zt/node_75848.htm?node=74330" target="_blank"><img width="998" height="75" src="index/images/attachement/jpg/site4/20150427/4437e654587b16a7d2890a.jpg" border="0"></a><!--end 1602159-74330-1--></div>
+			<div class="navbc-bo">
+				<ul class="p5-ul">
+					<li class="p5-li-hd"><a class="f18 b white" href="#">互动专区</a></li>
+					<li class="p5-li2"><a class="f12 black03" href="http://bbs.legaldaily.com.cn/">法制论坛</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="http://blog.legaldaily.com.cn/blog/html/blog.html">法制博客</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="http://bbs.legaldaily.com.cn/">论坛热帖</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="http://blog.legaldaily.com.cn/blog/html/blog.html">博文精选</a></li>
+				</ul>
+			</div>
+			<div class="navbc">
+				<div class="p5-1">
+					<dl class="p5-1-le">
+						<dt class="p5-1-le-dt"><a class="f14 b blue001" href="#">微博关注</a>						</dt>
+						<dd class="p5-1-le-dd-1"><img src="tongyong/images/2014-fzwgb-025.png" ></dd>
+						<dd class="p5-1-le-dd-1">
+						  <!--begin 1602160-70810-1--><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D15dKn0LL?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">父亲为逃票竟不认女儿</a><br><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D153fqo2t?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">新疆：借本消分今后行不通了</a><br><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D14QS1kLF?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">男子给ATM灌饮料以为会吐钞</a><br><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D14JvuEbP?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">西藏半月内两厅官“双开”</a><br><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D14uz8gcC?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">女子产检7次未查出孩子无右脚</a><br><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D14zun2xx?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">常识：产检必须检出哪些畸形？</a><br><!--end 1602160-70810-1-->
+						</dd>
+						<dd class="p5-1-le-dd-1">
+							<!--begin 1602161-70810-1--><table width="100%" style="border-bottom:1px #c2daed dashed;"><tr><td><a href="http://weibo.com/2087875965/D13hoCgAL?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank"><img width="92" height="61" src="index/images/attachement/jpg/site4/20151027/d43d7ecb6dbc17998d5801.jpg" border="0"></a></td><td width="100%" style="vertical-align:top; text-indent:15px;"><a class="f12 black02" href="http://weibo.com/2087875965/D13hoCgAL?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">8家法检试点经验成司改样本</a></td></tr></table><!--end 1602161-70810-1-->
+						</dd>
+						<dd class="p5-1-le-dd-1"><img src="tongyong/images/2014-fzwgb-024.png" ></dd>
+						<dd class="p5-1-le-dd-1">
+						  <!--begin 1602162-70811-1--><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D143LziqG?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">1999年男子抢银行案告破</a><br><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D15YHgfkZ?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">净化旅游市场别依赖旅游警察</a><br><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D0Xp5veT9?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime" target="_blank">“遛狗须大学生”且等市场检验</a><br><span class="dotgray">·</span><a class="f13 black02" href="http://weibo.com/2087875965/D0NaGgajb?from=page_1002062087875965_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment" target="_blank">治理雾霾不能病急乱投医</a><br><!--end 1602162-70811-1-->
+						</dd>
+					</dl>
+					<dl class="p5-1-le">
+						<dt class="p5-1-le-dt"><a class="f14 b blue001" href="zbzk/node_42428.htm">掌上法治</a>						</dt>
+					    <dd class="p5-1-le-dd-1">
+					      <!--begin 1602163-42469-1-->				<img src="index/tplimg/26689.files/images/2014-fzwgb-026.png"><a class="f12 black02" href="zbzk/content/2015-10/22/content_6315915.htm?node=42469" target="_blank">最高法拓宽渠道 7名法官到位</a>				<!--end 1602163-42469-1-->
+					    </dd>
+							  <dd class="p5-1-le-dd-1">
+								<!--begin 1602164-42469-1-->				<img src="index/tplimg/26689.files/images/2014-fzwgb-027.png"><a class="f12 black02" href="zbzk/content/2015-10/22/content_6315900.htm?node=42469" target="_blank">外媒怎么说习总访英受顶格接待</a>				<!--end 1602164-42469-1-->
+					    </dd>
+							  <dd class="p5-1-le-dd-1">
+								<!--begin 1602165-42469-1-->				<img src="index/tplimg/26689.files/images/2014-fzwgb-028.png"><a class="f12 black02" href="zbzk/content/2015-10/21/content_6313942.htm?node=42469" target="_blank">阳光司法与隐私权保护如何平衡</a>				<!--end 1602165-42469-1-->
+							  </dd>
+							  <dd class="p5-1-le-dd-1">
+								<!--begin 1602166-42469-1-->				<img src="index/tplimg/26689.files/images/2014-fzwgb-029.png"><a class="f12 black02" href="zbzk/content/2015-10/21/content_6313851.htm?node=42469" target="_blank">海外代购遭“封杀”传闻不实</a>				<!--end 1602166-42469-1-->
+							  </dd>
+							  <dd class="p5-1-le-dd-1">
+							    <!--begin 1602167-42469-1-->				<img src="index/tplimg/26689.files/images/2014-fzwgb-030.png"><a class="f12 black02" href="zbzk/content/2015-10/20/content_6311648.htm?node=42469" target="_blank">为你解读将实施的刑九那些条款</a>				<!--end 1602167-42469-1-->
+							  </dd>
+							  <dd class="p5-1-le-dd-1">
+							    <!--begin 1602168-42469-1-->				<img src="index/tplimg/26689.files/images/2014-fzwgb-031.png"><a class="f12 black02" href="zbzk/content/2015-10/16/content_6307626.htm?node=42469" target="_blank">两部门回应新规非管死“专车”</a>				<!--end 1602168-42469-1-->
+							  </dd>
+					</dl>
+			  </div>
+				<div class="p5-2">
+					<dl class="p5-3-dl">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="http://blog.legaldaily.com.cn/blog/html/blog.html">博文精选</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="http://blog.legaldaily.com.cn/blog/html/blog.html">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602169-20889-1--><a class="f16 b black02" href="blog/content/2015-05/29/content_6105405.htm?node=67568" target="_blank">网评精粹：央视揭微商传销给谁敲响警钟</a><!--end 1602169-20889-1-->
+						</dt>
+						<dd class="p5-3-dd1gz">
+						  <!--begin 1602170-20889-1--><div style="float;left; margin:10px 0px; line-height:26px;"><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/46/2469846-50603.html" target="_blank">老鬼评论：“戒烟令”不妨向“禁酒令”学习</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/08/2452008-50592.html" target="_blank">碧翰烽：带孩子参观别墅能激发成功欲？</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/03/2463003-50559.html" target="_blank">李吉明：“桃色陷阱”为何专门诱捕官员？</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/75/2455875-50564.html" target="_blank">朱波：人头费是导游强迫游客购物的定时炸弹？</a><br></div><!--end 1602170-20889-1-->
+						</dd>
+						<hr class="line1">
+						<dd class="p5-3-dd1gz">
+						  <!--begin 1602171-20889-1--><div style="float:left;  line-height:26px;"><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/08/2465708-50574.html" target="_blank">人间小道：频频被反诬的助人为乐何以发扬光大？</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/12/2472012-50589.html" target="_blank">郑和朋：杨秀珠为何是领导需要的女干部？</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/32/2473232-50572.html" target="_blank">南人北客：博士热情帮助"未婚生子"值得称道</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/66/2451966-50525.html" target="_blank">周蓬安：“反腐女大V”咋成贪官情妇+巨贪？</a><br></div><!--end 1602171-20889-1-->
+						</dd>
+					</dl>
+					<dl class="p5-3-dlsecond">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="http://bbs.legaldaily.com.cn/">论坛热帖</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="http://bbs.legaldaily.com.cn/">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602172-23869-1--><a class="f16 b black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243379" target="_blank">中国九部国防白皮书都讲了啥？</a><!--end 1602172-23869-1-->
+						</dt>
+						<dd class="p5-3-dd2">
+						  <!--begin 1602173-20888-1--><div class="img-140"><a href="http://bbs.legaldaily.com.cn/viewthread.php?tid=242689&amp;extra=page%3D1" target="_blank"><img width="138" height="94" src="index/images/attachement/jpg/site4/20150520/7427eae7d63c16c66bfc01.jpg" border="0"></a><cite><a class="f13 white" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=242689&amp;extra=page%3D1" target="_blank">第145期图说法治</a></cite></div><!--end 1602173-20888-1-->
+						</dd>
+						<dd class="p5-3-dd3">
+						  <!--begin 1602174-23869-1--><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243471" target="_blank">5月29日【今日读帖】</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=242850&amp;extra=" target="_blank">4月原创文章获奖展示一</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243348&amp;extra=page%3D2" target="_blank">这么热 古代人怎么过？</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243423&amp;extra=page%3D2" target="_blank">官员坠桃色陷阱的幕后</a><br><!--end 1602174-23869-1-->
+						</dd>
+						<dd class="p5-3-dd5">
+						  <!--begin 1602175-23869-1--><div style="float:left; line-height:26px;"><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243350&amp;extra=page%3D2" target="_blank">医生职业高投入低回报？</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243403&amp;extra=page%3D2" target="_blank">咋解读市委书记雨中推车？</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243344&amp;extra=page%3D1" target="_blank">透视《统战工作条例》亮点</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243225&amp;extra=page%3D2" target="_blank">咋能不让政策打架伤及百姓</a><br></div><!--end 1602175-23869-1-->
+						</dd>
+						<dd class="p5-3-dd5">
+						  <!--begin 1602176-23869-1--><div style="float:left; line-height:26px;"><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243305" target="_blank">基层年轻干部为何留不住</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243311&amp;extra=page%3D2" target="_blank">“诗意辞职信”有几多诗意</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243222&amp;extra=page%3D2" target="_blank">揭露“野鸡大学”咋这么难</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243221&amp;extra=page%3D1" target="_blank">贪官的奇葩理论从何而来</a><br></div><!--end 1602176-23869-1-->
+						</dd>
+					</dl>
+			  </div>
+				<div class="p5-2">
+					<dl class="p5-3-dl">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="http://blog.legaldaily.com.cn/blog/html/blog.html">法制博客</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="http://blog.legaldaily.com.cn/blog/html/blog.html">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602177-24228-1--><a class="f16 b black02" href="http://blog.legaldaily.com.cn/blog/html/84/2451584-50495.html" target="_blank">“旅客黑名单” 把任性锁笼里</a><!--end 1602177-24228-1-->
+						</dt>
+						<dd class="p5-3-dd2">
+						  <!--begin 1602178-32888-1--><div class="img-140" style="margin:5px;"><a href="blog/content/2015-05/15/content_6084877.htm?node=67568" target="_blank"><img width="138" height="94" src="index/images/attachement/jpg/site4/20150605/7427eae7999616db9f3b08.jpg" border="0"></a><cite><a class="f13 white" href="blog/content/2015-05/15/content_6084877.htm?node=67568" target="_blank">一周网评精粹 第43期</a></cite></div><!--end 1602178-32888-1-->
+						</dd>
+						<dd class="p5-3-dd3">
+						  <!--begin 1602179-24228-1--><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/31/2460531-50599.html" target="_blank">村民的权利去哪了？</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/84/2451584-50600.html" target="_blank">诗意化收麦与民脂民膏</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/84/2451584-50545.html" target="_blank">医生为啥不愿子女从医？</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/74/2471974-50536.html" target="_blank">走不出监狱的囚犯</a><br><!--end 1602179-24228-1-->
+						</dd>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602180-24228-1--><div style="float:left;  line-height:26px; padding-bottom:10px;"><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/08/2465708-50513.html" target="_blank">小学生“桃园结义”是导演缺位的模仿秀</a><br><span class="dotgray">·</span><a class="f14 black02" href="http://blog.legaldaily.com.cn/blog/html/03/2463003-50502.html" target="_blank">“诗意辞职信”让公众读懂了什么？</a><br></div><!--end 1602180-24228-1-->
+						</dd>
+						<dd class="p5-3-dd1gz">
+						  <!--begin 1602181-23768-1--><div style="float:left;  line-height:28px;">&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2441181-action-spacelist-type-blog" target="_blank">刘桂明</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2453132" target="_blank">钱卫清</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/html/80/2440980.html" target="_blank">李宏剑</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2468007" target="_blank">周碧华</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2472012-action-spacelist-type-blog" target="_blank">郑和朋</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2452115" target="_blank">阎兆伟</a></div><!--end 1602181-23768-1-->
+						</dd>
+						<dd class="p5-3-dd1gz">
+						  <!--begin 1602182-23768-1--><div style="float:left;  line-height:27px;">&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2454025" target="_blank">逗 号</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2454044" target="_blank">张建伟</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2452008" target="_blank">碧翰烽</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2447193" target="_blank">张光辉</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/?uid-2471970" target="_blank">唐新波</a>&nbsp;|&nbsp;&nbsp;<a class="f12 black02" href="http://blog.legaldaily.com.cn/blog/html/09/2467909.html" target="_blank">舒 锐</a></div><!--end 1602182-23768-1-->
+						</dd>
+					</dl>
+					<dl class="p5-3-dlfifth">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="http://bbs.legaldaily.com.cn/">法制论坛</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="http://bbs.legaldaily.com.cn/">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602183-20828-1--><a class="f16 b black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243430&amp;extra=page%3D1" target="_blank">面对英雄 我们是否该收敛自己的暴虐气？</a><!--end 1602183-20828-1-->
+						</dt>
+						<dd class="p5-3-dd7">
+						  <!--begin 1602184-20828-1--><span class="f14 black02">[反腐倡廉]&nbsp;&nbsp;</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243418" target="_blank">挪用救灾款建经适房 权力任性底气何来</a><!--end 1602184-20828-1-->
+						</dd>
+						<dd class="p5-3-dd7">
+						  <!--begin 1602185-20828-1--><span class="f14 black02">[悦&nbsp;读&nbsp;汇]&nbsp;&nbsp;</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243406&amp;extra=page%3D2" target="_blank">中国死亡赔偿金制度的他山之石与前世今生</a><!--end 1602185-20828-1-->
+						</dd>
+						<dd class="p5-3-dd7">
+						  <!--begin 1602186-20828-1--><span class="f14 black02">[议案说法]&nbsp;&nbsp;</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243351&amp;extra=page%3D1" target="_blank">怎么看待？“贪官”受审是否有翻供的权利</a><!--end 1602186-20828-1-->
+						</dd>
+						<dd class="p5-3-dd7">
+						  <!--begin 1602187-20828-1--><span class="f14 black02">[职场交流]&nbsp;&nbsp;</span><a class="f14 black02" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243420&amp;extra=page%3D2" target="_blank">咋抓住县处级以上领导干部这个“关键少数”</a><!--end 1602187-20828-1-->
+						</dd>
+						<dd class="p5-3-dd1">
+							<!--begin 1602188-20888-1--><div class="img-172" style="margin:4px 6px; float:left "><a href="http://bbs.legaldaily.com.cn/viewthread.php?tid=242967&amp;extra=page%3D2" target="_blank"><img width="170" height="117" src="index/images/attachement/jpg/site4/20150522/d8cb8a40f00416c94b8b02.jpg" border="0"></a><cite><a class="f13 white" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=242967&amp;extra=page%3D2" target="_blank">第95期一周囧图囧段子</a></cite></div><div class="img-172" style="margin:4px 6px; float:left "><a href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243345&amp;extra=page%3D2" target="_blank"><img width="170" height="117" src="index/images/attachement/jpg/site4/20150527/d8cb8a40f00416cfd67a08.jpg" border="0"></a><cite><a class="f13 white" href="http://bbs.legaldaily.com.cn/viewthread.php?tid=243345&amp;extra=page%3D2" target="_blank">你身边的干部懒政吗？</a></cite></div><!--end 1602188-20888-1-->
+						</dd>
+					</dl>
+			  </div>
+			</div>
+			<div class="navbc-bo">
+				<ul class="p5-ul">
+					<li class="p5-li-pic"><a class="f18 b white" href="gallery/node_8168.htm">图片视窗</a></li>
+					<li class="p5-li2"><a class="f12 black03" href="gallery/node_8170.htm">焦点</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="gallery/node_24368.htm">社会</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="gallery/node_24369.htm">国际</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="gallery/node_8176.htm">漫画</a></li>
+					<li class="p5-li2 f12 black02">/</li>
+					<li class="p5-li2"><a class="f12 black03" href="gallery/node_8172.htm">图片故事</a></li>
+				</ul>
+			</div>
+			<div class="navbcpic">
+				<div class="p6-1">
+					<dl class="p6-1-dl">
+						<dd class="p6-1-dd"><!--begin 1602189-8170-1--><div class="img-332" style="margin:5px; "><a href="gallery/content/2015-10/28/content_6327281.htm?node=8170" target="_blank"><img width="324" height="194" src="index/images/attachement/jpg/site4/20151028/eca86b6a6b0d179a763c30.jpg" border="0"></a><cite><a class="f13 white" href="gallery/content/2015-10/28/content_6327281.htm?node=8170" target="_blank">李克强总理的7张漫画,刷爆了朋友圈</a></cite></div><!--end 1602189-8170-1-->
+						</dd>
+						<dd class="p6-1-ddsecond">
+						  <!--begin 1602190-8170-1--><div class="img-1582" style="margin:4px 3px 4px 5px; float:left; display:inline;"><a href="gallery/content/2015-10/28/content_6327504.htm?node=8170" target="_blank"><img width="156" height="110" src="index/images/attachement/jpg/site4/20151028/eca86b6a6b0d179a7a9108.jpg" border="0"></a><cite><a class="f13 white" href="gallery/content/2015-10/28/content_6327504.htm?node=8170" target="_blank">"人-机-犬"三位一体查验</a></cite></div><div class="img-1582" style="margin:4px 3px 4px 5px; float:left; display:inline;"><a href="gallery/content/2015-10/27/content_6326141.htm?node=8170" target="_blank"><img width="156" height="110" src="index/images/attachement/jpg/site4/20151027/eca86b6a6b0d179977a636.jpg" border="0"></a><cite><a class="f13 white" href="gallery/content/2015-10/27/content_6326141.htm?node=8170" target="_blank">江西乡村遭冰雹龙卷风袭击</a></cite></div><!--end 1602190-8170-1-->
+						</dd>
+					</dl>
+			  </div>
+				<div class="p6-2">
+					<dl>
+						<dt class="p6-2-dt1">
+						  <!--begin 1602191-70774-1--><a class="f14 b black02" href="gallery/content/2015-10/27/content_6326153.htm?node=70774" target="_blank">铜陵公安开展公交车反劫持演练</a><!--end 1602191-70774-1-->
+						</dt>
+						<dt class="p6-2-dt">
+							<!--begin 1602192-70774-1--><div style="width:100%; line-height:28px;"><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326151.htm?node=70774" target="_blank">武汉天兴洲大桥又掉落水管砸汽车</a><br><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326175.htm?node=70774" target="_blank">湖南运钞车爆胎坠桥 散落400万现金</a><br><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326146.htm?node=70774" target="_blank">大货车侧翻司机被压车底 修水消防救援</a><br><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326183.htm?node=70774" target="_blank">宁波市望春监狱举办服刑人员文化艺术节</a><br><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326174.htm?node=70774" target="_blank">杭瑞高速路上突现"巨坑" 吞掉一辆大货车</a><br></div><!--end 1602192-70774-1-->
+						</dt>
+						<hr class="line2">
+						<dt class="p6-2-dtsecond">
+							<!--begin 1602193-70774-1--><div style="width:100%; line-height:28px;"><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326170.htm?node=70774" target="_blank">和平方舟医院船与法军举行联合救援演练</a><br><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326168.htm?node=70774" target="_blank">土耳其特警与疑似IS武装分子发生枪战</a><br><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326167.htm?node=70774" target="_blank">俄24小时袭击极端武装在叙94处目标</a><br><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326165.htm?node=70774" target="_blank">数万难民大军穿越田间 绵延数公里</a><br><span class="dotgary">·</span><a class="f14 black02" href="gallery/content/2015-10/27/content_6326180.htm?node=70774" target="_blank">强烈地震造成巴基斯坦220人死亡</a><br></div><!--end 1602193-70774-1-->
+						</dt>
+					</dl>
+			  </div>
+			  <div class="p6-3">
+					<dt class="p6-3-dt">
+					  <!--begin 1602194-8171-1--><div class="img-1581" style="margin:3px;  float:left; display:inline; "><a href="gallery/content/2015-10/27/content_6326115.htm?node=8171" target="_blank"><img width="163" height="136" src="index/images/attachement/jpg/site4/20151027/eca86b6a6b0d179928eb1a.jpg" border="0"></a><cite><a class="f13 white" href="gallery/content/2015-10/27/content_6326115.htm?node=8171" target="_blank">四川阿坝新生熊猫宝宝亮相</a></cite></div><div class="img-1581" style="margin:3px;  float:left; display:inline; "><a href="gallery/content/2015-10/27/content_6326390.htm?node=8171" target="_blank"><img width="163" height="136" src="index/images/attachement/jpg/site4/20151027/eca86b6a6b0d179969c251.jpg" border="0"></a><cite><a class="f13 white" href="gallery/content/2015-10/27/content_6326390.htm?node=8171" target="_blank">死结</a></cite></div><!--end 1602194-8171-1-->
+					<dd class="p6-3-dtsecond"></dd>
+					<dt class="p6-3-dt">
+					  <!--begin 1602195-8171-1--><div class="img-1581" style="margin:3px;  float:left; display:inline; "><a href="gallery/content/2015-10/27/content_6326387.htm?node=8171" target="_blank"><img width="163" height="136" src="index/images/attachement/jpg/site4/20151027/eca86b6a6b0d179973eb22.jpg" border="0"></a><cite><a class="f13 white" href="gallery/content/2015-10/27/content_6326387.htm?node=8171" target="_blank">英国缴获走私黄金饰品</a></cite></div><div class="img-1581" style="margin:3px;  float:left; display:inline; "><a href="gallery/content/2015-10/27/content_6326386.htm?node=8171" target="_blank"><img width="163" height="136" src="index/images/attachement/jpg/site4/20151027/eca86b6a6b0d179971ec02.jpg" border="0"></a><cite><a class="f13 white" href="gallery/content/2015-10/27/content_6326386.htm?node=8171" target="_blank">阿富汗7.8级强震</a></cite></div><!--end 1602195-8171-1--></div>
+				
+			</div>
+			<div class="navbc">
+				<div class="p5-1">
+					<dl class="p5-1-le">
+						<dt class="p5-1-le-dt"><a class="f14 b blue001" href="node_70828.htm">读史</a>						</dt>
+						<dd class="p5-1-le-dd-1">
+						  <!--begin 1602196-70828-1--><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-10/23/content_6318674.htm?node=70828" target="_blank">羊舌鲋：如何风风火火传了千年</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-10/16/content_6308078.htm?node=70828" target="_blank">69年前日本涩谷惨案审判始末</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-10/16/content_6307958.htm?node=70828" target="_blank">中华法文化中的“布宪施教”</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-10/14/content_6304794.htm?node=70828" target="_blank">中国律师的鼻祖</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-10/09/content_6297851.htm?node=70828" target="_blank">公孙修好鱼的 度、量、衡</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-10/09/content_6297850.htm?node=70828" target="_blank">大赦天下与“十恶不赦”</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-10/08/content_6296617.htm?node=70828" target="_blank">撷取法律传统的精华</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-09/24/content_6284943.htm?node=70828" target="_blank">子产铸刑书</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-09/18/content_6275627.htm?node=70828" target="_blank">英国法院对法治的贡献</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-09/18/content_6275628.htm?node=70828" target="_blank">重温“沃尔夫改革”历程</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-09/17/content_6272947.htm?node=70828" target="_blank">从“道器”逻辑看制度移植</a><br><span class="dotgray">·</span><a class="f12 black02" href="index/content/2015-09/15/content_6268438.htm?node=70828" target="_blank">奠定中国公法学底色的人</a><br><!--end 1602196-70828-1-->
+						</dd>
+																		<dd class="p5-1-le-dd-1"><!--begin 1602197-70817-1--><a href="http://shsp.news.cn/" target="_blank"><img src="index/images/attachement/jpg/site4/20150908/d43d7ecb6d101758933308.jpg" border="0" width="200" height="40"></a><!--end 1602197-70817-1--></dd>
+
+							<dd class="p5-1-le-dd-1">
+						  <!--begin 1602198-70828-1--><div class="img-92" style="margin:3px; float:left "><a href="index/content/2015-10/16/content_6307960.htm?node=70828" target="_blank"><img width="92" height="76" src="index/images/attachement/jpg/site4/20151016/eca86b6a6b0d178af80f57.jpg" border="0"></a><cite><a class="f13 white" href="index/content/2015-10/16/content_6307960.htm?node=70828" target="_blank">荀子思想之探微</a></cite></div><div class="img-92" style="margin:3px; float:left "><a href="index/content/2015-08/24/content_6234444.htm?node=70828" target="_blank"><img width="92" height="76" src="index/images/attachement/jpg/site4/20150824/eca86b6a6b0d1744cc7744.jpg" border="0"></a><cite><a class="f13 white" href="index/content/2015-08/24/content_6234444.htm?node=70828" target="_blank">重温世纪大审判</a></cite></div><!--end 1602198-70828-1-->
+						</dd>
+
+						<dd class="p5-1-le-dd-1">
+						  <!--begin 1602199-70828-1--><div class="img-92" style="margin:3px; float:left "><a href="index/content/2015-08/18/content_6226244.htm?node=70828" target="_blank"><img width="92" height="76" src="index/images/attachement/jpg/site4/20150818/eca86b6a6b0d173ce60460.jpg" border="0"></a><cite><a class="f13 white" href="index/content/2015-08/18/content_6226244.htm?node=70828" target="_blank">东京审判</a></cite></div><div class="img-92" style="margin:3px; float:left "><a href="index/content/2015-07/10/content_6165279.htm?node=70828" target="_blank"><img width="92" height="76" src="index/images/attachement/bmp/site4/20150805/eca86b6a6b0d172c132e41.bmp" border="0"></a><cite><a class="f13 white" href="index/content/2015-07/10/content_6165279.htm?node=70828" target="_blank">中国第一法科</a></cite></div><!--end 1602199-70828-1-->
+						</dd>
+</dl>
+					<dl class="p5-1-le">
+						<dt class="p5-1-le-dt"><a class="f14 b blue001" href="Civil-military-integration/node_67448.htm">军民融合</a>						</dt>
+						<dd class="p5-1-le-dd-1">
+						  <!--begin 1602200-70772-1--><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-10/27/content_6326136.htm?node=70772" target="_blank">退役士兵服役表现量化评分出台</a><br><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-10/27/content_6326190.htm?node=70772" target="_blank">城市发展兼顾军事需求</a><br><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-10/27/content_6326134.htm?node=70772" target="_blank">维和步兵营开通高清远程医学站点</a><br><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-09/25/content_6287138.htm?node=70772" target="_blank">国企发展混合所有制经济的意见</a><br><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-09/25/content_6287122.htm?node=70772" target="_blank">社交媒体战：信息时代战争新维度</a><br><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-09/25/content_6287115.htm?node=70772" target="_blank">民兵走进高校学习军事科技</a><br><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-09/25/content_6287112.htm?node=70772" target="_blank">新型支前：亮相漠北古战场</a><br><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-09/21/content_6278606.htm?node=70772" target="_blank">新型运载火箭长征六号首飞成功</a><br><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-09/21/content_6278584.htm?node=70772" target="_blank">完善配套措施 拓宽士官发展空间</a><br><span class="dotgray">·</span><a class="f12 black02" href="Civil-military-integration/content/2015-09/21/content_6278578.htm?node=70772" target="_blank">深化国有企业改革坚持党的领导</a><br><!--end 1602200-70772-1-->
+						</dd>
+						<dd class="p5-1-le-ddad">
+						  <!--begin 1602201-70817-1--><div style="margin-right:2px;margin-bottom:7px; float:left;"><a href="zt/node_32348.htm?node=70817" target="_blank"><img width="99" height="62" src="index/images/attachement/png/site4/20140827/7427ea1315871567bdf425.png" border="0"></a></div><div style="margin-right:2px;margin-bottom:7px; float:left;"><a href="zt/node_8152.htm?node=70817" target="_blank"><img width="99" height="62" src="index/images/attachement/png/site4/20140827/7427ea1315871567bdff27.png" border="0"></a></div><!--end 1602201-70817-1-->
+						</dd>
+					</dl>
+			  </div>
+				<div class="p5-2">
+				<dl class="p5-3-dlsecond">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="http://jt.legaldaily.com.cn/">交通安全</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="http://jt.legaldaily.com.cn/">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602202-72429-1--><a class="f16 b black02" href="http://jt.legaldaily.com.cn/" target="_blank">公安部交通管理局发布1788处高速团雾多发路段</a><!--end 1602202-72429-1-->
+						</dt>
+						<dd class="p5-3-dd2jm">
+						  <!--begin 1602203-72428-1--><div class="img-140-3" style="margin:5px;"><a href="Traffic_safety/content/2015-10/28/content_6327538.htm?node=72428" target="_blank"><img width="138" height="100" src="index/images/attachement/jpg/site4/20151028/002511f57ff9179a83f417.jpg" border="0"></a><cite><a class="f13 white" href="Traffic_safety/content/2015-10/28/content_6327538.htm?node=72428" target="_blank">警车失控连撞数车</a></cite></div><!--end 1602203-72428-1-->
+						</dd>
+						<dd class="p5-3-dd3jm">
+						  <!--begin 1602204-72429-1--><div style="width:100%;text-align:left; line-height:28px;"><span class="dotgray">·</span><a class="f14 black02" href="Traffic_safety/content/2015-10/26/content_6327464.htm?node=72429" target="_blank">酒驾被罚几天后又醉驾</a><br><span class="dotgray">·</span><a class="f14 black02" href="Traffic_safety/content/2015-10/26/content_6327463.htm?node=72429" target="_blank">昆明机场将启动抓拍系统</a><br><span class="dotgray">·</span><a class="f14 black02" href="Traffic_safety/content/2015-10/26/content_6327467.htm?node=72429" target="_blank">一场车祸给驾驶员上了一课</a><br><span class="dotgray">·</span><a class="f14 black02" href="Traffic_safety/content/2015-10/28/content_6327518.htm?node=72429" target="_blank">运钞车高速路爆胎坠桥致3死</a><br></div><!--end 1602204-72429-1-->
+						</dd>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602205-72429-1--><div style="width:100%;text-align:left; line-height:28px;"><span class="dotgray">·</span><a class="f14 black02" href="Traffic_safety/content/2015-10/28/content_6327515.htm?node=72429" target="_blank">一驾驶人扣满12分发生事故 法院支持保险公司不赔偿</a><br><span class="dotgray">·</span><a class="f14 black02" href="Traffic_safety/content/2015-10/28/content_6327466.htm?node=72429" target="_blank">出租车改革座谈会 出租车司机称专车发展影响收入</a><br><span class="dotgray">·</span><a class="f14 black02" href="Traffic_safety/content/2015-10/23/content_6327483.htm?node=72429" target="_blank">山东蓬莱两车相撞引发爆燃事件3死2伤 原因正调查</a><br><span class="dotgray">·</span><a class="f14 black02" href="Traffic_safety/content/2015-10/28/content_6327465.htm?node=72429" target="_blank">南京回应警车与数辆车碰擦：出警时紧急避让行人</a><br></div><!--end 1602205-72429-1-->
+						</dd>
+				  </dl>
+					<dl class="p5-3-dlsix">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="IT/node_69448.htm">IT法治</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="IT/node_69448.htm">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602206-70771-1--><a class="f16 b black02" href="IT/node_78770.htm?node=70771" target="_blank">互联网法律记者沙龙第二期聚焦移动APP侵权盗版</a><!--end 1602206-70771-1-->
+						</dt>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602207-70771-1--><div style="width:100%;text-align:left; line-height:28px;"><span class="dotgray">·</span><a class="f14 black02" href="IT/content/2015-10/27/content_6324345.htm?node=70771" target="_blank">搜狗诉百度输入法专利侵权&nbsp; 索赔8000万</a><br><span class="dotgray">·</span><a class="f14 black02" href="IT/content/2015-10/26/content_6323020.htm?node=70771" target="_blank">多款O2O软件曝出支付漏洞：充值1分就可“随便用”</a><br><span class="dotgray">·</span><a class="f14 black02" href="IT/content/2015-10/23/content_6319259.htm?node=70771" target="_blank">千家法院入驻淘宝拍卖 去年节省佣金超5亿元</a><br><span class="dotgray">·</span><a class="f14 black02" href="IT/content/2015-10/23/content_6318473.htm?node=70771" target="_blank">微信转账开始收费第三方支付免费时代终结？</a><br></div><!--end 1602207-70771-1-->
+						</dd>
+						<hr class="line1">
+						<dd class="p5-3-dd1gz">
+						  <!--begin 1602208-70771-1--><div style="width:100%;text-align:left; line-height:28px;"><span class="dotgray">·</span><a class="f14 black02" href="IT/content/2015-10/23/content_6319233.htm?node=70771" target="_blank">BAT巨头聚首安全领袖峰会 共话网络安全新生态</a><br><span class="dotgray">·</span><a class="f14 black02" href="IT/content/2015-10/23/content_6318491.htm?node=70771" target="_blank">国内首个P2P收费标准出台　业内褒贬不一</a><br><span class="dotgray">·</span><a class="f14 black02" href="IT/content/2015-10/22/content_6315750.htm?node=70771" target="_blank">国家互联网信息应急中心通报 网易邮箱确有泄露</a><br><span class="dotgray">·</span><a class="f14 black02" href="IT/content/2015-10/22/content_6316903.htm?node=70771" target="_blank">微信朋友圈成大卖场 售假或遭受百万重罚</a><br></div><!--end 1602208-70771-1-->
+						</dd>
+					</dl>
+					<dl class="p5-3-dlsecond">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="police_and_frontier-defence/node_23288.htm">公安边防</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="police_and_frontier-defence/node_23288.htm">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602209-70773-1--><a class="f16 b black02" href="frontier_inspection_station/content/2015-10/08/content_6300175.htm?node=70773" target="_blank">海南公安边防国庆期间严打各类违法犯罪活动</a><!--end 1602209-70773-1-->
+						</dt>
+						<dd class="p5-3-dd2jm">
+						  <!--begin 1602210-70773-1--><div class="img-140-3" style="margin:5px;"><a href="frontier_inspection_station/content/2015-10/10/content_6300179.htm?node=70773" target="_blank"><img width="138" height="100" src="index/images/attachement/jpg/site4/20151010/c44619954c18178312b929.jpg" border="0"></a><cite><a class="f13 white" href="frontier_inspection_station/content/2015-10/10/content_6300179.htm?node=70773" target="_blank">众志成城防抗强台风</a></cite></div><!--end 1602210-70773-1-->
+						</dd>
+						<dd class="p5-3-dd3jm">
+						  <!--begin 1602211-70773-1--><div style="width:100%;text-align:left; line-height:28px;"><span class="dotgray">·</span><a class="f14 black02" href="frontier_inspection_station/content/2015-10/08/content_6300185.htm?node=70773" target="_blank">茂名边防端掉一电信诈骗团伙</a><br><span class="dotgray">·</span><a class="f14 black02" href="frontier_inspection_station/content/2015-10/08/content_6300187.htm?node=70773" target="_blank">东兴边检国庆迎验放高峰</a><br><span class="dotgray">·</span><a class="f14 black02" href="frontier_inspection_station/content/2015-10/09/content_6300188.htm?node=70773" target="_blank">成都边检站启用自助通关系统</a><br><span class="dotgray">·</span><a class="f14 black02" href="frontier_inspection_station/content/2015-10/09/content_6300186.htm?node=70773" target="_blank">云南边防抓获盗抢摩托车团伙</a><br></div><!--end 1602211-70773-1-->
+						</dd>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602212-70773-1--><div style="width:100%;text-align:left; line-height:28px;"><span class="dotgray">·</span><a class="f14 black02" href="frontier_inspection_station/content/2015-10/09/content_6300197.htm?node=70773" target="_blank">辽宁鲅鱼圈边检站多举措服务口岸"一路一带"建设</a><br><span class="dotgray">·</span><a class="f14 black02" href="frontier_inspection_station/content/2015-10/08/content_6300190.htm?node=70773" target="_blank">吉林白山边防支队：长白山下 双拥花开正红艳</a><br><span class="dotgray">·</span><a class="f14 black02" href="frontier_inspection_station/content/2015-10/10/content_6300191.htm?node=70773" target="_blank">边疆万里数字文化长廊行旗帜在福建平潭边防传递</a><br><span class="dotgray">·</span><a class="f14 black02" href="frontier_inspection_station/content/2015-10/09/content_6300198.htm?node=70773" target="_blank">新疆伊犁边防建公寓楼解困难官兵燃眉之急</a><br></div><!--end 1602212-70773-1-->
+						</dd>
+					</dl>
+			  </div>
+				<div class="p5-2">
+				<dl class="p5-3-dlsecond">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="Food_Safety/node_70388.htm">食品安全</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="Food_Safety/node_70388.htm">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602213-72410-1--><a class="f16 b black02" href="Food_Safety/content/2015-10/27/content_6326381.htm?node=70442" target="_blank">进口食品火爆背后乱象丛生</a><!--end 1602213-72410-1-->
+						</dt>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602214-72410-1--><div style="width:100%;text-align:left; line-height:28px;"><span class="dotgray">·</span><a class="f14 black02" href="Traffic_safety/content/2015-10/27/content_6326725.htm?node=72410" target="_blank"><A class="f14 black02" href="Food_Safety/content/2015-10/27/content_6325943.htm" target=_blank>世卫:火腿培根为"致癌物"</A> <A class="f14 black02" href="Food_Safety/content/2015-10/27/content_6326283.htm" target=_blank>专家:不可一概而论</A></a><br><span class="dotgray">·</span><a class="f14 black02" href="Food_Safety/content/2015-10/27/content_6326216.htm?node=70442" target="_blank">青蒿素保健品搭诺奖便车 青蒿素产品没那么神</a><br><span class="dotgray">·</span><a class="f14 black02" href="Food_Safety/content/2015-10/27/content_6326023.htm?node=70442" target="_blank">老人为何狂买保健品？六大推销骗局一一拆穿！</a><br><span class="dotgray">·</span><a class="f14 black02" href="Food_Safety/content/2015-10/27/content_6326710.htm?node=70442" target="_blank">80℃以上热水泡后有尿味的仿瓷餐具可能有毒！</a><br></div><!--end 1602214-72410-1-->
+						</dd>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602215-72409-1--><div class="img-172" style="margin:0px 5px 5px 5px; float:left; "><a href="Food_Safety/content/2015-10/26/content_6323205.htm?node=70442" target="_blank"><img width="170" height="112" src="index/images/attachement/jpg/site4/20151026/d8cb8a40f06e1798174f33.jpg" border="0"></a><cite><a class="f13 white" href="Food_Safety/content/2015-10/26/content_6323205.htm?node=70442" target="_blank">大闸蟹券销售价格成谜</a></cite></div><div class="img-172" style="margin:0px 5px 5px 5px; float:left; "><a href="Food_Safety/content/2015-10/26/content_6321689.htm?node=70429" target="_blank"><img width="170" height="112" src="index/images/attachement/png/site4/20151026/d8cb8a40f06e179817be39.png" border="0"></a><cite><a class="f13 white" href="Food_Safety/content/2015-10/26/content_6321689.htm?node=70429" target="_blank">青蒿素食品抗癌无定论</a></cite></div><!--end 1602215-72409-1-->
+						</dd>
+				  </dl>
+					<dl class="p5-3-dlsecond">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="Finance_and_Economics/node_75668.htm">财经频道</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="Finance_and_Economics/node_75668.htm">更多</a></dt>
+						<dt class="p5-3-dt2">
+						  <!--begin 1602216-76109-1--><a class="f16 b black02" href="Finance_and_Economics/node_75668.htm?node=76109" target="_blank">搜狗诉百度输入法专利侵权&nbsp; 索赔8000万</a><!--end 1602216-76109-1-->
+						</dt>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602217-76109-1--><div style="width:100%;text-align:left; line-height:28px;"><span class="dotgray">·</span><a class="f14 black02" href="Finance_and_Economics/content/2015-10/27/content_6326773.htm?node=76109" target="_blank">国信总裁“突然死亡”引猜测 高层动荡不止</a><br><span class="dotgray">·</span><a class="f14 black02" href="Finance_and_Economics/content/2015-10/27/content_6326772.htm?node=76109" target="_blank">沪指触底反弹重回3400点 创业板翻红涨近2%</a><br><span class="dotgray">·</span><a class="f14 black02" href="Finance_and_Economics/content/2015-10/23/content_6320426.htm?node=76109" target="_blank">国航南航澄清合并传闻：无任何书面或口头信息</a><br><span class="dotgray">·</span><a class="f14 black02" href="Finance_and_Economics/content/2015-10/21/content_6314779.htm?node=76109" target="_blank">永辉物美超市售不合格食品</a><br></div><!--end 1602217-76109-1-->
+						</dd>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602218-76109-1--><div class="img-172" style="margin:0px 5px 5px 5px; float:left; "><a href="Finance_and_Economics/content/2015-10/19/content_6311065.htm?node=76109" target="_blank"><img width="170" height="112" src="index/images/attachement/jpg/site4/20151019/d43d7ecb6d10178ee68f38.jpg" border="0"></a><cite><a class="f13 white" href="Finance_and_Economics/content/2015-10/19/content_6311065.htm?node=76109" target="_blank">图解:前三季度中国经济数据</a></cite></div><div class="img-172" style="margin:0px 5px 5px 5px; float:left; "><a href="Finance_and_Economics/content/2015-10/14/content_6304673.htm?node=76109" target="_blank"><img width="170" height="112" src="index/images/attachement/jpg/site4/20151014/4437e654587b1788365104.jpg" border="0"></a><cite><a class="f13 white" href="Finance_and_Economics/content/2015-10/14/content_6304673.htm?node=76109" target="_blank">大众削减汽车部门10亿欧元</a></cite></div><!--end 1602218-76109-1-->
+						</dd>
+				  </dl>
+					<dl class="p5-3-dlsecond">
+						<dt class="p5-3-dt"><a class="f16 b blue001" href="Fire_control/node_54928.htm">中国消防</a></dt>
+						<dt class="p5-3-dt1"><a class="f13 black02" href="Fire_control/node_54928.htm">更多</a></dt>
+						<dt class="p5-3-dt2">
+                          <!--begin 1602219-55308-1--><a class="f16 b black02" href="zt/node_77392.htm?node=55308" target="_blank">76名驴友被困庐山 被消防官兵救出</a><!--end 1602219-55308-1-->
+						</dt>
+						<dd class="p5-3-dd1">
+						  <!--begin 1602220-55308-1--><div style="width:100%;text-align:left; line-height:28px;"><span class="dotgray">·</span><a class="f14 black02" href="zt/node_77392.htm?node=55308" target="_blank">奉化一民房坍塌7人被困 消防群众合力救援</a><br><span class="dotgray">·</span><a class="f14 black02" href="zt/node_77392.htm?node=55308" target="_blank">商场发生大火怎么办？消防教你火场逃生方法</a><br><span class="dotgray">·</span><a class="f14 black02" href="zt/node_77392.htm?node=55308" target="_blank">深圳一工艺礼品厂发生大火 消防2小时灭火</a><br><span class="dotgray">·</span><a class="f14 black02" href="zt/node_77392.htm?node=55308" target="_blank">印尼KTV凌晨突发火灾 至少12人死亡71人受伤</a><br></div><!--end 1602220-55308-1-->
+						</dd>
+						<dd class="p5-3-dd1">
+							<!--begin 1602221-55308-1--><div class="img-172" style="margin:0px 5px 5px 5px; float:left; "><a href="zt/node_77392.htm?node=55308" target="_blank"><img width="170" height="117" src="index/images/attachement/jpg/site4/20151026/eca86b6a6db01798240f5d.jpg" border="0"></a><cite><a class="f13 white" href="zt/node_77392.htm?node=55308" target="_blank">福州乌龙江湿地大火</a></cite></div><div class="img-172" style="margin:0px 5px 5px 5px; float:left; "><a href="zt/node_77392.htm?node=55308" target="_blank"><img width="170" height="117" src="index/images/attachement/jpg/site4/20151026/eca86b6a6db01798056131.jpg" border="0"></a><cite><a class="f13 white" href="zt/node_77392.htm?node=55308" target="_blank">昌平1500名师生消防演练</a></cite></div><!--end 1602221-55308-1-->
+						</dd>
+					</dl>
+			  </div>
+			</div>
+			<div class="navbc">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					  <tr>
+						<td class="tdad"><a href="index/content/2010-11/25/content_2366093.htm?node=5952"><img src="tongyong/images/2014-fzwgb-032.png" width="161" height="51" border="0" ></a></td>
+						<td class="tdad"><a href="http://www.legalweekly.cn/"><img src="tongyong/images/2014-fzwgb-033.png" width="127" height="51" border="0" ></a></td>
+						<td class="tdad"><a href="http://www.legaldaily.com.cn/"><img src="tongyong/images/2014-fzwgb-034.png" width="160" height="51" border="0" ></a></td>
+						<td class="tdad"><a href="http://www.lawnewscn.com/index.html"><img src="index/tplimg/26689.files/20141102/2014-fzwgb-035.png" width="140" height="51" border="0" ></a></td>
+						<td class="tdad"><a href="http://www.cclpp.com/"><img src="tongyong/images/2014-fzwgb-036.png" width="160" height="51" border="0" ></a></td>
+						<td class="tdad"><a href="zbzk/node_25488.htm"><img src="tongyong/images/2014-fzwgb-037.png" width="143" height="51" border="0" ></a></td>
+					  </tr>
+					</table>
+			</div>
+			<div class="navbc-bottom"><iframe charset="utf-8" name="I1" width=968 height=250 align=top frameborder=0 marginwidth=0 marginheight=0 scrolling=no src='frame/2008bottom.htm'></iframe></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="59476" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>首页头条--人民网</title>
+<script language="javascript">
+function swapCon(n){
+for(var i=1;i<=2;i++){
+	var td=document.getElementById("td_"+i);
+	var ta=document.getElementById("ta_"+i);
+	var p=document.getElementById("p_"+i);
+	if(i==n){
+		td.className="org";
+		td.style.background="";
+		ta.style.display="block";
+		p.style.visibility="visible";
+	}else{
+		td.className="org2";
+		td.style.background="#EFE4CE";
+		ta.style.display="none";
+		p.style.visibility="hidden";
+	}
+	}
+}
+</script>
+<script language="JavaScript">
+//加到频道的脚本
+function FieldSearchFormTwo_onsubmit(){
+	var SQLTitle="";
+	if(document.FieldSearchFormTwo.Content.value!=""){
+		var oldStr=document.FieldSearchFormTwo.Content.value;
+		 var searchStr=searchWordPro(oldStr);
+			 SQLTitle="("+"正文=("+ searchStr + ") or "+"标题=("+searchStr+ ") or "+"作者=("+searchStr  + "))";
+			SQLTitle=searchStr;
+			document.FieldSearchFormTwo.searchword.value=SQLTitle;
+			return true;
+	}else
+	{
+	alert("检索表达式不允许为空！");
+	return false;
+	}
+}
+function searchWordPro(vsearchWord){
+	var tempStr="";
+	var isSpace=false;
+	vsearchWord=alltrim(vsearchWord);
+	var word_array =vsearchWord.split(" ");
+	if(word_array.length<2) return vsearchWord;
+	for (loop=0; loop < word_array.length;loop++)
+	{
+		if((alltrim(word_array[loop]).toLowerCase()=="or") ||(alltrim(word_array[loop]).toLowerCase()=="and")){
+			return vsearchWord;
+		}else{
+			if(loop==0)
+				tempStr=word_array[loop];
+			else{
+				if(alltrim(word_array[loop])!="")
+					tempStr=tempStr+" and "+word_array[loop];
+				}
+		}
+	}
+	return tempStr;
+}
+function alltrim(a_strVarContent) 
+{ 
+var pos1, pos2, newstring; 
+pos1 = 0; 
+pos2 = 0; 
+newstring = "" 
+if ( a_strVarContent.length > 0 ) 
+{ 
+for( i=0; i<a_strVarContent.length; i++) 
+{ 
+if ( a_strVarContent.charAt(i) == " " ) 
+pos1 = pos1 + 1; 
+else 
+break; 
+} 
+for( i=a_strVarContent.length-1; i>=0 ; i--) 
+{ 
+if ( a_strVarContent.charAt(i) == " " ) 
+pos2 = pos2 + 1; 
+else 
+break; 
+} 
+newstring = a_strVarContent.substring(pos1, a_strVarContent.length-pos2) 
+} 
+return newstring; 
+} 
+//结束
+</script>
+<style type="text/css">
+<!--
+body{ font-size:12px; margin:0; text-align:center; background:#F7ECD6}
+table{margin:0 auto;}
+td{font-size:12px}
+a:link,a:visited{ color:#000;text-decoration:none}
+a:hover{ color:#000;text-decoration:underline}
+.bg01,.bg02{ background:#EFEFEF; border-left:#313A39 1px solid; border-right:#313A39 1px solid; text-align:center; padding:12px 0 0 0}
+.bg02{ background:#EFEFEF; border-bottom:#313A39 1px solid; padding-bottom:12px }
+.p1{ border:#fff 1px solid}
+
+.p2{border:#3A3038 1px solid}
+
+.p3{border-left:#BFAF74 1px solid; border-right:#000 1px solid; vertical-align:top; width:26px; text-align:left}
+.p4,.p5{border-bottom:#000 1px solid; color:#C8030A ; font-size:14px; font-weight:bold; text-align:left;}
+.p5{ border-bottom:none}
+.p4 a:link,.p4 a:visited,.p4 a:hover,
+.p5 a:link,.p5 a:visited,.p5 a:hover{ color:#2F3492; font-size:12px; font-weight:normal; background:#FAF6ED}
+.bg021 {background:#EFEFEF; border-left:#313A39 1px solid; border-right:#313A39 1px solid; text-align:center; padding:12px 0}
+.p6{color:#717171; line-height:220%; font-size:12px; text-align:left; padding:15px 8px}
+.p6 a:link,.p6 a:visited,.p6 a:hover{font-size:16px; color:#000;}
+.today {background-color:#A0A0A0}
+.rmrb01{border-bottom:#D4D4D4 1px solid}
+.rmrb02{border:#D4D4D4 1px solid; border-bottom:none; height:24px; font-size:14px;}
+.wt{ color:#fff; text-align:left; font-size:14px}
+.org{ color:#D00007; font-size:14px; font-weight:bold}
+.org,.org a:link,.org a:visited,.org a:hover{ color:#D00007; font-size:14px; padding:0 6px; font-weight:bold;}
+.org2,.org2 a:link,.org2 a:visited,.org2 a:hover{ color:#D00007; font-size:14px; padding:0 6px;}.wt a:link,.wt a:visited,.wt a:hover{font-size:14px; color:#fff;}
+.tupian img{border:#AFAFB0 1px solid;}
+.indexfont13 a:link,.indexfont13 a:hover,.indexfont13 a:visited{ font:bold 28px/38px "SimSun"; color:#033266; display:block;}
+-->
+</style>
+</head>
+
+<body>
+<table width="982" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="/img/2007shouyehuigu/top_01.jpg" width="393" height="131" /></td>
+    <td><img src="/img/2007shouyehuigu/top_02.jpg" width="408" height="131" /></td>
+    <td><img src="/img/2007shouyehuigu/top_03.jpg" width="181" height="131" /></td>
+  </tr>
+</table>
+<table width="982" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="bg01"><table width="964" border="0" cellpadding="0" cellspacing="0" class="p1">
+      <tr>
+        <td height="28" align="center" bgcolor="#AA1500"><table width="98%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td  class="wt"><a href="http://www.people.com.cn/" target="_blank">人民网</a>—今日头条一览：</td><td align="right" class="wt" width="200" >2015年10月28日星期三</td>
+            <td width="29%"><table width="94%" border="0" cellspacing="0" cellpadding="0">
+                <FORM name=FieldSearchFormTwo onsubmit="return FieldSearchFormTwo_onsubmit();"     action=http://search.people.com.cn/was40/people/GB/smindex.jsp?type=1&channel= method=post> <tr>
+                  <td class="wt">新闻搜索 </td>
+                  <td><label>
+                    <input name="Content" type="text" size="16" />
+                  </label></td>
+                  <td><label>
+                    <input type="hidden" name="searchword"><input type="submit" name="Submit" value="搜索" />
+                  </label></td>
+                </tr></FORM>
+              </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="#AA1500"><table width="952" border="0" cellpadding="0" cellspacing="0" class="p2">
+          <tr>
+            <td align="left" valign="top" bgcolor="#FFFFFF"><br />
+             <table width="100%" border="0" cellspacing="4" cellpadding="3">
+              <tr>
+                <td style="text-align:center;width:660px;overflow:hidden;" class="indexfont13"></td>
+              </tr>
+            </table>
+			<table width="98%" border="0" align="center" cellspacing="8" cellpadding="0">
+                <tr>
+                  <td background="/img/2007shouyehuigu/p1_09.gif"><img src="/img/2007shouyehuigu/p1_09.gif" width="3" height="1" /></td>
+                </tr>
+              </table>
+                </td>
+            <td bgcolor="#FFFFFF" class="p3"><img src="/img/2007shouyehuigu/p1_01.gif" width="17" height="174" hspace="4" vspace="6" /></td>
+            <td width="245" valign="top" bgcolor="#FAF6ED"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td class="p4"><img src="/img/2007shouyehuigu/p1_02.gif" width="9" height="9" hspace="6" vspace="8" align="absmiddle" /><A href="http://news.people.com.cn/GB/28053/index.html" target="_blank"><font color="#C8030A"><b>24小时新闻排行榜</b></font></A></td>
+              </tr>
+              <tr>
+                <td class="p4" style="padding:6px 0 0 6px">1　<a href="http://pic.people.com.cn/n/2015/1027/c1016-27743640.html" title="湖南运钞车爆胎坠桥致3死 散落400万现金" target=_blank>湖南运钞车爆胎坠桥致3死&nbsp;散落4…</a><br>2　<a href="http://pic.people.com.cn/n/2015/1028/c1016-27748124.html" title="郑州抢劫银行主犯有4妻12子女 美妻和睦相处" target=_blank>郑州抢劫银行主犯有4妻12子女&nbsp;…</a><br>3　<a href="http://finance.people.com.cn/n/2015/1027/c1004-27744890.html" title="人社部:企退人员养老金月人均水平超2200元" target=_blank>人社部:企退人员养老金月人均水平…</a><br>4　<a href="http://world.people.com.cn/n/2015/1027/c1002-27744594.html" target=_blank>王毅外长：奉劝美方不要无事生非</a><br>5　<a href="http://lady.people.com.cn/n/2015/1027/c1014-27743033.html" title="范冰冰高圆圆美貌竟然不敌她！史上最全女星合影谁是终极抢镜王" target=_blank>范冰冰高圆圆美貌竟然不敌她！史上…</a><br>6　<a href="http://picchina.people.com.cn/n/2015/1027/c213236-27742835.html" target=_blank>杭州刷新世界最长信封链条纪录</a><br>7　<a href="http://money.people.com.cn/n/2015/1027/c42877-27742806.html" title="存款利率上限放开 钱存哪家银行最划算(表)" target=_blank>存款利率上限放开&nbsp;钱存哪家银行最…</a><br>
+                 <div align="right"><A href="http://news.people.com.cn/GB/28053/index.html" target="_blank">更多>>></a></div></td>
+              </tr>
+			  
+            </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="p4"><img src="/img/2007shouyehuigu/p1_02.gif" width="9" height="9" hspace="6" vspace="8" align="absmiddle" /><A href="http://news.people.com.cn/GB/28165/index.html" target="_blank"><font color="#C8030A"><b>24小时评论排行榜</b></font></A></td>
+                </tr>
+                <tr>
+                  <td class="p5" style="padding:6px 0 0 6px">
+				     <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+    <td width="3%">1</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152353550.html" target="_blank" class="anavy">王毅外长：奉劝美方不要无事...</a></td>
+    <td><a href="http://world.people.com.cn/n/2015/1027/c1002-27744594.html" target=_blank>阅读新闻</a></td>
+  </tr><tr>
+    <td width="3%">2</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152356095.html" target="_blank" class="anavy">人社部:企退人员养老金月人...</a></td>
+    <td><a href="http://finance.people.com.cn/n/2015/1027/c1004-27744890.html" target=_blank>阅读新闻</a></td>
+  </tr><tr>
+    <td width="3%">3</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152350588.html" target="_blank" class="anavy">人民日报评论员：时和势都在...</a></td>
+    <td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742452.html" target=_blank>阅读新闻</a></td>
+  </tr><tr>
+    <td width="3%">4</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152350631.html" target="_blank" class="anavy">人民日报人民时评：该让孩子...</a></td>
+    <td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742457.html" target=_blank>阅读新闻</a></td>
+  </tr><tr>
+    <td width="3%">5</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152355691.html" target="_blank" class="anavy">王毅回应美军舰赴南海岛礁1...</a></td>
+    <td><a href="http://military.people.com.cn/n/2015/1027/c1011-27745061.html" target=_blank>阅读新闻</a></td>
+  </tr><tr>
+    <td width="3%">6</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152350871.html" target="_blank" class="anavy">人民日报红船观澜：从严治党...</a></td>
+    <td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742500.html" target=_blank>阅读新闻</a></td>
+  </tr><tr>
+    <td width="3%">7</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152353985.html" target="_blank" class="anavy">经济日报：用发展眼光看待延...</a></td>
+    <td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27744836.html" target=_blank>阅读新闻</a></td>
+  </tr><tr>
+    <td width="3%">8</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152366033.html" target="_blank" class="anavy">国防部：中国海军兰州舰、台...</a></td>
+    <td><a href="http://military.people.com.cn/n/2015/1027/c1011-27746513.html" target=_blank>阅读新闻</a></td>
+  </tr><tr>
+    <td width="3%">9</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152357253.html" target="_blank" class="anavy">山西打掉黑恶势力150个 ...</a></td>
+    <td><a href="http://legal.people.com.cn/n/2015/1027/c42510-27744999.html" target=_blank>阅读新闻</a></td>
+  </tr><tr>
+    <td width="3%">10</td>
+    <td><a href="http://bbs1.people.com.cn/post/129/0/0/152350312.html" target="_blank" class="anavy">让纪律运行于心灵轨道（人民...</a></td>
+    <td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742473.html" target=_blank>阅读新闻</a></td>
+  </tr></table><div align="right"><A href="http://news.people.com.cn/GB/124659/index.html" target="_blank">更多>>></a></div>
+                  </td>
+                </tr>
+				
+              </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="982" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="bg02"><table width="964" border="0" cellpadding="0" cellspacing="0" class="p1">
+      <tr>
+        <td align="center" bgcolor="#AA1500"><table width="952" border="0" cellpadding="0" cellspacing="0" class="p2">
+            <tr>
+              <td align="center" valign="top" bgcolor="#FFFFFF"><br />
+                 <table width="95%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:#666 1px dashed">
+                <tr>
+                  <td id="td_1" width="120" height="27" align="center" bgcolor="#FAF6ED" class="org" style="border:#fff 1px solid; cursor:pointer;" onmouseover="return swapCon(1)"><img id="p_1" style="visibility:visible;"  src="/img/2007shouyehuigu/p1_02.gif" width="9" height="9" hspace="6" align="absmiddle" /><a href="http://www.people.com.cn/">今日要闻</a></td>
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+                <table width="96%" border="0" cellspacing="0" cellpadding="5" id="ta_1" style="display:block;">
+                  <tr>
+                    <td class="p6">
+                    ·<a href="http://politics.people.com.cn/n/2015/1028/c1001-27746953.html" target='_blank'>中纪委:有官员对一再亮明的纪律红线置若罔闻</a> [2015年10月28日06:12]<br />
+                    ·<a href="http://politics.people.com.cn/n/2015/1028/c1001-27746966.html" target='_blank'>安监总局分析典型事故 要求应急救援方法掌握到位</a> [2015年10月28日06:44]<br />·<a href="http://politics.people.com.cn/n/2015/1028/c1001-27746936.html" target='_blank'>人民日报:终身追责制绝不是鼓励领导干部做"太平官"</a> [2015年10月28日06:47]<br />·<a href="http://tw.people.com.cn/GB/43949/399272/index.html" target='_blank'>国台办:台政党同大陆交流无障碍</a> <a href="http://tw.people.com.cn/n/2015/1028/c14657-27749511.html" target='_blank'>欢迎关注"十三五"</a> [2015年10月28日13:13]<br />·<a href="http://politics.people.com.cn/n/2015/1028/c1001-27747734.html" target='_blank'>商务部原官员纵容妻子赌博隐瞒下属嫖娼被免职</a> [2015年10月28日06:03]<br />·<a href="http://bbs1.people.com.cn/post/2/1/2/152344675.html" target='_blank'>如何让互联网"加"上老年人</a> <a href="http://bbs1.people.com.cn/post/2/1/2/152361225.html" target='_blank'>"发红包防逃课"靠谱吗?</a> [2015年10月28日00:21]<br />
+                    ·<a href="http://society.people.com.cn/n/2015/1028/c1008-27747035.html" target='_blank'>我国今年就业目标用9个月即超额完成</a> [2015年10月28日06:21]<br />
+                    ·<a href="http://society.people.com.cn/n/2015/1028/c1008-27747110.html" target="_blank" target='_blank'>食药监：10批次调味品抽检不合格 部分产品砷超标</a> [2015年10月28日06:58]<br />·<a href="http://society.people.com.cn/n/2015/1028/c1008-27748576.html" target='_blank'>南京回应警车与数辆车碰擦:出警时紧急避让行人</a> [2015年10月28日06:57]<br />·<a href="http://fj.people.com.cn/n/2015/1027/c337006-26942098.html" target='_blank'>首届全国青年运动会福州落幕 下届将在山西举行</a> [2015年10月28日11:28]<br />
+                    ·<a href="http://world.people.com.cn/n/2015/1028/c1002-27747114.html" target='_blank'>联大再次通过决议要求美国解除对古巴封锁</a> [2015年10月28日07:03]<br />
+                    
+                    
+                    
+                    ·<a href="http://finance.people.com.cn/n/2015/1028/c1004-27747492.html" target="_blank" target='_blank'>个体私营经济吸纳就业</a> <a href="http://tc.people.com.cn/n/2015/1028/c183008-27749080.html" target='_blank'>苹果大中华区狂吸金</a> [2015年10月28日08:11]<br />
+                    ·<a href="http://money.people.com.cn/stock/n/2015/1028/c67815-27747425.html" target='_blank'>“十三五”概念股砸出黄金坑</a> <a href="http://money.people.com.cn/stock/n/2015/1028/c67815-27747359.html" target='_blank'>王亚伟概念股大换血</a> [2015年10月28日08:01]<br />·<a href="http://money.people.com.cn/n/2015/1028/c42877-27747205.html" target='_blank'>P2P监管细则年底前出台?</a> <a href="http://money.people.com.cn/n/2015/1028/c42877-27747392.html" target='_blank'>年底前降准降息仍是大概率</a> [2015年10月28日08:01]<br />
+                    ·<a href="http://auto.people.com.cn/n/2015/1028/c1005-27747226.html" target='_blank'>奥迪A6L降9.37万 "微增长"成车市主旋律</a> [2015年10月28日07:36]<br />
+                    ·<a href="http://auto.people.com.cn/n/2015/1028/c1005-27749228.html" target='_blank'>马斯克澄清特斯拉国产还需3年</a> <a href="http://auto.people.com.cn/n/2015/1028/c1005-27748878.html" target='_blank'>日系车增长被踩刹车</a> [2015年10月28日11:31]<br />·<a href="http://auto.people.com.cn/n/2015/1028/c1005-27747240.html" target='_blank'>通用明年年底在美停产别克威朗</a> <a href="http://auto.people.com.cn/n/2015/1028/c1005-27747247.html" target='_blank'>特斯拉否认国产</a> [2015年10月28日07:36]<br />
+                    ·<a href="http://house.people.com.cn/n/2015/1028/c164220-27747412.html" target='_blank'>绿地与云峰集团分家</a> <a href="http://house.people.com.cn/n/2015/1028/c164220-27747369.html" target='_blank'>成都楼市问题频发</a> [2015年10月28日07:54]<br />
+                    ·<a href="http://house.people.com.cn/n/2015/1028/c194441-27747317.html" target='_blank'>碧桂园或退丰台地块</a> <a href="http://house.people.com.cn/n/2015/1028/c194441-27747315.html" target='_blank'>北京住房月租金突破4000元</a> [2015年10月28日07:55]<br />
+                    ·<a href="http://health.people.com.cn/n/2015/1028/c21471-27748936.html" target='_blank'>一套从头到脚的护理指南</a> <a href="http://health.people.com.cn/n/2015/1028/c21471-27748079.html" target='_blank'>水果酵素能减肥?</a> [2015年10月28日11:31]<br />
+                    ·<a href="http://health.people.com.cn/n/2015/1028/c21471-27748127.html" target='_blank'>每天吃西柚患乳腺癌风险增大</a> <a href="http://health.people.com.cn/n/2015/1028/c21471-27748961.html" target='_blank'>钙流失的7大谣言</a> [2015年10月28日11:32]<br />
+                    ·<a href="http://shipin.people.com.cn/n/2015/1028/c85914-27749156.html" target='_blank'>食话实说：猪肉价格已持续下降一个月</a> [2015年10月28日11:36]<br />
+                    ·<a href="http://homea.people.com.cn/n/2015/1028/c41390-27747902.html" target='_blank'>家电业争夺"双11"</a> <a href="http://it.people.com.cn/n/2015/1028/c1009-27748251.html" target='_blank'>马云财富13年增540倍</a> [2015年10月28日11:36]<br />
+                    ·<a href="http://scitech.people.com.cn/n/2015/1028/c1007-27747307.html" target='_blank'>上海交大青蒿代谢工程育种研究获重大突破</a> [2015年10月28日08:04]<br />
+                    ·<a href="http://edu.people.com.cn/n/2015/1028/c1006-27747284.html" target='_blank'>修订版小学语文教材反映传统文化课文将占三成</a> [2015年10月28日08:07]<br />·<a href="http://media.people.com.cn/n/2015/1028/c120837-27747099.html" target='_blank'>汪涵首档网络综艺节目曝光</a> <a href="http://media.people.com.cn/n/2015/1028/c120837-27747118.html" target='_blank'>金星或加盟"非诚勿扰"</a> [2015年10月28日07:03]<br />
+                    ·<a href="http://culture.people.com.cn/n/2015/1028/c87423-27747147.html" target='_blank'>敬一丹叹阅读问题 天安门城楼城台将大修</a> [2015年10月28日07:58]<br />
+                    ·<a href="http://ent.people.com.cn/n/2015/1028/c1012-27749120.html" target='_blank'>刘亦菲晒妩媚自拍照 遭受"被死亡"乌龙事件的明星</a> [2015年10月28日11:38]<br />·<a href="http://sports.people.com.cn/n/2015/1028/c22176-27747333.html" target='_blank'>丁俊晖4:2领先被翻盘</a> <a href="http://sports.people.com.cn/n/2015/1028/c22176-27747405.html" target='_blank'>女篮联赛：新疆继续不败</a> [2015年10月28日08:08]<br />·<a href="http://ent.people.com.cn/n/2015/1028/c1012-27747241.html" target='_blank'>孙俪女儿偷穿高跟鞋 王思聪起诉"女友"索赔1元</a> [2015年10月28日07:34]<br />
+			</td>
+                  </tr>
+                </table>
+				 <table width="96%" border="0" cellspacing="0" cellpadding="5" id="ta_2" style="display:none;">
+                  <tr>
+                    <td class="p6"></td>
+                  </tr>
+                </table>
+                <br /></td>
+              <td bgcolor="#FFFFFF" class="p3"><img src="/img/2007shouyehuigu/p1_08.gif" width="24" height="136" /></td>
+              <td width="245" align="center" valign="top" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="197"><img src="/img/2007shouyehuigu/p1_14.gif" width="197" height="48" /></td>
+                  <td><a href="http://www.people.com.cn/"><img src="/img/2007shouyehuigu/p1_15.gif" width="47" height="48" border="0" /></a></td>
+                </tr>
+              </table>
+                <br />
+                <table width="90%" border="0" cellpadding="10" cellspacing="1" bgcolor="#F0F0F0">
+                  <tr>
+                    <td background="#ffffff"><iframe frameborder="0" width="180" height="200" scrolling="no" src="http://www.people.com.cn/GB/59476/review/" allowtransparency="true"></iframe></td>
+                  </tr>
+                </table>
+                <br />
+                <br />
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="rmrb01">
+                  <tr>
+                    <td width="5">&nbsp;</td>
+                    <td width="140" class="rmrb02">人民网首页往日回顾</td>
+                    <td align="right"></td>
+                  </tr>
+                </table>
+               <table width="90%" border="0" cellpadding="10" cellspacing="1" bgcolor="#F0F0F0">
+                  <tr>
+                    <td background="#ffffff"><iframe frameborder="0" width="180" height="200" scrolling="no" src="http://www.people.com.cn/GB/review/" allowtransparency="true"></iframe></td>
+                  </tr>
+                </table>
+                  <br />
+                <br />
+                <!--
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" class="rmrb01">
+                  <tr>
+                    <td width="5">&nbsp;</td>
+                    <td width="140" class="rmrb02">更多世界媒体头条</td>
+                    <td align="right"><a href="http://world.people.com.cn/GB/99283/"><img src="/img/2007shouyehuigu/p1_16.gif" alt=" " width="34" height="15" hspace="6" border="0" /></a></td>
+                  </tr>
+                </table>
+                <br />
+                <table width="90%" border="0" cellpadding="10" cellspacing="1" bgcolor="#F0F0F0">
+                  <tr>
+                    <td bgcolor="#FFFFFF"><iframe  frameborder="0" width="180" height="200" scrolling="no" src="http://world.people.com.cn/GB/99283/review/" ></iframe></td>
+                  </tr>
+                </table>
+                -->
+               </td>
+            </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="#AA1500">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<br />
+<br />
+<style>
+/*copyright*/
+#copyright{clear:both;width:960px;height:auto;margin:10px auto;text-align:center;color:#333;padding:15px 0;}
+#copyright p{text-align:center;line-height:200%;margin:25px auto;padding:0 0 15px 0;}
+#copyright a{color:#333;margin:0 3px;}
+#copyright p img{position:absolute;margin:-30px 0 0 20px;}
+</style>
+<div id="copyright">
+<a href="http://www.people.com.cn/GB/1018/22259/index.html" target="_blank">人民日报社概况</a>
+ | <a href="http://www.people.com.cn/GB/50142/353480/353481/index.html" target="_blank">关于人民网</a>
+ | <a href="http://www.people.com.cn/GB/1018/245490/index.html" target="_blank">招聘英才</a>
+ | <a href="http://www.people.com.cn/GB/208743/index.html" target="_blank">广告服务</a>
+ | <a href="http://www.people.com.cn/GB/50142/50462/index.html" target="_blank">合作加盟</a>
+ | <a href="http://gonggao.people.com.cn/" target="_blank">供稿服务</a>
+ | <a href="http://www.people.com.cn/n/2013/1227/c373005-23961344.html" target="_blank">网站声明</a>
+ | <a href="http://www.people.com.cn/n/2013/1227/c373006-23961372.html" target="_blank">网站律师</a>
+ | <a href="http://kf.people.com.cn/" target="_blank">呼叫中心</a>
+ | <a href="http://english.peopledaily.com.cn/102840/7560415.html" target="_blank">ENGLISH</a>
+<p>人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用 <br />
+Copyright &copy; 1997-2015 by www.people.com.cn all rights reserved <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0102000101300040" target="_blank"><img src="/img/2010wb/images/gongshang.gif" border="0" alt="" /></a></p>
+</div>
+<script type="text/javascript" src="/css/2010tianrun/webdig_test.js"></script>
+</body>
+</html>

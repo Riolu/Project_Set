@@ -1,0 +1,2780 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+	<head>
+		<base href="http://t.people.com.cn:80/microblog/"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+		<meta http-equiv="Content-Language" content="zh-CN" />
+		<meta content="all" name="robots" />
+		<meta name="author" content=" " />
+		<meta name="Copyright" content="  " />
+		<meta name="description" content="  " />
+		<meta content=" " name="keywords" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+		<title>人民微博--编辑记者微博群</title>
+		<link rel="stylesheet" href="http://i0.peopleurl.cn/microblog/specialsubject/department/r2010weibo.css" type="text/css"
+			media="all" />
+		<link href="http://i0.peopleurl.cn/microblog/css/dialog.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+		
+		<script type='text/javascript' src='/dwr/engine.js'></script>
+		<script type='text/javascript' src='/dwr/interface/reporter.js'></script>
+		<style type="text/css">
+#dp a:hover{color:#FFFF00;text-decoration:none;}
+
+.scrollImgList1 {
+	width: 232px;
+	height: 140px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+
+.scrollImgList1 {
+	zoom: 1;
+	overflow: hidden;
+}
+
+.scrollImgList1 .leftBtn {
+	float: left;
+	width: 13px;
+	height: 13px;
+	cursor: pointer;
+	background: url(http://i0.peopleurl.cn/microblog/specialsubject/department/images/ico1.gif) no-repeat;
+}
+
+.scrollImgList1 .rightBtn {
+	float: right;
+	width: 13px;
+	height: 13px;
+	cursor: pointer;
+	background: url(http://i0.peopleurl.cn/microblog/specialsubject/department/images/ico2.gif) no-repeat;
+}
+
+.scrollImgList1 .Cont {
+	float: left;
+	width: 212px;
+	overflow: hidden;
+	padding: 0px 0 0;
+	display: inline;
+}
+
+.scrollImgList1 .scrCont {
+	width: 32766px;
+	zoom: 1;
+	overflow: hidden;
+}
+
+#List1_1,#List2_1 {
+	float: left;
+}
+
+.scrollImgList1 .box {
+	width: 230px;
+	text-align: center;
+	height: 120px;
+	float: left
+}
+
+.scrollImgList1 .box img {
+	display: block;
+	margin: 0;
+	border: 1px solid #c3c3c3;
+}
+
+.scrollImgList1 .box a:hover img {
+	border: 1px solid #c00;
+}
+
+.boxt {
+	width: 50px;
+	margin: 0 auto;
+}
+</style>
+		<script language="javascript" type="text/javascript" src="http://i0.peopleurl.cn/microblog/js_v2.0/plugin/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="http://i0.peopleurl.cn/microblog/js_v2.0/specialsubject.js"></script>
+		<script language="javascript" type="text/javascript" src="http://i0.peopleurl.cn/microblog/js_v2.0/page_action.js"></script>
+		<script language="javascript" type="text/javascript" src="http://i0.peopleurl.cn/microblog/js_v2.0/user_action.js"></script>
+		<script language="javascript" type="text/javascript" src="http://i0.peopleurl.cn/microblog/js_v2.0/common.js"></script>
+		<script language="javascript" type="text/javascript" src="http://i0.peopleurl.cn/microblog/js_v2.0/plugin/dialog.js"></script>
+		<script language="javascript" type="text/javascript" src="http://i0.peopleurl.cn/microblog/js_v2.0/anchor.js"></script>		
+		<script language="javascript" type="text/javascript" src="/dwr/engine.js"></script>
+		<script language="javascript" type="text/javascript" src="/dwr/interface/userindexmain.js"></script>
+		<script language="javascript" type="text/javascript" src="/dwr/interface/usercommonajax.js"></script>
+		<script language="javascript" type="text/javascript">
+// <![CDATA[
+(function(a){
+	a.cr=function(b){
+		return{version:"0.1"}
+	};
+	a.cr.getVersion=function(){
+		return a.cr()
+	};
+	a.fn.getCrControl=function(b){
+		var c=null;
+		this.each(function(){var d=a(this).data(b);	if(d){c=d}});
+		return c
+		}
+}
+)(jQuery);
+(function(b){
+	var a=function(e,d){
+			var c=this;
+			c.elem=b(e);
+			c.opts=b.extend({width:620,speed:500,num:5,indicate:6000,pause:12000,auto:true},d||{});
+			c.interval=0;
+			c.timeout=0;
+			c.flag=false;
+			c.shell=c.elem.find("ul");
+			b.extend(c,
+						  {
+							  init:function(){
+								  	c.elem.find("p.flip_pr").unbind().bind("click",c.preScroll);
+								  	c.elem.find("p.flip_nx").unbind().bind("click",c.nexScroll);
+								  	if(c.opts.auto){c.autoScroll()}
+								  	},
+							  autoScroll:function(){
+								  	clearInterval(c.interval);
+								  	c.interval=setInterval(function(){c.nexScroll("auto")},c.opts.indicate)},
+							  pauseAuto:function(f){
+							  		if(!(typeof f=="string"&&"auto"==f))
+							  		{
+							  			clearInterval(c.interval);
+							  			clearTimeout(c.timeout);
+							  			c.timeout=setTimeout(c.autoScroll,c.opts.pause)
+							  		}},
+							  preScroll:function(g){
+							  		if(c.flag){return false}
+							  		c.flag=true;
+							  		c.pauseAuto(g);
+							  		c.shell.css({left:"-"+c.opts.width*2+"px"});
+							  		for(var f=0;f<c.opts.num;f++){
+							  			b(c.shell).find("li:last").prependTo(c.shell)}
+							  		c.shell.animate({left:"-"+c.opts.width+"px"},c.opts.speed,function(){c.flag=false})},
+							  nexScroll:function(g){
+							  		if(c.flag){return false}
+							  		c.flag=true;c.pauseAuto(g);
+							  		c.shell.css({left:0});
+							  		for(var f=0;f<c.opts.num;f++){
+							  			b(c.shell).find("li:first").appendTo(c.shell)}
+							  		c.shell.animate({left:"-"+c.opts.width+"px"},c.opts.speed,function(){c.flag=false})
+							  		}
+						  	});
+				c.init()
+	};
+	b.fn.crScrollList=function(c){
+		return b(this).each(function(){b(this).removeData("crScrollList").data("crScrollList",new a(this,c))})
+	}
+})
+(jQuery);
+
+$(function(){
+	var time=5000;
+	var data_num=0;
+	var list_num=44;
+	var row_count=0;
+	var timer1;
+	var timer2;
+	var msgNoMatch;
+	function displayblock(rn){
+		return function(){
+			$("#recent"+rn).remove().css("display","none").prependTo("#tw_recent")
+			}
+	}
+	function addblock(){
+		var h=(row_count+list_num)%data_num;
+		var line_height=0;
+		row_count=(row_count+1)%data_num;
+		var content=$("#recent"+h).find("#nomatchmsg").html().length;
+		var clq=parseInt(content/48); 
+		switch(clq){
+			case 0:
+				line_height=85;
+				break;
+			case 1:
+				line_height=105;
+				break;
+			case 2:
+				line_height=125;
+				break;
+			case 3:
+				line_height=150;
+				break;
+			case 4:
+				line_height=175;
+				break;												
+				default:
+				break;
+		}
+		$("#recent"+h).css("height","1px").animate({height:line_height+"px",opacity: 'toggle'},1000,displayblock(row_count));
+		timer1=setTimeout(addblock,time);
+	}
+	window.showRecent=function(l){
+	try{
+		$("#tw_recent").html(l.recent);
+		var k=data_num=$("#tw_recent").find("div.twi").length;
+		$("#tw_recent").find("div.twi").each(function(){k--;$(this).attr("id","recent"+k)});
+		for(var h=0;h<list_num;h++){$("#recent"+h).fadeIn("slow");}
+		timer2=setTimeout(addblock,time);
+	}
+	catch(m){}
+    };
+    window.stopRecent=function(){
+    	clearTimeout(timer1);
+    	clearTimeout(timer2);//当未滚动之前
+    }
+    window.restarRecent=function(){
+    	setTimeout(addblock,0);
+    }
+	var recent ;
+	reporter.creatMsgList(function(data){
+		recent={"recent":data};
+		showRecent(recent);
+	});
+$("#on-off").toggle(
+		  function () {
+		    $(this).attr("src","/microblog/specialsubject/department/images/ico11.gif");
+		    stopRecent();
+		  },
+		  function () {
+		    $(this).attr("src","/microblog/specialsubject/department/images/ico10.gif");
+		    restarRecent();
+		  }
+		);   
+});
+//]]></script>
+
+	</head>
+
+
+	<body>
+		<div class="width972 bannr">
+			<div class="bannra">
+				<script language="JavaScript"> 
+// <![CDATA[
+today=new Date();
+var hours = today.getHours();
+var minutes = today.getMinutes();
+var seconds = today.getSeconds();
+var timeValue = "<FONT COLOR=black>" + ((hours >12) ? hours -12 :hours); timeValue += ((minutes < 10) ? "<BLINK><FONT COLOR=black>:</FONT></BLINK>0" : "<BLINK><FONT COLOR=black>:</FONT></BLINK>") + minutes+"</FONT></FONT>";
+timeValue += (hours >= 12) ? "<FONT COLOR=blue><I><B>pm</B></I></FONT>" : "<FONT COLOR=blue><B><I>am</I></B></FONT>";
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i] }
+var d=new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+document.write("<font color=black>",today.getYear(),"年",today.getMonth()+1,"月<br /><h1>",today.getDate(),"日 </h1>",d[today.getDay()+1],"<br />"); 
+//]]>
+</script>
+				<img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/logo2.gif" width="105" height="59" alt="" />
+				<br />
+				
+				
+				<a href="/tologin.action?refer=http%3A%2F%2Ft.people.com.cn%2Fdepartment.action">登录</a>
+				
+			</div>
+		</div>
+		<div class="width972">
+			<div class="width972">
+				<div id="dp" class="width960 nav">
+					
+						<a  onclick="javascript:scroller('group_48', 800);" style="cursor:pointer;;font-size: 12px;">办公厅</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_39', 800);" style="cursor:pointer;;font-size: 12px;">总编室</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_40', 800);" style="cursor:pointer;;font-size: 12px;">新闻协调部</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_41', 800);" style="cursor:pointer;;font-size: 12px;">地方部</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_42', 800);" style="cursor:pointer;;font-size: 12px;">经济社会部</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_43', 800);" style="cursor:pointer;;font-size: 12px;">政治文化部</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_44', 800);" style="cursor:pointer;;font-size: 12px;">国际部</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_45', 800);" style="cursor:pointer;;font-size: 12px;">文艺部</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_46', 800);" style="cursor:pointer;;font-size: 12px;">评论部</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_59', 800);" style="cursor:pointer;;font-size: 12px;">理论部</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_47', 800);" style="cursor:pointer;;font-size: 12px;">体育部</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_51', 800);" style="cursor:pointer;;font-size: 12px;">各地分社</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_50', 800);" style="cursor:pointer;;font-size: 12px;">海外版</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_62', 800);" style="cursor:pointer;;font-size: 12px;">其他部门</a>
+						|
+					
+						<a  onclick="javascript:scroller('group_64', 800);" style="cursor:pointer;;font-size: 12px;">人民网</a>
+						
+					
+				</div>
+				<div class="width960 marg_top10">
+					<div class="p1_left">
+						<div class="p1_a bor">
+							<div class="p_tit p_tit1">
+								<span> <b><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/ico3.gif" width="14"
+											height="12" alt="" />热博导读</b> </span>
+							<img id="on-off" src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/ico10.gif" width="42" height="18" alt="" />
+							</div>
+							<div class="twis" id="tw_recent">
+							</div>
+						</div>
+
+						
+						<div class="p1_b bor marg_top10" id="group_48">
+							<a name="group_48"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=48" target="_blank">办公厅</a> </b>共 11 人| 475 条微博| 48647 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/dingding"><img src="http://i0.peopleurl.cn/headimg/201001/head4090_m.jpg" width="58" height="58"
+										alt="丁丁" /> </a><b title="丁丁" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">丁丁</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4090);" id="a_4090"><img id="img_4090" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4090" id=4090/>
+							
+							<div class="p1_e1">
+								<a href="/4222"><img src="http://i0.peopleurl.cn/headimg/201002/head4222_m.jpg" width="58" height="58"
+										alt="顾名贵" /> </a><b title="顾名贵" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">顾名贵</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4222);" id="a_4222"><img id="img_4222" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4222" id=4222/>
+							
+							<div class="p1_e1">
+								<a href="/gaoshi"><img src="http://i0.peopleurl.cn/headimg/201003/head45476_m.jpg" width="58" height="58"
+										alt="高石" /> </a><b title="高石" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">高石</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(45476);" id="a_45476"><img id="img_45476" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="45476" id=45476/>
+							
+							<div class="p1_e1">
+								<a href="/168985"><img src="http://i0.peopleurl.cn/headimg/201008/head168985_m.jpg" width="58" height="58"
+										alt="淡定02" /> </a><b title="淡定02" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">淡定02</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(168985);" id="a_168985"><img id="img_168985" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="168985" id=168985/>
+							
+							<div class="p1_e1">
+								<a href="/4241"><img src="http://i0.peopleurl.cn/headimg/201001/head4241_m.jpg" width="58" height="58"
+										alt="王昊男" /> </a><b title="王昊男" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">王昊男</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4241);" id="a_4241"><img id="img_4241" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4241" id=4241/>
+							
+							<div class="p1_e1">
+								<a href="/4224"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="刘方明" /> </a><b title="刘方明" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘方明</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4224);" id="a_4224"><img id="img_4224" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4224" id=4224/>
+							
+							<div class="p1_e1">
+								<a href="/4226"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="吴楠" /> </a><b title="吴楠" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">吴楠</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4226);" id="a_4226"><img id="img_4226" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4226" id=4226/>
+							
+							<div class="p1_e1">
+								<a href="/4223"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="刘汝伟" /> </a><b title="刘汝伟" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘汝伟</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4223);" id="a_4223"><img id="img_4223" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4223" id=4223/>
+							
+							<div class="p1_e1">
+								<a href="/4230"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="张强" /> </a><b title="张强" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张强</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4230);" id="a_4230"><img id="img_4230" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4230" id=4230/>
+							
+							<div class="p1_e1">
+								<a href="/4227"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="郭振宇" /> </a><b title="郭振宇" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">郭振宇</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4227);" id="a_4227"><img id="img_4227" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4227" id=4227/>
+							
+							<div class="p1_e1">
+								<a href="/4225"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="陈跃权" /> </a><b title="陈跃权" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">陈跃权</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4225);" id="a_4225"><img id="img_4225" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4225" id=4225/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(48);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_39">
+							<a name="group_39"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=39" target="_blank">总编室</a> </b>共 6 人| 1094 条微博| 29236 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/4663"><img src="http://i0.peopleurl.cn/headimg/201002/head4663_m.jpg" width="58" height="58"
+										alt="邓建胜" /> </a><b title="邓建胜" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">邓建胜</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4663);" id="a_4663"><img id="img_4663" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4663" id=4663/>
+							
+							<div class="p1_e1">
+								<a href="/4512"><img src="http://i0.peopleurl.cn/headimg/201001/head4512_m.jpg" width="58" height="58"
+										alt="李智勇" /> </a><b title="李智勇" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李智勇</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4512);" id="a_4512"><img id="img_4512" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4512" id=4512/>
+							
+							<div class="p1_e1">
+								<a href="/4507"><img src="http://i0.peopleurl.cn/headimg/201012/head4507_m.jpg" width="58" height="58"
+										alt="yzz" /> </a><b title="yzz" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">yzz</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4507);" id="a_4507"><img id="img_4507" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4507" id=4507/>
+							
+							<div class="p1_e1">
+								<a href="/109969"><img src="http://i0.peopleurl.cn/headimg/201002/head109969_m.jpg" width="58" height="58"
+										alt="李维娜" /> </a><b title="李维娜" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李维娜</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(109969);" id="a_109969"><img id="img_109969" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="109969" id=109969/>
+							
+							<div class="p1_e1">
+								<a href="/4509"><img src="http://i0.peopleurl.cn/headimg/201002/head4509_m.jpg" width="58" height="58"
+										alt="刘龙" /> </a><b title="刘龙" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘龙</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4509);" id="a_4509"><img id="img_4509" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4509" id=4509/>
+							
+							<div class="p1_e1">
+								<a href="/198782"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="张彦春" /> </a><b title="张彦春" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张彦春</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(198782);" id="a_198782"><img id="img_198782" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="198782" id=198782/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(39);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_40">
+							<a name="group_40"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=40" target="_blank">新闻协调部</a> </b>共 21 人| 2077 条微博| 42695 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/3951"><img src="http://i0.peopleurl.cn/headimg/20150306/head3951_201503060103_m.jpg" width="58" height="58"
+										alt="阿唐" /> </a><b title="阿唐" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">阿唐</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3951);" id="a_3951"><img id="img_3951" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3951" id=3951/>
+							
+							<div class="p1_e1">
+								<a href="/3967"><img src="http://i0.peopleurl.cn/headimg/201001/head3967_m.jpg" width="58" height="58"
+										alt="王舒怀" /> </a><b title="王舒怀" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">王舒怀</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3967);" id="a_3967"><img id="img_3967" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3967" id=3967/>
+							
+							<div class="p1_e1">
+								<a href="/3964"><img src="http://i0.peopleurl.cn/headimg/201002/head3964_m.jpg" width="58" height="58"
+										alt="任胜利" /> </a><b title="任胜利" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">任胜利</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3964);" id="a_3964"><img id="img_3964" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3964" id=3964/>
+							
+							<div class="p1_e1">
+								<a href="/3962"><img src="http://i0.peopleurl.cn/headimg/201007/head3962_m.jpg" width="58" height="58"
+										alt="刘晓鹏" /> </a><b title="刘晓鹏" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘晓鹏</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3962);" id="a_3962"><img id="img_3962" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3962" id=3962/>
+							
+							<div class="p1_e1">
+								<a href="/3960"><img src="http://i0.peopleurl.cn/headimg/201001/head3960_m.jpg" width="58" height="58"
+										alt="李鹤" /> </a><b title="李鹤" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李鹤</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3960);" id="a_3960"><img id="img_3960" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3960" id=3960/>
+							
+							<div class="p1_e1">
+								<a href="/3966"><img src="http://i0.peopleurl.cn/headimg/201007/head3966_m.jpg" width="58" height="58"
+										alt="施芳" /> </a><b title="施芳" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">施芳</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3966);" id="a_3966"><img id="img_3966" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3966" id=3966/>
+							
+							<div class="p1_e1">
+								<a href="/4372"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="邓晓霞" /> </a><b title="邓晓霞" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">邓晓霞</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4372);" id="a_4372"><img id="img_4372" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4372" id=4372/>
+							
+							<div class="p1_e1">
+								<a href="/3984"><img src="http://i0.peopleurl.cn/headimg/201004/head3984_m.jpg" width="58" height="58"
+										alt="丁伟" /> </a><b title="丁伟" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">丁伟</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3984);" id="a_3984"><img id="img_3984" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3984" id=3984/>
+							
+							<div class="p1_e1">
+								<a href="/3961"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="吴建群" /> </a><b title="吴建群" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">吴建群</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3961);" id="a_3961"><img id="img_3961" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3961" id=3961/>
+							
+							<div class="p1_e1">
+								<a href="/3958"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="张音" /> </a><b title="张音" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张音</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3958);" id="a_3958"><img id="img_3958" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3958" id=3958/>
+							
+							<div class="p1_e1">
+								<a href="/3965"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="周朗" /> </a><b title="周朗" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">周朗</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3965);" id="a_3965"><img id="img_3965" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3965" id=3965/>
+							
+							<div class="p1_e1">
+								<a href="/3949"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="王欣" /> </a><b title="王欣" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">王欣</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(3949);" id="a_3949"><img id="img_3949" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="3949" id=3949/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(40);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_41">
+							<a name="group_41"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=41" target="_blank">地方部</a> </b>共 19 人| 194 条微博| 39900 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/110002"><img src="http://i0.peopleurl.cn/headimg/201003/head110002_m.jpg" width="58" height="58"
+										alt="李波" /> </a><b title="李波" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李波</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(110002);" id="a_110002"><img id="img_110002" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="110002" id=110002/>
+							
+							<div class="p1_e1">
+								<a href="/7462"><img src="http://i0.peopleurl.cn/headimg/201007/head7462_m.jpg" width="58" height="58"
+										alt="万秀斌" /> </a><b title="万秀斌" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">万秀斌</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(7462);" id="a_7462"><img id="img_7462" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="7462" id=7462/>
+							
+							<div class="p1_e1">
+								<a href="/164696"><img src="http://i0.peopleurl.cn/headimg/201007/head164696_m.jpg" width="58" height="58"
+										alt="李洪淼" /> </a><b title="李洪淼" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李洪淼</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(164696);" id="a_164696"><img id="img_164696" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="164696" id=164696/>
+							
+							<div class="p1_e1">
+								<a href="/164714"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="刘波" /> </a><b title="刘波" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘波</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(164714);" id="a_164714"><img id="img_164714" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="164714" id=164714/>
+							
+							<div class="p1_e1">
+								<a href="/110307"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="禹伟良" /> </a><b title="禹伟良" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">禹伟良</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(110307);" id="a_110307"><img id="img_110307" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="110307" id=110307/>
+							
+							<div class="p1_e1">
+								<a href="/164706"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="张凤来" /> </a><b title="张凤来" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张凤来</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(164706);" id="a_164706"><img id="img_164706" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="164706" id=164706/>
+							
+							<div class="p1_e1">
+								<a href="/164733"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="旷铁军" /> </a><b title="旷铁军" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">旷铁军</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(164733);" id="a_164733"><img id="img_164733" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="164733" id=164733/>
+							
+							<div class="p1_e1">
+								<a href="/164704"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="王弢" /> </a><b title="王弢" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">王弢</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(164704);" id="a_164704"><img id="img_164704" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="164704" id=164704/>
+							
+							<div class="p1_e1">
+								<a href="/164732"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="徐清" /> </a><b title="徐清" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">徐清</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(164732);" id="a_164732"><img id="img_164732" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="164732" id=164732/>
+							
+							<div class="p1_e1">
+								<a href="/164730"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="何昱华" /> </a><b title="何昱华" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">何昱华</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(164730);" id="a_164730"><img id="img_164730" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="164730" id=164730/>
+							
+							<div class="p1_e1">
+								<a href="/liuzhiqiang"><img src="http://i0.peopleurl.cn/headimg/201008/head173536_m.jpg" width="58" height="58"
+										alt="刘志强" /> </a><b title="刘志强" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘志强</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(173536);" id="a_173536"><img id="img_173536" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="173536" id=173536/>
+							
+							<div class="p1_e1">
+								<a href="/164694"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="施娟" /> </a><b title="施娟" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">施娟</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(164694);" id="a_164694"><img id="img_164694" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="164694" id=164694/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(41);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_42">
+							<a name="group_42"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=42" target="_blank">经济社会部</a> </b>共 4 人| 42 条微博| 13102 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/36071"><img src="http://i0.peopleurl.cn/headimg/201003/head36071_m.jpg" width="58" height="58"
+										alt="赵亚辉" /> </a><b title="赵亚辉" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">赵亚辉</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(36071);" id="a_36071"><img id="img_36071" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="36071" id=36071/>
+							
+							<div class="p1_e1">
+								<a href="/110063"><img src="http://i0.peopleurl.cn/headimg/201007/head110063_m.jpg" width="58" height="58"
+										alt="赵永平" /> </a><b title="赵永平" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">赵永平</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(110063);" id="a_110063"><img id="img_110063" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="110063" id=110063/>
+							
+							<div class="p1_e1">
+								<a href="/110215"><img src="http://i0.peopleurl.cn/headimg/201007/head110215_m.jpg" width="58" height="58"
+										alt="王君平" /> </a><b title="王君平" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">王君平</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(110215);" id="a_110215"><img id="img_110215" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="110215" id=110215/>
+							
+							<div class="p1_e1">
+								<a href="/rmzhujun"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="朱隽" /> </a><b title="朱隽" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">朱隽</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(259617);" id="a_259617"><img id="img_259617" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="259617" id=259617/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(42);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_43">
+							<a name="group_43"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=43" target="_blank">政治文化部</a> </b>共 10 人| 164 条微博| 32565 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/4879"><img src="http://i0.peopleurl.cn/headimg/201002/head4879_m.jpg" width="58" height="58"
+										alt="李章军" /> </a><b title="李章军" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李章军</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4879);" id="a_4879"><img id="img_4879" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4879" id=4879/>
+							
+							<div class="p1_e1">
+								<a href="/4928"><img src="http://i0.peopleurl.cn/headimg/201002/head4928_m.jpg" width="58" height="58"
+										alt="姜洁" /> </a><b title="姜洁" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">姜洁</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4928);" id="a_4928"><img id="img_4928" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4928" id=4928/>
+							
+							<div class="p1_e1">
+								<a href="/4948"><img src="http://i0.peopleurl.cn/headimg/201007/head4948_m.jpg" width="58" height="58"
+										alt="刘维涛" /> </a><b title="刘维涛" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘维涛</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4948);" id="a_4948"><img id="img_4948" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4948" id=4948/>
+							
+							<div class="p1_e1">
+								<a href="/4896"><img src="http://i0.peopleurl.cn/headimg/201002/head4896_m.jpg" width="58" height="58"
+										alt="廖文根" /> </a><b title="廖文根" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">廖文根</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4896);" id="a_4896"><img id="img_4896" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4896" id=4896/>
+							
+							<div class="p1_e1">
+								<a href="/4958"><img src="http://i0.peopleurl.cn/headimg/201007/head4958_m.jpg" width="58" height="58"
+										alt="倪光辉" /> </a><b title="倪光辉" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">倪光辉</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4958);" id="a_4958"><img id="img_4958" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4958" id=4958/>
+							
+							<div class="p1_e1">
+								<a href="/4937"><img src="http://i0.peopleurl.cn/headimg/201007/head4937_m.jpg" width="58" height="58"
+										alt="裴智勇" /> </a><b title="裴智勇" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">裴智勇</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4937);" id="a_4937"><img id="img_4937" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4937" id=4937/>
+							
+							<div class="p1_e1">
+								<a href="/4968"><img src="http://i0.peopleurl.cn/headimg/201007/head4968_m.jpg" width="58" height="58"
+										alt="孙立极" /> </a><b title="孙立极" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">孙立极</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4968);" id="a_4968"><img id="img_4968" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4968" id=4968/>
+							
+							<div class="p1_e1">
+								<a href="/4949"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="李舫" /> </a><b title="李舫" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李舫</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4949);" id="a_4949"><img id="img_4949" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4949" id=4949/>
+							
+							<div class="p1_e1">
+								<a href="/4947"><img src="http://i0.peopleurl.cn/headimg/201007/head4947_m.jpg" width="58" height="58"
+										alt="柳晓森" /> </a><b title="柳晓森" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">柳晓森</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4947);" id="a_4947"><img id="img_4947" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4947" id=4947/>
+							
+							<div class="p1_e1">
+								<a href="/4931"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="毛磊" /> </a><b title="毛磊" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">毛磊</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4931);" id="a_4931"><img id="img_4931" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4931" id=4931/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(43);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_44">
+							<a name="group_44"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=44" target="_blank">国际部</a> </b>共 7 人| 326 条微博| 21928 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/110090"><img src="http://i0.peopleurl.cn/headimg/201003/head110090_m.jpg" width="58" height="58"
+										alt="张蕾" /> </a><b title="张蕾" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张蕾</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(110090);" id="a_110090"><img id="img_110090" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="110090" id=110090/>
+							
+							<div class="p1_e1">
+								<a href="/renyan"><img src="http://i0.peopleurl.cn/headimg/20140518/head170977_201405180233_m.jpg" width="58" height="58"
+										alt="任彦" /> </a><b title="任彦" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">任彦</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(170977);" id="a_170977"><img id="img_170977" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="170977" id=170977/>
+							
+							<div class="p1_e1">
+								<a href="/4855"><img src="http://i0.peopleurl.cn/headimg/201002/head4855_m.jpg" width="58" height="58"
+										alt="杜尚泽" /> </a><b title="杜尚泽" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">杜尚泽</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4855);" id="a_4855"><img id="img_4855" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4855" id=4855/>
+							
+							<div class="p1_e1">
+								<a href="/cuiyin"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="崔寅" /> </a><b title="崔寅" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">崔寅</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(256788);" id="a_256788"><img id="img_256788" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="256788" id=256788/>
+							
+							<div class="p1_e1">
+								<a href="/huangpeizhao"><img src="http://i0.peopleurl.cn/headimg/201103/head254052_m.jpg" width="58" height="58"
+										alt="黄培昭" /> </a><b title="黄培昭" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">黄培昭</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(254052);" id="a_254052"><img id="img_254052" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="254052" id=254052/>
+							
+							<div class="p1_e1">
+								<a href="/254012"><img src="http://i0.peopleurl.cn/headimg/201103/head254012_m.jpg" width="58" height="58"
+										alt="吕鸿" /> </a><b title="吕鸿" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">吕鸿</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(254012);" id="a_254012"><img id="img_254012" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="254012" id=254012/>
+							
+							<div class="p1_e1">
+								<a href="/lilygeliu"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="刘歌" /> </a><b title="刘歌" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘歌</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(237380);" id="a_237380"><img id="img_237380" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="237380" id=237380/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(44);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_45">
+							<a name="group_45"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=45" target="_blank">文艺部</a> </b>共 14 人| 8 条微博| 28060 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/110226"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="董阳" /> </a><b title="董阳" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">董阳</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(110226);" id="a_110226"><img id="img_110226" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="110226" id=110226/>
+							
+							<div class="p1_e1">
+								<a href="/162808"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="常莉" /> </a><b title="常莉" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">常莉</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162808);" id="a_162808"><img id="img_162808" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162808" id=162808/>
+							
+							<div class="p1_e1">
+								<a href="/rmrbxuxin"><img src="http://i0.peopleurl.cn/headimg/201007/head162834_m.jpg" width="58" height="58"
+										alt="徐馨" /> </a><b title="徐馨" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">徐馨</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162834);" id="a_162834"><img id="img_162834" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162834" id=162834/>
+							
+							<div class="p1_e1">
+								<a href="/liuqiong"><img src="http://i0.peopleurl.cn/headimg/201007/head155040_m.jpg" width="58" height="58"
+										alt="刘琼" /> </a><b title="刘琼" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘琼</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(155040);" id="a_155040"><img id="img_155040" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="155040" id=155040/>
+							
+							<div class="p1_e1">
+								<a href="/162820"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="向兵" /> </a><b title="向兵" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">向兵</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162820);" id="a_162820"><img id="img_162820" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162820" id=162820/>
+							
+							<div class="p1_e1">
+								<a href="/wangyufang"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="王玉芳" /> </a><b title="王玉芳" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">王玉芳</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162903);" id="a_162903"><img id="img_162903" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162903" id=162903/>
+							
+							<div class="p1_e1">
+								<a href="/luoxuecun"><img src="http://i0.peopleurl.cn/headimg/201007/head162818_m.jpg" width="58" height="58"
+										alt="罗雪村" /> </a><b title="罗雪村" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">罗雪村</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162818);" id="a_162818"><img id="img_162818" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162818" id=162818/>
+							
+							<div class="p1_e1">
+								<a href="/shaojianwu"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="邵建武" /> </a><b title="邵建武" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">邵建武</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162901);" id="a_162901"><img id="img_162901" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162901" id=162901/>
+							
+							<div class="p1_e1">
+								<a href="/rmrblihui"><img src="http://i0.peopleurl.cn/headimg/201007/head162813_m.jpg" width="58" height="58"
+										alt="李辉" /> </a><b title="李辉" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李辉</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162813);" id="a_162813"><img id="img_162813" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162813" id=162813/>
+							
+							<div class="p1_e1">
+								<a href="/wangbisheng"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="王必胜" /> </a><b title="王必胜" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">王必胜</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162894);" id="a_162894"><img id="img_162894" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162894" id=162894/>
+							
+							<div class="p1_e1">
+								<a href="/162811"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="徐红梅" /> </a><b title="徐红梅" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">徐红梅</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162811);" id="a_162811"><img id="img_162811" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162811" id=162811/>
+							
+							<div class="p1_e1">
+								<a href="/162842"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="郭运德" /> </a><b title="郭运德" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">郭运德</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(162842);" id="a_162842"><img id="img_162842" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="162842" id=162842/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(45);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_46">
+							<a name="group_46"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=46" target="_blank">评论部</a> </b>共 9 人| 842 条微博| 30696 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/4561"><img src="http://i0.peopleurl.cn/headimg/20141002/head4561_201410020924_m.jpg" width="58" height="58"
+										alt="詹勇" /> </a><b title="詹勇" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">詹勇</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4561);" id="a_4561"><img id="img_4561" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4561" id=4561/>
+							
+							<div class="p1_e1">
+								<a href="/rmrbzt"><img src="http://i0.peopleurl.cn/headimg/201007/head4560_m.jpg" width="58" height="58"
+										alt="张铁" /> </a><b title="张铁" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张铁</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4560);" id="a_4560"><img id="img_4560" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4560" id=4560/>
+							
+							<div class="p1_e1">
+								<a href="/4556"><img src="http://i0.peopleurl.cn/headimg/201007/head4556_m.jpg" width="58" height="58"
+										alt="李长虹" /> </a><b title="李长虹" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李长虹</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4556);" id="a_4556"><img id="img_4556" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4556" id=4556/>
+							
+							<div class="p1_e1">
+								<a href="/4553"><img src="http://i0.peopleurl.cn/headimg/201002/head4553_m.jpg" width="58" height="58"
+										alt="卢新宁" /> </a><b title="卢新宁" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">卢新宁</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4553);" id="a_4553"><img id="img_4553" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4553" id=4553/>
+							
+							<div class="p1_e1">
+								<a href="/4557"><img src="http://i0.peopleurl.cn/headimg/201007/head4557_m.jpg" width="58" height="58"
+										alt="唐宋" /> </a><b title="唐宋" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">唐宋</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4557);" id="a_4557"><img id="img_4557" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4557" id=4557/>
+							
+							<div class="p1_e1">
+								<a href="/chenjiaxing"><img src="http://i0.peopleurl.cn/headimg/201012/head204255_m.jpg" width="58" height="58"
+										alt="陈家兴" /> </a><b title="陈家兴" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">陈家兴</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(204255);" id="a_204255"><img id="img_204255" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="204255" id=204255/>
+							
+							<div class="p1_e1">
+								<a href="/4554"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="杨健" /> </a><b title="杨健" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">杨健</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4554);" id="a_4554"><img id="img_4554" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4554" id=4554/>
+							
+							<div class="p1_e1">
+								<a href="/4559"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="柳桂珍" /> </a><b title="柳桂珍" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">柳桂珍</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4559);" id="a_4559"><img id="img_4559" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4559" id=4559/>
+							
+							<div class="p1_e1">
+								<a href="/4558"><img src="http://i0.peopleurl.cn/headimg/201007/head4558_m.jpg" width="58" height="58"
+										alt="范正伟" /> </a><b title="范正伟" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">范正伟</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4558);" id="a_4558"><img id="img_4558" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4558" id=4558/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(46);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_59">
+							<a name="group_59"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=59" target="_blank">理论部</a> </b>共 10 人| 1171 条微博| 23124 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/167851"><img src="http://i0.peopleurl.cn/headimg/201008/head167851_m.jpg" width="58" height="58"
+										alt="于春晖" /> </a><b title="于春晖" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">于春晖</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(167851);" id="a_167851"><img id="img_167851" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="167851" id=167851/>
+							
+							<div class="p1_e1">
+								<a href="/renia99"><img src="http://i0.peopleurl.cn/headimg/201102/head235355_m.jpg" width="58" height="58"
+										alt="朱佩娴" /> </a><b title="朱佩娴" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">朱佩娴</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(235355);" id="a_235355"><img id="img_235355" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="235355" id=235355/>
+							
+							<div class="p1_e1">
+								<a href="/santu0716"><img src="http://i0.peopleurl.cn/headimg/201102/head235741_m.jpg" width="58" height="58"
+										alt="张三土" /> </a><b title="张三土" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张三土</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(235741);" id="a_235741"><img id="img_235741" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="235741" id=235741/>
+							
+							<div class="p1_e1">
+								<a href="/llbzhengjian"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="郑剑" /> </a><b title="郑剑" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">郑剑</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(235392);" id="a_235392"><img id="img_235392" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="235392" id=235392/>
+							
+							<div class="p1_e1">
+								<a href="/110098"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="杨学博" /> </a><b title="杨学博" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">杨学博</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(110098);" id="a_110098"><img id="img_110098" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="110098" id=110098/>
+							
+							<div class="p1_e1">
+								<a href="/llbpengguohua"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="彭国华" /> </a><b title="彭国华" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">彭国华</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(235379);" id="a_235379"><img id="img_235379" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="235379" id=235379/>
+							
+							<div class="p1_e1">
+								<a href="/llbzhangshulin"><img src="http://i0.peopleurl.cn/headimg/201102/head235374_m.jpg" width="58" height="58"
+										alt="张书林" /> </a><b title="张书林" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张书林</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(235374);" id="a_235374"><img id="img_235374" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="235374" id=235374/>
+							
+							<div class="p1_e1">
+								<a href="/xiaosu"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="笑苏" /> </a><b title="笑苏" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">笑苏</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(235372);" id="a_235372"><img id="img_235372" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="235372" id=235372/>
+							
+							<div class="p1_e1">
+								<a href="/lilinbao"><img src="http://i0.peopleurl.cn/headimg/201102/head235359_m.jpg" width="58" height="58"
+										alt="李林宝" /> </a><b title="李林宝" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李林宝</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(235359);" id="a_235359"><img id="img_235359" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="235359" id=235359/>
+							
+							<div class="p1_e1">
+								<a href="/236915"><img src="http://i0.peopleurl.cn/headimg/bao_default.jpg" width="58" height="58"
+										alt="张怡恬" /> </a><b title="张怡恬" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张怡恬</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(236915);" id="a_236915"><img id="img_236915" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="236915" id=236915/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(59);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_47">
+							<a name="group_47"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=47" target="_blank">体育部</a> </b>共 3 人| 146 条微博| 14177 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/wangdazhao"><img src="http://i0.peopleurl.cn/headimg/201006/head140887_m.jpg" width="58" height="58"
+										alt="汪大昭" /> </a><b title="汪大昭" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">汪大昭</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(140887);" id="a_140887"><img id="img_140887" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="140887" id=140887/>
+							
+							<div class="p1_e1">
+								<a href="/149300"><img src="http://i0.peopleurl.cn/headimg/201006/head149300_m.jpg" width="58" height="58"
+										alt="陈晨曦" /> </a><b title="陈晨曦" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">陈晨曦</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(149300);" id="a_149300"><img id="img_149300" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="149300" id=149300/>
+							
+							<div class="p1_e1">
+								<a href="/140886"><img src="http://i0.peopleurl.cn/headimg/201011/head140886_m.jpg" width="58" height="58"
+										alt="刘小明" /> </a><b title="刘小明" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">刘小明</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(140886);" id="a_140886"><img id="img_140886" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="140886" id=140886/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(47);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_51">
+							<a name="group_51"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=51" target="_blank">各地分社</a> </b>共 91 人| 15782 条微博| 139726 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/170140"><img src="http://i0.peopleurl.cn/headimg/20140316/head170140_201403162332_m.jpg" width="58" height="58"
+										alt="林治波" /> </a><b title="林治波" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">林治波</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(170140);" id="a_170140"><img id="img_170140" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="170140" id=170140/>
+							
+							<div class="p1_e1">
+								<a href="/110202"><img src="http://i0.peopleurl.cn/headimg/201204/head110202_m.jpg" width="58" height="58"
+										alt="袁泉" /> </a><b title="袁泉" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">袁泉</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(110202);" id="a_110202"><img id="img_110202" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="110202" id=110202/>
+							
+							<div class="p1_e1">
+								<a href="/lizenghui"><img src="http://i0.peopleurl.cn/headimg/201204/head4907_m.jpg" width="58" height="58"
+										alt="李增辉" /> </a><b title="李增辉" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李增辉</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4907);" id="a_4907"><img id="img_4907" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4907" id=4907/>
+							
+							<div class="p1_e1">
+								<a href="/144393"><img src="http://i0.peopleurl.cn/headimg/201102/head144393_m.jpg" width="58" height="58"
+										alt="励漪" /> </a><b title="励漪" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">励漪</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(144393);" id="a_144393"><img id="img_144393" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="144393" id=144393/>
+							
+							<div class="p1_e1">
+								<a href="/144392"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="孙小静" /> </a><b title="孙小静" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">孙小静</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(144392);" id="a_144392"><img id="img_144392" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="144392" id=144392/>
+							
+							<div class="p1_e1">
+								<a href="/lirudan"><img src="http://i0.peopleurl.cn/headimg/20131203/head170155_201312031644_m.jpg" width="58" height="58"
+										alt="李如旦" /> </a><b title="李如旦" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">李如旦</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(170155);" id="a_170155"><img id="img_170155" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="170155" id=170155/>
+							
+							<div class="p1_e1">
+								<a href="/115237"><img src="http://i0.peopleurl.cn/headimg/201002/head115237_m.jpg" width="58" height="58"
+										alt="彭波" /> </a><b title="彭波" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">彭波</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(115237);" id="a_115237"><img id="img_115237" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="115237" id=115237/>
+							
+							<div class="p1_e1">
+								<a href="/jcnews"><img src="http://i0.peopleurl.cn/headimg/201004/head144418_m.jpg" width="58" height="58"
+										alt="张俊才" /> </a><b title="张俊才" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张俊才</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(144418);" id="a_144418"><img id="img_144418" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="144418" id=144418/>
+							
+							<div class="p1_e1">
+								<a href="/141155"><img src="http://i0.peopleurl.cn/headimg/201004/head141155_m.jpg" width="58" height="58"
+										alt="青海分社" /> </a><b title="青海分社" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">青海分社</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(141155);" id="a_141155"><img id="img_141155" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="141155" id=141155/>
+							
+							<div class="p1_e1">
+								<a href="/144356"><img src="http://i0.peopleurl.cn/headimg/201004/head144356_m.jpg" width="58" height="58"
+										alt="包蹇" /> </a><b title="包蹇" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">包蹇</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(144356);" id="a_144356"><img id="img_144356" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="144356" id=144356/>
+							
+							<div class="p1_e1">
+								<a href="/144412"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="娄靖" /> </a><b title="娄靖" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">娄靖</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(144412);" id="a_144412"><img id="img_144412" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="144412" id=144412/>
+							
+							<div class="p1_e1">
+								<a href="/144406"><img src="http://i0.peopleurl.cn/headimg/201005/head144406_m.jpg" width="58" height="58"
+										alt="卑佳" /> </a><b title="卑佳" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">卑佳</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(144406);" id="a_144406"><img id="img_144406" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="144406" id=144406/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(51);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_50">
+							<a name="group_50"></a>
+							<div class="p_tit">
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo_back.jpg" width="66" height="26" alt="" /></div>
+								
+								
+								<span>
+								<b><a href="/member.action?gid=50" target="_blank">海外版</a> </b>共 6 人| 17396 条微博| 845808 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/zhanguoshu"><img src="http://i0.peopleurl.cn/headimg/201002/head7465_m.jpg" width="58" height="58"
+										alt="詹国枢" /> </a><b title="詹国枢" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">詹国枢</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(7465);" id="a_7465"><img id="img_7465" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="7465" id=7465/>
+							
+							<div class="p1_e1">
+								<a href="/121015"><img src="http://i0.peopleurl.cn/headimg/201007/head121015_m.jpg" width="58" height="58"
+										alt="尹晓宇" /> </a><b title="尹晓宇" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">尹晓宇</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(121015);" id="a_121015"><img id="img_121015" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="121015" id=121015/>
+							
+							<div class="p1_e1">
+								<a href="/7467"><img src="http://i0.peopleurl.cn/headimg/201002/head7467_m.jpg" width="58" height="58"
+										alt="钟嘉" /> </a><b title="钟嘉" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">钟嘉</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(7467);" id="a_7467"><img id="img_7467" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="7467" id=7467/>
+							
+							<div class="p1_e1">
+								<a href="/7524"><img src="http://i0.peopleurl.cn/headimg/201007/head7524_m.jpg" width="58" height="58"
+										alt="陈振凯" /> </a><b title="陈振凯" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">陈振凯</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(7524);" id="a_7524"><img id="img_7524" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="7524" id=7524/>
+							
+							<div class="p1_e1">
+								<a href="/5982"><img src="http://i0.peopleurl.cn/headimg/201006/head5982_m.jpg" width="58" height="58"
+										alt="张意轩" /> </a><b title="张意轩" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">张意轩</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(5982);" id="a_5982"><img id="img_5982" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="5982" id=5982/>
+							
+							<div class="p1_e1">
+								<a href="/fuzhenguo"><img src="http://i0.peopleurl.cn/headimg/201103/head253890_m.jpg" width="58" height="58"
+										alt="傅振国" /> </a><b title="傅振国" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">傅振国</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(253890);" id="a_253890"><img id="img_253890" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="253890" id=253890/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(50);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_62">
+							<a name="group_62"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=62" target="_blank">其他部门</a> </b>共 5 人| 75 条微博| 13579 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/4489"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="童心闪闪" /> </a><b title="童心闪闪" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">童心闪闪</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4489);" id="a_4489"><img id="img_4489" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4489" id=4489/>
+							
+							<div class="p1_e1">
+								<a href="/4404"><img src="http://i0.peopleurl.cn/headimg/201001/head4404_m.jpg" width="58" height="58"
+										alt="杨倩" /> </a><b title="杨倩" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">杨倩</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4404);" id="a_4404"><img id="img_4404" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4404" id=4404/>
+							
+							<div class="p1_e1">
+								<a href="/4401"><img src="http://i0.peopleurl.cn/headimg/201004/head4401_m.jpg" width="58" height="58"
+										alt="武少民" /> </a><b title="武少民" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">武少民</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4401);" id="a_4401"><img id="img_4401" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4401" id=4401/>
+							
+							<div class="p1_e1">
+								<a href="/4396"><img src="http://i0.peopleurl.cn/headimg/201007/paper_headimg_m.jpg" width="58" height="58"
+										alt="唐旻威" /> </a><b title="唐旻威" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">唐旻威</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4396);" id="a_4396"><img id="img_4396" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4396" id=4396/>
+							
+							<div class="p1_e1">
+								<a href="/4413"><img src="http://i0.peopleurl.cn/headimg/201007/head4413_m.jpg" width="58" height="58"
+										alt="王春兰" /> </a><b title="王春兰" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">王春兰</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4413);" id="a_4413"><img id="img_4413" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4413" id=4413/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(62);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+						
+						<div class="p1_b bor marg_top10" id="group_64">
+							<a name="group_64"></a>
+							<div class="p_tit">
+								
+								
+									<div style="margin-top:-5px; margin-left:-15px; float:left"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/paper_logo.jpg" width="85" height="26" alt="" /></div>
+								
+								<span>
+								<b><a href="/member.action?gid=64" target="_blank">人民网</a> </b>共 6 人| 7770 条微博| 589147 粉丝  （以微博条数为序）</span>
+							</div>
+							
+							<div class="p1_e1">
+								<a href="/yangmu"><img src="http://i0.peopleurl.cn/headimg/201107/head2313_m.jpg" width="58" height="58"
+										alt="杨沐" /> </a><b title="杨沐" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">杨沐</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(2313);" id="a_2313"><img id="img_2313" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="2313" id=2313/>
+							
+							<div class="p1_e1">
+								<a href="/5660"><img src="http://i0.peopleurl.cn/headimg/201002/head5660_m.jpg" width="58" height="58"
+										alt="腾格里" /> </a><b title="腾格里" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">腾格里</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(5660);" id="a_5660"><img id="img_5660" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="5660" id=5660/>
+							
+							<div class="p1_e1">
+								<a href="/5895"><img src="http://i0.peopleurl.cn/headimg/201002/head5895_m.jpg" width="58" height="58"
+										alt="唐维红" /> </a><b title="唐维红" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">唐维红</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(5895);" id="a_5895"><img id="img_5895" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="5895" id=5895/>
+							
+							<div class="p1_e1">
+								<a href="/hejiazheng"><img src="http://i0.peopleurl.cn/headimg/201002/head5283_m.jpg" width="58" height="58"
+										alt="何加正" /> </a><b title="何加正" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">何加正</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(5283);" id="a_5283"><img id="img_5283" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="5283" id=5283/>
+							
+							<div class="p1_e1">
+								<a href="/4813"><img src="http://i0.peopleurl.cn/headimg/201204/head4813_m.jpg" width="58" height="58"
+										alt="官建文" /> </a><b title="官建文" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">官建文</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4813);" id="a_4813"><img id="img_4813" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="4813" id=4813/>
+							
+							<div class="p1_e1">
+								<a href="/247497"><img src="http://i0.peopleurl.cn/headimg/201103/head247497_m.jpg" width="58" height="58"
+										alt="孙海峰" /> </a><b title="孙海峰" style="width:72px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">孙海峰</b>
+								<br />
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(247497);" id="a_247497"><img id="img_247497" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<input type="hidden" value="247497" id=247497/>
+							
+							<div class="center marg_bt10">
+								<a href="javascript:void(0);" onClick="departmentAPP.addallfocus(64);"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/button2.gif" width="100" height="26" alt="" /></a>
+							</div>
+						</div>
+							
+					</div>
+					<div class="p1_right">
+						<div class="p1_b p1_c bor">
+							<div class="p_tit">
+								<span> <b><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/ico3.gif" width="14"
+											height="12" alt="" />报社领导微博 </b> </span>
+							</div>
+							
+							<div class="p1_e">
+								<a href="/zhangyannong"><img alt="" src="http://i0.peopleurl.cn/headimg/201001/head4087_m.jpg" width="58"
+										height="58" /> </a><b><a href="/zhangyannong">张研农</a></b>
+								<br />
+								人民日报社前社长
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4087);" id="a_4087"><img id="img_4087" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+							<div class="p1_e">
+								<a href="/mali"><img alt="" src="http://i0.peopleurl.cn/headimg/201101/head4854_m.jpg" width="58"
+										height="58" /> </a><b><a href="/mali">马利</a></b>
+								<br />
+								人民日报社副总编辑
+								<br />
+								
+									<a href="javascript:void(0);" onClick="departmentAPP.addfocus(4854);" id="a_4854"><img id="img_4854" src="http://i0.peopleurl.cn/microblog/images/follow_a.gif" width="40" height="17" border="0" alt="" /></a>
+								
+								
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+						</div>
+						<div class="p1_b p1_c bor marg_top10">
+							<div class="p_tit">
+								<span> <b><img src="/microblog/specialsubject/department/images/ico3.gif" width="14"
+											height="12" alt="" />微博画中话 </b> </span>
+							</div>
+							<div class="scrollImgList1" id="scrollImgList1" style="text-align: center;">
+								<div class="Cont" id="ISL_Cont_1" style="margin-left: 10px;">
+									<div class="scrCont" >
+										<div id="List1_1" >
+											<div class="box">
+												<a href="http://t.people.com.cn/4377/7925584" target="_blank"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/gjx_cnjts.jpg"
+														width="228" height="98" border="0" /> </a>
+														龚金星：超牛检讨书	
+											</div>
+											<div class="box">
+												<a href="http://t.people.com.cn/renyan/8670325" target="_blank"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/ry_yn.jpg"
+														width="228" height="98" border="0" /> </a>									
+														任彦：越南，请不要在西沙“玩火”
+											</div>
+											<div class="box">
+												<a href="http://t.people.com.cn/zhanguoshu/8775595" target="_blank"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/zgs_qt.jpg"
+														width="228" height="98" border="0" /> </a>											
+														詹国枢：倾听，给人幸福					
+											</div>
+											<div class="box">
+												<a href="http://t.people.com.cn/jcnews/8670258" target="_blank"><img src="http://i0.peopleurl.cn/microblog/specialsubject/department/images/zjc_ctll.jpg"
+														width="228" height="98" border="0" /> </a>											
+														张俊才：春天来了
+											</div>
+										</div>
+										<div id="List2_1"></div>
+									</div>
+								</div>
+								<div class="boxt" style="text-align:center;clear:both;">
+									<div onMouseUp="ISL_StopUp_1()" class="leftBtn"
+										onmousedown="ISL_GoUp_1()" onMouseOut="ISL_StopUp_1()"></div>
+									<div onMouseUp="ISL_StopDown_1()" class="rightBtn"
+										onmousedown="ISL_GoDown_1()" onMouseOut="ISL_StopDown_1()"></div>
+								</div>
+							</div>
+
+
+							<script type="text/javascript">
+// <![CDATA[
+		var speed_1 = 10; //速度(毫秒)
+		var space_1 = 10; //每次移动(px)
+		var PageWidth_1 = 230; //翻页宽度
+		var fill_1 = 0; //整体移位
+		var moveLock_1 = false;
+		var moveTimeObj_1;
+		var moveWay_1 = "right";
+		var comp_1 = 0;
+		var autoPlayObj_1=null;
+		
+		GetObj("List2_1").innerHTML=GetObj("List1_1").innerHTML;
+		GetObj('ISL_Cont_1').scrollLeft=fill_1>=0?fill_1:GetObj('List1_1').scrollWidth-Math.abs(fill_1);
+		GetObj("ISL_Cont_1").onmouseover=function(){clearInterval(autoPlayObj_1)}
+		GetObj("ISL_Cont_1").onmouseout=function(){AutoPlay_1()}
+		AutoPlay_1();
+		
+		function GetObj(objName){
+			if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}
+		}
+		
+		function AutoPlay_1(){
+			clearInterval(autoPlayObj_1);
+			autoPlayObj_1=setInterval('ISL_GoDown_1();ISL_StopDown_1();',5000)
+		}
+		
+		function ISL_GoUp_1(){
+			if(moveLock_1)return;
+			clearInterval(autoPlayObj_1);
+			moveLock_1=true;
+			moveWay_1="left";
+			moveTimeObj_1=setInterval('ISL_ScrUp_1();',speed_1);
+		}
+		
+		function ISL_StopUp_1(){
+		if(moveWay_1 == "right"){return};
+		clearInterval(moveTimeObj_1);
+		if((GetObj('ISL_Cont_1').scrollLeft-fill_1)%PageWidth_1!=0){
+		comp_1=fill_1-(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1);
+		CompScr_1()}else{moveLock_1=false}
+		AutoPlay_1()}
+		
+		function ISL_ScrUp_1(){
+		if(GetObj('ISL_Cont_1').scrollLeft<=0){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft+GetObj('List1_1').offsetWidth}
+		GetObj('ISL_Cont_1').scrollLeft-=space_1
+		}
+		
+		function ISL_GoDown_1(){
+			clearInterval(moveTimeObj_1);
+			if(moveLock_1)return;
+			clearInterval(autoPlayObj_1);
+			moveLock_1=true;
+			moveWay_1="right";
+			ISL_ScrDown_1();
+			moveTimeObj_1=setInterval('ISL_ScrDown_1()',speed_1)
+		}
+		
+		function ISL_StopDown_1(){
+			if(moveWay_1 == "left"){return};
+			clearInterval(moveTimeObj_1);
+			if(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1-(fill_1>=0?fill_1:fill_1+1)!=0){
+				comp_1=PageWidth_1-GetObj('ISL_Cont_1').scrollLeft%PageWidth_1+fill_1;
+				CompScr_1()
+			}
+			else{moveLock_1=false}
+			AutoPlay_1()
+		}
+		
+		function ISL_ScrDown_1(){
+		if(GetObj('ISL_Cont_1').scrollLeft>=GetObj('List1_1').scrollWidth){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft-GetObj('List1_1').scrollWidth}
+		GetObj('ISL_Cont_1').scrollLeft+=space_1
+		}
+		
+		function CompScr_1(){
+			if(comp_1==0){moveLock_1=false;return}
+			var num,TempSpeed=speed_1,TempSpace=space_1;
+			if(Math.abs(comp_1)<PageWidth_1/2){
+				TempSpace=Math.round(Math.abs(comp_1/space_1));
+				if(TempSpace<1){TempSpace=1}
+			}
+			if(comp_1<0){
+				if(comp_1<-TempSpace){
+					comp_1+=TempSpace;
+					num=TempSpace
+				}
+				else{num=-comp_1;comp_1=0}
+				GetObj('ISL_Cont_1').scrollLeft-=num;
+				setTimeout('CompScr_1()',TempSpeed)
+			}	
+			else{if(comp_1>TempSpace){comp_1-=TempSpace;num=TempSpace}
+			else{num=comp_1;
+			comp_1=0}
+			GetObj('ISL_Cont_1').scrollLeft+=num;
+			setTimeout('CompScr_1()',TempSpeed)}
+		}
+		//]]>
+		</script>
+	</div>
+						<div class="p1_b p1_c bor marg_top10">
+							<div class="p_tit">
+								<span><b><img src="/microblog/specialsubject/department/images/ico3.gif" width="14"
+											height="12" alt="" />名博活跃榜 </b> </span>
+							</div>
+							<table width="232" border="0" cellspacing="0" cellpadding="0"
+								class="p1_da" style="margin-left: 8px;">
+								<tr class="p1_d" >
+									<td width="50%">
+										姓名
+									</td>
+									<td width="50%">
+										微博条数
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+										
+										<span class="y">1</span><a href="/zhanguoshu" target="_blank">詹国枢.blog</a>
+										
+										
+									</td>
+									<td align="center">
+										16930
+									</td>
+								</tr>								
+								
+								<tr>
+									<td>
+										
+										<span class="y">2</span><a href="/170140" target="_blank">林治波</a>
+										
+										
+									</td>
+									<td align="center">
+										8857
+									</td>
+								</tr>								
+								
+								<tr>
+									<td>
+										
+										<span class="y">3</span><a href="/jcnews" target="_blank">张俊才</a>
+										
+										
+									</td>
+									<td align="center">
+										2640
+									</td>
+								</tr>								
+								
+								<tr>
+									<td>
+										
+										
+										<span>4</span><a href="/3951" target="_blank">阿唐</a>
+										
+									</td>
+									<td align="center">
+										1950
+									</td>
+								</tr>								
+								
+								<tr>
+									<td>
+										
+										
+										<span>5</span><a href="/110202" target="_blank">袁泉</a>
+										
+									</td>
+									<td align="center">
+										1774
+									</td>
+								</tr>								
+								
+								<tr>
+									<td>
+										
+										
+										<span>6</span><a href="/167851" target="_blank">于春晖.blog</a>
+										
+									</td>
+									<td align="center">
+										1138
+									</td>
+								</tr>								
+								
+								<tr>
+									<td>
+										
+										
+										<span>7</span><a href="/167851" target="_blank">于春晖.blog</a>
+										
+									</td>
+									<td align="center">
+										1138
+									</td>
+								</tr>								
+								
+								<tr>
+									<td>
+										
+										
+										<span>8</span><a href="/4561" target="_blank">詹勇</a>
+										
+									</td>
+									<td align="center">
+										787
+									</td>
+								</tr>								
+								
+								<tr>
+									<td>
+										
+										
+										<span>9</span><a href="/4377" target="_blank">龚金星</a>
+										
+									</td>
+									<td align="center">
+										717
+									</td>
+								</tr>								
+								
+								<tr>
+									<td>
+										
+										
+										<span>10</span><a href="/rmrbchenjie" target="_blank">陈杰</a>
+										
+									</td>
+									<td align="center">
+										486
+									</td>
+								</tr>								
+								
+							</table>
+						</div>
+						<div class="p1_b p1_c bor marg_top10">
+							<div class="p_tit">
+								<span><b><img src="/microblog/specialsubject/department/images/ico3.gif" width="14"
+											height="12" alt="" />群组风云榜 </b> </span>
+							</div>
+							<table width="232" border="0" cellspacing="0" cellpadding="0"
+								class="p1_da" style="margin-left: 8px;">
+								<tr class="p1_d">
+									<td>
+										群组
+									</td>
+									<td>
+										微博条数
+									</td>
+									<td>
+										排名走势
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+										<span class="y">1</span>海外版
+									
+									
+									</td>
+									<td align="center">
+										17384
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+										<span class="y">2</span>各地分社
+									
+									
+									</td>
+									<td align="center">
+										15776
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+										<span class="y">3</span>新闻协调部
+									
+									
+									</td>
+									<td align="center">
+										2077
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+									
+										<span>4</span>总编室
+									
+									</td>
+									<td align="center">
+										1094
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+									
+										<span>5</span>评论部
+									
+									</td>
+									<td align="center">
+										842
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+									
+										<span>6</span>国际部
+									
+									</td>
+									<td align="center">
+										326
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+									
+										<span>7</span>地方部
+									
+									</td>
+									<td align="center">
+										194
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+									
+										<span>8</span>政治文化部
+									
+									</td>
+									<td align="center">
+										164
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+									
+										<span>9</span>经济社会部
+									
+									</td>
+									<td align="center">
+										42
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+									
+									
+										<span>10</span>文艺部
+									
+									</td>
+									<td align="center">
+										8
+									</td>
+									<td align="center">
+									
+									
+										<img src="/microblog/specialsubject/department/images/ico6.gif" width="10" height="7" alt="" />
+									
+																
+									</td>
+								</tr>
+								
+							</table>
+						</div> 
+						<div class="p1_b p1_c bor marg_top10">
+							<div class="p_tit">
+								<span><b>
+									<img src="/microblog/specialsubject/department/images/ico3.gif" width="14"	height="12" alt="" /><a href="/live.html">最新实时播</a> 
+								</b></span>
+							</div>
+							
+							<div class="poaa">
+								<strong><a href="/170140">人民日报林治波</a>:</strong>津巴布韦总统称孔子和平奖微不足道 拒领奖http://peopleurl.cn/E8E4YU此前也有获奖者拒领此奖，包括俄罗斯总统普京。当时普京领导的统一俄罗斯党发表评论文章，称孔子和平奖&ldquo;一钱不值&rdquo;。奉劝颁发这个奖项的中国国际和平研究中心（香港注册），不要再丢人现眼了，更不要辱没孔夫子的声誉了。
+								<div class="opt">
+									1小时前 来自人民微博
+								</div>
+							</div>
+							
+							<div class="poaa">
+								<strong><a href="/170140">人民日报林治波</a>:</strong>不要再带孩子去看海豚表演！海豚的微笑是人类对自然界最大的误解！http://peopleurl.cn/73ILjo 有这么多聪明可爱的动物与人类一同生活在地球上，是多么好的事！但就是有那么一些人特别是日本人，不管不顾地猎杀鲸鱼、海豚，还有一些同胞热衷于大吃动物，住手吧！住嘴吧！积一点阴德吧！
+								<div class="opt">
+									2小时前 来自人民微博
+								</div>
+							</div>
+							
+							<div class="poaa">
+								<strong><a href="/170140">人民日报林治波</a>:</strong>残忍！海豚躲避日本渔民捕杀搁浅岩石 被拖回水中猎杀http://peopleurl.cn/5Em4VT 微评：海豚落入鬼子之手，犹如当年抗日者落入日军之手一样。日本人很爱干净，把自己的家园整理得寸寸锦绣，但他们对本土之外就是另一个态度。除少数人外，这是一个道德标准很低的、无善念的、自私的民族。鄙视！谴责！
+								<div class="opt">
+									6小时前 来自人民微博
+								</div>
+							</div>
+							
+							<div class="poaa">
+								<strong><a href="/170140">人民日报林治波</a>:</strong>媒体：国外地铁不安检 国内地铁安检有必要吗？http://peopleurl.cn/7YIdW0 有无必要得看实际情况，而不是看外国做了没有。很多国人脑子里都有一个意识，就是凡事看国外，人家做我们也得做，人家不做我们也不该做。我倒不是主张地铁一定要安检，而是要看实际情况，根据自己的实际做出决定。
+								<div class="opt">
+									6小时前 来自人民微博
+								</div>
+							</div>
+							
+							<div class="poaa">
+								<strong><a href="/170140">人民日报林治波</a>:</strong>中英&ldquo;恩爱&rdquo;引日担忧 日不愿看到中英进一步友好http://peopleurl.cn/kcKKLH日本政府对中英两国的亲密关系深表担忧，并于10月26日决定致电英国外交部，表示日方不愿看到英方在未谈及海洋活动和人权问题的情况下与中国进一步深化友好关系。微评：呵呵，鬼子对中国是狭隘与嚣张相交织，羡慕与妒忌相结合。
+								<div class="opt">
+									8小时前 来自人民微博
+								</div>
+							</div>
+							
+							<div class="center">
+							</div>
+						</div>
+						<div class="p1_b p1_c bor marg_top10">
+							<div class="p_tit">
+								<span><b><img src="/microblog/specialsubject/department/images/ico3.gif" width="14"
+											height="12" alt="" />精彩栏目 </b> </span>
+							</div>
+							<div class="poaa center">
+								<a href="http://www.people.com.cn/GB/32306/143124/147551/9853843.html"><img src="/microblog/specialsubject/department/images/pic1.jpg" width="202" height="60" border="0" /></a>
+							</div>
+							<div class="poaa center">
+								<a href="http://qgblog.people.com.cn/peopledaily/"><img src="/microblog/specialsubject/department/images/pic2.jpg" width="202" height="60" border="0" /></a>
+							</div>
+							<div class="poaa center">
+								<a href="http://www.people.com.cn/GB/8196/"><img src="/microblog/specialsubject/department/images/pic3.gif" width="202" height="60" border="0" /></a>
+							</div>							
+						</div>
+											
+						<div class="p1_b p1_c bor marg_top10">
+							<div class="p_tit">
+								<span> <b><img src="/microblog/specialsubject/department/images/ico3.gif" width="14"
+											height="12" alt="" />社属报刊（网）微博 </b> </span>
+							</div>
+							
+							<div class="p1_e">
+								<a href="/minshengweekly"><img alt="" src="http://i0.peopleurl.cn/headimg/201009/head176517_m.jpg" width="58"
+										height="58" /> </a><a href="/minshengweekly">民生周刊</a>
+								<br />
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+							<div class="p1_e">
+								<a href="/jntimes"><img alt="" src="http://i0.peopleurl.cn/headimg/201008/head170269_m.jpg" width="58"
+										height="58" /> </a><a href="/jntimes">江南时报</a>
+								<br />
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+							<div class="p1_e">
+								<a href="/cnautonews"><img alt="" src="http://i0.peopleurl.cn/headimg/201008/head170258_m.jpg" width="58"
+										height="58" /> </a><a href="/cnautonews">中国汽车报</a>
+								<br />
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+							<div class="p1_e">
+								<a href="/globalpeople"><img alt="" src="http://i0.peopleurl.cn/headimg/20121214/head168778_201212141542_m.jpg" width="58"
+										height="58" /> </a><a href="/globalpeople">《环球人物》杂志</a>
+								<br />
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+							<div class="p1_e">
+								<a href="/openhistory"><img alt="" src="http://i0.peopleurl.cn/headimg/20130105/head162444_201301051448_m.jpg" width="58"
+										height="58" /> </a><a href="/openhistory">国家人文历史</a>
+								<br />
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+							<div class="p1_e">
+								<a href="/rmltcomcn"><img alt="" src="http://i0.peopleurl.cn/headimg/201007/head161649_m.jpg" width="58"
+										height="58" /> </a><a href="/rmltcomcn">第一政论新媒体</a>
+								<br />
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+							<div class="p1_e">
+								<a href="/globaltimes"><img alt="" src="http://i0.peopleurl.cn/headimg/20121129/head157080_201211291030_m.jpg" width="58"
+										height="58" /> </a><a href="/globaltimes">环球时报</a>
+								<br />
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+							<div class="p1_e">
+								<a href="/huanqiu"><img alt="" src="http://i0.peopleurl.cn/headimg/201204/head154177_m.jpg" width="58"
+										height="58" /> </a><a href="/huanqiu">环球网</a>
+								<br />
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+							<div class="p1_e">
+								<a href="/14618"><img alt="" src="http://i0.peopleurl.cn/headimg/201003/head14618_m.jpg" width="58"
+										height="58" /> </a><a href="/14618">京华网</a>
+								<br />
+							</div>
+							<div class="line">
+								&nbsp;
+							</div>
+							
+						</div>
+	
+						<div class="p1_b p1_c bor marg_top10">
+							<div class="p_tit">
+								<span> <b><img src="/microblog/specialsubject/department/images/ico3.gif" width="14"
+											height="12" alt="" />联系我们 </b> </span>
+							</div>	
+							<div class="p1_e">
+								<b>邮箱：</b>mblog@peopledaily.com.cn
+							</div>
+
+						</div>	
+					
+					</div>
+				</div>
+			</div>
+			<div id="copyright" class="marg_top10">
+				<img src="/microblog/specialsubject/department/images/copyright.gif" width="414" height="81" alt="" />
+			</div>
+		</div>
+
+	</body>
+</html>
+

@@ -1,0 +1,1683 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML><HEAD><TITLE>首页-西安高新技术产业开发区门户网站</TITLE>
+
+
+
+
+<META content="text/html; charset=UTF-8" http-equiv="Content-Type"><LINK rel="stylesheet" type="text/css" href="css/index_css.css"><script type="text/javascript" src="js/jquery.js"></script><script type="text/javascript" src="js/GX_js.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css" />
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230697547545254574603040000 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<META Name="keywords" Content="西安高新区电子政务网" />
+<script type="text/javascript" src="../system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(20477,'/gxzx/index.jsp',-1,605444217)</script>
+</HEAD>
+<BODY>
+<DIV class="index_div center"><!----------------------------------------------------top-------------------------------------------------------------------->
+<DIV class="GX_top">
+<DIV class="top_logo"><!--#begineditable contype="" name="logo" action="" layout="" clone="0" namechanged="0" order="0" ispublic="0" tagname="logo" viewid="106665" stylesysid=""--><script language="javascript" src="../system/resource/js/dynclicks.js"></script>    
+                <a href="sy.htm"><img border="0" alt="" src="../gzcy/images/G_logo.jpg" width="378" height="56"></a>    
+               
+<!--#endeditable--></DIV>
+<UL class="top_huiyuan"><!--#begineditable contype="" name="登录组件" action="" layout="" clone="0" namechanged="0" order="1" ispublic="0" tagname="登录组件" viewid="105694" stylesysid=""-->                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+                                               
+<script language="javascript">                                               
+function calogin()                                               
+{                                               
+ location.href="?url=" + escape(location.href);                                               
+}                                               
+function dologout()                                               
+{                                               
+    document.getElementById("adoii6wkjxha").action="/hyyem/hydl.jsp?urltype=tree.TreeTempUrl&wbtreeid=20798";                                               
+    document.getElementById("exit").value='1';                                               
+    document.getElementById("adoii6wkjxha").target = "_self";                                               
+    document.getElementById("adoii6wkjxha").submit();                                               
+}                                               
+function reglogin()                                               
+{             
+    if(document.getElementById("wbaccount").value == "" ||                                               
+        document.getElementById("wbpassword").value == "")                                               
+    {                                               
+        alert("请填写用户名与密码!");                                               
+        return false;                                               
+    }                                               
+         var fl = document.getElementById("setf").value;                                               
+         if(fl == 0)                                               
+         {                                               
+                       var url = "/system/resource/usercheck.jsp";
+                       var account = document.getElementById("wbaccount").value;
+                       var password = document.getElementById("wbpassword").value;
+                       jQuery.post(url,{"ad":"loginreg","wbaccount":account,"wbpassword":password},function(data){
+                           if(data.state)
+                           {
+                            var    WebSiteCookie={           
+                            cookieName:"name",           
+                            cookieValue:"",           
+                            expires:new Date((new Date()).getTime()+1*60*1000),           
+                            domain:"",           
+                            path:"/",           
+                            set:function(){        //设置cookie值               
+                            var cookies=this.cookieName+"="+escape(this.cookieValue)+";path="+this.path+";expires="+(this.expires).toGMTString();           
+                                cookies+=this.domain==""?"":";domain="+this.domain;                       
+                                document.cookie=cookies               
+                                if(this.get()==null){  //判断cookie写入是否成功！           
+                                  //alert("您的浏览器安全设置过高,不支持Cookie,请重新设置浏览器的。");           
+                                }           
+                            },           
+                            get:function(){        //获取cookie值           
+                                var cookie=document.cookie;           
+                                var index=cookie.indexOf(this.cookieName+"=");           
+                                if(index<0){           
+                                    //alert('该cookie值不存在!');           
+                                    return null;           
+                                }           
+                                if(cookie.indexOf("&",index)>0){           
+                                    return unescape(cookie.substring(index+this.cookieName.length+1,cookie.indexOf("&",index)));           
+                                }else{           
+                                    return unescape(cookie.substring(index+this.cookieName.length+1));           
+                                }                   
+                            },           
+                            clear:function(){//清除 cookie值           
+                                if(this.get()!=null){           
+                                var cookies=this.cookieName+"=;path="+this.path+";expires="+(new Date()).toGMTString();           
+                                cookies+=this.domain==""?"":";domain="+this.domain;                       
+                                document.cookie=cookies           
+                                }else{           
+                                    alert('cookie值不存在')           
+                                }           
+                            }               
+                           }           
+                        //登录成功，则设定以下cookie                                                
+                        //1.vsbsid                                               
+                        document.cookie = "vsbsid=;domain=xdz.gov.cn;path=/;";                                               
+                        document.cookie = "xdztime=;domain=xdz.gov.cn;path=/;";                                               
+                        //2.cicrosid                          
+                        var cdate = new Date();
+                        cdate.setDate(cdate.getDate() + 1);                     
+                        document.cookie = "cicrosid=;domain=xdz.gov.cn;path=/;";                                               
+                        document.cookie = "account=;expires=" + cdate.toGMTString() + ";domain=xdz.gov.cn;path=/;";                   
+                        document.cookie = "password=0;expires=" + cdate.toGMTString() + ";domain=xdz.gov.cn;path=/;";                  
+                        //关中产业带等第三方应用                                               
+                        document.cookie = "username=" + escape("") + ";domain=xdz.gov.cn;path=/;";                                               
+                        document.cookie = "email=" + escape("") + ";domain=xdz.gov.cn;path=/;";                                               
+                        jQuery.post(url,{"ad":"checklogin"},function(data){
+                            jQuery("#user_account_105694").html(data.account);   
+                            jQuery("#userinfo_105694").css("display","");
+                            jQuery("#user_login_105694").css("display","none");
+                        },"json");
+                   }else
+                   {
+                       alert("密码或用户名有误，登录失败！");
+                   }
+               },"json");                                             
+         }                                               
+         else if(fl == 2) //mail                                               
+         {                                               
+          document.adoii6wkjxha.action = "";                                               
+          document.adoii6wkjxha.username.value=document.adoii6wkjxha.wbaccount.value;                                               
+          document.adoii6wkjxha.password.value=document.adoii6wkjxha.wbpassword.value;                                               
+          document.adoii6wkjxha.mail_domain.value="xdz.com";                                               
+             document.adoii6wkjxha.target = "_self";                                               
+         }                                               
+         if(fl == 4) //论坛                                               
+         {                                               
+          document.adoii6wkjxha.action = "";                                               
+           document.adoii6wkjxha.target = "_self";                                               
+         }                                               
+}                                               
+function dereg()                                               
+{                                               
+    location.href= "/hyyem/hyzc.jsp?urltype=tree.TreeTempUrl&wbtreeid=20797";                                               
+}                                               
+function setFlage()                                               
+{                                               
+ var fl = document.adoii6wkjxha.setf.value;                                               
+ if(fl == 3) //vip                                               
+ {                                               
+  document.adoii6wkjxha.action = "";                                               
+   document.adoii6wkjxha.target = "_blank";                                               
+   document.adoii6wkjxha.submit();                                               
+  document.adoii6wkjxha.setf.value = 0;                                               
+ }                                               
+}                                               
+function changeFlage()                                               
+{                                               
+ var cf = 7;//document.all.changef.value;                                                
+ document.all.changef.value=0;                                                
+                                                  
+ if(cf == 1)                                               
+ {                                               
+  document.adoii6wkjxha.action = "/Member/hyzssy1.jsp?urltype=tree.TreeTempUrl&wbtreeid=20048";                                               
+  document.adoii6wkjxha.target = "_top";                                               
+     document.adoii6wkjxha.submit();                                               
+ }                                               
+ else if(cf == 2)//mail                                               
+ {                                               
+  document.adoii6wkjxha.action = "";                                               
+  document.adoii6wkjxha.target = "_blank";                                               
+     document.adoii6wkjxha.submit();                                               
+ }                                               
+ else if(cf == 3)//vip                                               
+ {                                               
+  document.adoii6wkjxha.action = "";                                               
+  document.adoii6wkjxha.target = "_blank";                                               
+     document.adoii6wkjxha.submit();                                               
+ }                                               
+ else if(cf == 4)                                               
+ {                                               
+  document.adoii6wkjxha.action = "";                                               
+  document.adoii6wkjxha.target = "_blank";                                               
+     document.adoii6wkjxha.submit();                                               
+ }                                               
+ else if(cf == 5)                                               
+ {                                               
+  document.adoii6wkjxha.action = "";                                               
+  document.adoii6wkjxha.target = "_blank";                                               
+     document.adoii6wkjxha.submit();                                               
+ }                                               
+ else                                               
+ {                                               
+  document.adoii6wkjxha.action = "<span style='color:red;font-size:9pt'>转换链接错误</span>";                                               
+  document.adoii6wkjxha.target = "_top";                                               
+  document.adoii6wkjxha.submit();                                               
+ }                                               
+}                                               
+//-->                                               
+</script>                                               
+      <script language="JavaScript" src="../system/xdz/user/etuser/register/reguser.js"></script>                                               
+       <div id="user_login_105694">
+       <form name="adoii6wkjxha" id="adoii6wkjxha" action="../hyyem/hydl.jsp?urltype=tree.TreeTempUrl&wbtreeid=20798" method="post" style="display:inline">
+       <input type="hidden" name="setf" id="setf" value="0">
+       <input type="hidden" name="targeturl" value="/system/_owners/admin1/_webprj/gxzx/index.jsp">                                               
+       <input type="hidden" id="vactiont" name="vactiont"> 
+       <input type="hidden" name="actiont" id="actiont" value="loginreg2">                                              
+       <input type="hidden" name="username">                                               
+       <INPUT name="mail_domain" type="hidden">                                               
+       <input type="hidden" name="password">                                               
+       <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">                                               
+          <tr align="center">                                               
+              <td align="right" class="listfont105694" nowrap="nowrap">用户名:</td>                                               
+              <td><input type="text" name="wbaccount" id="wbaccount" size="11" maxlength="20" style="width:75px;*+width:67px;height:16px;border:#92bbf2 1px solid;line-height:16px;color:#b5b6b7"></td>                                               
+              <td align="right" class="listfont105694" nowrap="nowrap">密码:</td>                                               
+              <td><input type="password" name="wbpassword" AUTOCOMPLETE="off" id="wbpassword" size="11" maxlength="20" style="width:75px;*+width:67px;height:16px;border:#92bbf2 1px solid;line-height:16px;color:#b5b6b7"></td>                                               
+              <td align="left">                                               
+                
+              <input type="image" src="images/button2.gif" border="0">           
+                                                            
+              </td>                                           
+              
+                                                            
+             <td align="left">                                               
+             <img src="images/button1.gif" tabindex="1" align="absmiddle" onclick="dereg()" style="cursor: pointer">                                              
+             </td> 
+             <td>                                              
+                                                            
+          <td class="listfont105694" nowrap="nowrap"><a href="../hyyem/zhmm.jsp?urltype=tree.TreeTempUrl&wbtreeid=20213">找回密码</a>&nbsp;<!--<a href='javascript:calogin();'>认证用户</a>--></td>                                               
+          <td class="listfont105694" nowrap="nowrap"><a href="../Member/hyzssy1.jsp?urltype=tree.TreeTempUrl&wbtreeid=20048"><strong>我的助手</strong></a><td>                                               
+         </tr>                                               
+      </table>                                               
+       </form>                                           
+       </div>     
+       
+       <form action="../hyyem/hydl.jsp?urltype=tree.TreeTempUrl&wbtreeid=20798" method="post" name="adoii6wkjxha" style="display: inline">                                          
+      <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" id="userinfo_105694" style="padding-right:19px;display:none">                                               
+        <tr>                                                
+         <td height="18" align="right" class="listfont105694">
+         <strong>欢迎您:</strong><a id="user_account_105694"></a>
+         <input type="hidden" name="exit" id="exit" value="0"><a href="javascript:dologout();"></a>                                    
+           <a href="../Member/hyzssy1.jsp?urltype=tree.TreeTempUrl&wbtreeid=20048"><strong>&nbsp;&nbsp;我的助手</strong></a>                                             
+           <a href="javascript:syn_logout();"><b><span style="color:#FF0000">退 出</span></b></a>
+         </td>                                               
+        </tr>                                               
+      </table>
+      </form>                                                
+<script type="text/javascript">
+if(window.document)
+{
+jQuery(document).ready(function (){
+    var url = "/system/resource/usercheck.jsp";
+    jQuery.post(url,{"ad":"checklogin"},function(data){
+        if(data.state)
+        {
+            jQuery("#user_account_105694").html(data.account);
+            jQuery("#userinfo_105694").css("display","");
+            jQuery("#user_login_105694").css("display","none");
+        }
+    },"json");
+});
+}
+function syn_logout()
+{
+    var url = "/system/resource/usercheck.jsp";
+    jQuery.post(url,{"ad":"userlogout"},function(data){
+            //注销时，删掉相应的cookie                                              
+            document.cookie = "xdztime=del;domain=xdz.gov.cn;expires=Mon, 01 Jan 1900 00:00:00 UTC;path=/;";                                              
+            //2.cicrosid                                              
+            document.cookie = "cicrosid=del;domain=xdz.gov.cn;expires=Mon, 01 Jan 1900 00:00:00 UTC;path=/;";                                              
+            document.cookie = "account=del;domain=xdz.gov.cn;expires=Mon, 01 Jan 1900 00:00:00 UTC;path=/;";                                              
+            document.cookie = "password=del;domain=xdz.gov.cn;expires=Mon, 01 Jan 1900 00:00:00 UTC;path=/;";                                              
+            //3.企业编码，OA使用                                              
+            document.cookie = "_EP_COP_ID=del;expires=Mon, 31 Dec 1900 00:00:00 UTC; path=/";                                              
+            window.location = window.location;
+    },"json");
+}
+</script><!--#endeditable--></UL>
+<DIV class="clean"></DIV>
+<DIV class="top_other"><!--#begineditable contype="" name="主页|收藏" action="" layout="" clone="0" namechanged="0" order="2" ispublic="0" tagname="主页|收藏" viewid="105689" stylesysid=""-->
+<script language="javascript">
+function dosuba105689a()
+{
+    try{
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf("msie 8")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE8
+        }else{
+            if (document.all) 
+            {
+                window.external.addFavorite(document.location.href, document.title);
+            }else if(window.sidebar)
+            {
+                window.sidebar.addPanel( document.title, document.location.href, "");//firefox
+            }
+            else
+            {
+                alert(favoritePrompt());
+            }
+        }
+
+    }
+    catch (e){alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");}
+}
+function hotKeysa105689a() 
+{
+    var ua = navigator.userAgent.toLowerCase(); 
+    var str = "";    
+    var isWebkit = (ua.indexOf('webkit') != - 1); 
+    var isMac = (ua.indexOf('mac') != - 1);     
+    if (ua.indexOf('konqueror') != - 1) 
+    {  
+        str = 'CTRL + B'; // Konqueror   
+    } 
+    else if (window.home || isWebkit || isMac) 
+    {        
+        str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac   
+    }
+    return ((str) ? '无法自动添加到收藏夹，请使用' + str + '手动添加' : str);
+}
+function setHomepagea105689a()
+{
+        var url = document.location.href;
+    if (document.all){
+        document.body.style.behavior='url(#default#homepage)';
+        document.body.setHomePage(url);
+    }else if (window.sidebar){
+        if(window.netscape){
+             try{
+                  netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch (e){
+                   alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+             }
+    }
+var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+prefs.setCharPref('browser.startup.homepage',url);}
+else
+    {
+        alert("浏览器不支持自动设为首页，请手动设置");
+    }
+}
+</script>
+<script type="text/javascript" src="../erwm/zDrag.js"></script>
+<script type="text/javascript" src="../erwm/zDialog.js"></script>
+<script type="text/javascript">
+function open1()
+{
+    
+    var diag = new Dialog();
+    diag.Width = 1035;
+    diag.Height = 750;
+    diag.URL = "/ewmsm.htm";  diag.show();
+
+}
+
+</script>
+<table width="100%">
+    <tr>
+        <td>
+            <A href="javascript:setHomepagea105689a()" style="TEXT-DECORATION: none">
+                <span>设为主页</span>
+            </A><span>|</span>
+            <A href="javascript:dosuba105689a();" style="TEXT-DECORATION: none">
+                <span>&nbsp;加入收藏</span>
+            </A><span>|</span>
+            
+            <A href="../wzdt.htm" style="TEXT-DECORATION: none">
+                <span>网站地图</span>
+            </A><span>|</span>
+           
+            <A href="http://mail.xdz.gov.cn" target="_blank" style="TEXT-DECORATION: none">
+                <span>邮件登录</span>
+            </A><span>|</span>
+            <A href="../wsbs/jzcxrk.jsp?urltype=tree.TreeTempUrl&wbtreeid=20831" style="TEXT-DECORATION: none">
+                <span>我要查询</span>
+            </A>
+            <span>|</span>
+            <A href="../InterAmblyopia/amblyopia.html" style="TEXT-DECORATION: none">
+                <span>无障碍</span>
+            </A>
+<span>|</span>
+ <A id="a" value="普通窗口" onclick="open1()" style="TEXT-DECORATION: none">
+                <span>二维码</span>
+            </A>
+    </tr>
+</table><!--#endeditable--></DIV>
+<UL class="top_home">
+<LI class="h_poit"><A href="sy.htm">高新首页</A> </LI>
+<LI><A href="../zwgk.htm">政务公开</A> </LI>
+<LI><A href="../wsbs.htm">网上办事</A> </LI>
+<LI><A href="../tzgx.htm">投资高新</A> </LI>
+<LI><A href="../gzcy.htm">公众参与</A> </LI></UL>
+<DIV class="clean"></DIV></DIV>
+<UL class="GX_nav GX_kx"><!--#begineditable contype="" name="网站导航" action="" layout="" clone="0" namechanged="0" order="3" ispublic="0" tagname="网站导航" viewid="105728" stylesysid=""-->    <li><a class="nav_home" href="sy.htm" title="首页">首页</a></li>
+    <li><a href="gxyw.htm" title="高新要闻">高新要闻</a></li>
+    <li><a href="tpxw.htm" title="图片新闻">图片新闻</a></li>
+    <li><a href="tz.htm" title="通知">通知</a></li>
+    <li><a href="gsgg.htm" title="公示公告">公示公告</a></li>
+    <li><a href="yqdt.htm" title="园区动态">园区动态</a></li>
+    <li><a href="gxgk.htm" title="高新概况">高新概况</a></li>
+    <li><a href="yqfc.htm" title="园区风采">园区风采</a></li>
+    <li><a href="mtgz.htm" title="媒体关注">媒体关注</a></li>
+<!--#endeditable--></UL>
+<DIV class="clean"></DIV>
+<DIV class="GX_time GX_kx">
+<DIV class="time_time"><!--#begineditable contype="" name="文本日历" action="" layout="" clone="0" namechanged="0" order="4" ispublic="0" tagname="文本日历" viewid="106392" stylesysid=""--><script language="javascript" src="../system/resource/js/calendar/simple.js"></script>               
+<script language="JavaScript">
+//阳历
+var c_Calendar106392EnDateString;
+
+var c_Calendar106392WeekDayString;
+
+//阴历
+var c_Calendar106392CnDateString;
+//节气
+var c_Calendar106392JQString;
+//年
+var c_Calendar106392YearString;
+//月
+var c_Calendar106392MonthString;
+//日
+var c_Calendar106392DayString;
+//周
+var c_Calendar106392WeekString;
+function RunGLNL106392()
+{          
+    var  sc =new Simple_Calendar ();
+    sc.init();
+    c_Calendar106392CnDateString=sc.getCnDateString();
+    c_Calendar106392WeekDayString=sc.getCalendarWeekString();
+    c_Calendar106392JQString=sc.getJQString();
+    c_Calendar106392EnDateString=sc.getEnDateString();
+    c_Calendar106392YearString=sc.getYearString();
+    c_Calendar106392MonthString=sc.getMonthString();
+    c_Calendar106392DayString=sc.getDayString();
+    c_Calendar106392WeekString=sc.getWeekString();    
+}
+RunGLNL106392();
+document.write('<div id="c_lunar106392"   >');       
+document.write(c_Calendar106392EnDateString);
+document.write("&nbsp;&nbsp;"+c_Calendar106392WeekDayString);
+document.write("&nbsp;&nbsp;"+c_Calendar106392CnDateString);document.write("</div>");
+</script>
+    <!--#endeditable--><!--#begineditable contype="" name="中国天气网天气预报" action="" layout="" clone="0" namechanged="0" order="5" ispublic="0" tagname="中国天气网天气预报" viewid="106393" stylesysid=""-->
+ <!--#endeditable--></DIV><!--#begineditable contype="" name="全文检索1" action="" layout="" clone="0" namechanged="0" order="6" ispublic="0" tagname="全文检索1" viewid="106394" stylesysid=""--><script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode106394').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkeyword106394").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkeyword106394").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkeyword106394").value = base64.encode(document.getElementById("lucenenewssearchkeyword106394").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode106394"));
+        return true;
+    } 
+</script>
+<form action="ssjgy.jsp?wbtreeid=20477" method="post" id="au6a" name="au6a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkeyword106394" name="lucenenewssearchkeyword" value=""><input type="hidden" id="_lucenesearchtype106394" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope106394" name="searchScope" value="0">
+ <div class="time_input">信息检索：<input name="showkeycode" id="showkeycode106394"></div>
+ <div class="time_submit"><input type="image" src="images/D_07.jpg" style="cursor: hand" /></div>
+</form><script language="javascript" src="../system/resource/js/base64.js"></script><script language="javascript" src="../system/resource/js/formfunc.js"></script>
+<!--#endeditable--></DIV><!----------------------------------------------------top--------------------------------------------------------------------><!----------------------------------------------------content-------------------------------------------------------------------->
+<DIV class="GX_content">
+<DIV class="content_left">
+<DIV class="left_div0 GX_left GX_kx"><!--#begineditable contype="" name="图片文章列表1" action="" layout="" clone="0" namechanged="0" order="7" ispublic="0" tagname="图片文章列表1" viewid="106563" stylesysid=""--><script language="javascript" src="../system/resource/images/component/newschangeimage/changeimage5/js/focus.js"></script>
+<div>
+    <div>
+        <div class="c106563sub_box">
+            <div class="c106563sub_nav">
+                <div class="c106563sub_more"><a href="yqdt.htm" onfocus="this.blur()" title="园区动态" target="_blank" style="font-family: Tahoma;font-size: 12px">更多>></a></div>
+                <div class="c106563sub_no" id="vsb_imgnewslist_bd1lfsj">
+                    <ul>
+                        <li class="show">1</li>
+                        <li class="">2</li>
+                        <li class="">3</li>
+                        <li class="">4</li>
+                        <li class="">5</li>
+                        <li class="">6</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="vsb_imgnewslist_bd1lfimg">
+                <div>
+                    <dl class="show"></dl>
+                         <dl class="">
+                        <dt><a href="../info/20499/148253.htm" title="" target="_blank" class="c106563"><img src="../_mediafile/admin1/2015/10/26/2dpn6hlkfl.jpg" alt="全国最大汽车动力电池生产基地竣工投产"></a></dt>
+                        <dd>
+                            <h2 style="margin:0;padding:0"><a href="../info/20499/148253.htm" target="_blank" class="c106563">全国最大汽车动力电池生产基地竣工投产</a></h2>
+                            <tt style="margin:0;padding:0"><a href="../info/20499/148253.htm" target="_blank" class="c106563">姜锋等领导为三星环新动力项目落成剪彩摄影 江照军本刊讯（记者刘鹏）10月22日，中国目前最大的汽车动力电池生产基地——三星...</a></tt>
+                        </dd>
+                    </dl>
+                         <dl class="">
+                        <dt><a href="../info/20499/148249.htm" title="" target="_blank" class="c106563"><img src="../_mediafile/admin1/2015/10/26/eamsxu5jmx.jpg" alt="赵红专接受凤凰卫视专访"></a></dt>
+                        <dd>
+                            <h2 style="margin:0;padding:0"><a href="../info/20499/148249.htm" target="_blank" class="c106563">赵红专接受凤凰卫视专访</a></h2>
+                            <tt style="margin:0;padding:0"><a href="../info/20499/148249.htm" target="_blank" class="c106563">赵红专接受凤凰卫视专访 本刊讯（记者 刘鹏）10月22日，备受瞩目的三星环新汽车动力电池项目一期工程在西安高新区竣工投产，...</a></tt>
+                        </dd>
+                    </dl>
+                         <dl class="">
+                        <dt><a href="../info/20499/148247.htm" title="" target="_blank" class="c106563"><img src="../_mediafile/admin1/2015/10/26/2pzotppjkn.jpg" alt="西安市众创示范街区在高新区揭牌"></a></dt>
+                        <dd>
+                            <h2 style="margin:0;padding:0"><a href="../info/20499/148247.htm" target="_blank" class="c106563">西安市众创示范街区在高新区揭牌</a></h2>
+                            <tt style="margin:0;padding:0"><a href="../info/20499/148247.htm" target="_blank" class="c106563">领导为西安市众创示范街区揭牌 摄影 高杰 本刊讯（记者 高杰）10月19日，在全国“双创”活动周西安分会场举行的双创新生态高...</a></tt>
+                        </dd>
+                    </dl>
+                         <dl class="">
+                        <dt><a href="../info/20499/148252.htm" title="" target="_blank" class="c106563"><img src="../_mediafile/admin1/2015/10/26/7gznhy6k4e.jpg" alt="2015世界增强现实博览会首登西安"></a></dt>
+                        <dd>
+                            <h2 style="margin:0;padding:0"><a href="../info/20499/148252.htm" target="_blank" class="c106563">2015世界增强现实博览会首登西安</a></h2>
+                            <tt style="margin:0;padding:0"><a href="../info/20499/148252.htm" target="_blank" class="c106563">国际增强现实产业基地落户高新区 摄影 苏吉余 本刊讯（记者 苏吉余 王晶）10月17日至18日，2015世界增强现实博览会在高新区召...</a></tt>
+                        </dd>
+                    </dl>
+                         <dl class="">
+                        <dt><a href="../info/20499/148141.htm" title="" target="_blank" class="c106563"><img src="../_mediafile/admin1/2015/10/19/cw1z6zi8ea.jpg" alt="弥补短板完善链条 做大做强产业集群"></a></dt>
+                        <dd>
+                            <h2 style="margin:0;padding:0"><a href="../info/20499/148141.htm" target="_blank" class="c106563">弥补短板完善链条 做大做强产业集群</a></h2>
+                            <tt style="margin:0;padding:0"><a href="../info/20499/148141.htm" target="_blank" class="c106563">姚引良在三星（中国）半导体调研 摄影 刘鹏 本刊讯（记者 刘鹏）10月14日上午，省委常委、常务副省长姚引良来到高新区，调研...</a></tt>
+                        </dd>
+                    </dl>
+                         <dl class="">
+                        <dt><a href="../info/20499/148140.htm" title="" target="_blank" class="c106563"><img src="../_mediafile/admin1/2015/10/19/2kqb4bt8cv.jpg" alt="做好管理 服务群众 打造民生工程典范"></a></dt>
+                        <dd>
+                            <h2 style="margin:0;padding:0"><a href="../info/20499/148140.htm" target="_blank" class="c106563">做好管理 服务群众 打造民生工程典范</a></h2>
+                            <tt style="margin:0;padding:0"><a href="../info/20499/148140.htm" target="_blank" class="c106563">赵红专了解回迁安置工作 摄影 刘鹏 本刊讯（记者 刘鹏）10月13日，市委常委、高新区党工委书记赵红专一行来到兴隆社区，调研...</a></tt>
+                        </dd>
+                    </dl>
+                                    </div>
+            </div>
+        </div>
+        <script type="text/javascript">movec();</script>
+    </div>
+    </div><script>_showDynClickBatch(['dynclicks_u7_148253','dynclicks_u7_148249','dynclicks_u7_148247','dynclicks_u7_148252','dynclicks_u7_148141','dynclicks_u7_148140'],[148253,148249,148247,148252,148141,148140],"wbnews", 605444217)</script>
+<!--#endeditable--></DIV>
+<DIV class="left_div1 GX_right GX_kx">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit"><A href="gxyw.htm">高新要闻</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2><!--#begineditable contype="" name="高新新闻_标题列表" action="" layout="" clone="0" namechanged="0" order="8" ispublic="0" tagname="高新新闻_标题列表" viewid="105639" stylesysid=""--><div class="div_list_info1"> 
+ <span><a href="../info/20494/148356.htm" target="_blank" title="创业创新汇聚发展新动能">创业创新汇聚发展新动能</a></span>
+ <br />创业者在创业会客厅咨询2015“全国大众创业万众创新活动周”西安分会场启动仪式现...[
+ <a href="../info/20494/148356.htm">详细</a>] 
+</div>
+<div class="div_list_info1"> 
+ <span><a href="../info/20494/148239.htm" target="_blank" title="国内最大汽车动力电池生产基地昨日西安投产">国内最大汽车动力电池生产基地昨日西安投产</a></span>
+ <br />西安新闻网-西安晚报讯 （记者 赵珍） 10月22日，中国目前最大的汽车动力电池生产...[
+ <a href="../info/20494/148239.htm">详细</a>] 
+</div>
+<div class="div_list_info1"> 
+ <span><a href="../info/20494/148208.htm" target="_blank" title="音乐与创业梦激情碰撞">音乐与创业梦激情碰撞</a></span>
+ <br />本报讯（记者 陈黎）本次“双创”活动周昨日迎来了一场音乐盛宴。西安极客音乐节昨...[
+ <a href="../info/20494/148208.htm">详细</a>] 
+</div>
+<script>_showDynClickBatch(['dynclicks_u8_148356','dynclicks_u8_148239','dynclicks_u8_148208'],[148356,148239,148208],"wbnews", 605444217)</script>
+<!--#endeditable--></DIV>
+<DIV class="clean"></DIV>
+<DIV class="left_div2 GX_left GX_kx">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit" onmouseover="tabChange(this,'tab_div1','ul','poit')"><A href="gxgk.htm">高新概况</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<DIV id="tab_div1">
+<UL class="div_list_date"><!--#begineditable contype="" name="高新概况_标题列表" action="" layout="" clone="0" namechanged="0" order="9" ispublic="0" tagname="高新概况_标题列表" viewid="105642" stylesysid=""--> <li>
+  <div class="li_left"> · 
+   <a href="../info/20500/125004.htm" target="_blank" title="服务电话">服务电话</a>
+  </div>
+  <div class="li_right">
+
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20500/137892.htm" target="_blank" title="客商评价">客商评价</a>
+  </div>
+  <div class="li_right">
+
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20500/125000.htm" target="_blank" title="陕西电网销售电价表">陕西电网销售电价表</a>
+  </div>
+  <div class="li_right">
+
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20500/125001.htm" target="_blank" title="主要生产和服务费用标准">主要生产和服务费用标准</a>
+  </div>
+  <div class="li_right">
+
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20500/125003.htm" target="_blank" title="外商投资企业报批程序及所需文件">外商投资企业报批程序及所需文件</a>
+  </div>
+  <div class="li_right">
+
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20500/125002.htm" target="_blank" title="外商投资方式">外商投资方式</a>
+  </div>
+  <div class="li_right">
+
+  </div></li>
+<script>_showDynClickBatch(['dynclicks_u9_125004','dynclicks_u9_137892','dynclicks_u9_125000','dynclicks_u9_125001','dynclicks_u9_125003','dynclicks_u9_125002'],[125004,137892,125000,125001,125003,125002],"wbnews", 605444217)</script>
+<!--#endeditable--></UL></DIV></DIV>
+<DIV class="left_div3 GX_right GX_kx">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit"><A href="yqdt.htm">园区动态</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<UL class="div_list_date"><!--#begineditable contype="" name="园区动态_标题列表" action="" layout="" clone="0" namechanged="0" order="10" ispublic="0" tagname="园区动态_标题列表" viewid="105644" stylesysid=""--> <li>
+  <div class="li_left"> · 
+   <a href="../info/20499/148324.htm" target="_blank" title="“一带一路”台商西部行考察团到高新区考察">“一带一路”台商西部行考察团...</a>
+  </div>
+  <div class="li_right">
+   10-28
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20499/148323.htm" target="_blank" title="财政部部长助理戴柏华到高新区调研">财政部部长助理戴柏华到高新区调研</a>
+  </div>
+  <div class="li_right">
+   10-28
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20499/148311.htm" target="_blank" title="预算绩效管理工作培训会召开">预算绩效管理工作培训会召开</a>
+  </div>
+  <div class="li_right">
+   10-28
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20499/148322.htm" target="_blank" title="宝鸡市省人大代表考察团视察高新区">宝鸡市省人大代表考察团视察高新区</a>
+  </div>
+  <div class="li_right">
+   10-28
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20499/148321.htm" target="_blank" title="全力以赴 毫不松懈 合力推动回迁安置">全力以赴 毫不松懈 合力推动回...</a>
+  </div>
+  <div class="li_right">
+   10-28
+  </div></li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20499/148319.htm" target="_blank" title="银监会审慎规制局局长到高新区调研">银监会审慎规制局局长到高新区调研</a>
+  </div>
+  <div class="li_right">
+   10-28
+  </div></li>
+<script>_showDynClickBatch(['dynclicks_u10_148324','dynclicks_u10_148323','dynclicks_u10_148311','dynclicks_u10_148322','dynclicks_u10_148321','dynclicks_u10_148319'],[148324,148323,148311,148322,148321,148319],"wbnews", 605444217)</script>
+<!--#endeditable--></UL></DIV>
+<DIV class="clean"></DIV>
+<DIV class="left_div2 GX_left GX_kx">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit"><A href="../zwgk.htm">信息公开</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<UL class="div_list_title_xg"><!--#begineditable contype="" name="信息公开目录_链接列表" action="" layout="" clone="0" namechanged="0" order="11" ispublic="0" tagname="信息公开目录_链接列表" viewid="105683" stylesysid=""--><script language="javascript" src="../system/resource/js/openlink.js"></script>    <LI><a href="../zwgk/xxgkgd.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105607)">信息公开规定</a></li>
+    <LI><a href="../zwgk/shpyzd.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105522)">社会评议制度</a></li>
+    <LI><a href="../zwgk/xxgkzn.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105605)">信息公开指南</a></li>
+    <LI><a href="../zwgk/gkglbf.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105608)">公开管理办法</a></li>
+    <LI><a href="../zwgk/zzjg.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105510)">组织机构</a></li>
+    <LI><a href="../zwgk/gkndbg.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105609)">年度工作报告</a></li>
+    <LI><a href="../zwgk/xzspsx.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105922)">行政审批事项</a></li>
+    <LI><a href="../zwgk/bsjg.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105514)">办事机构</a></li>
+    <LI><a href="../zwgkdiv/ysqgklb.jsp?urltype=tree.TreeTempUrl&wbtreeid=20808" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105604)">依申请公开</a></li>
+<!--#endeditable--></UL>
+<DIV class="clean"></DIV></DIV>
+<DIV class="left_div3 GX_right GX_kx">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit" onmouseover="tabChange(this,'tab_div3','ul','poit')"><A href="../zwgkdiv/lmzl_list2.jsp?urltype=tree.TreeTempUrl&wbtreeid=20903">招标公告</A> </LI>
+<LI onmouseover="tabChange(this,'tab_div3','ul','poit')"><A href="../zwgkdiv/lmzl_list2.jsp?urltype=tree.TreeTempUrl&wbtreeid=20703">中标公告</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<DIV id="tab_div3"><!--#begineditable contype="" name="招标公告" action="" layout="" clone="0" namechanged="0" order="12" ispublic="0" tagname="招标公告" viewid="107166" stylesysid=""-->
+ <UL class="div_list_date">
+ <li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1027003.htm">高新区第二污水处理厂污泥堆棚...</a></div><div class="li_right">10-27</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1027002.htm">关于三星兴隆社区污水提升泵站...</a></div><div class="li_right">10-27</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1027001.htm">关于西安高新区社会保险业务系...</a></div><div class="li_right">10-27</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1026002.htm">西安高新技术产业开发区城市管...</a></div><div class="li_right">10-26</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1023002.htm">蓝博公寓C区橱柜及相关配件采购...</a></div><div class="li_right">10-23</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1023001.htm">关于西安高新区软件公寓A区正式...</a></div><div class="li_right">10-23</div><div class="clean"></div></li>
+</ul><!--#endeditable--><!--#begineditable contype="" name="中标公告" action="" layout="" clone="0" namechanged="0" order="13" ispublic="0" tagname="中标公告" viewid="107167" stylesysid=""-->
+<ul class="div_list_date" style="display:none">
+  <li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1027004.htm">关于西安高新区2015年文化艺...</a></div><div class="li_right">10-27</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1026001.htm">西安高新三星片区洨河生态公...</a></div><div class="li_right">10-26</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1022006.htm">西安高新第一中学16路调音台...</a></div><div class="li_right">10-22</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1022005.htm">西安高新第一中学初中校区速...</a></div><div class="li_right">10-22</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1022004.htm">西安市城市管理综合行政执法...</a></div><div class="li_right">10-22</div><div class="clean"></div></li><li><div class="li_left"><b>·</b><a href="../info/egovinfo/zwgkdiv/content/dm_czj-03__B/2015-1022002.htm">西安高新市政配套中心高新区...</a></div><div class="li_right">10-22</div><div class="clean"></div></li>
+ </ul><!--#endeditable--></DIV></DIV>
+<DIV class="clean"></DIV></DIV>
+<DIV class="content_right">
+<DIV class="right_div1 GX_kx">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit" onmouseover="tabChange(this,'tab_div4','ul','poit')"><A href="tz.htm">通知</A> </LI>
+<LI onmouseover="tabChange(this,'tab_div4','ul','poit')"><A href="gsgg.htm">公告</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<DIV id="tab_div4">
+<UL class="div_list_date"><!--#begineditable contype="" name="通知_标题列表" action="" layout="" clone="0" namechanged="0" order="14" ispublic="0" tagname="通知_标题列表" viewid="105646" stylesysid=""--> <li>
+  <div class="li_left"> · 
+   <a href="../info/20498/147603.htm" target="_blank" title="西安市2015年外商投资企业年度投资经营信息联合报告须知">西安市2015年外商投资...</a>
+  </div>
+  <div class="li_right">
+   09-22
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20498/148338.htm" target="_blank" title="关于2015年度“5211计划”申报推荐工作的通知">关于2015年度“5211计...</a>
+  </div>
+  <div class="li_right">
+   10-27
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20498/148258.htm" target="_blank" title="关于申报2016年度引进境外技术、管理人才项目计划的通知">关于申报2016年度引进...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20498/148257.htm" target="_blank" title="西安高新区2015年度“4050”就业困难人员申报享受社保补贴的紧急通知">西安高新区2015年度“4...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20498/148256.htm" target="_blank" title="关于转发西安市2016年工业发展专项（转型升级）资金项目申报指南的通知">关于转发西安市2016年...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20498/148237.htm" target="_blank" title="关于2015年外商投资企业联合年报工作延期的通知">关于2015年外商投资企...</a>
+  </div>
+  <div class="li_right">
+   10-23
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20498/148211.htm" target="_blank" title="关于转发西安市贸促会、市发改委、市工信委、市建委和市扶贫办关于参加第七届中国（无锡）国际新能源大会暨展览会的通知">关于转发西安市贸促会...</a>
+  </div>
+  <div class="li_right">
+   10-22
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20498/148210.htm" target="_blank" title="关于开展我市“互联网+”企业及项目摸底调查工作的通知">关于开展我市“互联网+...</a>
+  </div>
+  <div class="li_right">
+   10-22
+  </div>
+  <div class="clean"></div>
+  </li>
+<script>_showDynClickBatch(['dynclicks_u14_147603','dynclicks_u14_148338','dynclicks_u14_148258','dynclicks_u14_148257','dynclicks_u14_148256','dynclicks_u14_148237','dynclicks_u14_148211','dynclicks_u14_148210'],[147603,148338,148258,148257,148256,148237,148211,148210],"wbnews", 605444217)</script>
+<!--#endeditable--></UL>
+<UL class="div_list_date" style="display: none"><!--#begineditable contype="" name="公告_标题列表" action="" layout="" clone="0" namechanged="0" order="15" ispublic="0" tagname="公告_标题列表" viewid="105645" stylesysid=""--> <li>
+  <div class="li_left"> · 
+   <a href="../info/20497/148270.htm" target="_blank" title="西安高新区公租房申请资格复审名单公示（复审编号：QYFS15100004）">西安高新区公租房申请...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20497/148269.htm" target="_blank" title="西安高新区公租房申请资格复审名单公示（复审编号：QYFS15100003）">西安高新区公租房申请...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20497/148268.htm" target="_blank" title="西安高新区公租房申请资格复审名单公示（复审编号：QYFS15100002）">西安高新区公租房申请...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20497/148267.htm" target="_blank" title="西安高新区公租房申请资格初审名单公示（初审编号：JTCS15100096---JTCS15100098）">西安高新区公租房申请...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20497/148266.htm" target="_blank" title="西安高新区公租房申请资格初审名单公示（初审编号：GRCS15100088---GRCS15100095）">西安高新区公租房申请...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20497/148265.htm" target="_blank" title="西安高新区公租房申请资格初审名单公示（初审编号：QYCS15100009）">西安高新区公租房申请...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20497/148264.htm" target="_blank" title="西安高新区公租房申请资格初审名单公示（初审编号：QYCS15100008）">西安高新区公租房申请...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+ <li>
+  <div class="li_left"> · 
+   <a href="../info/20497/148263.htm" target="_blank" title="西安高新区公租房申请资格初审名单公示（初审编号：QYCS15100007）">西安高新区公租房申请...</a>
+  </div>
+  <div class="li_right">
+   10-26
+  </div>
+  <div class="clean"></div>
+  </li>
+<script>_showDynClickBatch(['dynclicks_u15_148270','dynclicks_u15_148269','dynclicks_u15_148268','dynclicks_u15_148267','dynclicks_u15_148266','dynclicks_u15_148265','dynclicks_u15_148264','dynclicks_u15_148263'],[148270,148269,148268,148267,148266,148265,148264,148263],"wbnews", 605444217)</script>
+<!--#endeditable--></UL></DIV></DIV>
+<DIV class="right_div2 GX_kx">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit"><A href="../ldxx.htm">领导信息</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<DIV class="div_list_tpic div_list_tpic1">
+<DIV class="20150127_nr" style="height: 240px">
+<TABLE class="20150127_xrld" border="0" cellspacing="0" cellpadding="0" width="100%">
+<TBODY>
+<TR>
+<TD valign="middle" width="100" align="left" style="line-height: 34px;width: 100px;background: url(images/20150127_line.jpg) no-repeat left bottom;height: 38px;font-size: 14px"><FONT style="color: #dc3404">&gt;</FONT>&nbsp;&nbsp;<A href="../info/20795/125541.htm"><STRONG>赵红专</STRONG></A></TD>
+<TD valign="middle" rowspan="3" style="padding-left: 8px;width: 16px"><IMG src="images/20150127_xx.jpg" width="9" height="238"></TD>
+<TD valign="middle" width="100" align="left" style="line-height: 34px;width: 100px;background: url(images/20150127_line.jpg) no-repeat left bottom;height: 38px;font-size: 14px"><FONT style="color: #dc3404">&gt;</FONT>&nbsp;&nbsp;<A href="../info/20795/125544.htm"><STRONG>安建利</STRONG></A></TD></TR>
+<TR>
+<TD valign="middle" width="100" align="center" style="line-height: 36px;height: 36px;color: #f05022;font-size: 14px"><STRONG>书 记</STRONG></TD>
+<TD valign="middle" width="100" align="center" style="line-height: 36px;height: 36px;color: #f05022;font-size: 14px"><STRONG>主 任</STRONG></TD></TR>
+<TR>
+<TD valign="top" width="100" align="left" style="line-height: 22px;height: 140px">市委常委，西安高新区党工委书记 </TD>
+<TD valign="top" width="100" align="left" style="line-height: 22px;height: 140px">高新区党工委副书记、管委会主任、西安高新综合保税区管委会主任、高科(集团)公司党委书记、董事长 </TD></TR></TBODY></TABLE></DIV></DIV>
+<DIV class="clean"></DIV>
+<DIV class="div_list_tpic"><B>副主任</B><BR><A href="../info/20795/125539.htm">杨仁华</A><A href="../info/20795/125546.htm">王宽让</A> <A href="../info/20795/132580.htm">邢&nbsp;&nbsp;&nbsp;欣</A> <A href="../info/20795/125543.htm">陈 辉</A><A href="../info/20795/147767.htm">韩红丽</A><A href="../info/20795/125540.htm">史康度</A> <A href="../info/20795/125542.htm">王&nbsp;&nbsp;斌</A><A href="../info/20795/125535.htm">袁海林</A> </DIV>
+<DIV class="clean"></DIV>
+<DIV class="div_list_tpic"><B>副巡视员</B><BR><A href="../info/20795/125538.htm">李亚红</A><A href="../info/20795/125536.htm">杨念田</A><A href="../info/20795/125545.htm">鲁良栋</A> </DIV>
+<DIV class="clean"></DIV></DIV></DIV>
+<DIV class="clean"></DIV>
+<DIV class="GX_ad GX_kx">
+<DIV style="padding-bottom: 12px;width: 590px;float: left;height: 100px"><!--#begineditable contype="" name="flash" action="" layout="" clone="0" namechanged="0" order="16" ispublic="0" tagname="自定义查询入口" viewid="106562" stylesysid=""-->
+
+
+<!--<a style="border-style:none;padding-bottom:5px;display:none;" border="0" href="/info/20498/131921.htm">
+<img width="980" border="0" src="/gxjsbanner.jpg"></a>-->
+
+<!--
+<div style="height:5px;width:590px"></div>
+<object width="590" height="100" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0">
+    <param name=movie value="/gxzx/images/D_ad2.swf">
+    <param name=quality value=high>
+    <param name="wmode" value="opaque" />
+    <embed src="/gxzx/images/D_ad2.swf" width="590" height="100" 
+        quality=high pluginspage=http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash type=application/x-shockwave-flash ></embed>
+</object>
+
+ -->
+
+
+<div style="height:5px;width:590px"></div>
+<object width="590" height="100" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0">
+    <param name="movie" value="images/xgxbanner2.swf">
+    <param name="quality" value="high">
+    <param name="wmode" value="opaque" />
+    <embed src="images/xgxbanner2.swf" width="590" height="100" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash"></embed>
+</object><!--#endeditable--></DIV>
+<DIV style="padding-bottom: 12px;width: 381px;float: right;height: 100px;padding-top: 5px"><!--#begineditable contype="" name="创业图片" action="" layout="" clone="0" namechanged="0" order="17" ispublic="0" tagname="创业图片" viewid="107346" stylesysid=""--><style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u17_{
+    width:381px;
+    height:100px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u17_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u17_ ul{
+    display:none;
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u17_ ul li{
+    display:none;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u17_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,4000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,4000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,4000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tr><td><div id="flashBoxu_u17_"><a href="http://www.xaiec.org" target="_blank"><img src="../fff_03.jpg" border="0" width="381" height="100" alt="title=''/"></a><a href="http://www.ziwei.com.cn" target="_blank"><img src="../images/zqbannner.jpg" border="0" width="381" height="100" alt="title=''/"></a><a href="http://www.xasoftpark.com/hdz/index.htm" target="_blank"><img src="../images/dhggwz.jpg" border="0" width="381" height="100" alt="title=''/"></a></div></td></tr></table><SCRIPT language="JavaScript">new flashBoxCtrl("flashBoxu_u17_");</SCRIPT><!--#endeditable--></DIV></DIV>
+<DIV class="clean"></DIV>
+<DIV class="content_left">
+<DIV class="left_div4 GX_kx GX_left">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit"><A href="mtgz.htm">媒体关注</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<UL class="div_list_date"><!--#begineditable contype="" name="媒体关注标题列表" action="" layout="" clone="0" namechanged="0" order="18" ispublic="0" tagname="媒体关注标题列表" viewid="105634" stylesysid=""--><li>
+  <div class="li_left"> · 
+   <a href="../info/20502/148357.htm" target="_blank" title="创业创新汇聚发展新动能">创业创新汇聚发展新动能</a>
+  </div>
+  <div class="li_right">
+   10-28
+  </div></li> 
+<li>
+  <div class="li_left"> · 
+   <a href="../info/20502/148358.htm" target="_blank" title="国内最大汽车动力电池生产基地昨日西安投产">国内最大汽车动力电池生产基地昨日西安投产</a>
+  </div>
+  <div class="li_right">
+   10-23
+  </div></li> 
+<li>
+  <div class="li_left"> · 
+   <a href="../info/20502/148359.htm" target="_blank" title="音乐与创业梦激情碰撞">音乐与创业梦激情碰撞</a>
+  </div>
+  <div class="li_right">
+   10-22
+  </div></li> 
+<li>
+  <div class="li_left"> · 
+   <a href="../info/20502/148360.htm" target="_blank" title="《创业英雄汇》西安海选 31个创业项目角逐央视">《创业英雄汇》西安海选 31个创业项目角...</a>
+  </div>
+  <div class="li_right">
+   10-21
+  </div></li> 
+<li>
+  <div class="li_left"> · 
+   <a href="../info/20502/148361.htm" target="_blank" title="中国工程院院士讲解“中国智造”">中国工程院院士讲解“中国智造”</a>
+  </div>
+  <div class="li_right">
+   10-21
+  </div></li> 
+<li>
+  <div class="li_left"> · 
+   <a href="../info/20502/148362.htm" target="_blank" title="财政部部长助理戴柏华西安调研">财政部部长助理戴柏华西安调研</a>
+  </div>
+  <div class="li_right">
+   10-20
+  </div></li> 
+<script>_showDynClickBatch(['dynclicks_u18_148357','dynclicks_u18_148358','dynclicks_u18_148359','dynclicks_u18_148360','dynclicks_u18_148361','dynclicks_u18_148362'],[148357,148358,148359,148360,148361,148362],"wbnews", 605444217)</script>
+<!--#endeditable--></UL></DIV>
+<DIV class="left_div4 GX_kx GX_right">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit" onmouseover="tabChange(this,'tab_div4','span','poit')"><A href="../tzgx/xxgklby.jsp?urltype=tree.TreeTempUrl&wbtreeid=20896">投资政策</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<UL class="div_list_date"><!--#begineditable contype="" name="投资政策" action="" layout="" clone="0" namechanged="0" order="19" ispublic="0" tagname="投资政策" viewid="107164" stylesysid=""-->
+ <li>
+  <div class="li_left"> · <a href="../info/egovinfo/zwgkdiv/content/fzggtswj-16__D/2015-0604006.htm" target="_blank" title="西安高新区管委会关于实施特殊人才跨越计划的若干政策">西安高新区管委会关于实施特殊人才跨越...</a></div>
+  <div class="li_right">10-08</div></li>
+ <li>
+  <div class="li_left"> · <a href="../info/egovinfo/zwgkdiv/content/fzggtswj-16__D/2015-0604005.htm" target="_blank" title="西安高新区管委会关于促进经济稳中求进的实施意见">西安高新区管委会关于促进经济稳中求进...</a></div>
+  <div class="li_right">10-08</div></li>
+ <li>
+  <div class="li_left"> · <a href="../info/egovinfo/zwgkdiv/content/fzggtswj-16__D/2015-0604004.htm" target="_blank" title="西安高新区管委会关于促进科技与金融结合的若干政策">西安高新区管委会关于促进科技与金融结...</a></div>
+  <div class="li_right">10-08</div></li>
+ <li>
+  <div class="li_left"> · <a href="../info/egovinfo/zwgkdiv/content/fzggtswj-16__D/2015-0604003.htm" target="_blank" title="西安高新区管委会关于加快创新驱动发展的若干政策">西安高新区管委会关于加快创新驱动发展...</a></div>
+  <div class="li_right">10-08</div></li>
+ <li>
+  <div class="li_left"> · <a href="../info/egovinfo/zwgkdiv/content/fzggtswj-16__D/2015-0604002.htm" target="_blank" title="西安高新区管委会关于支持科技企业小巨人发展的若干政策">西安高新区管委会关于支持科技企业小巨...</a></div>
+  <div class="li_right">10-08</div></li>
+ <li>
+  <div class="li_left"> · <a href="../info/egovinfo/zwgkdiv/content/fzggtswj-16__D/2015-0604001.htm" target="_blank" title="西安高新区管委会关于年度优秀企业评选表彰管理办法">西安高新区管委会关于年度优秀企业评选...</a></div>
+  <div class="li_right">10-08</div></li>
+<!--#endeditable--></UL></DIV>
+<DIV class="clean"></DIV>
+<DIV class="left_div5 GX_kx GX_left">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit"><A href="../Topics/rdzt/20140217/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=20965">专题建设</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<UL class="div_list_title2"><!--#begineditable contype="" name="专题建设_图片列表" action="" layout="" clone="0" namechanged="0" order="20" ispublic="0" tagname="专题建设_图片列表" viewid="105701" stylesysid=""-->        <li>
+                <a href="../Topics/jsmy/20140217/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=18340" onclick="_addDynClicks(&#34;wbimage&#34;, 605444217, 11311)" target="_blank">
+                    <img src="../Topics/xt_jsmy.jpg" border="0" width="112" height="51">
+                </a>
+        </li>
+        <li>
+                <a href="../Topics/slcszl/20140217/index.jsp?urltype=tree.TreeTempUrl&wbtreeid=21239" onclick="_addDynClicks(&#34;wbimage&#34;, 605444217, 11428)" target="_blank">
+                    <img src="../images/cszt1.jpg" border="0" width="112" height="51">
+                </a>
+        </li>
+        <li>
+                <a href="../Topics/wcnrsxddjs/20140217/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=20400" onclick="_addDynClicks(&#34;wbimage&#34;, 605444217, 11429)" target="_blank">
+                    <img src="../images/wcnrsxddjs.jpg" border="0" width="112" height="51">
+                </a>
+        </li>
+        <li>
+                <a href="../info/20398/86387.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 605444217, 11197)" target="_blank">
+                    <img src="../images/D_12_7_10.jpg" border="0" width="112" height="51">
+                </a>
+        </li>
+        <li>
+                <a href="../Topics/cxtczt/20140217/index.jsp?urltype=tree.TreeTempUrl&wbtreeid=21045" onclick="_addDynClicks(&#34;wbimage&#34;, 605444217, 11194)" target="_blank">
+                    <img src="images/D_13.jpg" border="0" width="112" height="51">
+                </a>
+        </li>
+        <li>
+                <a href="http://dqzs.xdz.com.cn/" onclick="_addDynClicks(&#34;wbimage&#34;, 605444217, 11196)" target="_blank">
+                    <img src="images/D_14.jpg" border="0" width="112" height="51">
+                </a>
+        </li>
+        <li>
+                <a href="../topics/huanbao/index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 605444217, 11080)" target="_blank">
+                    <img src="images/D_15.jpg" border="0" width="112" height="51">
+                </a>
+        </li>
+        <li>
+                <a href="../Topics/xmxxgk/index.jsp?urltype=tree.TreeTempUrl&wbtreeid=19750" onclick="_addDynClicks(&#34;wbimage&#34;, 605444217, 11195)" target="_blank">
+                    <img src="images/D_16.jpg" border="0" width="112" height="51">
+                </a>
+        </li>
+<!--#endeditable--></UL></DIV>
+<DIV class="left_div6 GX_kx GX_right">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit"><A href="../gzcy/cjwt.htm">常见问题</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<UL class="div_list_date"><!--#begineditable contype="" name="常见问题_标题列表" action="" layout="" clone="0" namechanged="0" order="21" ispublic="0" tagname="常见问题_标题列表" viewid="105657" stylesysid=""-->   <li><div class="li_left"> · <a href="../info/20677/148259.htm" target="_blank" title="高新区年度优秀企业评选表彰管理办法解析（二）">高新区年度优秀企业评选表彰...</a></div></li>
+   <li><div class="li_left"> · <a href="../info/20677/148034.htm" target="_blank" title="高新区年度优秀企业评选表彰管理办法解析（一）">高新区年度优秀企业评选表彰...</a></div></li>
+   <li><div class="li_left"> · <a href="../info/20677/148033.htm" target="_blank" title="高新区加快创新驱动发展若干政策解析">高新区加快创新驱动发展若干...</a></div></li>
+   <li><div class="li_left"> · <a href="../info/20677/148035.htm" target="_blank" title="树立正确理财观念 理性选择投资渠道（四）">树立正确理财观念 理性选择投...</a></div></li>
+   <li><div class="li_left"> · <a href="../info/20677/147659.htm" target="_blank" title="高新区科技企业小巨人发展政策解析（六）">高新区科技企业小巨人发展政...</a></div></li>
+<script>_showDynClickBatch(['dynclicks_u21_148259','dynclicks_u21_148034','dynclicks_u21_148033','dynclicks_u21_148035','dynclicks_u21_147659'],[148259,148034,148033,148035,147659],"wbnews", 605444217)</script>
+<!--#endeditable--></UL></DIV>
+<DIV class="clean"></DIV></DIV>
+<DIV class="content_right">
+<DIV class="right_div3 GX_kx">
+<H2 class="GX_title">
+<UL class="h2_title">
+<LI class="poit"><A href="javascript:return void(0);">快速通道</A> </LI></UL>
+<DIV class="h2_more" style="display: none"><A href="#a">More &gt;&gt;</A></DIV></H2>
+<UL class="div_input">
+<P align="center"><!--#begineditable contype="" name="按受理号和证件号查询" action="" layout="" clone="0" namechanged="0" order="22" ispublic="0" tagname="按受理号和证件号查询" viewid="105695" stylesysid=""-->                   
+<script language="javascript">                                          
+    function search2()                                          
+    {                                                   
+     //if(document.all.qureycondition.value=="--请输入受理编号--")                                          
+     //{                                          
+     // window.alert("--请输入受理编号--");                                               
+     // return false;                                                
+     //}     
+     // if(document.all.idconddtion.value=="--请输入证件编号--")                                          
+     //{                                          
+      //window.alert("--请输入证件编号--");                                               
+     // return false;                                                
+     //}                                
+     //document.getElementById('b105695b').action='/wsbs/slhcxjg.jsp?wbtreeid=20477'; 
+     document.getElementById('b105695b').action='/wsbs/slhcxjg.jsp?urltype=tree.TreeTempUrl&wbtreeid=20954'; 
+
+     document.getElementById('b105695b').submit(); 
+    }                               
+  </script> 
+<form action="" name="b105695b" id="b105695b" method="post" style="display:inline">
+<table class="winstyle105695" cellpadding="0" cellspacing="0" border="0">                                                                                
+ <tr>                                          
+ <td><span style="padding:5px 0px;display:block;text-align:center;color:#f2703e;font-size:14px">受理编号：</span></td>                                          
+ <td colspan="3"><input type="text" name="qureycondition" onBlur="javascript:if(this.value==''){this.style.color='#C0C0C0';this.value='请输入受理编号'}" onFocus="javascript:if(this.value=='请输入受理编号'){this.value='';this.style.color='#0c0c0c'}" size="18" class="secondtable105695" value="请输入受理编号" style="color:#c0c0c0"></td>                                          
+ </tr>                                          
+ <tr>                                          
+ <td><span style="padding:5px 0px;display:block;text-align:center;color:#f2703e;font-size:14px">证件号码：</span></td>                                          
+ <td colspan="3"><input type="text" name="idconddtion" onBlur="javascript:if(this.value==''){this.style.color='#C0C0C0';this.value='请输入证件号码'}" onFocus="javascript:if(this.value=='请输入证件号码'){this.value='';this.style.color='#0c0c0c'}" size="18" class="secondidtable105695" value="请输入证件号码" style="color:#c0c0c0"></td>                                          
+ <tr><td>&nbsp;</td>
+ 
+   <td><img src="images/GX_08.jpg" valign="bottom" align="middle" onClick="search2()" style="cursor:pointer"></td>
+   
+ </tr> 
+ </table>
+ </form>
+ <!--#endeditable-->
+<P></P></UL>
+<DIV class="div_chaxun"><!--#begineditable contype="" name="快速通道_链接列表" action="" layout="" clone="0" namechanged="0" order="23" ispublic="0" tagname="快速通道_链接列表" viewid="105709" stylesysid=""-->    
+       <a href="../wsbs/bszn20150312.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105524)">办事指南</a>
+
+       <a href="../cjfw/qybs_index.jsp?urltype=tree.TreeTempUrl&wbtreeid=19975" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105525)">场景服务</a>
+
+       <a href="../cjfw/grbs_index.jsp?urltype=tree.TreeTempUrl&wbtreeid=19974" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105527)">个人</a>
+
+       <a href="../cjfw/qybs_index.jsp?urltype=tree.TreeTempUrl&wbtreeid=19975" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105528)">企业</a>
+<!--#endeditable--></DIV>
+<DIV class="clean"></DIV></DIV>
+<UL class="div_list_title5">
+<LI><A title="领导信箱" href="../gzcy/xinxiang.jsp?urltype=tree.TreeTempUrl&wbtreeid=20680"><IMG border="0" alt="" src="images/D_20.jpg" width="240" height="42"></A> </LI>
+<LI><A title="在线咨询" href="../gzcy/zxbmlb.jsp?urltype=tree.TreeTempUrl&wbtreeid=20776"><IMG border="0" alt="" src="images/D_21.jpg" width="240" height="42"></A> </LI>
+<LI><A title="在线投诉" href="../gzcy/bmxxlb.jsp?urltype=tree.TreeTempUrl&wbtreeid=20779"><IMG border="0" alt="" src="images/D_22.jpg" width="240" height="42"></A> </LI>
+<LI><A title="在线访谈" href="../gzcy/fangtan1.jsp?urltype=tree.TreeTempUrl&wbtreeid=20676"><IMG border="0" alt="" src="images/D_23.jpg" width="240" height="42"></A> </LI></UL></DIV>
+<DIV class="clean"></DIV></DIV><!----------------------------------------------------content--------------------------------------------------------------------><!----------------------------------------------------foot-------------------------------------------------------------------->
+<DIV class="GX_link  GX_kx">
+<DIV class="link_title"></DIV>
+<DIV class="link_a"><!--#begineditable contype="" name="高新区频道" action="" layout="" clone="0" namechanged="0" order="24" ispublic="0" tagname="链接列表" viewid="106395" stylesysid=""-->    <a href="http://xdzss.xdz.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105726)" style="margin:0 2px">高新社保</a>
+    |
+    <a href="http://gzf.xdz.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105741)" style="margin:0 2px">高新保障房</a>
+    |
+    <a href="http://cfsp.xdz.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105742)" style="margin:0 2px">信用与金融</a>
+    |
+    <a href="http://www.xibi.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105725)" style="margin:0 2px">高新创新网</a>
+    |
+    <a href="http://www.xasoftpark.com/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105724)" style="margin:0 2px">西安软件园</a>
+    |
+    <a href="http://xajsjd.xdz.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105729)" style="margin:0 2px">高新质监</a>
+    |
+    <a href="http://hi-tech.xdz.com.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105727)" style="margin:0 2px">企业协会</a>
+    |
+    <a href="http://www.xatrm.com/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105743)" style="margin:0 2px">科技大市场</a>
+    |
+    <a href="http://www.xdzinfo.com/index.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105751)" style="margin:0 2px">企业信息</a>
+    |
+    <a href="http://www.newsxdz.com/" title="高新新闻网" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105762)" style="margin:0 2px">高新新闻网</a>
+    |
+    <a href="http://createxa.xjtu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 605444217, 105992)" style="margin:0 2px">众创空间</a>
+    
+<!--#endeditable--></DIV></DIV>
+<DIV class="GX_link1  GX_kx">
+<DIV class="link_title1"></DIV>
+<UL class="link_a1">
+<LI><!--#begineditable contype="" name="国务院各级部委" action="" layout="" clone="0" namechanged="0" order="25" ispublic="0" tagname="国务院各级部委" viewid="106396" stylesysid=""-->    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu25(o)    
+    {    
+        var link=document.getElementsByName("su25")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu25");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa106396aa");
+        _addDynClicks('wburl',605444217,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table class="winstyle106396">    
+    <tr><td align="center">    
+            <span class="titlestyle106396"></span> <a id="hu25"></a>    
+            <select name="su25" class="selectstyle106396" onChange="doLinksu25(this)">    
+                <option value="">　--国务院各部委局--</option>    
+                <option vsbhrefname="value" aa106396aa="1849" value="http://www.mcprc.gov.cn/">文化部    
+                <option vsbhrefname="value" aa106396aa="1860" value="http://www.customs.gov.cn/">海关总署    
+                <option vsbhrefname="value" aa106396aa="1865" value="http://www.sipo.gov.cn/">国家知识产权局    
+                <option vsbhrefname="value" aa106396aa="1848" value="http://www.nhfpc.gov.cn/">国家卫生和计划生育委员会    
+                <option vsbhrefname="value" aa106396aa="1841" value="http://www.mohurd.gov.cn/">住房和城乡建设部    
+                <option vsbhrefname="value" aa106396aa="1844" value="http://www.miit.gov.cn">工业和信息化部    
+                <option vsbhrefname="value" aa106396aa="1850" value="http://www.mohrss.gov.cn/">人力资源和社会保障部    
+                <option vsbhrefname="value" aa106396aa="1847" value="http://www.mofcom.gov.cn/">商务部    
+                <option vsbhrefname="value" aa106396aa="1854" value="http://www.sach.gov.cn/">国家文物局    
+                <option vsbhrefname="value" aa106396aa="1866" value="http://www.cnta.com/">国家旅游局    
+                <option vsbhrefname="value" aa106396aa="1843" value="http://www.moc.gov.cn">交通运输部    
+                <option vsbhrefname="value" aa106396aa="1852" value="http://www.tobacco.gov.cn">国家烟草专卖局    
+                <option vsbhrefname="value" aa106396aa="1862" value="http://www.chinatax.gov.cn">国家税务总局    
+                <option vsbhrefname="value" aa106396aa="1864" value="http://www.saic.gov.cn/">国家工商行政管理总局    
+                <option vsbhrefname="value" aa106396aa="1863" value="http://www.sport.gov.cn/">国家体育总局    
+                <option vsbhrefname="value" aa106396aa="1861" value="http://www.stats.gov.cn/">国家统计局    
+                <option vsbhrefname="value" aa106396aa="1859" value="http://www.satcm.gov.cn">国家中医药管理局    
+                <option vsbhrefname="value" aa106396aa="1858" value="http://www.safea.gov.cn">国家外国专家局    
+                <option vsbhrefname="value" aa106396aa="1857" value="http://www.chinagrain.gov.cn/">国家粮食局    
+                <option vsbhrefname="value" aa106396aa="1856" value="http://www.safe.gov.cn/">国家外汇管理局    
+                <option vsbhrefname="value" aa106396aa="1855" value="http://www.chinasafety.gov.cn">国家安全监督总局    
+                <option vsbhrefname="value" aa106396aa="1853" value="http://www.chinapost.gov.cn/">国家邮政局    
+                <option vsbhrefname="value" aa106396aa="1851" value="http://www.pbc.gov.cn/">中国人民银行    
+                <option vsbhrefname="value" aa106396aa="1846" value="http://www.mwr.gov.cn">水利部    
+                <option vsbhrefname="value" aa106396aa="1845" value="http://www.agri.gov.cn">农业部    
+                <option vsbhrefname="value" aa106396aa="1840" value="http://www.mlr.gov.cn">国土资源部    
+                <option vsbhrefname="value" aa106396aa="1839" value="http://www.mof.gov.cn/index.htm">财政部    
+                <option vsbhrefname="value" aa106396aa="1838" value="http://www.mca.gov.cn">民政部    
+                <option vsbhrefname="value" aa106396aa="1835" value="http://www.most.gov.cn">科学技术部    
+                <option vsbhrefname="value" aa106396aa="1834" value="http://www.moe.edu.cn/">教育部    
+                <option vsbhrefname="value" aa106396aa="1833" value="http://www.sdpc.gov.cn">国家发展和改革委员会    
+                <option vsbhrefname="value" aa106396aa="1832" value="http://www.gov.cn/">中国政府门户    
+                </select>    
+        </td><tr></table><!--#endeditable--></LI>
+<LI><!--#begineditable contype="" name="省级政府网站" action="" layout="" clone="0" namechanged="0" order="26" ispublic="0" tagname="省级政府网站" viewid="106397" stylesysid=""-->    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu26(o)    
+    {    
+        var link=document.getElementsByName("su26")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu26");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa106397aa");
+        _addDynClicks('wburl',605444217,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table class="winstyle106397">    
+    <tr><td align="center">    
+            <span class="titlestyle106397"></span> <a id="hu26"></a>    
+            <select name="su26" class="selectstyle106397" onChange="doLinksu26(this)">    
+                <option value="">　--省级政府网站--</option>    
+                <option vsbhrefname="value" aa106397aa="1830" value="http://www.gov.hk/">香港    
+                <option vsbhrefname="value" aa106397aa="1811" value="http://www.zhejiang.gov.cn/">浙江    
+                <option vsbhrefname="value" aa106397aa="1824" value="http://portal.gov.mo">澳门    
+                <option vsbhrefname="value" aa106397aa="1826" value="http://www.nx.gov.cn/">宁夏    
+                <option vsbhrefname="value" aa106397aa="1829" value="http://www.chinaxinjiang.cn/">新疆    
+                <option vsbhrefname="value" aa106397aa="1828" value="http://www.xizang.gov.cn/">西藏    
+                <option vsbhrefname="value" aa106397aa="1818" value="http://www.hainan.gov.cn/">海南    
+                <option vsbhrefname="value" aa106397aa="1814" value="http://www.hubei.gov.cn/">湖北    
+                <option vsbhrefname="value" aa106397aa="1810" value="http://www.jiangsu.gov.cn/">江苏    
+                <option vsbhrefname="value" aa106397aa="1805" value="http://www.shanxigov.cn/">山西    
+                <option vsbhrefname="value" aa106397aa="1804" value="http://www.hebei.gov.cn/">河北    
+                <option vsbhrefname="value" aa106397aa="1831" value="http://www.shanghai.gov.cn/">上海    
+                <option vsbhrefname="value" aa106397aa="1827" value="http://www.gxi.gov.cn/">广西    
+                <option vsbhrefname="value" aa106397aa="1825" value="http://www.gansu.gov.cn/">甘肃    
+                <option vsbhrefname="value" aa106397aa="1823" value="http://www.yn.gov.cn/">云南    
+                <option vsbhrefname="value" aa106397aa="1822" value="http://www.nmg.gov.cn/">内蒙古    
+                <option vsbhrefname="value" aa106397aa="1821" value="http://www.gzgov.gov.cn/">贵州    
+                <option vsbhrefname="value" aa106397aa="1820" value="http://www.shaanxi.gov.cn/">陕西    
+                <option vsbhrefname="value" aa106397aa="1819" value="http://www.sc.gov.cn/">四川    
+                <option vsbhrefname="value" aa106397aa="1817" value="http://www.gd.gov.cn/">广东    
+                <option vsbhrefname="value" aa106397aa="1816" value="http://www.jiangxi.gov.cn/">江西    
+                <option vsbhrefname="value" aa106397aa="1815" value="http://www.hunan.gov.cn/">湖南    
+                <option vsbhrefname="value" aa106397aa="1813" value="http://www.fujian.gov.cn/">福建    
+                <option vsbhrefname="value" aa106397aa="1812" value="http://www.ah.gov.cn/">安徽    
+                <option vsbhrefname="value" aa106397aa="1809" value="http://www.sd.gov.cn/">山东    
+                <option vsbhrefname="value" aa106397aa="1808" value="http://www.hlj.gov.cn/">黑龙江    
+                <option vsbhrefname="value" aa106397aa="1807" value="http://www.jl.gov.cn/">吉林    
+                <option vsbhrefname="value" aa106397aa="1806" value="http://www.ln.gov.cn/">辽宁    
+                <option vsbhrefname="value" aa106397aa="1803" value="http://www.henan.gov.cn/">河南    
+                <option vsbhrefname="value" aa106397aa="1802" value="http://www.cq.gov.cn/">重庆    
+                <option vsbhrefname="value" aa106397aa="1801" value="http://www.tj.gov.cn/">天津    
+                <option vsbhrefname="value" aa106397aa="1800" value="http://www.beijing.gov.cn/">北京    
+                </select>    
+        </td><tr></table><!--#endeditable--></LI>
+<LI><!--#begineditable contype="" name="国家级科技园区" action="" layout="" clone="0" namechanged="0" order="27" ispublic="0" tagname="国家级科技园区" viewid="106398" stylesysid=""-->    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu27(o)    
+    {    
+        var link=document.getElementsByName("su27")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu27");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa106398aa");
+        _addDynClicks('wburl',605444217,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table class="winstyle106398">    
+    <tr><td align="center">    
+            <span class="titlestyle106398"></span> <a id="hu27"></a>    
+            <select name="su27" class="selectstyle106398" onChange="doLinksu27(this)">    
+                <option value="">　--国家级科技园区--</option>    
+                <option vsbhrefname="value" aa106398aa="1750" value="http://www.shipsc.org/">深圳高新区    
+                <option vsbhrefname="value" aa106398aa="1767" value="http://www.sy-incubator.com/">沈阳高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1768" value="http://www.asht-zone.gov.cn/">鞍山高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1782" value="http://www.bjgx.gov.cn/">宝鸡高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1784" value="http://www.xfhdz.org.cn/">襄阳高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1748" value="http://www.zhangjiang.net/">上海张江高科技园区    
+                <option vsbhrefname="value" aa106398aa="1752" value="http://www.kaifaqu.com.cn/">哈尔滨高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1778" value="http://gxq.qingdao.gov.cn/">青岛高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1765" value="http://www.jlhitech.gov.cn/">吉林高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1772" value="http://www.bdgxq.gov.cn/">保定高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1795" value="http://www.gxq.gov.cn/">海口高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1792" value="http://www.fzhitech.com/">福州高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1787" value="http://www.snd.gov.cn/snd/">苏州高新区    
+                <option vsbhrefname="value" aa106398aa="1786" value="http://www.njnhz.gov.cn/">南京高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1775" value="http://www.whtdz.com.cn/">威海火炬高技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1763" value="http://www.rev.cn/">包头稀土高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1759" value="http://www.kmhnz.gov.cn/">昆明高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1758" value="http://gaoxinqu.my.gov.cn/">绵阳高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1753" value="http://www.eguilin.org/">桂林高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1798" value="http://www.hzzk.cn/">惠州仲恺高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1797" value="http://www.nnhitech.gov.cn/">南宁高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1796" value="http://www.gyhtz.gov.cn/">贵阳高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1794" value="http://www.zstorch.gov.cn/">中山火炬高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1793" value="http://www.fs-hitech.gov.cn/">佛山高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1791" value="http://www.nchdz.com/">南昌高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1790" value="http://www.hhtz.gov.cn/">杭州高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1789" value="http://www.czxd.gov.cn/">常州高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1788" value="http://www.wnd.gov.cn/">无锡高新区    
+                <option vsbhrefname="value" aa106398aa="1785" value="http://www.hefei-stip.com.cn/">合肥高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1783" value="http://www.elht.com/">武汉东湖高新科技园    
+                <option vsbhrefname="value" aa106398aa="1781" value="http://www.ylagri.gov.cn/">杨凌农业高新技术产业区    
+                <option vsbhrefname="value" aa106398aa="1780" value="http://www.lhdz.gov.cn/">洛阳高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1779" value="http://www.ztic.net/">郑州高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1777" value="http://www.china-zibo.com/">淄博高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1776" value="http://www.wfgx.gov.cn/">潍坊高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1774" value="http://www.jctp.gov.cn/">济南高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1773" value="http://www.tyctp.com.cn/">太原高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1771" value="http://www.shidz.com/">石家庄高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1770" value="http://www.teda.gov.cn/">天津高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1769" value="http://www.ddport.com/">大连高新技术园区    
+                <option vsbhrefname="value" aa106398aa="1766" value="http://www.chida.gov.cn/">长春高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1764" value="http://www.dhp.gov.cn/">大庆高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1761" value="http://www.cshtz.gov.cn/">长沙高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1756" value="http://www.cdht.gov.cn/">成都高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1755" value="http://www.xmtorch.gov.cn/">厦门火炬高技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1754" value="http://www.zhuhai-hitech.com/">珠海高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1751" value="http://www.xdz.com.cn/">西安高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1749" value="http://www.getdd.gov.cn/">广州高新技术产业开发区    
+                <option vsbhrefname="value" aa106398aa="1746" value="http://www.zgc.gov.cn">中关村科技园区    
+                </select>    
+        </td><tr></table><!--#endeditable--></LI>
+<LI><!--#begineditable contype="" name="西安市各级政府网站" action="" layout="" clone="0" namechanged="0" order="28" ispublic="0" tagname="西安市各级政府网站" viewid="106399" stylesysid=""-->    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu28(o)    
+    {    
+        var link=document.getElementsByName("su28")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu28");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa106399aa");
+        _addDynClicks('wburl',605444217,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table class="winstyle106399">    
+    <tr><td align="center">    
+            <span class="titlestyle106399"></span> <a id="hu28"></a>    
+            <select name="su28" class="selectstyle106399" onChange="doLinksu28(this)">    
+                <option value="">-西安市各级政府网站-</option>    
+                <option vsbhrefname="value" aa106399aa="3247" value="http://www.xa.gov.cn">西安市政府门户网站    
+                <option vsbhrefname="value" aa106399aa="1879" value="http://www.lantian.gov.cn/">蓝田县    
+                <option vsbhrefname="value" aa106399aa="1878" value="http://www.gao-ling.gov.cn/">高陵县    
+                <option vsbhrefname="value" aa106399aa="1877" value="http://www.zhouzhi.gov.cn/">周至县    
+                <option vsbhrefname="value" aa106399aa="1876" value="http://www.huxian.gov.cn/">户县    
+                <option vsbhrefname="value" aa106399aa="1875" value="http://www.lintong.gov.cn/">临潼区    
+                <option vsbhrefname="value" aa106399aa="1874" value="http://www.yanliang.gov.cn/">阎良区    
+                <option vsbhrefname="value" aa106399aa="1873" value="http://www.baqiao.gov.cn">灞桥区    
+                <option vsbhrefname="value" aa106399aa="1872" value="http://www.weiyang.gov.cn">未央区    
+                <option vsbhrefname="value" aa106399aa="1871" value="http://www.changanqu.gov.cn">长安区    
+                <option vsbhrefname="value" aa106399aa="1870" value="http://www.yanta.gov.cn/">雁塔区    
+                <option vsbhrefname="value" aa106399aa="1869" value="http://www.beilin.gov.cn">碑林区    
+                <option vsbhrefname="value" aa106399aa="1868" value="http://www.xincheng.gov.cn">新城区    
+                <option vsbhrefname="value" aa106399aa="1867" value="http://www.lianhu.gov.cn">莲湖区    
+                </select>    
+        </td><tr></table><!--#endeditable--></LI>
+<LI><!--#begineditable contype="" name="西安高新区企业网站" action="" layout="" clone="0" namechanged="0" order="29" ispublic="0" tagname="西安高新区企业网站" viewid="106400" stylesysid=""-->    
+    
+    
+    
+  
+
+    
+<script language="javascript">    
+<!--    
+    function doLinksu29(o)    
+    {    
+        var link=document.getElementsByName("su29")[0];    
+        var index=link.selectedIndex;    
+        if (index==-1 || index>=link.options.length)    
+        {    
+          return;    
+        }    
+        var value = link.options[index].value;    
+        var obj = document.getElementById("hu29");    
+        obj.href = value;
+        var wburlid =link.options[index].getAttribute("aa106400aa");
+        _addDynClicks('wburl',605444217,wburlid)
+            
+                     obj.target = "_blank"
+                    
+         if(document.all){
+          obj.click();     
+        }         
+         else 
+        { 
+          window.open(value);
+         }
+       
+       if(o.selectedIndex != 0)    
+       {    
+           o.selectedIndex = 0;    
+       }    
+    }    
+-->    
+</script>  
+<table class="winstyle106400">    
+    <tr><td align="center">    
+            <span class="titlestyle106400"></span> <a id="hu29"></a>    
+            <select name="su29" class="selectstyle106400" onChange="doLinksu29(this)">    
+                <option value="">西安高新区内企业网站</option>    
+                <option vsbhrefname="value" aa106400aa="1900" value="http://www.pepsico.com.cn/">西安百事可乐饮料有限公司    
+                <option vsbhrefname="value" aa106400aa="1938" value="http://www.qing-an.com/">西安庆安制冷设备股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1948" value="http://www.xadaikin.com">西安大金庆安压缩机有限公司    
+                <option vsbhrefname="value" aa106400aa="1955" value="http://www.weizhi.cn/">陕西伟志集团股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1960" value="http://www.bomay.com.cn/">西安宝美电气工业有限公司    
+                <option vsbhrefname="value" aa106400aa="1888" value="http://www.brother.cn/">兄弟缝纫机（西安）有限公司    
+                <option vsbhrefname="value" aa106400aa="105822" value="http://www.xasd.com.cn">西安圣代网络科技有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1921" value="http://www.189.cn/">中国电信有限陕西分公司    
+                <option vsbhrefname="value" aa106400aa="1917" value="http://www.ourfuture.cn/">西安未来国际软件有限公司    
+                <option vsbhrefname="value" aa106400aa="1922" value="http://www.shanyaogroup.com/">陕西医药控股集团有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1977" value="http://www.aeromat.cn">西安向阳航天材料股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1974" value="http://www.yokogawa.com/cn/">横河电机中国有限公司西安分公司    
+                <option vsbhrefname="value" aa106400aa="1973" value="http://www.greenlandsc.com">上海绿地集团西安置业有限公司    
+                <option vsbhrefname="value" aa106400aa="1972" value="http://www.e-chinalife.com">中国人民人寿保险股份有限公司陕西西安分公司    
+                <option vsbhrefname="value" aa106400aa="1969" value="http://www.crbc.com">中国路桥集团西安实业发展有限公司    
+                <option vsbhrefname="value" aa106400aa="1968" value="http://www.goodee.cn">西安金鹰国际购物中心有限公司    
+                <option vsbhrefname="value" aa106400aa="1965" value="http://www.rm.com.cn">西安筑路机械有限公司    
+                <option vsbhrefname="value" aa106400aa="1963" value="http://www.huan-tai.com">西安环太科技发展有限公司    
+                <option vsbhrefname="value" aa106400aa="1962" value="http://www.yaobo.com.cn">陕西尧柏特种水泥有限公司    
+                <option vsbhrefname="value" aa106400aa="1961" value="http://www.systemsensor.com.cn/">西安盛赛尔电子有限公司    
+                <option vsbhrefname="value" aa106400aa="1957" value="http://www.cngc.com.cn">中国兵器工业总公司第二O五研究所    
+                <option vsbhrefname="value" aa106400aa="1956" value="http://www.cetc.com.cn">中国电子集团公司第39所    
+                <option vsbhrefname="value" aa106400aa="1954" value="http://www.xarlm.com/">西安瑞联近代电子材料有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1952" value="http://www.c-wmm.com">西部金属材料股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1951" value="http://www.xady.com.cn/">西安东风仪表厂    
+                <option vsbhrefname="value" aa106400aa="1949" value="http://www.sxjthy.com/">陕西金泰恒业房地产有限公司    
+                <option vsbhrefname="value" aa106400aa="1946" value="http://www.ztjs.net.cn/">中铁建设集团有限公司西安分公司    
+                <option vsbhrefname="value" aa106400aa="1945" value="http://www.bjpec.net">陕西宝姜石化有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1943" value="http://www.sxmingtai.com/">陕西明泰工程建设有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1942" value="http://www.gemdale.com">西安金地置业投资有限公司    
+                <option vsbhrefname="value" aa106400aa="1941" value="http://www.egjmx.com/">西安萌兴高等级公路工程股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1937" value="http://www.tongdajuice.com/">陕西通达果汁集团股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1936" value="http://www.yinqiaogroup.com/">西安银桥生物科技有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1935" value="http://www.xagas.com/">西安秦华天然气有限公司    
+                <option vsbhrefname="value" aa106400aa="1934" value="http://www.lenovo.com.cn/">联想（西安）有限公司    
+                <option vsbhrefname="value" aa106400aa="1933" value="http://www.chinahaisheng.com/">陕西海升果业发展股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1932" value="http://www.ctmcjs.com/">中十冶集团有限公司    
+                <option vsbhrefname="value" aa106400aa="1931" value="http://www.sx-shiyang.com/">陕西石羊（集团）股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1929" value="http://www.renrenle.cn/">西安市人人乐商业有限公司    
+                <option vsbhrefname="value" aa106400aa="1928" value="http://www.eace.cc/">东盟营造工程有限公司    
+                <option vsbhrefname="value" aa106400aa="1925" value="http://www.sxdzjt.com.cn/">陕西电子信息集团有限公司    
+                <option vsbhrefname="value" aa106400aa="1924" value="http://www.gaokegroup.com/">西安高科（集团）公司    
+                <option vsbhrefname="value" aa106400aa="1918" value="http://www.yousergroup.com/">陕西有色金属控股集团有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1916" value="http://www.xaht.com/">西安海天天线股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1915" value="http://www.libang.com.cn/">西安力邦制药有限公司    
+                <option vsbhrefname="value" aa106400aa="1914" value="http://www.tongyuanoil.com/">西安通源石油科技股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1913" value="http://www.xarlm.com/">西安瑞联近代电子材料有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1912" value="http://www.shaangu.com/">西安陕鼓动力股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1911" value="http://www.fenteng.net/">西安纷腾互动数码科技有限公司    
+                <option vsbhrefname="value" aa106400aa="1910" value="http://www.saming.com/">西安三茗科技有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1909" value="http://www.ryoji.cn/">西安良治电器有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1908" value="http://www.opt.ac.cn">中国科学院西安光学精密机械研究所    
+                <option vsbhrefname="value" aa106400aa="1907" value="http://www.jointark.com.cn/">陕西中大机械集团有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1905" value="http://www.xd.com.cn/">西安西电国际工程有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1902" value="http://www.xagkbm.com/">西安高科建材科技有限公司    
+                <option vsbhrefname="value" aa106400aa="1901" value="http://www.ginwa.com/">金花企业（集团）股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1899" value="http://www.yokogawa.com/cn/">横河电机（中国）有限公司    
+                <option vsbhrefname="value" aa106400aa="1898" value="http://www.kaimi.com.cn/">西安开米股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1897" value="http://www.jdcmoly.com/">金堆城钼业股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1895" value="http://www.china-htdl.com/">陕西航天动力高科技股份有限公司    
+                <option vsbhrefname="value" aa106400aa="1891" value="http://www.topsun.com/">陕西东盛医药有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1890" value="http://www.xarlm.com/">西安瑞联近代电子材料有限责任公司    
+                <option vsbhrefname="value" aa106400aa="1887" value="http://www.xahuajing.com">西安华晶电子技术有限公司    
+                <option vsbhrefname="value" aa106400aa="1886" value="http://www.xaxzyz.com/">西安西正印制有限公司    
+                <option vsbhrefname="value" aa106400aa="1884" value="http://www.uaes.com/">联合汽车电子有限公司西安厂    
+                <option vsbhrefname="value" aa106400aa="1882" value="http://www.byd.com.cn/">比亚迪汽车有限公司    
+                <option vsbhrefname="value" aa106400aa="1881" value="http://www.opt.ac.cn/">西安光学精密机械研究所    
+                <option vsbhrefname="value" aa106400aa="1880" value="http://www.ccroad.com.cn/">中交第一公路勘察设计研究院    
+                <option vsbhrefname="value" aa106400aa="105772" value="http://www.wled.cn/">西安智海电力科技有限公司    
+                </select>    
+        </td><tr></table><!--#endeditable--></LI></UL>
+<DIV class="clean"></DIV></DIV>
+<DIV class="GX_bottom"><!--#begineditable contype="" name="版权" action="" layout="" clone="0" namechanged="0" order="30" ispublic="0" tagname="版权" viewid="105686" stylesysid=""--><DIV class="foot-l">XI'AN HI-TECH INDUSTRIES DEVELOPMENT ZONE<BR>西安锦业路1号都市之门A座&nbsp;&nbsp;邮政编码：710065&nbsp;&nbsp;E-mail：webmaster@xdz.gov.cn<BR>版权所有：西安高新技术产业开发区管理委员会&nbsp;&nbsp;技术支持：西安高新区信息中心<BR></DIV> 
+<DIV class="foot-r">备案序号：陕ICP备10202143号-2号 </DIV><!--#endeditable--></DIV><!----------------------------------------------------foot--------------------------------------------------------------------></DIV>
+
+</BODY></HTML>

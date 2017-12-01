@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<!-- This site is optimized with the Yoast SEO plugin v2.3.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Log Analytics - Analytics Platform - Piwik</title>
+<link rel="canonical" href="http://piwik.org/log-analytics/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Log Analytics - Analytics Platform - Piwik" />
+<meta property="og:description" content="Did you know? All web servers generate access log files which contain all of the requests made to the server. You can import and analyse your web server logs in Piwik! A log script lets you parse and analyze visitor server log, including IP address, URL, user agent, referrer URL and search keyword, campaign info and more." />
+<meta property="og:url" content="http://piwik.org/log-analytics/" />
+<meta property="og:site_name" content="Analytics Platform - Piwik" />
+<meta property="article:publisher" content="https://www.facebook.com/Piwik" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/newver/dist/img/icons/systemgoes.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/newver/dist/img/demologanalytics.png" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/newver/dist/img/feedback.png" />
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"\/wp-includes\/js\/wp-emoji.js?ver=4.3","twemoji":"\/wp-includes\/js\/twemoji.js?ver=4.3"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" href="/wp-content/plugins/multilingual-press-pro/css/frontend.css?ver=4.3">
+<link rel="stylesheet" href="/wp-content/plugins/cc-syntax-highlight/highlight/tomorrow-night.css">
+<link rel="stylesheet" href="/wp-content/themes/piwik/assets/newver/dist/css/bootstrap.min.css?ver=4.3">
+<link rel="stylesheet" href="/wp-content/themes/piwik/assets/newver/dist/css/piwik.css?ver=4.3">
+<script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/highlight.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js'></script>
+<script>window.jQuery || document.write('<script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/modernizr-2.6.2.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.backstretch.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.dlmenu.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/bootstrap-slider.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.swfobject.1-1-1.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/youTubeEmbed-jquery-1.0.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/url_builder.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.sticky.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.validate.min.js'></script>
+
+  <link rel="alternate" type="application/rss+xml" title="Analytics Platform - Piwik Feed" href="http://piwik.org/feed/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+    <!--[if lt IE 9]>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/html5shiv.js"></script>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="page page-id-16257 page-parent page-loganalytics-tpl log-analytics">
+
+  <!--[if lt IE 7]><div class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+  <button class="navbar-toggle-menu" type="button" data-toggle="collapse" data-target=".sidebar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+<div class="sidebar affix" role="complementary">
+
+	<aside>
+		<div id="side-wrap">
+			<div id="side-main">
+				<header class="banner" role="banner">
+					<a class="page-title brand" href="http://piwik.org/"> <i class="ficon-piwik_logo header-logo"></i> Open Analytics Platform </a>
+					<!-- languages -->
+					<div class="language-widget ui-dropdown">
+											</div>
+				</header>
+
+				<nav class="nav-main dl-menuwrapper" id="menu" role="navigation">
+					<ul id="menu-sidebar-header-original" class="nav"><li class="active dropdown menu-learn-more"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Learn more <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-what-is-piwik"><a href="http://piwik.org/what-is-piwik/">What is Piwik?</a></li>
+	<li class="menu-features"><a href="http://piwik.org/features/">Features</a></li>
+	<li class="menu-integrations"><a href="http://piwik.org/integrate/">Integrations</a></li>
+	<li class="active menu-log-analytics active"><a href="http://piwik.org/log-analytics/">Log Analytics</a></li>
+	<li class="menu-roadmap"><a href="http://piwik.org/roadmap/">Roadmap</a></li>
+	<li class="menu-changelog"><a href="http://piwik.org/changelog/">Changelog</a></li>
+	<li class="menu-enterprise"><a target="_blank" href="https://piwik.pro/enterprise/?pk_source=Piwik.org&#038;pk_medium=Enterprise_Menu_link&#038;pk_campaign=PO_Enterprise">Enterprise</a></li>
+</ul>
+</li>
+<li class="dropdown menu-community"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://">Community <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-get-involved"><a href="http://piwik.org/get-involved/">Get involved</a></li>
+	<li class="menu-translators"><a href="http://piwik.org/translations/">Translators</a></li>
+	<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+	<li class="menu-contact-the-team"><a href="http://piwik.org/contact/">Contact the team</a></li>
+</ul>
+</li>
+<li class="dropdown menu-help"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Help <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-user-guides"><a href="http://piwik.org/docs">User Guides</a></li>
+	<li class="menu-faq"><a href="http://piwik.org/faq">FAQ</a></li>
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-consulting"><a href="http://piwik.org/consulting/">Consulting</a></li>
+	<li class="menu-issue-tracker"><a target="_blank" href="https://github.com/piwik/piwik/issues">Issue tracker</a></li>
+</ul>
+</li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org/">Marketplace</a></li>
+<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-hosting"><a href="http://piwik.org/hosting/">Hosting</a></li>
+<li class="dropdown menu-about"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://piwik.org/about/">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-jobs-were-hiring"><a href="http://piwik.org/jobs/">Jobs (we&#8217;re hiring!)</a></li>
+	<li class="menu-history"><a href="http://piwik.org/history/">History</a></li>
+	<li class="menu-press"><a href="http://piwik.org/press/">Press</a></li>
+	<li class="menu-testimonials"><a href="http://piwik.org/testimonials">Testimonials</a></li>
+	<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+	<li class="menu-team"><a href="http://piwik.org/team/">Team</a></li>
+</ul>
+</li>
+<li class="menu-blog"><a href="http://piwik.org/blog/">Blog</a></li>
+</ul>				</nav>
+				<div style="clear: both"> </div>
+			</div>
+		</div>
+		<div class="content-info side-footer" role="contentinfo">
+			<ul id="menu-sidebar-footer" class="nav"><li class="menu-download"><a href="http://piwik.org/download/">Download</a></li>
+<li class="menu-demo"><a target="_blank" href="http://demo.piwik.org">Demo</a></li>
+</ul>			<form role="search" method="get" class="form-inline" action="http://piwik.org/">
+  <div class="form-group search-form">
+    <input type="search" value="" name="s" class="ui-search-field form-control" placeholder="Search phrase...">
+    <label class="hide">Search for:</label>
+     <button type="submit" class="btn-search"><i class="ficon-search"></i></button>
+  </div>
+</form>
+			<div class="side-footer-bottom">
+				<hr class="separate">
+				<a href="http://piwik.pro/?pk_source=Piwik.org&pk_medium=Banner_link&pk_campaign=PO_Explore_Piwik_Pro" title="Explore our professional services at Piwik PRO" class="page-switch">
+					<span class="piwik_logo">Piwik Pro - Explore our business offer</span>
+					<span class="text">Explore our business offer.</span>
+				</a>
+			</div>
+			<div style="clear: both"> </div>
+
+		</div>
+	</aside><!-- /.sidebar -->
+
+</div>
+   <div class="container-content">
+        <header class="page-header default text-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Log Analytics</h1>
+                                
+                <p>Did you know? All web servers generate access log files which contain all of the requests made to the server. You can import and analyse your web server logs in Piwik! A log script lets you parse and analyze visitor server log, including IP address, URL, user agent, referrer URL and search keyword, campaign info and more.</p>
+            </div>
+        </div>
+    </div>
+</header>
+    
+     <div class="wrap container-main" role="document">
+      <article>
+   <div class="container">
+          <div class="menu-btn"></div>
+<div class="wrapper-body">
+    <header class="pw-analytics" style="background-image:url(&#039;/wp-content/themes/piwik/assets/newver/dist/img/analytics-bg.png&#039;);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Log Analytics</h1>
+                    <p>Server log analytics provides companies and organisations with all the features of the Javascript tracking code method, but with a higher level of security and feasibility. It can be used for all kinds of purposes – from web analytics to intranet analytics, and even CRM and other platform-based analytics.</p>
+                    <a href="#logfile" class="btn-white">What is a web server log file?</a>
+                    <div class="server"></div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="shadow-box">
+                <h3 class="text-center">What can I use Log Analytics for?</h3>
+                <p class="mw550 text-center">You can use server log analytics as an alternative method for tracking your website’s users if the Javascript tracking method isn’t feasible or if you need to comply with strict security policies. </p>
+
+                <p class="mw550 text-center">Log Analytics can be applied to a number of business use cases:</p>
+
+                <h3 class="text-center pb30">Business Use Cases</h3>
+                <div class="row text-center">
+                    <div class="col-md-12 col-sm-12 col-lg-4">
+                        <div class="shadow-box sb-small">
+                            <i class="i-financial"></i>
+                            <h5>Financial institutions</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-lg-4">
+                        <div class="shadow-box sb-small">
+                            <i class="i-healthcare"></i>
+                            <h5>Healthcare organisations</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-lg-4">
+                        <div class="shadow-box sb-small">
+                            <i class="i-webhost"></i>
+                            <h5>Web hosting companies</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center pt30">
+                    <a href="http://piwik.org/log-analytics/web-hosting-use-case/" class="btn-gray">Click here to learn more about <span>Log Analytics Business Use Case</span></a>
+                </div>
+                <div class="row pt30">
+                    <h3 class="text-center">
+                        Advantages of Log Analytics
+                    </h3>
+                    <div class="row pt30 text-center divided-by-line">
+                        <div class="col-md-3">
+                            <div class="icons icons-padlock"></div>
+                            <h5>Higher network security</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="icons icons-serv"></div>
+                            <h5>Server isolation</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="icons icons-doc"></div>
+                            <h5>Processing historical web log files</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="icons icons-doc"></div>
+                            <h5>Greater tracking capabilities</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center pt30">
+                    <a href="https://piwik.pro/2014/12/on-premises-server-log-analytics-banking-healthcare-industries/?pk_campaign=PO_Log_Analytics&#038;pk_medium=CTA_link&#038;pk_source=Piwik_org" class="btn-gray" target="_blank"> <span>Log Analytics for the Financial and Healthcare industries</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" id="logfile">
+            <div class="col-md-12">
+                <h3 class="text-center pt80 pb20">What is a web server log file?</h3>
+                <img src="/wp-content/themes/piwik/assets/newver/dist/img/icons/systemgoes.png" class="img-auto" alt="" />
+                <p class="mw550">
+                    All web servers generate access log files which contain all of the requests made to the server. Each log file includes historical information about the activity performed by it (typically by a website’s visitor). You can import your server log files into your Piwik service and add them as another site on your Dashboard for easy viewing. All your server log files will be parsed, processed and displayed in the same way as the reports from the Javascript tracking code method.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="features-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pt80 text-center">
+                    <h3 class="pb40">Features of Piwik Log Analytics</h3>
+                </div>
+            </div>
+            <div class="row piwik-features pt30">
+                <div class="col-md-4">
+                    <div class="icons icons-ok"></div>
+                    <p>100% software and data ownership</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-stats"></div>
+                    <p>Transforms gigabytes of server access logs into insightful analytics.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-help"></div>
+                    <p>All <a href="http://piwik.org/features/">Piwik features</a> are automatically supported.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-lock-r"></div>
+                    <p>Protect <a href="http://piwik.org/privacy/">visitor privacy</a> with IP anonymisation.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-lock"></div>
+                    <p>EU Data Privacy law compliant.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-no-eye"></div>
+                    <p>Supports the DoNotTrack (DNT) function</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-puzzle"></div>
+                    <p>Build custom plugins or reuse the extensive APIs</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-drop"></div>
+                    <p>A delete-old-logs feature to keep database size <a href="http://piwik.org/docs/managing-your-databases-size/">under control.</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-start"></div>
+                    <p>Sarbanes-Oxley and PCI compliant.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-doc-r"></div>
+                    <p>Recognises most server log formats (Apache, Nginx, IIS, etc.)</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-sun"></div>
+                    <p>Easily migrate from AWStats and Urchin by importing your historical logs into Piwik.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icons icons-ufo"></div>
+                    <p>Automatically exclude bots (search engines, spam bots, etc.) from reports. There is an option to track bots and assign them a custom variable to differentiate them from human visitors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box-bordered with-float-img">
+                    <img src="/wp-content/themes/piwik/assets/newver/dist/img/demologanalytics.png" alt="" class="float-left" />
+                    <div class="box-container">
+                        <h3>Parsing logs with Piwik Log Analytics</h3>
+                        <p>To use Log Analytics, you need the latest version of Piwik, Python and your server’s access logs to import into Piwik. Full documentation can be found in the user guide: <a href="http://piwik.org/docs/log-analytics-tool-how-to/">How to run the Log Analytics tool.</a>
+                        </p>
+                        <a href="http://demo-log-analytics.piwik.org/" class="btn" target="_blank">Log Analytics demo</a>
+                        <p class="info ">
+                            The demo shows the Piwik reports generated from the Nginx access logs of the website <a href="http://forum.piwik.org/" target="_blank">forum.piwik.org</a>. We created 2 websites in this Piwik server to showcase:
+                            <br />1) The Default log import mode
+                            <br />2) Full mode with parameters –enable-http-errors –enable-http-redirects –enable-static –enable-bots
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt100">
+            <div class="col-md-12 text-center">
+                <h3>Log Analytics FAQ &amp; User Guide</h3>
+                <p class="mw600">
+                    See the <a href="http://piwik.org/faq/log-analytics-tool/">Log Analytics FAQ</a> for answers to your most burning questions. Full documentation can be found in the user guide: <a href="http://piwik.org/docs/log-analytics-tool-how-to/">How to run the Log Analytics tool.</a>
+                </p>
+                <p class="mw600">
+                    Log Analytics is used as an alternative to the Javascript tracking method. For default Piwik tracking, consider using the <a href="http://piwik.org/docs/javascript-tracking/">Javascript tracker.</a>
+                </p>
+                <a href="https://piwik.pro/contact/#contact-form&#038;pk_campaign=PO_Log_Analytics&#038;pk_medium=CTA_button&#038;pk_source=Piwik_org" class="btn mw340" target="_blank">PROFESSIONAL SERVICES</a>
+            </div>
+
+        </div>
+        <div class="row mt100">
+            <div class="col-md-12 text-center">
+                <h3>Feedback: your feature requests</h3>
+                <img src="/wp-content/themes/piwik/assets/newver/dist/img/feedback.png" alt="" />
+                <p class="top-comment">
+                    Feel free to create a new ticket in our issue tracker to request a new feature. You can find the list of all opened <a href="https://github.com/piwik/piwik-log-analytics/issues" target="_blank">Log Analytics tickets here</a>. If you are a Python developer, check out <a href="https://github.com/piwik/piwik-log-analytics" target="_blank">the source code</a> and consider <a href="http://piwik.org/participate/contributing-with-git/">submitting a pull request</a>. We really appreciate if you can suggest improvements and report bugs.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>     </div>
+</article>
+     </div><!-- /.wrap -->
+
+   <div class="wrapper-body">
+<div class="row extra-foot">
+    <div class="container">
+        <div class="col-md-6 anyquest">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/piwik_help.jpg" class="any-q">
+            <h3>Any questions? </h3>
+            <p>Many answers and more information about Piwik You can find here:</p>
+            <ul class="inline">
+                <li><a href="/docs/">User Guides</a></li>
+                <li><a href="http://forum.piwik.org/">Forums</a></li>
+                <li><a href="/faq/">FAQs</a></li>
+	            <li><a href="http://piwik.pro?pk_source=Piwik.org&pk_medium=footer_link&pk_campaign=PO_Pro_Solutions" target="_blank">PRO Solutions</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/socials.png" class="socials">
+            <h3>We are social </h3>
+            <p>Follow us:</p>
+            <ul class="inline">
+                <li><a href="/newsletter/">Newsletter</a></li>
+                <li><a href="http://www.facebook.com/Piwik">Facebook</a></li>
+                <li><a href="http://twitter.com/piwik">Twitter</a></li>
+                <li><a href="http://www.linkedin.com/groups?gid=867857" target="_blank">Linkedin</a></li>
+                <li><a href="https://github.com/piwik/piwik">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="container footer-page footer-updated">
+    <div class="row">
+        <div class="col-lg-11 col-md-11 foot-cc">
+            <a href="http://piwik.org/thank-you-all/"><img src="http://piwik.org/wp-content/themes/piwik/assets/img/cc.png" class="clearcode"></a>
+            <span class="pworg">Piwik.org. &copy; 2015</span>
+            <ul id="menu-footer" class="nav"><li class="menu-piwik-cloud"><a href="http://piwik.org/hosting/">Piwik Cloud</a></li>
+<li class="menu-privacy"><a href="http://piwik.org/privacy/">Privacy</a></li>
+<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+<li class="menu-developers"><a target="_blank" href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org">Marketplace</a></li>
+<li class="menu-credits"><a href="http://piwik.org/thank-you-all/">Credits</a></li>
+</ul>            <span class="respect">Piwik respects your privacy and gives you full control over your data.</span>
+        </div>
+    </div>
+</footer>
+</div>
+   </div>
+  <!-- Piwik -->
+<!-- Load Piwik.js from demo2 for continuous testing -->
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/") + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker((("https:" == document.location.protocol) ? "https://demo.piwik.org/" : "http://demo.piwik.org/") + "piwik.php", 1);
+piwikTracker.setCookieDomain('*.piwik.org');
+
+if(document.domain != 'piwik.org') {
+  piwikTracker.setDocumentTitle(document.domain + "/" + document.title);
+}
+
+// Set the domain the visitor landed on, in the Custom Variable
+if(!piwikTracker.getCustomVariable(1)) { 
+  piwikTracker.setCustomVariable(1, "Domain landed", document.domain );
+}
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();  
+} catch( err ) {}
+</script><noscript><p><img src="http://demo.piwik.org/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+
+
+<!-- We're tracking data in demo2.piwik.org for purpose of testing Piwik. Signed: the Piwik core team -->
+<script type="text/javascript">
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/");
+    try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.setCookieDomain('*.piwik.org');
+        // Track Javascript Errors as Events
+        piwikTracker.enableJSErrorTracking();
+        
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+</script>
+  <script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/syntax_highlight.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/scripts.min.js?ver=f38700148b4483182d42ef82b29f08ba'></script>
+
+  <div id="fb-root"></div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.258 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-10-28 00:06:27 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

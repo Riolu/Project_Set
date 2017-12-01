@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>社团简介_团旗飘飘</title>
+<meta name="keywords" content="简介,社团," />
+<meta name="description" content="社团历史：自建校开始至40年代，学生自发组织建立了学术、文化艺术、级会、同学会等社团协会，开展各种校园文化活动。其中40年代各种党派已在校内存在并建立社团，在学生自治会的领导下，以进步社团为基础成立的社团联合会在历次运动中协调全校各个社团的活" />
+<link href="/templets/default/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link rel="stylesheet" href="/templets/default/style/dedecms_skins_0.css" type="text/css" id="cssfile" />
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="/templets/default/js/jquery.cookie.js"></script>
+<script language="javascript" type="text/javascript" src="/templets/default/js/changeSkin.js"></script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+function check(){
+		if(document.formsearch.searchtype.value=="")
+		document.formsearch.action="http://www.google.cn/custom"
+		else
+		document.formsearch.action="/plus/search.php"
+	} 
+-->
+</script>
+</head>
+<body class="articleview">
+<div class="twidth" >
+
+
+<div class="m">
+<img src="/templets/default/777.jpg"   width="950" height="127">
+
+</div>
+<div id="middle">
+
+<div id="navbar">
+<script type="text/javascript" src="/templets/default/js/menu.js"></script>
+<div id="menu_wrap" class="clear">
+    <ul  class="menu" id="menu">
+      <li class="menu_txt menu2"> <a href="http://youth.sjtu.edu.cn" class="menulink menulink2 "><span class="m_cn">首页</span><span class="m_r"></span></a> </li> 
+            <li class="menu_txt menu2"> <span class="m_cn" style="color:#fff;">|</span><span class="m_r"></span></li> 
+      <li class="menu_txt menu3"> <a href="http://youth.sjtu.edu.cn/plus/list.php?tid=1" class="menulink menulink3 "><span class="m_cn">团委概况</span><span class="m_r"></span></a>
+
+        <ul>
+          <div class="bg_p"></div>
+          <li><a  href="http://youth.sjtu.edu.cn/plus/list.php?tid=38">人员介绍</a></li>
+          <li><a  href="http://youth.sjtu.edu.cn/plus/list.php?tid=37">辅导员介绍</a></li>
+          <li><a  href="http://youth.sjtu.edu.cn/plus/list.php?tid=10">部门介绍</a></li>
+          <div class="bg_p"></div>
+        </ul>
+      </li>
+      <li class="menu_txt menu2"> <span class="m_cn" style="color:#fff;">|</span><span class="m_r"></span></li> 
+      <li class="menu_txt menu4"> <a href="http://youth.sjtu.edu.cn/plus/list.php?tid=2" class="menulink menulink4 "><span class="m_cn">高校动态</span><span class="m_r"></span></a>
+
+        </li>
+        <li class="menu_txt menu2"> <span class="m_cn" style="color:#fff;">|</span><span class="m_r"></span></li> 
+      <li class="menu_txt menu5"> <a href="http://youth.sjtu.edu.cn/plus/list.php?tid=3" class="menulink menulink5"><span class="m_cn">通知公告</span><span class="m_r"></span></a>
+
+        
+             </li>
+        <li class="menu_txt menu2"> <span class="m_cn" style="color:#fff;">|</span><span class="m_r"></span></li> 
+      <li class="menu_txt menu7"> <a href="#" class="menulink menulink7 "><span class="m_cn">学生团体</span><span class="m_r"></span></a>
+        <ul>
+          <div class="bg_p"></div>
+ 
+          <li><a  href="http://youth.sjtu.edu.cn/plus/list.php?tid=39">社团介绍</a></li>
+		  <li><a  href="http://youth.sjtu.edu.cn/plus/list.php?tid=40">社团新闻 </a></li>
+          <div class="bg_p"></div>
+        </ul>
+      </li>
+      <li class="menu_txt menu2"> <span class="m_cn" style="color:#fff;">|</span><span class="m_r"></span></li> 
+      <li class="menu_txt menu7"> <a href="http://youth.sjtu.edu.cn/plus/list.php?tid=6" class="menulink menulink7 "><span class="m_cn">工作研究</span><span class="m_r"></span></a>
+        
+      </li>
+      <li class="menu_txt menu2"> <span class="m_cn" style="color:#fff;">|</span><span class="m_r"></span></li> 
+      <li class="menu_txt menu7"> <a href="http://youth.sjtu.edu.cn/plus/list.php?tid=7" class="menulink menulink7 "><span class="m_cn">学习参考</span><span class="m_r"></span></a>
+
+        
+      </li>
+      </ul>
+    <script type="text/javascript">
+	var menu=new menu.dd();
+	menu.init("menu","menuhover");
+</script>
+    
+  </div>
+
+</div>
+
+
+<div id="navsub">
+<div class="l"></div>
+<div class="r"></div>
+<div class="m" id="middle">
+
+<div style="width:25%;float:left;">
+</div>
+</div>
+</div>
+<!-- /header -->
+<div class="w960 center clear mt1">
+	<div class="pleft">
+		<div class="place">
+			<strong>当前位置:</strong> <a href='http://youth.sjtu.edu.cn/'>主页</a> > <a href='/a/xueshengtuanti/'>学生团体</a> > <a href='/a/xueshengtuanti/tuantijieshao/'>社团介绍</a> > 
+		</div><!-- /place -->
+		<div class="viewbox">
+			<div class="title">
+				<h2>社团简介</h2>
+			</div><!-- /title -->
+			<div class="info">
+				<small>时间:</small>2011-06-02 21:47<small>来源:</small>未知 <small>作者:</small>admin <small>点击:</small><script src="/plus/count.php?view=yes&aid=191&mid=1" type='text/javascript' language="javascript"></script>次</div><!-- /info -->
+
+            	<div class="intro">社团历史：自建校开始至40年代，学生自发组织建立了学术、文化艺术、级会、同学会等社团协会，开展各种校园文化活动。其中40年代各种党派已在校内存在并建立社团，在学生自治会的领导下，以进步社团为基础成立的社团联合会在历次运动中协调全校各个社团的活</div>
+			<div class="content">
+			<table width='100%'>
+				<tr><td><p><strong>社团历史：</strong>自建校开始至40年代，学生自发组织建立了学术、文化艺术、级会、同学会等社团协会，开展各种校园文化活动。其中40年代各种党派已在校内存在并建立社团，在学生自治会的领导下，以进步社团为基础成立的&ldquo;社团联合会&rdquo;在历次运动中协调全校各个社团的活动步骤。民国36年（1947年），中国共产党党总支部组织了&ldquo;进步社团联席会&rdquo;，参加的社团有创社、知行社、山茶社、今天社、青年社、从军返校同学会、交大生活社、天蓝社、电联社、三九社、建社等。各类社团广范开展学术讲座、出版科技文学刊物、研究文学艺术、开展服务、联络学生教职员感情等活动。</p>
+<p>1949&mdash;&mdash;1980年期间，存在的主要社团有文工团、艺术团、各种科学研究小组及科技协会等，它们开展学习、交流、及艺术活动。</p>
+<p>80年代起，原有的部分社团由于负责人毕业离校等原因停止了活动。团委、学生会组织及学生陆续组织重建或创立了一些学术类、文娱类的社团及兴趣小组。每年社团数量略有增减，但都保持在40至50个的水平。1989年以后，学校的社团统一归属学生会下设的社团中心，各院系也建有自己的学生社团。1988年开始举行一年一度的学生社团文化巡礼，这是社团活动的综合检阅，其内容包括文学、艺术、学术、体育等，大部分由学生会具体落实和组织。</p>
+<p><strong>社团概况：</strong>2002年成立社团联合会，目前正式命名为上海交通大学学生联合会社团总会。</p>
+<p>目前，上海交通大学正式注册社团共有168个，其中闵行校区109个，分为政治经济类、公益服务类、文化艺术类、学科技术类、体育健身类，共五大类社团。据不完全统计，社团参与人数覆盖了从大一到研究生接近上海交通大学学生总数四分之三的广泛的学生群体。</p>
+<p>我校社团继续保持百花竞妍、各展风采的良好氛围。政治经济类社团紧密结合党建团建理论和工作要求，潜心治学；公益服务类社团历史久、范围广、人数多、成效大，通过立足校园奉献社会来开展活动，服务社会弱势群体，赢得了良好社会声誉；文化艺术类社团以学生兴趣特长为基础，通过开展各具魅力的文艺活动陶冶情操，丰富校园文化生活，并将校园文化推向社区、推向社会，使高校成为社会精神文明建设的重要力量之一；学科技术类社团紧扣专业特色、提升群体学习能力，注重科研和社会实践的结合；体育类社团寓竞技和娱乐于一体，举办了一系列活动，尽展青春魅力。<br />
+</p>
+<p><strong>社团成绩与荣誉：</strong>相声协会荣获第二届中国校园戏剧节&ldquo;中国戏剧奖&bull;校园戏剧奖&rdquo;优秀剧目奖、&ldquo;守望&rdquo;临终关怀大学生志愿者协会获得2010年上海市大学生年度人物、2007年上海交通大学&ldquo;校长奖&rdquo;，并且在世博系列志愿者主题活动中，获得上海市优秀志愿者队伍称号。&ldquo;守望&rdquo;临终关怀大学生志愿者协会、爱乐者协会和CNM大学生传媒这3个学生社团获得&ldquo;2007-2008年度上海市明星社团&rdquo;荣誉称号，我校是唯一一个同时有三个社团获评的高校。相声协会一方面承办上海市大学生戏剧节的校园巡演活动在菁菁堂再度献演《交大这些事儿》原创校园相声剧，另一方面与图书馆合作，启动了校园相声剧展播活动，获得多方认可与好评；F Square 健美操协会积极参加各种校内外的演出活动，在近期徐汇公园举办的&ldquo;世博主题日&rdquo;的演出活动中，受到上海市文明办领导们的高度评价。阳光剧社的话剧《往生》，经过剧社辛勤努力，披荆斩棘，最后成功进入了第七次大学生话剧节决赛；爱乐者协会多次举办古典音乐普及讲座，并承办校内大型音乐会，极大丰富了同学们的业余生活；秋水书社与交大图书馆共同发起&ldquo;IC2&mdash;&mdash;人文经典阅读&rdquo;活动。跑虫俱乐部还承办了&ldquo;我是晨跑者&rdquo;&mdash;&mdash;我校晨跑活动启动仪式，为交大校园的早晨又增添了一道亮丽风景线。在由社总组织开展的&ldquo;益暖中华&rdquo;――第二届谷歌杯中国大学生公益创意大赛中，由陶振昊等同学发起的《老年人百事通》项目获奖并受到社区市民、媒体和企业等多方关注。<br />
+&nbsp;</p>(责任编辑：admin)</td></tr>
+			</table>
+			</div><!-- /content -->
+			<div class="dede_pages">
+				<ul class="pagelist">
+          
+				</ul>
+			</div><!-- /pages -->
+			
+			<!-- //顶踩 -->
+			<div class="newdigg" id="newdigg">
+				<div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',191)">
+					<div class="digg_act">顶一下</div>
+					<div class="digg_num">(3)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:50%"></span></div>
+						<div class="digg_percent_num">50%</div>
+					</div>
+				</div>
+				<div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',191)">
+					<div class="digg_act">踩一下</div>
+					<div class="digg_num">(3)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:50%"></span></div>
+						<div class="digg_percent_num">50%</div>
+					</div>
+				</div>
+			</div>
+			<script language="javascript" type="text/javascript">getDigg(191);</script>
+			<!-- //顶踩部份的源码结束 -->
+			
+			<div class="boxoff">
+				<strong>------分隔线----------------------------</strong>
+			</div>
+			<div class="handle">
+				<div class="context">
+					<ul>
+						<li>上一篇：没有了 </li>
+						<li>下一篇：没有了 </li>
+					</ul>
+				</div><!-- /context -->
+				<div class="actbox">
+					<ul>
+						<li id="act-fav"><a href="/plus/stow.php?aid=191" target="_blank">收藏</a></li>
+						<li id="act-err"><a href="/plus/erraddsave.php?aid=191&title=社团简介" target="_blank">挑错</a></li>
+						<li id="act-pus"><a href="/plus/recommend.php?aid=191" target="_blank">推荐</a></li>
+						<li id="act-pnt"><a href="#" onClick="window.print();">打印</a></li>
+					</ul>
+				</div><!-- /actbox -->
+			</div><!-- /handle -->
+		</div><!-- /viewbox -->
+
+<!-- //AJAX评论区 -->
+<!-- //主模板必须要引入/include/dedeajax2.js -->
+<a name='postform'></a>
+<div class="mt1">
+		<dl class="tbox">
+			<dt>
+				<strong>发表评论</strong>
+				<span class="more"></span>
+			</dt>
+			<dd>
+				<div class="dede_comment_post">
+          <form action="#" method="post" name="feedback">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="191" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <div class="dcmp-title">
+						<small>请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。</small>
+					</div><!-- /dcmp-title -->
+					<div class="dcmp-stand">
+						<strong>评价:</strong>
+							<input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" /><label for="dcmp-stand-neu"><img src="/templets/default/images/cmt-neu.gif" />中立</label>
+							<input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" /><label for="dcmp-stand-good"><img src="/templets/default/images/cmt-good.gif" />好评</label>
+							<input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" /><label for="dcmp-stand-bad"><img src="/templets/default/images/cmt-bad.gif" />差评</label>
+					</div><!-- /dcmp-stand -->
+                    <div class="clr"></div>
+                    <div class="dcmp-mood">
+						<strong>表情:</strong>
+						<ul>                               
+                                <li><input type="radio" name="face" value="1" checked="1" /><img src="/templets/default/images/mood/ico-mood-1.gif" /></li>
+                                <li><input type="radio" name="face" value="2"/><img src="/templets/default/images/mood/ico-mood-2.gif" /></li>
+                                <li><input type="radio" name="face" value="3"/><img src="/templets/default/images/mood/ico-mood-3.gif" /></li>
+                                <li><input type="radio" name="face" value="4"/><img src="/templets/default/images/mood/ico-mood-4.gif" /></li>
+                                <li><input type="radio" name="face" value="5"/><img src="/templets/default/images/mood/ico-mood-5.gif" /></li>
+                                <li><input type="radio" name="face" value="6"/><img src="/templets/default/images/mood/ico-mood-6.gif" /></li>
+                                <li><input type="radio" name="face" value="7"/><img src="/templets/default/images/mood/ico-mood-7.gif" /></li>
+                                <li><input type="radio" name="face" value="8"/><img src="/templets/default/images/mood/ico-mood-8.gif" /></li> 
+                                <li><input type="radio" name="face" value="9"/><img src="/templets/default/images/mood/ico-mood-9.gif" /></li>
+                                <li><input type="radio" name="face" value="10"/><img src="/templets/default/images/mood/ico-mood-10.gif" /></li>
+                                <li><input type="radio" name="face" value="11"/><img src="/templets/default/images/mood/ico-mood-11.gif" /></li> 
+                                <li><input type="radio" name="face" value="12"/><img src="/templets/default/images/mood/ico-mood-12.gif" /></li>
+						</ul>
+					</div><!-- /dcmp-mood -->
+					<div class="dcmp-content">
+						<textarea cols="60" name="msg" rows="5" class="ipt-txt"></textarea>
+					</div><!-- /dcmp-content -->
+					<div class="dcmp-post"><!--未登陆-->
+							<div class="dcmp-userinfo" id="_ajax_feedback">
+								
+                                验证码:<input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/><img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" width="60" height="24"  title="点击我更换图片" alt="点击我更换图片" />
+                <input type="checkbox" name="notuser" id="dcmp-submit-guest" /><label for="dcmp-submit-guest" />匿名? </label>
+							</div>
+              
+							<div class="dcmp-submit">
+								<button type="button" onClick='PostComment()'>发表评论</button>
+							</div>
+						</div>
+        </form>
+				</div>
+			</dd>
+		</dl>
+	</div><!-- //评论表单区结束 -->
+
+<!-- //评论内容区 -->
+	<a name='commettop'></a>
+	<div class="mt1">
+			<dl class="tbox">
+				<dt>
+					<strong>最新评论</strong>
+					<span class="more"><a href="/plus/feedback.php?aid=191">进入详细评论页&gt;&gt;</a></span>
+				</dt>
+				<!-- //这两个ID的区块必须存在，否则JS会出错 -->
+				<dd id='commetcontentNew'></dd>
+				<dd id='commetcontent'></dd>
+			</dl>
+	</div>
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=191&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(f.msg.value=='')
+		{
+			alert("评论内容不能为空！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(f.msg.value.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '191');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', f.msg.value);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		f.msg.value = '';
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+}
+function quoteCommet(fid)
+{
+	document.feedback.fid.value = fid;
+}
+LoadCommets(1);
+</script><!-- //评论内容区结束 -->
+
+
+</div><!-- //左边内容结束 -->
+
+<!-- //右边内容开始 -->
+<div class="pright">
+ 		
+		<div class="pright">
+        <div>
+          <dl class="tbox">
+				<dt><strong>栏目列表</strong></dt>
+				<dd>
+					<ul class="d6">
+                      
+		<li><a href='/a/xueshengtuanti/henduozuzhi/'>很多组织</a></li><li><a href='/a/xueshengtuanti/tuantijieshao/' class='thisclass'>社团介绍</a></li>
+		<li><a href='/a/xueshengtuanti/shetuanxinwen/'>缤纷社团</a></li>
+					</ul>
+				</dd>
+			</dl>
+        </div>   
+		
+		<div class="commend mt1">
+			<dl class="tbox light">
+				<dt class='light'><strong>推荐内容</strong></dt>
+				<dd class='light'>
+					<ul class="d4">
+           
+					</ul>
+				</dd>
+			</dl>
+		</div><!-- /commend -->
+
+		<div class="hot mt1">
+			<dl class="tbox light">
+				<dt class='light'><strong>热点内容</strong></dt>
+				<dd class='light'>
+					<ul class="c1 ico2">
+             <li><a href="/plus/view.php?aid=191">社团简介</a></li>
+
+					</ul>
+				</dd>
+			</dl>
+		</div>
+	</div><!-- /pright -->
+</div>
+
+<!-- //底部模板 -->
+<div class="footer w960 center mt1 clear">
+	
+    <div class="footer_left"></div>
+    <div class="footer_body">
+	<p class="powered" style="font-size:6px">    
+		Powered by 
+
+
+<br /><div class="copyright">&#160;&#160;   
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div>
+<!-- /footer -->
+
+</body>
+</html>

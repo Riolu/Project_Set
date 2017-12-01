@@ -1,0 +1,1428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><meta name="publishid" content="1173437.0.1.0"/>
+<title>澳门中联办 - 中央人民政府驻澳门特别行政区联络办公室</title>
+    <meta name="description" content=" " />
+<link href="http://www.zlb.gov.cn/css/am_base.css?v2" rel="stylesheet" type="text/css" />
+<base target="_blank" />
+<script type="text/javascript">
+var userAgent = navigator.userAgent.toLowerCase(),l=window.location;
+var platform;
+  if(userAgent == null || userAgent == '' || (l.href.indexOf('f=pad') != -1) ){
+    platform = 'web'
+}else{
+    if(userAgent.indexOf("mi pad" ) != -1 ||userAgent.indexOf("xiaomi/miuibrowser")!= -1||userAgent.indexOf("ipad" )!=-1){
+platform = 'pad';
+        location.href = "http://p.zlb.gov.cn" ;
+    } else if (userAgent.match(/iphone/i)||userAgent.match( /iphone os/i)||userAgent.match( /android/i)||userAgent.match(/windows mobile/i)||userAgent.match( /ucweb/i)){
+        platform = 'phone'
+location.href = "http://m.zlb.gov.cn";
+    } else if (userAgent.indexOf('gecko') > -1 && userAgent.indexOf( 'khtml') == -1 && userAgent.indexOf('firefox' ) == -1 && userAgent.indexOf( '11.0') == -1){
+        platform = 'other mobile';
+        location.href = "http://m.zlb.gov.cn";
+    }
+}
+</script>
+<!-- 焦点图 -->
+<script type="text/javascript" src="http://www.xinhuanet.com/static/jq.js"></script>  
+<script type="text/javascript">   
+function datugundong(){   
+    var jqpfoc=jQuery("#focus_pic");   
+jQuery(document).ready(function(){   
+var bigpic_boxobj=jqpfoc.find("div.bigpic_box");   
+var jqnrbt=jqpfoc.find("ul.btPhoto");   
+var len=bigpic_boxobj.find("div.fpic").length;   
+var kongzhi='';   
+for(i=0;i<len;i++)kongzhi+='<li class="bt02"></li>';   
+$("ul.btPhoto").append(kongzhi);   
+var nmyTime;   
+var nsig=0;   
+jqnrbt.find("li:first").addClass("current");   
+jqnrbt.find("li").each(function(i){    
+    jQuery(this).mouseover(function(){   
+    bigpic_boxobj.find("div.fpic").eq(i).fadeIn("slow").siblings().hide();   
+    jQuery(this).addClass("current").siblings().removeClass("current");   
+    nsig=i;   
+})});   
+jqnrbt.find("li:first").mouseover();   
+nmyTime=setInterval(function(){nsig++;if(nsig>=len){bigpic_boxobj.find("div.fpic").eq(0).fadeIn("slow").siblings().hide();   
+jqnrbt.find("li").eq(0).addClass("current").siblings().removeClass("current");nsig=0;}   
+else{bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide();jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current")}},5000);   
+jqpfoc.mouseenter(function(){clearInterval(nmyTime)});   
+jqpfoc.mouseleave(function(){nmyTime=setInterval(function(){nsig++;if(nsig>=len){bigpic_boxobj.find("div.fpic").eq(0).fadeIn("slow").siblings().hide();   
+jqnrbt.find("li").eq(0).addClass("current").siblings().removeClass("current");nsig=0;}else{bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide();jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current")}},5000);});   
+jQuery("#l_btn01").mouseover(function(){jQuery("#l_btn01").addClass("current01")});   
+jQuery("#l_btn01").mouseout(function(){jQuery("#l_btn01").removeClass("current01")});   
+jQuery("#r_btn01").mouseover(function(){jQuery("#r_btn01").addClass("current02")});   
+jQuery("#r_btn01").mouseout(function(){jQuery("#r_btn01").removeClass("current02")});   
+jQuery("#l_btn01").click(function(){nsig--;   
+if(nsig<0){nsig=len-1;   
+           bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide();   
+            jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current");   
+            }   
+else{bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide();   
+jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current");   
+}});   
+jQuery("#r_btn01").click(function(){   
+    nsig++;   
+    if(nsig>len-1){   
+        nsig=0;   
+        bigpic_boxobj.find("div.fpic").eq(0).fadeIn("slow").siblings().hide();   
+        jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current");   
+    }   
+else{   
+    bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide();   
+    jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current");   
+    }});   
+})   
+       
+}$(function(){   
+    datugundong();   
+})   
+</script>  
+<!-- 爱祖国爱香港 -->
+<script type="text/javascript" src="http://www.zlb.gov.cn/js/lrtk.js"></script>
+<!-- 切换页签-政务信息
+<script type="text/javascript"> 
+$(function(){ 
+    $(".tab_tit li").mouseover(function(){
+	 .each(function(){ 
+            $(this).attr("src",$(this).attr("src").replace("1.","2.")); 
+        }) 
+        $(this).attr("src",$(this).attr("src").replace("2.","1."));
+    var a = $(this).index(); 
+    $(this).parent().parent().parent().find(".tab_con").eq(a).addClass("con_active").siblings().removeClass("con_active");})            
+}) 
+</script> -->
+<!-- 切换页签-交流合作 -->
+<script type="text/javascript">   
+$(function(){   
+    $(".tab_tit li").mouseover(function(){$(this).addClass("tit_active").siblings().removeClass("tit_active");   
+    var a = $(this).index();   
+    $(this).parent().parent().parent().find(".tab_con").eq(a).addClass("con_active").siblings().removeClass("con_active");})              
+})   
+</script> 
+<!-- 切换页签-环球播报 -->
+<script type="text/javascript">   
+$(function(){   
+    $(".tab .tab_title li").mouseover(function () {   
+        $(this).addClass('active');   
+        $(this).siblings().removeClass('active')   
+        var _index = $(this).index();   
+        $(this).parent().parent().parent().find('.tab_box_content').eq(_index).show().siblings().hide();   
+    })            
+})
+</script>
+<!--头条区5张闪动图 -->  
+<SCRIPT src="http://www.xinhuanet.com/static/jq.js" type="text/javascript"></SCRIPT>  
+<SCRIPT type="text/javascript">    
+function fourcePic (name){   
+    var sw = 0;   
+    $(name+" .num a").mouseover(function(){   
+        sw = $(this).index();   
+        myShow(sw);   
+    });   
+    $(name+" ul li:first").find("img").attr("src",$(".fourcePic ul li").eq(0).find("img").attr("src_url"));   
+    function myShow(i){   
+        var src_url =$(name+" ul li").eq(i).find("img").attr("src_url");   
+        //alert(src_url);   
+        $(name+" ul li").eq(i).find("img").attr("src",src_url);   
+        $(name+" .num a").eq(i).addClass("cur").siblings("a").removeClass("cur");   
+        $(name+" ul li").eq(i).stop(true,true).fadeIn(200).siblings("li").fadeOut(200);   
+    }   
+    //滑入停止动画，滑出开始动画   
+    $(name).hover(function(){   
+                                  // alert(1)   
+        if(myTime){   
+           clearInterval(myTime);   
+        }   
+    },function(){   
+        myTime = setInterval(function(){   
+          myShow(sw)   
+          sw++;   
+          if(sw==5){sw=0;}   
+        } , 7000);   
+    });   
+    
+    //自动开始   
+    var myTime = setInterval(function(){   
+       myShow(sw)   
+       sw++;   
+       if(sw==5){sw=0;}   
+    } , 7000);     
+       
+    
+}   
+$(function(){   
+    fourcePic(".fourcePic");   
+})   
+</SCRIPT>
+<SCRIPT type="text/javascript">    
+function fourcePic2 (name){   
+    var sw = 0;   
+    $(name+" .num a").mouseover(function(){   
+        sw = $(this).index();   
+        myShow(sw);   
+    });   
+    $(name+" ul li:first").find("img").attr("src",$(".fourcePic2 ul li").eq(0).find("img").attr("src_url"));   
+    function myShow(i){   
+        var src_url =$(name+" ul li").eq(i).find("img").attr("src_url");   
+        //alert(src_url);   
+        $(name+" ul li").eq(i).find("img").attr("src",src_url);   
+        $(name+" .num a").eq(i).addClass("cur").siblings("a").removeClass("cur");   
+        $(name+" ul li").eq(i).stop(true,true).fadeIn(200).siblings("li").fadeOut(200);   
+    }   
+    //滑入停止动画，滑出开始动画   
+    $(name).hover(function(){   
+                                  // alert(1)   
+        if(myTime){   
+           clearInterval(myTime);   
+        }   
+    },function(){   
+        myTime = setInterval(function(){   
+          myShow(sw)   
+          sw++;   
+          if(sw==5){sw=0;}   
+        } , 7000);   
+    });   
+    
+    //自动开始   
+    var myTime = setInterval(function(){   
+       myShow(sw)   
+       sw++;   
+       if(sw==5){sw=0;}   
+    } , 7000);     
+       
+    
+}   
+$(function(){   
+    fourcePic2(".fourcePic2");   
+})   
+</SCRIPT>  
+<SCRIPT type="text/javascript">    
+function fourcePic3 (name){   
+    var sw = 0;   
+    $(name+" .num a").mouseover(function(){   
+        sw = $(this).index();   
+        myShow(sw);   
+    });   
+    $(name+" ul li:first").find("img").attr("src",$(".fourcePic3 ul li").eq(0).find("img").attr("src_url"));   
+    function myShow(i){   
+        var src_url =$(name+" ul li").eq(i).find("img").attr("src_url");   
+        //alert(src_url);   
+        $(name+" ul li").eq(i).find("img").attr("src",src_url);   
+        $(name+" .num a").eq(i).addClass("cur").siblings("a").removeClass("cur");   
+        $(name+" ul li").eq(i).stop(true,true).fadeIn(200).siblings("li").fadeOut(200);   
+    }   
+    //滑入停止动画，滑出开始动画   
+    $(name).hover(function(){   
+                                  // alert(1)   
+        if(myTime){   
+           clearInterval(myTime);   
+        }   
+    },function(){   
+        myTime = setInterval(function(){   
+          myShow(sw)   
+          sw++;   
+          if(sw==5){sw=0;}   
+        } , 7000);   
+    });   
+    
+    //自动开始   
+    var myTime = setInterval(function(){   
+       myShow(sw)   
+       sw++;   
+       if(sw==5){sw=0;}   
+    } , 7000);     
+       
+    
+}   
+$(function(){   
+    fourcePic3(".fourcePic3");   
+})   
+</SCRIPT>  
+<SCRIPT type="text/javascript">    
+function fourcePic4 (name){   
+    var sw = 0;   
+    $(name+" .num a").mouseover(function(){   
+        sw = $(this).index();   
+        myShow(sw);   
+    });   
+    $(name+" ul li:first").find("img").attr("src",$(".fourcePic4 ul li").eq(0).find("img").attr("src_url"));   
+    function myShow(i){   
+        var src_url =$(name+" ul li").eq(i).find("img").attr("src_url");   
+        //alert(src_url);   
+        $(name+" ul li").eq(i).find("img").attr("src",src_url);   
+        $(name+" .num a").eq(i).addClass("cur").siblings("a").removeClass("cur");   
+        $(name+" ul li").eq(i).stop(true,true).fadeIn(200).siblings("li").fadeOut(200);   
+    }   
+    //滑入停止动画，滑出开始动画   
+    $(name).hover(function(){   
+                                  // alert(1)   
+        if(myTime){   
+           clearInterval(myTime);   
+        }   
+    },function(){   
+        myTime = setInterval(function(){   
+          myShow(sw)   
+          sw++;   
+          if(sw==5){sw=0;}   
+        } , 7000);   
+    });   
+    
+    //自动开始   
+    var myTime = setInterval(function(){   
+       myShow(sw)   
+       sw++;   
+       if(sw==5){sw=0;}   
+    } , 7000);     
+       
+    
+}   
+$(function(){   
+    fourcePic4(".fourcePic4");   
+})   
+</SCRIPT>   
+<!-- 关键词搜索 -->
+<script type="text/javascript">
+function KeyDown()
+
+{
+
+	if (event.keyCode == 13)
+
+	{   
+
+		searchsearch();
+
+	}
+
+}
+
+function searchsearch(){
+
+	var searchword = document.getElementById("sw").value;
+
+	if(searchword.replace(/\s/g)==""){
+
+		alert("请输入检索词");
+
+		return;
+
+	}
+
+	function LTrim(s)
+
+	{
+
+		for(var i=0;i<s.length;i++)
+
+			if(s.charAt(i)!=' ')
+
+			 return s.substring(i,s.length);
+
+		 return "";
+
+	}
+
+	function RTrim(s)
+
+	{
+
+		for(var i=s.length-1;i>=0;i--)
+
+			if(s.charAt(i)!=' ')
+
+				return s.substring(0,i+1);
+
+			return "";
+
+	}
+
+	
+
+	function Trim(s)
+
+	{
+
+		return RTrim(LTrim(s));
+
+	}
+
+	searchword = Trim(searchword);
+
+	searchword = searchword.replace(/\s{1,20}/," ");//只保留一個空格
+
+	var swArray = searchword.split(" ");
+
+	for(var i=0;i<swArray.length;i++)
+
+	{
+
+		if(i==0)
+
+		{
+
+			searchword = Trim(swArray[0]);
+
+		}
+
+		else
+
+		{
+
+			searchword = searchword + "*" + Trim(swArray[i]);
+
+		}
+
+	}
+
+	document.getElementById("searchword").value = searchword;
+
+	document.getElementById("zlb").submit();
+
+}
+
+
+
+</script>
+<style type="text/css">
+.jbf { height:auto; overflow:hidden;}
+.jbf1 { height:176px; background: url(http://www.zlb.gov.cn/images/bg_jbf.jpg) 50% 0 no-repeat; margin: 0 auto;}
+.jbf2 { height:auto; background:#ccc; margin: 0 auto;}
+.jbf1_l { width:900px; margin-left:60px; float:none;  overflow:hidden; margin-top:0px;}
+.flqh{ overflow:hidden;} 
+.flqh .flqh_tit { width:900px; } 
+.flqh .flqh_tit ul{ overflow:hidden; width:320px; margin-left:280px; padding-top:5px;display: inline;}  
+.flqh .flqh_tit li{ height:30px;font-size: 14px; color:#1a7643;font-family: "微软雅黑";text-align: center; line-height:30px; float:left; padding-left:50px;display: inline;}  
+.flqh .flqh_tit a{color: #1a7643; }  
+.flqh .flqh_tit li.active a{color:red;}  
+.flqh .flqh_box{ overflow:hidden; width:900px;}  
+.flqh .flqh_box .flqh_box_content{ display:none;}
+.flqh_box_content ul { width:300px; margin:0; float:left; line-height:22px;}
+.zhang{ margin-right:10px}
+.jn70_banner { width:980px; margin:0 auto; height:238px; margin-bottom:10px; }
+</style>
+</head>
+<body bgcolor="#f1f1f1">
+<div class="top_area">
+<div class="box01">
+<div class="box02l">
+<div class="time">
+<div class="date">
+<span id="date"></span>&nbsp;<span id="todate"></span>&nbsp;<!-- <span><img src="http://www.zlb.gov.cn/images/icon_sj.gif" />&nbsp;<a href="http://www.zlb.gov.cn/erji/ymjsz.htm">手机版</a></span>
+<span><img src="http://www.zlb.gov.cn/images/icon_ipad.gif" /> &nbsp;<a href="http://www.zlb.gov.cn/erji/ymjsz.htm">ipad版</a></span> -->  
+</div>
+</div>
+</div>
+<div class="box02r">
+<script type="text/javascript">
+var ftzw = "tp://big5.zlb.gov.cn/gate/big5/www.zlb.gov.cn";
+var jtzw = "tp://www.zlb.gov.cn";
+var currUrl = document.URL;
+var flag = currUrl.indexOf("gate/big5");
+if(flag<0)
+document.write('<a href="ht'+ftzw+'" class="wenzi01" target="_blank">中文繁体</a>');
+else
+document.write('<a href="ht'+jtzw+'" class="wenzi01" target="_blank">中文简体</a>');
+</script>
+<input name="input" type="text" class="text01" id="sw" onKeyDown="KeyDown();" />
+<input type="button" value="搜索" class="text02" onclick="searchsearch()" />
+<a class="text02" href="http://mail.zlb.gov.cn" target="_blank">电子邮件系统</a> 
+</div>
+</div>
+</div>
+<form action="http://www.zlb.gov.cn/was5/web/search" method="GET" id="zlb" target="_blank">
+<input type="hidden" name="channelid" value="256821" />
+<input type="hidden" name="searchword" id="searchword" />
+</form>
+<script>
+/*时间*/
+
+function calendar_index(){var enabled = 0;var today = new Date();var day;var date;var centry="";if(today.getDay()==0) day="星期日";if(today.getDay()==1) day="星期一";if(today.getDay()==2) day="星期二";if(today.getDay()==3) day="星期三";if(today.getDay()==4) day="星期四";if(today.getDay()==5) day="星期五";if(today.getDay()==6) day="星期六";if(today.getFullYear()<2000) centry = "19";date1=centry+(today.getFullYear())+"年"+(today.getMonth()+1)+"月"+today.getDate()+"日  ";date2=""+day;$("#date").html(date1+date2);var CalendarData=new Array(100);var madd=new Array(12);var tgString="甲乙丙丁戊己庚辛壬癸";var dzString="子丑寅卯辰巳午未申酉戌亥";var numString="一二三四五六七八九十";var monString="正二三四五六七八九十冬腊";var weekString="日一二三四五六";var sx="鼠牛虎兔龙蛇马羊猴鸡狗猪";var cYear,cMonth,cDay,TheDate;CalendarData = new Array(0xA4B,0x5164B,0x6A5,0x6D4,0x415B5,0x2B6,0x957,0x2092F,0x497,0x60C96,0xD4A,0xEA5,0x50DA9,0x5AD,0x2B6,0x3126E, 0x92E,0x7192D,0xC95,0xD4A,0x61B4A,0xB55,0x56A,0x4155B, 0x25D,0x92D,0x2192B,0xA95,0x71695,0x6CA,0xB55,0x50AB5,0x4DA,0xA5B,0x30A57,0x52B,0x8152A,0xE95,0x6AA,0x615AA,0xAB5,0x4B6,0x414AE,0xA57,0x526,0x31D26,0xD95,0x70B55,0x56A,0x96D,0x5095D,0x4AD,0xA4D,0x41A4D,0xD25,0x81AA5, 0xB54,0xB6A,0x612DA,0x95B,0x49B,0x41497,0xA4B,0xA164B, 0x6A5,0x6D4,0x615B4,0xAB6,0x957,0x5092F,0x497,0x64B, 0x30D4A,0xEA5,0x80D65,0x5AC,0xAB6,0x5126D,0x92E,0xC96,0x41A95,0xD4A,0xDA5,0x20B55,0x56A,0x7155B,0x25D,0x92D,0x5192B,0xA95,0xB4A,0x416AA,0xAD5,0x90AB5,0x4BA,0xA5B, 0x60A57,0x52B,0xA93,0x40E95);madd[0]=0;madd[1]=31;madd[2]=59;madd[3]=90;madd[4]=120;madd[5]=151;madd[6]=181;madd[7]=212;madd[8]=243;madd[9]=273;madd[10]=304;madd[11]=334; function GetBit(m,n) {  return (m>>n)&1; };function e2c(){ TheDate= (arguments.length!=3) ? new Date() : new Date(arguments[0],arguments[1],arguments[2]); var total,m,n,k;var isEnd=false;var tmp=TheDate.getFullYear();total=(tmp-1921)*365+Math.floor((tmp-1921)/4)+madd[TheDate.getMonth()]+TheDate.getDate()-38;if (TheDate.getYear()%4==0&&TheDate.getMonth()>1) { total++;}for(m=0;;m++){k=(CalendarData[m]<0xfff)?11:12;for(n=k;n>=0;n--){if(total<=29+GetBit(CalendarData[m],n)){isEnd=true; break;}total=total-29-GetBit(CalendarData[m],n);}if(isEnd) break;}cYear=1921 + m; cMonth=k-n+1; cDay=total;if(k==12) {if(cMonth==Math.floor(CalendarData[m]/0x10000)+1) { cMonth=1-cMonth; }if(cMonth>Math.floor(CalendarData[m]/0x10000)+1){ cMonth--; } }};function GetcDateString(){ var tmp="";tmp+=tgString.charAt((cYear-4)%10); tmp+=dzString.charAt((cYear-4)%12);tmp+="年 "; if(cMonth<1) { tmp+="(闰)"; tmp+=monString.charAt(-cMonth-1); } else {tmp+=monString.charAt(cMonth-1);}tmp+="月";tmp+=(cDay<11)?"初":((cDay<20)?"十":((cDay<30)?"廿":"三十")); if (cDay%10!=0||cDay==10) { tmp+=numString.charAt((cDay-1)%10); }return tmp;};function GetLunarDay(solarYear,solarMonth,solarDay){ if (solarYear<1921 || solarYear>2020){return "";} else {solarMonth = (parseInt(solarMonth)>0) ? (solarMonth-1) : 11;e2c(solarYear,solarMonth,solarDay); return GetcDateString();}};var D=new Date();var yy=D.getFullYear();var mm=D.getMonth()+1;var dd=D.getDate();var ww=D.getDay();var ss=parseInt(D.getTime() / 1000); $("#todate").html(GetLunarDay(yy,mm,dd));};
+
+
+
+calendar_index();
+
+</script>
+<div class="clear"></div>
+<div id="container">
+<div class="container1">
+<!--banner -->
+<div class="banner"></div>
+<!--导航-->
+<div class="nav">
+<ul id="topnav">
+<li><a href="http://www.zlb.gov.cn/index.htm" target="_blank">首 页</a></li>
+<li><a href="http://www.zlb.gov.cn/jgzn/index.htm" target="_blank">机构职能</a> </li>
+<li><a href="http://www.zlb.gov.cn/zyyam/zyzc.htm" target="_blank"> 中央支持</a> </li>
+<li><a href="http://www.zlb.gov.cn/gzdt/index.htm" target="_blank">活动动态</a> </li>
+<li><a href="http://www.zlb.gov.cn/xwzx/bdzx.htm" target="_blank">新闻中心</a></li>
+<li><a href="http://www.zlb.gov.cn/tp/tpbd.htm" target="_blank">图片</a></li>
+<li><a href="http://www.zlb.gov.cn/video/sp.htm">视频</a></li>
+<li><a href="http://www.zlb.gov.cn/zggq/index.htm" target="_blank">国情区情</a></li>
+<li><a href="http://www.zlb.gov.cn/zcfg/flfg.htm" target="_blank">政策法规</a></li>
+<li style="border:none"><a href="http://www.zlb.gov.cn/hqbb/lasd.htm" target="_blank">环球播报</a></li>
+</ul>
+</div>
+<!-- 新闻 -->
+<div class="news">
+<div class="news_left">
+<div id="bigpic">
+<div id="focus_pic" class="focusPic">
+<div id="l_btn01" class="l_btn"></div>
+<div id="r_btn01" class="r_btn"></div>
+<div class="bigpic_box">
+<div class="fpic" style="display: block;">
+<a href="http://www.xinhuanet.com/fortune/jjssw/index.htm"><img src="titlepic/111695/1116951200_1445915168154_title0h.png" width="575" height="270" alt="聚焦十八届五中全会 回眸&ldquo;十二五&rdquo; 展望&ldquo;十三五&rdquo;" /> </a>                 
+<h3><a href="http://www.xinhuanet.com/fortune/jjssw/index.htm" target="_bla nk">聚焦十八届五中全会 回眸“十二五” 展望“十三五”</a></h3>
+<span class="f_bg"></span>           
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://www.zlb.gov.cn/2015-10/27/c_128364059.htm"><img src="titlepic/111695/1116956394_1445937697737_title0h.jpg" width="575" height="270" alt="澳门青年企业家协会第五届行政人员举行就职典礼" /></a>                  
+<h3><a href="http://www.zlb.gov.cn/2015-10/27/c_128364059.htm" target="_blank">澳门青年企业家协会第五届行政人员举行就职典礼</a></h3>
+<span class="f_bg"></span>             
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://www.zlb.gov.cn/2015-10/26/c_128359898.htm"><img src="titlepic/111694/1116943804_1445853876701_title0h.jpg" width="575" height="270" alt="郑振涛走访澳门坊众学校、工联总会职业技能培训中心" /></a>                  
+<h3><a href="http://www.zlb.gov.cn/2015-10/26/c_128359898.htm" target="_blank">郑振涛走访澳门坊众学校、工联总会职业技能培训中心</a></h3>
+<span class="f_bg"></span>             
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://www.zlb.gov.cn/2015-10/23/c_128351804.htm"><img src="titlepic/111692/1116923738_1445594662362_title0h.jpg" width="575" height="270" alt="第五届江苏&mdash;澳门&middot;葡语国家工商峰会开幕" /></a>                  
+<h3><a href="http://www.zlb.gov.cn/2015-10/23/c_128351804.htm" target="_blank">第五届江苏—澳门·葡语国家工商峰会开幕</a></h3>
+<span class="f_bg"></span>             
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://www.zlb.gov.cn/2015-10/23/c_128351817.htm"><img src="titlepic/111692/1116924046_1445600262973_title0h.jpg" width="575" height="270" alt="孙达出席庆祝澳门中华教育会成立九十五周年庆典活动" /></a>                  
+<h3><a href="http://www.zlb.gov.cn/2015-10/23/c_128351817.htm" target="_blank">孙达出席庆祝澳门中华教育会成立九十五周年庆典活动</a></h3>
+<span class="f_bg"></span>             
+</div>
+</div>
+<ul class="btPhoto">   
+</ul>
+</div>
+</div>
+<div class="sp">
+<img src="http://www.zlb.gov.cn/images/tit_sp.jpg" />
+<div class="yiimg2">
+<p class="img1"><a href="http://www.zlb.gov.cn/2014-12/20/c_127321624.htm"><img src="titlepic/111371/1113717213_title0h.jpg" width="185" height="105" alt="习近平会见驻澳机构负责人" /></a></p>
+<p class="bg2"></p>
+<p class="name"><a href="http://www.zlb.gov.cn/2014-12/20/c_127321624.htm" target="_blank">习近平会见驻澳机构负责人</a></p>
+</div>
+<div class="yiimg2">
+<p class="img1"><a href="http://www.zlb.gov.cn/2014-12/20/c_127321240.htm"><img src="titlepic/111371/1113715729_title0h.jpg" width="185" height="105" alt="庆祝澳门回归十五周年大会" /></a></p>
+<p class="bg2"></p>
+<p class="name"><a href="http://www.zlb.gov.cn/2014-12/20/c_127321240.htm" target="_blank">庆祝澳门回归十五周年大会</a></p>
+</div>
+<div class="yiimg">
+<p class="img1"><a href="http://www.zlb.gov.cn/2015-01/23/c_127413917.htm"><img src="titlepic/111411/1114112346_title0h.jpg" width="185" height="105" alt="历史京剧《镜海魂》" /></a></p>
+<p class="bg2"></p>
+<p class="name"><a href="http://www.zlb.gov.cn/2015-01/23/c_127413917.htm" target="_blank">历史京剧《镜海魂》</a></p>
+</div>
+</div>
+</div>
+<div class="news_right">
+<div class="toutiao">
+<div class="news_tit"><a href="http://www.zlb.gov.cn/2015-10/13/c_128313975.htm">张德江会见澳门特别行政区立法会议员 </a></div>
+<div class="news_con"><a href="http://www.zlb.gov.cn/2015-10/13/c_128313975.htm">中共中央政治局常委、全国人大常委会委员长张德江13日上午在人民大会堂会见了由贺一诚主席率领的澳门特别行政区立法会议员参访团。</a></div>
+</div>
+<div class="fenge"></div>
+<div class="news_con1">
+<ul>
+<li><a href="http://www.zlb.gov.cn/2015-10/27/c_128364059.htm">澳门青年企业家协会第五届行政人员举行就职典礼</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/27/c_128363991.htm">“十二五”红利让港澳受益匪浅</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/26/c_128359898.htm">郑振涛走访澳门坊众学校、工联总会职业技能培训中心</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/26/c_128359647.htm">第十二届世界华商高峰会在澳门成功举办</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/23/c_128351804.htm">第五届江苏—澳门·葡语国家工商峰会开幕</a></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<!-- 政务信息 -->
+<div id="gjfx">
+<div class="tit">
+<div class="amtit"><img src="http://www.zlb.gov.cn/images/tit_zwxx.jpg" /></div>
+</div>
+<div class="clear"></div>
+<div class="blank15"></div>
+<div class="gjfx_t">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" id="tab_yq">
+<tr>
+<td>
+<div name="0" class="hwpic">
+<a href="http://www.zlb.gov.cn/2015-10/13/c_128313975.htm"><img src="titlepic/111691/1116918386_1445573114326_title0h.jpg" width="185" height="135" alt="张德江会见澳门特别行政区立法会议员" /></a>                       
+<a href="http://www.zlb.gov.cn/2015-10/13/c_128313975.htm">
+<div class=""> </div>
+</a>
+</div>
+</td>
+<td>
+<div name="1" class="hwpic">
+<a href="http://www.zlb.gov.cn/2015-10/13/c_128314087.htm"><img src="titlepic/111691/1116918291_1445572806187_title0h.jpg" width="185" height="135" alt="孙达会见福建省政协副主席陈义兴一行" /></a>                
+<a href="http://www.zlb.gov.cn/2015-10/13/c_128314087.htm">
+<div class="bak"> </div>
+</a>
+</div>
+</td>
+<td>
+<div name="2" class="hwpic">
+<a href="http://www.zlb.gov.cn/2015-10/13/c_128314082.htm"><img src="titlepic/111691/1116918272_1445572648914_title0h.jpg" width="185" height="135" alt="&ldquo;世界旅游经济论坛&middot;澳门2015&rdquo;开幕" /></a>               
+<a href="http://www.zlb.gov.cn/2015-10/13/c_128314082.htm">
+<div class=""> </div>
+</a>
+</div>
+</td>
+<td>
+<div name="3" class="hwpic">
+<a href="http://www.zlb.gov.cn/2015-10/12/c_128309857.htm"><img src="titlepic/111683/1116836675_1445567948294_title0h.jpg" width="185" height="135" alt="中国银行澳门分行向澳门本地慈善捐款逾千万澳门元" /></a>                
+<a href="http://www.zlb.gov.cn/2015-10/12/c_128309857.htm">
+<div class=""> </div>
+</a>
+</div>
+</td>
+<td>
+<div name="4" class="hwpic">
+<a href="http://www.zlb.gov.cn/2015-10/12/c_128309620.htm"><img src="titlepic/111683/1116836670_1445567864813_title0h.jpg" width="185" height="135" alt="孙达会见国家旅游局局长李金早一行" /></a>                
+<a href="http://www.zlb.gov.cn/2015-10/12/c_128309620.htm">
+<div class=""> </div>
+</a>
+</div>
+</td>
+</tr>
+</table>
+<div class="blank151"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td align="center">
+<table width="97%" cellspacing="0" cellpadding="0" border="0" align="center" class="tab_table">
+<tr>
+<td height="20" class="hei14"><b><a href="http://www.zlb.gov.cn/2015-10/13/c_128313975.htm" target="_blank">张德江会见澳门特别行政区立法会议员</a></b></td>
+</tr>
+<tr>
+<td align="left" class="zhaiyao">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中共中央政治局常委、全国人大常委会委员长张德江13日上午在人民大会堂会见了由贺一诚主席率领的澳门特别行政区立法会议员参访团。 <a href="http://www.zlb.gov.cn/2015-10/13/c_128313975.htm">[详细]</a> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td align="center">
+<table width="97%" cellspacing="0" cellpadding="0" border="0" align="center" class="tab_table" style="display: none;">
+<tr>
+<td height="20" class="hei14"><b><a href="http://www.zlb.gov.cn/2015-10/13/c_128314087.htm" target="_blank">孙达会见福建省政协副主席陈义兴一行</a></b></td>
+</tr>
+<tr>
+<td align="left" class="zhaiyao">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10月13日中午，澳门中联办副主任孙达在新竹苑会见来澳出席第四届“世界旅游经济论坛·澳门2015”活动的福建省政协副主席陈义兴一行。 <a href="http://www.zlb.gov.cn/2015-10/13/c_128314087.htm">[详细]</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td align="center">
+<table width="97%" cellspacing="0" cellpadding="0" border="0" align="center" class="tab_table" style="display: none;">
+<tr>
+<td height="20" class="hei14"><b><a href="http://www.zlb.gov.cn/2015-10/13/c_128314082.htm" target="_blank">“世界旅游经济论坛·澳门2015”开幕</a></b></td>
+</tr>
+<tr>
+<td align="left" class="zhaiyao">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10月12日上午，“世界旅游经济论坛·澳门2015”开幕典礼在澳门威尼斯人会展中心举行。澳门中联办副主任姚坚与澳门特区行政长官崔世安、柬埔寨首相洪森及夫人文拉妮、全国政协副主席兼世界旅游经济论坛大会主席何厚铧等共同出席。 <a href="http://www.zlb.gov.cn/2015-10/13/c_128314082.htm">[详细]</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td align="center">
+<table width="97%" cellspacing="0" cellpadding="0" border="0" align="center" class="tab_table" style="display: none;">
+<tr>
+<td height="20" class="hei14"><b><a href="http://www.zlb.gov.cn/2015-10/12/c_128309857.htm" target="_blank">中国银行澳门分行向澳门本地慈善捐款逾千万澳门元</a></b></td>
+</tr>
+<tr>
+<td align="left" class="zhaiyao">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10月11日上午，中国银行澳门分行成功举办“根植澳门65载慈善行·中银与您同迈步”活动。澳门中联办副主任姚坚与澳门特区政府行政法务司司长陈海帆、外交部驻澳公署副特派员潘云东、澳门特区政府社会工作局局长容光耀、体育发展局代局长潘永权等共同出席。 <a href="http://www.zlb.gov.cn/2015-10/12/c_128309857.htm">[详细]</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td align="center">
+<table width="97%" cellspacing="0" cellpadding="0" border="0" align="center" class="tab_table" style="display: none;">
+<tr>
+<td height="20" class="hei14"><b><a href="http://www.zlb.gov.cn/2015-10/12/c_128309620.htm" target="_blank">孙达会见国家旅游局局长李金早一行</a></b></td>
+</tr>
+<tr>
+<td align="left" class="zhaiyao">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1日下午，澳门中联办副主任孙达在新竹苑会见来澳出席世界旅游经济论坛的国家旅游局局长李金早一行。孙副主任介绍了近期澳门经济社会发展的相关情况，并表示希望国家旅游局继续发挥“促进澳门世界旅游休闲中心建设联合工作委员会”机制的作用，进一步支持澳门世界旅游休闲中心建设，促进澳门经济适度多元发展。 <a href="http://www.zlb.gov.cn/2015-10/12/c_128309620.htm">[详细]</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div class="blank151"></div>
+</div>
+<div class="list">
+<h2>中央支持</h2>
+<ul>
+<li><a href="http://www.zlb.gov.cn/2015-09/30/c_128283391.htm">刘云山勉港澳台侨实现中国梦</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-03/09/c_127560746.htm" target="_blank">张德江委员长参加澳门代表团审议</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-03/05/c_127548688.htm" target="_blank">张德江参加港澳地区全国政协委员联组讨论</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-03/04/c_127544032.htm" target="_blank">全国人大常委会副委员长王晨看望港澳人大代表</a></li>
+</ul>
+<div class="blank10"></div>
+<div class="more"><a href="http://www.zlb.gov.cn/zyyam/zyzc.htm">更多>></a></div>
+</div>
+<div class="list">
+<h2>活动动态</h2>
+<ul>
+<li><a href="http://www.zlb.gov.cn/2015-10/13/c_128313975.htm" target="_blank">张德江会见澳门特别行政区立法会议员</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/13/c_128314087.htm" target="_blank">孙达会见福建省政协副主席陈义兴一行</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/13/c_128314082.htm" target="_blank">“世界旅游经济论坛·澳门2015”开幕</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/12/c_128309857.htm" target="_blank">中国银行澳门分行向澳门本地慈善捐款逾千万澳门元</a></li>
+</ul>
+<div class="blank10"></div>
+<div class="more"><a href="http://www.zlb.gov.cn/gzdt/index.htm">更多>></a></div>
+</div>
+<div class="clear"></div>
+</div>
+<script type="text/javascript" src="http://www.xinhuanet.com/static/jq.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#tab_yq .hwpic").mouseover(function(){
+		$("#tab_yq .hwpic div").removeClass("bak");
+		$(this).find("div").addClass("bak");
+		$(".tab_table").hide();
+		$(".tab_table").eq($(this).attr("name")).show();
+		
+	})
+})
+</script>
+<!-- 新闻中心 -->
+<div class="xwzx">
+<div class="tabarea">
+<div class="tab_left">
+<ul class="tab_tit">
+<li class="tit_active1 tit_active"><a href="http://www.zlb.gov.cn/xwzx/bdzx.htm"></a></li>
+<li class="tit_active2"><a href="http://www.zlb.gov.cn/xwzx/mtpl.htm"></a></li>
+<li class="tit_active3"><a href="http://www.zlb.gov.cn/xwzx/jlhz.htm"></a></li>
+<li class="tit_active4"><a href="http://www.zlb.gov.cn/xwzx/qnhd.htm"></a></li>
+<li class="tit_active5"><a href="http://www.zlb.gov.cn/xwzx/dyam.htm"></a></li>
+</ul>
+</div>
+<div class="tab_right">
+<div class="tab_con con_active">
+<div class="partLeft">
+<div class="pTit">
+<h3><a href="http://www.zlb.gov.cn/2015-10/26/c_128359572.htm">香港撞船事故中一名澳门居民受伤已出院</a></h3>
+<p>昨（25）日18:00，“喷射飞航”一艘合共载有174人、由澳门外港客运码头开往香港上环码头的高速客船“海皇星”，在香港小鸦洲（大屿山以南）对开海面怀疑撞到不明物体而失去动力，事故中共有121人受伤，其中15人伤势较重。据了解，送院的伤者中有一名女性澳门居民，经检查后已出院。</p>
+</div><ul>
+<li><a href="http://www.zlb.gov.cn/2015-10/20/c_128339378.htm">驻澳门部队走进澳门护养院慰问长者</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/19/c_128334680.htm">特区政府总部开放两日近1万8千人参观</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/16/c_128325852.htm">澳门购物节将于12月举行 推动零售业界发展</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/15/c_128321077.htm">《澳门回归大事编年（2010－2014）》出版发行</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-10/09/c_128300912.htm">澳门“十一黄金周”内地游客增7.1%</a></li>
+</ul>
+<div class="more"><a href="http://www.zlb.gov.cn/xwzx/jlhz.htm">更多>></a></div>
+<div class="blank10"></div>
+</div>
+</div>
+<div class="tab_con">
+<div class="partLeft">
+<div class="pTit">
+<h3><a href="http://www.zlb.gov.cn/2015-10/13/c_128309626.htm">客观看待“一国两制”澳门实践</a></h3>
+<p>从澳门特区来讲，15年来走出一条较为贴近“一国两制”本质要求的新径，也积累了较全面而深刻的发展经验。这三个五年施政期成绩不少、得来不易。15年历经奠基、拓展、攀登三个阶段，如今澳门已发生质变：经济上有国际一流高发展指标；政治上有快速推进的民主实践；文化上有日渐成熟的公民意识，包括爱国爱澳核心价值观；形象上被广泛认定为实践“一国两制”成功载体。</p>
+</div>
+<ul>
+<li>[人民日报]<a href="http://www.zlb.gov.cn/2015-10/08/c_128297387.htm">深化粤澳合作 留住澳门的好日子</a></li>
+<li>[港澳舆论]<a href="http://www.zlb.gov.cn/2015-09/07/c_128203925.htm">港澳舆论：习近平重要讲话彰显大国风范 释放维护世界和平坚定决心</a></li>
+<li>[新华社评论员]<a href="http://www.zlb.gov.cn/2015-09/07/c_128204492.htm">让和平阳光普照大地</a></li>
+<li>[人民日报评论员]<a href="http://www.zlb.gov.cn/2015-09/07/c_128204499.htm">捍卫和平发展的人间正道</a></li>
+<li>[新华社]<a href="http://www.zlb.gov.cn/2015-09/04/c_128196129.htm">正义必胜 和平必胜 人民必胜</a></li>
+</ul>
+<div class="more"><a href="http://www.zlb.gov.cn/xwzx/jlhz.htm">更多>></a></div>
+<div class="blank10"></div>
+</div>
+</div>
+<div class="tab_con">
+<div class="partLeft">
+<div class="pTit">
+<h3><a href="http://www.zlb.gov.cn/2015-10/19/c_128334678.htm">妈祖文化旅游节今起举行</a></h3>
+<p>澳门中华妈祖基金会主办的“第十三届澳门妈祖文化旅游节”于本月19至22日举行，今年陕西省政府应邀参与，活动得到特区政府、中联办、中华海外联谊会、陕西省人民政府协办，澳门基金会赞助。主办单位冀透过活动进一步推动澳门与陕西两地的文化、旅游等交流与合作。</p>
+</div>
+<ul>
+<li><a href="http://www.zlb.gov.cn/2015-10/07/c_128293669.htm">澳门行政长官崔世安与国台办主任张志军会面</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-09/30/c_128284495.htm">澳门科技基金与中科院签署《澳门科技工作者培训协议》</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-09/30/c_128283782.htm">海口开通直飞澳门航线</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-09/25/c_128268970.htm">粤港澳电影创投交流会落幕　四部电影获嘉奖</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-09/24/c_128264763.htm">赠澳大熊猫“蜀祥”预计年底返回内地</a></li>
+</ul>
+<div class="more"><a href="http://www.zlb.gov.cn/xwzx/jlhz.htm">更多>></a></div>
+<div class="blank10"></div>
+</div>
+</div>
+<div class="tab_con">
+<div class="partLeft">
+<div class="pTit">
+<h3><a href="http://www.zlb.gov.cn/2015-08/20/c_128149933.htm">澳门青年在腾冲感受抗战人民苦难：更加珍惜拥有的幸福</a></h3>
+<p>为期五天的“情系中华——云南腾冲爱国教育交流团”20日闭营，曾获育苗奖学金、担任本次交流团副团长的3位同学认为，透过活动了解到许多从未接触过的历史文化，深刻感受抗战时期人民承受的苦难，让其更珍惜手中拥有的幸福，期望用新方式延续优秀青年力量，服务社会。</p>
+</div>
+<ul>
+<li><a href="http://www.zlb.gov.cn/2015-08/20/c_128149429.htm">珠海“横琴创业谷”助力澳门青年创新铸梦</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-08/11/c_128117433.htm">澳门与内地青年法律交流周开幕</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-08/07/c_128105265.htm">澳门部分公务员团体成员子女赴桂参观交流</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-07/23/c_128052687.htm">澳门携8支代表队亮相中国青少年机器人竞赛</a></li>
+<li><a href="http://www.zlb.gov.cn/2015-07/20/c_128039128.htm">300多名京港澳学生赴北京、山西了解国情增进交流</a></li>
+</ul>
+<div class="more"><a href="http://www.zlb.gov.cn/xwzx/jlhz.htm">更多>></a></div>
+<div class="blank10"></div>
+</div>
+</div>
+<div class="tab_con">
+<div class="partLeft">
+<div class="blank10"></div>
+<div class="img_title">
+<div class="img"><a href="http://www.zlb.gov.cn/2015-10/20/c_128339369.htm"><img src="titlepic/111688/1116884655_1445343359995_title0h.jpg" width="180" height="90" alt="第二十届澳门国际贸易投资展览会将聚焦&ldquo;一带一路&rdquo;商机" /></a></div>
+<div class="info">
+<h3><a href="http://www.zlb.gov.cn/2015-10/20/c_128339369.htm" target="_blank">第二十届澳门国际贸易投资展览会将聚焦“一带一路”商机</a></h3>
+<p>第二十届澳门国际贸易投资展览会将于10月22日至25日举行。记者从澳门贸易投资促进局获悉，本次展会将紧跟国家“一带一路”发展战略，并展示澳门在建设“世界旅游休闲中心”和“中国与葡语国家商贸合作服务平台”方面的最新进展。</p>
+</div>
+</div>
+<div class="blank6"></div>
+<div class="img_title">
+<div class="img"><a href="http://www.zlb.gov.cn/2015-10/09/c_128300924.htm"><img src="titlepic/111677/1116770426_1444376645232_title0h.jpg" width="180" height="90" alt="澳门将举办中国－葡语国家文化周及经贸活动" /></a></div>
+<div class="info">
+<h3><a href="http://www.zlb.gov.cn/2015-10/09/c_128300924.htm" target="_blank">澳门将举办中国－葡语国家文化周及经贸活动</a></h3>
+<p>由中国—葡语国家经贸合作论坛（澳门）常设秘书处主办的10月系列活动将于16日相继展开，旨在借助澳门作为中葡平台的特殊作用，深化内地、澳门、葡语国家文化交流和跨区域经贸投资合作。</p>
+</div>
+</div>
+<div class="blank6"></div>
+<div class="img_title">
+<div class="img"><a href="http://www.zlb.gov.cn/2015-09/22/c_128256139.htm"><img src="titlepic/111677/1116770550_1444376722011_title0h.jpg" width="180" height="90" alt="澳门在粤港澳合作论坛上签订三项协议" /></a></div>
+<div class="info">
+<h3><a href="http://www.zlb.gov.cn/2015-09/22/c_128256139.htm" target="_blank">澳门在粤港澳合作论坛上签订三项协议</a></h3>
+<p>2015粤港澳合作论坛上，澳门在旅游、电子商务、葡语国家食饮品进口等方面与广东省清远市签定三项合作协议。</p>
+</div>
+</div>
+<div class="more"><a href="http://www.zlb.gov.cn/xwzx/dyam.htm">更多>></a></div>
+<div class="blank10"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 澳门广角 -->
+<div class="blank15"></div>
+<div id="azg">
+<div class="amtit">
+<img src="http://www.zlb.gov.cn/images/tit_amgj.jpg" border="0" usemap="#Map" />
+<map name="Map" id="Map">
+<area shape="rect" coords="901,26,959,52" href="tp/amgj.htm" />
+</map>
+</div>
+<!-- 代码开始 -->
+<div class="azg_box">
+<div class="picbox">
+<ul class="piclist mainlist">
+<li>
+<a href="http://www.zlb.gov.cn/2014-11/06/c_127185315.htm"><img src="titlepic/111314/1113143634_title0h.jpg" width="302" height="200" alt="澳门车展打造国际范 自主品牌或借船入海(一)" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-11/06/c_127185315.htm" target="_blank">澳门车展打造国际范 自主品牌或借船入海(一)</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-11/06/c_127185315.htm"><img src="titlepic/12718/127185315_title0h.jpg" width="302" height="200" alt="澳门车展打造国际范 自主品牌或借船入海(二)" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-11/06/c_127185315.htm">澳门车展打造国际范 自主品牌或借船入海(二)</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-11/06/c_127185315.htm"><img src="titlepic/111314/1113143635_title0h.jpg" width="302" height="200" alt="澳门车展打造国际范 自主品牌或借船入海(三)" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-11/06/c_127185315.htm" target="_blank">澳门车展打造国际范 自主品牌或借船入海(三)</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-11/06/c_127185074.htm"><img src="titlepic/111314/1113143619_title0h.jpg" width="302" height="200" alt="第三届澳门公务机展以&ldquo;飞行&rdquo;体验和应用为主题(一)" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-11/06/c_127185074.htm" target="_blank">第三届澳门公务机展以“飞行”体验和应用为主题(一)</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-11/06/c_127185074.htm"><img src="titlepic/12718/127185074_title0h.jpg" width="302" height="200" alt="第三届澳门公务机展以&ldquo;飞行&rdquo;体验和应用为主题(二)" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-11/06/c_127185074.htm">第三届澳门公务机展以“飞行”体验和应用为主题(二)</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-11/06/c_127185074.htm"><img src="titlepic/111314/1113143631_title0h.jpg" width="302" height="200" alt="第三届澳门公务机展以&ldquo;飞行&rdquo;体验和应用为主题(三)" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-11/06/c_127185074.htm" target="_blank">第三届澳门公务机展以“飞行”体验和应用为主题(三)</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-11/06/c_127185564.htm"><img src="titlepic/111314/1113143640_title0h.jpg" width="302" height="200" alt="澳门游艇年度盛会蓄势待发(一)" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-11/06/c_127185564.htm" target="_blank">澳门游艇年度盛会蓄势待发(一)</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-11/06/c_127185564.htm"><img src="titlepic/111314/1113143643_title0h.jpg" width="302" height="200" alt="澳门游艇年度盛会蓄势待发(二)" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-11/06/c_127185564.htm" target="_blank">澳门游艇年度盛会蓄势待发(二)</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-11/06/c_127185564.htm"><img src="titlepic/12718/127185564_title0h.jpg" width="302" height="200" alt="澳门游艇年度盛会蓄势待发(三)" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-11/06/c_127185564.htm">澳门游艇年度盛会蓄势待发(三)</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-07/30/c_126815985.htm"><img src="titlepic/111187/1111871213_title0h.jpg" width="302" height="200" alt="澳门国际青年舞蹈节2014举行巡游表演(一）" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-07/30/c_126815985.htm" target="_blank">澳门国际青年舞蹈节2014举行巡游表演(一）</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-07/30/c_126815985_4.htm"><img src="titlepic/111187/1111871212_title0h.jpg" width="302" height="200" alt="澳门国际青年舞蹈节2014举行巡游表演（二）" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-07/30/c_126815985_4.htm" target="_blank">澳门国际青年舞蹈节2014举行巡游表演（二）</a></p>
+</li>
+<li>
+<a href="http://www.zlb.gov.cn/2014-07/30/c_126815985_5.htm"><img src="titlepic/111187/1111871211_title0h.jpg" width="302" height="200" alt="澳门国际青年舞蹈节2014举行巡游表演（三）" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.zlb.gov.cn/2014-07/30/c_126815985_5.htm" target="_blank">澳门国际青年舞蹈节2014举行巡游表演（三）</a></p>
+</li>
+</ul>
+<ul class="piclist swaplist"></ul>
+</div>
+<div class="og_prev"></div>
+<div class="og_next"></div>
+</div>
+</div>
+<div class="clear"></div>
+<!-- 基本法 -->
+<div class="jbf">
+<div class="jbf1">
+<div class="jbf1_l">
+<div class="flqh">
+<div class="flqh_tit">
+<ul>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938.htm">中文版</a></li>
+<li><a href="http://www.zlb.gov.cn/2014-07/20/c_126773766.htm">葡文版</a></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="flqh_box">
+<div class="flqh_box_content" style="display:block;">
+<ul>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_2.htm">序　言</a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_3.htm"><span class="zhang">第一章</span><span>总　　则</span></a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_4.htm"><span class="zhang">第二章</span><span>中央和澳门特别行政区的关系</span></a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_5.htm"><span class="zhang">第三章</span><span>居民的基本权利和义务</span></a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_6.htm"><span class="zhang">第四章</span><span>政治体制</span></a></li>
+</ul>
+<ul>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_13.htm"><span class="zhang">第五章</span><span>经　　济</span></a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_14.htm"><span class="zhang">第六章</span><span>文化和社会事务</span></a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_15.htm"><span class="zhang">第七章</span><span>对外事务</span></a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_16.htm"><span class="zhang">第八章</span><span>本法的解释和修改</span></a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_17.htm"><span class="zhang">第九章</span><span>附　　则</span></a></li>
+</ul>
+<ul>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_18.htm">附件一：澳门特别行政区行政长官的产生办法</a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_19.htm">澳门特别行政区行政长官的产生办法修正案</a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_20.htm">附件二：澳门特别行政区立法会的产生办法</a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_21.htm">澳门特别行政区立法会的产生办法修正案</a></li>
+<li><a href="http://www.zlb.gov.cn/2014-06/26/c_126676938_22.htm">附件三：在澳门特别行政区实施的全国性法律</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="blank15"></div>
+<!--服务 -->
+<div id="fwzn">
+<div class="zggq">
+<div class="box_tit1">
+<span class="more1"><a href="http://www.zlb.gov.cn/zggq/index.htm">更多>></a></span>
+<h2>中国国情</h2>
+</div>
+<div class="zggq_con">
+<ul>
+<li class="icon1"><a href="http://www.zlb.gov.cn/zggq/index.htm">基本情况</a></li>
+<li class="icon2"><a href="http://www.zlb.gov.cn/zggq/index.htm">国家政治</a></li>
+<li class="icon3"><a href="http://www.zlb.gov.cn/zggq/index.htm#c3">自然地理</a></li>
+<li class="icon4"><a href="http://www.zlb.gov.cn/zggq/index.htm#c4">法律制度</a></li>
+<li class="icon5"><a href="http://www.zlb.gov.cn/zggq/index.htm#c5">经济发展</a></li>
+<li class="icon6"><a href="http://www.zlb.gov.cn/zggq/index.htm#c6">一国两制</a></li>
+<li class="icon7"><a href="http://www.zlb.gov.cn/zggq/index.htm#c7">宗教概况</a></li>
+<li class="icon8"><a href="http://www.zlb.gov.cn/zggq/index.htm#c8">历史概况</a></li>
+</ul>
+</div>
+</div>
+<div class="zggq">
+<div class="box_tit1">
+<span class="more1"><a href="http://www.zlb.gov.cn/gqgq/amgk.htm">更多>></a></span>
+<h2>澳门概况</h2>
+</div>
+<div class="xggk_con">
+<ul>
+<li class="icon9"><a href="http://www.zlb.gov.cn/2014-07/21/c_126775754.htm">自然概况</a></li>
+<li class="icon10"><a href="http://www.zlb.gov.cn/2014-07/21/c_126775781.htm">历史简况</a></li>
+<li class="icon12"><a href="http://www.zlb.gov.cn/2014-07/21/c_126775794.htm">经济概况</a></li>
+<li class="icon13"><a href="http://www.zlb.gov.cn/2014-07/21/c_126775802.htm">政制架构</a></li>
+<li class="icon14"><a href="http://www.zlb.gov.cn/2014-07/21/c_126775824.htm">社会文化</a></li>
+<li class="icon11"><a href="http://www.zlb.gov.cn/2014-07/21/c_126775833.htm">两地合作</a></li>
+<li class="icon15"><a href="http://www.zlb.gov.cn/2014-07/21/c_126775843.htm">对外关系</a></li>
+<li class="icon16"><a href="http://www.zlb.gov.cn/2014-07/21/c_126775857.htm">旅游概览</a></li>
+</ul>
+</div>
+</div>
+<div class="zggq1">
+<div class="box_tit1">
+<h2>服务指南</h2>
+</div>
+<div class="zggq_con">
+<div class="fuwu1">
+<div class="fuwu_tit1">
+<div class="tit_l"><img src="http://www.zlb.gov.cn/images/tit_fw1.gif" /></div>
+<div class="tit_m"><a href="http://www.zlb.gov.cn/fwam/wldj.htm">服务澳门</a></div>
+<div class="tit_r"><img src="http://www.zlb.gov.cn/images/tit_fw2.gif" /></div>
+</div>
+<div class="clear"></div>
+<div class="fuwu_con1">
+<a href="http://www.zlb.gov.cn/fwam/wldj.htm">往来、定居</a> <a href="http://www.zlb.gov.cn/fwam/ndys.htm">内地营商</a> <a href="http://www.zlb.gov.cn/fwam/ndjx.htm">内地就学</a> <a href="http://www.zlb.gov.cn/fwam/ndjy.htm">内地就业</a> <a href="http://www.zlb.gov.cn/fwam/ndly.htm"> 内地旅游</a> <a href="http://www.zlb.gov.cn/fwam/ndcf.htm">内地采访</a> <a href="http://www.zlb.gov.cn/fwam/qybz.htm">权益保障</a><span class="fuwu_con1t"><a href="http://www.zlb.gov.cn/fwam/amzndgfjg.htm">澳门驻内地官方机构</a></span>
+</div>
+</div>
+<div class="fuwu2">
+<div class="fuwu_tit2">
+<div class="tit_l"><img src="http://www.zlb.gov.cn/images/tit_fw1.gif" /></div>
+<div class="tit_m"><a href="http://www.zlb.gov.cn/fwnd/wldj.htm">服务内地</a></div>
+<div class="tit_r"><img src="http://www.zlb.gov.cn/images/tit_fw2.gif" /></div>
+</div>
+<div class="clear"></div>
+<div class="fuwu_con2">
+<a href="http://www.zlb.gov.cn/fwnd/wldj.htm">往来、定居</a>  <a href="http://www.zlb.gov.cn/fwnd/fatz.htm">赴澳投资</a> <a href="http://www.zlb.gov.cn/fwnd/fajx.htm">赴澳就学</a> <a href="http://www.zlb.gov.cn/fwnd/fajy.htm"> 赴澳就业</a> <a href="http://www.zlb.gov.cn/fwnd/faly.htm">赴澳旅游</a> <a href="http://www.zlb.gov.cn/fwnd/qybz.htm">权益保障</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<!--环球播报 -->
+<div class="blank15"></div>
+<div id="hqbb">
+<div class="amtit"><a name="hqbb2" id="hqbb2"></a><img src="http://www.zlb.gov.cn/images/tit_hqbb.jpg" /></div>
+<div class="blank15"></div>
+<div class="tab">
+<div class="tab_title">
+<ul>
+<li class="active1 active"><a href="http://www.zlb.gov.cn/hqbb/lasd01.htm"></a></li>
+<li class="active2"><a href="http://www.zlb.gov.cn/hqbb/gjzx.htm"></a></li>
+</ul>
+</div>
+<div class="tab_box">
+<div class="tab_box_content" style="display:block;">
+<div>
+<div>
+<div id="webpage_headline">
+<div id="news">
+<div id="newsLeft">
+<div class="fourcePic fourcePic1">
+<div class="num"><a class="">1</a><a class="">2</a><a class="cur">3</a><a class="">4</a><a>5</a></div>
+<ul>
+<li style="display: block;">
+<a href="http://www.zlb.gov.cn/2015-10/09/c_128301285.htm"><img src="titlepic/111677/1116772392_1444382609611_title0h.png" width="620" height="320" alt="上海：滴滴快的首获专车经营牌照" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-10/09/c_128301285.htm" target="_blank">上海：滴滴快的首获专车经营牌照</a></p>
+</li>
+<li style="display: none;">
+<a href="http://www.zlb.gov.cn/2015-09/02/c_128190917.htm"><img src="titlepic/111645/1116453412_1441184633621_title0h.jpg" width="620" height="320" alt="中国人民抗日战争胜利70周年纪念章颁发仪式 在京隆重举行" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-09/02/c_128190917.htm" target="_blank">中国人民抗日战争胜利70周年纪念章颁发仪式 在京隆重举行</a></p>
+</li>
+<li style="display: none;">
+<a href="http://www.zlb.gov.cn/2015-06/26/c_127955670.htm"><img src="titlepic/12795/127955670_1435308682941_title0h.jpg" width="620" height="320" alt="&ldquo;渝新欧&rdquo;班列首次运输跨境电商货物回程" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-06/26/c_127955670.htm">“渝新欧”班列首次运输跨境电商货物回程</a></p>
+</li>
+<li style="display: none;">
+<a href="http://www.zlb.gov.cn/2015-06/26/c_127955631.htm"><img src="titlepic/12795/127955631_1435308545892_title0h.jpg" width="620" height="320" alt="我国成功发射高分八号卫星" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-06/26/c_127955631.htm">我国成功发射高分八号卫星</a></p>
+</li>
+<li style="display: none;">
+<a href="http://www.zlb.gov.cn/2015-06/26/c_127955612.htm"><img src="titlepic/12795/127955612_1435308286634_title0h.jpg" width="620" height="320" alt="白血病患儿和他的&ldquo;孙悟空爸爸&rdquo;" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-06/26/c_127955612.htm">白血病患儿和他的“孙悟空爸爸”</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div id="newsRight">
+<ul>
+<li class="NewsTitle01"><a href="http://www.zlb.gov.cn/2015-10/09/c_128301315.htm">人民币跨境支付系统上线运行</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128301311.htm">中央财政下达111亿补助 支持公立医院改革</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128301314.htm">成都发放高龄津贴 百岁老人每月不低于500元</a></li>
+</ul>
+<ul>
+<li class="NewsTitle01"><a href="http://www.zlb.gov.cn/2015-10/09/c_128297625.htm">梁振英吁打造良好机制促科学事业</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128300800.htm">香港补习界掀天王争夺战 年薪开到8500万</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128300270.htm">香港星光大道关闭3年 游客遗憾扑空感惊讶</a></li>
+</ul>
+<ul>
+<li class="NewsTitle01"><a href="http://www.zlb.gov.cn/2015-10/09/c_128297518.htm">台媒吁台湾民众警惕“台独”</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128299310.htm">"妈宝"成台湾热词 学校头疼老师拒收</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_1116770203.htm">海峡两岸知识产权专家共商科技人才培养</a></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab_box_content">
+<div>
+<div id="webpage_headline">
+<div id="news">
+<div id="newsLeft">
+<div class="fourcePic2 fourcePic1">
+<div class="num"><a class="">1</a><a class="">2</a><a class="cur">3</a><a class="">4</a><a>5</a></div>
+<ul>
+<li style="display: block;">
+<a href="http://www.zlb.gov.cn/2015-10/09/c_128301292.htm"><img src="titlepic/111677/1116772369_1444382499904_title0h.png" width="620" height="320" alt="新科诺贝尔文学奖得主阿列克西耶维奇在明斯克亮相" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-10/09/c_128301292.htm" target="_blank">新科诺贝尔文学奖得主阿列克西耶维奇在明斯克亮相</a></p>
+</li>
+<li style="display: none;">
+<a href="http://www.zlb.gov.cn/2015-09/17/c_128240291.htm"><img src="titlepic/111659/1116594670_1442473466786_title0h.png" width="620" height="320" alt="智利海岸强震 或有大面积海啸威胁" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-09/17/c_128240291.htm" target="_blank">智利海岸强震 或有大面积海啸威胁</a></p>
+</li>
+<li style="display: none;">
+<a href="http://www.zlb.gov.cn/2015-09/02/c_128191128.htm"><img src="titlepic/12819/128191128_1441189740421_title0h.jpg" width="620" height="320" alt="出席纪念活动的国际友人陆续抵京" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-09/02/c_128191128.htm">出席纪念活动的国际友人陆续抵京</a></p>
+</li>
+<li style="display: none;">
+<a href="http://www.zlb.gov.cn/2015-07/08/c_127998868.htm"><img src="titlepic/12799/127998868_1436339431162_title0h.jpg" width="620" height="320" alt="英国纪念&ldquo;7&middot;7&rdquo;连环爆炸案十周年" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-07/08/c_127998868.htm">英国纪念“7·7”连环爆炸案十周年</a></p>
+</li>
+<li style="display: none;">
+<a href="http://www.zlb.gov.cn/2015-07/02/c_127978456.htm"><img src="titlepic/12797/127978456_1435842734460_title0h.jpg" width="620" height="320" alt="巴基斯坦一火车在过桥时坠入运河 至少5人死亡（高清组图）" /></a>
+<p class="bg"></p>
+<p class="tit"><a href="http://www.zlb.gov.cn/2015-07/02/c_127978456.htm">巴基斯坦一火车在过桥时坠入运河 至少5人死亡（高清组图）</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div id="newsRight">
+<ul>
+<li class="NewsTitle01"><a href="http://www.zlb.gov.cn/2015-10/09/c_128301177.htm">石油收入大跌 沙特国王密令削开支</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128298893.htm">美军研发反潜无人艇夺控亚太制海权</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128299908.htm">危地马拉泥石流致237人亡 寻获生还者希望渺茫</a></li>
+</ul>
+<ul>
+<li class="NewsTitle01"><a href="http://www.zlb.gov.cn/2015-10/09/c_128300462.htm">中国自然界首次发现金属铀 世界独家</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128300698.htm">俄用26枚巡航导弹与美特殊对话</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128300308.htm">马来西亚拟收容3000名叙难民 优先考虑技术人员</a></li>
+</ul>
+<ul>
+<li class="NewsTitle01"><a href="http://www.zlb.gov.cn/2015-10/09/c_128300515.htm">日本宗教右翼力量在上升</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_1116770407.htm">低通胀担忧致美联储9月暂不加息</a></li>
+<li class="NewsTitle02"><a href="http://www.zlb.gov.cn/2015-10/09/c_128300377.htm">福布斯亚洲最富50家庭出炉 中国内地无上榜</a></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--友情链接 -->
+<div class="blank15"></div>
+<div id="wsdh">
+<img src="http://www.zlb.gov.cn/images/tit_yqlj.jpg" />
+<div class="right_top15">
+<ul style="list-style-type: none;">
+<li>
+<select onchange="if(this.value!=&quot;&quot;){window.open(this.value);this.selectedIndex=0;}else{this.selectedIndex=0;}" class="select" name="select1">
+<option selected="" value="">中央及部委网站&nbsp;&nbsp;&nbsp;</option>
+<option value="http://www.gov.cn/">中国政府网</option>
+<option value="http://www.mfa.gov.cn/">外交部</option>
+<option value="http://www.mod.gov.cn/">国防部</option>
+<option value="http://www.ndrc.gov.cn/">发展改革委员会</option>
+<option value="http://www.moe.gov.cn/">教育部</option>
+<option value="http://www.most.gov.cn/">科技部</option>
+<option value="http://www.miit.gov.cn/">工业和信息化部</option>
+<option value="http://www.seac.gov.cn/">国家民委</option>
+<option value="http://www.mps.gov.cn/">公安部</option>
+<option value="http://www.mos.gov.cn/">监察部</option>
+<option value="http://www.mca.gov.cn/">民政部</option>
+<option value="http://www.moj.gov.cn/">司法部</option>
+<option value="http://www.mof.gov.cn/">财政部</option>
+<option value="http://www.mohrss.gov.cn/">人力资源和社会保障部</option>
+<option value="http://www.mlr.gov.cn/">国土资源部</option>
+<option value="http://www.mep.gov.cn/">环境保护部</option>
+<option value="http://www.mohurd.gov.cn/">住房和城乡建设部</option>
+<option value="http://www.moc.gov.cn/">交通运输部</option>
+<option value="http://www.mwr.gov.cn/">水利部</option>
+<option value="http://www.moa.gov.cn/">农业部</option>
+<option value="http://www.mofcom.gov.cn/">商务部</option>
+<option value="http://www.mcprc.gov.cn/">文化部</option>
+<option value="http://www.gov.cn////content_2357718.htm">卫生和计划生育委员会</option>
+<option value="http://www.pbc.gov.cn/">人民银行</option>
+<option value="http://www.audit.gov.cn/">审计署</option>
+<option value="http://www.sasac.gov.cn/">国资委</option>
+<option value="http://www.customs.gov.cn/">海关总署</option>
+<option value="http://www.chinatax.gov.cn/">税务总局</option>
+<option value="http://www.saic.gov.cn/">工商总局</option>
+<option value="http://www.aqsiq.gov.cn/">质检总局</option>
+<option value="http://www.gov.cn////content_2358823.htm">新闻出版广电总局</option>
+<option value="http://www.sport.gov.cn/">体育总局</option>
+<option value="http://www.chinasafety.gov.cn/">安全监管总局</option>
+<option value="http://www.sda.gov.cn/">食品药品监督管理总局</option>
+<option value="http://www.stats.gov.cn/">统计局</option>
+<option value="http://www.forestry.gov.cn/">林业局</option>
+<option value="http://www.sipo.gov.cn/">知识产权局</option>
+<option value="http://www.cnta.gov.cn/">旅游局</option>
+<option value="http://www.sara.gov.cn/">宗教局</option>
+<option value="http://www.counsellor.gov.cn/">参事室</option>
+<option value="http://www.ggj.gov.cn/">国管局</option>
+<option value="http://www.nbcp.gov.cn/">预防腐败局</option>
+<option value="http://www.gqb.gov.cn/">侨办</option>
+<option value="http://www.hmo.gov.cn/">港澳办</option>
+<option value="http://www.chinalaw.gov.cn/">法制办</option>
+<option value="http://www.xinhuanet.com/">新华社</option>
+<option value="http://www.cas.cn/">中科院</option>
+<option value="http://www.cssn.cn/">社科院</option>
+<option value="http://www.cae.cn/">工程院</option>
+<option value="http://www.drc.gov.cn/">发展研究中心</option>
+<option value="http://www.nsa.gov.cn/">行政学院</option>
+<option value="http://www.cea.gov.cn/">地震局</option>
+<option value="http://www.cma.gov.cn/">气象局</option>
+<option value="http://www.cbrc.gov.cn/">银监会</option>
+<option value="http://www.csrc.gov.cn/">证监会</option>
+<option value="http://www.circ.gov.cn/">保监会</option>
+<option value="http://www.ssf.gov.cn/">社保基金会</option>
+<option value="http://www.nsfc.gov.cn/">自然科学基金会</option>
+<option value="http://www.gwytb.gov.cn/">台办</option>
+<option value="http://www.scio.gov.cn/">新闻办</option>
+<option value="http://www.saac.gov.cn/">档案局</option>
+<option value="http://www.gjxfj.gov.cn/">信访局</option>
+<option value="http://www.chinagrain.gov.cn/">粮食局</option>
+<option value="http://www.nea.gov.cn/">能源局</option>
+<option value="http://www.tobacco.gov.cn/">烟草局</option>
+<option value="http://www.safea.gov.cn/">外专局</option>
+<option value="http://www.scs.gov.cn/">公务员局</option>
+<option value="http://www.soa.gov.cn/">海洋局</option>
+<option value="http://www.sbsm.gov.cn/">测绘地信局</option>
+<option value="http://www.caac.gov.cn/">民航局</option>
+<option value="http://www.post.gov.cn/">邮政局</option>
+<option value="http://www.sach.gov.cn/">文物局</option>
+<option value="http://www.satcm.gov.cn/">中医药局</option>
+<option value="http://www.safe.gov.cn/">外汇局</option>
+<option value="http://www.chinacoal-safety.gov.cn/">煤矿安监局</option>
+<option value="http://www.oscca.gov.cn/">密码局</option>
+<option value="http://www.cnsa.gov.cn/">航天局</option>
+<option value="http://www.caea.gov.cn/">原子能机构</option>
+<option value="http://www.china-language.gov.cn/">国家语委</option>
+<option value="http://www.cpad.gov.cn/">国务院扶贫办</option>
+<option value="http://www.3g.gov.cn/">国务院三峡办</option>
+<option value="http://www.nsbd.gov.cn/">南水北调办</option>
+</select>
+</li>
+<li>
+<select onchange="if(this.value!=&quot;&quot;){window.open(this.value);this.selectedIndex=0;}else{this.selectedIndex=0;}" class="select" name="select2">
+<option selected="" value="">省市区政府网站&nbsp;&nbsp;&nbsp;</option>
+<option value="http://www.beijing.gov.cn/">北京</option>
+<option value="http://www.tj.gov.cn/">天津</option>
+<option value="http://www.hebei.gov.cn/">河北</option>
+<option value="http://www.shanxigov.cn/">山西</option>
+<option value="http://www.nmg.gov.cn/">内蒙古</option>
+<option value="http://www.ln.gov.cn/">辽宁</option>
+<option value="http://www.jl.gov.cn/">吉林</option>
+<option value="http://www.hlj.gov.cn/">黑龙江</option>
+<option value="http://www.shanghai.gov.cn/">上海</option>
+<option value="http://www.jiangsu.gov.cn/">江苏</option>
+<option value="http://www.zhejiang.gov.cn/">浙江</option>
+<option value="http://www.ah.gov.cn/">安徽</option>
+<option value="http://www.fujian.gov.cn/">福建</option>
+<option value="http://www.jiangxi.gov.cn/">江西</option>
+<option value="http://www.shandong.gov.cn/">山东</option>
+<option value="http://www.henan.gov.cn/">河南</option>
+<option value="http://www.hubei.gov.cn/">湖北</option>
+<option value="http://www.hunan.gov.cn/">湖南</option>
+<option value="http://www.gd.gov.cn/">广东</option>
+<option value="http://www.gxzf.gov.cn/">广西</option>
+<option value="http://www.hainan.gov.cn/">海南</option>
+<option value="http://www.cq.gov.cn/">重庆</option>
+<option value="http://www.sc.gov.cn/">四川</option>
+<option value="http://www.gzgov.gov.cn/">贵州</option>
+<option value="http://www.yn.gov.cn/">云南</option>
+<option value="http://www.xizang.gov.cn/">西藏</option>
+<option value="http://www.shaanxi.gov.cn/">陕西</option>
+<option value="http://www.gansu.gov.cn/">甘肃</option>
+<option value="http://www.qh.gov.cn/">青海</option>
+<option value="http://www.nx.gov.cn/">宁夏</option>
+<option value="http://www.xinjiang.gov.cn/">新疆</option>
+<option value="http://www.gov.hk/">香港</option>
+<option value="http://portal.gov.mo">澳门</option>
+<option value="">台湾</option>
+<option value="http://www.xjbt.gov.cn/">新疆生产建设兵团</option>
+</select>
+</li>
+<li>
+</li>
+<li>
+<select onchange="if(this.value!=&quot;&quot;){window.open(this.value);this.selectedIndex=0;}else{this.selectedIndex=0;}" class="select" name="select5">
+<option selected="" value="">新闻媒体网站&nbsp;&nbsp;&nbsp;</option>
+<option value="http://www.xinhuanet.com/">新华社</option>
+<option value="http://www.people.com.cn/">人民网</option>
+<option value="http://www.chinanews.com/">中新网</option>
+<option value="http://www.cctv.com/default.shtml">央视网</option>
+<option value="http://www.chinadaily.com.cn/hqzx/index.html">中国日报</option>
+<option value="http://www.gmw.cn/">光明日报</option>
+<option value="http://www.youth.cn/">中青网</option>
+<option value="http://www.cnr.cn">中央人民广播网</option>
+<option value="http://gb.cri.cn/">中国国际广播电台</option>
+</select>
+</li>
+<li>
+<select onchange="if(this.value!=&quot;&quot;){window.open(this.value);this.selectedIndex=0;}else{this.selectedIndex=0;}" class="select" name="select6">
+<option selected="" value="">相关机构团体网站&nbsp;&nbsp;&nbsp;</option>
+<option value="http://www.acftu.net/">中华全国总工会</option>
+<option value="http://www.ccyl.org.cn/"> 中国共青团</option>
+<option value="http://www.women.org.cn/"> 全国妇联</option>
+<option value="http://www.cast.org.cn/"> 中国科协</option>
+<option value="http://www.chinaql.org/"> 中国侨联</option>
+<option value="http://www.tailian.org.cn/"> 全国台联</option>
+<option value="http://www.acyf.org.cn/"> 全国青联</option>
+<option value="http://www.acfic.org.cn"> 全国工商联</option>
+<option value="http://hkmac.sysu.edu.cn/">中大港澳珠江三角洲研究中心</option>
+<option value="http://www.sass.org.cn/ga/zxjj.jsp">上海社科院港澳研究中心</option>
+<option value="http://www.chinalaw.gov.cn/">中国政府法制信息网</option>
+<option value="http://law.chinalawinfo.com/newlaw2002/chl/index.asp?jd=1">北大法律信息网</option>
+</select>
+</li>
+<li>
+<select onchange="if(this.value!=&quot;&quot;){window.open(this.value);this.selectedIndex=0;}else{this.selectedIndex=0;}" class="select" name="select6">
+<option selected="" value="">澳门特区网站&nbsp;&nbsp;&nbsp;</option>
+<option value="http://portal.gov.mo/web/guest/welcomepage/">澳门特别行政区政府网站</option>
+<option value="http://www.gce.gov.mo/">行政长官办公室</option>
+<option value="http://www.sasg.gov.mo/">政府总部辅助部门</option>
+<option value="http://www.gce.gov.mo/gpv/?lang=cs">政府发言人办公室</option>
+<option value="http://www.gcs.gov.mo/">新闻局</option>
+<option value="http://www.gpdp.gov.mo/">个人资料保护办公室</option>
+<option value="http://www.fmac.org.mo/">澳门基金会</option>
+<option value="http://www.gprpae.gov.mo/">礼宾公关外事办公室</option>
+<option value="http://www.fdct.gov.mo/">科学技术发展基金</option>
+<option value="http://www.cct.org.mo/CCT/index.htm">科技委员会</option>
+<option value="http://www.gov.mo/ccrap/public/organize.jsf">公共行政改革谘询委员会</option>
+<option value="http://www.decmacau.pt/zh-hans">澳门驻里斯本经济贸易办事处</option>
+<option value="http://www.decm.gov.mo/">在台湾澳门经济文化办事处</option>
+<option value="http://www.al.gov.mo/">立法会</option>
+<option value="http://www.court.gov.mo/zh/">法院</option>
+<option value="http://www.mp.gov.mo/index.htm">检察院</option>
+<option value="http://www.safp.gov.mo/">行政公职局</option>
+<option value="http://www.dsaj.gov.mo/MainFrame.aspx?lang=zh-TW">法务局</option>
+<option value="http://www.dsi.gov.mo/">身份证明局</option>
+<option value="http://www.io.gov.mo/">印务局</option>
+<option value="http://www.dsrjdi.ccrj.gov.mo/">法律改革及国际法事务局</option>
+<option value="http://www.iacm.gov.mo/">民政总署</option>
+<option value="http://www.cfjj.gov.mo/MainFrame.aspx?lang=zh-TW">法律及司法培训中心</option>
+<option value="http://www.fp.gov.mo/fp_main.html">退休基金会</option>
+<option value="http://www.economia.gov.mo/zh/web/public/navh">经济局</option>
+<option value="http://www.dsf.gov.mo/">财政局</option>
+<option value="http://www.dsec.gov.mo/default.aspx">统计暨普查局</option>
+<option value="http://www.dsal.gov.mo/">劳工事务局</option>
+<option value="http://www.dicj.gov.mo/web/cn/frontpage/index.html">博彩监察协调局</option>
+<option value="http://www.consumer.gov.mo/c/">消费者委员会</option>
+<option value="http://www.ipim.gov.mo/">澳门贸易投资促进局</option>
+<option value="http://www.amcm.gov.mo/cIndex.htm">澳门金融管理局</option>
+<option value="http://www.grh.gov.mo/cn.aspx">人力资源办公室</option>
+<option value="http://www.gif.gov.mo/web1/index.htm">金融情报办公室</option>
+<option value="http://www.cpcs.gov.mo/ch/">社会协调常设委员会</option>
+<option value="http://www.ca.gov.mo/cn/main.php">审计署</option>
+<option value="http://www.ccac.org.mo/">廉政公署</option>
+<option value="http://www.cpu.gov.mo/">城市规划委员会</option>
+<option value="http://www.dsat.gov.mo/index.aspx">交通事务局</option>
+<option value="http://www.git.gov.mo/tc/index.aspx">运输基建办公室</option>
+<option value="http://www.gdi.gov.mo/">建设发展办公室</option>
+<option value="http://www.ccrbam.gov.mo/">澳门旧区重整咨询委员会</option>
+<option value="http://www.csc.gov.mo/"> 燃料安全委员会</option>
+<option value="http://www.gdse.gov.mo/index.asp">能源业发展办公室</option>
+<option value="http://www.aacm.gov.mo/chinese/home.php"> 民航局</option>
+<option value="http://www.dspa.gov.mo/index.aspx">环境保护局</option>
+<option value="http://www.dsrt.gov.mo/"> 电信管理局</option>
+<option value="http://www.ihm.gov.mo/cn/main/index.php">房屋局</option>
+<option value="http://www.smg.gov.mo/www/c_index.php"> 地球物理暨气象局</option>
+<option value="http://www.macaupost.gov.mo/">澳门邮政局</option>
+<option value="http://www.marine.gov.mo/"> 海事及水务局</option>
+<option value="http://www.dscc.gov.mo/">地图绘制暨地籍局</option>
+<option value="http://www.dssopt.gov.mo/"> 土地工务运输局</option>
+<option value="http://www.cdt.gov.mo/">旅游发展委员会</option>
+<option value="http://www.ccam.gov.mo/"> 妇女事务委员</option>
+<option value="http://www.cic.gov.mo/sc/index.aspx">文化产业委员会</option>
+<option value="http://www.ipm.edu.mo/en/index.php"> 澳门理工学院</option>
+<option value="http://www.umac.mo/">澳门大学</option>
+<option value="http://www.ggct.gov.mo/">旅游危机处理办公室</option>
+<option value="http://www.macau.grandprix.gov.mo/cgpm/home/index.php?lang=gb"> 澳门格兰披治大赛车委员会</option>
+<option value="http://www.fss.gov.mo/">社会保障基金</option>
+<option value="http://www.ift.edu.mo/">旅游学院</option>
+<option value="http://www.gaes.gov.mo/">高等教育辅助办公室</option>
+<option value="http://www.sport.gov.mo/zh/">体育发展局</option>
+<option value="http://www.ias.gov.mo/">社会工作局</option>
+<option value="http://www.macautourism.gov.mo/">旅游局</option>
+<option value="http://www.icm.gov.mo/cn/Default.aspx">文化局</option>
+<option value="http://portal.dsej.gov.mo/webdsejspace/internet/Inter_main_page.jsp">教育暨青年局</option>
+<option value="http://www.ssm.gov.mo/portal/">卫生局</option>
+<option value="http://www.cfd.gov.mo/"> 保安部队及保安部门纪律监察委员会</option>
+<option value="http://www.anti-tip.gov.mo/">阻吓贩卖人口措施关注委员会</option>
+<option value="http://www.gcseg.gov.mo/tc/index.aspx">保安协调办公室</option>
+<option value="http://www.fsm.gov.mo/esfsm">保安部队高等学校</option>
+<option value="http://www.fsm.gov.mo/cb/cht/default.aspx">消防局</option>
+<option value="http://www.customs.gov.mo/">海关</option>
+<option value="http://www.epm.gov.mo/">澳门监狱</option>
+<option value="http://www.pj.gov.mo/main_all.htm">司法警察局</option>
+<option value="http://www.fsm.gov.mo/psp/cht/main.html">治安警察局</option>
+<option value="http://www.fsm.gov.mo/dsfsm/cht/">保安部队事务局</option>
+<option value="http://www.spu.gov.mo/">警察总局</option>
+<option value="http://portal.gov.mo/web/guest/info_detail?infoid=170427">政府部门专题网站</option>
+<option value="http://www.faom.org.mo">澳门工会联合总会</option>
+<option value="http://www.macauwomen.org.mo"> 澳门妇女联合总会</option>
+<option value="http://www.ugamm.org.mo">澳门街坊会联合总会</option>
+<option value="http://www.vakiodaily.com">华侨报</option>
+<option value="http://www.waou.com.mo">新华澳报</option>
+<option value="http://www.taichungdaily.com">大众报</option>
+<option value="http://www.shimindaily.net">市民日报</option>
+<option value="http://www.imastv.com">澳亚卫视</option>
+<option value="http://www.lotustv.cc">莲花卫视</option>
+<option value="http://new.tdm.com.mo">澳广视</option>
+<option value="http://www.acm.org.mo">澳门中华总商会</option>
+<option value="http://www.myf.org.mo">澳门青年联合会	</option>
+<option value="http://www.aecm.org.mo">澳门中华学生联合总会</option>
+<option value="http://www.my.org.mo">澳门中华新青年协会</option>
+<option value="http://www.madeinmacau.net">澳门厂商联合会</option>
+</select>
+</li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="copyright">
+<p>
+版权所有：中央人民政府驻澳门特别行政区联络办公室 | 地址：澳门罗理基博士大马路603号 | ICP备案号：京ICP备14038920号<br />
+<a href="http://www.zlb.gov.cn/2014-07/23/c_126788605.htm">联系我们</a>|<a href="http://www.zlb.gov.cn/2014-07/03/c_126705815.htm">重要声明</a> 
+</p>
+</div>
+</div>
+</body>
+</html>

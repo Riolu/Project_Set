@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<!-- This site is optimized with the Yoast SEO plugin v2.3.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>User guides Archive - Analytics Platform - Piwik</title>
+<link rel="canonical" href="http://piwik.org/docs/" />
+<link rel="next" href="http://piwik.org/docs/page/2/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="object" />
+<meta property="og:title" content="User guides Archive - Analytics Platform - Piwik" />
+<meta property="og:url" content="http://piwik.org/docs/" />
+<meta property="og:site_name" content="Analytics Platform - Piwik" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/media/piwik.png" />
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"\/wp-includes\/js\/wp-emoji.js?ver=4.3","twemoji":"\/wp-includes\/js\/twemoji.js?ver=4.3"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" href="/wp-content/plugins/multilingual-press-pro/css/frontend.css?ver=4.3">
+<link rel="stylesheet" href="/wp-content/plugins/markdown/highlight/tomorrow-night.css?ver=1.0.0">
+<link rel="stylesheet" href="/wp-content/themes/piwik/assets/css/main.min.css?ver=4e6facf06b484b7a4e30141789370add">
+<script type='text/javascript' src='/wp-content/plugins/markdown/highlight/highlight.pack.js?ver=1.0.0'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js'></script>
+<script>window.jQuery || document.write('<script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/modernizr-2.6.2.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.backstretch.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.dlmenu.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/bootstrap-slider.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.swfobject.1-1-1.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/youTubeEmbed-jquery-1.0.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/url_builder.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.sticky.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.validate.min.js'></script>
+
+  <link rel="alternate" type="application/rss+xml" title="Analytics Platform - Piwik Feed" href="http://piwik.org/feed/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+    <!--[if lt IE 9]>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/html5shiv.js"></script>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="archive post-type-archive post-type-archive-guide">
+
+  <!--[if lt IE 7]><div class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+  <button class="navbar-toggle-menu" type="button" data-toggle="collapse" data-target=".sidebar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+<div class="sidebar affix" role="complementary">
+
+	<aside>
+		<div id="side-wrap">
+			<div id="side-main">
+				<header class="banner" role="banner">
+					<a class="page-title brand" href="http://piwik.org/"> <i class="ficon-piwik_logo header-logo"></i> Open Analytics Platform </a>
+					<!-- languages -->
+					<div class="language-widget ui-dropdown">
+											</div>
+				</header>
+
+				<nav class="nav-main dl-menuwrapper" id="menu" role="navigation">
+					<ul id="menu-sidebar-header-original" class="nav"><li class="dropdown menu-learn-more"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Learn more <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-what-is-piwik"><a href="http://piwik.org/what-is-piwik/">What is Piwik?</a></li>
+	<li class="menu-features"><a href="http://piwik.org/features/">Features</a></li>
+	<li class="menu-integrations"><a href="http://piwik.org/integrate/">Integrations</a></li>
+	<li class="menu-log-analytics"><a href="http://piwik.org/log-analytics/">Log Analytics</a></li>
+	<li class="menu-roadmap"><a href="http://piwik.org/roadmap/">Roadmap</a></li>
+	<li class="menu-changelog"><a href="/changelog/">Changelog</a></li>
+	<li class="menu-enterprise"><a target="_blank" href="https://piwik.pro/enterprise/?pk_source=Piwik.org&#038;pk_medium=Enterprise_Menu_link&#038;pk_campaign=PO_Enterprise">Enterprise</a></li>
+</ul>
+</li>
+<li class="dropdown menu-community"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://">Community <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-get-involved"><a href="http://piwik.org/get-involved/">Get involved</a></li>
+	<li class="menu-translators"><a href="http://piwik.org/translations/">Translators</a></li>
+	<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+	<li class="menu-contact-the-team"><a href="http://piwik.org/contact/">Contact the team</a></li>
+</ul>
+</li>
+<li class="active dropdown menu-help"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Help <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="active menu-user-guides"><a href="/docs">User Guides</a></li>
+	<li class="menu-faq"><a href="/faq">FAQ</a></li>
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-consulting"><a href="http://piwik.org/consulting/">Consulting</a></li>
+	<li class="menu-issue-tracker"><a target="_blank" href="https://github.com/piwik/piwik/issues">Issue tracker</a></li>
+</ul>
+</li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org/">Marketplace</a></li>
+<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-hosting"><a href="http://piwik.org/hosting/">Hosting</a></li>
+<li class="dropdown menu-about"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://piwik.org/about/">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-jobs-were-hiring"><a href="http://piwik.org/jobs/">Jobs (we&#8217;re hiring!)</a></li>
+	<li class="menu-history"><a href="http://piwik.org/history/">History</a></li>
+	<li class="menu-press"><a href="http://piwik.org/press/">Press</a></li>
+	<li class="menu-testimonials"><a href="/testimonials">Testimonials</a></li>
+	<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+	<li class="menu-team"><a href="http://piwik.org/team/">Team</a></li>
+</ul>
+</li>
+<li class="menu-blog"><a href="/blog/">Blog</a></li>
+</ul>				</nav>
+				<div style="clear: both"> </div>
+			</div>
+		</div>
+		<div class="content-info side-footer" role="contentinfo">
+			<ul id="menu-sidebar-footer" class="nav"><li class="menu-download"><a href="http://piwik.org/download/">Download</a></li>
+<li class="menu-demo"><a target="_blank" href="http://demo.piwik.org">Demo</a></li>
+</ul>			<form role="search" method="get" class="form-inline" action="http://piwik.org/">
+  <div class="form-group search-form">
+    <input type="search" value="" name="s" class="ui-search-field form-control" placeholder="Search phrase...">
+    <label class="hide">Search for:</label>
+     <button type="submit" class="btn-search"><i class="ficon-search"></i></button>
+  </div>
+</form>
+			<div class="side-footer-bottom">
+				<hr class="separate">
+				<a href="http://piwik.pro/?pk_source=Piwik.org&pk_medium=Banner_link&pk_campaign=PO_Explore_Piwik_Pro" title="Explore our professional services at Piwik PRO" class="page-switch">
+					<span class="piwik_logo">Piwik Pro - Explore our business offer</span>
+					<span class="text">Explore our business offer.</span>
+				</a>
+			</div>
+			<div style="clear: both"> </div>
+
+		</div>
+	</aside><!-- /.sidebar -->
+
+</div>
+   <div class="container-content">
+        <header class="page-header default text-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>User guides</h1>
+                                
+                <p>Learn how to install, maintain and configure Piwik and how to effectively analyze your data.</p>
+            </div>
+        </div>
+    </div>
+</header>
+    
+     <div class="wrap container-main" role="document">
+      <article class="container">
+    
+        <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <nav id="sticky">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                                                    <li>
+                                <a href="#installation-maintenance">Installation &amp; Maintenance</a>
+                            </li>
+                                                    <li>
+                                <a href="#configuration">Configuration</a>
+                            </li>
+                                                    <li>
+                                <a href="#statistics-analysis">Statistics analysis</a>
+                            </li>
+                                                    <li>
+                                <a href="#videos">Videos</a>
+                            </li>
+                                            </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+                <h3 class="title" id="installation-maintenance">
+        Installation &amp; Maintenance    </h3>
+    <nav><ol><li class="page_item page-item-260"><a href="http://piwik.org/docs/requirements/">Piwik Requirements</a><ol><li><a href="http://piwik.org/docs/requirements/#required-configuration-to-run-piwik">Required Configuration to Run Piwik</a></li><li><a href="http://piwik.org/docs/requirements/#recommended-configuration">Recommended Configuration</a></li><li><a href="http://piwik.org/docs/requirements/#mysql-user-requirements">MySQL User requirements</a></li><li><a href="http://piwik.org/docs/requirements/#recommended-web-hosts">Recommended Web Hosts</a></li></ol></li>
+<li class="page_item page-item-15952"><a href="http://piwik.org/docs/installation-optimization/">Piwik Installation &#038; Optimization</a><ol><li><a href="http://piwik.org/docs/installation-optimization/#get-piwik-up-and-running">Get Piwik Up and Running</a></li><li><a href="http://piwik.org/docs/installation-optimization/#optimize-secure-piwik">Optimize &amp; Secure Piwik</a></li><li><a href="http://piwik.org/docs/installation-optimization/#maintain-piwik">Maintain Piwik</a></li></ol></li>
+<li class="page_item page-item-268"><a href="http://piwik.org/docs/installation/">Installing Piwik</a><ol><li><a href="https://piwik.org/docs/installation/#getting-started">Getting Started</a></li><li><a href="https://piwik.org/docs/installation/#start-the-installation">Start the Installation</a></li><li><a href="https://piwik.org/docs/installation/#the-5-minute-piwik-installation">The 5-minute Piwik Installation</a><ol><li><a href="https://piwik.org/docs/installation/#the-welcome-screen">The Welcome Screen</a></li><li><a href="https://piwik.org/docs/installation/#system-check">System Check</a></li><li><a href="https://piwik.org/docs/installation/#mysql-database-setup">MySQL Database Setup</a></li><li><a href="https://piwik.org/docs/installation/#super-user">Super User</a></li><li><a href="https://piwik.org/docs/installation/#set-up-your-first-website">Set up Your First Website</a></li><li><a href="https://piwik.org/docs/installation/#install-the-javascript-tracking-tag">Install the JavaScript Tracking Tag</a></li><li><a href="https://piwik.org/docs/installation/#congratulations">Congratulations!</a></li></ol></li><li><a href="https://piwik.org/docs/installation/#configuring-piwik">Configuring Piwik</a></li><li><a href="https://piwik.org/docs/installation/#medium-and-high-traffic-websites-setup-an-automated-task-cron-to-process-reports">Medium and High-Traffic Websites: Setup an automated task (cron) to process reports</a></li></ol></li>
+<li class="page_item page-item-265"><a href="http://piwik.org/docs/integration/">Piwik Integration</a><ol><li><a href="http://piwik.org/docs/integration/#integrate-piwik-with-your-cms-ecommerce-software-and-more">Integrate Piwik with your CMS, Ecommerce Software, and More</a></li><li><a href="http://piwik.org/docs/integration/#export-your-data-analytics-widgets">Export your data: Analytics Widgets </a></li><li><a href="http://piwik.org/docs/integration/#analytics-api-fetch-your-data-integrate-users-websites-and-more">Analytics API: fetch your data, integrate users, websites and more </a></li><li><a href="http://piwik.org/docs/integration/#customize-piwik">Customize Piwik </a></li></ol></li>
+<li class="page_item page-item-277"><a href="http://piwik.org/docs/optimize/">Optimize and Scale Piwik</a><ol><li><a href="http://piwik.org/docs/optimize/#what-infrastructure-do-i-need-to-run-piwik">What infrastructure do I need to run Piwik?</a></li><li><a href="http://piwik.org/docs/optimize/#configure-piwik-for-speed">Configure Piwik for speed</a></li><li><a href="http://piwik.org/docs/optimize/#meet-other-piwik-power-users-share-your-experience">Meet other Piwik Power users &amp; Share your experience</a></li><li><a href="http://piwik.org/docs/optimize/#get-professional-support-from-piwik-pro">Get Professional Support from Piwik PRO</a></li></ol></li>
+<li class="page_item page-item-281"><a href="http://piwik.org/docs/managing-your-databases-size/">Managing your database’s size</a><ol><li><a href="http://piwik.org/docs/managing-your-databases-size/#deleting-old-unprocessed-data">Deleting old unprocessed data</a></li><li><a href="http://piwik.org/docs/managing-your-databases-size/#deleting-old-reports">Deleting old reports</a></li><li><a href="http://piwik.org/docs/managing-your-databases-size/#manually-triggering-a-data-purge">Manually triggering a data purge</a></li></ol></li>
+<li class="page_item page-item-284"><a href="http://piwik.org/docs/update/">Update Piwik</a><ol><li><a href="http://piwik.org/docs/update/#the-one-click-piwik-update">The One-Click Piwik Update</a><ol><li><a href="http://piwik.org/docs/update/#step-1-set-write-permissions-on-the-piwik-folder-with-ftp">Step 1: Set Write Permissions on the Piwik folder with FTP</a></li><li><a href="http://piwik.org/docs/update/#click-on-the-alert-box-in-piwik">Click on the Alert Box in Piwik</a></li><li><a href="http://piwik.org/docs/update/#read-the-message-and-click-update-automatically">Read the Message and Click Update Automatically</a></li><li><a href="http://piwik.org/docs/update/#watch-the-magic">Watch the magic!</a></li><li><a href="http://piwik.org/docs/update/#treat-yourself">Treat Yourself</a></li></ol></li><li><a href="http://piwik.org/docs/update/#the-manual-three-step-update">The Manual Three-Step Update</a><ol><li><a href="http://piwik.org/docs/update/#1-back-up-your-configuration-file">1) Back up your Configuration File</a></li><li><a href="http://piwik.org/docs/update/#2-replace-the-piwik-files-with-the-latest-version">2) Replace the Piwik files with the latest version</a></li><li><a href="http://piwik.org/docs/update/#3-update-piwik">3) Update Piwik</a></li><li><a href="http://piwik.org/docs/update/#database-upgrade-for-high-traffic-piwik-servers">Database Upgrade for High Traffic Piwik Servers</a></li><li><a href="http://piwik.org/docs/update/#troubleshooting">Troubleshooting</a></li></ol></li></ol></li>
+</ol></nav>    <h3 class="title" id="configuration">
+        Configuration    </h3>
+    <nav><ol><li class="page_item page-item-15808"><a href="http://piwik.org/docs/data-limits/">Data Limits – No Limits</a></li>
+<li class="page_item page-item-288"><a href="http://piwik.org/docs/manage-websites/">Manage Websites</a><ol><li><a href="http://piwik.org/docs/manage-websites/#add-a-website">Add a Website</a></li><li><a href="http://piwik.org/docs/manage-websites/#update-and-delete-websites">Update and Delete Websites</a></li><li><a href="http://piwik.org/docs/manage-websites/#track-subdomains-multiple-domain-names">Track Subdomains &amp; Multiple Domain Names</a></li><li><a href="http://piwik.org/docs/manage-websites/#all-websites-dashboard">All Websites Dashboard</a><ol><li><a href="http://piwik.org/docs/manage-websites/#the-all-websites-dashboard-in-email-reports">The All Websites Dashboard in Email Reports</a></li><li><a href="http://piwik.org/docs/manage-websites/#embedding-the-all-websites-dashboard-in-your-app">Embedding the All Websites Dashboard in your app</a></li><li><a href="http://piwik.org/docs/manage-websites/#common-questions">Common Questions</a></li></ol></li></ol></li>
+<li class="page_item page-item-293"><a href="http://piwik.org/docs/manage-users/">Manage Users</a><ol><li><a href="http://piwik.org/docs/manage-users/#create-users">Create Users</a></li><li><a href="http://piwik.org/docs/manage-users/#manage-user-access-to-websites">Manage User Access to Websites</a></li><li><a href="http://piwik.org/docs/manage-users/#manage-super-users">Manage Super Users</a></li><li><a href="http://piwik.org/docs/manage-users/#advanced-user-management">Advanced User Management</a></li></ol></li>
+<li class="page_item page-item-313"><a href="http://piwik.org/docs/email-reports/">Manage Email Reports</a><ol><li><a href="http://piwik.org/docs/email-reports/#create-and-schedule-a-report">Create and schedule a report</a></li><li><a href="http://piwik.org/docs/email-reports/#downloading-and-sending-your-custom-reports-by-email">Downloading and sending your custom reports by email</a></li><li><a href="http://piwik.org/docs/email-reports/#sending-scheduled-reports-on-time">Sending Scheduled reports on Time</a></li></ol></li>
+<li class="page_item page-item-375"><a href="http://piwik.org/docs/geo-locate/">Geo Locate your visitors</a><ol><li><a href="http://piwik.org/docs/geo-locate/#enabling-accurate-visitors-geolocation-in-piwik-analytics">Enabling Accurate Visitors Geolocation in Piwik Analytics</a></li><li><a href="http://piwik.org/docs/geo-locate/#reports-continent-country-region-city-provider">Reports: Continent, Country, Region, City &amp; Provider</a></li><li><a href="http://piwik.org/docs/geo-locate/#maintaining-geoip-databases">Maintaining GeoIP Databases</a></li><li><a href="http://piwik.org/docs/geo-locate/#details-resources">Details &amp; Resources</a></li></ol></li>
+<li class="page_item page-item-318"><a href="http://piwik.org/docs/setup-auto-archiving/">How to Set up Auto-Archiving of Your Reports</a><ol><li><a href="http://piwik.org/docs/setup-auto-archiving/#linuxunix-how-to-set-up-a-crontab-to-automatically-archive-the-reports">Linux/Unix: How to Set up a Crontab to Automatically Archive the Reports.</a></li><li><a href="http://piwik.org/docs/setup-auto-archiving/#windows-how-to-set-up-auto-archiving-using-windows-scheduler">Windows: How to Set up Auto-Archiving Using Windows Scheduler</a></li><li><a href="http://piwik.org/docs/setup-auto-archiving/#cpanel-how-to-set-up-the-cron-script-using-cpanel">CPanel: How to Set up the Cron Script Using CPanel</a></li><li><a href="http://piwik.org/docs/setup-auto-archiving/#web-cron-when-your-web-host-does-not-support-cron-tasks">Web Cron When Your Web Host Does Not Support Cron Tasks</a></li><li><a href="http://piwik.org/docs/setup-auto-archiving/#important-tips-for-medium-to-high-traffic-websites">Important Tips for Medium to High Traffic Websites</a><ol><li><a href="http://piwik.org/docs/setup-auto-archiving/#disable-browser-triggers-for-piwik-archiving-and-limit-piwik-reports-to-updating-every-hour">Disable browser triggers for Piwik archiving and limit Piwik reports to updating every hour</a></li><li><a href="http://piwik.org/docs/setup-auto-archiving/#increase-php-memory-limit">Increase PHP Memory Limit</a></li><li><a href="http://piwik.org/docs/setup-auto-archiving/#more-high-traffic-server-tips">More High Traffic Server Tips!</a></li></ol></li><li><a href="http://piwik.org/docs/setup-auto-archiving/#more-information-about-piwik-archiving">More Information About Piwik Archiving</a></li><li><a href="http://piwik.org/docs/setup-auto-archiving/#help-for-corearchive-command">Help for core:archive command</a></li></ol></li>
+<li class="page_item page-item-15950"><a href="http://piwik.org/docs/analytics-api/">Piwik Analytics API</a></li>
+<li class="page_item page-item-15960"><a href="http://piwik.org/docs/tracking-api/">Tracking API</a><ol><li><a href="http://piwik.org/docs/tracking-api/#javascript-client-for-tracking-api">Javascript client for Tracking API</a></li><li><a href="http://piwik.org/docs/tracking-api/#tracking-api-clients">Tracking API Clients</a></li><li><a href="http://piwik.org/docs/tracking-api/#tracking-api-reference">Tracking API Reference</a></li><li><a href="http://piwik.org/docs/tracking-api/#use-case-tracking-data-using-the-php-client">Use case: Tracking data using the php client</a><ol><li><a href="http://piwik.org/docs/tracking-api/#image-tracker-code">Image Tracker code</a></li><li><a href="http://piwik.org/docs/tracking-api/#piwik-tracking-api-advanced-users">Piwik Tracking API (Advanced users)</a></li></ol></li><li><a href="http://piwik.org/docs/tracking-api/#more-information">More information</a></li></ol></li>
+<li class="page_item page-item-379"><a href="http://piwik.org/docs/log-analytics-tool-how-to/">How to use Log Analytics tool</a><ol><li><a href="http://piwik.org/docs/log-analytics-tool-how-to/#requirements">Requirements</a></li><li><a href="http://piwik.org/docs/log-analytics-tool-how-to/#differences-using-log-analytics-vs-using-javascript-client">Differences using Log Analytics VS using Javascript client</a></li><li><a href="http://piwik.org/docs/log-analytics-tool-how-to/#how-to-run-the-log-file-analysis-script-with-default-options">How to: run the Log File analysis script with default options</a></li><li><a href="http://piwik.org/docs/log-analytics-tool-how-to/#how-to-import-more-data-including-bots-static-files-and-http-errors-tracking">How to: import more data including bots, static files, and HTTP errors tracking</a></li><li><a href="http://piwik.org/docs/log-analytics-tool-how-to/#how-to-exclude-some-particular-log-lines">How to: exclude some particular log lines</a></li><li><a href="http://piwik.org/docs/log-analytics-tool-how-to/#frequently-asked-questions">Frequently Asked Questions</a></li></ol></li>
+<li class="page_item page-item-14727"><a href="http://piwik.org/docs/privacy/">Configure Privacy Settings in Piwik</a><ol><li><a href="http://piwik.org/docs/privacy/#step-1-automatically-anonymize-visitor-ips">Step 1) Automatically Anonymize Visitor IPs</a></li><li><a href="http://piwik.org/docs/privacy/#step-2-delete-old-visitors-logs">Step 2) Delete Old Visitors Logs</a></li><li><a href="http://piwik.org/docs/privacy/#step-3-include-a-web-analytics-opt-out-feature-on-your-site-using-an-iframe">Step 3) Include a Web Analytics Opt-Out Feature on Your Site (Using an iFrame)</a></li><li><a href="http://piwik.org/docs/privacy/#step-4-respect-donottrack-preference">Step 4) Respect DoNotTrack preference</a></li><li><a href="http://piwik.org/docs/privacy/#step-5-optional-privacy-preferences">Step 5) Optional Privacy Preferences</a></li></ol></li>
+<li class="page_item page-item-16270"><a href="http://piwik.org/docs/how-to-secure-piwik/">How to configure Piwik for security</a><ol><li><a href="http://piwik.org/docs/how-to-secure-piwik/#tips-that-will-help-you-keep-your-piwik-secure">Tips that will help you keep your Piwik secure</a></li><li><a href="http://piwik.org/docs/how-to-secure-piwik/#list-of-best-practices-for-the-professional-piwik-administrator">List of best practices for the professional Piwik administrator</a></li></ol></li>
+<li class="page_item page-item-298"><a href="http://piwik.org/docs/optimize-how-to/">How to configure Piwik for speed</a><ol><li><a href="http://piwik.org/docs/optimize-how-to/#configure-piwik-for-speed">Configure Piwik for speed</a></li><li><a href="http://piwik.org/docs/optimize-how-to/#configure-your-server-for-speed">Configure your server for speed</a></li><li><a href="http://piwik.org/docs/optimize-how-to/#configure-your-database-server-for-speed">Configure your database server for speed</a></li><li><a href="http://piwik.org/docs/optimize-how-to/#resources">Resources</a></li></ol></li>
+<li class="page_item page-item-302"><a href="http://piwik.org/docs/include-piwik-in-your-project/">Include &amp; Customize Piwik for your Project</a><ol><li><a href="http://piwik.org/docs/include-piwik-in-your-project/#configconfig-ini-php-the-piwik-config-file">config/config.ini.php: The Piwik Config File</a></li><li><a href="http://piwik.org/docs/include-piwik-in-your-project/#bootstrap-php-execute-custom-code-before-piwik-runs">bootstrap.php: Execute Custom Code Before Piwik Runs</a></li><li><a href="http://piwik.org/docs/include-piwik-in-your-project/#load-piwik-php-classes-and-call-the-api-in-php">Load Piwik PHP classes and Call the API in PHP</a></li><li><a href="http://piwik.org/docs/include-piwik-in-your-project/#php-ini-and-htaccess-notes">php.ini and .htaccess notes</a></li></ol></li>
+<li class="page_item page-item-316"><a href="http://piwik.org/docs/embed-piwik-report/">Embedding Piwik Reports in Other Websites or Apps</a><ol><li><a href="http://piwik.org/docs/embed-piwik-report/#change-user-permissions">Change User Permissions</a></li><li><a href="http://piwik.org/docs/embed-piwik-report/#embed-a-piwik-report-in-a-html-page">Embed a Piwik report in a HTML page</a></li><li><a href="http://piwik.org/docs/embed-piwik-report/#embed-the-piwik-dashboard-in-a-html-page">Embed the Piwik dashboard in a HTML page</a></li><li><a href="http://piwik.org/docs/embed-piwik-report/#embed-the-full-piwik-app-anywhere">Embed the full Piwik app anywhere</a></li><li><a href="http://piwik.org/docs/embed-piwik-report/#embed-a-static-image-graph-of-your-analytics-data">Embed a static image graph of your analytics data</a></li><li><a href="http://piwik.org/docs/embed-piwik-report/#customising-the-widgets">Customising the widgets</a></li><li><a href="http://piwik.org/docs/embed-piwik-report/#making-piwik-reports-data-publicly-available">Making Piwik reports data publicly available</a></li></ol></li>
+</ol></nav>    <h3 class="title" id="statistics-analysis">
+        Statistics analysis    </h3>
+    <nav><ol><li class="page_item page-item-332"><a href="http://piwik.org/docs/piwik-tour/">A Tour of Piwik</a><ol><li><a href="http://piwik.org/docs/piwik-tour/#piwik-overview">Piwik Overview</a></li><li><a href="http://piwik.org/docs/piwik-tour/#select-a-date-range">Select a Date Range</a></li><li><a href="http://piwik.org/docs/piwik-tour/#a-look-at-a-piwik-report">A Look at a Piwik Report</a></li><li><a href="http://piwik.org/docs/piwik-tour/#dashboard-widgets">Dashboard &amp; Widgets</a></li><li><a href="http://piwik.org/docs/piwik-tour/#creating-and-customizing-a-new-dashboard">Creating and customizing a new Dashboard</a></li><li><a href="http://piwik.org/docs/piwik-tour/#graphs-data-visualization">Graphs (Data Visualization)</a></li><li><a href="http://piwik.org/docs/piwik-tour/#inline-help">Inline help</a></li><li><a href="http://piwik.org/docs/piwik-tour/#flattening-reports">Flattening reports</a></li><li><a href="http://piwik.org/docs/piwik-tour/#detailed-historical-report-about-any-data-point">Detailed historical report about any data point</a></li><li><a href="http://piwik.org/docs/piwik-tour/#applying-custom-segments-to-filter-visitors">Applying Custom Segments to filter Visitors</a></li><li><a href="http://piwik.org/docs/piwik-tour/#videos-showing-the-power-of-piwik">Videos Showing the Power of Piwik!</a></li></ol></li>
+<li class="page_item page-item-17828"><a href="http://piwik.org/docs/event-tracking/">Event Tracking</a><ol><li><a href="http://piwik.org/docs/event-tracking/#viewing-events-reports">Viewing Events Reports</a></li><li><a href="http://piwik.org/docs/event-tracking/#requesting-events-report-data">Requesting Events report data</a></li><li><a href="http://piwik.org/docs/event-tracking/#tracking-events">Tracking Events</a><ol><li><a href="http://piwik.org/docs/event-tracking/#javascript-trackevent">Javascript trackEvent()</a></li><li><a href="http://piwik.org/docs/event-tracking/#tracking-events-with-http-api">Tracking Events with HTTP API</a></li></ol></li></ol></li>
+<li class="page_item page-item-371"><a href="http://piwik.org/docs/tracking-goals-web-analytics/">Track Goals and Measure Conversions</a><ol><li><a href="http://piwik.org/docs/tracking-goals-web-analytics/#what-is-a-goal-in-piwik">What is a Goal in Piwik?</a></li><li><a href="http://piwik.org/docs/tracking-goals-web-analytics/#examples-of-useful-goals">Examples of Useful Goals</a></li><li><a href="http://piwik.org/docs/tracking-goals-web-analytics/#create-a-goal">Create a Goal</a></li><li><a href="http://piwik.org/docs/tracking-goals-web-analytics/#goal-overview-report">Goal Overview Report</a></li><li><a href="http://piwik.org/docs/tracking-goals-web-analytics/#goal-detailed-report">Goal Detailed Report</a></li><li><a href="http://piwik.org/docs/tracking-goals-web-analytics/#report-analysis-what-are-the-top-converting-segments">Report Analysis: What are the Top Converting Segments?</a></li></ol></li>
+<li class="page_item page-item-18801"><a href="http://piwik.org/docs/content-tracking/">Content Tracking</a><ol><li><a href="http://piwik.org/docs/content-tracking/#viewing-content-tracking-reports">Viewing Content Tracking reports</a></li><li><a href="http://piwik.org/docs/content-tracking/#requesting-content-tracking-report-data">Requesting Content Tracking report data</a></li><li><a href="http://piwik.org/docs/content-tracking/#tracking-content">Tracking Content</a><ol><li><a href="http://piwik.org/docs/content-tracking/#tracking-content-with-http-api">Tracking Content with HTTP API</a></li></ol></li></ol></li>
+<li class="page_item page-item-338"><a href="http://piwik.org/docs/ecommerce-analytics/">Ecommerce Analytics</a><ol><li><a href="http://piwik.org/docs/ecommerce-analytics/#enable-ecommerce-tracking">Enable Ecommerce Tracking</a></li><li><a href="http://piwik.org/docs/ecommerce-analytics/#using-a-piwik-plugin-for-your-ecommerce-software">Using a Piwik plugin for your Ecommerce Software</a></li><li><a href="http://piwik.org/docs/ecommerce-analytics/#ecommerce-tracking">Ecommerce tracking</a><ol><li><a href="http://piwik.org/docs/ecommerce-analytics/#tracking-ecommerce-orders-items-purchased-required">Tracking Ecommerce Orders &amp; Items Purchased (required)</a></li><li><a href="http://piwik.org/docs/ecommerce-analytics/#tracking-add-to-cart-items-added-to-the-cart-optional">Tracking Add to Cart &amp; Items Added to the Cart (optional)</a></li><li><a href="http://piwik.org/docs/ecommerce-analytics/#tracking-product-page-views-category-page-views-optional">Tracking Product Page Views &amp; Category Page Views (optional)</a></li></ol></li><li><a href="http://piwik.org/docs/ecommerce-analytics/#ecommerce-reports-in-piwik">Ecommerce reports in Piwik</a><ol><li><a href="http://piwik.org/docs/ecommerce-analytics/#ecommerce-activity-overview">Ecommerce Activity Overview</a></li><li><a href="http://piwik.org/docs/ecommerce-analytics/#best-products-best-categories">Best Products &amp; Best Categories</a></li><li><a href="http://piwik.org/docs/ecommerce-analytics/#ecommerce-activity-log">Ecommerce Activity log</a></li><li><a href="http://piwik.org/docs/ecommerce-analytics/#ecommerce-metrics-in-standard-reports">Ecommerce Metrics in Standard Reports</a></li><li><a href="http://piwik.org/docs/ecommerce-analytics/#advanced-ecommerce-statistics-api">Advanced Ecommerce Statistics API</a></li></ol></li></ol></li>
+<li class="page_item page-item-360"><a href="http://piwik.org/docs/row-evolution/">Row Evolution &#8211; View and compare historical data</a><ol><li><a href="http://piwik.org/docs/row-evolution/#accessing-the-row-evolution-report">Accessing the Row Evolution Report</a></li><li><a href="http://piwik.org/docs/row-evolution/#navigating-the-row-evolution-report">Navigating the Row Evolution Report</a></li><li><a href="http://piwik.org/docs/row-evolution/#comparing-multiple-row-evolutions">Comparing multiple row evolutions</a></li><li><a href="http://piwik.org/docs/row-evolution/#recording-your-insights">Recording your insights</a></li></ol></li>
+<li class="page_item page-item-15958"><a href="http://piwik.org/docs/segmentation/">Segmentation &#8211; Compare segments of visitors</a><ol><li><a href="http://piwik.org/docs/segmentation/#creating-a-segment-in-piwik">Creating a segment in Piwik</a></li><li><a href="http://piwik.org/docs/segmentation/#switching-between-segments">Switching between segments</a></li><li><a href="http://piwik.org/docs/segmentation/#removing-segments">Removing segments</a></li><li><a href="http://piwik.org/docs/segmentation/#comparing-segment-data">Comparing segment data</a></li><li><a href="http://piwik.org/docs/segmentation/#using-segments-in-e-mail-reports">Using segments in e-mail reports</a></li><li><a href="http://piwik.org/docs/segmentation/#useful-segments-you-can-create">Useful segments you can create</a><ol><li><a href="http://piwik.org/docs/segmentation/#custom-segment-customers">Custom segment: Customers</a></li><li><a href="http://piwik.org/docs/segmentation/#custom-segment-returning-customers">Custom segment: Returning customers</a></li><li><a href="http://piwik.org/docs/segmentation/#custom-segment-bounced-visits">Custom segment: Bounced visits</a></li><li><a href="http://piwik.org/docs/segmentation/#custom-segment-mobile-visitors">Custom segment: Mobile visitors</a></li><li><a href="http://piwik.org/docs/segmentation/#custom-segment-commenters">Custom segment: Commenters</a></li><li><a href="http://piwik.org/docs/segmentation/#custom-segment-visits-from-the-region-your-business-is-located-in">Custom segment: Visits from the region your business is located in</a></li><li><a href="http://piwik.org/docs/segmentation/#custom-segment-everyone-who-doesnt-bounce">Custom segment: Everyone who doesn&#8217;t bounce</a></li></ol></li><li><a href="http://piwik.org/docs/segmentation/#determining-what-to-segment">Determining what to segment</a><ol><li><a href="http://piwik.org/docs/segmentation/#figuring-out-how-to-segment-based-on-your-objectives">Figuring out how to segment based on your objectives</a></li><li><a href="http://piwik.org/docs/segmentation/#figuring-out-how-to-segment-based-on-your-data">Figuring out how to segment based on your data</a></li></ol></li><li><a href="http://piwik.org/docs/segmentation/#segments-api-reference">Segments API Reference</a></li></ol></li>
+<li class="page_item page-item-15962"><a href="http://piwik.org/docs/visitors-map/">Visitors Maps &#8211; World, region, city</a><ol><li><a href="http://piwik.org/docs/visitors-map/#world-map-showing-visits-on-forum-piwik-org-by-country">World Map showing Visits on forum.piwik.org by Country</a></li><li><a href="http://piwik.org/docs/visitors-map/#visitor-map-showing-visits-by-region">Visitor Map showing Visits by Region</a></li><li><a href="http://piwik.org/docs/visitors-map/#map-showing-visits-by-city">Map showing visits by City</a></li><li><a href="http://piwik.org/docs/visitors-map/#how-to-change-the-metric-being-plotted-on-the-map">How to change the metric being plotted on the Map?</a></li><li><a href="http://piwik.org/docs/visitors-map/#world-map-widget">World Map Widget</a></li><li><a href="http://piwik.org/docs/visitors-map/#troubleshooting">Troubleshooting</a></li></ol></li>
+<li class="page_item page-item-15964"><a href="http://piwik.org/docs/real-time-visitor-world-map/">Real Time Visitor World Map</a><ol><li><a href="http://piwik.org/docs/real-time-visitor-world-map/#example-of-the-world-map-showing-visitors">Example of the World map showing Visitors</a></li><li><a href="http://piwik.org/docs/real-time-visitor-world-map/#discover-the-power-of-the-visitors-map">Discover the power of the Visitors Map!</a></li><li><a href="http://piwik.org/docs/real-time-visitor-world-map/#visitor-maps-widget">Visitor Maps Widget</a></li><li><a href="http://piwik.org/docs/real-time-visitor-world-map/#about-the-maps">About the maps</a></li></ol></li>
+<li class="page_item page-item-348"><a href="http://piwik.org/docs/real-time/">Real Time Analytics</a><ol><li><a href="http://piwik.org/docs/real-time/#the-real-time-live-widget">The Real Time Live! Widget</a></li><li><a href="http://piwik.org/docs/real-time/#visitor-log">Visitor Log</a></li><li><a href="http://piwik.org/docs/real-time/#visitor-profile">Visitor Profile</a></li><li><a href="http://piwik.org/docs/real-time/#real-time-analytics-api">Real Time Analytics API</a></li><li><a href="http://piwik.org/docs/real-time/#about-visitors-privacy">About Visitors&#8217; Privacy</a></li></ol></li>
+<li class="page_item page-item-15966"><a href="http://piwik.org/docs/user-profile/">The Visitor Profile</a><ol><li><a href="http://piwik.org/docs/user-profile/#launching-the-visitor-profile">Launching the Visitor Profile</a></li><li><a href="http://piwik.org/docs/user-profile/#visitor-profile-report">Visitor Profile report</a></li><li><a href="http://piwik.org/docs/user-profile/#feature-overview">Feature Overview</a></li><li><a href="http://piwik.org/docs/user-profile/#advanced-uses">Advanced Uses</a></li><li><a href="http://piwik.org/docs/user-profile/#developer-api">Developer API</a></li><li><a href="http://piwik.org/docs/user-profile/#summary">Summary</a></li></ol></li>
+<li class="page_item page-item-296"><a href="http://piwik.org/docs/page-speed/">Site speed and Page speed</a><ol><li><a href="http://piwik.org/docs/page-speed/#overall-website-speed">Overall Website Speed</a></li><li><a href="http://piwik.org/docs/page-speed/#individual-page-generation-speed">Individual Page Generation Speed</a></li><li><a href="http://piwik.org/docs/page-speed/#making-sure-your-website-stays-fast">Making sure your website stays fast</a></li><li><a href="http://piwik.org/docs/page-speed/#tracking-page-speed-with-each-visit">Tracking page speed with each visit</a></li></ol></li>
+<li class="page_item page-item-356"><a href="http://piwik.org/docs/site-search/">Site Search Tracking and Reporting</a><ol><li><a href="http://piwik.org/docs/site-search/#enable-site-search-tracking-for-your-website">Enable Site Search Tracking for your Website</a></li><li><a href="http://piwik.org/docs/site-search/#tracking-site-search-keywords">Tracking Site Search Keywords</a><ol><li><a href="http://piwik.org/docs/site-search/#track-site-search-using-url-parameters-default">Track Site Search using URL Parameters (default)</a></li><li><a href="http://piwik.org/docs/site-search/#track-site-search-using-the-javascript-tracksitesearch-function">Track Site Search using the Javascript trackSiteSearch() function</a></li><li><a href="http://piwik.org/docs/site-search/#track-site-search-using-the-tracking-api-advanced-users-only">Track Site Search using the Tracking API (advanced users only)</a></li></ol></li><li><a href="http://piwik.org/docs/site-search/#tracking-no-result-search-keywords">Tracking No Result Search Keywords</a></li><li><a href="http://piwik.org/docs/site-search/#site-search-analytics-reports">Site Search Analytics Reports</a></li><li><a href="http://piwik.org/docs/site-search/#view-the-detailed-searches-for-each-visitor">View the Detailed Searches for each Visitor</a></li><li><a href="http://piwik.org/docs/site-search/#number-of-searches-and-keywords-over-time">Number of searches and keywords over time</a></li><li><a href="http://piwik.org/docs/site-search/#understand-how-site-search-is-used-to-find-other-pages-on-your-site">Understand How Site Search is Used to Find other Pages on your Site</a></li></ol></li>
+<li class="page_item page-item-343"><a href="http://piwik.org/docs/transitions/">Transitions – Analyze the previous and following actions of your visitors for each page</a><ol><li><a href="http://piwik.org/docs/transitions/#how-to-open-the-transitions-report-for-a-page">How to Open the Transitions Report for a Page?</a></li><li><a href="http://piwik.org/docs/transitions/#understanding-the-page-transitions-report">Understanding the Page Transitions Report</a></li><li><a href="http://piwik.org/docs/transitions/#using-interacting-with-the-transitions-report">Using &amp; Interacting with the Transitions Report</a></li><li><a href="http://piwik.org/docs/transitions/#conclusion">Conclusion</a></li><li><a href="http://piwik.org/docs/transitions/#related-faq">Related FAQ</a></li></ol></li>
+<li class="page_item page-item-351"><a href="http://piwik.org/docs/page-overlay/">Page Overlay – Visitors Click Map</a><ol><li><a href="http://piwik.org/docs/page-overlay/#how-to-open-page-overlay-for-a-page">How to Open Page Overlay for a Page?</a></li><li><a href="http://piwik.org/docs/page-overlay/#understanding-the-user-interface">Understanding the User Interface</a></li><li><a href="http://piwik.org/docs/page-overlay/#conclusion">Conclusion</a></li><li><a href="http://piwik.org/docs/page-overlay/#page-overlay-troubleshooting">Page Overlay Troubleshooting</a><ol><li><a href="http://piwik.org/docs/page-overlay/#1-it-doesnt-work-at-all">1. It doesn&#8217;t work at all</a></li><li><a href="http://piwik.org/docs/page-overlay/#2-some-links-dont-have-the-bubbles">2. Some links don&#8217;t have the bubbles</a></li><li><a href="http://piwik.org/docs/page-overlay/#3-i-get-the-error-the-page-overlay-session-couldnt-be-launched-yet">3. I get the error &#8220;The Page Overlay session couldn&#8217;t be launched yet&#8221;</a></li><li><a href="http://piwik.org/docs/page-overlay/#4-i-have-multiple-domains-and-it-doesnt-show-all-data">4. I have multiple domains and it doesn&#8217;t show all data</a></li><li><a href="http://piwik.org/docs/page-overlay/#5-i-have-a-high-traffic-website-and-it-takes-a-long-time-until-the-bubbles-appear">5. I have a high traffic website and it takes a long time until the bubbles appear</a></li></ol></li></ol></li>
+<li class="page_item page-item-368"><a href="http://piwik.org/docs/custom-variables/">Custom Variables Analytics</a><ol><li><a href="http://piwik.org/docs/custom-variables/#what-is-a-custom-variable">What is  a Custom Variable?</a></li><li><a href="http://piwik.org/docs/custom-variables/#tracking-a-custom-variable">Tracking a Custom Variable</a></li><li><a href="http://piwik.org/docs/custom-variables/#custom-variable-reporting">Custom Variable Reporting</a></li><li><a href="http://piwik.org/docs/custom-variables/#custom-variables-in-the-visitor-log">Custom Variables in the Visitor Log</a></li><li><a href="http://piwik.org/docs/custom-variables/#data-limits-for-custom-variables">Data Limits for Custom Variables</a></li><li><a href="http://piwik.org/docs/custom-variables/#references">References</a></li></ol></li>
+<li class="page_item page-item-18255"><a href="http://piwik.org/docs/user-id/">User ID</a><ol><li><a href="http://piwik.org/docs/user-id/#about-user-id">About User ID</a></li><li><a href="http://piwik.org/docs/user-id/#implementing-user-id">Implementing User ID</a><ol><li><a href="http://piwik.org/docs/user-id/#what-is-a-user-id-string">What is a User ID string?</a></li><li><a href="http://piwik.org/docs/user-id/#how-do-i-generate-a-user-id">How do I generate a User ID?</a></li><li><a href="http://piwik.org/docs/user-id/#user-id-with-the-javascript-client">User ID with the JavaScript client</a></li><li><a href="http://piwik.org/docs/user-id/#user-id-with-another-tracker-api-client">User ID with another Tracker API client</a></li><li><a href="http://piwik.org/docs/user-id/#user-id-with-direct-tracker-api-access">User ID with direct Tracker API access</a></li></ol></li><li><a href="http://piwik.org/docs/user-id/#benefits-of-user-id">Benefits of User ID</a></li><li><a href="http://piwik.org/docs/user-id/#how-requests-with-a-user-id-are-tracked">How requests with a User ID are tracked</a></li><li><a href="http://piwik.org/docs/user-id/#resources">Resources</a></li></ol></li>
+<li class="page_item page-item-335"><a href="http://piwik.org/docs/annotations/">Annotating your data</a><ol><li><a href="http://piwik.org/docs/annotations/#why-would-i-want-to-create-annotations">Why would I want to create annotations?</a></li><li><a href="http://piwik.org/docs/annotations/#creating-and-editing-annotations">Creating and editing annotations</a></li><li><a href="http://piwik.org/docs/annotations/#the-annotations-api">The Annotations API</a></li></ol></li>
+<li class="page_item page-item-363"><a href="http://piwik.org/docs/tracking-campaigns/">Tracking Campaigns – Analytics Piwik</a><ol><li><a href="http://piwik.org/docs/tracking-campaigns/#analytics-campaign-tracking">Analytics Campaign Tracking</a></li><li><a href="http://piwik.org/docs/tracking-campaigns/#tracking-campaigns-using-url-parameters">Tracking Campaigns using URL Parameters</a></li><li><a href="http://piwik.org/docs/tracking-campaigns/#campaign-url-generator">Campaign URL Generator</a></li><li><a href="http://piwik.org/docs/tracking-campaigns/#goals-ecommerce-campaign-attribution">Goals &amp; Ecommerce Campaign Attribution</a></li><li><a href="http://piwik.org/docs/tracking-campaigns/#attribution-data-is-saved-in-a-first-party-cookie">Attribution data is saved in a first party cookie</a></li><li><a href="http://piwik.org/docs/tracking-campaigns/#faq-tracking-campaigns">FAQ: Tracking campaigns</a></li><li><a href="http://piwik.org/docs/tracking-campaigns/#tracking-more-than-two-campaign-dimensions">Tracking more than two campaign dimensions</a></li><li><a href="http://piwik.org/docs/tracking-campaigns/#tracking-paid-search-ads">Tracking Paid Search Ads</a></li></ol></li>
+<li class="page_item page-item-14867"><a href="http://piwik.org/docs/tracking-campaigns-url-builder/">URL Builder &#8211; Marketing Campaign Tracking</a></li>
+</ol></nav>    <h3 class="title" id="videos">
+        Videos    </h3>
+    <nav><ol><li class="page_item page-item-250"><a href="http://piwik.org/docs/video-welcome-to-piwik-analytics/">[Video] Welcome to Piwik Analytics</a></li>
+<li class="page_item page-item-274"><a href="http://piwik.org/docs/video-how-to-install-piwik-analytics-video/">[Video] How to Install Piwik Analytics Video</a></li>
+<li class="page_item page-item-248"><a href="http://piwik.org/docs/video-learn-all-about-piwiks-analytics-features/">[Video] Learn all about Piwik’s Analytics Features</a></li>
+<li class="page_item page-item-244"><a href="http://piwik.org/docs/video-how-to-configure-settings-in-piwik-analytics/">[Video] How to Configure Settings in Piwik Analytics</a></li>
+<li class="page_item page-item-330"><a href="http://piwik.org/docs/video-learn-about-your-visitors/">[Video] Learn about your Visitors</a></li>
+<li class="page_item page-item-324"><a href="http://piwik.org/docs/video-referrers-reports/">[Video] Referrers Reports</a></li>
+<li class="page_item page-item-326"><a href="http://piwik.org/docs/video-actions-reports/">[Video] Actions Reports</a></li>
+<li class="page_item page-item-328"><a href="http://piwik.org/docs/video-tracking-goals/">[Video] Tracking Goals</a></li>
+<li class="page_item page-item-322"><a href="http://piwik.org/docs/video-email-and-sms-reports/">[Video] Email and SMS Reports</a></li>
+</ol></nav>        </div>
+    </div>
+
+</article>
+     </div><!-- /.wrap -->
+
+   <div class="wrapper-body">
+<div class="row extra-foot">
+    <div class="container">
+        <div class="col-md-6 anyquest">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/piwik_help.jpg" class="any-q">
+            <h3>Any questions? </h3>
+            <p>Many answers and more information about Piwik You can find here:</p>
+            <ul class="inline">
+                <li><a href="/docs/">User Guides</a></li>
+                <li><a href="http://forum.piwik.org/">Forums</a></li>
+                <li><a href="/faq/">FAQs</a></li>
+	            <li><a href="http://piwik.pro?pk_source=Piwik.org&pk_medium=footer_link&pk_campaign=PO_Pro_Solutions" target="_blank">PRO Solutions</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/socials.png" class="socials">
+            <h3>We are social </h3>
+            <p>Follow us:</p>
+            <ul class="inline">
+                <li><a href="/newsletter/">Newsletter</a></li>
+                <li><a href="http://www.facebook.com/Piwik">Facebook</a></li>
+                <li><a href="http://twitter.com/piwik">Twitter</a></li>
+                <li><a href="http://www.linkedin.com/groups?gid=867857" target="_blank">Linkedin</a></li>
+                <li><a href="https://github.com/piwik/piwik">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="container footer-page footer-updated">
+    <div class="row">
+        <div class="col-lg-11 col-md-11 foot-cc">
+            <a href="http://piwik.org/thank-you-all/"><img src="http://piwik.org/wp-content/themes/piwik/assets/img/cc.png" class="clearcode"></a>
+            <span class="pworg">Piwik.org. &copy; 2015</span>
+            <ul id="menu-footer" class="nav"><li class="menu-piwik-cloud"><a href="http://piwik.org/hosting/">Piwik Cloud</a></li>
+<li class="menu-privacy"><a href="http://piwik.org/privacy/">Privacy</a></li>
+<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+<li class="menu-developers"><a target="_blank" href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org">Marketplace</a></li>
+<li class="menu-credits"><a href="http://piwik.org/thank-you-all/">Credits</a></li>
+</ul>            <span class="respect">Piwik respects your privacy and gives you full control over your data.</span>
+        </div>
+    </div>
+</footer>
+</div>
+   </div>
+  <!-- Piwik -->
+<!-- Load Piwik.js from demo2 for continuous testing -->
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/") + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker((("https:" == document.location.protocol) ? "https://demo.piwik.org/" : "http://demo.piwik.org/") + "piwik.php", 1);
+piwikTracker.setCookieDomain('*.piwik.org');
+
+if(document.domain != 'piwik.org') {
+  piwikTracker.setDocumentTitle(document.domain + "/" + document.title);
+}
+
+// Set the domain the visitor landed on, in the Custom Variable
+if(!piwikTracker.getCustomVariable(1)) { 
+  piwikTracker.setCustomVariable(1, "Domain landed", document.domain );
+}
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();  
+} catch( err ) {}
+</script><noscript><p><img src="http://demo.piwik.org/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+
+
+<!-- We're tracking data in demo2.piwik.org for purpose of testing Piwik. Signed: the Piwik core team -->
+<script type="text/javascript">
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/");
+    try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.setCookieDomain('*.piwik.org');
+        // Track Javascript Errors as Events
+        piwikTracker.enableJSErrorTracking();
+        
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+</script>
+  <script>hljs.initHighlightingOnLoad();</script><script type='text/javascript' src='/wp-content/plugins/markdown/markdown.js?ver=1.0.0'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/scripts.min.js?ver=160b62610afbe732febb44f9896f3afd'></script>
+
+  <div id="fb-root"></div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.748 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-10-28 00:13:02 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

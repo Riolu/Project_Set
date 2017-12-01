@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="publisher" content="TideCMS 8.5">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国西藏网</title>
+<meta name="description" content="中国西藏网创办于2000年5月25日，是高原（北京）文化传播有限公司旗下的中央重点新闻网站，也是全球受众最多、影响最大、报道最权威的涉藏新闻综合网站。有中、英、德、法、藏等5个语种、6个子网，以关注高层动向、追踪藏区时事、钩沉史海秘闻、冷观世界风云为宗旨，全年365×24小时向全球提供涉藏新闻资讯服务。" />
+<meta name="keywords" content="中国西藏,西藏网,西藏新闻,,西藏旅游,西藏影视,援藏,藏传佛教,宗教,教育,财经,秘闻,文化,图片,观察,时政,社会,民生,医疗,拉萨,布达拉宫,纳木错,雪顿节,甘孜,阿坝,甘南,青海,迪庆,香格里拉,塔尔寺,活佛,那曲,林芝,日喀则,阿里,达赖,班禅,和平解放,328,314,310,百万农奴" />
+
+<link href="/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="http://news.chinaso.com/static/css/link5.css" type="text/css" rel="stylesheet"/>
+<script src="http://news.chinaso.com/static/js/link5.js" charset="utf-8" type="text/javascript"></script>
+<style>
+#chinaso_search .search_btn2{ left: 194px;}
+#chinaso_search .search_input2,#chinaso_search #searchHotWord{ width: 193px;}
+#chinaso_search .China_search_24_new{top:12px}
+</style>
+<script src="/js/jquery.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/liveplayer.js"></script>
+<script language="javascript"> 
+(function(){
+	var res = GetRequest();
+	var par = res['index'];
+	if(par!='gfan'){
+		var ua=navigator.userAgent.toLowerCase();
+		var contains=function (a, b){
+			if(a.indexOf(b)!=-1){return true;}
+		};
+		var toMobileVertion = function(){
+			window.location.href = 'http://m.tibet.cn/'
+		}
+ 
+		if(contains(ua,"ipad")||(contains(ua,"rv:1.2.3.4"))||(contains(ua,"0.0.0.0"))||(contains(ua,"8.0.552.237"))){return false}
+		if((contains(ua,"android") && contains(ua,"mobile"))||(contains(ua,"android") && contains(ua,"mozilla")) ||(contains(ua,"android") && contains(ua,"opera"))
+	||contains(ua,"ucweb7")||contains(ua,"iphone")){toMobileVertion();}
+	}
+})();
+function GetRequest() {
+   var url = location.search;
+   var theRequest = new Object();
+   if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+      }
+   }
+   return theRequest;
+}
+</script>
+</head>
+
+<body>
+<!--头部开始-->
+<script src="/js/chinese.js"></script>
+<script src="/js/forgotpassword.js"></script>
+<script>
+function suo(){
+var sear=$('select[name="sear"] option:selected').text();
+ var keyword=$('#keyword').val();
+   if(keyword=='站内搜索')
+     keyword='';
+	 switch(sear){
+	 case "全网": channelID="";
+	 break;
+	 case "新闻": channelID="216";
+	 break;
+	 case "视频": channelID="30566";
+	 break;
+	 case "图片": channelID="13451";
+	 }
+  window.location='http://trends.tibet.cn/search/search.php?keyword='+keyword+'&channelID='+channelID;
+}
+</script>
+<div class="header_box" id="header">
+	<div class="header">
+    	<h1 class="logo"><a href="http://www.tibet.cn/"><img src="/img/logo.gif" /></a></h1>
+        <div class="top">
+            <div class="left">
+                <span><a href="javascript:zh_tran('s');" id="zh_click_s">中文版</a></span><span><a href="http://eng.tibet.cn/" target="_blank">English</a></span><span><a href="http://german.tibet.cn/" target="_blank">Deutsch</a></span><span><a href="http://french.tibet.cn/" target="_blank">Français</a></span><span><a href="http://tb.tibet.cn/" target="_blank"><img src="/img/zangwen.png" /></a></span><span><a href="javascript:zh_tran('t');" id="zh_click_t">中文繁体</a></span>
+            </div>
+            <div class="right">
+                <div class="ico"><span id="checker"></span><span class="ico1" id="login_ico"></span><span class="ico2" onclick="SetHome(this,'http://www.tibet.cn');"></span><span class="ico3" onclick="AddFavorite('中国西藏网','http://www.tibet.cn')"></span><a class="ico4" id="sina" href="http://weibo.com/chinaxizang"><div class="code_sina"><img src="/images/weibo.jpg" /></div></a><span class="ico5" id="wenxi"><div class="code_wenxin"><img src="/images/weixin.jpg" /></div></span></div>
+                <div class="txt"><!--<a href="#">[新闻客户端]</a><a href="#">[手机版]</a>--><a href="http://bbs.tibet.cn/portal.php" target="_blank">[社区]</a></div>
+            </div>
+        </div>
+        <div class="menu">
+        <ul>
+        	<li><a href="http://www.tibet.cn/news/" target="_blank">新闻</a></li>
+            <li><a href="http://www.tibet.cn/opinion/" target="_blank">观察</a></li>
+            <li><a href="http://www.tibet.cn/aid-tibet/" target="_blank">援藏</a></li>
+            <li><a href="http://www.tibet.cn/finance/" target="_blank">财经</a></li>
+            <li><a href="http://www.tibet.cn/education/" target="_blank">教育</a></li>
+            <li><a href="http://www.tibet.cn/video/" target="_blank">视频</a></li>
+            <li><a href="http://www.tibet.cn/tibet-rediscovery/" target="_blank">秘闻</a></li>
+            <li><a href="http://www.tibet.cn/travel/index.shtml" target="_blank">旅游</a></li>
+            <li><a href="http://www.tibet.cn/culture/" target="_blank">文化</a></li>
+            <li><a href="http://www.tibet.cn/religion/" target="_blank">宗教</a></li>
+            <li><a href="http://www.tibet.cn/medicine/" target="_blank">医疗</a></li>
+            <li><a href="http://www.tibet.cn/photo/" target="_blank">图片</a></li>
+            <li><a href="http://www.tibet.cn/cloud/" target="_blank">资料云</a></li>
+            <!--<li><a href="#">学藏语</a></li>
+            <li><a href="#">卓玛在线</a></li>
+            <li><a href="#">购物</a></li>-->
+        </ul>
+        </div>
+        <div class="date"><span style="float:left;line-height:30px;">
+        <script>oDate();</script> 藏历：</span><iframe style="height:22px; width:100px;background-color:transparent" frameborder="0" marginheight=8 marginwidth=0 allowTransparency="true" scrolling="no" src="http://www.tibet.cn/zangli/zangli.html"></iframe></div>
+        <div class="search_box">
+        	<select name="sear">
+            	<option value="">全网</option>
+            	<option value="216">新闻</option>
+            	<option value="30566">视频</option>
+				<option value="13451">图片</option>
+            </select>
+            <div class="search"><input class="txt" type="text" value="站内搜索" onfocus="if(this.value==this.defaultValue){this.value='';}" onblur="if(this.value==''||this.value==this.defaultValue){this.value=this.defaultValue;}" id='keyword' onkeypress="if(event.keyCode==13) {suo();}" /><input type="button"  class="btn" onclick="suo()" /></div>                       
+        </div>
+</div>
+</div>
+ <script>
+  function checker(){
+    $.ajax({
+	   type : 'post',
+   	   url : 'http://trends.tibet.cn/api/checker.php',
+  dataType :'jsonp',
+     jsonp : 'callback',
+   success : function(json){
+      if(json.status==1){
+	     //$('#login_ico[class="ico1"]').hide(); 
+	     $('#checker').html(json.message);
+         
+	  }
+   }
+	});
+}
+  function logout(){
+     $.ajax({
+	    url : 'http://trends.tibet.cn/api/quit.php',
+   dataType : 'jsonp',
+      jsonp : 'callback',
+	success : function(json){
+	   if(json.status==1){
+	   		    $.ajax({
+				 type:'get',
+				 url:'http://bbs.tibet.cn/logout.php',
+				 data:{'mod':'logging','action':'logout'},
+				 dataType:'jsonp',
+				 jsonp:'callback',
+				 success:function(json){
+				   //console.log(json);
+				   location.reload();
+				 }
+				});
+	    //location.reload();
+	   }
+	   }
+	 });
+  }
+   function logo(){
+     var user=$("#username").val();
+	 var pass=$("#password").val();
+	 var yzm=$("#yz").val();
+	 if(user==""){
+	   alert("请输入用户名");
+	   $("#username").focus();
+	   return false;
+	 }
+	 if(pass==""){
+	  alert("请输入密码");
+	  $("#password").focus();
+	  return false;
+	 }
+	 if(yzm==""){
+	 alert("请输入验证码");
+	 $("#yz").focus();
+	 return false;
+	 }
+	 $.ajax({
+	  type : 'get',
+	  data : 'yzm='+yzm,
+	  url  : 'http://trends.tibet.cn/api/code.php',
+  dataType : 'jsonp',
+     jsonp : 'callback',
+   success : function(json){
+     if(json==1){
+		 $.ajax({
+			type : 'get',
+			data : {'username':''+user,'password':''+pass,'yzm':''+yzm},
+			url  : 'http://trends.tibet.cn/api/login.php',
+		dataType : 'jsonp',
+		  jsonp  : 'callback',
+		 success : function(json){
+		   if(json.status==1){
+		    $.ajax({
+				 type:'get',
+				 url:'http://bbs.tibet.cn/login.php',
+				 data:{'mod':'logging','action':'login','username':user,'password':pass},
+				 dataType:'jsonp',
+				 jsonp:'callback',
+				 success:function(json){
+				   //console.log(json);
+				   location.reload();
+				 }
+				});
+			//location.reload();
+		   }
+		   else{
+			alert(json.msg);
+		   }
+		 }
+		 });
+	 }else{
+	  alert("验证码错误");
+	  $("#yz").focus();
+	 }
+   }
+});	 
+   }
+   
+checker();
+ </script>
+<!--登录开始-->
+<div class="login" id="login">
+	<div class="login_title"><img src="/img/login_logo.gif" /><span class="close" id="close"></span></div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="name">用户名</td>
+        <td><input id="username" class="txt" type="text" /></td>
+      </tr>
+      <tr>
+        <td class="name">密码</td>
+        <td><input id="password" class="txt" type="password" /></td>
+      </tr>
+      <tr>
+        <td class="name">验证码</td>
+        <td><div class="code"><input id="yz" type="text" /><span><img width='70px' height='28px' src="http://trends.tibet.cn/util/yzm.php" onclick="javascript:this.src='http://trends.tibet.cn/util/yzm.php?rand='+Math.random();" /></span></div></td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td><span class="btn" onclick="logo()">登录</span><span class="next"><input type="checkbox" name="checkbox" id="checkbox">下次自动登录</span></td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td class="last"><span><a id="forgot_password">忘记密码</a></span><span><a href="http://www.tibet.cn/include/register.shtml">立即注册</a></span></td>
+      </tr>
+    </table>
+    </div>
+<!--登录结束-->
+<!--忘记密码开始-->
+<div class="login forgot" id="forgot">
+	<div class="login_title"><img src="/img/login_logo.gif" /><span class="close" id="close2"></span></div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="name">用户名</td>
+        <td><input rel="for" class="txt" id="forgotname" type="text" /></td>
+      </tr>
+      <tr>
+        <td class="name">邮箱</td>
+        <td><input rel="for" class="txt" id="forgotemail" type="text" /></td>
+      </tr>
+      <tr>
+        <td class="name">新密码</td>
+        <td><input rel="for" class="txt" id="forgotpw" type="password" /></td>
+      </tr>
+      <tr>
+        <td class="name">确认密码</td>
+        <td><input rel="for" class="txt" id="forgotpws" type="password" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><span class="btn" onclick="forgot()">提交</span></td>
+      </tr>
+
+    </table>    
+</div>
+<!--忘记密码结束-->
+<script>
+function header_top(){
+	var oSina=document.getElementById('sina');	
+	var oWenxi=document.getElementById('wenxi');	
+	oSina.onmouseover=function(){
+		oSina.className='on';
+	};
+	oSina.onmouseout=function(){
+		oSina.className='';
+	};
+	oWenxi.onmouseover=function(){
+		oWenxi.className='on';	
+	};
+	oWenxi.onmouseout=function(){
+		oWenxi.className='';
+	};
+	var oLoginIco=document.getElementById('login_ico');
+	var oLogin=document.getElementById('login');
+	var oClose=document.getElementById('close');
+	oLoginIco.onclick=function(){
+		oLogin.style.display='block';
+	};
+	oClose.onclick=function(){
+		oLogin.style.display='none';
+	};
+	var oForgotPassword=document.getElementById('forgot_password');
+	var oForgot=document.getElementById('forgot');
+	var oClose2=document.getElementById('close2');
+	oForgotPassword.onclick=function(){
+		oLogin.style.display='none';
+		oForgot.style.display='block';
+		
+	};	
+	oClose2.onclick=function(){
+		oForgot.style.display='none';
+	};	
+	
+};
+ header_top();
+</script>
+
+<!--头部结束-->
+<div class="wrap">
+
+    <div class="box">
+    	<div class="index_box1"><a href="http://www.tibet.cn/about-us/index.shtml" title="带你一起看西藏" target="_blank"><img src="http://image.tibet.cn/images/2015/9/24/20159241443072296297_47.jpg" alt="带你一起看西藏" title="带你一起看西藏"/></a>
+</div>
+    </div>
+    <div class="box">
+    	<div class="index_box8">
+        	<div class="left">
+            	            	<div class="pic"><a href="/news/focus/1446010817972.shtml" title="谁说默克尔访华“压力山大” 她只是来的很“巧”" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281446011173973_115_s.jpg" alt="谁说默克尔访华“压力山大” 她只是来的很“巧”" title="谁说默克尔访华“压力山大” 她只是来的很“巧”"/></a></div>
+                <div class="bg"></div>
+                <div class="txt"><h4><a href="/news/focus/1446010817972.shtml" title="谁说默克尔访华“压力山大” 她只是来的很“巧”" target="_blank">谁说默克尔访华“压力山大” 她只是来的很“巧”</a></h4><p>作为中共十八届五中全会后第一个来访的外国元首，默克尔此行将刷新西方元首访华次数的新纪录。而由于访问时间上的各种“神同步”和“神节奏”，默克尔此次访华也引发了舆论的一些联想和猜测。</p></div>
+
+            </div>
+            <div class="index_box8_right">
+                <div class="right">
+                    <span class="index_box8_prev"></span>
+                    <div class="index_box8_main" id="index_box8_main">
+                        <ul>
+                            <li><div class="pic"><a href="/photo/landscape/ah/content_9114.shtml" title="拉萨秋天童话" target="_blank"><img src="http://image.tibet.cn/images/2015/10/27/201510271445913290591_61.jpg" alt="拉萨秋天童话" title="拉萨秋天童话"/></a></div><div class="bg"></div><div class="txt"><a href="/photo/landscape/ah/content_9114.shtml" title="拉萨秋天童话" target="_blank">拉萨秋天童话</a></div></li><li><div class="pic"><a href="/news/newspics/1445907988264.shtml" title="阿旺扎巴西藏当代绘画艺术展在京开展" target="_blank"><img src="http://image.tibet.cn/images/2015/10/27/201510271445908047724_39.jpg" alt="阿旺扎巴西藏当代绘画艺术展在京开展" title="阿旺扎巴西藏当代绘画艺术展在京开展"/></a></div><div class="bg"></div><div class="txt"><a href="/news/newspics/1445907988264.shtml" title="阿旺扎巴西藏当代绘画艺术展在京开展" target="_blank">阿旺扎巴西藏当代绘画艺术展在京开展</a></div></li><li><div class="pic"><a href="/photo/news/ah/content_9110.shtml" title="第四届世界佛教论坛" target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445823275761_62.jpg" alt="第四届世界佛教论坛" title="第四届世界佛教论坛"/></a></div><div class="bg"></div><div class="txt"><a href="/photo/news/ah/content_9110.shtml" title="第四届世界佛教论坛" target="_blank">第四届世界佛教论坛</a></div></li><li><div class="pic"><a href="/photo/landscape/ah/content_9109.shtml" title="雨中南伊沟秋景" target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445822130263_61.jpg" alt="雨中南伊沟秋景" title="雨中南伊沟秋景"/></a></div><div class="bg"></div><div class="txt"><a href="/photo/landscape/ah/content_9109.shtml" title="雨中南伊沟秋景" target="_blank">雨中南伊沟秋景</a></div></li><li><div class="pic"><a href="/photo/news/ah/content_9108.shtml" title="班禅出席“责任与担当——佛教青年论坛” " target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445821503316_62.jpg" alt="班禅出席“责任与担当——佛教青年论坛” " title="班禅出席“责任与担当——佛教青年论坛” "/></a></div><div class="bg"></div><div class="txt"><a href="/photo/news/ah/content_9108.shtml" title="班禅出席“责任与担当——佛教青年论坛” " target="_blank">班禅出席“责任与担当——佛教青年论坛” </a></div></li><li><div class="pic"><a href="/photo/news/ah/content_9107.shtml" title="班禅出席佛教论坛  又有新亮点" target="_blank"><img src="http://image.tibet.cn/images/2015/10/25/201510251445724925512_61.gif" alt="班禅出席佛教论坛  又有新亮点" title="班禅出席佛教论坛  又有新亮点"/></a></div><div class="bg"></div><div class="txt"><a href="/photo/news/ah/content_9107.shtml" title="班禅出席佛教论坛  又有新亮点" target="_blank">班禅出席佛教论坛  又有新亮点</a></div></li><li><div class="pic"><a href="/photo/news/ah/content_9106.shtml" title="第四届世界佛教论坛在无锡开幕  孙春兰致辞" target="_blank"><img src="http://image.tibet.cn/images/2015/10/25/201510251445724628467_61.gif" alt="第四届世界佛教论坛在无锡开幕  孙春兰致辞" title="第四届世界佛教论坛在无锡开幕  孙春兰致辞"/></a></div><div class="bg"></div><div class="txt"><a href="/photo/news/ah/content_9106.shtml" title="第四届世界佛教论坛在无锡开幕  孙春兰致辞" target="_blank">第四届世界佛教论坛在无锡开幕  孙春兰致辞</a></div></li><li><div class="pic"><a href="http://www.tibet.cn/special/k/mlxz2015.shtml" title="魅力西藏摄影作品征集活动" target="_blank"><img src="http://image.tibet.cn/images/2015/9/11/20159111441958634110_39.jpg" alt="魅力西藏摄影作品征集活动" title="魅力西藏摄影作品征集活动"/></a></div><div class="bg"></div><div class="txt"><a href="http://www.tibet.cn/special/k/mlxz2015.shtml" title="魅力西藏摄影作品征集活动" target="_blank">魅力西藏摄影作品征集活动</a></div></li>
+                        </ul>
+                    </div>
+                    <span class="index_box8_next"></span>
+                <script>
+                jQuery("#index_box8_main").jCarouselLite({
+                    auto:1000,
+                    speed:1000,
+                    visible:3,
+                    vertical:true,
+                    scroll:1,
+                    btnNext: ".index_box8_next",
+                    btnPrev: ".index_box8_prev",
+                    stop:$("#index_box8_main"),
+                    btnGoOver:true
+                }); 
+                </script>    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="box">
+    	<div class="index_box2">
+            <div class="left"> 
+                <div class="txt_list">
+                    <div class="title1"><h3><a href="/news/hot/list.shtml" target="_blank">热点</a></h3><div class="bg"></div></div>
+                	<ul class="top">
+                	        
+            <li><a href="/news/hot/1445983104742.shtml" title="习近平谋划“十三五”的足迹" target="_blank" style="color:">习近平谋划“十三五”的足迹</a>
+            </li>
+            
+            <li><a href="/news/hot/1445947210566.shtml" title="应习近平邀请 利比里亚总统将访华" target="_blank" style="color:">应习近平邀请 利比里亚总统将访华</a>
+            </li>
+            
+            <li><a href="/news/hot/1445947582159.shtml" title="李克强和内塔尼亚胡向2015年浦江创新论坛致贺信" target="_blank" style="color:">李克强和内塔尼亚胡向2015年浦江创新论</a>
+            </li>
+            
+            <li><a href="/news/hot/1445947353508.shtml" title="李克强会见第70届联大主席" target="_blank" style="color:">李克强会见第70届联大主席</a>
+            </li>
+            
+            <li><a href="/news/hot/14458600561.shtml" title="习近平举行仪式欢迎荷兰国王访华" target="_blank" style="color:">习近平举行仪式欢迎荷兰国王访华</a>
+            </li>
+    
+                	</ul>
+                	<ul>
+                	        
+            <li><a href="/news/hot/1445934449144.shtml" title="美国拉森号军舰进入中国南沙群岛有关岛礁邻近海域" target="_blank" style="color:">美国拉森号军舰进入中国南沙群岛有关岛</a>
+            </li>
+            
+            <li><a href="/news/hot/144592397435.shtml" title="关注“十三五”时，我们该关心什么" target="_blank" style="color:">关注“十三五”时，我们该关心什么</a>
+            </li>
+            
+            <li><a href="/news/hot/1445913564954.shtml" title="人民日报评论员：时和势都在我们这边" target="_blank" style="color:">人民日报评论员：时和势都在我们这边</a>
+            </li>
+            
+            <li><a href="/news/hot/1445864229201.shtml" title="一次成果丰硕意义深远的历史性访问" target="_blank" style="color:">一次成果丰硕意义深远的历史性访问</a>
+            </li>
+            
+            <li><a href="/news/hot/1445859100699.shtml" title="马克思主义中国化新境界" target="_blank" style="color:">马克思主义中国化新境界</a>
+            </li>
+    
+                	</ul>
+                	<ul>
+                	        
+            <li><a href="/news/hot/1445988105158.shtml" title="全面建成小康社会的路线图" target="_blank" style="color:">全面建成小康社会的路线图</a>
+            </li>
+            
+            <li><a href="/news/hot/1445946127950.shtml" title="“十三五”：站在世界地图前制定的五年规划" target="_blank" style="color:">“十三五”：站在世界地图前制定的五年</a>
+            </li>
+            
+            <li><a href="/news/hot/144592410313.shtml" title="GDP破7的增速不必太在意也不能不在意" target="_blank" style="color:">GDP破7的增速不必太在意也不能不在意</a>
+            </li>
+            
+            <li><a href="/news/hot/1445913417179.shtml" title="理性看待三季度中国经济增长“破七”" target="_blank" style="color:">理性看待三季度中国经济增长“破七”</a>
+            </li>
+            
+            <li><a href="http://fms.news.cn/swf/zgm2015/02tpzf/index.html" title="梦想进行时大别山里的脱贫致富人" target="_blank" style="color:">梦想进行时大别山里的脱贫致富人</a>
+            </li>
+    
+                	</ul>
+                	<ul>
+                	        
+            <li><a href="/news/hot/1446003388432.shtml" title="“互联网+”：激发转型中国新动能" target="_blank" style="color:">“互联网+”：激发转型中国新动能</a>
+            </li>
+            
+            <li><a href="/news/hot/1445924029408.shtml" title="“发现双创之星”大型活动走进上海" target="_blank" style="color:">“发现双创之星”大型活动走进上海</a>
+            </li>
+            
+            <li><a href="http://news.cntv.cn/special/sczx/" title="“发现双创之星”活动" target="_blank" style="color:#e7474e">“发现双创之星”活动</a>
+            </li>
+            
+            <li><a href="/news/hot/1445265246460.shtml" title="中央网信办所属事业单位公开招聘" target="_blank" style="color:">中央网信办所属事业单位公开招聘</a>
+            </li>
+    
+                	</ul>                	
+                	
+                </div>
+                <div class="pic_list">
+                    <div class="title1"><h3><a href="/news/focus/list.shtml" target="_blank">聚焦</a></h3><div class="bg"></div></div>
+                	<ul>
+                    	                    	<li><div class="pic"><a href="/news/focus/1446002259540.shtml" title="【解读】 宗教要与社会主义社会相适应 " target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281446004278774_47_s.jpg" alt="【解读】 宗教要与社会主义社会相适应 " title="【解读】 宗教要与社会主义社会相适应 "/></a></div><div class="txt"><h4><a href="/news/focus/1446002259540.shtml" title="【解读】 宗教要与社会主义社会相适应 " target="_blank">【解读】 宗教要与社会主义社会相适应 </a></h4><p>在当今中国，引导宗教与社会主义社会相适应就成了处理政教关系的重要内容之一。
+<a href="/news/focus/1446002259540.shtml" target="_blank">[详细]</a></p></div></li>
+                    	<li><div class="pic"><a href="/news/focus/1445997815924.shtml" title="医疗人才“组团式”援藏受欢迎" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445997883478_39.JPG" alt="医疗人才“组团式”援藏受欢迎" title="医疗人才“组团式”援藏受欢迎"/></a></div><div class="txt"><h4><a href="/news/focus/1445997815924.shtml" title="医疗人才“组团式”援藏受欢迎" target="_blank">医疗人才“组团式”援藏受欢迎</a></h4><p>2015年10月27日，“推进医疗人才‘组团式’援藏工作专题会议” 在拉萨召开。<a href="/news/focus/1445997815924.shtml" target="_blank">[详细]</a></p></div></li>
+                    	<li><div class="pic"><a href="/news/focus/1445997401247.shtml" title="上海国际艺术节西藏文化周开幕" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445997462611_41.jpg" alt="上海国际艺术节西藏文化周开幕" title="上海国际艺术节西藏文化周开幕"/></a></div><div class="txt"><h4><a href="/news/focus/1445997401247.shtml" title="上海国际艺术节西藏文化周开幕" target="_blank">上海国际艺术节西藏文化周开幕</a></h4><p>本次《雪域撷珍——西藏文物珍品展》从西藏博物馆、布达拉宫、罗布林卡等文物机构...<a href="/news/focus/1445997401247.shtml" target="_blank">[详细]</a></p></div></li>
+                    	<li><div class="pic"><a href="/news/focus/1445993370334.shtml" title="第三轮巡视工作将启动 有哪些高要求？" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445993851235_47_s.jpg" alt="第三轮巡视工作将启动 有哪些高要求？" title="第三轮巡视工作将启动 有哪些高要求？"/></a></div><div class="txt"><h4><a href="/news/focus/1445993370334.shtml" title="第三轮巡视工作将启动 有哪些高要求？" target="_blank">第三轮巡视工作将启动 有哪些高要求？</a></h4><p>10月27日上午，西藏自治区党委召开2015年第三轮巡视工作动员部署会。王拥军指出，...<a href="/news/focus/1445993370334.shtml" target="_blank">[详细]</a></p></div></li>
+                    	<li><div class="pic"><a href="/news/focus/1445994945223.shtml" title="北坡攀登珠峰 明年要33万" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445994903561_39.jpg" alt="北坡攀登珠峰 明年要33万" title="北坡攀登珠峰 明年要33万"/></a></div><div class="txt"><h4><a href="/news/focus/1445994945223.shtml" title="北坡攀登珠峰 明年要33万" target="_blank">北坡攀登珠峰 明年要33万</a></h4><p>记者27日从西藏圣山登山探险服务有限公司获悉，2016年攀登珠峰北坡报名接近尾声，...<a href="/news/focus/1445994945223.shtml" target="_blank">[详细]</a></p></div></li>
+                    	<li><div class="pic"><a href="/news/focus/1446003680498.shtml" title="四川丹巴嘉绒藏族风情节开幕 美女如云" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281446012149352_47_s.jpg" alt="四川丹巴嘉绒藏族风情节开幕 美女如云" title="四川丹巴嘉绒藏族风情节开幕 美女如云"/></a></div><div class="txt"><h4><a href="/news/focus/1446003680498.shtml" title="四川丹巴嘉绒藏族风情节开幕 美女如云" target="_blank">四川丹巴嘉绒藏族风情节开幕 美女如云</a></h4><p>10月26日，四川丹巴嘉绒文化风情节暨第二届中国嘉绒文化研讨会在素有“中国最美乡...<a href="/news/focus/1446003680498.shtml" target="_blank">[详细]</a></p></div></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                                          
+            	<div class="links">
+                 	<ul>
+                    	<li class="li_1"><a href="http://www.xinhuanet.com/fortune/jjssw/index.htm" target="_blank"><img src="/images/bannerjujiao.jpg"/></a></li>
+                    	<li class="li_2"><a href="http://www.tibet.cn/special/zt/tibet50n.shtml" target="_blank"><img src="/images/bannerdmxz.jpg"/></a></li>
+                    </ul>
+                </div>
+                <div class="player">
+                	<h3 class="title2"><a href="/video/" target="_blank"> 直播藏区</a></h3>
+                    <div class="player_con"><div id="player_rtmp"></div>
+<script>
+liveplayer.showPlayer({url:"rtmp://10.10.1.97/video/yshi",divid:"player_rtmp",width:"280",height:"190",autoplay:false});
+</script>
+</div>
+<div class="live_logo"><img src="http://image.tibet.cn/images/2015/10/14/201510141444803490977_131.jpg" alt="流地址" title="流地址"/></div>
+<div class="live_play"></div>
+<script>
+$(function(){
+	$(".live_play").click(function(){
+		$(".live_logo").hide();
+		$(".live_play").hide();
+		liveplayer.showPlayer({url:"rtmp://10.10.1.97/video/yshi",divid:"player_rtmp",width:"280",height:"190"});
+	})
+	})
+</script>
+
+                </div>
+                <div class="wnews">
+                	<h3 class="title2"><a href="/video/wdy/list.shtml" target="_blank">微新闻</a></h3>
+                	<ul>
+                    	                    	<li><div class="pic"><a href="/news/focus/1446003509190.shtml" title="第六届西藏考古与艺术国际学术讨论会在浙江大学举行" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281446003504251_172.jpg" alt="第六届西藏考古与艺术国际学术讨论会在浙江大学举行" title="第六届西藏考古与艺术国际学术讨论会在浙江大学举行"/></a></div><div class="txt"><h4><a href="/news/focus/1446003509190.shtml" title="第六届西藏考古与艺术国际学术讨论会在浙江大学举行" target="_blank">第六届西藏考古与艺术国际学术讨论会在浙江大学举行</a></h4></div></li>
+                    	<li><div class="pic"><a href="/news/focus/1445995813593.shtml" title="阿坝2015年新生熊猫宝宝集中亮相" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445995872923_66_s.jpg" alt="阿坝2015年新生熊猫宝宝集中亮相" title="阿坝2015年新生熊猫宝宝集中亮相"/></a></div><div class="txt"><h4><a href="/news/focus/1445995813593.shtml" title="阿坝2015年新生熊猫宝宝集中亮相" target="_blank">阿坝2015年新生熊猫宝宝集中亮相</a></h4></div></li>
+                    	<li><div class="pic"><a href="/news/focus/1445925779878.shtml" title="拉萨至林芝开通低价空中快线 往返票价300元起" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445992789756_47_s.jpg" alt="拉萨至林芝开通低价空中快线 往返票价300元起" title="拉萨至林芝开通低价空中快线 往返票价300元起"/></a></div><div class="txt"><h4><a href="/news/focus/1445925779878.shtml" title="拉萨至林芝开通低价空中快线 往返票价300元起" target="_blank">拉萨至林芝开通低价空中快线 往返票价300元起</a></h4></div></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+    <a href="http://www.tibet.cn/special/j/zy6cigzzth.shtml" title="中央第六次西藏工作座谈会专题" target="_blank"><img src="http://tupian.tibettour.com.cn/images/2015/8/30/20158301440916619052_54.jpg" alt="中央第六次西藏工作座谈会专题" title="中央第六次西藏工作座谈会专题"/></a>
+
+    </div>
+    <div class="box">
+        <div class="index_box3">
+        	<h3 class="title2" id="tabs3"><span class="on"><a href="/photo/" target="_blank">图片频道</a></span><!--<span><a href="http://photo.tibet.cn/">西藏图库</a></span>--></h3>
+            <div id="tabs3_main_1">
+                <span class="index_box3_prev" id="tabs3_prev"></span>
+                <div class="index_box3_main" id="index_box3_main_1">
+                    <ul>
+                                            <li><a href="/photo/special/ad/content_9129.shtml" title="中华环保世纪行墨脱县德兴村" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445997134766_63.jpg" alt="中华环保世纪行墨脱县德兴村" title="中华环保世纪行墨脱县德兴村"/>中华环保世纪行墨脱县德兴</a></li>
+                    <li><a href="/photo/landscape/ah/content_9114.shtml" title="拉萨秋天童话" target="_blank"><img src="http://image.tibet.cn/images/2015/10/27/201510271445913317470_61.jpg" alt="拉萨秋天童话" title="拉萨秋天童话"/>拉萨秋天童话</a></li>
+                    <li><a href="/photo/special/ad/content_9113.shtml" title="中华环保世纪行米林县垃圾处理" target="_blank"><img src="http://image.tibet.cn/images/2015/10/27/201510271445907737645_63.jpg" alt="中华环保世纪行米林县垃圾处理" title="中华环保世纪行米林县垃圾处理"/>中华环保世纪行米林县垃圾</a></li>
+                    <li><a href="/photo/special/ad/content_9112.shtml" title="中华环保世纪行巴吉村实地调查" target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445839980473_63.jpg" alt="中华环保世纪行巴吉村实地调查" title="中华环保世纪行巴吉村实地调查"/>中华环保世纪行巴吉村实地</a></li>
+                    <li><a href="/photo/news/ah/content_9111.shtml" title="拉萨篮球联赛战火重燃" target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445826738276_62.jpg" alt="拉萨篮球联赛战火重燃" title="拉萨篮球联赛战火重燃"/>拉萨篮球联赛战火重燃</a></li>
+                    <li><a href="/photo/news/ah/content_9108.shtml" title="班禅出席佛教青年论坛" target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445823555936_62.jpg" alt="班禅出席佛教青年论坛" title="班禅出席佛教青年论坛"/>班禅出席佛教青年论坛</a></li>
+                    <li><a href="/photo/news/ah/content_9110.shtml" title="第四届世界佛教论坛闭幕" target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445823521835_62.jpg" alt="第四届世界佛教论坛闭幕" title="第四届世界佛教论坛闭幕"/>第四届世界佛教论坛闭幕</a></li>
+                    <li><a href="/photo/landscape/ah/content_9109.shtml" title="雨中南伊沟秋景" target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445822089891_61.jpg" alt="雨中南伊沟秋景" title="雨中南伊沟秋景"/>雨中南伊沟秋景</a></li>
+
+                    </ul>
+                </div>
+                <span class="index_box3_next" id="tabs3_next"></span>
+            </div>
+            <div id="tabs3_main_2" style="display:none;">
+                <span class="index_box3_prev" id="tabs3_prev2"></span>
+                <div class="index_box3_main" id="index_box3_main2">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <span class="index_box3_next" id="tabs3_next2"></span>
+            </div>
+        </div>  
+        <script>
+		//tabs2("tabs3","on","span");
+		jQuery("#index_box3_main_1").jCarouselLite({
+			  btnNext: "#tabs3_prev",
+			  btnPrev: "#tabs3_next",
+			  speed:1000,
+			  visible:5,
+			  scroll:1,
+			  auto:1000
+			  });
+        </script>              
+    </div>
+    <div class="box">
+    	<div class="index_box4">
+        	<div class="left">
+            	<ul class="pic_list">
+                	<li><div class="title1"><h3><a href="/opinion/" target="_blank">观察 / 人权</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/opinion/media_view/1445997782657.shtml" title="十八届五中全会召开 改革创新是“十三五”的主色调" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445997759320_43.jpg" alt="十八届五中全会召开 改革创新是“十三五”的主色调" title="十八届五中全会召开 改革创新是“十三五”的主色调"/>十八届五中全会召开 改革创新是“十三五”的主</a></div><h4><a href="/opinion/media_view/1445997782657.shtml" title="十八届五中全会召开 改革创新是“十三五”的主色调" target="_blank">十八届五中全会召开 改革创新是“十三五”的主色调</a></h4></div>
+                        <div class="txt">
+                        	<a href="/opinion/media_view/144600169542.shtml" title="十八届五中全会：勾画发展蓝图 回应民众关切" target="_blank">十八届五中全会：勾画发展蓝图 回应民众关</a>
+                        	<a href="/opinion/media_view/1445999394277.shtml" title="重实效 促落实——“双创”打造经济增长新引擎" target="_blank">重实效 促落实——“双创”打造经济增长新</a>
+                        	<a href="/opinion/media_view/1445918203524.shtml" title="以改革实效适应新常态" target="_blank">以改革实效适应新常态</a>
+                        	<a href="/opinion/media_view/1445909526625.shtml" title="五中全会，决定全面建成小康社会如何冲刺" target="_blank">五中全会，决定全面建成小康社会如何冲刺</a>
+                        </div>
+                    </li>
+                	<li><div class="title1"><h3><a href="/aid-tibet/" target="_blank">援藏 / 公益</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/news/focus/1445997815924.shtml" title="推进医疗人才“组团式”援藏 有效改善民生" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445997883478_39.JPG" alt="推进医疗人才“组团式”援藏 有效改善民生" title="推进医疗人才“组团式”援藏 有效改善民生"/>推进医疗人才“组团式”援藏 有效改善民生</a></div><h4><a href="/news/focus/1445997815924.shtml" title="推进医疗人才“组团式”援藏 有效改善民生" target="_blank">推进医疗人才“组团式”援藏 有效改善民生</a></h4></div>
+                        <div class="txt">
+                        	<a href="/aid-tibet/news/1444964823611.shtml" title="昌都市类乌齐县构建“三位一体”对口支援新格局" target="_blank">昌都市类乌齐县构建“三位一体”对口支援新</a>
+                        	<a href="/aid-tibet/news/1444790349888.shtml" title="辉煌50年雪域气象新：援藏，此心安处是吾家" target="_blank">辉煌50年雪域气象新：援藏，此心安处是吾家</a>
+                        	<a href="/aid-tibet/dkzy/1444619107622.shtml" title="深圳援藏这些年：从输血到造血" target="_blank">深圳援藏这些年：从输血到造血</a>
+                        	<a href="/aid-tibet/dkzy/1444445077599.shtml" title="雪域高原绽放簕杜鹃" target="_blank">雪域高原绽放簕杜鹃</a>
+                        </div>
+                    </li>
+                    <li><div class="title1"><h3><a href="/finance/" target="_blank">财经 / 投资</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/finance/news/1445839371728.shtml" title="山南结巴水库工程累计完成投资1.3亿" target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445840799332_54_s.jpg" alt="山南结巴水库工程累计完成投资1.3亿" title="山南结巴水库工程累计完成投资1.3亿"/>山南结巴水库工程累计完成投资1.3亿</a></div><h4><a href="/finance/news/1445839371728.shtml" title="山南结巴水库工程累计完成投资1.3亿" target="_blank">山南结巴水库工程累计完成投资1.3亿</a></h4></div>
+                        <div class="txt">
+                        	<a href="/finance/world/1445838845656.shtml" title="央行再“双降” 谨防资金流向“跑偏”" target="_blank">央行再“双降” 谨防资金流向“跑偏”</a>
+                        	<a href="/finance/news/1445839159331.shtml" title="拉萨白肉灵芝出棚 最重的一斤" target="_blank">拉萨白肉灵芝出棚 最重的一斤</a>
+                        	<a href="/finance/world/1445838669362.shtml" title="英签证放宽或引发赴英热 旅游公司提前布局抢食" target="_blank">英签证放宽或引发赴英热 旅游公司提前布局</a>
+                        	<a href="/news/hot/1445691391489.shtml" title="央行研究局局长陆磊解读降息降准和市场利率化改革" target="_blank">央行研究局局长陆磊解读降息降准和市场利率</a>
+                        </div>
+                    </li>
+                    <li><div class="title1"><h3><a href="/education/" target="_blank">教育 / 就业</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/education/public_functionary/1445995200677.shtml" title="2016年国考招录人数历年最多 与“扎堆退休”有关" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445995241094_144_s.jpg" alt="2016年国考招录人数历年最多 与“扎堆退休”有关" title="2016年国考招录人数历年最多 与“扎堆退休”有关"/>2016年国考招录人数历年最多 与“扎堆退休”有</a></div><h4><a href="/education/public_functionary/1445995200677.shtml" title="2016年国考招录人数历年最多 与“扎堆退休”有关" target="_blank">2016年国考招录人数历年最多 与“扎堆退休”有关</a></h4></div>
+                        <div class="txt">
+                        	<a href="/education/1445996932200.shtml" title="西藏文化周今起至11月1日举行" target="_blank">西藏文化周今起至11月1日举行</a>
+                        	<a href="/education/occupational_edu/1445996419122.shtml" title="西藏首次培训五省藏区基层检察长" target="_blank">西藏首次培训五省藏区基层检察长</a>
+                        	<a href="/education/public_functionary/1445997604463.shtml" title="人社部：国考扩招无关公务员流失" target="_blank">人社部：国考扩招无关公务员流失</a>
+                        	<a href="/education/public_functionary/1445998760436.shtml" title="岗位最多人数回落 国考是否“减热”？" target="_blank">岗位最多人数回落 国考是否“减热”？</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="ad"><a href="http://42.159.193.221/zt2015/zytzhy/index.html" title="聚焦中央统战工作会议" target="_blank"><img src="http://image.tibet.cn/images/2015/10/14/201510141444791675005_131.jpg" alt="聚焦中央统战工作会议" title="聚焦中央统战工作会议"/></a>
+</div>
+            	<ul class="pic_list">
+                	<li><div class="title1"><h3><a href="/video/" target="_blank">影视 / 歌舞</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/video/film/1446013697429.shtml" title="西藏往事" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281446013745006_56_s.jpg" alt="西藏往事" title="西藏往事"/>西藏往事</a></div><h4><a href="/video/film/1446013697429.shtml" title="西藏往事" target="_blank">西藏往事</a></h4></div>
+                        <div class="txt">
+                        	<a href="/video/news/1446011099702.shtml" title="社会和谐大局稳" target="_blank">社会和谐大局稳</a>
+                        	<a href="/video/news/1446011099682.shtml" title="纳木措旅游专线开通 五种路线尽览“天湖”风采" target="_blank">纳木措旅游专线开通 五种路线尽览“天湖”</a>
+                        	<a href="/video/news/1446011099843.shtml" title="坚守：用指尖“触摸”历史" target="_blank">坚守：用指尖“触摸”历史</a>
+                        	<a href="/video/news/1446011099909.shtml" title=" 新旧西藏对比 白玛次仁老人：幸福的生活带来长寿" target="_blank"> 新旧西藏对比 白玛次仁老人：幸福的生活带</a>
+                        </div>
+                    </li>
+                	<li><div class="title1"><h3><a href="/tibet-rediscovery/" target="_blank">秘闻 / 专访</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/news/focus/1445939103983.shtml" title="揭秘中国文艺兵 “将军”身份是误传?" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445993635289_39.jpg" alt="揭秘中国文艺兵 “将军”身份是误传?" title="揭秘中国文艺兵 “将军”身份是误传?"/>揭秘中国文艺兵 “将军”身份是误传?</a></div><h4><a href="/news/focus/1445939103983.shtml" title="揭秘中国文艺兵 “将军”身份是误传?" target="_blank">揭秘中国文艺兵 “将军”身份是误传?</a></h4></div>
+                        <div class="txt">
+                        	<a href="/tibet-rediscovery/summarize/1445823903571.shtml" title="缘何世界领导人有时会热衷于突然秘密出访？" target="_blank">缘何世界领导人有时会热衷于突然秘密出访？</a>
+                        	<a href="/tibet-rediscovery/summarize/1445820670422.shtml" title="印度拿南亚当后院 对尼泊尔禁运" target="_blank">印度拿南亚当后院 对尼泊尔禁运</a>
+                        	<a href="/tibet-rediscovery/summarize/1445820250222.shtml" title="哪些人可以免费逛故宫?" target="_blank">哪些人可以免费逛故宫?</a>
+                        	<a href="/tibet-rediscovery/summarize/1445823291330.shtml" title="邓颖超在遗嘱中提了啥特殊要求 没人敢去照办" target="_blank">邓颖超在遗嘱中提了啥特殊要求 没人敢去照</a>
+                        </div>
+                    </li>
+                	<li><div class="title1"><h3><a href="/travel/" target="_blank">旅游 / 休闲</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/travel/news/1446012861222.shtml" title="西藏布达拉宫“换新装” 信众争当“粉刷匠”" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281446013310637_125_s.jpg" alt="西藏布达拉宫“换新装” 信众争当“粉刷匠”" title="西藏布达拉宫“换新装” 信众争当“粉刷匠”"/>西藏布达拉宫“换新装” 信众争当“粉刷匠”</a></div><h4><a href="/travel/news/1446012861222.shtml" title="西藏布达拉宫“换新装” 信众争当“粉刷匠”" target="_blank">西藏布达拉宫“换新装” 信众争当“粉刷匠”</a></h4></div>
+                        <div class="txt">
+                        	<a href="/travel/consultation/1445930726907.shtml" title="【注意】拉萨这些地方将停电" target="_blank">【注意】拉萨这些地方将停电</a>
+                        	<a href="/travel/consultation/1445585414708.shtml" title="西藏防狼攻略（注意！我说的可不是哈士奇）" target="_blank">西藏防狼攻略（注意！我说的可不是哈士奇）</a>
+                        	<a href="/travel/news/1445478528905.shtml" title="【趣玩】秋日拉萨滨河公园的“张大人”" target="_blank">【趣玩】秋日拉萨滨河公园的“张大人”</a>
+                        	<a href="/travel/news/1445477203789.shtml" title="​照片告诉你 10月的西藏有多美" target="_blank">​照片告诉你 10月的西藏有多美</a>
+                        </div>
+                    </li>
+                    <li><div class="title1"><h3><a href="/culture/" target="_blank">文化 / 非遗</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/culture/news/1445910645584.shtml" title="国画西藏：陈星平的藏地表达" target="_blank"><img src="http://image.tibet.cn/images/2015/10/28/201510281445993713526_39.jpg" alt="国画西藏：陈星平的藏地表达" title="国画西藏：陈星平的藏地表达"/>国画西藏：陈星平的藏地表达</a></div><h4><a href="/culture/news/1445910645584.shtml" title="国画西藏：陈星平的藏地表达" target="_blank">国画西藏：陈星平的藏地表达</a></h4></div>
+                        <div class="txt">
+                        	<a href="/culture/news/1445908850452.shtml" title="《珠峰史诗》：一部九十年前的纪录片" target="_blank">《珠峰史诗》：一部九十年前的纪录片</a>
+                        	<a href="/culture/news/1445908031678.shtml" title="《西藏自治区级非物质文化遗产名录图典》出版" target="_blank">《西藏自治区级非物质文化遗产名录图典》出</a>
+                        	<a href="/culture/folk_custom/1445907312216.shtml" title="法国古典音乐邂逅藏羌民乐 阿坝法国音乐周开幕" target="_blank">法国古典音乐邂逅藏羌民乐 阿坝法国音乐周</a>
+                        	<a href="/culture/handicraft/1445907456427.shtml" title="西藏与尼泊尔唐卡艺术展将在上海图书馆展出" target="_blank">西藏与尼泊尔唐卡艺术展将在上海图书馆展出</a>
+                        </div>
+                    </li>
+                    <li><div class="title1"><h3><a href="/religion/" target="_blank">宗教 / 寺庙</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/religion/news/1445911540744.shtml" title="佛顶骨舍利今乘花车移驾牛首山(图)" target="_blank"><img src="http://image.tibet.cn/images/2015/10/27/201510271445911504294_42.jpg" alt="佛顶骨舍利今乘花车移驾牛首山(图)" title="佛顶骨舍利今乘花车移驾牛首山(图)"/>佛顶骨舍利今乘花车移驾牛首山(图)</a></div><h4><a href="/religion/news/1445911540744.shtml" title="佛顶骨舍利今乘花车移驾牛首山(图)" target="_blank">佛顶骨舍利今乘花车移驾牛首山(图)</a></h4></div>
+                        <div class="txt">
+                        	<a href="/religion/news/1445911667163.shtml" title="无锡佛博会展品创历届之最 “佛教熊猫”展出" target="_blank">无锡佛博会展品创历届之最 “佛教熊猫”展</a>
+                        	<a href="/religion/news/1445910332997.shtml" title="莫言:领导让我必须去佛教论坛" target="_blank">莫言:领导让我必须去佛教论坛</a>
+                        	<a href="/religion/news/1445909615146.shtml" title="世界佛教徒的“朋友圈”:新鲜是分享 语言是障碍" target="_blank">世界佛教徒的“朋友圈”:新鲜是分享 语言是</a>
+                        	<a href="/religion/news/1445830624959.shtml" title="众商贾聚焦“大道大商——佛教与企业文化”" target="_blank">众商贾聚焦“大道大商——佛教与企业文化”</a>
+                        </div>
+                    </li>
+                    <li><div class="title1 title11"><h3><a href="/medicine/" target="_blank">医疗 / 藏医药</a></h3><div class="bg"></div></div>
+                                                <div class="pic_box"><div class="pic"><a href="/news/focus/144582907564.shtml" title="国家中医药管理局评估验收山南藏医院重点项目" target="_blank"><img src="http://image.tibet.cn/images/2015/10/26/201510261445829136627_39.jpg" alt="国家中医药管理局评估验收山南藏医院重点项目" title="国家中医药管理局评估验收山南藏医院重点项目"/>国家中医药管理局评估验收山南藏医院重点项目</a></div><h4><a href="/news/focus/144582907564.shtml" title="国家中医药管理局评估验收山南藏医院重点项目" target="_blank">国家中医药管理局评估验收山南藏医院重点项目</a></h4></div>
+                        <div class="txt">
+                        	<a href="/medicine/news/1445582404880.shtml" title="互联网医疗步入转型期" target="_blank">互联网医疗步入转型期</a>
+                        	<a href="/medicine/news/144547987642.shtml" title="世界传统医药日：世界上有哪些“罕为人知”的传统医药" target="_blank">世界传统医药日：世界上有哪些“罕为人知”</a>
+                        	<a href="/medicine/news/144547966230.shtml" title="北京成立首个“中医儿科传承基地”" target="_blank">北京成立首个“中医儿科传承基地”</a>
+                        	<a href="/medicine/news/1445479111759.shtml" title="医疗服务价格改革意见有望年内下发" target="_blank">医疗服务价格改革意见有望年内下发</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+            	<div class="ranks">
+                	<h3 class="title2">阅读排行</h3>
+                    <ul class="tabs" id="tabs">
+                    	<li class="on">日</li>
+                    	<li>/ 周 </li>
+                    	<li>/ 月</li>
+                    </ul>
+                    <div class="tabs_main" id="tabs_main_1">
+                    	<ul>
+                        	                        	<li><span class="bg">1</span><a href="http://www.tibet.cn/news/focus/1445823117928.shtml" title="灌篮高手即视感 拉萨篮球联赛战火重燃" target="_blank">灌篮高手即视感 拉萨篮球联赛战火重燃</a></li>
+                        	<li><span class="bg">2</span><a href="http://www.tibet.cn/news/focus/144578579178.shtml" title="中国唐卡文化研究中心携顶级唐卡闪耀第四届世界佛教论坛" target="_blank">中国唐卡文化研究中心携顶级唐卡闪耀第</a></li>
+                        	<li><span class="bg">3</span><a href="http://www.tibet.cn/news/focus/1445783725980.shtml" title="第四届世界佛教论坛参与人数超历届圆满闭幕" target="_blank">第四届世界佛教论坛参与人数超历届圆满</a></li>
+                        	<li><span class="bg">4</span><a href="http://www.tibet.cn/news/focus/1445763200244.shtml" title="他们凭什么对习近平获英高规格接待说三道四？" target="_blank">他们凭什么对习近平获英高规格接待说三</a></li>
+                        	<li><span class="bg">5</span><a href="http://www.tibet.cn/news/focus/1445756791463.shtml" title="习卡会晤 英首相为何不提达赖" target="_blank">习卡会晤 英首相为何不提达赖</a></li>
+                        	<li><span>6</span><a href="http://www.tibet.cn/news/focus/1445749535247.shtml" title="诺奖得主莫言理查德现身世界佛教论坛“论道”" target="_blank">诺奖得主莫言理查德现身世界佛教论坛“</a></li>
+                        	<li><span>7</span><a href="http://www.tibet.cn/news/focus/144574513544.shtml" title="现代佛教的价值是什么？听听高僧大德怎么说" target="_blank">现代佛教的价值是什么？听听高僧大德怎</a></li>
+                        	<li><span>8</span><a href="http://www.tibet.cn/news/focus/1445740682190.shtml" title="习近平圆满结束访英 想搅局的人彻底失望了" target="_blank">习近平圆满结束访英 想搅局的人彻底失</a></li>
+                        	<li><span>9</span><a href="http://www.tibet.cn/news/focus/1445500251368.shtml" title="新党纪公布 哪条纪律最震撼" target="_blank">新党纪公布 哪条纪律最震撼</a></li>
+                        	<li><span>10</span><a href="http://www.tibet.cn/news/focus/144549492696.shtml" title="两藏僧被俄驱逐，与中国有关？" target="_blank">两藏僧被俄驱逐，与中国有关？</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="tabs_main" id="tabs_main_2" style="display:none;">
+                    	<ul>
+                        	                        	<li><span class="bg">1</span><a href="http://www.tibet.cn/news/focus/1445306063181.shtml" title="达赖党羽被俄驱逐  背后暗藏重重玄机" target="_blank">达赖党羽被俄驱逐  背后暗藏重重玄机</a></li>
+                        	<li><span class="bg">2</span><a href="http://www.tibet.cn/news/focus/1445324419341.shtml" title="佛像竟然长胡子？文坛大腕也剪美髯赠寺庙" target="_blank">佛像竟然长胡子？文坛大腕也剪美髯赠寺</a></li>
+                        	<li><span class="bg">3</span><a href="http://www.tibet.cn/news/focus/1445310237559.shtml" title="习近平到英国了 看看英网友都在讨论啥" target="_blank">习近平到英国了 看看英网友都在讨论啥</a></li>
+                        	<li><span class="bg">4</span><a href="http://www.tibet.cn/news/focus/144530889941.shtml" title="西藏也有低海拔的美丽村庄" target="_blank">西藏也有低海拔的美丽村庄</a></li>
+                        	<li><span class="bg">5</span><a href="http://www.tibet.cn/news/focus/1445308688457.shtml" title="雾中的墨脱村—幸福感爆棚" target="_blank">雾中的墨脱村—幸福感爆棚</a></li>
+                        	<li><span>6</span><a href="http://www.tibet.cn/news/focus/1445302310115.shtml" title="西藏官员涉通奸被“双开”" target="_blank">西藏官员涉通奸被“双开”</a></li>
+                        	<li><span>7</span><a href="http://www.tibet.cn/news/focus/1444976262721.shtml" title="一只小虫何以惊动中央？" target="_blank">一只小虫何以惊动中央？</a></li>
+                        	<li><span>8</span><a href="http://www.tibet.cn/news/focus/1445136167895.shtml" title="外媒：两名藏僧被俄驱逐出境" target="_blank">外媒：两名藏僧被俄驱逐出境</a></li>
+                        	<li><span>9</span><a href="http://www.tibet.cn/news/focus/1445135513301.shtml" title="最美新村如何华丽蜕变？" target="_blank">最美新村如何华丽蜕变？</a></li>
+                        	<li><span>10</span><a href="http://www.tibet.cn/news/focus/1445076341459.shtml" title="惊呆！落马官员最多的职位居然是这？！" target="_blank">惊呆！落马官员最多的职位居然是这？！</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="tabs_main" id="tabs_main_3" style="display:none;">
+                    	<ul>
+                        	                        	<li><span class="bg">1</span><a href="http://www.tibet.cn/news/focus/1445261667936.shtml" title="独家：中央与达赖方面哪3个问题不能谈？" target="_blank">独家：中央与达赖方面哪3个问题不能谈</a></li>
+                        	<li><span class="bg">2</span><a href="http://www.tibet.cn/news/focus/1445136167895.shtml" title="外媒：两名藏僧被俄驱逐出境" target="_blank">外媒：两名藏僧被俄驱逐出境</a></li>
+                        	<li><span class="bg">3</span><a href="http://www.tibet.cn/news/focus/1445076341459.shtml" title="惊呆！落马官员最多的职位居然是这？！" target="_blank">惊呆！落马官员最多的职位居然是这？！</a></li>
+                        	<li><span class="bg">4</span><a href="http://www.tibet.cn/news/focus/1445061301461.shtml" title="达赖与美国女子约会，被指“没能脱离黄色笑话”" target="_blank">达赖与美国女子约会，被指“没能脱离黄</a></li>
+                        	<li><span class="bg">5</span><a href="http://www.tibet.cn/news/focus/1445324419341.shtml" title="佛像竟然长胡子？文坛大腕也剪美髯赠寺庙" target="_blank">佛像竟然长胡子？文坛大腕也剪美髯赠寺</a></li>
+                        	<li><span>6</span><a href="http://www.tibet.cn/news/focus/1445310237559.shtml" title="习近平到英国了 看看英（腐）国网友都在讨论啥" target="_blank">习近平到英国了 看看英（腐）国网友都</a></li>
+                        	<li><span>7</span><a href="http://www.tibet.cn/news/focus/144530889941.shtml" title="西藏也有低海拔的美丽村庄" target="_blank">西藏也有低海拔的美丽村庄</a></li>
+                        	<li><span>8</span><a href="http://www.tibet.cn/news/focus/1445308688457.shtml" title="雾中的墨脱村—幸福感爆棚" target="_blank">雾中的墨脱村—幸福感爆棚</a></li>
+                        	<li><span>9</span><a href="http://www.tibet.cn/news/focus/1445306063181.shtml" title="达赖党羽被俄驱逐  背后暗藏重重玄机" target="_blank">达赖党羽被俄驱逐  背后暗藏重重玄机</a></li>
+                        	<li><span>10</span><a href="http://www.tibet.cn/news/focus/1445302310115.shtml" title="官员涉通奸被“双开”西藏打虎拍蝇维稳不冲突" target="_blank">官员涉通奸被“双开”西藏打虎拍蝇维稳</a></li>
+
+                        </ul>
+                    </div>
+<script>
+tabs("tabs","on","li");
+</script>                    
+                    
+                </div>
+                <div id="chinaso_search"></div>
+                <div class="ad"><a href="http://info.tibet.cn/xzt2013/wljbjd/201305/t20130509_1884952.html" title="网络监督专区" target="_blank"><img src="http://tupian.tibettour.com.cn/images/2015/8/4/2015841438684644488_37.jpg" alt="网络监督专区" title="网络监督专区"/></a>
+</div>
+                <ul class="ad_list">
+                	                	<li><a href="http://www.tibet.cn/cloud/" title="西藏旅游" target="_blank"><img src="http://image.tibet.cn/images/2015/10/8/20151081444294810654_66_s.jpg" alt="西藏旅游" title="西藏旅游"/></a></li>
+                	<li><a href="http://www.tibet.cn/cloud/" title="西藏人文地理" target="_blank"><img src="http://image.tibet.cn/images/2015/10/8/20151081444294568467_66_s.jpg" alt="西藏人文地理" title="西藏人文地理"/></a></li>
+
+                </ul>
+
+<script>
+function reset(){
+  $("input[name='survey'][type='radio']").removeAttr('checked');
+}
+function vote(){
+  $.ajax({
+        type : 'get',
+         url : 'http://trends.tibet.cn/api/checker.php',
+    dataType : 'jsonp',
+       jsonp : 'callback',
+	 success : function(msg){
+	    if(msg.status==1){
+		votes();
+		}else{
+		 alert('请先登录！');
+                 reset();
+		 return false;
+		}
+	 }
+  });
+}
+function votes(){
+  var title=$("input[name='survey'][type='radio']:checked").val();
+   if(!title){
+    alert('请您选择一项进行投票');
+	return false;
+  }
+  $.ajax({
+     type : 'get',
+	 data : 'title='+title,
+	 dataType : 'jsonp',
+          jsonp : 'callback',
+	 url : 'http://trends.tibet.cn/vote/vote.php',
+	 success : function(json){
+	     if(json.status==1){
+		   alert('投票成功');
+                   reset();
+		 }else{
+		   alert(json.msg);
+                    reset();
+		 }
+	 }
+  });
+}
+</script>    
+
+            	<div class="survey">
+                	<h3 class="title2">网上问卷</h3>
+                    <div class="survey_main">
+                    	<iframe frameborder="0" marginheight=8 marginwidth=0 allowTransparency="true" scrolling="no" src="http://trends.tibet.cn/poll/poll.php?globalid=2350413"></iframe>
+                    </div>
+                </div>
+                <ul class="ad_list2">
+                	                	<li><a href="http://www.net.china.com.cn/txt/2015-01/20/content_7622927.htm" title="举报“网络敲诈和有偿删帖”需知" target="_blank"><img src="http://tupian.tibettour.com.cn/images/2015/8/4/2015841438684697082_37.jpg" alt="举报“网络敲诈和有偿删帖”需知" title="举报“网络敲诈和有偿删帖”需知"/></a></li>
+                	<li><a href="http://net.china.com.cn/index.htm" title="暴恐音视频举报专区" target="_blank"><img src="http://tupian.tibettour.com.cn/images/2015/8/4/2015841438684739054_37.jpg" alt="暴恐音视频举报专区" title="暴恐音视频举报专区"/></a></li>
+
+                </ul>                  
+                <ul class="code">
+                	<li><img src="/images/China_erweima.png" />中文客户端</li>
+                	<li><img src="/images/zangwen_erweima.png" />藏文客户端</li>
+                        <li style="margin-top:10px"><img src="/images/shidaixizang.jpg" />时代西藏微信</li>
+                        <li style="margin-top:10px"><img src="/images/xizangweixin.jpg" />中国西藏网微信</li>
+                        <li style="margin-top:10px"><img src="/images/xizangweibo.jpg" />中国西藏网微博</li>
+                	<li style="margin-top:10px"><img src="/images/xizangfabu.jpg" />西藏发布微信</li>
+                </ul>              
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+    	<div class="index_box6"><!----></div>
+    </div>
+    <div class="box">
+    	<div class="index_box7">
+            <h3 class="title2"><a href="/links/index.shtml"  target="_blank" class="more">更多</a>链接</h3>
+            <ul>
+            	            	<li><a href="http://www.people.com.cn/" title="人民网" target="_blank">人民网</a></li>
+            	<li><a href="http://www.news.cn" title="新华网" target="_blank">新华网</a></li>
+            	<li><a href="http://www.china.com.cn" title="中国网" target="_blank">中国网</a></li>
+            	<li><a href="http://gb.cri.cn" title="国际在线" target="_blank">国际在线</a></li>
+            	<li><a href="http://cn.chinadaily.com.cn/" title="中国日报网" target="_blank">中国日报网</a></li>
+            	<li><a href="http://www.cntv.cn" title="央视网" target="_blank">央视网</a></li>
+            	<li><a href="http://www.youth.cn/" title="中国青年网" target="_blank">中国青年网</a></li>
+            	<li><a href="http://www.ce.cn/" title="中国经济网" target="_blank">中国经济网</a></li>
+            	<li><a href="http://www.taiwan.cn" title="中国台湾网" target="_blank">中国台湾网</a></li>
+            	<li><a href="http://www.gmw.cn/" title="光明网" target="_blank">光明网</a></li>
+            	<li><a href="http://www.cnr.cn" title="央广网" target="_blank">央广网</a></li>
+            	<li><a href="http://www.chinanews.com" title="中国新闻网" target="_blank">中国新闻网</a></li>
+            	<li><a href="http://www.cyol.net/" title="中青在线" target="_blank">中青在线</a></li>
+            	<li><a href="http://www.workercn.cn/" title="中工网" target="_blank">中工网</a></li>
+            	<li><a href="http://www.zytzb.org.cn/zytzbwz/index.htm" title="中央统战部" target="_blank">中央统战部</a></li>
+            	<li><a href="http://www.tibetculture.net/" title="西藏文化网" target="_blank">西藏文化网</a></li>
+            	<li><a href="http://www.chinatibetnews.com/" title="西藏新闻网" target="_blank">西藏新闻网</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!--底部开始-->
+<script>
+function sou(){
+  var keyword=$('#keywords').val();
+  var sear_x=$('select[name="sear_x"] option:selected').text();
+   if(keyword=='站内搜索')
+     keyword='';
+	 switch(sear_x){
+	 case "全网": channelid="";
+	 break;
+	 case "新闻": channelid="216";
+	 break;
+	 case "视频": channelid="30566";
+	 break;
+	 case "图片": channelid="13451";
+	 }
+  window.location='http://trends.tibet.cn/search/search.php?keyword='+keyword+'&channelID='+channelid;
+}
+</script>
+<div class="footer">
+	<div class="menu_bot">
+    	<div class="menu_txt"><a href="http://www.tibet.cn/" class="first">中文首页</a><span>|</span><a href="http://www.tibet.cn/news/">新闻</a><a href="http://www.tibet.cn/opinion/">观察</a><a href="http://www.tibet.cn/aid-tibet/" target="_blank">援藏</a><a href="http://www.tibet.cn/finance/">财经</a><a href="http://www.tibet.cn/education/">教育</a><a href="http://www.tibet.cn/culture/">文化</a><a href="http://www.tibet.cn/travel/">旅游</a><a href="http://www.tibet.cn/religion/">宗教</a><a href="http://www.tibet.cn/medicine/">医疗</a><a href="http://www.tibet.cn//tibet-rediscovery/">秘闻</a><a href="http://www.tibet.cn/video/">影视</a><a href="http://www.tibet.cn/photo/">图片</a><a href="http://www.tibet.cn/cloud/">资料云</a></div>
+        <div class="back"><a href="/">返回首页</a></div>
+        <div class="search_box">
+            <div class="search"><input class="txt" type="text" value="站内搜索" onkeypress="if(event.keyCode==13) {suo();}" onfocus="if(this.value==this.defaultValue){this.value='';}" onblur="if(this.value==''||this.value==this.defaultValue){this.value=this.defaultValue;}" id='keywords'  /></div>
+        	<select name="sear_x">
+            	<option value="">全网</option>
+            	<option value="216">新闻</option>
+            	<option value="30566">视频</option>
+				<option value="13451">图片</option>
+            </select>
+            <input type="button" class="btn"  value="搜索" onclick='sou()' />
+        </div>
+    </div>
+    <div class="info">
+    	<h1><a href="/"><img src="http://www.tibet.cn/img/logo_bot.gif" /></a></h1>
+        <div class="txt">
+        	<p><span><a href="http://www.tibet.cn/footer/content_1.shtml" target="_blank">关于我们</a></span><span>|</span><a href="http://www.tibet.cn/footer/content_2.shtml" target="_blank">网站声明</a></span><span>|</span><span><a href="http://www.tibet.cn/footer/content_3.shtml" target="_blank">诚聘英才</a></span><span>|</span><span><a href="http://www.tibet.cn/footer/content_4.shtml" target="_blank">广告服务</a></span><span>|</span><span><a href="#" target="_blank">频道导航</a></span><span>|</span><span><a href="http://www.tibet.cn/footer/content_5.shtml" target="_blank">纠错热线</a></span></p>
+            <p>中国西藏网 版权所有</p>
+            <p class="arial">Copyright© China Tibet Online</p>
+            <p class="arial">E-mail: webmaster@tibet.cn Tel:010-58336000</p>
+            <p class="arial">广播电视节目制作经营许可证 （京）字第04446号</p>
+            <p class="arial">京ICP备 12020827号-1   京公网安备110102001709-1</p>
+        </div>
+    </div>
+</div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?553af600e9264d3f648d690abb05a5d6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script src="http://data.tibet.cn/webengine/newstat/www.tibet.cn.js"></script>
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"7q02k1a0Sn00of", domain:"tibet.cn",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=7q02k1a0Sn00of" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->  
+<script src="http://www.tibet.cn/js/tide_stat.js"></script>
+
+<!--底部结束-->
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta name="robots" content="" />
+<meta name="author" content="" />
+<meta name="copyright" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="filetype" content="1">
+<meta name="publishedtype" content="1">
+<meta name="pagetype" content="2">
+<meta name="catalogs" content="1">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title></title>
+<link href="/img/2011people/2011people_index_20110601.css" type="text/css" rel="stylesheet" media="all"  />
+<link href="/img/2011people/2011people_index_20111009.css" type="text/css" rel="stylesheet" media="all"  />
+<!--[if IE]>
+<style type="text/css">
+.project ul.hot li{padding:0px 0 0px 8px;}
+.gruop ul.dian_12 li{padding:2px 0 1px 12px;}
+#play{margin-top:-10px;}
+</style>
+<![endif]-->
+<!--[if IE 6]>
+<link href="/img/2011people/ie6_style_20110601.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<link href="/img/2011people/ie6_style_20111009.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<![endif]-->
+<!--[if !IE]><!-->
+<style type="text/css">
+.paper span{display:block;width:230px;padding:0 0 0 6px;line-height:195%;}
+</style>
+<!--<![endif]-->
+<script src="http://www.people.com.cn/img/2011people/jquery-1.4.3.min.js" type="text/javascript"></script>
+<script src="http://img01.people.com.cn/img/2011people/swfobject.js" language="javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$("#enter_lab").click(function(){
+	  window.location=$(this).find("a").attr("href"); return false;});
+	});
+</script>
+<script type=text/javascript>
+$(function(){
+	var t = n = 0, count = $("#playShow a").size();
+	$("#playShow a:not(:first-child)").hide();
+	$("#playText").html($("#playShow a:first-child").find("img").attr('alt'));
+	$("#playNum a:first").css({"background":"#cc0000",'color':'#fff'});
+	$("#playText").click(function(){window.open($("#playShow a:first-child").attr('href'), "_blank")});
+	$("#playNum a").click(function() {
+	   var i = $(this).text() - 1;
+	   n = i;
+	   if (i >= count) return;
+	   $("#playText").html($("#playShow a").eq(i).find("img").attr('alt'));
+	   $("#playText").unbind().click(function(){window.open($("#playShow a").eq(i).attr('href'), "_blank")})
+	   $("#playShow a").filter(":visible").hide().parent().children().eq(i).fadeIn(1200);
+	   $(this).css({"background":"#cc0000",'color':'#fff'}).siblings().css({"background":"#000",'color':'#fff'});
+	});
+	t = setInterval(showAuto, 4000);
+	$("#play").hover(function(){clearInterval(t)},
+					function(){t = setInterval(showAuto, 4000);});
+	function showAuto()
+	{
+		n = n >= (count - 1) ? 0 : ++n;
+		$("#playNum a").eq(n).trigger('click');
+	}
+});
+</script>
+</head>
+<body>
+<script language="javascript">
+<!--
+Date.prototype.format = function(partten){
+   if(partten ==null||partten==''){
+      partten = 'y-m-d';
+   }
+   var y = this.getFullYear();
+   var m = this.getMonth()+1;
+   var d = this.getDate();
+   var r = partten.replace(/y+/gi,y);
+   r = r.replace(/m+/gi,(m<10?"0":"")+m);
+   r = r.replace(/d+/gi,(d<10?"0":"")+d);
+   return r; 
+}
+
+function goToURL() { //v2.0
+   var today=new   Date();      
+   var yesterday_milliseconds=today.getTime()-1000*60*60*24;      
+   var yesterday=new   Date();      
+   yesterday.setTime(yesterday_milliseconds);
+   var a=yesterday.format("ymd");
+   var url ='http://www.people.com.cn/GB/59476/review/'+a+'.html'
+   window.location.href=url;
+   
+}
+//-->
+</script>
+<body bgcolor="#FFFFFF" onLoad="goToURL()">
+</body>
+</html>
+

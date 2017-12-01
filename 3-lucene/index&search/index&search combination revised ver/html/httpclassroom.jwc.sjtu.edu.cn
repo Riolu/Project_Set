@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>上海交通大学教室查询系统</title>
+<link href="/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/date/WdatePicker.js"></script>
+<script type="text/javascript" src="/js/init.js"></script>
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="alternate" type="application/rss+xml" title="上海交通大学公告" href="/user_affiche/rss"  />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+</head>
+<body onload="javascript:init();">
+<div id="header">
+	<div id="logo">
+		<h1><a href="/"><div style="width:550px; height:65px; cursor: pointer;"></div></a></h1>
+		<h1><a href="#nogo" onclick="$('shortcutsearch').submit()"><div style="width:200px; height:65px; cursor: pointer; margin-left:50px"></div></a></h1>
+	</div>
+</div>
+<hr />
+<div id="page">
+	<div id="bg">
+		<div id="content">
+			<div class="affiche">
+				<a href="/user_affiche/list" title="查看所有公告">
+					<div class="title">公告：</div>
+				</a>
+				<div class="content">
+					<marquee onMouseOver="this.stop();" onMouseOut="this.start();" scrollAmount="3">
+					<a href="/user_affiche/show/id/7">欢迎使用教室查询系统 </a>&nbsp;<small>(13-11-18)</small>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</marquee>
+				</div>
+				<div class="rss">
+					<a href="/user_affiche/rss">
+						<img src="/images/img022.gif" title="订阅RSS" />
+					</a>
+				</div>
+			</div>
+<div class="post">
+<h2 class="title">选择教学楼</h2>
+	<table width="100%">
+		<tr>
+								<td class="align-center">
+				<a href=/user_building/show/id/1>
+				<img src="/images/building/1.jpg" />
+				</a>
+			</td>
+											<td class="align-center">
+				<a href=/user_building/show/id/2>
+				<img src="/images/building/2.jpg" />
+				</a>
+			</td>
+										</tr>
+		<tr>
+						<td class="align-center">
+				<a href=/user_building/show/id/3>
+				<img src="/images/building/3.jpg" />
+				</a>
+			</td>
+											<td class="align-center">
+				<a href=/user_building/show/id/4>
+				<img src="/images/building/4.jpg" />
+				</a>
+			</td>
+										</tr>
+		<tr>
+						<td class="align-center">
+				<a href=/user_building/show/id/5>
+				<img src="/images/building/5.jpg" />
+				</a>
+			</td>
+											<td class="align-center">
+				<a href=/user_building/show/id/6>
+				<img src="/images/building/6.jpg" />
+				</a>
+			</td>
+										</tr>
+		<tr>
+						<td class="align-center">
+				<a href=/user_building/show/id/7>
+				<img src="/images/building/7.jpg" />
+				</a>
+			</td>
+											<td class="align-center">
+				<a href=/user_building/show/id/8>
+				<img src="/images/building/8.jpg" />
+				</a>
+			</td>
+									</tr>
+	</table>
+
+</div>		</div>
+		<div id="sidebar">
+			<div class="wap">
+				<div class="title">
+				<a href="/wap">手机版入口</a>
+				</div>
+			</div>
+			<div id="about-box">
+				<form id="shortcutsearch" action="/user_query/query" method="post">
+				<h2>空闲教室快速查询</h2>
+				<p>
+					日　期：
+					<input size="15" id="sidedate" name="sidedate" type="text"/>
+					<img onclick="WdatePicker({el:$('sidedate')})" src="/js/date/skin/datePicker.gif" width="16" height="22" align="absmiddle" />
+				</p>
+				<p>
+					起始点：
+					<input size="15" id="sidestartat" name="sidestartat" type="text" onchange="$('sideendat').value = $('sidestartat').value"/>
+					<img onclick="WdatePicker({el:$('sidestartat'),dateFmt:'HH:mm:ss'})" src="/js/date/skin/datePicker.gif" width="16" height="22" align="absmiddle" />
+				</p>
+				<p>
+					结束点：
+					<input size="15" id="sideendat" name="sideendat" type="text"/>
+					<img onclick="WdatePicker({el:$('sideendat'),dateFmt:'HH:mm:ss'})" src="/js/date/skin/datePicker.gif" width="16" height="22" align="absmiddle" />
+				</p>
+				<p>
+					教学楼：
+					<select name="sidebuilding" id="sidebuilding">
+						<option selected="selected" value="0">所有大楼</option>
+<h2>最新公告</h2>
+<ul>
+	<option value="1">上院</option>
+	<option value="2">中院</option>
+	<option value="3">下院</option>
+	<option value="4">东上院</option>
+	<option value="5">东中院</option>
+	<option value="6">东下院</option>
+	<option value="7">陈瑞球楼</option>
+	<option value="8">报告厅</option>
+</ul>					</select>
+				</p>
+				<p>
+				  <div class="align-center">
+						<input type="submit" value="查询" onclick=""/>
+						&nbsp;&nbsp;&nbsp;
+						<input type="button" value="重置" onclick="javascript:setdefault();"/>
+				  </div>
+				</p>
+				</form>
+			</div>
+			<div id="button-box">
+				<div id="imgicon"><img src="/images/img20.gif" /></div>
+				<div id="title"><a href="/user_query">教室查询</a></div>
+			</div>
+			<div id="button-box">
+				<div id="imgicon"><img src="/images/img21.gif" /></div>
+				<div id="title"><a href="/teacher_applicate">借用登记</a></div>
+			</div>
+			<div id="button-box">
+				<div id="imgicon"><img src="/images/img24.gif" /></div>
+				<div id="title"><a href="/user_applicate">最新借用</a></div>
+			</div>
+			<ul>
+				<li>
+					<h2>教学楼一览</h2>
+					<ul>
+	<li><a href="/user_building/show/id/1">上院</a></li>
+	<li><a href="/user_building/show/id/2">中院</a></li>
+	<li><a href="/user_building/show/id/3">下院</a></li>
+	<li><a href="/user_building/show/id/4">东上院</a></li>
+	<li><a href="/user_building/show/id/5">东中院</a></li>
+	<li><a href="/user_building/show/id/6">东下院</a></li>
+	<li><a href="/user_building/show/id/7">陈瑞球楼</a></li>
+	<li><a href="/user_building/show/id/8">报告厅</a></li>
+					</ul>
+					<div id="over"></div>
+				</li>
+			</ul>
+		</div>
+		<!-- end sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+</div>
+<!-- end page -->
+<hr />
+<div id="footer">
+	<p>Copyright &copy; 2008-2015. All rights reserved. Shanghai Jiao Tong University.</p>
+</div>
+<script type="text/javascript" src="http://js.tongji.linezing.com/1040606/tongji.js"></script></script>
+</body>
+</html>

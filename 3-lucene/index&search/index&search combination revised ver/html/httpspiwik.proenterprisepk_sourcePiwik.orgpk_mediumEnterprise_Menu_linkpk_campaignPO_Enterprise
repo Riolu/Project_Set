@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/favicon.png" type="image/png">
+	<link rel="alternate" type="application/rss+xml" title="Piwik PRO - Cloud and Enterprise Analytics Feed" href="https://piwik.pro/feed/">
+
+	<title>Enterprise Analytics - Piwik PRO Web Analytics Tool</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v2.3.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Want to Piwik service on-premises? Our team of Piwik PRO experts will work closely with you to help you set up, configure and support your Piwik install."/>
+<link rel="canonical" href="https://piwik.pro/enterprise/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Enterprise Analytics - Piwik PRO Web Analytics Tool" />
+<meta property="og:description" content="Want to Piwik service on-premises? Our team of Piwik PRO experts will work closely with you to help you set up, configure and support your Piwik install." />
+<meta property="og:url" content="https://piwik.pro/enterprise/" />
+<meta property="og:site_name" content="Piwik PRO - Cloud and Enterprise Analytics" />
+<meta property="og:image" content="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/icons-small/piwik_analytics.png" />
+<meta property="og:image" content="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/icons-small/tick.png" />
+<meta property="og:image" content="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/icons-small/optimisation.png" />
+<meta property="og:image" content="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/icons-small/monitoring.png" />
+<meta property="og:image" content="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/icons-small/usersupport.png" />
+<meta property="og:image" content="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/icons-small/support.png" />
+<meta property="og:image" content="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/icons-small/privacy.png" />
+<meta property="og:image" content="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/icons-small/radar.png" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Want to Piwik service on-premises? Our team of Piwik PRO experts will work closely with you to help you set up, configure and support your Piwik install."/>
+<meta name="twitter:title" content="Enterprise Analytics - Piwik PRO Web Analytics Tool"/>
+<meta name="twitter:domain" content="Piwik PRO - Cloud and Enterprise Analytics"/>
+<meta name="twitter:image" content="/wp-content/themes/piwik.pro/assets/img/icons-small/piwik_analytics.png"/>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Piwik PRO - Cloud and Enterprise Analytics &raquo; Feed" href="https://piwik.pro/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Piwik PRO - Cloud and Enterprise Analytics &raquo; Comments Feed" href="https://piwik.pro/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"https:\/\/piwik.pro\/wp-includes\/js\/wp-emoji.js?ver=4.3.1","twemoji":"https:\/\/piwik.pro\/wp-includes\/js\/twemoji.js?ver=4.3.1"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='tomorrow-night.css-css'  href='https://piwik.pro/wp-content/plugins/cc-syntax-highlight/highlight/tomorrow-night.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-core-css'  href='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/jquery-ui/themes/smoothness/jquery-ui.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='Piwik.pro-css'  href='https://piwik.pro/wp-content/themes/piwik.pro/assets/css/style.css?ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://piwik.pro/wp-content/plugins/cc-syntax-highlight/highlight/highlight.pack.js'></script>
+<script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/jquery/dist/jquery.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='//cdn.optimizely.com/js/2503250310.js?ver=1.0.0'></script>
+<!--[if lt IE 9]><script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/html5shiv/dist/html5shiv.min.js?ver=1.0.0'></script>
+<![endif]--><!--[if lt IE 9]><script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/respond/dest/respond.min.js?ver=1.0.0'></script>
+<![endif]--><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://piwik.pro/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://piwik.pro/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3.1" />
+<link rel='shortlink' href='https://piwik.pro/?p=17' />
+<link rel="alternate" hreflang="en" href="https://piwik.pro/enterprise/" />
+<link rel="alternate" hreflang="de" href="https://piwikpro.de/enterprise/" />
+</head><body class="page page-id-17 page-template-default page-enterprise-skt page-enterprise">
+	<!-- Start 7Tag script code --><script type="text/javascript">(function(window,document,script,dataLayer,id){window[dataLayer]=window[dataLayer]||[];window[dataLayer].push({'7tag.start':new Date().getTime(),'event':'7tag.js'});var scripts=document.getElementsByTagName(script)[0],tags=document.createElement(script),dl=dataLayer!='dataLayer'?'?dataLayer='+dataLayer:'';tags.async=!0;tags.src='//7tag.clearcode.cc/containers/14.js'+dl;scripts.parentNode.insertBefore(tags,scripts)})(window,document,'script','dataLayer',1);</script><!-- End Tag script code -->	<!--[if lt IE 9]>
+		<div class="alert">
+			You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.		</div>
+	<![endif]-->
+
+		<div class="menubtn"></div>
+<nav class="pw-side">
+    <div class="nav-wrap">
+	    <a href="https://piwik.pro" title="" class="home-head">
+			<img src="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/new/piwik_dark_logo.png" alt="">
+			<p class="sub">Cloud and Enterprise Analytics</p>
+		</a>
+        <ul class="sidebar"><li class="dropdown"><a href="https://piwik.pro/cloud/">Piwik Cloud</a>
+<ul>
+	<li><a href="https://piwik.pro/cloud">Piwik Cloud</a></li>
+	<li><a href="https://piwik.pro/security/">Piwik Cloud Security</a></li>
+</ul>
+</li>
+<li class="active"><a title="piwik cloud enterprise analytics" href="https://piwik.pro/enterprise/">Piwik Enterprise</a></li>
+<li><a title="Piwik analytics for SharePoint" href="https://piwik.pro/sharepoint-analytics/">Piwik SharePoint</a></li>
+<li><a title="plugins for Piwik web analytics" href="https://piwik.pro/plugins/">Plugins</a></li>
+<li class="dropdown"><a title="about Piwik web analytics" href="https://piwik.pro/about/">About</a>
+<ul>
+	<li><a href="https://piwik.pro/about/">About</a></li>
+	<li><a href="https://piwik.pro/testimonials/">Testimonials</a></li>
+	<li><a href="https://piwik.pro/media/">Media</a></li>
+	<li><a href="https://piwik.pro/careers/">Careers</a></li>
+</ul>
+</li>
+<li class="dropdown"><a title="web analytics blog" href="https://piwik.pro/blog/">Blog</a>
+<ul>
+	<li><a href="https://piwik.pro/blog/">Blog</a></li>
+	<li><a href="https://piwik.pro/sitemap/">Blog Sitemap</a></li>
+</ul>
+</li>
+<li><a title="contact Piwik analytics support" href="/contact/#contact-form">Contact</a></li>
+</ul>        <div class="submenu"></div>
+    </div>
+    <div class="foot side-foot">
+	    <ul class="sidebar_footer"><li><a rel="nofollow" href="https://cloud.piwik.pro/checkout/client/create-account">Sign up</a></li>
+<li class="red"><a rel="nofollow" href="https://cloud.piwik.pro/">Log in</a></li>
+<li class="solutions"><a rel="nofollow" href="https://piwik.org">Open Analytics Solutions<span>Join our worldwide community.</span></a></li>
+</ul>    </div>
+</nav>
+		<section class="cont" role="document">
+			
+	<header class="text-center" style="background-image: url('/wp-content/themes/piwik.pro/assets/img/backgrounds/background-main.jpg');">
+	<div class="contener-wh">
+		<h1>Piwik Enterprise</h1>
+		<hr class="red" />
+		<h3 class="title">Want to host your Piwik service on your own infrastructure? Our team of Piwik PRO experts will work closely with your team to help you set up, configure and support your Piwik install.</h3>
+		<div class="text-center">
+<a href="/contact/#contact-form" class="btn">contact us</a>
+</div>
+	</div>
+</header>
+			<div class="block text-center block-white">
+    <div class="contener-wh">
+        <h3 class="text-center">Hosting your Piwik service on your own infrastructure allows you to enjoy complete flexibility and maintain full control over your analytics data. You also benefit from being able to configure and tweak Piwik to suit your professional needs. Our Piwik Enterprise service offers all the necessary ongoing support and advice to ensure that you are getting the most out of your Piwik platform.
+        </h3>
+    </div>
+    <div class="contener-wl">
+        <div class="mt70">
+            <hr />
+        </div>
+        <h3 class=" extend mt70">PIWIK for ENTERPRISE HIGHLIGHTS</h3>
+    </div>
+</div>
+<div class="contener-wh">
+    <div class="highlights">
+
+        <h4><img src="/wp-content/themes/piwik.pro/assets/img/icons-small/piwik_analytics.png">
+      self-hosted analytics platform</h4>
+        <p>Host your very own fully featured Piwik analytics platform on your infrastructure and enjoy the added flexibility and greater control over your data.</p>
+
+        <h4><img src="/wp-content/themes/piwik.pro/assets/img/icons-small/tick.png">
+      TWEAK PIWIK TO SUIT YOUR NEEDS</h4>
+        <p>We can help you analyse and integrate data from different areas using your Piwik platform – intranet, ecommerce, website, mobile apps and many other areas.</p>
+
+        <h4><img src="/wp-content/themes/piwik.pro/assets/img/icons-small/optimisation.png">
+      HIGH TRAFFIC &amp; REDUNDANCY</h4>
+        <p>We’ll ensure that your data tracking service is always available by setting up a redundant infrastructure. We’ll also help you scale Piwik for high traffic websites.</p>
+
+        <h4><img src="/wp-content/themes/piwik.pro/assets/img/icons-small/monitoring.png">
+      ADVANCED SERVER-SIDE SETUP</h4>
+        <p>We can help you increase the performance of your server infrastructure by tweaking and customising the configuration setup, allowing you to squeeze the most power out of the Piwik platform.</p>
+
+        <h4><img src="/wp-content/themes/piwik.pro/assets/img/icons-small/usersupport.png">
+      USER AND TECHNICAL SUPPORT</h4>
+        <p>We will provide ongoing support, advice and tips. We will also deliver fast, competent and clear responses that focus on solving any issues that you may face.</p>
+
+        <h4><img src="/wp-content/themes/piwik.pro/assets/img/icons-small/support.png">
+      HELP WITH PLATFORM DEVELOPMENT</h4>
+        <p>Receive all the support and advice you need directly from the Piwik creators so that you can extend or integrate Piwik.</p>
+
+        <h4><img src="/wp-content/themes/piwik.pro/assets/img/icons-small/privacy.png">
+      PRIVACY COMPLIANCE</h4>
+        <p>Our strong Privacy Policy complies with EU and local law regulations and ensures that your users’ privacy is protected.</p>
+
+        <h4><img src="/wp-content/themes/piwik.pro/assets/img/icons-small/radar.png">
+      INFRASTRUCTURE MONITORING</h4>
+        <p>We will monitor your Piwik instance 24/7, which will allow us to detect and fix any problems before they affect your service. Available only on our Premium and PRO plans.</p>
+    </div>
+
+</div>
+<div class="contener-wl hide-xtra-sm">
+    <hr class="mt70" />
+    <h3 class="mt70 extend text-center">Compare our plans</h3>
+    <table class="table-plans table-hidden">
+        <thead>
+            <tr class="tr-header">
+                <th>On-premises Piwik</th>
+                <th class="plan-basic">Basic</th>
+                <th class="plan-standard active">Standard</th>
+                <th class="plan-premium">Premium</th>
+                <th class="plan-pro">Pro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Setup and configuration</td>
+                <td class="plan-basic">16 hours</td>
+                <td class="plan-standard active">24 hours</td>
+                <td class="plan-premium">48 hours</td>
+                <td class="plan-pro">72 hours</td>
+            </tr>
+            <tr>
+                <td>Infrastructure</td>
+                <td class="plan-basic">1 server</td>
+                <td class="plan-standard active">multi server</td>
+                <td class="plan-premium">multi server</td>
+                <td class="plan-pro">server</td>
+            </tr>
+            <tr>
+                <td>Software updates</td>
+                <td class="plan-basic"><i class="icons-tick"></i></td>
+                <td class="plan-standard active"><i class="icons-tick"></i></td>
+                <td class="plan-premium"><i class="icons-tick"></i></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+            <tr>
+                <td>Server maintenance</td>
+                <td class="plan-basic"></td>
+                <td class="plan-standard active"><i class="icons-tick"></i></td>
+                <td class="plan-premium"><i class="icons-tick"></i></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+            <tr>
+                <td>24/7 monitoring and incident handling</td>
+                <td class="plan-basic"></td>
+                <td class="plan-standard active"></td>
+                <td class="plan-premium"><i class="icons-tick"></i></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+            <tr>
+                <td>Premium Features</td>
+                <td class="plan-basic"><i class="icons-tick"></i></td>
+                <td class="plan-standard active"><i class="icons-tick"></i></td>
+                <td class="plan-premium"><i class="icons-tick"></i></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+
+            <tr class="tr-header">
+                <td colspan="5">Support</td>
+            </tr>
+            <tr>
+                <td>Email support</td>
+                <td class="plan-basic"><i class="icons-tick"></i></td>
+                <td class="plan-standard active"><i class="icons-tick"></i></td>
+                <td class="plan-premium"><i class="icons-tick"></i></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+            <tr>
+                <td>Phone support</td>
+                <td class="plan-basic"></td>
+                <td class="plan-standard active"><i class="icons-tick"></i></td>
+                <td class="plan-premium"><i class="icons-tick"></i></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+            <tr>
+                <td>Dedicated account manager</td>
+                <td class="plan-basic"></td>
+                <td class="plan-standard active"></td>
+                <td class="plan-premium"></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+            <tr class="tr-header">
+                <td colspan="5">Traffic volume</td>
+            </tr>
+            <tr>
+                <td>Actions per month limit</td>
+                <td class="plan-basic">&lt; 10M</td>
+                <td class="plan-standard active">&lt; 50M</td>
+                <td class="plan-premium">&lt; 250M</td>
+                <td class="plan-pro">&lt; 500M</td>
+            </tr>
+            <tr>
+                <td>Piwik for SharePoint</td>
+                <td class="plan-basic">&lt; 1500 users</td>
+                <td class="plan-standard active">≥ 1500 users</td>
+                <td class="plan-premium">≥ 1500 users</td>
+                <td class="plan-pro">≥ 1500 users</td>
+            </tr>
+            <tr class="tr-header">
+                <td colspan="5">Training</td>
+            </tr>
+            <tr>
+                <td>User training (Quarterly)</td>
+                <td class="plan-basic"><i class="icons-tick"></i></td>
+                <td class="plan-standard active"><i class="icons-tick"></i></td>
+                <td class="plan-premium"><i class="icons-tick"></i></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+            <tr>
+                <td>Technical training (Biannually)</td>
+                <td class="plan-basic"></td>
+                <td class="plan-standard active"></td>
+                <td class="plan-premium"><i class="icons-tick"></i></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+            <tr>
+                <td>Custom training (Annually)</td>
+                <td class="plan-basic"></td>
+                <td class="plan-standard active"></td>
+                <td class="plan-premium"></td>
+                <td class="plan-pro"><i class="icons-tick"></i></td>
+            </tr>
+            <tr>
+                <td>Onsite training (Plus travel expenses)</td>
+                <td class="plan-basic"></td>
+                <td class="plan-standard active"><a href="/contact/#contact-form">Get a quote</a></td>
+                <td class="plan-premium"><a href="/contact/#contact-form">Get a quote</a></td>
+                <td class="plan-pro"><a href="/contact/#contact-form">Get a quote</a></td>
+            </tr>
+            <tr class="tr-header">
+                <td colspan="5">Professional Services</td>
+            </tr>
+            <tr>
+                <td>Custom development</td>
+                <td class="plan-basic"></td>
+                <td class="plan-standard active"></td>
+                <td class="plan-premium">Hourly rate</td>
+                <td class="plan-pro">Hourly rate</td>
+            </tr>
+            <tr>
+                <td>Onsite work (Plus travel expenses)</td>
+                <td class="plan-basic"></td>
+                <td class="plan-standard active"><a href="/contact/#contact-form">Get a quote</a></td>
+                <td class="plan-premium"><a href="/contact/#contact-form">Get a quote</a></td>
+                <td class="plan-pro"><a href="/contact/#contact-form">Get a quote</a></td>
+            </tr>
+            <tr class="tr-header">
+                <td colspan="5">SLAs <span>(max. reaction times)</span></td>
+            </tr>
+            <tr>
+                <td>Critical issues</td>
+                <td class="plan-basic">1 day (Mon-Fri)</td>
+                <td class="plan-standard active">1 day (Mon-Fri)</td>
+                <td class="plan-premium">8 hours (24&#215;7)</td>
+                <td class="plan-pro">8 hours (24&#215;7)</td>
+            </tr>
+            <tr>
+                <td>Non-critical issues</td>
+                <td class="plan-basic">Best effort</td>
+                <td class="plan-standard active">Best effort</td>
+                <td class="plan-premium">1 week</td>
+                <td class="plan-pro"> &lt; 5 days</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="contener-wl text-center pb50">
+    <hr />
+    <h4 class="extend  mt70 ">
+  NOT SURE WHAT THE BEST SOLUTION IS FOR YOU? <br /> CONTACT US FOR ADVICE ON WHICH PLAN WILL BEST SUIT YOUR NEEDS.</h4>
+    <a href="/contact/#contact-form" class="btn btn-red">Contact us</a>
+</div>	
+		</section>
+
+		<footer>
+	<div class="contener-wl pt20">
+		<hr />
+		<div class="foot">
+			<div class="col-md-2 col-sm-2 col-xs-4"><img src="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/piwikpro-logo.png" class="foot-logo"></div>
+			<div class="col-md-6 col-sm-6 col-xs-8">
+				<p><b>Copyright © 2015 Piwik.org</b> - Piwik.pro is proudly brought to you by the Piwik.org engineering team.					<ul class="footer"><li><a href="/">Home</a></li>
+<li><a href="/contact/#contact-form">Contact</a></li>
+<li><a target="_blank" href="https://cloud.piwik.pro/tos">Terms of Service</a></li>
+<li><a href="https://piwik.pro/sitemap/">Sitemap</a></li>
+<li><a href="https://piwik.pro/c/on-premises-self-hosted-enterprise-web-analytics/">Enterprise Web Analytics</a></li>
+<li><a href="http://clearcode.cc/c/big-data-development-services/">Big Data Analytics</a></li>
+<li><a href="http://clearcode.cc/c/saas-development-services/">SaaS</a></li>
+</ul>				</p>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<p class="select-lang">Select Language:</p>
+				 <div class="dropdown">
+											<div class="active">
+							<a href="https://piwik.pro/enterprise/">
+								<img src="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/english.png">
+								English							</a>
+						</div>
+											<div class="drop-content">
+							<a href="https://piwikpro.de/enterprise//?lang=de">
+								<img src="https://piwik.pro/wp-content/themes/piwik.pro/assets/img/german.png">
+								German							</a>
+						</div>
+								    </div>
+			</div>
+		</div>
+	</div>
+</footer>		<script type='text/javascript' src='https://piwik.pro/wp-content/plugins/cc-syntax-highlight/highlight/syntax_highlight.js'></script>
+<script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/modernizr/modernizr.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/jquery-ui/jquery-ui.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/jquery.cookie/jquery.cookie.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/slick-carousel/slick/slick.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/bootstrap/dist/js/bootstrap.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/vendor/featherlight/release/featherlight.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://piwik.pro/wp-content/themes/piwik.pro/assets/dist/js/script.min.js?ver=1.0.0'></script>
+	</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: piwik.pro @ 2015-10-28 06:33:06 by W3 Total Cache -->

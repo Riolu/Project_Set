@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta charset="utf-8"/>
+
+	
+		<title>上海交通大学媒体与设计学院</title>
+	
+
+	<link rel="shortcut icon" type="image/ico" href="/Public/images/favicon.ico">
+
+	<meta name="description" content=""/>
+
+	<!--启用屏幕自适应-->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>-->
+	<!--禁用屏幕自适应-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- bootstrap & fontawesome -->
+	<link rel="stylesheet" href="/Public/ace/css/less/bootstrap/bootstrap.css"/>
+	<!--<link rel="stylesheet" href="/Public/ace/css/bootstrap.min.css"/>-->
+	<link rel="stylesheet" href="/Public/ace/css/font-awesome.min.css"/>
+
+	<!-- page specific plugin styles -->
+
+	<!-- text fonts -->
+	<link rel="stylesheet" href="/Public/ace/css/ace-fonts.css"/>
+
+	<!-- ace styles -->
+	<link rel="stylesheet" href="/Public/ace/css/ace.min.css" id="main-ace-style"/>
+
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" href="/Public/ace/css/ace-part2.min.css"/>
+	<![endif]-->
+	<link rel="stylesheet" href="/Public/ace/css/ace-skins.min.css"/>
+	<link rel="stylesheet" href="/Public/ace/css/ace-rtl.min.css"/>
+
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" href="/Public/ace/css/ace-ie.min.css"/>
+	<![endif]-->
+
+	<!-- inline styles related to this page -->
+
+	<!-- ace settings handler -->
+	<script src="/Public/ace/js/ace-extra.min.js"></script>
+
+	<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+	<!--[if lte IE 8]>
+	<script src="/Public/ace/js/html5shiv.min.js"></script>
+	<script src="/Public/ace/js/respond.min.js"></script>
+	<![endif]-->
+
+
+	<!-- basic scripts -->
+
+	<!--[if !IE]> -->
+	<script type="text/javascript">
+		window.jQuery || document.write("<script src='/Public/ace/js/jquery.min.js'>" + "<" + "/script>");
+	</script>
+
+	<!-- <![endif]-->
+
+	<!--[if IE]>
+	<script type="text/javascript">
+		window.jQuery || document.write("<script src='/Public/ace/js/jquery1x.min.js'>" + "<" + "/script>");
+	</script>
+	<![endif]-->
+	<script type="text/javascript">
+		if ('ontouchstart' in document.documentElement) document.write("<script src='/Public/ace/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+	</script>
+	<script src="/Public/ace/js/bootstrap.min.js"></script>
+
+
+	<!-- page specific plugin scripts -->
+
+	<!-- ace scripts -->
+	<script src="/Public/ace/js/ace-elements.min.js"></script>
+	<script src="/Public/ace/js/ace.min.js"></script>
+
+
+	<link href="/Public/css/base.css" rel="stylesheet"/>
+
+	<!--引入表单验证-->
+	<script type="text/javascript" src="/Public/fork/validform/Validform.js"></script>
+	<!--获取注释中的文本-->
+	<script type="text/javascript" src="/Public/js/jquery.comments.js"></script>
+	<!--自己定义的js文件-->
+	<script src="/Public/js/init.js"></script>
+
+	<!--头部可以引入一些css和js-->
+	
+
+	<script type="text/javascript">
+		//添加点击导航栏的效果。
+		$(function () {
+			$(".header-wrapper").find(".dropdown-hover").click(function (e) {
+
+				$this = $(this);
+				console.log($this);
+				var $a = $(this).find(">a");
+
+				var href = $a.attr("href");
+				console.log(href);
+				location.href = href;
+
+				//停止时间上浮了。
+				e.stopPropagation();
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+<div class="header-wrapper">
+	<div class="smd-container">
+		<div class="row">
+			<div class="col-xs-7 logo-block">
+				<a href="/">
+					<img src="/Public/images/logo/logo2.png" alt="smd"/>
+				</a>
+			</div>
+
+			<div class="col-xs-17">
+				<div class="row lang-block">
+					<div class="col-xs-24">
+
+						<ul class="lang-ul">
+							
+							<li class="lang-li">
+								<a href="/english.php">
+									<i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+									ENGLISH
+								</a>
+							</li>
+
+						</ul>
+
+					</div>
+				</div>
+				<div class="row navi-block">
+					<div class="col-xs-24 navi-block-col">
+						<ul class="navi-ul">
+							<!--第一级开始遍历-->
+							
+									<li class="navi-li dropdown-hover">
+										<a href="/" class="dropdown-toggle navi-a" data-toggle="dropdown">主页</a>
+
+																			</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="/article/d/id/1" class="dropdown-toggle navi-a" data-toggle="dropdown">学院概况</a>
+
+										<ul class="dropdown-menu dropdown-light-blue">
+
+												<!--有子菜单的-->
+																													<li>
+																<a href="/article/d/id/1">
+																	学院简介																</a>
+															</li><!--有子菜单的-->
+														<li class="dropdown-hover">
+																<a href="/teacher/leader" tabindex="-1"
+																   class="clearfix">
+																	<span class="pull-left">现任领导</span>
+																	<i class="ace-icon fa pull-right fa-caret-right"></i>
+																</a>
+
+																<ul class="dropdown-menu dropdown-light-blue dropdown-menu-left">
+
+																	<!--第三级开始遍历-->
+																	<li>
+																				<a href="/teacher/leader/active/1" tabindex="-1">院长</a>
+																			</li><li>
+																				<a href="/teacher/leader/active/2" tabindex="-1">党委书记</a>
+																			</li><li>
+																				<a href="/teacher/leader/active/3" tabindex="-1">副院长</a>
+																			</li><li>
+																				<a href="/teacher/leader/active/4" tabindex="-1">副书记</a>
+																			</li>
+																</ul>
+																<!--有子菜单的-->
+																													<li>
+																<a href="/article/d/id/38">
+																	历任领导																</a>
+															</li>											</ul>									</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="/article/d/id/2" class="dropdown-toggle navi-a" data-toggle="dropdown">组织机构</a>
+
+										<ul class="dropdown-menu dropdown-light-blue">
+
+												<!--有子菜单的-->
+																													<li>
+																<a href="/article/d/id/39">
+																	组织架构																</a>
+															</li><!--有子菜单的-->
+														<li class="dropdown-hover">
+																<a href="/executive" tabindex="-1"
+																   class="clearfix">
+																	<span class="pull-left">行政机构</span>
+																	<i class="ace-icon fa pull-right fa-caret-right"></i>
+																</a>
+
+																<ul class="dropdown-menu dropdown-light-blue dropdown-menu-left">
+
+																	<!--第三级开始遍历-->
+																	<li>
+																				<a href="/executive/index/active/1" tabindex="-1">行政办公室</a>
+																			</li><li>
+																				<a href="/executive/index/active/2" tabindex="-1">党委办公室</a>
+																			</li><li>
+																				<a href="/executive/index/active/3" tabindex="-1">教务办公室</a>
+																			</li><li>
+																				<a href="/executive/index/active/4" tabindex="-1">学生办公室</a>
+																			</li><li>
+																				<a href="/executive/index/active/5" tabindex="-1">资料室</a>
+																			</li><li>
+																				<a href="/executive/index/active/6" tabindex="-1">实验室</a>
+																			</li><li>
+																				<a href="/executive/index/active/7" tabindex="-1">对外交流与合作办公室</a>
+																			</li>
+																</ul>
+																<!--有子菜单的-->
+														<li class="dropdown-hover">
+																<a href="/major" tabindex="-1"
+																   class="clearfix">
+																	<span class="pull-left">系、专业</span>
+																	<i class="ace-icon fa pull-right fa-caret-right"></i>
+																</a>
+
+																<ul class="dropdown-menu dropdown-light-blue dropdown-menu-left">
+
+																	<!--第三级开始遍历-->
+																	<li>
+																				<a href="/major/index/active/1" tabindex="-1">新闻传播系</a>
+																			</li><li>
+																				<a href="/major/index/active/3" tabindex="-1">电影与电视系</a>
+																			</li><li>
+																				<a href="/major/index/active/2" tabindex="-1">文化产业与管理系</a>
+																			</li><li>
+																				<a href="/major/index/active/4" tabindex="-1">设计系</a>
+																			</li>
+																</ul>
+																											</ul>									</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="/teacher" class="dropdown-toggle navi-a" data-toggle="dropdown">师资队伍</a>
+
+										<ul class="dropdown-menu dropdown-light-blue">
+
+												<!--有子菜单的-->
+																													<li>
+																<a href="/teacher">
+																	教授																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="/teacher/vice">
+																	副教授																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="/teacher/lecturer">
+																	讲师																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="/teacher/tadoc">
+																	助教、博士后																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="/teacher/padz">
+																	兼职、客座教授																</a>
+															</li>											</ul>									</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="/article/d/id/3" class="dropdown-toggle navi-a" data-toggle="dropdown">学术研究</a>
+
+										<ul class="dropdown-menu dropdown-light-blue">
+
+												<!--有子菜单的-->
+														<li class="dropdown-hover">
+																<a href="/article/d/id/53" tabindex="-1"
+																   class="clearfix">
+																	<span class="pull-left">研究所</span>
+																	<i class="ace-icon fa pull-right fa-caret-right"></i>
+																</a>
+
+																<ul class="dropdown-menu dropdown-light-blue dropdown-menu-left">
+
+																	<!--第三级开始遍历-->
+																	<li>
+																				<a href="/article/d/id/13" tabindex="-1">“3C”中心</a>
+																			</li><li>
+																				<a href="/article/d/id/14" tabindex="-1">上海交通大学珠宝时尚产业研究中心</a>
+																			</li><li>
+																				<a href="/article/d/id/15" tabindex="-1">中英艺术设计教育科研中心</a>
+																			</li><li>
+																				<a href="/article/d/id/16" tabindex="-1">云河新媒体实验室</a>
+																			</li><li>
+																				<a href="/article/d/id/18" tabindex="-1">传播研究所</a>
+																			</li><li>
+																				<a href="/article/d/id/17" tabindex="-1">全球传播研究所</a>
+																			</li><li>
+																				<a href="/article/d/id/19" tabindex="-1">国家文化产业创新与发展研究基地</a>
+																			</li><li>
+																				<a href="/article/d/id/20" tabindex="-1">实验中心</a>
+																			</li><li>
+																				<a href="/article/d/id/21" tabindex="-1">新媒体管理研究所</a>
+																			</li><li>
+																				<a href="/article/d/id/22" tabindex="-1">旅游与景观研究所</a>
+																			</li><li>
+																				<a href="/article/d/id/23" tabindex="-1">海派文化研究所</a>
+																			</li><li>
+																				<a href="/article/d/id/24" tabindex="-1">程及美术馆</a>
+																			</li><li>
+																				<a href="http://afrc.sjtu.edu.cn/" tabindex="-1">美国电影研究中心</a>
+																			</li><li>
+																				<a href="http://afrc.sjtu.edu.cn/" tabindex="-1">设计管理研究所</a>
+																			</li><li>
+																				<a href="/article/d/id/28" tabindex="-1">信息设计研究所</a>
+																			</li>
+																</ul>
+																<!--有子菜单的-->
+																													<li>
+																<a href="/article/d/id/12">
+																	获奖作品																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="/article/d/id/40">
+																	重大项目																</a>
+															</li><!--有子菜单的-->
+														<li class="dropdown-hover">
+																<a href="/article/d/id/30" tabindex="-1"
+																   class="clearfix">
+																	<span class="pull-left">科研项目</span>
+																	<i class="ace-icon fa pull-right fa-caret-right"></i>
+																</a>
+
+																<ul class="dropdown-menu dropdown-light-blue dropdown-menu-left">
+
+																	<!--第三级开始遍历-->
+																	<li>
+																				<a href="/article/d/id/41" tabindex="-1">国家级项目</a>
+																			</li><li>
+																				<a href="/article/d/id/42" tabindex="-1">省部级项目</a>
+																			</li><li>
+																				<a href="/article/d/id/43" tabindex="-1">其他项目</a>
+																			</li>
+																</ul>
+																<!--有子菜单的-->
+																													<li>
+																<a href="/article/d/id/29">
+																	著作教材																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="#">
+																	权威论文																</a>
+															</li>											</ul>									</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="#" class="dropdown-toggle navi-a" data-toggle="dropdown">人才培养</a>
+
+										<ul class="dropdown-menu dropdown-light-blue">
+
+												<!--有子菜单的-->
+														<li class="dropdown-hover">
+																<a href="#" tabindex="-1"
+																   class="clearfix">
+																	<span class="pull-left">本科生教育</span>
+																	<i class="ace-icon fa pull-right fa-caret-right"></i>
+																</a>
+
+																<ul class="dropdown-menu dropdown-light-blue dropdown-menu-left">
+
+																	<!--第三级开始遍历-->
+																	<li>
+																				<a href="/article/d/id/60 " tabindex="-1">新闻通告</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">培养方案</a>
+																			</li><li>
+																				<a href="/article/d/id/57 " tabindex="-1">课程信息</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">办事指南</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">实践教学</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">海外游学</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">联系我们</a>
+																			</li>
+																</ul>
+																<!--有子菜单的-->
+														<li class="dropdown-hover">
+																<a href="#" tabindex="-1"
+																   class="clearfix">
+																	<span class="pull-left">研究生教育</span>
+																	<i class="ace-icon fa pull-right fa-caret-right"></i>
+																</a>
+
+																<ul class="dropdown-menu dropdown-light-blue dropdown-menu-left">
+
+																	<!--第三级开始遍历-->
+																	<li>
+																				<a href="#" tabindex="-1">研究生培养概况</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">博士生导师介绍</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">招生工作</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">培养工作</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">学位授予</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">学籍管理</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">三助工作</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">工程硕士</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">教师须知</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">博士资格考试</a>
+																			</li><li>
+																				<a href="#" tabindex="-1">选课系统</a>
+																			</li>
+																</ul>
+																											</ul>									</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="/article/d/id/5" class="dropdown-toggle navi-a" data-toggle="dropdown">招生培训</a>
+
+										<ul class="dropdown-menu dropdown-light-blue">
+
+												<!--有子菜单的-->
+																													<li>
+																<a href="/article/d/id/61 ">
+																	招生信息																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="#">
+																	培训信息																</a>
+															</li>											</ul>									</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="/article/d/id/6" class="dropdown-toggle navi-a" data-toggle="dropdown">党群之家</a>
+
+																			</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="/article/d/id/7" class="dropdown-toggle navi-a" data-toggle="dropdown">校友之家</a>
+
+										<ul class="dropdown-menu dropdown-light-blue">
+
+												<!--有子菜单的-->
+																													<li>
+																<a href="#">
+																	校友成就																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="#">
+																	校友活动																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="#">
+																	校友服务																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="#">
+																	校友信息																</a>
+															</li>											</ul>									</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="/article/d/id/8" class="dropdown-toggle navi-a" data-toggle="dropdown">校园生活</a>
+
+										<ul class="dropdown-menu dropdown-light-blue">
+
+												<!--有子菜单的-->
+																													<li>
+																<a href="#">
+																	学生荣光																</a>
+															</li><!--有子菜单的-->
+																													<li>
+																<a href="#">
+																	学生社区																</a>
+															</li>											</ul>									</li><!--第一个不输出分隔符-->
+										<li class="navi-li">|</li>
+									<li class="navi-li dropdown-hover">
+										<a href="/article/d/id/9" class="dropdown-toggle navi-a" data-toggle="dropdown">作品展示</a>
+
+																			</li>							<li class="navi-li">|</li>
+								<li class="navi-li">
+									<a href="/login" class="navi-a login-a">
+										登录
+									</a>
+								</li>						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="content-wrapper ">
+
+	<div class="smd-container ">
+		<div class="row ">
+			<div class="col-xs-24">
+				<form class="form-search" data-validate="true" method="get" action="/search">
+					<span class="input-icon">
+						<input type="text" placeholder="搜索" name="v"
+						       class="search-input" datatype="*"
+						       nullmsg="请输入关键词">
+						<i class="ace-icon fa fa-search nav-search-icon"></i>
+					</span>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	
+    <div class="text-corridor">
+        <div class="smd-container ">
+            <div class="row h100"></div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="leader-words-block">
+                        <div class="leader-words">
+                            院长寄语                        </div>
+                        <div class="leader-words-content">
+                            在中国迈向现代化的过程中，信息化、数字化、全球化的时代潮流，给我们带来了前所未有、千载难逢的发展机遇，从高等教育和学术研究的领域看，无论是传播学、影视学，还是设计学、文化管理学，都属于“朝阳”学科，我院全体师生众志成城，决心传承、发扬百年交大的光荣传统，与海内外同行、各界英才密切合作，务实求真，以教学、科研和社会服务的出色业绩，贡献国家，回报人民！                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div class="school-news-block">
+                        <div class="school-news-title">
+                            <div class="school-news-title-inner">
+                                <a href="/news" class="school-news">
+                                    学院新闻
+                                </a>
+                                <a href="/news" class="school-news-more">
+                                    更多
+                                    <i class="ace-icon glyphicon glyphicon-play"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="school-news-list">
+
+                            <ul>
+                                <li>
+                                        <a class="a-ellipsis" href="/news/d/id/82">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            上海交大－国际传播学会（ICA）2015新媒体国际论坛在我校举办【图】                                        </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/news/d/id/81">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            媒体与设计学院师生在全国第四届大学生艺术作品展荣获佳绩【图】                                        </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/news/d/id/80">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            上海交通大学—国际传播学会2015新媒体国际论坛 举办新闻发布会                                        </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/news/d/id/79">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            2015新媒体国际论坛会议议程与时间安排                                        </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/news/d/id/78">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            “一带一路城市研究的新进展与新思路”论坛在沪举办                                        </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/news/d/id/77">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            娱乐媒体、文化实力与后全球化：中国的媒体和创意文化的机会与挑战【图】                                        </a>
+                                    </li>                            </ul>
+
+                            <div class="news-scroll-list row">
+                                    <div class="col-xs-2">
+                                        <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                    </div>
+                                    <div class="col-xs-22">
+                                        <marquee behavior="scroll" direction="left" scrollamount="5"
+                                                 onMouseOut="this.start()" onMouseOver="this.stop()">
+                                            <a href="/news/d/id/76">危机传播与议题管理——台湾世新大学温伟群教授来我院做专题讲座【图】</a>
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="/news/d/id/75">葛岩教授应邀在我院举办讲座【图】</a>
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="/news/d/id/74">媒设学院“追溯建院历史，共话媒设未来”院史访谈活动成功举办【图】</a>
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="/news/d/id/73">吴邦国同志观看媒设学院徐庆华老师参展作品</a>
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        </marquee>
+                                    </div>
+
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div class="school-news-block">
+                        <div class="school-news-title">
+                            <div class="school-news-title-inner">
+                                <a href="/notice" class="school-news">
+                                    学院公告
+                                </a>
+                                <a href="/notice" class="school-news-more">
+                                    更多
+                                    <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="school-news-list">
+                            <ul>
+                                <li>
+                                        <a class="a-ellipsis" href="/notice/d/id/49">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            媒体与设计学院2016年“申请-考核制”攻读博士学位研究生招生简章                                        </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/notice/d/id/48">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            2015年下半年度前沿讲座（四）：陈清河先生（台湾世新大学教授、副校长）                                        </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/notice/d/id/47">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            第二届上海交通大学文化论坛：开拓文化研究新论域                                        </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/notice/d/id/46">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            2015年新媒体国际论坛 “互联网+时代的传播：颠覆与重建”                                         </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/notice/d/id/45">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            2015年下半年度前沿讲座（三）：Terry Flew(Digital Media Research Centre, Queensland University of Technology, Brisbane, Australia)                                        </a>
+                                    </li><li>
+                                        <a class="a-ellipsis" href="/notice/d/id/44">
+                                            <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                            上海交通大学文科创新论坛（城市科学系列之三）“一带一路”城市研究的新进展与新思路会议正式通知                                        </a>
+                                    </li>                            </ul>
+
+                            <div class="news-scroll-list row">
+                                    <div class="col-xs-2">
+                                        <i class="ace-icon glyphicon glyphicon-play bigger-110"></i>
+                                    </div>
+                                    <div class="col-xs-22">
+                                        <marquee behavior="scroll" direction="left" scrollamount="5"
+                                                 onMouseOut="this.start()" onMouseOver="this.stop()">
+                                            <a href="/notice/d/id/43">2015年下半年度前沿讲座（二）：温伟群先生（台湾世新大学教授、美国密苏里大学传播学博士）</a>
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="/notice/d/id/41">2015年下半年度前沿讲座（一）：葛岩先生（上海交通大学特聘教授、美国匹茨堡大学艺术考古学博士）</a>
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="/notice/d/id/40">2015年媒体与设计学院研究生国家奖学金获奖名单公示</a>
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="/notice/d/id/39">上海交通大学学位证书设计征稿启事</a>
+                                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        </marquee>
+                                    </div>
+
+                                </div>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--图片长廊-->
+    <div class="pic-corridor">
+        <div class="smd-container ">
+            <div class="row">
+                <div class="col-xs-8 rich-block  teacher-block">
+                    <div class="row">
+                        <div class="col-xs-24 carousel-block">
+                            <div id="carousel-teacher" class="index-img-div carousel slide" data-ride="carousel">
+
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                            <a href=" 	/news/d/id/81 ">
+                                                <img alt="教师风采" src="/file/get/id/562f2cdfe0ea3c93217a4b4e"
+                                                     data-holder-rendered="true">
+                                            </a>
+                                        </div><div class="item ">
+                                            <a href="/news/d/id/77 ">
+                                                <img alt="教师风采" src="/file/get/id/5626ef82e0ea3c95113d2657"
+                                                     data-holder-rendered="true">
+                                            </a>
+                                        </div><div class="item ">
+                                            <a href="/news/d/id/75 ">
+                                                <img alt="教师风采" src="/file/get/id/56244ec6e0ea3c2a7c3d2659"
+                                                     data-holder-rendered="true">
+                                            </a>
+                                        </div><div class="item ">
+                                            <a href="/news/d/id/69 ">
+                                                <img alt="教师风采" src="/file/get/id/55ff63c0e0ea3c5a5db18889"
+                                                     data-holder-rendered="true">
+                                            </a>
+                                        </div><div class="item ">
+                                            <a href="/news/d/id/62 ">
+                                                <img alt="教师风采" src="/file/get/id/55b984c3e0ea3ca46f276570"
+                                                     data-holder-rendered="true">
+                                            </a>
+                                        </div>                                </div>
+                                <div class="rich-title carousel-control">
+                                    <div class="teacher-rich-title-inner">
+                                        <span>教师风采</span>
+                                    </div>
+                                    <!--<span>教师风采</span>-->
+                                </div>
+                                <a class="left carousel-control" href="#carousel-teacher" role="button"
+                                   data-slide="prev">
+
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-teacher" role="button"
+                                   data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8 school-block">
+                    <div id="carousel-school" class="index-img-div carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-school" data-slide-to="0"
+                                    class="active"></li><li data-target="#carousel-school" data-slide-to="1"
+                                    class=""></li><li data-target="#carousel-school" data-slide-to="2"
+                                    class=""></li><li data-target="#carousel-school" data-slide-to="3"
+                                    class=""></li>                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                    <a href="/news/d/id/74 ">
+                                        <img alt="学院要闻" src="/file/get/id/56244bf2e0ea3c5f7c3d2657"
+                                             data-holder-rendered="true">
+                                    </a>
+                                </div><div class="item ">
+                                    <a href="/news/d/id/73 ">
+                                        <img alt="学院要闻" src="/file/get/id/561758bae0ea3c9831c2b91d"
+                                             data-holder-rendered="true">
+                                    </a>
+                                </div><div class="item ">
+                                    <a href="/news/d/id/67 ">
+                                        <img alt="学院要闻" src="/file/get/id/55f6228be0ea3c656987bd4e"
+                                             data-holder-rendered="true">
+                                    </a>
+                                </div><div class="item ">
+                                    <a href="/news/d/id/65 ">
+                                        <img alt="学院要闻" src="/file/get/id/55eee7bae0ea3c5558c08541"
+                                             data-holder-rendered="true">
+                                    </a>
+                                </div>                        </div>
+                        <a class="left carousel-control" href="#carousel-school" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-school" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-xs-8 rich-block student-block">
+                    <div class="row">
+                        <div class="col-xs-24  carousel-block">
+                            <div id="carousel-student" class="index-img-div carousel slide" data-ride="carousel">
+
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                            <a href="/news/d/id/81 ">
+                                                <img alt="莘莘学子" src="/file/get/id/562f2c61e0ea3ca5217a4b4c"
+                                                     data-holder-rendered="true">
+                                            </a>
+                                        </div><div class="item ">
+                                            <a href="/news/d/id/71 ">
+                                                <img alt="莘莘学子" src="/file/get/id/5603a611e0ea3c0a87b18889"
+                                                     data-holder-rendered="true">
+                                            </a>
+                                        </div><div class="item ">
+                                            <a href="/news/d/id/71 ">
+                                                <img alt="莘莘学子" src="/file/get/id/5603a993e0ea3c0e6fb18889"
+                                                     data-holder-rendered="true">
+                                            </a>
+                                        </div><div class="item ">
+                                            <a href="/news/d/id/69 ">
+                                                <img alt="莘莘学子" src="/file/get/id/55ff63dde0ea3c995cb18889"
+                                                     data-holder-rendered="true">
+                                            </a>
+                                        </div>                                </div>
+
+                                <a class="left carousel-control" href="#carousel-student" role="button"
+                                   data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+
+
+                                <a class="right carousel-control" href="#carousel-student" role="button"
+                                   data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+
+                                <div class="rich-title carousel-control">
+                                    <div class="student-rich-title-inner">
+                                        <span>莘莘学子</span>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<div class="footer-wrapper">
+	<div class="smd-container">
+		地址:上海市闵行区东川路800号上海交通大学媒体与设计学院&nbsp;&nbsp;&nbsp;邮编:200240 &nbsp;&nbsp;&nbsp;&copy; 2014 SMD of SJTU.All rights
+		reserved.
+	</div>
+</div>
+
+
+</body>
+</html>

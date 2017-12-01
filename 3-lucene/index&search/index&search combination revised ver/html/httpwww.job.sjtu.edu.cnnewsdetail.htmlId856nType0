@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/styleFront.css" type="text/css"></link>
+<title>
+  	公告新闻
+</title>
+</head>
+
+<body>
+	<!--头部-->
+	<!-- 用户账号 -->
+	<div class="ind_top">
+        <ul class="ind_top_q">
+        	<li class="ind_top_l">
+            	<a href="http://www.sjtu.edu.cn/xbdh/yjdh/yx.htm" target="_blank">院系专业</a>
+                <a href="/eweb/jygl/zpfw.so?modcode=null&subsyscode=zpfw&type=searchBysycx">生源信息</a>
+                <a href="/eweb/jygl/jygl.so?modcode=jygl_jygljylc&subsyscode=jygl&type=searchNews&newsType=jylc">就业导航</a>
+                <a href="/channel/index.htm?nParentId=5">访客</a>
+            </li>
+            						            <li class="ind_top_c">
+            	            		<a target="_blank" href="http://info.sjtu.edu.cn/index.aspx?jatkt=rejected">综合信息网</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://3dcampus.sjtu.edu.cn/">虚拟校园</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://www.jwc.sjtu.edu.cn/web/sjtu/198109.htm">校历</a>
+            		            	            	<input type="text" class="search_input" id="strTitle" maxLength="30" />
+            	<input type="button" class="search_btn" onclick="queryInfo()" />
+            	<script type="text/javascript">
+                	function queryInfo(){
+                		var strTitle = document.getElementById("strTitle").value;
+                		if(strTitle!=null && strTitle.length>0){
+                			var url = "/news/result.htm?strTitle=" + strTitle;
+							url = encodeURI(url).replace(/#/g, '%23');
+							window.open(url);
+                		}
+                	}
+                </script>
+               
+            </li>
+        </ul>
+    </div>    <!--头部 END-->
+    <!--宽度1000px-->
+    <div class="">
+    	<!--导航-->
+    	    	<div class="nav_wrap">
+                <div class="nav">
+                    <ul class="nav_logo w1000_margin0"><a href="/index.htm"><img class="logo" src="/images/logo.png" /></a></ul>
+                    <div class="hr"></div>
+                    <ul class="nav_dh w1000_margin0">
+                        <li class="dh_left">
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" href="/index.htm">首页</a>
+		                    </div>
+                            <div class="dh_q">
+		                        <a class="nav_tit" href="/news/list.htm?nType=0">新闻公告</a>
+		                     </div>
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW&zpxxType=new">招聘热点</a>
+		                    </div>
+		                	<div class="dh_q">
+		                        <a  class="nav_tit" href="/intro/index.htm">关于我们</a>
+		                    </div>
+                        </li>
+                        <li class="dh_right">
+		                	<span class="dh_time" id="myDate">
+		                		<span id="myYear"></span>年<span id="myMonth"></span>月<span id="myDay"></span>日
+		                	</span>
+		                    <span class="dh_week" id="myWeek">星期二</span>
+		                    <script type="text/javascript">
+		                		var myDate=new Date()
+		                		document.getElementById("myDate").innerHTML=myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDate()+"日";
+		                		var day =myDate.getDay();
+		                		var week ="";
+		                		if(day==0){
+		                			week ="星期日"
+		                		}
+		                		if(day==1){
+		                			week ="星期一"
+		                		}
+		                		if(day==2){
+		                			week ="星期二"
+		                		}
+		                		if(day==3){
+		                			week ="星期三"
+		                		}
+		                		if(day==4){
+		                			week ="星期四"
+		                		}
+		                		if(day==5){
+		                			week ="星期五"
+		                		}
+		                		if(day==6){
+		                			week ="星期六"
+		                		}
+		                		document.getElementById("myWeek").innerHTML=week;
+		                	</script>
+		                    																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">热点专题</option>
+		                    			                        <option value="http://www3.sjtu.edu.cn/qzlx2013.htm">
+		        					党的教育实践活专题网              
+		        				</option>
+		                        		                        <option value="http://202.120.33.37/14xz/">
+		        					2014年校长奖评选              
+		        				</option>
+		                        		                        <option value="http://xxgk.sjtu.edu.cn/">
+		        					信息公开              
+		        				</option>
+		                        		                        <option value="http://news.sjtu.edu.cn/jdrw.htm">
+		        					学者笔谈              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/18/">
+		        					聚焦十八大              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/jdwmw.htm">
+		        					文明在线              
+		        				</option>
+		                        		                    </select>
+		                    																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">快速通道</option>
+		                       		                        <option value="http://cc.sjtu.edu.cn/G2S/ShowSystem/Index.aspx">
+		        					课程中心               
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/zsjy.htm">
+		        					招生就办               
+		        				</option>
+		                        		                        <option value="http://alumni.sjtu.edu.cn/alumni/xiaoyouhui/index.php">
+		        					校友会               
+		        				</option>
+		                        		                        <option value="http://join.sjtu.edu.cn/">
+		        					人才招聘               
+		        				</option>
+		                        		                        <option value="http://www.qianxslib.sjtu.edu.cn/">
+		        					钱学森图书馆               
+		        				</option>
+		                        		                        <option value="http://postd.sjtu.edu.cn/">
+		        					博士后流动站               
+		        				</option>
+		                        		                        <option value="http://zbb.sjtu.edu.cn/">
+		        					招投标办               
+		        				</option>
+		                        		                    </select>
+		                </li>
+                    </ul>
+                </div>
+            </div>
+        <script type="text/javascript">
+        	function openLink(obj){
+        		if(obj.value !='#'){
+        			window.open(obj.value);
+        		}
+        	}
+		</script>
+                <!--导航 END-->
+        
+        <!--中心简介-->
+        <div class="center_intro w1000_margin0">
+        	<!--左边-->
+        												            <div class="left_main">
+            	<div class="quick_gallery">
+					<a href="#">
+							       	 		公告新闻
+			    				    				    	</a>
+				</div>
+				<div class="main_content_1" style="min-height:250px;">
+            	                	<div class="title_big">
+                		                		【公告】上海教育系统选调生——“未来教师储备计划”宣讲会
+                	</div>
+                    <div class="title_time">发布时间：2015-10-15</div>
+                    <p><p><span style="font-family:courier new,courier,monospace">现定于10月21日(周三)下午1:30在华东师范大学(东川路500号)闵行校区学生之家C区报告厅举办“未来教师储备计划”宣讲会暨未来教师培养实训报名活动。欢迎有志于加入上海市教师队伍的我校优秀学子前来听讲并报名参与。</span></p>
+
+<p> </p>
+
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; “未来教师储备计划”招募令</strong></p>
+
+<p>如果，您志愿成为一名教师，请跟我来！</p>
+
+<p>如果，您还没有任何教师职业技能，请加入我们！</p>
+
+<p>“你是一，我们是唯一！”让我们携手实现我们的教育梦、教师梦！</p>
+
+<p> </p>
+
+<p>“未来教师储备计划”（以下简称“种子计划”）是市教委在“建设一流师资队伍”中的重要政府资助项目之一。“计划”面对本市优质高校有志于加入教师队伍的同学，旨在从中甄选和培养一批高素质的专业人才加入教师队伍。</p>
+
+<p>一、“种子计划”内容为“实岗锻炼”、“入职辅导”、“择优推荐”三方面</p>
+
+<p><strong>[</strong><strong>实岗锻炼</strong><strong>]</strong>安排学员进入上海知名中小学、幼儿园，全方位渗透学校生活，量身定制个性培训计划，由一线名师实岗带教，参加教学方案、教育活动的设计与实施，开展课例研究，为您成为教师锤炼真功。</p>
+
+<p><strong>[</strong><strong>入职辅导</strong><strong>]</strong>针对各区教育局入编入职考试的主要内容和形式，由相关教育专家执教，对师德修养、综合水平、课堂教学活动设计、面试试讲技能等基础模块进行实战辅导，为您成为教师开启捷径。</p>
+
+<p><strong>[</strong><strong>择优推荐</strong><strong>]</strong>教育专家对 “优秀学员”，出具推优函，为您成为教师添砖加瓦。</p>
+
+<p>二、“种子计划”流程及时间安排</p>
+
+<p>1、10月22日前完成预报名。</p>
+
+<p>2、10月30日前完成报名确认，一般以就近为原则，安排落实名校实训基地。</p>
+
+<p>3、组织实施（本次招募学员，根据需求，分两批实施）</p>
+
+<ul>
+	<li>&lt; &gt;年11月12—12月12日组织2015年冬季实训，为直接参与2016年度教师应聘做好准备。实岗锻炼安排在该月工作日，具体时间可与带教老师商定；入职辅导安排在该月双休日。<!--  -->&lt; &gt;年4-5月组织2016年春季实训，为参与2016年教师补充应聘及2017年教师应聘做好准备。（安排同上）shms113@163.com。
+	<p><strong>上海市教育人才交流服务中心&nbsp; 上海市名师培训中心</strong></p>
+	</li>
+</ul>
+
+<p> </p></p>
+				            	</div>
+            </div>
+            <!--左边 END-->
+            
+            <!--右边-->
+            
+		
+<div class="right_main">
+	<p class="more_infor_title">
+				更多公告新闻
+					</p>
+   	<ul class="source_list">
+   		   		<li>
+   			<a href="detail.htm?lId=873&nType=0" style="pading:0 10px;">
+	   				   			【新闻】校就业中心求职季系列沙龙之简历特训营举办
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=857&nType=0" style="pading:0 10px;">
+	   				   			【新闻】上海东方传媒集团有限公司专场招聘会在交大举行
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=855&nType=0" style="pading:0 10px;">
+	   				   			【公告】简历特训营培训报名通知！
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=854&nType=0" style="pading:0 10px;">
+	   				   			欢迎用人单位参加2016年上海交通大学国家重点单位专场招聘会
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=853&nType=0" style="pading:0 10px;">
+	   				   			【新闻】就业中心召开院系就业工作会议
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=833&nType=0" style="pading:0 10px;">
+	   				   			【新闻】中国航天科技集团第八研究院专场招聘会在交大举行
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=813&nType=0" style="pading:0 10px;">
+	   				   			【公告】快点微信我们吧！
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=793&nType=0" style="pading:0 10px;">
+	   				   			【公告】就业中心学生服务团队招聘
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=773&nType=0" style="pading:0 10px;">
+	   				   			【新闻】2015上海交大-江苏南通“智慧海工”创业大赛
+	   			
+   			</a>
+   		</li>
+   		   	</ul>
+</div>
+            <!--右边 END-->
+            <div class="clear"></div>
+        </div>
+        <!--中心简介 END-->
+        
+        <!--底部-->
+                 <div class="foot">
+        	<ul class="footer_content">
+                <li>
+                	<a href="http://cert.sjtu.edu.cn/beian_user/show.asp?number=930">沪交ICP备2010930</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                	版权所有：上海交通大学学生就业服务和职业发展中心
+                </li>
+                <li>
+                	地址：上海市闵行区东川路800号交通大学铁生馆&nbsp;&nbsp;&nbsp;&nbsp;
+                	邮编：200240&nbsp;&nbsp;<a href="/intro/index.htm?lId=3">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                	<a target="_blank" href="/admin/welcome.htm">网站管理</a>
+                </li>
+            </ul>
+        </div>        <!--底部 END-->
+	</div>
+    <!--宽度1000px END-->
+</body>
+</html>

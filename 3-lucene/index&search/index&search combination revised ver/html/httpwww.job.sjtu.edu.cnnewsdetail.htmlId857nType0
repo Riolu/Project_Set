@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/styleFront.css" type="text/css"></link>
+<title>
+  	公告新闻
+</title>
+</head>
+
+<body>
+	<!--头部-->
+	<!-- 用户账号 -->
+	<div class="ind_top">
+        <ul class="ind_top_q">
+        	<li class="ind_top_l">
+            	<a href="http://www.sjtu.edu.cn/xbdh/yjdh/yx.htm" target="_blank">院系专业</a>
+                <a href="/eweb/jygl/zpfw.so?modcode=null&subsyscode=zpfw&type=searchBysycx">生源信息</a>
+                <a href="/eweb/jygl/jygl.so?modcode=jygl_jygljylc&subsyscode=jygl&type=searchNews&newsType=jylc">就业导航</a>
+                <a href="/channel/index.htm?nParentId=5">访客</a>
+            </li>
+            						            <li class="ind_top_c">
+            	            		<a target="_blank" href="http://info.sjtu.edu.cn/index.aspx?jatkt=rejected">综合信息网</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://3dcampus.sjtu.edu.cn/">虚拟校园</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://www.jwc.sjtu.edu.cn/web/sjtu/198109.htm">校历</a>
+            		            	            	<input type="text" class="search_input" id="strTitle" maxLength="30" />
+            	<input type="button" class="search_btn" onclick="queryInfo()" />
+            	<script type="text/javascript">
+                	function queryInfo(){
+                		var strTitle = document.getElementById("strTitle").value;
+                		if(strTitle!=null && strTitle.length>0){
+                			var url = "/news/result.htm?strTitle=" + strTitle;
+							url = encodeURI(url).replace(/#/g, '%23');
+							window.open(url);
+                		}
+                	}
+                </script>
+               
+            </li>
+        </ul>
+    </div>    <!--头部 END-->
+    <!--宽度1000px-->
+    <div class="">
+    	<!--导航-->
+    	    	<div class="nav_wrap">
+                <div class="nav">
+                    <ul class="nav_logo w1000_margin0"><a href="/index.htm"><img class="logo" src="/images/logo.png" /></a></ul>
+                    <div class="hr"></div>
+                    <ul class="nav_dh w1000_margin0">
+                        <li class="dh_left">
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" href="/index.htm">首页</a>
+		                    </div>
+                            <div class="dh_q">
+		                        <a class="nav_tit" href="/news/list.htm?nType=0">新闻公告</a>
+		                     </div>
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW&zpxxType=new">招聘热点</a>
+		                    </div>
+		                	<div class="dh_q">
+		                        <a  class="nav_tit" href="/intro/index.htm">关于我们</a>
+		                    </div>
+                        </li>
+                        <li class="dh_right">
+		                	<span class="dh_time" id="myDate">
+		                		<span id="myYear"></span>年<span id="myMonth"></span>月<span id="myDay"></span>日
+		                	</span>
+		                    <span class="dh_week" id="myWeek">星期二</span>
+		                    <script type="text/javascript">
+		                		var myDate=new Date()
+		                		document.getElementById("myDate").innerHTML=myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDate()+"日";
+		                		var day =myDate.getDay();
+		                		var week ="";
+		                		if(day==0){
+		                			week ="星期日"
+		                		}
+		                		if(day==1){
+		                			week ="星期一"
+		                		}
+		                		if(day==2){
+		                			week ="星期二"
+		                		}
+		                		if(day==3){
+		                			week ="星期三"
+		                		}
+		                		if(day==4){
+		                			week ="星期四"
+		                		}
+		                		if(day==5){
+		                			week ="星期五"
+		                		}
+		                		if(day==6){
+		                			week ="星期六"
+		                		}
+		                		document.getElementById("myWeek").innerHTML=week;
+		                	</script>
+		                    																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">热点专题</option>
+		                    			                        <option value="http://www3.sjtu.edu.cn/qzlx2013.htm">
+		        					党的教育实践活专题网              
+		        				</option>
+		                        		                        <option value="http://202.120.33.37/14xz/">
+		        					2014年校长奖评选              
+		        				</option>
+		                        		                        <option value="http://xxgk.sjtu.edu.cn/">
+		        					信息公开              
+		        				</option>
+		                        		                        <option value="http://news.sjtu.edu.cn/jdrw.htm">
+		        					学者笔谈              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/18/">
+		        					聚焦十八大              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/jdwmw.htm">
+		        					文明在线              
+		        				</option>
+		                        		                    </select>
+		                    																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">快速通道</option>
+		                       		                        <option value="http://cc.sjtu.edu.cn/G2S/ShowSystem/Index.aspx">
+		        					课程中心               
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/zsjy.htm">
+		        					招生就办               
+		        				</option>
+		                        		                        <option value="http://alumni.sjtu.edu.cn/alumni/xiaoyouhui/index.php">
+		        					校友会               
+		        				</option>
+		                        		                        <option value="http://join.sjtu.edu.cn/">
+		        					人才招聘               
+		        				</option>
+		                        		                        <option value="http://www.qianxslib.sjtu.edu.cn/">
+		        					钱学森图书馆               
+		        				</option>
+		                        		                        <option value="http://postd.sjtu.edu.cn/">
+		        					博士后流动站               
+		        				</option>
+		                        		                        <option value="http://zbb.sjtu.edu.cn/">
+		        					招投标办               
+		        				</option>
+		                        		                    </select>
+		                </li>
+                    </ul>
+                </div>
+            </div>
+        <script type="text/javascript">
+        	function openLink(obj){
+        		if(obj.value !='#'){
+        			window.open(obj.value);
+        		}
+        	}
+		</script>
+                <!--导航 END-->
+        
+        <!--中心简介-->
+        <div class="center_intro w1000_margin0">
+        	<!--左边-->
+        												            <div class="left_main">
+            	<div class="quick_gallery">
+					<a href="#">
+							       	 		公告新闻
+			    				    				    	</a>
+				</div>
+				<div class="main_content_1" style="min-height:250px;">
+            	                	<div class="title_big">
+                		                		【新闻】上海东方传媒集团有限公司专场招聘会在交大举行
+                	</div>
+                    <div class="title_time">发布时间：2015-10-15</div>
+                    <p><p>10月14日，上海东方传媒集团有限公司（SMG&nbsp;，原上海文广新闻传媒集团）2016届毕业生专场招聘会在上海交大闵行校区铁生馆大厅举行。</p>
+
+<p>上海东方传媒集团有限公司是一家多媒体集团，集团在2001年整合上海人民广播电台、上海东方广播电台、上海电视台、上海东方电视台、上海有线电视台等单位的基础上组建而成，是一个以传媒产业为核心业务，集广播电视节目制作、报刊发行、网络媒体以及娱乐相关业务于一体的多媒体集团。</p>
+
+<p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" src="https://mmbiz.qlogo.cn/mmbiz/nOnseCialZmS0qnJ54ITkGN8QBz9Ja5XKEibf2Gz8HRL6mhQjPeHDJUT20iatGeoJCtiafhZtY5iaQEbWSssLEiaKUGQ/0?wx_fmt=jpeg" style="height:400px; width:600px" /></p>
+
+<p>参加此次专场招聘会的主要有东方卫视中心、上海东方明珠新媒体股份有限公司、上海文广互动电视有限公司、第一财经、百视通等23家集团下属单位。招聘会正式开始前，工作人员便开始发放招聘的宣传手册，同学们携带简历，排队准备等候入场参加招聘活动。</p>
+
+<p><img src="https://mmbiz.qlogo.cn/mmbiz/nOnseCialZmS0qnJ54ITkGN8QBz9Ja5XKIpuBcRqtD6CRUDuJ2rHM9xSlqA2y2cibYyUS68icK7OxiceAnyPSV3gJA/0?wx_fmt=jpeg" style="height:400px; width:600px" />&nbsp;</p>
+
+<p>此次招聘会具有很强的专业性、针对性和集群效应，吸引了包括电子信息与电气工程学院、安泰经济与管理学院、媒体与设计学院等相关专业的大量毕业生前来，招聘会现场气氛热烈。同学们积极的与单位代表进行了互动交流。招聘会从中午1：30开始，一直持续到下午4:30左右结束。</p>
+
+<p>&nbsp;<img src="https://mmbiz.qlogo.cn/mmbiz/nOnseCialZmS0qnJ54ITkGN8QBz9Ja5XKgv0RWMuvs8eXFM23ZdqJmcDicQRGu2TtibwqyChuF58J0w2ucB1ibkzLA/0?wx_fmt=jpeg" style="height:400px; width:600px" /></p>
+
+<p>李同学是一名来自媒体与设计学院的研究生，她在招聘会结束后说道，SMG一直是自己梦想的就业单位，通过此次现场与各个单位代表的交流，加深了她对单位的了解，为其后续应聘提供了很大帮助。SMG的单位代表对交大毕业生的综合素质和能力也给予了高度评价，希望通过宣讲会能够扩大单位影响，尽早锁定人才，吸纳更多优秀的交大学子加入到SMG的大家庭中。</p>
+
+<p style="text-align:right">撰稿：李骁博</p>
+
+<p style="text-align:right">摄影：李骁博</p>
+
+<p> </p></p>
+				            	</div>
+            </div>
+            <!--左边 END-->
+            
+            <!--右边-->
+            
+		
+<div class="right_main">
+	<p class="more_infor_title">
+				更多公告新闻
+					</p>
+   	<ul class="source_list">
+   		   		<li>
+   			<a href="detail.htm?lId=873&nType=0" style="pading:0 10px;">
+	   				   			【新闻】校就业中心求职季系列沙龙之简历特训营举办
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=856&nType=0" style="pading:0 10px;">
+	   				   			【公告】上海教育系统选调生——“未来教师储备计划”宣讲会
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=855&nType=0" style="pading:0 10px;">
+	   				   			【公告】简历特训营培训报名通知！
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=854&nType=0" style="pading:0 10px;">
+	   				   			欢迎用人单位参加2016年上海交通大学国家重点单位专场招聘会
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=853&nType=0" style="pading:0 10px;">
+	   				   			【新闻】就业中心召开院系就业工作会议
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=833&nType=0" style="pading:0 10px;">
+	   				   			【新闻】中国航天科技集团第八研究院专场招聘会在交大举行
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=813&nType=0" style="pading:0 10px;">
+	   				   			【公告】快点微信我们吧！
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=793&nType=0" style="pading:0 10px;">
+	   				   			【公告】就业中心学生服务团队招聘
+	   			
+   			</a>
+   		</li>
+   		   		<li>
+   			<a href="detail.htm?lId=773&nType=0" style="pading:0 10px;">
+	   				   			【新闻】2015上海交大-江苏南通“智慧海工”创业大赛
+	   			
+   			</a>
+   		</li>
+   		   	</ul>
+</div>
+            <!--右边 END-->
+            <div class="clear"></div>
+        </div>
+        <!--中心简介 END-->
+        
+        <!--底部-->
+                 <div class="foot">
+        	<ul class="footer_content">
+                <li>
+                	<a href="http://cert.sjtu.edu.cn/beian_user/show.asp?number=930">沪交ICP备2010930</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                	版权所有：上海交通大学学生就业服务和职业发展中心
+                </li>
+                <li>
+                	地址：上海市闵行区东川路800号交通大学铁生馆&nbsp;&nbsp;&nbsp;&nbsp;
+                	邮编：200240&nbsp;&nbsp;<a href="/intro/index.htm?lId=3">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                	<a target="_blank" href="/admin/welcome.htm">网站管理</a>
+                </li>
+            </ul>
+        </div>        <!--底部 END-->
+	</div>
+    <!--宽度1000px END-->
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<title>上海交大-巴黎高科卓越工程师学院</title>
+<script>
+	function dochange(value){
+		var url=value;
+		if(url!=""){
+			window.open(url);
+		}
+	}
+	
+	function changeCaptcha(obj) {
+		//获取当前的时间作为参数，无具体意义
+		var timenow = new Date().getTime();
+		//每次请求需要一个不同的参数，否则可能会返回同样的验证码
+		//这和浏览器的缓存机制有关系，也可以把页面设置为不缓存，这样就不用这个参数了。
+		obj.src="/security/captcha.action?d="+timenow;
+	}
+	
+	function checkBT(value,view,param,form){
+         if(value == ""){
+            alert(view);
+            form[param].focus();
+            return false;
+     	 }
+         return true;
+   }
+</script>
+
+
+<meta name="keywords" content="上海交大-巴黎高科卓越工程师学院">
+<meta name="description" content="上海交大-巴黎高科卓越工程师学院">
+<link href="/static/index/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/static/index/css/slider.css" rel="stylesheet" type="text/css" />
+<link href="/static/index/images/table.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/static/index/js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="/static/index/js/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="/static/index/js/navigation.js"></script>
+<script type="text/javascript" src="/static/index/js/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="/static/index/js/cufon-yui.js"></script>
+<script type="text/javascript" src="/static/index/js/scripts.js"></script>
+<script type="text/javascript" src="/static/index/js/custom.js"></script>
+</head>
+
+<!--
+<div id="ad" style="position:absolute">
+<a href="./indexen!apply.action?sideNav=171&yzHzh=1" target="_blank">
+<img src="/static/indexen/images/logoEN.png" border="0">
+</a>
+</div>
+-->
+<script>
+
+function SetDivTop(objid)
+{
+    
+    var divs = document.all.tags("div"); 
+    var nowDiv=document.getElementById(objid);
+    var zMax=0;
+    for(var i= 0; i<divs.length; i++)
+    { 
+        if(divs[i].style.zIndex>zMax)
+        { 
+            zMax=divs[i].style.zIndex;
+        } 
+    } 
+    nowDiv.style.zIndex = zMax+1; 
+    nowDiv.style.border="1px";
+    nowDiv.style.borderColor="#000000";
+}
+SetDivTop("ad");
+
+
+
+
+var x = 50,y = 60
+
+var xin = true, yin = true
+
+var step = 1 
+
+var delay = 10
+
+var obj=document.getElementById("ad") 
+
+function floatAD() {
+
+var L=T=0
+
+var R= document.body.clientWidth-obj.offsetWidth
+
+var B = document.body.clientHeight-obj.offsetHeight
+
+obj.style.left = x + document.body.scrollLeft
+
+obj.style.top = y + document.body.scrollTop
+
+x = x + step*(xin?1:-1) 
+
+if (x < L) { xin = true; x = L} 
+
+if (x > R){ xin = false; x = R} 
+
+y = y + step*(yin?1:-1) 
+
+if (y < T) { yin = true; y = T } 
+
+if (y > B) { yin = false; y = B } 
+
+}
+
+var itl= setInterval("floatAD()", delay) 
+
+obj.onmouseover=function(){clearInterval(itl)} 
+
+obj.onmouseout=function(){itl=setInterval("floatAD()", delay)}
+
+</script>
+
+<body>
+ <!-----左侧滑动菜单------>
+ <ul id="navigation">
+    <li class="home"><a style="margin-left: -100px;" href="/index.html"></a></li>
+ </ul>
+ <!-----/左侧滑动菜单------>
+<div class="main">
+   <!-----头部------>
+   <div class="head">
+      <div class="head_logo_1"><a href="http://www.sjtu.edu.cn" target="_blank"><img src="/static/index/images/logo.png" alt="上海交大" width="272" height="79"/></a></div>
+      <div class="head_logo_2"><img src="/static/index/images/logo_name.png" alt="巴黎高科卓越工程师学院" width="392" height="37"/></div>
+     <div class="head_logo_3">
+        <ul>
+            <li><a href="/index.html"><img src="/static/index/images/language_1.png" width="16" height="11" alt="中文"/></a></li>
+            <li><a href="/indexfn.html"><img src="/static/index/images/language_3.png" width="16" height="11" alt="Français"/></a></li>
+            <li><a href="/indexen.html"><img src="/static/index/images/language_2.png" width="16" height="11" alt="English"/></a></li>
+        </ul>
+        <img src="/static/index/images/logo_right.png" width="141" height="45" alt="paristech" /> 
+      </div>
+   </div>
+   <!-----/头部------>
+   <!-----菜单------>
+   <div class="menu" id="navigation-bar">
+      <div id="g-navigation">
+        <ul class="simple-drop-down-menu">
+	    		<li>
+	    			<a 		href="/index!index.html?topNav=2"
+><span>首页</span></a>
+	    		</li>
+	    		<li>
+	    			<a 		href="/index!list.html?topNav=3"
+><span>学院介绍</span></a>
+	    				<ul>
+	    						<li><a 		href=" /index!list.html?single=1&sideNav=10"
+>院长寄语</a></li>
+	    						<li><a 		href=" /index!list.html?single=1&sideNav=9"
+>学院概况</a></li>
+	    						<li><a 		href="/index!list.html?sideNav=13"
+>发展历程</a></li>
+	    						<li><a 		href=" /index!list.html?single=1&sideNav=11"
+>学院领导</a></li>
+	    						<li><a 		href="/index!list.html?sideNav=256"
+>行政机构</a></li>
+	    						<li><a 		href=" /index!list.html?single=1&sideNav=306"
+>内部共享</a></li>
+	    				</ul>
+	    		</li>
+	    		<li>
+	    			<a 		href="/index!list.html?topNav=4"
+><span>招生就业</span></a>
+	    				<ul>
+	    						<li><a 		href="/index!list.html?sideNav=14"
+>招生工作</a></li>
+	    						<li><a 		href=" /index!list.html?single=1&sideNav=61"
+>Q&A</a></li>
+	    						<li><a 		href="/index!list.html?sideNav=62"
+>奖学金</a></li>
+	    				</ul>
+	    		</li>
+	    		<li>
+	    			<a 		href="/index!list.html?topNav=5"
+><span>人才培养</span></a>
+	    				<ul>
+	    						<li><a 		href=" /index!list.html?single=1&sideNav=63"
+>培养计划</a></li>
+	    						<li><a 		href="/index!list.html?sideNav=15"
+>实习交流</a></li>
+	    						<li><a 		href="/index!list.html?sideNav=21"
+>管理规定</a></li>
+	    						<li><a 		href=" /index!list.html?single=1&sideNav=41"
+>校历</a></li>
+	    						<li><a 		href="/index!list.html?sideNav=310"
+>文件下载</a></li>
+	    				</ul>
+	    		</li>
+	    		<li>
+	    			<a 		href="/index!list.html?topNav=8"
+><span>合作伙伴</span></a>
+	    				<ul>
+	    						<li><a 		href="/index!list.html?sideNav=128"
+>合作支持</a></li>
+	    						<li><a 		href=" /index!list.html?single=1&sideNav=129"
+>合作企业</a></li>
+	    				</ul>
+	    		</li>
+	    		<li>
+	    			<a 		href="/index!szdw.html?topNav=6"
+><span>师资队伍</span></a>
+	    				<ul>
+	    						<li><a 		href="/index!szdw.html?sideNav=121"
+>专业教师</a></li>
+	    						<li><a 		href="/index!szdw.html?sideNav=122"
+>语言教师</a></li>
+	    				</ul>
+	    		</li>
+	    		<li>
+	    			<a 		href="/index!list.html?topNav=7"
+><span>学生工作</span></a>
+	    				<ul>
+	    						<li><a 		href="/index!list.html?sideNav=123"
+>党团组织</a></li>
+	    						<li><a 		href="/index!list.html?sideNav=124"
+>学生事务</a></li>
+	    						<li><a 		href="/index!list.html?sideNav=125"
+>特色活动</a></li>
+	    						<li><a 		href="/index!list.html?sideNav=126"
+>学生风采</a></li>
+	    						<li><a 		href=" /index!list.html?single=1&sideNav=127"
+>常用链接</a></li>
+	    				</ul>
+	    		</li>
+        </ul>
+      </div>
+      <div class="menu_search">
+	      <form id="searchForm" action="/index!search.html?sideNav=142" method="post" onsubmit="return search2();">
+	         <div class="menu_search_l"><input name="title" id="title" type="text" class="search_input" /></div>
+	         <div class="menu_search_r"><a href="#" onclick="$('#searchForm').submit();return false;"><img src="/static/index/images/search_botton.jpg" width="27" height="19" /></a></div>
+	         <script type="text/javascript">
+		        function search2(){
+		            var title = $("#title").val();
+		            if (title == "") {
+		                alert("请输入要搜索的内容！");
+		                return false;
+		            }
+		            return true;
+		        }
+		    </script>
+	      </form>
+      </div>
+   </div><!-----banner------>
+   <div class="banner">
+      <div class="maxx-theme" id="slider-wrapper">
+      <div id="slider" class="nivoSlider">
+      		<img src="/cms/file-utils!downFileById.action?isShowImage=1&fileId=10741" alt="" title="#htmlcaption0">
+      		<img src="/cms/file-utils!downFileById.action?isShowImage=1&fileId=10742" alt="" title="#htmlcaption1">
+      		<img src="/cms/file-utils!downFileById.action?isShowImage=1&fileId=11703" alt="" title="#htmlcaption2">
+      </div>
+      		<div id="htmlcaption0" class="nivo-html-caption">
+		    	<h1>上海交通大学—巴黎高科集团合作新创举</h1>
+		    	
+		    </div>
+      		<div id="htmlcaption1" class="nivo-html-caption">
+		    	<h1>热忱欢迎企业界加入上海交大—巴黎高科卓越工程师学院企业俱乐部</h1>
+		    	
+		    </div>
+      		<div id="htmlcaption2" class="nivo-html-caption">
+		    	<h1>欢迎广大考生报考上海交大—巴黎高科卓越工程师学院</h1>
+		    	
+		    </div>
+</div>
+   </div>
+   <!-----/banner------>
+   <!-----内容------>
+   <div class="content">
+      <!-----首页左侧------>
+      <div class="index_left">
+         <h2><span><a 		href=" /index!list.html?single=1&sideNav=10"
+>更多 >></a></span>院长寄语</h2>
+         <div class="index_left_about"> 
+            <a 		href=" /index!list.html?single=1&sideNav=10"
+><img src="/static/images/yzjy/hz.jpg" width="60" height="73" /></a>
+            <p><a 		href=" /index!list.html?single=1&sideNav=10"
+>黄震</a></p>
+         </div>
+          <div class="index_left_about"> 
+            <a 		href=" /index!list.html?single=1&sideNav=10"
+><img src="/static/images/yzjy/new.jpg" width="60" height="73" /></a>
+            <p><a 		href=" /index!list.html?single=1&sideNav=10"
+ style="line-height:14px;">Joaquim<br>NASSAR</a></p>
+         </div>
+         	<p>学院致力于培养工程技术能力精良的三语精英人才，他们将具备创新精神和管理能力，将在国际化的工作环境中游刃有余。</p>
+         <div class="content_tab">
+                  <div class="tab_menu">
+		             <ul>
+                        <li class="selected">友情链接</li>
+                        <li style="margin-right:auto">合作企业</li> 
+		             </ul>
+	              </div>
+                  <div class="tab_box"> 
+                       <div>
+                           <ul>
+								<li>
+									<a href="http://www.sjtu.edu.cn" target="_blank">
+										<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=1" width="100" height="31" />
+									</a>
+								</li>
+								<li>
+									<a href="http://www.paristech.org" target="_blank">
+										<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=2" width="100" height="31" />
+									</a>
+								</li>
+								<li>
+									<a href="http://www.seiee.sjtu.edu.cn" target="_blank">
+										<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=3" width="100" height="31" />
+									</a>
+								</li>
+								<li>
+									<a href="http://me.sjtu.edu.cn/" target="_blank">
+										<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=4" width="100" height="31" />
+									</a>
+								</li>
+								<li>
+									<a href="http://www.sptreview.org/" target="_blank">
+										<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=67" width="100" height="31" />
+									</a>
+								</li>
+                           </ul>
+                       </div>
+                       <div class="hide">
+                           <ul>
+								<li style="float:none; width:100%">
+									<a href="http://www.psa-peugeot-citroen.com/fr" target="_blank">
+										<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=62" width="150px;" height="31" />
+									</a>
+								</li>
+								<li style="float:none; width:100%">
+									<a href="http://www.safran-group.com" target="_blank">
+										<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=63" width="150px;" height="31" />
+									</a>
+								</li>
+								<li style="float:none; width:100%">
+									<a href="http://www.axa.com.hk/html/AXA_PRO/chi/home_chi.html" target="_blank">
+										<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=64" width="150px;" height="31" />
+									</a>
+								</li>
+								<li style="float:none; width:100%">
+									<a href="http://www.valeo.com.cn/" target="_blank">
+										<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=70" width="150px;" height="31" />
+									</a>
+								</li>
+                           </ul>
+                       </div>     
+                  </div>
+              </div>
+         
+      </div>
+      <!-----/首页左侧------>
+      <!-----首页中部------>
+      <div class="index_center">
+         <h2><span><a 		href="/index!list.html?sideNav=131"
+>更多新闻 >></a></span>新闻快讯</h2>
+         <div class="index_center_news">
+            <ul>
+	         		<li>
+		               <img src="/cms/file-utils!downFileById.action?isShowImage=1&fileId=12373" width="118" height="86" />
+		               <p class="index_center_news_title"><a 		href="/index!list.html?sideNav=131&ccid=1178" target="_blank" title="上海交大-巴黎高科学院联合管理委员会第八次会议召开" 
+>		<font style="size:14px">
+		上海交大-巴黎高科学院联合管理委...
+	</font>
+</a></p>
+		               <p class="index_center_news_content">2015年10月19日下午，上海交大-巴黎高科卓越工程师学院（以下简称“交大-巴黎高科学院”）联合管理委员会第八次会议在上海交通大学召开。 2015-10-20 <a 		href="/index!list.html?sideNav=131&ccid=1178" target="_blank" title="上海交大-巴黎高科学院联合管理委员会第八次会议召开" 
+>[详情]</a></p>
+		            </li>
+	         		<li>
+		               <img src="/cms/file-utils!downFileById.action?isShowImage=1&fileId=12364" width="118" height="86" />
+		               <p class="index_center_news_title"><a 		href="/index!list.html?sideNav=131&ccid=1176" target="_blank" title="交大巴黎高科学院召开2013级本科生年级大会" 
+>		<font style="size:14px">
+		交大巴黎高科学院召开2013级本...
+	</font>
+</a></p>
+		               <p class="index_center_news_content">2015年10月15日中午，上海交大-巴黎高科卓越工程师学院2013级本科生年级大会于闵行校区下院105室召开。本次会议由巴院学生工作负责人汪洋老师主讲。 2015-10-19 <a 		href="/index!list.html?sideNav=131&ccid=1176" target="_blank" title="交大巴黎高科学院召开2013级本科生年级大会" 
+>[详情]</a></p>
+		            </li>
+	         		<li>
+		               <img src="/cms/file-utils!downFileById.action?isShowImage=1&fileId=12397" width="118" height="86" />
+		               <p class="index_center_news_title"><a 		href="/index!list.html?sideNav=131&ccid=1189" target="_blank" title="加拿大院士Mohamad Sawan教授应邀做客交大巴黎高科学院工程师文化课" 
+>		<font style="size:14px">
+		加拿大院士Mohamad Saw...
+	</font>
+</a></p>
+		               <p class="index_center_news_content">10月14日下午，IEEE会士、加拿大工程院院士、蒙特利尔理工学院Mohamad Sawan教授应交大巴黎高科学院的邀请做客工程师文化课，为二三年级的学生作题为“... 2015-10-15 <a 		href="/index!list.html?sideNav=131&ccid=1189" target="_blank" title="加拿大院士Mohamad Sawan教授应邀做客交大巴黎高科学院工程师文化课" 
+>[详情]</a></p>
+		            </li>
+		        			</ul>
+				         </div>
+				         <div class="index_center_list">
+				            <ul>
+		        	<li><span>2015-10-12</span><a 		href="/index!list.html?sideNav=131&ccid=1195" target="_blank" title="巴黎综合理工学院举行“中国日”活动庆祝中国国庆" 
+>		<font style="size:14px">
+		巴黎综合理工学院举行“中国日”活动庆祝中国国庆
+	</font>
+</a></li>
+		        	<li><span>2015-09-30</span><a 		href="/index!list.html?sideNav=131&ccid=1187" target="_blank" title="社会企业总经理Clotilde PALLIER做客工程师文化课剖析企业社会责任" 
+>		<font style="size:14px">
+		社会企业总经理Clotilde PALLIER做客...
+	</font>
+</a></li>
+		        	<li><span>2015-09-29</span><a 		href="/index!list.html?sideNav=131&ccid=1153" target="_blank" title="交大巴黎高科学院举行2015年学生团队拓展培训活动" 
+>		<font style="size:14px">
+		交大巴黎高科学院举行2015年学生团队拓展培训活动...
+	</font>
+</a></li>
+		        	<li><span>2015-09-28</span><a 		href="/index!list.html?sideNav=131&ccid=1154" target="_blank" title="【Allez! 实习生!】 PSA实习生赴武汉神龙公司参观有感" 
+>		<font style="size:14px">
+		【Allez! 实习生!】 PSA实习生赴武汉神龙...
+	</font>
+</a></li>
+		        	<li><span>2015-09-24</span><a 		href="/index!list.html?sideNav=131&ccid=1148" target="_blank" title="交大巴黎高科学院2015级新生入学教育大会顺利召开" 
+>		<font style="size:14px">
+		交大巴黎高科学院2015级新生入学教育大会顺利召开...
+	</font>
+</a></li>
+		        	<li><span>2015-09-23</span><a 		href="/index!list.html?sideNav=131&ccid=1193" target="_blank" title="Signium International总监指导交大-巴黎高科学子职业生涯规划" 
+>		<font style="size:14px">
+		Signium International总监指导...
+	</font>
+</a></li>
+            </ul>
+         </div>
+      </div>
+      <!-----/首页中部------>
+      <!-----首页右侧------>
+      <div class="index_right">
+         <h2><span><a 		href="/index!list.html?sideNav=132"
+>更多 >></a></span>通知公告</h2>
+         <div class="index_right_list">
+         <ul>
+         		<li>
+	               <span>10.10<br />星期六<br />09:15</span>
+	               <a 		href="/index!list.html?sideNav=132&ccid=1165" target="_blank" title="【招聘启事】Enseignants-chercheurs en Mathématique Enseignants-chercheurs de Physique/Chimie" 
+>	<font style="size:14px">
+		【招聘启事】Enseignants-chercheurs en Mathémati...
+	</font>
+</a>
+	            </li>
+         		<li>
+	               <span>10.10<br />星期六<br />09:15</span>
+	               <a 		href="/index!list.html?sideNav=132&ccid=1164" target="_blank" title="【招聘启事】Chargé(e) de mission académique" 
+>	<font style="size:14px">
+		【招聘启事】Chargé(e) de mission académique
+	</font>
+</a>
+	            </li>
+         		<li>
+	               <span>10.23<br />星期五<br />08:57</span>
+	               <a 		href="/index!list.html?sideNav=132&ccid=1186" target="_blank" title="【教务处】上海交通大学关于2016届本科预毕业生图片采集的通知 教务处[ 63 ]号" 
+>	<font style="size:14px">
+		【教务处】上海交通大学关于2016届本科预毕业生图片采集的通知 教务处[ 63 ]...
+	</font>
+</a>
+	            </li>
+         		<li>
+	               <span>10.22<br />星期四<br />10:57</span>
+	               <a 		href="/index!list.html?sideNav=132&ccid=1184" target="_blank" title="【本周工程师文化课预告】对话气候与能源专家 Jean-Marc JANCOVICI" 
+>	<font style="size:14px">
+		【本周工程师文化课预告】对话气候与能源专家 Jean-Marc JANCOVICI...
+	</font>
+</a>
+	            </li>
+         		<li>
+	               <span>10.22<br />星期四<br />10:02</span>
+	               <a 		href="/index!list.html?sideNav=132&ccid=1182" target="_blank" title="10月26日：对话气候与能源专家JEAN-MARC JANCOVICI" 
+>	<font style="size:14px">
+		10月26日：对话气候与能源专家JEAN-MARC JANCOVICI
+	</font>
+</a>
+	            </li>
+         		<li>
+	               <span>10.21<br />星期三<br />09:53</span>
+	               <a 		href="/index!list.html?sideNav=132&ccid=1180" target="_blank" title="2016年推荐免试研究生拟录取结果公示" 
+>	<font style="size:14px">
+		2016年推荐免试研究生拟录取结果公示
+	</font>
+</a>
+	            </li>
+         </ul>
+         </div>
+         
+        <div>
+	        <div class="index_right_share"> 	
+	            <p style="width:117px;">
+	            		<a href="http://202.120.46.49:8088/moodle" target="_blank"><img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=9" width="117" height="30" /></a>
+	            </p>
+	            <ul style="width:117px;">
+	            		<li><a href="http://e.weibo.com/speit?ref=http%3A%2F%2F202.120.46.49%2Findex.html" target="_blank"><img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=10" width="25" height="25" /></a></li>
+	            		<li><a href="http://page.renren.com/601831092?checked=true" target="_blank"><img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=13" width="25" height="25" /></a></li>
+	            		<li><a href="http://www.yiban.cn/" target="_blank"><img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=14" width="25" height="25" /></a></li>
+	            		<li><a href="https://www.linkedin.com/edu/school?id=165120&trk=eml-edu" target="_blank"><img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=73" width="25" height="25" /></a></li>
+	            </ul>
+	         </div>
+	         <div>
+	          	<img src="/static/index/images/TwoDimensional.jpg" style="float:right; width:173px; padding-top:5px;width:100px;height:100px;"/>
+	         </div> 	
+     	</div>
+ 
+         
+      </div>
+      <!-----/首页右侧------>
+   </div>
+   <!-----/内容------>
+</div>
+
+
+<!-----底部------>
+   <div class="foot">
+      <div class="foot_content">
+         <div class="foot_logo"><img src="/static/index/images/foot_logo_1.png" width="176" height="62" /></div>
+         <div class="foot_link">
+            <p>
+            			<a 		href="/index!list.html?topNav=3"
+>学院介绍</a>
+            				|
+            			<a 		href="/index!list.html?topNav=4"
+>招生就业</a>
+            				|
+            			<a 		href="/index!list.html?topNav=5"
+>人才培养</a>
+            				|
+            			<a 		href="/index!list.html?topNav=8"
+>合作伙伴</a>
+            				|
+            			<a 		href="/index!szdw.html?topNav=6"
+>师资队伍</a>
+            				|
+            			<a 		href="/index!list.html?topNav=7"
+>学生工作</a>
+            				|
+            			<a 		href="/index!wzdh.html?topNav=134"
+>网站导航</a>
+            				|
+            			<a 		href=" /index!list.html?single=1&topNav=133"
+>联系我们</a>
+            </p>
+            <p> CopyRight 2013 © 上海交大-巴黎高科卓越工程师学院 版权所有 备案号：<a href="http://cert.sjtu.edu.cn/beian_user/show.asp?number=1280">沪交ICP备20131280</a></p>
+         </div>
+         <div class="foot_logo2"><img src="/static/index/images/foot_logo_2.png" width="119" height="37" /></div>
+      </div>
+   </div>
+   <!-----/底部------>
+   <div class="clear"></div>
+</body>
+</html>

@@ -1,0 +1,643 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>TUMOR</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="generator" content="Open Journal Systems 2.3.6.0" />
+	
+		<link rel="stylesheet" href="http://en.tumorsci.org/lib/pkp/styles/pkp.css" type="text/css" />
+	<link rel="stylesheet" href="http://en.tumorsci.org/lib/pkp/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="http://en.tumorsci.org/styles/common.css" type="text/css" />
+
+	<!-- Base Jquery -->
+		<script type="text/javascript" src="http://en.tumorsci.org/lib/pkp/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="http://en.tumorsci.org/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js"></script>
+	
+	
+	
+	<link rel="stylesheet" href="http://en.tumorsci.org/styles/sidebar.css" type="text/css" />	<link rel="stylesheet" href="http://en.tumorsci.org/styles/leftSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://en.tumorsci.org/styles/rightSidebar.css" type="text/css" />	<link rel="stylesheet" href="http://en.tumorsci.org/styles/bothSidebars.css" type="text/css" />
+	
+	<script type="text/javascript" src="http://en.tumorsci.org/lib/pkp/js/general.js"></script>
+	<script type="text/javascript" src="http://en.tumorsci.org/lib/pkp/js/tag-it.js"></script>
+	<!-- Add javascript required for font sizer -->
+	<script type="text/javascript" src="http://en.tumorsci.org/lib/pkp/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="http://en.tumorsci.org/lib/pkp/js/fontController.js" ></script>
+	<script type="text/javascript">
+		$(function(){
+			fontSize("#sizer", "body", 9, 16, 32, ""); // Initialize the font sizer
+		});
+	</script>
+
+	<script type="text/javascript">
+        // initialise plugins
+		
+        $(function(){
+        	
+		});
+		
+	</script>
+
+	
+	<link rel="alternate" type="application/atom+xml" href="http://en.tumorsci.org/index.php/tumor/gateway/plugin/WebFeedGatewayPlugin/atom" />
+	<link rel="alternate" type="application/rdf+xml" href="http://en.tumorsci.org/index.php/tumor/gateway/plugin/WebFeedGatewayPlugin/rss" />
+	<link rel="alternate" type="application/rss+xml" href="http://en.tumorsci.org/index.php/tumor/gateway/plugin/WebFeedGatewayPlugin/rss2" />
+</head>
+<body>
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+<!-- Department of implicit U-turn text display
+
+	TUMOR
+-->
+<img src="/styles/header_title_right.gif" />
+</h1>
+</div>
+</div>
+
+<div id="body">
+
+	<div id="sidebar">
+		<!--			<div id="leftSidebar">
+				<div class="block" id="sidebarFontSize" style="margin-bottom: 4px;">
+	<span class="blockTitle">Font Size</span>
+	<div id="sizer"></div>
+</div>
+<br /><div class="block" id="sidebarInformation">
+	<span class="blockTitle">Information</span>
+	<ul>
+		<li><a href="http://en.tumorsci.org/index.php/tumor/information/readers">For Readers</a></li>		<li><a href="http://en.tumorsci.org/index.php/tumor/information/authors">For Authors</a></li>		<li><a href="http://en.tumorsci.org/index.php/tumor/information/librarians">For Librarians</a></li>	</ul>
+</div>
+<div class="block" id="sidebarWebFeed">
+	<span class="blockTitle">Current Issue</span>	
+	<a href="http://en.tumorsci.org/index.php/tumor/gateway/plugin/WebFeedGatewayPlugin/atom">
+	<img src="http://en.tumorsci.org/plugins/generic/webFeed/templates/images/atom10_logo.gif" alt="Atom logo" border="0" /></a>
+	<br/>
+	<a href="http://en.tumorsci.org/index.php/tumor/gateway/plugin/WebFeedGatewayPlugin/rss2">
+	<img src="http://en.tumorsci.org/plugins/generic/webFeed/templates/images/rss20_logo.gif" alt="RSS2 logo" border="0" /></a>
+	<br/>
+	<a href="http://en.tumorsci.org/index.php/tumor/gateway/plugin/WebFeedGatewayPlugin/rss">
+	<img src="http://en.tumorsci.org/plugins/generic/webFeed/templates/images/rss10_logo.gif" alt="RSS1 logo" border="0" /></a>
+</div>
+			</div>
+		--> <!--modified by wy 2011-10-12-->
+					<div id="rightSidebar">
+			<div style="border:0;padding:0px 0px 20px 0px;">
+				<a href="http://www.tumorsci.org" title="Tumor Website" target="_blank">WWW.TUMORSCI.ORG</a>
+			</div>
+				<div class="block" id="sidebarDevelopedBy">
+	<a class="blockTitle" href="http://pkp.sfu.ca/ojs/" id="developedBy">Open Journal Systems</a>
+</div>	<div class="block" id="sidebarHelp">
+	<a class="blockTitle" href="javascript:openHelp('http://en.tumorsci.org/index.php/tumor/help/view/user/topic/000001')">Journal Help</a>
+</div><div class="block" id="sidebarUser">
+			<span class="blockTitle">User</span>
+		
+						<form method="post" action="http://en.tumorsci.org/index.php/tumor/login/signIn">
+				<table>
+					<tr>
+						<td><label for="sidebar-username">Username</label></td>
+						<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+					</tr>
+					<tr>
+						<td><label for="sidebar-password">Password</label></td>
+						<td><input type="password" id="sidebar-password" name="password" value="" size="12" maxlength="32" class="textField" /></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">Remember me</label></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" value="Log In" class="button" /></td>
+					</tr>
+				</table>
+			</form>
+			</div> <div class="block" id="notification">
+	<span class="blockTitle">Notifications</span>
+	<ul>
+					<li><a href="http://en.tumorsci.org/index.php/tumor/notification">View</a></li>
+			<li><a href="http://en.tumorsci.org/index.php/tumor/notification/subscribeMailList">Subscribe</a> / <a href="http://en.tumorsci.org/index.php/tumor/notification/unsubscribeMailList">Unsubscribe</a></li>	
+			</ul>
+</div>
+<div class="block" id="sidebarLanguageToggle">
+	<span class="blockTitle">Language</span>
+	<form action="#">
+		<select size="1" name="locale" onchange="location.href=('http://en.tumorsci.org/index.php/tumor/user/setLocale/NEW_LOCALE?source=%2Findex.php%2Ftumor'.replace('NEW_LOCALE', this.options[this.selectedIndex].value))" class="selectMenu"><option label="English" value="en_US" selected="selected">English</option>
+<option label="简体中文" value="zh_CN">简体中文</option>
+<option label="繁體中文" value="zh_TW">繁體中文</option>
+</select>
+	</form>
+</div>
+<div class="block" id="sidebarNavigation">
+	<span class="blockTitle">Journal Content</span>
+	
+	<span class="blockSubtitle">Search</span>
+	<form method="post" action="http://en.tumorsci.org/index.php/tumor/search/results">
+	<table>
+	<tr>
+		<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
+	</tr>
+	<tr>
+		<td><select name="searchField" size="1" class="selectMenu">
+			<option label="All" value="">All</option>
+<option label="Authors" value="1">Authors</option>
+<option label="Title" value="2">Title</option>
+<option label="Abstract" value="4">Abstract</option>
+<option label="Index terms" value="120">Index terms</option>
+<option label="Full Text" value="128">Full Text</option>
+
+		</select></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Search" class="button" /></td>
+	</tr>
+	</table>
+	</form>
+	
+	<br />
+	
+		<span class="blockSubtitle">Browse</span>
+	<ul>
+		<li><a href="http://en.tumorsci.org/index.php/tumor/issue/archive">By Issue</a></li>
+		<li><a href="http://en.tumorsci.org/index.php/tumor/search/authors">By Author</a></li>
+		<li><a href="http://en.tumorsci.org/index.php/tumor/search/titles">By Title</a></li>
+			</ul>
+	</div>
+
+			
+			</div>
+			</div>
+<div id="navbarContent">
+	<div id="navbar">
+	<ul class="menu">
+		
+		<li id="home"><a href="http://en.tumorsci.org/index.php/tumor/index">Home</a></li>
+		<li id="about"><a href="http://en.tumorsci.org/index.php/tumor/about">About</a></li>
+
+					<li id="login"><a href="http://en.tumorsci.org/index.php/tumor/login">Log In</a></li>
+							<li id="register"><a href="http://en.tumorsci.org/index.php/tumor/user/register">Register</a></li>
+										<li id="search"><a href="http://en.tumorsci.org/index.php/tumor/search">Search</a></li>
+		
+					<li id="current"><a href="http://en.tumorsci.org/index.php/tumor/issue/current">Current</a></li>
+			<li id="archives"><a href="http://en.tumorsci.org/index.php/tumor/issue/archive">Archives</a></li>
+		
+					<li id="announcements"><a href="http://en.tumorsci.org/index.php/tumor/announcement">Announcements</a></li>
+				
+
+									<li id="navItem"><a href="/index.php/tumor/about/submissions#onlineSubmissions">Submissions</a></li>
+												<li id="navItem"><a href="http://en.tumorsci.org/files/Instructions.pdf">Instructions</a></li>
+												<li id="navItem"><a href="http://en.tumorsci.org/index.php/tumor/pages/view/CONTACT%20US">CONTACT US</a></li>
+							
+	</ul>
+	<!--modified by wy 2011-10-12-->
+				<div id="leftSidebar">
+				<div class="block" id="sidebarFontSize" style="margin-bottom: 4px;">
+	<span class="blockTitle">Font Size</span>
+	<div id="sizer"></div>
+</div>
+<br /><div class="block" id="sidebarInformation">
+	<span class="blockTitle">Information</span>
+	<ul>
+		<li><a href="http://en.tumorsci.org/index.php/tumor/information/readers">For Readers</a></li>		<li><a href="http://en.tumorsci.org/index.php/tumor/information/authors">For Authors</a></li>		<li><a href="http://en.tumorsci.org/index.php/tumor/information/librarians">For Librarians</a></li>	</ul>
+</div>
+<div class="block" id="sidebarWebFeed">
+	<span class="blockTitle">Current Issue</span>	
+	<a href="http://en.tumorsci.org/index.php/tumor/gateway/plugin/WebFeedGatewayPlugin/atom">
+	<img src="http://en.tumorsci.org/plugins/generic/webFeed/templates/images/atom10_logo.gif" alt="Atom logo" border="0" /></a>
+	<br/>
+	<a href="http://en.tumorsci.org/index.php/tumor/gateway/plugin/WebFeedGatewayPlugin/rss2">
+	<img src="http://en.tumorsci.org/plugins/generic/webFeed/templates/images/rss20_logo.gif" alt="RSS2 logo" border="0" /></a>
+	<br/>
+	<a href="http://en.tumorsci.org/index.php/tumor/gateway/plugin/WebFeedGatewayPlugin/rss">
+	<img src="http://en.tumorsci.org/plugins/generic/webFeed/templates/images/rss10_logo.gif" alt="RSS1 logo" border="0" /></a>
+</div>
+			</div>
+			<!--modified by wy 2011-10-12-->
+</div>
+	
+</div>
+<div id="main">
+
+<div id="breadcrumb">
+	<a href="http://en.tumorsci.org/index.php/tumor/index">Home</a> &gt;
+			<a href="http://en.tumorsci.org/index.php/tumor" class="current">Vol 35, No 9 (2015)</a></div>
+
+<h2>TUMOR</h2>
+
+
+<div id="content">
+
+
+
+<div><dd style="line-height: 32px; margin: 0px; font-size: 9pt;"><span style="line-height: normal;"><img style="float: right;" title="http://en.tumorsci.org/public/site/images/admin/cover_209" src="/public/site/images/admin/cover_209.gif" alt="http://en.tumorsci.org/public/site/images/admin/cover_209" width="151" height="209" /></span>TUMOR( ISSN 1000-7431, CN 31-1372/R), co-sponsored and published by Shanghai Cancer Institute and Shanghai Jiaotong University Cancer Institute, is a peer-reviewed international academic journal published monthly since 1981. It is an Open  Access monthly journal in Chinese and English. As one of the most prestigious medical journals in China, TUMOR is indexed in those most powerful database : CSTPCD, CSCD, A Guide to the Core Journal of China, Cambridge Scientific Abstracts(CSA), EMBASE/SCOPUS-Elsevier, Chemical Abstracts, Index Copernicus, VINITI and JST-China. </dd><dd style="line-height: 32px; margin: 0px; font-size: 9pt;">website of Tumor: en.tumorsci.org </dd><dd style="line-height: 32px; margin: 0px; font-size: 9pt;">E-mail of Tumor: tumor@tumorsci.org</dd><dd style="line-height: 32px; margin: 0px; font-size: 9pt;">Address of Tumor: 2200 Xie-tu road No.25,Shanghai (200032) </dd></div>
+
+
+
+
+
+
+<!--modified by wy 2011-10-12-->
+		<br />
+	<h3>Vol 35, No 9 (2015): TUMOR</h3>
+		<div id="issueDescription"></div>
+	<h3>Table of Contents</h3>
+	 
+<h4 class="tocSectionTitle">Basic Research</h4>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/935">Comparison of biological behaviors of breast cancer stem cells expressing different stem cell markers</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Jun SHAO,							Wei FAN,							Biao MA,							Yi-ping WU						</td>
+	<td class="tocPages">943-951</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/936">Streptavidin-modified quantum dots combined with biotinylated folic acid in diagnostic imaging of ovarian cancer SKOV3 cells in vitro</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Ping-feng SUN,							Fu-lai LI,							Heng-yi XU,							Fen FU						</td>
+	<td class="tocPages">952-960</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/937">Effect of VCAM-1 gene silencing mediated by lentiviral vector on growth of xenograft tumors of human tongue squamous cell carcinoma in nude mice</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Le-gang SUN,							Yao SHI,							Jin-ping ZHAO,							Ling LIU,							Qian-qian ZHANG						</td>
+	<td class="tocPages">961-967</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/938">Influence of PKM2 gene silencing on proliferation and invasion of human breast cancer MCF-7 cells</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Lan WEI,							Min SU,							Yun-xiu HUANG,							Chang-li ZHONG,							Nian WANG,							Fei-hu JI,							Ting-mei CHEN						</td>
+	<td class="tocPages">968-975</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/939">Effect of DACH1 gene expression on proliferation of human endometrial carcinoma HEC-1A cells</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Ya-nan PANG,							Lin ZUO,							Hui YAN,							Yong YANG,							Rong RONG,							Li-li GONG,							Hai-qiang JIANG,							Qi-tao ZHAO,							Qing-tao LV						</td>
+	<td class="tocPages">976-981</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/940">Effects of As2O3 combined with AZT on migration and invasion of liver cancer HepG2 cells</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Li HAN,							Che CHEN,							Hui-yuan CHU,							Yu LIU,							Yong-juan LIANG,							Jing-ying LI						</td>
+	<td class="tocPages">982-989</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/941">Effect of VEGF on differentiation of dendritic cells in microenvironment of murine prostate cancer</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Wei ZHANG,							Wen-kun BAI,							Wen-de SHOU,							Bing HU						</td>
+	<td class="tocPages">990-996</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/942">BMP9 inhibits the proliferation of human lung adenocarcinoma A549 cells through BMPs/SMAD signaling pathway</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Hong-ying DAI,							Wen-yi XIA,							Tian-jin ZHU,							Zhi-gui TANG,							Ke WANG						</td>
+	<td class="tocPages">997-1005</td>
+</tr>
+</table>
+
+<div class="separator"></div>
+<h4 class="tocSectionTitle">Clinical Research</h4>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/943">Determination of prognostic factors of cervical cancer patients: Application of a competing risk model</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Sheng-nan GUO,							Hui-lin CHEN,							Li-xian LI,							Jin-bao CHEN,							Ya-wen HOU,							Di LIU,							Ping-yan CHEN						</td>
+	<td class="tocPages">1006-1012</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/944">Early 18F-FDG PET/CT in evaluation of chemotherapeutic response and prognostic prediction for patients with diffuse large B-cell lymphoma</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Yang FAN,							Yue-wei ZHANG,							Zhi YANG,							Zhi-tao YING,							Yu-qin SONG,							Jun ZHU,							Xue-juan WANG						</td>
+	<td class="tocPages">1013-1020</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/945">Breast cancer with ovarian metastasis: Clinical features and prognosis of 18 patients</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Li ZHENG,							Li-na ZHANG,							Lin GU						</td>
+	<td class="tocPages">1021-1025</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/946">Neoadjuvant chemotherapy with docetaxel plus cisplatin in patients with basal-like breast cancer: A phase Ⅱ clinical study</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Ai-feng QIU,							Xue-bin WANG,							Yu-hua SHI,							Zhi-long MIAO,							Guo-kan GE						</td>
+	<td class="tocPages">1026-1033</td>
+</tr>
+</table>
+
+<div class="separator"></div>
+<h4 class="tocSectionTitle">Clinical Experience</h4>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/947">Diagnosis of cervical lymph node metastasis of thyroid papillary carcinoma: Comparison of high frequency color doppler ultrasound and fine needle aspiration biopsy with postoperative pathology</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Yan JIANG,							Zhe-lan ZHENG						</td>
+	<td class="tocPages">1034-1038</td>
+</tr>
+</table>
+
+<div class="separator"></div>
+<h4 class="tocSectionTitle">Review</h4>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/948">Advances in mechanism of tamoxifen resistance in estrogen receptor-positive breast cancer</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Hui-xing LIU,							Yan-zhong WANG,							Hai-tao YU,							Jun ZHANG,							Xin-you XIE						</td>
+	<td class="tocPages">1039-1044</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/949">Cellular metabolic changes in oncogene-induced senescence and its value in cancer diagnosis and treatment</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Dan WANG,							Fan YANG,							Bin-bing ZHOU						</td>
+	<td class="tocPages">1045-1050</td>
+</tr>
+</table>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/950">Advances in GADD45 in anti-tumor therapy</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Xin GUO,							Wei GUO,							Zhi-ming DONG						</td>
+	<td class="tocPages">1051-1056</td>
+</tr>
+</table>
+
+<div class="separator"></div>
+<h4 class="tocSectionTitle">Scientific Writing</h4>
+		
+<table class="tocArticle" width="100%">
+<tr valign="top">
+		
+
+				
+					
+	<td class="tocTitle"><a href="http://en.tumorsci.org/index.php/tumor/article/view/951">Formats and formatting requirements for abstracts of Chinese and foreign leading oncology journals</a></td>
+	<td class="tocGalleys">
+												
+			</td>
+</tr>
+<tr>
+	<td class="tocAuthors">
+									Wen-hua HUANG						</td>
+	<td class="tocPages">1057-1062</td>
+</tr>
+</table>
+
+
+<!--modified by wy 2011-10-12-->
+
+		<div id="announcementsHome">
+		<h3>Announcements</h3>
+		<table class="announcements">
+	<tr>
+		<td colspan="2" class="headseparator">&nbsp;</td>
+	</tr>
+	<tr class="title">
+			<td class="title"><h4>First International Experimental Biology and Medicine Conference</h4></td>
+			<td class="more">&nbsp;</td>
+	</tr>
+	<tr class="description">
+		<td class="description"><p>INTERDISCIPLINARY APPROACHES TOCANCER RESEARCH</p><p>SHANGHAI, CHINA | OCTOBER 28–29</p></td>
+		<td class="more">&nbsp;</td>
+	</tr>
+	<tr class="details">
+		<td class="posted">Posted: 2013-07-30</td>
+					<td class="more"><a href="http://en.tumorsci.org/index.php/tumor/announcement/view/3">More...</a></td>
+			</tr>
+	<tr>
+		<td colspan="2" class="separator">&nbsp;</td>
+	</tr>
+	<tr class="title">
+			<td class="title"><h4>Acknowledgements to Reviewers</h4></td>
+			<td class="more">&nbsp;</td>
+	</tr>
+	<tr class="description">
+		<td class="description">Acknowledgements to Reviewers</td>
+		<td class="more">&nbsp;</td>
+	</tr>
+	<tr class="details">
+		<td class="posted">Posted: 2012-02-22</td>
+					<td class="more"><a href="http://en.tumorsci.org/index.php/tumor/announcement/view/2">More...</a></td>
+			</tr>
+	<tr>
+		<td colspan="2" class="separator">&nbsp;</td>
+	</tr>
+	<tr class="title">
+			<td class="title"><h4>Incidence rate for cancer cases in urban Shanghai</h4></td>
+			<td class="more">&nbsp;</td>
+	</tr>
+	<tr class="description">
+		<td class="description">Incidence rate for cancer cases in urban Shanghai, 1983-2008.<br /></td>
+		<td class="more">&nbsp;</td>
+	</tr>
+	<tr class="details">
+		<td class="posted">Posted: 2012-02-02</td>
+					<td class="more"><a href="http://en.tumorsci.org/index.php/tumor/announcement/view/1">More...</a></td>
+			</tr>
+	<tr>
+		<td colspan="2" class="endseparator">&nbsp;</td>
+	</tr>
+</table>
+	
+		<table class="announcementsMore">
+			<tr>
+				<td><a href="http://en.tumorsci.org/index.php/tumor/announcement">More Announcements...</a></td>
+			</tr>
+		</table>
+	</div>
+
+
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div><!-- container -->
+</body>
+</html>
+
+

@@ -1,0 +1,301 @@
+
+
+
+
+
+  
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+<link rel="stylesheet" type="text/css" href="res/css/photo.css"/>
+<link rel="stylesheet" type="text/css" href="/res/lightbox/jquery.lightbox-0.5.css"/>
+<link rel="stylesheet" type="text/css" href="/res/jquery-ui/css/smoothness/jquery-ui-1.10.0.custom.css"/>
+<script type="text/javascript" src="res/js/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="res/js/autoZoomLoadImage.js"></script>
+<script type="text/javascript" src="/res/lightbox/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="/res/DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="/res/jquery-ui/js/jquery-ui-1.10.0.custom.js"></script>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+	<title>图库搜索 - 新媒体</title>
+	<script type="text/javascript" src="/res/DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+	<div class="stop">
+		<div class="shead">
+			<div class="logo">
+				<span><img src="/res/images/logo.png"/></span>
+				<span class="m"><img src="/res/images/media.png"/></span>
+			</div>
+			<div class="navs">
+				<em class="navl"></em>
+				<ul class="nav">
+					<li><a href="/" class="index">首页</a><em></em></li>
+					<li><a href="/photo.do">交大图库</a><em></em></li>
+					<li><a href="/media.do">校园视频</a><em></em></li>
+					<li class="on"><a href="/photo!search.do">搜索</a><em></em></li>
+				</ul>
+				<em class="navr"></em>
+			</div>
+		</div>
+	</div>
+	<div class="searchbox">
+		<div class="title"><span class="on"><a href="/photo!search.do">搜索图片</a></span><span><a href="/media!search.do">搜索视频</a></span></div>
+		<form id="searchform" name="searchform" action="/photo!search.do;jsessionid=4412488D32FBD4B35D523A8F69AE34FB" method="get">
+
+		<div class="searchinfo">
+			<span>作品名称:</span><div><input type="text" name="title" value="" id="searchform_title" onkeypress="EnterPress(event)" onkeydown="EnterPress()"/></div>
+		</div>
+		<div class="searchinfo">
+			<span>作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者:</span><div><input type="text" name="author" value="" id="searchform_author" onkeypress="EnterPress(event)" onkeydown="EnterPress()"/></div>
+		</div>
+		<div class="searchinfo">
+			<span>上传时间:</span><div><input type="text" name="timeStart" value="" style="width:100px;" onclick="WdatePicker()" readonly="true"/>&nbsp;&nbsp;至&nbsp;&nbsp;<input type="text" name="timeEnd" value="" style="width:100px;" onclick="WdatePicker()" readonly="true"/></div>
+		</div>
+		<div class="searchinfo">
+			<span>季&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;节:</span><input type="hidden" name="season" value="" id="searchform_season"/>
+			<div><a href="javascript:;" onclick="schange('season','')" class="on">全部</a>
+				
+				<a  href="javascript:;" onclick="schange('season',6)">春</a>
+				
+				<a  href="javascript:;" onclick="schange('season',7)">夏</a>
+				
+				<a  href="javascript:;" onclick="schange('season',8)">秋</a>
+				
+				<a  href="javascript:;" onclick="schange('season',9)">冬</a>
+				
+			</div>
+		</div>
+		<div class="searchinfo">
+			<span>种&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类:</span><input type="hidden" name="style" value="" id="searchform_style"/>
+			<div><a href="javascript:;" onclick="schange('style','')" class="on">全部</a>
+				
+				<a  href="javascript:;" onclick="schange('style',10)">人物</a>
+				
+				<a  href="javascript:;" onclick="schange('style',11)">建筑</a>
+				
+				<a  href="javascript:;" onclick="schange('style',12)">植物</a>
+				
+				<a  href="javascript:;" onclick="schange('style',13)">动物</a>
+				
+			</div>
+		</div>
+		<div class="searchinfo">
+			<span>校&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区:</span><input type="hidden" name="place" value="" id="searchform_place"/>
+			<div><a href="javascript:;" onclick="schange('place','')" class="on">全部</a>
+				
+				<a  href="javascript:;" onclick="schange('place',14)">闵行</a>
+				
+				<a  href="javascript:;" onclick="schange('place',15)">徐汇</a>
+				
+				<a  href="javascript:;" onclick="schange('place',16)">法华</a>
+				
+				<a  href="javascript:;" onclick="schange('place',17)">七宝</a>
+				
+				<a  href="javascript:;" onclick="schange('place',18)">重庆南路</a>
+				
+			</div>
+		</div>
+		<div class="searchinfo">
+			<span>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题:</span><input type="hidden" name="topic" value="" id="searchform_topic"/>
+			<div><a href="javascript:;" onclick="schange('topic','')" class="on">全部</a>
+				
+				<a  href="javascript:schange('topic',19);">南洋通讯社</a>
+				
+				<a  href="javascript:schange('topic',20);">主页图片</a>
+				
+				<a  href="javascript:schange('topic',21);">“交大梦·珍藏交大”摄影大赛</a>
+				
+				<a  href="javascript:schange('topic',23);">交大·二十四节气</a>
+				
+				<a  href="javascript:schange('topic',24);">手绘交大</a>
+				
+				<a  href="javascript:schange('topic',25);">毕业季</a>
+				
+				<a  href="javascript:schange('topic',26);">立夏2014</a>
+				
+				<a  href="javascript:schange('topic',27);">标本园十大景点</a>
+				
+				<a  href="javascript:schange('topic',28);">化工：四年一瞬</a>
+				
+				<a  href="javascript:schange('topic',29);">再见交大</a>
+				
+				<a  href="javascript:schange('topic',30);">2014年军训特刊</a>
+				
+				<a  href="javascript:schange('topic',31);">上海交通大学第45届运动会</a>
+				
+			</div>
+		</div>
+		<div class="searchinfo"><input type="submit" value="" class="submit"/></div>
+		<input type="hidden" name="ps" value="10" id="searchform_ps"/>
+		</form>
+
+
+
+
+	</div>
+	<div class="swap">
+		<div class="sresult">
+			<div class="title">
+				<h3>搜索结果</h3>
+				<span>显示数量: 
+					<a href="javascript:schange('ps',10);" class="on">10</a>
+					<a href="javascript:schange('ps',20);" >20</a>
+					<a href="javascript:schange('ps',30);" >30</a>
+				</span>
+				<div class="pages2">
+					
+					<a href="http://media.sjtu.edu.cn/photo!search.do?pn=2" class="a1">下一页</a>
+				</div>
+			</div>
+			<div class="cont">
+				<ul class="pul" id="imgul">
+					
+					<li >
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/a77b15eb-883a-48ce-a826-6827bae78746" id="img_0" title="展翅" desc="天地间，展翅任飞翔" author="程攀"><img src="http://api.sjtu.edu.cn/v1/file/a77b15eb-883a-48ce-a826-6827bae78746/thumb/320x200" class="simg"/></a></div>
+						<h3>展翅</h3>
+						<span>作者: 程攀</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+					<li >
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/1992bbfc-fa0b-455c-9000-af46c18051ba" id="img_1" title="沉思" desc="夕阳西下，思绪如湖水漫延" author="程攀"><img src="http://api.sjtu.edu.cn/v1/file/1992bbfc-fa0b-455c-9000-af46c18051ba/thumb/320x200" class="simg"/></a></div>
+						<h3>沉思</h3>
+						<span>作者: 程攀</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+					<li >
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/a006a81b-3f1b-4def-af60-ac4cd725069f" id="img_2" title="静美" desc="岁月静美" author="程攀"><img src="http://api.sjtu.edu.cn/v1/file/a006a81b-3f1b-4def-af60-ac4cd725069f/thumb/320x200" class="simg"/></a></div>
+						<h3>静美</h3>
+						<span>作者: 程攀</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+					<li >
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/a596ae0e-6c0b-46a8-b256-a4b6bca7ceea" id="img_3" title="交大留园" desc="下雨天留客，交大留客园" author="段力"><img src="http://api.sjtu.edu.cn/v1/file/a596ae0e-6c0b-46a8-b256-a4b6bca7ceea/thumb/320x200" class="simg"/></a></div>
+						<h3>交大留园</h3>
+						<span>作者: 段力</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+					<li class="l">
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/35359be1-e4fa-4ff6-aa94-2a150a5dcaaa" id="img_4" title="金秋" desc="   交大闵行植物园中的一棵美丽的树" author="拓占宇"><img src="http://api.sjtu.edu.cn/v1/file/35359be1-e4fa-4ff6-aa94-2a150a5dcaaa/thumb/320x200" class="simg"/></a></div>
+						<h3>金秋</h3>
+						<span>作者: 拓占宇</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+					<li >
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/8c6b96ef-1517-45c1-9189-df8f3b6bf157" id="img_5" title="春色满园" desc="植物园的春天" author="李政帅"><img src="http://api.sjtu.edu.cn/v1/file/8c6b96ef-1517-45c1-9189-df8f3b6bf157/thumb/320x200" class="simg"/></a></div>
+						<h3>春色满园</h3>
+						<span>作者: 李政帅</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+					<li >
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/afb734fb-f8f0-4a27-b8be-3222275b838d" id="img_6" title="春梦" desc="" author="张晓霓"><img src="http://api.sjtu.edu.cn/v1/file/afb734fb-f8f0-4a27-b8be-3222275b838d/thumb/320x200" class="simg"/></a></div>
+						<h3>春梦</h3>
+						<span>作者: 张晓霓</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+					<li >
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/04cba6d4-08d3-420d-a221-aa39d9691aa3" id="img_7" title="西院画廊" desc="在重庆南路校区里，有一片经历了跨世纪的园地，那就是西院，和矗立在东院的老洋房风格不一样的是，西院里的楼群是按功能建造和分布的，了解医学院基础医学的历史，就应该到美丽的西院来走一走。" author="徐爱华"><img src="http://api.sjtu.edu.cn/v1/file/04cba6d4-08d3-420d-a221-aa39d9691aa3/thumb/320x200" class="simg"/></a></div>
+						<h3>西院画廊</h3>
+						<span>作者: 徐爱华</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+					<li >
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/e354e992-bac2-4009-90fb-530eb7d436de" id="img_8" title="医学院之春" desc="摄于三、四月间，在几乎每天都路过的西院忽然发现这个角度似乎从未关注过，搜索学院各大相关图片也没有发现它的踪迹，暗暗庆幸是自己第一个发现的吗，然也，而是春的绿色全面覆盖了西院，也因此将以往未曾让人注意到的光彩展现了出来，看着这幅图案，心中有种对西院的春天美景的喜悦。" author="徐爱华"><img src="http://api.sjtu.edu.cn/v1/file/e354e992-bac2-4009-90fb-530eb7d436de/thumb/320x200" class="simg"/></a></div>
+						<h3>医学院之春</h3>
+						<span>作者: 徐爱华</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+					<li class="l">
+						<div class="imgbox"><a href="http://api.sjtu.edu.cn/v1/file/e254483d-3952-4a90-a485-6c86e33254f0" id="img_9" title="梦回红楼" desc="此生之梦，愿赴红楼" author="王诗韵"><img src="http://api.sjtu.edu.cn/v1/file/e254483d-3952-4a90-a485-6c86e33254f0/thumb/320x200" class="simg"/></a></div>
+						<h3>梦回红楼</h3>
+						<span>作者: 王诗韵</span>
+						<span>上传时间: 2014-12-16</span>
+					</li>
+					
+				</ul>
+				<div class="pages">
+					<a class="a1">201条</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=1' class='a1'>上一页</a><span>1</span><a href='http://media.sjtu.edu.cn/photo!search.do?pn=2'>2</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=3'>3</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=4'>4</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=5'>5</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=6'>6</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=7'>7</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=8'>8</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=9'>9</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=10'>10</a>..<a href='http://media.sjtu.edu.cn/photo!search.do?pn=21'>21</a><a href='http://media.sjtu.edu.cn/photo!search.do?pn=2' class='a1'>下一页</a>
+				</div>
+			</div>
+			<div style="display:none;" id="picdiv">
+				<a href="" id="pimg_0" title="" desc="" author=""><img src=""/></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sbottom">
+		<div class="sfoot">
+			<p>沪ICP备05052060  沪举报中心  版权所有©上海交通大学</p>
+			<p> 地址：上海市东川路800号 邮编：200240 查号：86-21-54740000<a href="#" target="_blank">联系我们</a><a href="#" target="_blank">周边交通</a><a href="/admin/manage.do" target="_blank">后台管理</a></p>
+		</div>
+	</div>
+<script type="text/javascript">
+	var pid = "pid";
+	var pt = 21;
+	var pn = 1;
+	var isshow = "isshow";
+	var ps = 10;
+	
+	function previmg(){
+		if (pn == 1)
+			alert("已经是第一张了");
+		else {
+			pn = pn - 1;
+			location.href = "http://media.sjtu.edu.cn/photo!search.do?pn="+pn+"&isshow=2";
+		}
+	}
+	function nextimg(){
+		if (pt <= pn)
+			alert("已经是最后一张了");
+		else {
+			if (pid != "pid" && pid != "" && pn == "1" && isshow == "isshow"){
+				location.href = "http://media.sjtu.edu.cn/photo!search.do?pn="+pn+"&isshow=1";
+			} else {
+				pn = pn + 1;
+				location.href = "http://media.sjtu.edu.cn/photo!search.do?pn="+pn+"&isshow=1";
+			}
+		}
+	}
+	function schange(field, value){
+		$("#searchform_"+field).val(value);
+		$("#searchform").submit();
+	}
+	function EnterPress(e){
+		var e = e || window.event;
+		if(e.keyCode == 13){
+			$("#searchform").submit();
+		}
+	}
+	$(function(){ $(".simg").autoZoomLoadImage(true, 160, 100); })
+	$(document).ready(function(){
+		$(".imgbox").hover(function(){
+			$(this).addClass('over');
+		},function(){
+			$(this).removeClass('over');
+		});
+		$('#imgul a').lightBox();
+		ps = ps - 1;
+		if(isshow == "1")
+			$('#img_0').click();
+		else if(isshow == "2")
+			$('#img_' + ps).click();
+		
+		if (pid != "pid" && pid != "" && pn == "1" && isshow == "isshow"){
+			$('#picdiv a').lightBox();
+			$('#pimg_0').click();
+		}
+	});
+</script>
+</body>
+</html>

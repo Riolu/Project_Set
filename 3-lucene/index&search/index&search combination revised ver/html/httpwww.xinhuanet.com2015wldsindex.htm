@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" media="screen and (min-width:0px) and (max-width: 767px)" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+<title>新华网络电视中文直播_新华网</title>
+<style>
+/* Reset */
+html,
+body,
+div,
+img,
+p,
+hr,
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+tr,
+td,
+th,
+tfoot,
+tbody,
+thead,
+form,
+fieldset,
+input,
+textarea,
+select,
+label,
+ul,
+ol,
+dl,
+li,
+dt,
+dd { margin: 0; padding: 0; border: 0; outline: none; list-style: none; font-weight: normal; }
+body,
+html { }
+li { list-style-type: none; }
+a { text-decoration: none; outline: none; color: #000000; }
+a:hover { text-decoration: underline; }
+table { border-collapse: collapse; border-spacing: 0; margin: 0 auto; clear: both; }
+img { border: 0; display: block; }
+em { font-style: normal; }
+hr { height: 0; clear: both; }
+.none { display: none; }
+.clear { clear: both; }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+body { background: #060a20 url(bgbody.jpg) 50% 0 no-repeat; height: 100%; font-family: "微软雅黑"; line-height: 24px; padding-top: 70px; }
+.conWidth { width: 1000px; margin: 0 auto; }
+.top { height: 78px; line-height: 78px; position: relative; width: 1000px; margin: 0 auto; }
+.top .bg { height: 78px; line-height: 78px; background: #202020; filter: alpha(opacity=40); -moz-opacity: 0.4; -khtml-opacity: 0.4; opacity: 0.4; position: absolute; width: 1000px; left: 0; top: 0; }
+.top a { font-size: 14px; color: #fff; margin: 0 4px; }
+.top .conWidth { position: absolute; z-index: 2; left: 0; top: 0; }
+.top .logo { width: 95px; height: 45px; background: url(logo.png) no-repeat; float: left; display: inline; margin: 20px 0 0 20px; }
+.center { padding-top: 20px; }
+.center .conWidth { position: relative; height: 770px; }
+.center .conWidth .bg { position: absolute; z-index: 0; background: #202020; filter: alpha(opacity=40); -moz-opacity: 0.4; -khtml-opacity: 0.4; opacity: 0.4; position: absolute; width: 1000px; left: 0; top: 0; height: 100%; }
+.center .tit { padding: 0 30px 30px 0; z-index: 1; }
+.center .tit span { float: right; color: #999; font-size: 12px; font-family: "微软雅黑"; }
+.center .tit span a { color: #999; font-size: 14px; font-family: "微软雅黑"; }
+.center .con { padding: 20px; text-align: center; z-index: 1; position: relative; padding-top: 40px; }
+.center .con .ifrDiv { width: 834px; height: 581px; background: url(bgPlayer.png) no-repeat; margin: 0 auto; text-align: center; }
+.center .con iframe { margin-top: 45px; margin-left:0px; }
+.center .con p { text-indent: 2em; text-align: left; line-height: 28px; margin: 20px 0 60px 0; color: #fff; }
+.footer { height: 85px; margin-top: 20px; }
+.footer p { font-size: 14px; color: #999999; text-align: center; line-height: 33px; z-index: 1; position: relative; }
+.footer .conWidth { padding-top: 15px; position: relative; }
+.footer .bg { background: #202020; filter: alpha(opacity=40); -moz-opacity: 0.4; -khtml-opacity: 0.4; opacity: 0.4; position: absolute; width: 1000px; left: 0; top: 0; height: 85px; z-index: 0; }
+.domPC { display: block; }
+.domMobile { display: none; }
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+#pcVideo { display: block!important; height: 500px; padding: 40px 30px 0; ; }
+#ifrPcVideo { display: none; }
+}
+
+@media screen and (min-width:0px) and (max-width: 767px) {
+body { padding: 0; background: #0e1735 url(bgbody2.jpg) no-repeat; background-size: 100% 100%; font-size: 14px; }
+.domPC { display: none; !important;
+}
+.domMobile { display: block!important; }
+#center { padding-top: 100px; }
+.mobilePlay { background: url(bgPlayer3.png) no-repeat; background-size: 100% auto; height: 250px; padding: 30px 10px 0; }
+#center .text { color: #fff; padding: 0 10px; text-indent: 2em; font-size: 16px; line-height: 26px; }
+.footbox { background: #1f1c33; text-align: center; padding: 20px 0; margin-top: 30px; }
+}
+</style>
+</head>
+
+<body>
+<div id="wx_pic" style="display:none;">
+<img src="http://www.xinhuanet.com/imgs2015/xhwxlogo300.jpg" width="300" height="300" />
+</div>
+
+<div class="domPC">
+	<div class="top">
+		<div class="conWidth">
+			<a class="logo" href="http://www.news.cn" target="_blank">
+			</a>
+			<a href="http://www.news.cn/politics/" target="_blank">
+				时政
+			</a>
+			<a href="http://www.news.cn/world/" target="_blank">
+				国际
+			</a>
+			<a href="http://www.news.cn/fortune/" target="_blank">
+				财经
+			</a>
+			<a href="http://www.news.cn/politics/leaders/" target="_blank">
+				高层
+			</a>
+			<a href="http://www.news.cn/politics/xhll.htm" target="_blank">
+				理论
+			</a>
+			<a href="http://forum.home.news.cn/index.jsp" target="_blank">
+				论坛
+			</a>
+			<a href="http://sike.news.cn/" target="_blank">
+				思客
+			</a>
+			<a href="http://www.news.cn/info/" target="_blank">
+				信息化
+			</a>
+			<a href="http://xuan.news.cn/" target="_blank">
+				炫空间
+			</a>
+			<a href="http://www.news.cn/mil/" target="_blank">
+				军事
+			</a>
+			<a href="http://www.news.cn/gangao/" target="_blank">
+				港澳
+			</a>
+			<a href="http://www.news.cn/tw/" target="_blank">
+				台湾
+			</a>
+			<a href="http://www.news.cn/photo/index.htm" target="_blank">
+				图片
+			</a>
+			<a href="http://www.news.cn/video/index.htm" target="_blank">
+				视频
+			</a>
+			<a href="http://www.news.cn/ent/" target="_blank">
+				娱乐
+			</a>
+			<a href="http://www.news.cn/fashion/" target="_blank">
+				时尚
+			</a>
+			<a href="http://www.news.cn/sports/" target="_blank">
+				体育
+			</a>
+			<a href="http://www.news.cn/auto/" target="_blank">
+				汽车
+			</a>
+			<a href="http://www.news.cn/tech/" target="_blank">
+				科技
+			</a>
+			<a style="border-right:none" href="http://www.news.cn/food/" target="_blank">
+				食品
+			</a>
+		</div>
+		<div class="bg"></div>
+	</div>
+	<div class="center">
+		<div class="conWidth clearfix">
+			<div class="con">
+				<div class="tit">
+				<span> <a href="http://www.xinhuanet.com/2015wlds/enindex.htm">CNC World Live Broadcast</a> </span> </div>
+				<div class="ifrDiv">
+					<iframe id="ifrPcVideo" src="http://livecdn1.news.cn/www/cnccn.html" width="800" height="500" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+					<div id="pcVideo" style="display:none;">
+						<video width="100%" height="500" controls autobuffer>
+							<source src="http://livecdn1.news.cn/cnccn/manifest.m3u8" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+							</source>
+						</video>
+					</div>
+				</div>
+				<p>中国新华新闻电视网（China Xinhua News Network Corperation，简称CNC），由新华通讯社主办，于2009年12月31日举行开播仪式，于2010年1月1日正式上星向亚太地区和欧洲部分地区播出。新华网络电视是新华社CNC旗下的跨平台网络新媒体,以全球视角及时、准确、权威的报道国内外时政、经济文化等领域的重要新闻资讯。</p>
+			</div>
+			<div class="bg"></div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="conWidth">
+			<p>Copyright © 2000 - 2015 XINHUANET.com　All Rights Reserved.</p>
+			<p>制作单位：新华网股份有限公司　　版权所有 新华网股份有限公司</p>
+			<div class="bg"></div>
+		</div>
+	</div>
+</div>
+<div class="domMobile">
+	
+	<!--新闻频道-->
+	
+	<div id="center" class="comWidth">
+		<div class="domMobile">
+			<div class="mobilePlay">
+				<video width="100%" height="200" controls autobuffer>
+					<source src="http://livecdn1.news.cn/cnccn/manifest.m3u8" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+					</source>
+				</video>
+			</div>
+			<div class="text"> 中国新华新闻电视网（China Xinhua News Network Corperation，简称CNC）由新华通讯社主办，于2009年12月31日举行开播仪式，于2010年1月1日正式上星向亚太地区和欧洲部分地区播出。新华网络电视是新华社CNC旗下的跨平台网络新媒体,以全球视角及时、准确、权威的报道国内外时政、经济文化等领域的重要新闻资讯。 </div>
+		</div>
+		<div class="footbox">
+			<script type="text/javascript" src="http://www.xinhuanet.com/english/2015mobile/js/copyright.js"></script>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="http://www.news.cn/static/jq.js"></script>
+<script>
+
+var isTouchDevice = 'ontouchstart' in window;
+
+if(isTouchDevice){
+
+	WinW = $(window).width();
+
+	$("#ifrPcVideo").remove();
+
+}
+
+</script>
+<div style="display:none">
+	<div id="fwl">010040091150000000000000011200000000000000</div>
+	<script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010040091150000000000000011200000000000000")</script>
+	<noscript>
+	<img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010040091150000000000000011200000000000000" border="0" />
+	</noscript>
+</div>
+</body>
+</html>

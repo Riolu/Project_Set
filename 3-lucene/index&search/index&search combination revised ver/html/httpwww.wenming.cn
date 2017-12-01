@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="中国文明网由中央宣传部、中央文明办主办, 是全国宣传思想战线和精神文明建设系统的门户网站，宗旨是传播文明、引领风尚。" />
+<meta name="keywords" content="中国文明网 文明网 文明 中国文明 联盟联播 中国文明网联盟 中国文明网联盟网站 中宣部 中共中央宣传部" />
+<meta name="filetype" content="0">
+<meta name="publishedtype" content="1">
+<meta name="pagetype" content="2">
+<meta name="catalogs" content="0">
+<meta name="baidu-site-verification" content="KxfY08alNQ" />
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" /> 
+<link href="http://images1.wenming.cn/web_wenming/images/indexsy20151016.css" rel="stylesheet">
+<title>中国文明网</title>
+<script src="http://images.wenming.cn/web_wenming/images/jquery-1.9.1.min.js" type="text/javascript"></script> <!--JQ库文件-->
+<script src="http://images1.wenming.cn/web_wenming/images/jquery.superslide.tab.2.1.1.js" type="text/javascript"></script>  <!--顶部及大图轮播-->
+<script src="http://images.wenming.cn/web_wenming/images/jquery.lazyload.min.1.91.js" type="text/javascript"></script>  <!--延时加载-->
+
+<script>
+//移动端判断跳转
+        function QueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+        //mobile
+        if (QueryString('mobile')!=='1') {
+            var is_iPd = navigator.userAgent.match(/(iPad|iPod|iPhone)/i) != null;
+            var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|win ce)/i) != null;
+            if (is_mobi && window.location.search.indexOf("mv=fp") < 0) {
+                window.location.href = "http://www.wenming.cn/wmwmobile/index_12860.shtml";
+            }
+        }
+</script>
+<script>
+// 底部弹窗
+var browser=navigator.appName
+var b_version=navigator.appVersion
+var version=b_version.split(";");
+var trim_Version=version[1].replace(/[ ]/g,"");
+(function() {
+  function $backToTopFun(){
+    var $backToTopEle=$(".hr365-pc")
+        var st = $(document).scrollTop(), winh = $(window).height();
+        var t = st + winh - 218;
+         if($("body").height() - st - winh>0){
+          $backToTopEle.css({"top": t});
+         }
+        
+    }
+  if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0"){
+      $(window).bind("scroll", $backToTopFun);
+  }
+   else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0"){
+      $(window).bind("scroll", $backToTopFun);
+  }
+    
+    $(function() {
+      $backToTopFun();
+    });
+})();
+</script>
+<script language="javascript">
+$(document).ready(function(){
+$("ul.side_nav li").hover(function() {
+$(this).find("div").stop()
+.animate({left: "80", opacity:1}, "fast")
+.css("display","block")
+}, function() {
+$(this).find("div").stop()
+.animate({left: "0", opacity: 0}, "fast")
+});
+});
+</script>
+<script type="text/javascript" charset="gb2312">
+//搜索
+function del(obj){
+  if("请输入关键字"==obj.value){
+    obj.value="";
+  }
+}
+function add(obj){
+  if("" == obj.value || null == obj.value){
+    obj.value="请输入关键字";
+  }
+  var n1 = document.getElementById("n1");
+  n1.value = document.getElementById("n").value;
+}
+function changeAction(obj){
+  var form = document.getElementById("searchform");
+  var np = document.getElementById("np");
+  var rp = document.getElementById("rp");
+  var ss = document.getElementById("ss");
+  var n = document.getElementById("n");
+  var pno = document.getElementById("pno");
+  var t = document.getElementById("t");
+  var t1 = document.getElementById("t1");
+  var ch = document.getElementById("ch");
+  if("wenming" == obj.value){
+    np.value = "1";
+    rp.value = "20";
+    ss.value = "2";
+    form.action = "http://search.wenming.cn/godpp/godSearch.jspa";
+  }else if("picture" == obj.value){
+    np.value = "1";
+    rp.value = "20";
+    ss.value = "1";
+    pno.value = "1";
+    t.value = "1";
+    t1.value = "0";
+    ch.valur = "www.godpp.gov.cn";
+    form.action =  "http://search.wenming.cn/pic/image.jspa";
+  }
+}
+</script>
+</head>
+<body>
+<div id="date">
+<div class="date-top">
+<div class="dateleft yahei">
+<script>   
+  var   CalendarData=new   Array(20);   
+  var   madd=new   Array(12);   
+  var   TheDate=new   Date();   
+  var   tgString="甲乙丙丁戊己庚辛壬癸";   
+  var   dzString="子丑寅卯辰巳午未申酉戌亥";   
+  var   numString="一二三四五六七八九十";   
+  var   monString="正二三四五六七八九十冬腊";   
+  var   weekString="日一二三四五六";   
+  var   sx="鼠牛虎兔龙蛇马羊猴鸡狗猪";   
+  var   cYear;   
+  var   cMonth;   
+  var   cDay;   
+  var   cHour;   
+  var   cDateString;   
+  var   DateString;   
+  var   Browser=navigator.appName;   
+
+  function   init()   
+  {     
+      CalendarData[0]=0x41A95;   
+      CalendarData[1]=0xD4A;   
+      CalendarData[2]=0xDA5;   
+      CalendarData[3]=0x20B55;   
+      CalendarData[4]=0x56A;   
+      CalendarData[5]=0x7155B;   
+      CalendarData[6]=0x25D;   
+      CalendarData[7]=0x92D;   
+      CalendarData[8]=0x5192B;   
+      CalendarData[9]=0xA95;   
+      CalendarData[10]=0xB4A;   
+      CalendarData[11]=0x416AA;   
+      CalendarData[12]=0xAD5;   
+      CalendarData[13]=0x90AB5;   
+      CalendarData[14]=0x4BA;   
+      CalendarData[15]=0xA5B;   
+      CalendarData[16]=0x60A57;   
+      CalendarData[17]=0x52B;   
+      CalendarData[18]=0xA93;   
+      CalendarData[19]=0x40E95;   
+      madd[0]=0;   
+      madd[1]=31;   
+      madd[2]=59;   
+      madd[3]=90;   
+      madd[4]=120;   
+      madd[5]=151;   
+      madd[6]=181;   
+      madd[7]=212;   
+      madd[8]=243;   
+      madd[9]=273;   
+      madd[10]=304;   
+      madd[11]=334;   
+    }   
+  function   GetBit(m,n)   
+  {     
+        return   (m>>n)&1;   
+  }   
+  function   e2c()   
+  {       
+      var   total,m,n,k;   
+      var   isEnd=false;   
+      var   tmp=TheDate.getYear();   
+      if   (tmp<1900)     tmp+=1900;   
+      total=(tmp-2001)*365   
+          +Math.floor((tmp-2001)/4)   
+          +madd[TheDate.getMonth()]   
+          +TheDate.getDate()   
+          -23;   
+      if   (TheDate.getYear()%4==0&&TheDate.getMonth()>1)   
+          total++;   
+      for(m=0;;m++)   
+      {       
+          k=(CalendarData[m]<0xfff)?11:12;   
+          for(n=k;n>=0;n--)   
+          {   
+              if(total<=29+GetBit(CalendarData[m],n))   
+              {     
+                  isEnd=true;   
+                  break;   
+              }   
+              total=total-29-GetBit(CalendarData[m],n);   
+          }   
+          if(isEnd)break;   
+      }   
+      cYear=2001   +   m;   
+      cMonth=k-n+1;   
+      cDay=total;   
+      if(k==12)   
+      {   
+          if(cMonth==Math.floor(CalendarData[m]/0x10000)+1)   
+              cMonth=1-cMonth;   
+          if(cMonth>Math.floor(CalendarData[m]/0x10000)+1)   
+              cMonth--;   
+      }   
+      cHour=Math.floor((TheDate.getHours()+3)/2);   
+  }   
+  function   GetcDateString()   
+  {   var   tmp="";   
+      tmp+=tgString.charAt((cYear-4)%10);       //年干   
+      tmp+=dzString.charAt((cYear-4)%12);       //年支   
+      tmp+="年";    
+      tmp+=" ";   
+      if(cMonth<1)   
+      {     
+        tmp+="闰";   
+          tmp+=monString.charAt(-cMonth-1);   
+      }   
+      else   
+          tmp+=monString.charAt(cMonth-1);   
+      tmp+="月";   
+      tmp+=(cDay<11)?"初":((cDay<20)?"十":((cDay<30)?"廿":"卅"));   
+      if(cDay%10!=0||cDay==10)   
+          tmp+=numString.charAt((cDay-1)%10);   
+      tmp+="    ";   
+      cDateString=tmp;   
+      return   tmp;   
+  }   
+  function   GetDateString()   
+  {     
+      var   tmp="";   
+      var   t1=TheDate.getYear();   
+      if   (t1<1900)t1+=1900;   
+      tmp+=t1   
+                +"年"   
+                +(TheDate.getMonth()+1)+"月"   
+                +TheDate.getDate()+"日   "   
+                +"   星期"+weekString.charAt(TheDate.getDay());     
+      DateString=tmp;   
+      return   tmp;   
+  }   
+  init();   
+  e2c();   
+  GetDateString();   
+  GetcDateString();   
+  document.write(DateString," ",cDateString);   
+</script>
+</div>
+<div class="dateright">
+<div class="left">
+    <dl class="yahei">
+        <dt class="libg" id="td_50_1" onClick="showtab(50,1,2)">承建网站&nbsp;></dt>
+        <dd class="hidden" id="tab_50_1">
+            <span><a href="http://www.dangjian.cn/" target="_blank">党建网</a></span>
+            <span><a href="http://siyanhui.wenming.cn/" target="_blank">思想政治工作网</a></span>
+            <span><a href="http://www.npca.org.cn/" target="_blank">全国宣传干部学院</a></span>
+            <span><a href="http://www.ssbgzzs.com/" target="_blank">时事报告杂志</a></span>
+            <span><a href="http://www.xuexiph.cn/" target="_blank">学习出版社</a></span>
+            <span><a href="http://www.npopss-cn.gov.cn/" target="_blank">全国社科规划网</a></span>
+        </dd>
+    </dl>
+</div>
+<div class="right">
+<iframe width="135" height="28" frameborder="0" scrolling="no" target="_blank" hspace="0" vspace="0" marginheight="0" marginwidth="0" src="http://archive.wenming.cn/jingtai/index_seach/index_seach_ifm.shtml"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="hr_10"></div>   
+<div id="header">
+<div id="Logo"></div>
+<div id="headerAd">
+<div id="myads">
+<div class="foucua01">
+    <ul class="slides_item">
+        <li><a href="http://archive.wenming.cn/jingtai/wymjjgs/index.html" target=_blank><img src="http://images.wenming.cn/web_wenming/images/indexsy20150915-06.jpg" width="618" height="83" /></a></li>
+<li><a href="http://www.wenming.cn/specials/sxdt/fifthmd/" target="_blank"><img src="http://images1.wenming.cn/web_wenming/images/index-dw2015061904.jpg" /></a></li>
+
+        <li><a href="http://www.wenming.cn/specials/wmcj/2015wmcsxlf/" target=_blank><img src="http://images.wenming.cn/web_wenming/images/index20141219-02.jpg" width="618" height="83" /></a></li>
+        <li><a href="http://www.wenming.cn/sbhr_pd/hr365/" target=_blank><img src="http://images1.wenming.cn/web_wenming/images/index2014092101.jpg" width="618" height="83" /></a></li>
+      <li><a href="http://www.wenming.cn/specials/zxdj/hxjz/" target=_blank><img src="http://images.wenming.cn/web_wenming/images/index2012_top_cdsbd.jpg" width="618" height="83" /></a></li>
+    </ul>
+    <div class="num" style="display:none">
+      <ul></ul>
+    </div>
+</div>
+</div>
+</div>
+<div id="Logo_wmlm" class="bo900">
+<div class="img"><a target="_blank" href="http://www.wenming.cn/syjj/dfcz/"></a></div>
+<div class="about">
+<ol>
+<li><a target="_blank" href="http://mail.wenming.cn">邮  箱</a></li>
+<li><a target="_blank" href="http://www.wenming.cn/syzhq/gywm/index.shtml">关于我们</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="hr_15"></div>
+<div id="mainNav">
+<div class="left">
+<ol>
+<li><a href="http://www.wenming.cn/xj_pd/" target="_blank">形势政策</a></li>
+<li><a href="http://www.wenming.cn/xwcb_pd/" target="_blank">新闻出版</a></li>
+<li><a href="http://www.wenming.cn/ll_pd/" target="_blank">理论学习</a></li>
+<li><a href="http://www.wenming.cn/syxcxxq/lj/" target="_blank">调查研究</a></li>
+
+</ol>
+</div>
+<div class="mid">
+<ol>
+<li><a href="http://xm.wenming.cn/wmcs/index.html" target="_blank">文明城市</a></li>
+<li><a href="http://gz.wenming.cn/china_Towns/index.shtml" target="_blank">文明村镇</a></li>
+<li><a href="http://www.wenming.cn/ddmf_296/" target="_blank">道德模范</a></li>
+<li><a href="http://www.wenming.cn/sbhr_pd/" target="_blank">身边好人</a></li>
+<li><a href="http://www.wenming.cn/wmjt/" target="_blank">文明家庭</a></li>
+<li><a href="http://wmdw.chengdu.cn/toindex.php" target="_blank">文明传播</a></li>
+<li><a href="http://www.wenming.cn/zyfw_298/" target="_blank">志愿服务</a></li>
+<li><a href="http://www.wenming.cn/wcnr_pd/" target="_blank">未成年人</a></li>
+</ol>
+</div>
+<div class="mid_sub">
+<ol>
+<li><a href="http://www.wenming.cn/jwmsxf_294/" target="_blank">文明养成</a></li>
+<li><a href="http://www.wenming.cn/book/" target="_blank">全民阅读</a></li>
+<li><a href="http://www.wenming.cn/4g" target="_blank">文明新媒体</a></li>
+<li><a href="http://www.wenming.cn/wmzh_pd/" target="_blank">文明中华</a></li>
+<li><a href="http://www.wenming.cn/gxt_pd/" target="_blank">国学经典</a></li>
+<li><a href="http://www.wenming.cn/wmdjr_299/" target="_blank">我们的节日</a></li>
+</ol>
+</div>
+<div class="right">
+<ol>
+<li><a href="http://www.wenming.cn/wmpl_pd/" target="_blank">评论</a></li>
+<li><a href="http://www.wenming.cn/photo/" target="_blank">图片</a></li>
+<li><a href="http://forum.wenming.cn/" target="_blank">论坛</a></li>
+<li><a href="http://www.wenming.cn/syjswmq/zt_sy/" target="_blank">专题</a></li>
+<li><a href="http://www.wenming.cn/ft_pd/" target="_blank">访谈</a></li>
+<li><a href="http://www.wenming.cn/syjj/sp_syjj/" target="_blank">视频</a></li>
+<li><a href="http://www.wenming.cn/ziliao/" target="_blank">资料</a></li>
+<li><a href="http://www.wenming.cn/lianmeng/lmwz/" target="_blank">联盟</a></li>
+</ol>
+</div>
+</div>
+<div class="hr_15"></div>
+<div>
+<div id="Hot">
+<div class="left"></div>
+<div class="mid">
+
+<div class="img"><a href="http://archive.wenming.cn/jingtai/wymjjgs/slj.html" target="_blank"><img width="814" height="40" src='http://images1.wenming.cn/web_wenming/syjj/tt_syjjq/201510/W020151028247164318811.png' alt='【文艺名家讲故事】孙立军：振兴民族动画的快乐奔跑者' extra="title=''" /></a></div>
+<p>[<a href="http://archive.wenming.cn/jingtai/wymjjgs/slj.html" target="_blank">他是中国动画事业的拓荒者，作品影响了中国一代动画人，一部《小兵张嘎》家喻户晓。本期对话北京电影学院副院长孙立军。</a>]<span class="more"><a target="_blank" href="./syjj/tt_syjjq/">更多头条</a></span></p>
+
+</div>
+<div class="right"></div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="index_Adver1">
+<div class="left icon_lmlb"><a href="../lianmeng/lmwz/"  target="_blank">联盟联播</a></div>
+<div class="pic_list">
+<div class="lmlb_ifm">
+<script type="text/javascript">
+//无缝滚动
+window.onload = function(){
+var speed=30;
+var tab=document.getElementById("demo");
+var tab1=document.getElementById("demo1");
+var tab2=document.getElementById("demo2");
+tab2.innerHTML=tab1.innerHTML;
+function Marquee(){
+if(tab2.offsetWidth-tab.scrollLeft<=0)
+tab.scrollLeft-=tab1.offsetWidth
+else{
+tab.scrollLeft++;
+}
+}
+var MyMar=setInterval(Marquee,speed);
+tab.onmouseover=function() {clearInterval(MyMar)};
+tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+}
+</script>
+<div id="demo">
+<div id="indemo">
+<div id="demo1">
+<dl>
+<dd>·<a href="http://www.wenming.cn/syjj/dfcz/gs/201510/t20151028_2935340.shtml" target="_blank">甘肃举办乡村学校少年宫项目暨骨干人员培训班</a></dd>
+<dd>·<a href="http://www.wenming.cn/syjj/dfcz/gz/201510/t20151026_2934465.shtml" target="_blank">贵州各地纷纷向城市美容师送上祝福 致以深深的敬意</a></dd>
+<dd>·<a href="http://www.wenming.cn/syjj/dfcz/sh/201510/t20151026_2932049.shtml" target="_blank">上海市网络精神文明建设工作推进会举行</a></dd>
+<dd>·<a href="http://www.wenming.cn/syjj/dfcz/sx_1689/201510/t20151021_2931914.shtml" target="_blank">十二五期间陕西省精神文明建设成效展示</a></dd>
+<dd>·<a href="http://www.wenming.cn/syjj/dfcz/sc/201510/t20151026_2929911.shtml" target="_blank">四川举办乡村学校少年宫项目建设培训班</a></dd>
+<dd>·<a href="http://www.wenming.cn/syjj/dfcz/hlj/201510/t20151026_2929859.shtml" target="_blank">黑龙江召开农村精神文明建设工作经验交流现场会</a></dd>
+</dl>
+</div>
+<div id="demo2"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hr_15"></div>
+<div class="main-colum" >
+<div class="colum12">
+<div class="ad350 left"  >
+<div class="hr_3"></div>
+<div id="focus">
+<div class="foucua02">
+    <ul class="slides_item">
+  
+        <li>
+      <div class="img-box">
+        <div class="img-640-360"><a href="http://wenming.cn/specials/hot/fj/201510/t20151028_2935676.shtml" target="_blank"><img width="350" height="233" src='http://images2.wenming.cn/web_wenming/syjj/tp_syjjq/201510/W020151028344405302675.jpg' alt='嘉善有条“善人家”公益街' extra="title=''" /></a></div>
+        <div class="img-title"><a href="http://wenming.cn/specials/hot/fj/201510/t20151028_2935676.shtml" target="_blank">嘉善有条“善人家”公益街</a></div>
+      </div>
+    </li>
+  
+        <li>
+      <div class="img-box">
+        <div class="img-640-360"><a href="http://www.wenming.cn/syjj/dfcz/sd/201510/t20151028_2935310.shtml" target="_blank"><img width="350" height="233" src='http://images1.wenming.cn/web_wenming/syjj/tp_syjjq/201510/W020151028335632256957.jpg' alt='聚焦临沂第五届道德模范颁奖典礼' extra="title=''" /></a></div>
+        <div class="img-title"><a href="http://www.wenming.cn/syjj/dfcz/sd/201510/t20151028_2935310.shtml" target="_blank">聚焦临沂第五届道德模范颁奖典礼</a></div>
+      </div>
+    </li>
+  
+        <li>
+      <div class="img-box">
+        <div class="img-640-360"><a href="http://www.wenming.cn/syjj/dfcz/sc/201510/t20151028_2934814.shtml" target="_blank"><img width="350" height="233" src='http://images2.wenming.cn/web_wenming/syjj/tp_syjjq/201510/W020151028320311689230.jpg' alt='成都“公共文化服务超市”开张' extra="title=''" /></a></div>
+        <div class="img-title"><a href="http://www.wenming.cn/syjj/dfcz/sc/201510/t20151028_2934814.shtml" target="_blank">成都“公共文化服务超市”开张</a></div>
+      </div>
+    </li>
+  
+        <li>
+      <div class="img-box">
+        <div class="img-640-360"><a href="http://www.wenming.cn/syjj/dfcz/sc/201510/t20151028_2934762.shtml" target="_blank"><img width="350" height="233" src='http://images1.wenming.cn/web_wenming/syjj/tp_syjjq/201510/W020151028276325617804.jpg' alt='四川：7300名志愿者服务文明旅游' extra="title=''" /></a></div>
+        <div class="img-title"><a href="http://www.wenming.cn/syjj/dfcz/sc/201510/t20151028_2934762.shtml" target="_blank">四川：7300名志愿者服务文明旅游</a></div>
+      </div>
+    </li>
+  
+        <li>
+      <div class="img-box">
+        <div class="img-640-360"><a href="http://zjsx.wenming.cn/tbzt/snsyhszl/201510/t20151022_2069023.html" target="_blank"><img width="350" height="233" src='http://images2.wenming.cn/web_wenming/syjj/tp_syjjq/201510/W020151027554089438215.jpg' alt='少年师爷文明中国游——红色之旅辽宁站' extra="title=''" /></a></div>
+        <div class="img-title"><a href="http://zjsx.wenming.cn/tbzt/snsyhszl/201510/t20151022_2069023.html" target="_blank">少年师爷文明中国游——红色之旅辽宁站</a></div>
+      </div>
+    </li>
+  
+    </ul>
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>
+    <div class="num01">
+      <ul></ul>
+    </div>
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_5"></div>
+<div class="hr_1"></div>
+<div class="pannel-tita01">
+<div class="pannel-Ltit left">高层动态</div>
+<span class="more"><a href="http://www.wenming.cn/specials/zxdj/xjp/" target="_blank">习近平</a>丨<a href="http://www.wenming.cn/syjj/ldhd/" target="_blank">刘云山</a>丨<a href="http://www.wenming.cn/syjj/ldhd/#lyd" target="_blank">刘延东</a>丨<a href="http://www.wenming.cn/syjj/ldhd/#lqb" target="_blank">刘奇葆</a>&nbsp;<a target="_blank" href="./syjj/ldhd/">>></a></span>
+</div>
+<div class="hr_5"></div>
+<div class="list01 point-tit">
+<ul>
+<li><a href="http://wenming.cn/specials/zxdj/xjp/zyjh/201510/t20151023_2926317.shtml" target="_blank">习近平出席全英孔子学院和孔子课堂年会开幕式</a></li><li><a href="http://www.wenming.cn/syjj/ldhd/lys/201510/t20151020_2920363.shtml" target="_blank">刘云山：不断巩固文艺繁荣发展的良好局面</a></li><li><a href="http://www.wenming.cn/syjj/ldhd/lyd/201510/t20151021_2923529.shtml" target="_blank">刘延东出席第四届反贫困与儿童发展国际研讨会</a></li><li><a href="http://www.wenming.cn/syjj/ldhd/lqb/201510/t20151024_2928942.shtml" target="_blank">刘奇葆：不断开创基层思想政治工作新局面</a></li></ul>
+</ul>
+
+</div>
+<div class="hr_10"></div>
+<div class="gcdt"><a href="http://www.wenming.cn/specials/zxdj/xjp/" target="_blank"><img src="http://images1.wenming.cn/web_wenming/images/indexsy20150915-04.jpg" /></a></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="pannel-tita01 pannel-tita05">
+<div class="pannel-Ltita01 left">
+<ol>
+<li onMouseOver="showtab(35,1,9)" id="td_35_1" class="libg"><a href="http://www.wenming.cn/ziliao/huiyi/" target="_blank">工作会议</a></li>
+<li onMouseOver="showtab(35,2,9)" id="td_35_2" ><a href="./syjj/bb_sy/" target="_blank">推荐阅读</a></li>
+</ol>
+</div>
+<span  class="more" id="tit_r" style="*padding-top:8px;">
+<div id="tit_ro" style="cursor:pointer;"><img src="http://images.wenming.cn/web_wenming/images/index20140313-04.jpg" width="54" height="12" /></div>
+<div id="tit_rt" style="cursor:pointer; display:none"><img src="http://images1.wenming.cn/web_wenming/images/index20140313-04.jpg" width="54" height="12" /></div>
+</span>
+</div>
+<div class="hr_5"></div>
+<div id="tab_35_1" class="show">
+<div id="tabsO">
+
+<div class="pannel-image pannel-image-a01 left">
+<a href="http://www.wenming.cn/specials/sxdt/fifthmd/" target="_blank"><img width="130" height="120" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/syjj/gzts/201510/W020151015464691235644.jpg" class="lazyload" alt='中央文明委召开第五届全国道德模范座谈会' extra="title=''" /></a>
+</div>
+<div class="C-text01" style="height:auto; text-align:left;line-height:25px; padding-bottom:8px;"><a href="http://www.wenming.cn/specials/sxdt/fifthmd/" target="_blank">中央文明委召开第五届全国道德模范座谈会</a></div>
+<div class="subtext subtext-a01"><a href="http://www.wenming.cn/specials/sxdt/fifthmd/" target="_blank">座谈会宣读了习近平总书记的重要批示及第五届全国道德模范表彰决定。</a> </div>
+
+<div class="hr_1"></div>
+<ul  class="point-tit" style="height:210px; overflow:hidden;">
+
+<li style="height:auto;"><a href="http://qhd.wenming.cn/ztzthd/qhdjjjskfqgjlxxnjytxjyxctgzt/" target="_blank">中宣部 | 理想信念教育工作经验交流会在秦皇岛召开</a></li> 
+
+<li style="height:auto;"><a href="http://www.wenming.cn/xwcb_pd/yw/201508/t20150814_2796572.shtml" target="_blank">中宣部 | "抵制网络低俗语言、倡导文明用语"座谈会</a></li> 
+
+<li style="height:auto;"><a href="http://www.wenming.cn/syxcxxq/zxbxw/xwfbh_zxbxw/201508/t20150804_2774408.shtml" target="_blank">中宣部 | 举办《大圣归来》研讨会 加大扶持和保障</a></li> 
+
+<li style="height:auto;"><a href="http://www.wenming.cn/ziliao/huiyi/jigou/zhongxuanbu/201507/t20150716_2734783.shtml" target="_blank">中宣部 | 召开“全民敬业行动”工作经验交流会</a></li> 
+
+<li style="height:auto;"><a href="http://sh.wenming.cn/gjbs/201507/t20150703_2710683.htm" target="_blank">中宣部 | 创新公共文化服务体系运行机制经验交流会</a></li> 
+
+<li style="height:auto;"><a href="http://www.wenming.cn/specials/zxdj/hxjz/hxjz_yw/201506/t20150612_2673773.shtml" target="_blank">中宣部 | "弘扬德孝文化 践行核心价值"现场交流会</a></li> 
+
+<li style="height:auto;"><a href="http://www.wenming.cn/xj_pd/ssrd/201506/t20150608_2663658.shtml" target="_blank">中宣部、中央网信办召开网络公益活动推进会</a></li> 
+
+</ul>
+</div>
+<div id="tabsT">
+
+<div class="pannel-image pannel-image-a01 left"><a href="http://www.wenming.cn/specials/wmcj/ncjswm/" target="_blank"><img width="130" height="120" src="http://images1.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images2.wenming.cn/web_wenming/syjj/gzts/201508/W020150817333742928635.jpg" class="lazyload" alt='全国农村精神文明建设工作经验交流会在浙江湖州召开' extra="title=''" /></a></div>
+<div class="C-text01" style="height:auto; text-align:left;line-height:25px; padding-bottom:8px;"><a href="http://www.wenming.cn/specials/wmcj/ncjswm/" target="_blank">全国农村精神文明建设工作经验交流会在浙江湖州召开</a></div>
+<div class="subtext subtext-a01"><a href="http://www.wenming.cn/specials/wmcj/ncjswm/" target="_blank">中共中央政治局委员、中宣部部长、中央文明委副主任刘奇葆出席会议并讲话。</a> </div>
+
+<ul  class="point-tit"  style="clear:both;">
+
+<li><a href="http://www.wenming.cn/specials/wmcj/xxwh/" target="_blank">中宣部 | 创新发展乡贤文化现场交流会在浙江召开</a></li> 
+
+<li><a href="http://sd.wenming.cn/wzzt/201505/t20150526_2635972.html" target="_blank">中宣部 | "抗日根据地的共产党人"(山东菏泽)座谈会</a></li> 
+
+<li><a href="http://www.wenming.cn/ll_pd/zz/201505/t20150519_2620737.shtml" target="_blank">中宣部 | 学术理论报刊核心价值观宣传研究座谈会</a></li> 
+
+<li><a href="http://www.wenming.cn/specials/sxdt/fifthmd/fb/201504/t20150430_2590109.shtml" target="_blank">文明办 | 第五届全国道德模范评选表彰活动电视电话会</a></li> 
+
+<li><a href="http://www.wenming.cn/specials/zxdj/hxjz/hxjz_yw/201504/t20150430_2590138.shtml" target="_blank">中宣部 | "践行核心价值 开展全民公益活动"现场会</a></li> 
+
+<li><a href="http://www.wenming.cn/syjj/ldhd/lqb/201504/t20150415_2561525.shtml" target="_blank">中宣部 | 加强基层宣传思想文化工作电视电话会议</a></li> 
+
+<li><a href="http://www.wenming.cn/ziliao/huiyi/jigou/wenmingwei/201504/t20150401_2537839.shtml" target="_blank">中央文明办 | “我们的节日”主题活动座谈会</a></li> 
+
+</ul>
+</div>
+<div id="tabsTh">
+
+<div class="pannel-image pannel-image-a01 left"><a href="http://www.wenming.cn/specials/wmcj/wlzt/" target="_blank"><img src="http://images1.wenming.cn/web_wenming/syjj/gzts/201507/W020150725344549694300.jpg" alt="hyzq.jpg" title='' width='130' height='120' /></a></div>
+<div class="C-text01" style="height:auto; text-align:left;line-height:25px; padding-bottom:8px;"><a href="http://www.wenming.cn/specials/wmcj/wlzt/" target="_blank">中央文明办召开网络精神文明建设工作座谈会</a></div>
+<div class="subtext subtext-a01"><a href="http://www.wenming.cn/specials/wmcj/wlzt/" target="_blank">各级文明办及新闻网站共解“互联网+精神文明”热点课题。</a> </div>
+
+<ul  class="point-tit" style="clear:both;">
+
+<li><a href="http://www.wenming.cn/specials/wmcj/2015wmcsxlf/" target="_blank">全国精神文明建设工作表彰暨学雷锋志愿服务大会</a></li> 
+
+<li><a href="http://www.sxdaily.com.cn/GB/161/798/984/index.html" target="_blank">中宣部 | 核心价值观建设与学雷锋志愿服务座谈会</a></li> 
+
+<li><a href="http://www.wenming.cn/ziliao/jianbao/jingshenwenming/201502/t20150226_2468856.shtml#2" target="_blank">文明办 | 提升中国公民出境旅游文明素质部际联席会</a></li> 
+
+<li><a href="http://www.wenming.cn/specials/zxdj/2014huiyishi/" target="_blank">年终盘点 | 从会议记录 看中央文明办"蛮拼的"马年</a></li> 
+
+<li><a href="http://www.wenming.cn/syjj/ldhd/lys/201502/t20150207_2445007.shtml" target="_blank">中央精神文明建设指导委员会第三次全体会议</a></li> 
+
+<li><a href="http://www.wenming.cn/syjj/ldhd/lqb/201501/t20150119_2409045.shtml" target="_blank">第二十八次全国“扫黄打非”工作电视电话会议</a></li> 
+
+<li><a href="http://www.wenming.cn/specials/zxdj/2015xcsxh/" target="_blank">中宣部 | 全国宣传部长会议召开 刘云山出席并讲话</a></li> 
+
+</ul>
+</div>
+</div>
+<div id="tab_35_2" class="hidden">
+<div id="content">
+<div id="text">
+<div id="c1">
+
+<div class="pannel-image pannel-image-a01 left"><a href="http://www.wenming.cn/specials/zxdj/xjp/hhx/201508/t20150814_2796455.shtml" target="_blank"><img src="http://images2.wenming.cn/web_wenming/syjj/bb_sy/201508/W020150817546344916136.jpg" alt="03.jpg" title='' width='130' height='120' /></a></div>
+<div class="C-text01"><a href="http://www.wenming.cn/specials/zxdj/xjp/hhx/201508/t20150814_2796455.shtml" target="_blank">十八届中央政治局历次集体学习</a></div>
+<div class="subtext subtext-a01"><a href="http://www.wenming.cn/specials/zxdj/xjp/hhx/201508/t20150814_2796455.shtml" target="_blank">从2012年11月17日新一届中共中央政治局履新至今，已经开展了25次集体学习。</a> </div>
+<div class="sslm"><span class="right"><a href="http://www.wenming.cn/specials/zxdj/xjp/hhx/201508/t20150814_2796455.shtml" target="_blank"><img src="http://images1.wenming.cn/web_wenming/syjj/bb_sy/201508/W020150817547477065181.jpg" alt="0000.jpg" title=''  height='20' /></a></span><span class="right">所属栏目:</span></div>
+
+<div class="hr_1"></div>
+<ul  class="point-tit">
+
+<li><a href="http://www.wenming.cn/ll_pd/sh/201510/t20151019_2916052.shtml" target="_blank">【笔谈】叶小文：我们所说的信仰与宗教信仰有何区别</a></li> 
+
+<li><a href="http://wenming.cn/specials/whcc/2014wyzth/talk/leader/201509/t20150922_2873648.shtml" target="_blank">【笔谈】王海平:领导文艺工作的人自身要有两把刷子</a></li> 
+
+<li><a href="http://wenming.cn/ll_pd/wh/201508/t20150819_2805260.shtml" target="_blank">【笔谈】不应忽视互联网对社会矛盾的积极缓解效应</a></li> 
+
+<li><a href="http://www.wenming.cn/hswh/jnkzsl70zn/pskz/201508/t20150816_2797425.shtml" target="_blank">【热点】《求是》：中国人民抗日战争的回顾和思考</a></li> 
+
+<li><a href="http://wenming.cn/ll_pd/sh/201508/t20150817_2797822.shtml" target="_blank">【笔谈】迈进现代社会 “道德良知”不能缺失</a></li> 
+
+<li><a href="http://wenming.cn/ll_pd/wh/201508/t20150817_2797816.shtml" target="_blank">【笔谈】认清中华文化在世界和时代面前的优势</a></li> 
+
+
+<li><a href="http://wenming.cn/wxys/wenyi/201507/t20150724_2752653.shtml" target="_blank">《李白》多彩隽永的人气之作 空灵明朗的经典大戏</a></li>
+
+</ul>
+</div>
+<div id="c2" >
+
+<div class="pannel-image pannel-image-a01 left"><a href="http://www.wenming.cn/wmcb/gcz/ls/201508/t20150814_2796835.shtml" target="_blank"><img src="http://images2.wenming.cn/web_wenming/syjj/bb_sy/201508/W020150814755086333204.jpg" alt="00.jpg" title='' width='130' height='120' /></a></div>
+<div class="C-text01"><a href="http://www.wenming.cn/wmcb/gcz/ls/201508/t20150814_2796835.shtml" target="_blank">冷宽:写在雷锋牺牲53周年</a></div>
+<div class="subtext subtext-a01"><a href="http://www.wenming.cn/wmcb/gcz/ls/201508/t20150814_2796835.shtml" target="_blank">那天，噩耗传来，我们万分震惊，都不敢相信自己的耳朵！</a> </div>
+<div class="sslm"><span class="right"><a href="http://www.wenming.cn/wmcb/gcz/ls/201508/t20150814_2796835.shtml" target="_blank"><img src="http://images1.wenming.cn/web_wenming/syjj/bb_sy/201508/W020150814755087845956.jpg" alt="W020150710435105417417.jpg" title=''  height='20' /></a></span><span class="right">所属栏目</span></div>
+
+<div class="hr_5"></div>
+<ul class="point-tit">
+
+<li><a href="http://dwz.cn/1f0a9V" target="_blank">【百科】一唱红脸一个唱黑脸…揭不同"脸色"的含义</a></li> 
+
+<li><a href="http://dwz.cn/1f00Bx" target="_blank">【写作】据说这七个成语80%的中国人都会弄错（图）</a></li> 
+
+<li><a href="http://wenming.cn/ll_pd/wh/201507/t20150724_2752920.shtml" target="_blank">【思考】中国文化软实力建设中几个值得注意的问题</a></li> 
+
+<li><a href="http://wenming.cn/wmpl_pd/zmgd/201507/t20150709_2720349.shtml" target="_blank">【学习】刘汉俊：政治生态关乎党的兴衰存亡</a></li> 
+
+<li><a href="http://wenming.cn/wmpl_pd/zmgd/201507/t20150709_2720390.shtml" target="_blank">21世纪的思考:国际社会为何高度重视中国发展模式</a></li> 
+
+<li><a href="http://www.wenming.cn/ll_pd/dj/201506/t20150630_2702759.shtml" target="_blank">《求是》刊文：中国共产党为何能担当坚强领导核心</a></li> 
+
+
+<li><a href="http://wenming.cn/wmzh_pd/sy/201505/t20150501_2590205.shtml" target="_blank">有惊有喜"王大花"：抗战题材影视剧创作的一次开拓</a></li>
+
+</ul>
+</div>
+<div  id="c3" >
+
+<div class="pannel-image pannel-image-a01 left"><a href="http://www.wenming.cn/wmcb/gcz/ss/201507/t20150709_2721027.shtml" target="_blank"><img src="http://images2.wenming.cn/web_wenming/syjj/bb_sy/201507/W020150710473992954816.jpg" alt="10.jpg" title='' width='130' height='120' /></a></div>
+<div class="C-text01"><a href="http://www.wenming.cn/wmcb/gcz/ss/201507/t20150709_2721027.shtml" target="_blank">县委书记的“吃饭”问题</a></div>
+<div class="subtext subtext-a01"><a href="http://www.wenming.cn/wmcb/gcz/ss/201507/t20150709_2721027.shtml" target="_blank">一届县市政府能不能做到“郡县治天下安”，不妨把“吃饭”问题当做一个实实在在的指标。</a> </div>
+<div class="sslm"><span class="right"><a href="http://www.wenming.cn/wmcb/gcz/ss/201507/t20150709_2721027.shtml" target="_blank"><img src="http://images1.wenming.cn/web_wenming/syjj/bb_sy/201507/W020150710435105417417.jpg" alt="8.jpg" title=''  height='20' /></a></span><span class="right">所属栏目:</span></div>
+
+<div class="hr_5"></div>
+<ul class="point-tit">
+
+<li><a href="http://www.wenming.cn/sbhr_pd/hrhs/201505/t20150526_2634153.shtml" target="_blank">【学习】李荒：一位老共产党人的忠诚</a></li> 
+
+<li><a href="http://www.wenming.cn/ll_pd/dj/201505/t20150518_2618540.shtml" target="_blank">【笔谈】“三严三实”的历史意蕴和时代价值</a></li> 
+
+<li><a href="http://wenming.cn/wxys/wenyi/201505/t20150501_2590201.shtml" target="_blank">【论坛】张抗抗等：文艺家何以先觉、先行、先倡</a></li> 
+
+<li><a href="http://www.wenming.cn/specials/zxdj/xjp/mtjd/201504/t20150409_2549197.shtml" target="_blank">【学习】习近平关于社会主义核心价值观的基本思路</a></li> 
+
+<li><a href="http://www.wenming.cn/ll_pd/wh/201504/t20150429_2584848.shtml" target="_blank">【笔谈】孝文化的现实意义:促进精神文明和社会建设</a></li> 
+
+<li><a href="http://www.wenming.cn/ll_pd/wh/201503/t20150316_2501678.shtml" target="_blank">【笔谈】“一带一路”战略下的文化发展路径</a></li> 
+
+
+<li><a href="./wxys/zixun/201504/t20150421_2571196.shtml" target="_blank">中国题材纪录片：面对国际“点赞”，我们该怎么办</a></li>
+
+</ul>
+</div>
+</div>
+<div id="title">
+<div id="tit_l" style="display:none;">
+<div id="mytit">
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//点击换一换
+var myTitle = document.getElementById("mytit");
+myTitle.innerHTML += myTitle.innerHTML;
+var lists = myTitle.getElementsByTagName("li");
+var num = lists.length - 2;
+//alert(num)
+myTitle.style.width = (num+1) * 92;//计算标题的总长度
+var ele = document.getElementById("tit_l");
+var w = ele.clientWidth;
+var n = 18;
+var t = 40;//数值越小，速度越快
+var times = new Array(n);
+var k = 0;
+var l = 0;
+yahooo(0);
+function yahooo(s)
+{
+if(k >= num && s > 0)
+{
+ele.scrollLeft = w;
+k = 1;
+}
+if(k < 1 && s < 0)
+{
+ele.scrollLeft = (num-1) * w;
+k = num-1;
+}
+k += s;
+var x = ele.scrollLeft;
+var d = k * w - x;
+for(i=0;i<n;i++)
+(
+function()
+{
+if(times[i]) {clearTimeout(times[i])} ;
+var j = i;
+times[i] = setTimeout(function(){ele.scrollLeft=x+Math.round(d*Math.sin(Math.PI*(j+1)/(2*n)));},(i+1)*t);
+}
+)();
+}
+var imgs = document.getElementById("tit_ro");
+var tit_rt = document.getElementById("tit_rt");
+var c1 = document.getElementById("c1");
+var c2 = document.getElementById("c2");
+var c3 = document.getElementById("c3");
+var tabsO = document.getElementById("tabsO");
+var tabsT = document.getElementById("tabsT");
+var tabsTh = document.getElementById("tabsTh");
+
+tit_rt.onclick = function()
+{
+yahooo(-1);
+if(k==0){c1.style.display = "block";c2.style.display = "none";c3.style.display = "none";}
+if(k==1){c1.style.display = "none";c2.style.display = "block";c3.style.display = "none";}
+if(k==2){c1.style.display = "none";c2.style.display = "none";c3.style.display = "block";}
+}
+tit_rt.onclick = function()
+{
+yahooo(1);
+if(k==0 || k==3){c1.style.display = "block";c2.style.display = "none";c3.style.display = "none";}
+if(k==1 || k==4){c1.style.display = "none";c2.style.display = "block";c3.style.display = "none";}
+if(k==2){c1.style.display = "none";c2.style.display = "none";c3.style.display = "block";}
+}
+
+imgs.onclick = function()
+{
+yahooo(-1);
+if(k==0){tabsO.style.display = "block";tabsT.style.display = "none";tabsTh.style.display = "none";}
+if(k==1){tabsO.style.display = "none";tabsT.style.display = "block";tabsTh.style.display = "none";}
+if(k==2){tabsO.style.display = "none";tabsT.style.display = "none";tabsTh.style.display = "block";}
+}
+imgs.onclick = function()
+{
+yahooo(1);
+if(k==0 || k==3){tabsO.style.display = "block";tabsT.style.display = "none";tabsTh.style.display = "none";}
+if(k==1 || k==4){tabsO.style.display = "none";tabsT.style.display = "block";tabsTh.style.display = "none";}
+if(k==2){tabsO.style.display = "none";tabsT.style.display = "none";tabsTh.style.display = "block";}
+}
+
+$(function(){
+var yak= $(".pannel-Ltita01").find("li");
+var tit_r=$("#tit_r").children();
+var tit_index=0;
+  yak.on("mouseenter",function(){
+     tit_index=$(this).index();
+     tit_r.eq(tit_index).show().siblings().hide();
+  })
+})
+
+</script>
+</div>
+</div>
+</div>
+ <div class="ad350 mida15" style="width:354px; padding-left:26px;">
+<div class="pannel-tita01 pannel-tita01-27">
+<div class="pannel-Ltit left">要闻</div>
+<span class="more"><a href="http://www.wenming.cn/syjj/dfcz/index_14132.shtml" target="_blank">地方传真</a>&nbsp;<a href="./syjj/yw_sy/"  target="_blank">>></a></span>
+</div>
+<div class="hr_5"></div>
+<div class="list01 point-tit" >
+<ul>
+
+<li class="blue bold center"><a href="http://www.wenming.cn/zyfw_298/yw_zyfw/201510/t20151027_2933471.shtml" target="_blank">中宣部中央文明办等开展推选"四个100"典型活动</a></li>
+
+
+<li><a href="http://wenming.cn/wxys/zixun/201510/t20151028_2934674.shtml" target="_blank">中宣部副部长景俊海：为文学繁荣发展营造良好社会环境</a></li>
+
+<li><a href="http://wenming.cn/xj_pd/ssrd/201510/t20151028_2934668.shtml" target="_blank">中央文明办等部署<志愿服务信息系统基本规范>实施工作</a></li>
+
+<li><a href="http://www.wenming.cn/sbhr_pd/hr365/jyfx/201510/t20151026_2931695.shtml" target="_blank"><img src="http://images2.wenming.cn/web_wenming/syjj/yw_sy/201510/W020151028246017916323.gif" alt="read_image.gif" title='' /></a><a href="http://www.wenming.cn/sbhr_pd/hr365/jyfx/201510/t20151026_2931695.shtml" target="_blank">特教老师做30名智障儿童的"妈"<a href=http://www.wenming.cn/wmpl_pd/haoren365/201510/t20151021_2922516.shtml target=_blank> 母爱释师魂</a></a></li>
+
+</ul>
+</div>
+<div class="hr_10"></div>
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center"><a href="http://hub.wenming.cn/zt/qzwhsh/index.shtml" target="_blank">回眸十二五精神文明建设:群众文化生活日益丰富</a></li>
+
+
+<li><a href="http://www.wenming.cn/ll_pd/shzyhxjztx/201510/t20151028_2934698.shtml" target="_blank">戴木才谈核心价值观：全人类共同价值的具体表现形式</a></li>
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/nx/201510/t20151028_2935625.shtml" target="_blank">宁夏推进美丽乡村建设工作<a href=http://www.wenming.cn/syjj/dfcz/jx/201510/t20151022_2925974.shtml target=_blank> 南昌全民参与创建文明城市</a></a></li>
+
+<li><a href="http://v.ccdi.gov.cn/zgctjg/zgctzdjgfjlykjjxdsq/index.shtml" target="_blank">中国传统家训之福建龙岩：随客家人行走天下 生根发芽</a></li>
+
+<li><a href="http://hb.wenming.cn/zt/365bxgsh/" target="_blank">河北启动“365百姓故事汇”巡讲活动 讲述百姓精彩故事</a></li>
+
+</ul>
+</div>
+<div class="hr_10"></div>
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center"><a href="http://www.wenming.cn/wmcj_pd/cjdt/201510/t20151026_2931457.shtml" target="_blank">摔倒老人扶不扶现象:"好人"扶老人 权益咋保障?</a></li>
+
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/bj/201510/t20151021_2935610.shtml" target="_blank">北京启动干部新媒介素养提升工程 掌握新媒体传播规律</a></li>
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/gd/201510/t20151028_2935211.shtml" target="_blank">广东阳江建"厚德善行讲堂"推进核心价值观融入文明建设</a></li>
+
+<li><a href="http://wenming.cn/syjj/dfcz/hb_1679/201510/t20151028_2934828.shtml" target="_blank">武汉企业给员工父母发"孝道工资" 传递孝亲文化正能量</a></li>
+
+<li><a href="http://www.wenming.cn/specials/goodstoryofchina/manager/jc/201510/t20151027_2933451.shtml" target="_blank">宣传部长讲故事:沂南古城品诸葛文化 心系天下鞠躬尽瘁</a></li>
+
+</ul>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="pannel-tita01">
+<div class="pannel-Ltit left">发布厅</div>
+<span class="more"><a href="http://www.wenming.cn/syxcxxq/zxbxw/" target="_blank">中宣部</a>&nbsp;|&nbsp;<a href="http://www.scio.gov.cn/" target="_blank">国新办新闻发布</a>&nbsp;<a href="http://www.wenming.cn/syjj/xwfb/"  target="_blank">>></a></span>
+</div>
+<div class="hr_5"></div>
+
+<div class="fbt-title">
+<div class="fbt-Ltit left">中宣部</div>
+<div class="fbt-Ltit01 right"><a href="http://www.wenming.cn/xj_pd/yw/201510/t20151015_2909856.shtml" target="_blank">公开发布“时代楷模”贠恩凤和段江华事迹</a></div>
+</div>
+
+
+<div class="fbt-title">
+<div class="fbt-Ltit  fbt-Ltita01 left">文明委</div>
+<div class="fbt-Ltit01 right"><a href="http://www.wenming.cn/specials/sxdt/fifthmd/xfb/201510/t20151013_2906031.shtml" target="_blank">关于表彰第五届全国道德模范的决定</a></div>
+</div>
+
+
+<div class="fbt-title">
+<div class="fbt-Ltit  fbt-Ltita02 left">文明办</div>
+<div class="fbt-Ltit01 right"><a href="http://www.wenming.cn/sbhr_pd/zghrb/bd/hzbd201509yue.shtml" target="_blank">9月"中国好人榜"发布 <a target="_blank" href="http://www.wenming.cn/sbhr_pd/tt/201509/t20150929_2885757.shtml">平凡人诠释爱国情</a></a></div>
+</div>
+
+
+<div class="fbt-title">
+<div class="fbt-Ltit  fbt-Ltita03 left">中宣部</div>
+<div class="fbt-Ltit01 right"><a href="http://www.wenming.cn/xj_pd/xjdx/201509/t20150925_2880035.shtml" target="_blank">公开发布“时代楷模”李文祥和李登海事迹</a></div>
+</div>
+
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="pannel-tita01">
+<div class="pannel-Ltit left">探索</div>
+<span class="more"><a href="http://www.wenming.cn/ziliao/wk/" target="_blank">宣传干部文集</a>&nbsp;|&nbsp;<a href="http://www.wenming.cn/specials/wmcj/chkt/" target="_blank">创客帖</a>&nbsp;<a href="http://www.wenming.cn/syxcxxq/lj/" target="_blank">&gt;&gt;</a></span>
+</div>
+<div class="hr_5"></div>
+<div class="list01 point-tit">
+<ul>
+
+<li><a href="http://hnxc.wenming.cn/bzzt/xjpsay/" target="_blank"><font color="#800000">宣传部长文明办主任学习心得 <a target="_blank" href="http://www.wenming.cn/specials/zxdj/hxjz/hxjz_bwtj/201402/t20140220_1755315.shtml"><font color="#800000">谈核心价值观</font></a>&nbsp;<a target="_blank" href="http://hb.wenming.cn/zt/xxjhjs/"><font color="#800000">谈文艺</font></a></font></a></li>
+
+<li><a href="./syxcxxq/lj/201510/t20151027_2934285.shtml" target="_blank">邯郸市委副书记崔永斌:全面提升美丽乡村建设水平</a></li>
+
+<li><a href="./syxcxxq/lj/201510/t20151026_2930711.shtml" target="_blank">浏阳宣传部长刘旭:传承发扬宗祠文化 践行核心价值观</a></li>
+
+<li><a href="./syxcxxq/lj/201510/t20151023_2928008.shtml" target="_blank">寿光市委宣传部长袁世俊:凝聚道德力量共筑文明城市</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="colum02 right">
+<div class="tsjj"><img src="http://images.wenming.cn/web_wenming/images/index20140709-02.jpg" border="0" usemap="#Mapjzg" width="240" height="30" />
+<map name="Mapjzg" id="Mapjzg">
+  <area shape="rect" coords="5,1,165,29" href="http://www.wenming.cn/specials/zxdj/hxjz/tsjzg/" target="_blank">
+  <area shape="rect" coords="165,1,199,29" href="http://www.wenming.cn/specials/zxdj/hxjz/tsjzg/index_15248.shtml" target="_blank">
+  <area shape="rect" coords="200,2,234,28" href="http://www.wenming.cn/specials/zxdj/hxjz/tsjzg/#dm" target="_blank">
+</map></div>
+<div class="bor-hxjz">
+<div id="slidesa01">
+  <div class="slides_containera01"> 
+
+   <div class="itema01">
+  <a href="./specials/zxdj/hxjz/tsjzg/gd/201509/t20150922_2872216.shtml" target="_blank"><img width="240" height="330" src='http://images1.wenming.cn/web_wenming/specials/zxdj/hxjz/tsjzg/gd/201509/W020150922358673832237.jpg' alt='WF-621国庆通稿（亿万人民昂首阔步，民族振兴圆梦中华）' extra="title=''" /></a>
+  </div>
+  
+   <div class="itema01">
+  <a href="./specials/zxdj/hxjz/tsjzg/gd/201509/t20150922_2872211.shtml" target="_blank"><img width="240" height="330" src='http://images2.wenming.cn/web_wenming/specials/zxdj/hxjz/tsjzg/gd/201509/W020150922357619515115.jpg' alt='WF-620中秋通稿（中华圆梦 中国人和） 2015年9月27日刊发' extra="title=''" /></a>
+  </div>
+  
+   <div class="itema01">
+  <a href="./specials/zxdj/hxjz/tsjzg/gd/201509/t20150917_2862541.shtml" target="_blank"><img width="240" height="330" src='http://images1.wenming.cn/web_wenming/specials/zxdj/hxjz/tsjzg/gd/201509/W020150917343313344997.jpg' alt='WF-619网发-勿忘国殇' extra="title=''" /></a>
+  </div>
+  
+   <div class="itema01">
+  <a href="./specials/zxdj/hxjz/tsjzg/gd/201509/t20150914_2853372.shtml" target="_blank"><img width="240" height="330" src='http://images2.wenming.cn/web_wenming/specials/zxdj/hxjz/tsjzg/gd/201509/W020150914317526692310.jpg' alt='WF-616抗日战争（抗战胜利）' extra="title=''" /></a>
+  </div>
+  
+   <div class="itema01">
+  <a href="./specials/zxdj/hxjz/tsjzg/gd/201509/t20150914_2853376.shtml" target="_blank"><img width="240" height="330" src='http://images1.wenming.cn/web_wenming/specials/zxdj/hxjz/tsjzg/gd/201509/W020150914317224619621.jpg' alt='WF-615抗日战争（九一八）' extra="title=''" /></a>
+  </div>
+  
+  </div>
+</div>
+</div>
+<div class="hr_1"></div>
+<div class="img-240-30"><img src="http://images1.wenming.cn/web_wenming/images/index20140410-01.jpg" usemap="#Mapa01" width="240" height="30" />
+<map name="Mapa01" id="Mapa01">
+<area shape="rect" coords="6,7,184,30" href="http://www.wenming.cn/jwmsxf_294/zggygg/" target="_blank" />
+<area shape="rect" coords="189,8,233,29" href="http://sz.wenming.cn/zt/201307/t20130716_731854.shtml" target="_blank" />
+</map>
+
+</div>
+<div class="hr_10"></div>
+<div class="hr_3"></div>
+<div class="pannel-tita01">
+<div class="pannel-Ltit left"><a target="_blank" href="./syjj/jj_sy/">深度</a>·<a target="_blank" href="./syjj/pl_sy/">评论</a></div>
+<span class="more"><a href="http://www.wenming.cn/wmpl_pd/" target="_blank">>></a></span>
+</div>
+<div class="hr_5"></div>
+<div class="C-text01 "><a href="http://www.wenming.cn/wmpl_pd/yczl/201510/t20151027_2933558.shtml" target="_blank" class='blue bold'>推选"四个100" 打造志愿明星</a></div>
+<div class="list01 point-tit">
+<ul>
+
+<li><span class="blue">张培国</span>&nbsp;<a href="http://www.wenming.cn/wmpl_pd/yczl/201510/t20151027_2934159.shtml" target="_blank">树典型要杜绝培育"文明盆景"</a></li>
+
+<li><span class="blue">汪妍</span>&nbsp;<a href="http://www.wenming.cn/wmpl_pd/yczl/201510/t20151028_2934745.shtml" target="_blank">走心 学习道德模范的关键词</a></li>
+
+<li><span class="blue">宁江炳</span>&nbsp;<a href="http://www.wenming.cn/wmpl_pd/yczl/201510/t20151028_2934791.shtml" target="_blank">从文明的角度考量"扶老人险"</a></li>
+
+<li><span class="blue">陈怀瑜</span>&nbsp;<a href="http://www.wenming.cn/wmpl_pd/yczl/201510/t20151028_2934879.shtml" target="_blank">文学“一网花开”须去芜存菁</a></li>
+
+<li><span class="blue">昕苑</span>&nbsp;<a href="http://www.wenming.cn/wmpl_pd/haoren365/201510/t20151028_2934895.shtml" target="_blank">好人365 最美家庭的"好娘家"</a></li>
+</ul>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="pannel-tita01">
+<div class="pannel-Ltit left">热点专题</div>
+<span class="more"><a href="http://www.wenming.cn/syjswmq/zt_sy/" target="_blank">&gt;&gt;</a></span>
+</div>
+<div class="hr_5"></div>
+<div class="point-tit tit28">
+<div class="foucua04">
+    <ul class="slides_item">
+        <li><a href="http://archive.wenming.cn/jingtai/wymjjgs/xmj.html" target="_blank"><img src="http://images.wenming.cn/web_wenming/images/index-wymjjgs-1.jpg" /></a></li>
+        <li><a href="http://www.wenming.cn/specials/sxdt/fifthmd/" target="_blank"><img src="http://images1.wenming.cn/web_wenming/images/index-dwj2015051801.jpg" alt="第五届全国道德模范评选表彰活动" width="239" height="77" /></a></li>
+    </ul>
+    <div class="num" style="display:none">
+      <ul></ul>
+    </div>
+</div>
+</div>
+<div class="hr_5"></div>
+<div class="list01 point-tit">
+<ul>
+
+<li><a href="http://www.wenming.cn/specials/zxdj/zwssw/" target="_blank">辉煌十二五 展望十三五</a></li>
+
+<li><a href="http://www.wenming.cn/specials/whcc/zth1y/" target="_blank">习近平文艺工作座谈会讲话一周年</a></li>
+
+<li><a href="http://www.wenming.cn/hswh/jnkzsl70zn/" target="_blank">纪念抗战胜利70周年:忆国耻圆梦中华</a></li>
+
+<li><a href="http://www.wenming.cn/specials/zxdj/jhxjz/" target="_blank">"用公开促公正 建核心价值"教育活动</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="main-colum" style="overflow:hidden;">
+<div class="pannel-tita02">
+<div class="pannel-Ltit left">独家策划</div>
+<span class="more" >
+<a href="http://www.wenming.cn/book/zttq/201409/t20140919_2187357.shtml" target="_blank">“五个一”工程</a>&nbsp;|&nbsp;<a href="http://www.wenming.cn/special/sgyp/" target="_blank"><FONT color=#ff0000>"四个一批"申请表下载</FONT></a>&nbsp;|&nbsp;<a href="http://www.wenming.cn/specials/zxdj/hxjz/" target="_blank">社会主义核心价值观</a>&nbsp;|&nbsp;<a href="http://wenming.cn/specials/zxdj/dangqunluxian/" target="_blank">群众路线教育实践活动</a>&nbsp;<a target="_blank" href="http://www.wenming.cn/syjj/wmrc/">>></a></span>
+</div>
+<div class="hr_10"></div>
+<div class="wmcb-pic">
+<dl>
+
+<dd>
+<div class="img-180-100">
+<a href="http://www.wenming.cn/wmpl_pd/plywj/yhhhs/8th/" target="_blank"><img width="180" height="100" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images2.wenming.cn/web_wenming/syjj/wmrc/201510/W020151014249597810429.jpg" class="lazyload" alt='有话好好说:做有道德的人' extra="title=''" /></a></div>
+<div class="hr_5"></div>
+<div class="img-tit01"><a href="http://www.wenming.cn/wmpl_pd/plywj/yhhhs/8th/" target="_blank">有话好好说:做有道德的人</a></div>
+<div class="hr_5"></div>
+<div class="img-sum"></div>
+</dd>
+
+
+<dd>
+<div class="img-180-100">
+<a href="http://www.wenming.cn/specials/goodstoryofchina/editer/luxiaobai/" target="_blank"><img width="180" height="100" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/syjj/wmrc/201508/W020150928461785498111.jpg" class="lazyload" alt='微小说:陆塔塔的新生活' extra="title=''" /></a></div>
+<div class="hr_5"></div>
+<div class="img-tit01"><a href="http://www.wenming.cn/specials/goodstoryofchina/editer/luxiaobai/" target="_blank">微小说:陆塔塔的新生活</a></div>
+<div class="hr_5"></div>
+<div class="img-sum"></div>
+</dd>
+
+
+<dd>
+<div class="img-180-100">
+<a href="http://www.wenming.cn/specials/goodstoryofchina/visitor/mumfood/" target="_blank"><img width="180" height="100" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images2.wenming.cn/web_wenming/syjj/wmrc/201508/W020150928460192818168.jpg" class="lazyload" alt='故事征集：妈妈的味道' extra="title=''" /></a></div>
+<div class="hr_5"></div>
+<div class="img-tit01"><a href="http://www.wenming.cn/specials/goodstoryofchina/visitor/mumfood/" target="_blank">故事征集：妈妈的味道</a></div>
+<div class="hr_5"></div>
+<div class="img-sum"></div>
+</dd>
+
+
+<dd>
+<div class="img-180-100">
+<a href="http://www.wenming.cn/specials/goodstoryofchina/visitor/fml2/" target="_blank"><img width="180" height="100" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/syjj/wmrc/201506/W020150928451734747669.jpg" class="lazyload" alt='爸妈的爱情故事' extra="title=''" /></a></div>
+<div class="hr_5"></div>
+<div class="img-tit01"><a href="http://www.wenming.cn/specials/goodstoryofchina/visitor/fml2/" target="_blank">爸妈的爱情故事</a></div>
+<div class="hr_5"></div>
+<div class="img-sum"></div>
+</dd>
+
+
+<dd>
+<div class="img-180-100">
+<a href="http://www.wenming.cn/specials/wmcj/ncjf/" target="_blank"><img width="180" height="100" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images2.wenming.cn/web_wenming/syjj/wmrc/201506/W020150928453655712890.jpg" class="lazyload" alt='风从垄上来' extra="title=''" /></a></div>
+<div class="hr_5"></div>
+<div class="img-tit01"><a href="http://www.wenming.cn/specials/wmcj/ncjf/" target="_blank">风从垄上来</a></div>
+<div class="hr_5"></div>
+<div class="img-sum"></div>
+</dd>
+
+
+
+</dl>
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="main-colum">
+<div class="colum01 left">
+<div class="height_09">
+<div class="pannel-tita02">
+<div class="pannel-Ltit left">宣传思想工作</div>
+<span class="more"><a href="http://www.wenming.cn/ll_pd/" target="_blank">理论</a> | <a href="http://www.wenming.cn/xwcb_pd/" target="_blank">新闻出版</a> | <a href="http://www.wenming.cn/whtzgg_pd/" target="_blank">文化体制改革</a> | <a href="http://www.wenming.cn/xj_pd/" target="_blank">宣教</a> | <a href="http://www.wenming.cn/whhm_pd/" target="_blank">文化惠民</a></span>
+</div>
+<div class="hr_5"></div>
+<div class="colum04 left">
+<div class="pannel">
+<div class="image-text1">
+
+<a href="http://www.wenming.cn/specials/zxdj/xjp/xxdj/" target="_blank"><img width="240" height="160" src="http://images1.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/syxcxxq/201412/W020151028306438256482.jpg" class="lazyload" alt='习近平引用过的莎士比亚名句' extra="title=''" /></a>
+<div class="image-show">
+<div class="img-title-dw"></div>
+<div class="image-text-tc02"><a href="http://www.wenming.cn/specials/zxdj/xjp/xxdj/" target="_blank">习近平引用过的莎士比亚名句</a></div>
+</div>
+
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_8"></div>
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/specials/zxdj/syss/" target="_blank">深入开展“三严三实”专题教育活动</a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/special/24073/" target="_blank">学习总书记在文艺工作座谈会上的讲话</a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/specials/zxdj/hxjz/" target="_blank">培育和践行社会主义核心价值观</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="colum05 right pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center Simsun"><a href="http://www.wenming.cn/xj_pd/ssrd/201510/t20151028_2934863.shtml" target="_blank">党的十八届五中全会将审议"十三五"规划 改革迈向纵深</a></li>
+
+
+<li><a href="http://www.wenming.cn/wmpl_pd/zmgd/201510/t20151028_2935008.shtml" target="_blank">党报评:向着第一个百年目标迈进 以前瞻性引领更长远发展</a></li>
+
+<li><a href="http://www.wenming.cn/ll_pd/yw_ll/201510/t20151028_2934823.shtml" target="_blank">中宣部学习出版社等举办《"一带一路"热点问答》研讨会</a></li>
+
+<li><a href="http://www.wenming.cn/specials/zxdj/hxjz/hxjz_zxft/201510/t20151028_2934926.shtml" target="_blank">"核心价值观百场讲坛"第33场 <a target="_blank" href="http://www.wenming.cn/specials/zxdj/hxjz/hxjz_zxft/201510/t20151028_2934942.shtml">李建华:法治离不开德治</a></li>
+
+</ul>
+</div>
+<div class="hr_10"></div>
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center Simsun"><a href="http://www.wenming.cn/xj_pd/ssrd/201510/t20151027_2934521.shtml" target="_blank">"十二五"文化改革发展成就 公共文化服务提升百姓获得感</a></li>
+
+
+<li><a href="http://www.wenming.cn/wxys/zixun/201510/t20151028_2934671.shtml" target="_blank">我国首个文化发展指数发布 展示2006—2013文化发展情况</a></li>
+
+<li><a href="http://www.wenming.cn/ll_pd/zh/201510/t20151028_2934699.shtml" target="_blank">[宣传干部谈"三严三实"]典型宣传"谋事要实"唤醒情感共鸣</a></li>
+
+<li><a href="http://www.wenming.cn/ll_pd/wh/201510/t20151028_2934765.shtml" target="_blank">学者建言学术评价:治理乱象应消除行政"梗阻"重制度建设</a></li>
+
+</ul>
+</div>
+</div>      
+
+</div>
+
+<div class="colum03 right bocc6666 ">
+<div class="pannel-tita02">
+<span class="left"><img src="http://images.wenming.cn/web_wenming/images/index20150814-1.jpg" /></span><span class="more"><a href="http://www.wenming.cn/specials/zxdj/xjp/xxtj/"  target="_blank">学习图解</a> | <a href="http://www.wenming.cn/specials/zxdj/zxbllxxsj/"  target="_blank">学习书目</a> | <a href="http://www.wenming.cn/ll_pd/llxb/"  target="_blank">理论学吧</a></span>
+</div>
+<div class="hr_5"></div>  
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li><a href="http://www.wenming.cn/specials/zxdj/xjp/mtjd/201510/t20151028_2934855.shtml" target="_blank">习近平谋划“十三五”的足迹 <font style="font-size: 9pt" color="#663333">国内：三年三十五次调研</font></a></li>
+
+<li><a href="http://www.wenming.cn/xj_pd/ssrd/201510/t20151022_2923844.shtml" target="_blank"><习近平谈治国理政>韩文版在韩首发 <font style="font-size: 9pt" color="#663333">顺应韩国读者期待</font></a></li>
+
+<li><a href="http://www.wenming.cn/ll_pd/wh/201510/t20151021_2921754.shtml" target="_blank">学习总书记文艺工作座谈会讲话 <font style="font-size: 9pt" color="#663333">文艺家要树立四个意识</font></a></li>
+
+<li><a href="http://www.wenming.cn/specials/zxdj/syss/jd/201510/t20151019_2914742.shtml" target="_blank">学习总书记"我们从哪里走来" <font style="font-size: 9pt" color="#663333">知前世今生 不忘入党初心</font></a></li>
+
+</ul>
+</div>
+<div class="hr_10"></div>
+</div>
+<div class="pannel">
+<div class="hr_box"><div class="hr-dashed"></div></div>
+<div class="hr_5"></div>
+<div class="hr_1"></div>
+<div class="pannel"><div class="pannel-title03 bold"><span class="left"><a href="http://www.ssbgzzs.com/" target="_blank">时事报告</a></span><span class="more"><a href="http://www.sale.ssbgzzs.com/"  target="_blank">在线订阅</a></span></div></div>
+<div class="list01 point-tit">
+<ul>
+
+<li><a href="http://www.wenming.cn/specials/hot/dsh/201510/t20151028_2935276.shtml" target="_blank">城管执法，如何走出“信任危机”</a></li>
+
+<li><a href="http://www.wenming.cn/specials/zxdj/zwssw/ss12w/201510/t20151026_2931282.shtml" target="_blank">“十二五”期间 你的幸福感提升了吗</a></li>
+
+<li><a href="http://www.wenming.cn/specials/hot/dsh/201510/t20151026_2931583.shtml" target="_blank">为何要修订《廉洁自律准则》和《党纪处分条例》</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="main-colum">
+<div class="colum01 left">
+<div class="pannel-tita02">
+<div class="pannel-Ltit left">道德</div>
+<span class="more"><a href="http://www.wenming.cn/ddmf_296/" target="_blank">道德模范</a> | <a href="http://www.wenming.cn/sbhr_pd/" target="_blank">中国好人</a> | <a href="http://www.wenming.cn/zyfw_298/" target="_blank">志愿服务</a> | <a href="http://www.wenming.cn/wcnr_pd/" target="_blank">美德少年</a> | <a href="http://www.wenming.cn/ddmf_296/sdkm2014/rwgs/" target="_blank">时代楷模</a></span>
+</div>
+<div class="hr_5"></div>
+<div class="colum04 left">
+<div class="pannel">
+<div class="image-text1 ">
+
+<a href="http://www.wenming.cn/specials/sxdt/fifthmd/hsddm/cssx/" target="_blank"><img width="240" height="160" src="http://images1.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images2.wenming.cn/web_wenming/syjswmq/ddmf/201510/W020151027563148623388.jpg" class="lazyload" alt='[画说] 邱飞荣：农夫董事长的坚持' extra="title=''" /></a>
+<div class="image-show">
+<div class="img-title-dw"></div>
+<div class="image-text-tc03"><a href="http://www.wenming.cn/specials/sxdt/fifthmd/hsddm/cssx/" target="_blank">[画说] 邱飞荣：农夫董事长的坚持</a></div>
+</div>
+
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_8"></div>
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/specials/sxdt/fifthmd/" target="_blank">“第五届全国道德模范评选表彰”专题 <a target="_blank" href="http://www.wenming.cn/specials/sxdt/fifthmd/yaow/201507/t20150703_2712161.shtml">候选人事迹展播</a></a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/sbhr_pd/hr365/" target="_blank">好人365 <A href="http://www.wenming.cn/sbhr_pd/zghrb/bd/hzbd201509yue.shtml" target=_blank _fcksavedurl="http://www.wenming.cn/sbhr_pd/zghrb/bd/hzbd201509yue.shtml">9月"中国好人榜"</A><A href="http://www.wenming.cn/sbhr_pd/zxtj/index_7535.shtml" target=_blank _fcksavedurl="http://www.wenming.cn/sbhr_pd/zxtj/index_7535.shtml"> 历年榜单</A></a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/sbhr_pd/sbhryxg/" target="_blank">好人影像馆 <a target="_blank" href="http://www.wenming.cn/sbhr_pd/sbhryxg/wdy/">微电影</a> <a target="_blank" href="http://haoren.dc.10086.cn/">推线索</a>&nbsp;<a target="_blank" href="http://www.0515yc.cn/newszt/folder613/?plg_nld=1&plg_uin=1&plg_auth=1&plg_nld=1&plg_usr=1&plg_vkey=1&plg_dev=1">现场交流</a></a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="colum05 right pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center Simsun"><a href="http://www.wenming.cn/specials/sxdt/fifthmd/dyzhsjz_27621/ddmfmd/" target="_blank">第五届全国道德模范表彰决定 <a target="_blank" href="http://www.wenming.cn/specials/sxdt/fifthmd/yaow/201510/t20151013_2906042.shtml">全国道德模范</a>&nbsp;<a target="_blank" href="http://www.wenming.cn/specials/sxdt/fifthmd/xfb/201510/t20151013_2906044.shtml">提名奖</a></a></li>
+
+
+<li><a href="http://www.wenming.cn/specials/sxdt/fifthmd/hsddm/zrwl/" target="_blank">"画说道德模范"还原最真的榜样 <A href="http://www.wenming.cn/specials/sxdt/fifthmd/mx/index_18805.shtml" target=_blank _fcksavedurl="http://www.wenming.cn/specials/sxdt/fifthmd/mx/index_18805.shtml">文明办主任微评道德模范</A></a></li>
+
+<li><a href="http://www.wenming.cn/specials/sxdt/fifthmd/yaow/201510/t20151013_2906055.shtml" target="_blank">第五届全国道德模范倡议书：汇聚向上向善的强大道德力量</a></li>
+
+<li><a href="http://www.wenming.cn/specials/sxdt/fifthmd/xdx_27619/201510/t20151020_2919927.shtml" target="_blank">各地召开学习宣传全国道德模范座谈会 看看都聊了啥？</a></li>
+
+</ul>
+</div>
+<div class="hr_10"></div>
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center Simsun"><a href="http://wenming.cn/sbhr_pd/tt/201509/t20150921_2867638.shtml" target="_blank">《好人365》——报网融合共讲精彩故事的新尝试</a></li>
+
+
+<li><a href="http://wenming.cn/xj_pd/yw/201510/t20151009_2895160.shtml" target="_blank">各地推进公民道德建设：传统美德与现实生活的水乳交融</a></li>
+
+<li><a href="http://www.wenming.cn/sbhr_pd/tt/201509/t20150929_2885906.shtml" target="_blank">10月"中国好人榜"候选人网络评议开始 为国奉献显真情</a></li>
+
+<li><a href="http://www.wenming.cn/sbhr_pd/tt/201509/t20150929_2885757.shtml" target="_blank">中央文明办发布9月"中国好人榜" 平凡人奉献坚守诠释爱国情</a></li>
+
+</ul>
+</div>
+</div>      
+</div>
+<div class="colum03 right bocc6666">
+<div class="pannel-tita01 pannel-tita05">
+<div class="pannel-Ltita01 left">
+<ol>
+<li onMouseOver="showtab(11,1,9)" id="td_11_1" class="libg"><a href="./syjswmq/hgs/" target="_blank">精彩故事</a></li>
+<li onMouseOver="showtab(11,2,9)" id="td_11_2" class=""><a href="./syjswmq/wmwj/" target="_blank">文明网+</a></li>
+</ol>
+</div>
+</div>
+<div class="hr_5"></div>  
+<div id="tab_11_1" class="show">
+<div class="pannel">
+<div class="image-text4" >
+
+<a href="http://www.wenming.cn/specials/goodstoryofchina/manager/jc/" target="_blank"><img width="150" height="100" style="padding-right:10px;" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/syjswmq/hgs/201510/W020151027286300592173.jpg" class="lazyload" alt='基层记| <a target="_blank" href="http://www.wenming.cn/specials/goodstoryofchina/manager/jc/201510/t20151022_2926227.shtml">我在屯溪观看小学生传统文化知识竞赛</a>' extra="title=''" /></a>
+<h5 style="padding-top:10px" class="font_14"><a href="http://www.wenming.cn/specials/goodstoryofchina/manager/jc/" target="_blank">基层记| <a target="_blank" href="http://www.wenming.cn/specials/goodstoryofchina/manager/jc/201510/t20151022_2926227.shtml">我在屯溪观看小学生传统文化知识竞赛</a></a></h5>
+
+</div>
+</div> 
+<div class="hr_10"></div>           
+<div class="hr_3"></div>     
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li><a href="http://hbwh.wenming.cn/zt2015/laozihao/global/" target="_blank">老字号记| <a target="_blank" href="http://hbwh.wenming.cn/zt2015/laozihao/huanan/201509/t20150923_2008760.html">赣州周文华眼镜店:验光方法同北大医学部</a></a></li>
+
+<li><a href="http://gdgz.wenming.cn/zhutihuodong/201507/t20150721_2744953.htm" target="_blank">诚信店家| <a target="_blank" href="http://ahwh.wenming.cn/wmbb/201509/t20150910_1975135.shtml">"三只松鼠"放手让新员工负责千万订单</a></a></li>
+
+<li><a href="http://www.wenming.cn/ddmf_296/sdkm2014/" target="_blank">时代楷模| <a target="_blank" href="http://www.wenming.cn/specials/sxdt/fifthmd/dyzhsjz_27621/201510/t20151013_2905384.shtml">"最美画家"段江华:我只是做了一件小事</a></a></li>
+
+<li><a href="http://www.wenming.cn/specials/goodstoryofchina/visitor/mumfood/" target="_blank">妈妈食堂| <a target="_blank" href="http://www.wenming.cn/specials/goodstoryofchina/visitor/mumfood/201509/t20150915_2856625.shtml">干豆角炒鸭：在家就能做的湘菜</a></a></li>
+
+<li><a href="http://www.wenming.cn/specials/goodstoryofchina/visitor/fml2/" target="_blank">爸妈爱情| <a target="_blank" href="http://www.wenming.cn/specials/goodstoryofchina/visitor/fml2/201509/t20150914_2853574.shtml">因错而来的幸福：妈说爸是个守信的人</a></a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div id="tab_11_2" class="hidden">
+<div class="pannel">
+<div class="image-text4" >
+
+<a href="http://archive.wenming.cn/jingtai/wymjjgs/index.html" target="_blank"><img src='http://images2.wenming.cn/web_wenming/syjswmq/wmwj/201509/W020150916467746995929.jpg' alt='中国文明网与光明网开办《百位文艺名家讲故事》节目' extra="title=''" width="150" height="100" style="padding-right:10px;" /></a>
+<h5 style="padding-top:10px" class="font_14"><a href="http://archive.wenming.cn/jingtai/wymjjgs/index.html" target="_blank">中国文明网与光明网开办《百位文艺名家讲故事》节目</a></h5>
+
+</div>
+</div> 
+<div class="hr_10"></div>           
+<div class="hr_3"></div>     
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li><a href="http://www.wenming.cn/xwcb_pd/yw/201509/t20150909_2845946.shtml" target="_blank">中国新闻网站传播榜8月榜上 文明网"微传播"很给力</a></li>
+
+<li><a href="http://www.wenming.cn/sbhr_pd/hr365/gdfx/201410/t20141027_2253255.shtml" target="_blank">中国文明网发起“五网联盟” 每天同传价值观好故事</a></li>
+
+<li><a href="http://www.wenming.cn/wmjt/jst/xw/201507/t20150713_2727835.shtml" target="_blank">全国首个"文明家庭"频道落户中国文明网 网友怒赞</a></li>
+
+<li><a href="http://haoren.dc.10086.cn/" target="_blank">中国文明网与中国移动开通"身边好人"线索推荐平台</a></li>
+
+<li><a href="http://jobs.zhaopin.com/415728824250184.htm?ssidkey=y&ff=02&ss=101" target="_blank">中国文明网招聘：理论评论、<a target="_blank" href="http://jobs.zhaopin.com/415728824250185.htm?ssidkey=y&amp;ff=02&amp;ss=101">新媒体热门职位等你来</a></a></li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="main-colum">
+<div class="colum01 left">
+
+<div class="ad-img"><a href="http://jscz.wenming.cn/quanguozt/index.html" target="_blank"><img width="640" height="70" src="http://images1.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/syzhq/gg/gg1/201509/W020150916573605479251.jpg" class="lazyload" alt='道德模范在身边网上大看台' extra="title=''" /></a></div>
+
+</div>
+<div class="colum03 right">
+
+<div class="ad-img"><a href="http://hbwh.wenming.cn/zt2015/laozihao/" target="_blank"><img width="330" height="70" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images2.wenming.cn/web_wenming/syzhq/gg/gg2/201509/W020150916547723249797.jpg" class="lazyload" alt='征文活动：中华老字号里的故事' extra="title=''" /></a></div>
+
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="main-colum">
+<div class="colum01 left">
+<div class="pannel-tita02">
+<div class="pannel-Ltit left">风尚</div>
+<span class="more"><a href="http://xm.wenming.cn/wmcs/" target="_blank">文明城市</a> | <a href="http://gz.wenming.cn/china_Towns/" target="_blank">乡风文明</a> | <a href="http://www.wenming.cn/wmdw/" target="_blank">文明单位</a> | <a href="http://www.wenmingwangzhan.cn/" target="_blank">文明网站</a> | <a href="http://www.wenming.cn/ziliao/ztzk/dianzizhuankan/index.shtml" target="_blank">电子专刊</a></span>
+</div>
+<div class="hr_5"></div>
+<div class="colum04 left">
+<div class="pannel">
+<div class="image-text1 ">
+
+<a href="http://wenming.cn/syjj/dfcz/nmg/201510/t20151022_2926527.shtml" target="_blank"><img width="240" height="160" src="http://images1.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/syjswmq/201510/W020151023301760173180.jpg" class="lazyload" alt='乌海市海南区奏响美丽乡村新乐章' extra="title=''" /></a>
+<div class="image-show">
+<div class="img-title-dw"></div>
+<div class="image-text-tc04"><a href="http://wenming.cn/syjj/dfcz/nmg/201510/t20151022_2926527.shtml" target="_blank">乌海市海南区奏响美丽乡村新乐章</a></div>
+</div>
+
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_8"></div>
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/wmcj_pd/cjdt/201510/t20151026_2931457.shtml" target="_blank">[话文明]老人摔倒扶不扶？扶！</a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/specials/wmcj/xxwh/" target="_blank">各地创新发展乡贤文化经验交流</a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/specials/wmcj/gj/" target="_blank">讲章法 守规矩 文明新风"约"定俗成</a></li>
+
+
+</ul>
+</div>
+</div>
+</div>
+<div class="colum05 right pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center Simsun"><a href="http://images2.wenming.cn/web_wenming/wmcj_pd/cjdt/201510/t20151027_2932061.shtml" target="_blank">看历史文化名城扬州的发展红利和福利</a></li>
+
+
+<li><a href="http://wenming.cn/syjj/dfcz/gs/201510/t20151027_2933367.shtml" target="_blank">公益广告 | "讲文明 树新风"公益广告将走进兰州广大乡村</a></li>
+
+<li><a href="http://wenming.cn/wmcj_pd/cjdt/201510/t20151027_2933022.shtml" target="_blank">文明风尚 | 佛山各方代表积极发言 纠正村居不文明行为</a></li>
+
+<li><a href="http://wenming.cn/wmcz/yw_1632/201510/t20151026_2930135.shtml" target="_blank">文明乡风 | 福建石狮：红白两场喜丧事 简约而又公益</a></li>
+
+</ul>
+</div>
+<div class="hr_10"></div>
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center Simsun"><a href="http://wenming.cn/specials/zxdj/jhxjz/sfbz/tp/201510/t20151026_2930580.shtml" target="_blank">《焦点访谈》红黑榜促诚信</a></li>
+
+
+<li><a href="http://wenming.cn/syjj/dfcz/hb/201510/t20151025_2929213.shtml" target="_blank">美丽乡村 | 邯郸在"净绿富"的基础上 抓好X自选项目建设</a></li>
+
+<li><a href="http://wenming.cn/wmcj_pd/cjdt/201510/t20151026_2929226.shtml" target="_blank">诚信建设 | 温州失信黑名单的主体信息将通报给相关部门</a></li>
+
+<li><a href="http://wenming.cn/syjj/dfcz/zj/201510/t20151020_2924456.shtml" target="_blank">文明村镇 | 浙江推进文化礼堂建设 丰富群众精神文化生活</a></li>
+
+</ul>
+</div>
+</div>      
+</div>
+<div class="colum03 right bocc6666">
+<div class="pannel-tita03">
+<div class="pannel-Ltit left">新媒体</div>
+</div>
+<div class="hr_5"></div>
+<div class="foucua05">
+    <ul class="slides_item">
+    
+        <li>
+      <div class="img-box">
+        <div class="img-330-190"><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400191279&idx=1&sn=93688fa5435a64d95f58baf1511e5f70&scene=23&srcid=1026jtSbUpYgvGB7wvnhqWa0#rd" target="_blank"><img src="http://images2.wenming.cn/web_wenming/xmt/201510/W020151026282400939293.jpg" alt="640.webp (1)_副本.jpg" title='' width='330' height='160' /></a></div>
+        <div class="img-title-dw"></div>
+        <div class="img-title"><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400191279&idx=1&sn=93688fa5435a64d95f58baf1511e5f70&scene=23&srcid=1026jtSbUpYgvGB7wvnhqWa0#rd" target="_blank">一站式看完全国的文明“风景点”</a></div>
+      </div>
+    </li>
+	
+        <li>
+      <div class="img-box">
+        <div class="img-330-190"><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400163335&idx=1&sn=7d702a77c084d121b49dae97c8673768&scene=23&srcid=1023ir9JL2PB5va37pSQ9vOF#rd" target="_blank"><img src="http://images1.wenming.cn/web_wenming/xmt/201510/W020151023275412044610.jpg" alt="1435735201029375.jpg" title='' width='330' height='160' /></a></div>
+        <div class="img-title-dw"></div>
+        <div class="img-title"><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400163335&idx=1&sn=7d702a77c084d121b49dae97c8673768&scene=23&srcid=1023ir9JL2PB5va37pSQ9vOF#rd" target="_blank">原来《琅琊榜》《花千骨》都是网络文艺！</a></div>
+      </div>
+    </li>
+	
+        <li>
+      <div class="img-box">
+        <div class="img-330-190"><a href="./xmt/201510/t20151022_2923861.shtml" target="_blank"><img src="http://images2.wenming.cn/web_wenming/xmt/201510/W020151022281372360245.png" alt="IMG_5004_副本.png" title='' width='330' height='160' /></a></div>
+        <div class="img-title-dw"></div>
+        <div class="img-title"><a href="./xmt/201510/t20151022_2923861.shtml" target="_blank">扫一扫，搜索登高远望的好地方</a></div>
+      </div>
+    </li>
+	
+        <li>
+      <div class="img-box">
+        <div class="img-330-190"><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400119449&idx=1&sn=d024fc120e0efd5d32f048b9c6a4393b&scene=23&srcid=1022mNvyt2QUZoONAugisvLk#rd" target="_blank"><img src="http://images1.wenming.cn/web_wenming/xmt/201510/W020151022279188880755.png" alt="QQ图片20151022085339.png" title='' width='330' height='160' /></a></div>
+        <div class="img-title-dw"></div>
+        <div class="img-title"><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400119449&idx=1&sn=d024fc120e0efd5d32f048b9c6a4393b&scene=23&srcid=1022mNvyt2QUZoONAugisvLk#rd" target="_blank">当你老了，你会怎么过？</a></div>
+      </div>
+    </li>
+	
+        <li>
+      <div class="img-box">
+        <div class="img-330-190"><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400057208&idx=1&sn=a54c4e53be99bc705cf7a300a744652a&scene=23&srcid=1020VtUy2VWQhSfyFBJU3fsK#rd" target="_blank"><img src="http://images2.wenming.cn/web_wenming/xmt/201510/W020151020272522188555.jpg" alt="W020151014645904321098.jpg" title='' width='330' height='160' /></a></div>
+        <div class="img-title-dw"></div>
+        <div class="img-title"><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400057208&idx=1&sn=a54c4e53be99bc705cf7a300a744652a&scene=23&srcid=1020VtUy2VWQhSfyFBJU3fsK#rd" target="_blank">他们心中都有一个梦，你呢？</a></div>
+      </div>
+    </li>
+	
+      
+    </ul>
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>
+    <div class="num01">
+      <ul></ul>
+    </div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400251378&idx=5&sn=15302f21bc0e9377c036a29307906fe7&scene=23&srcid=10287aQnaV2hKVDivv8bWTaL#rd" target="_blank">时间都去哪儿了？ |晓得伐</a></li>
+
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzA5ODA0NDIzOA==&mid=400251378&idx=3&sn=4d26e29454e5a4a655e5ff3f732a4fc7&scene=23&srcid=102811UP1HvhJRcTPGbP8NC4#rd" target="_blank">不要随便对孩子说“随便”｜每天一个好习惯</a></li>
+
+<li><a href="http://app.wenming.cn/weizhan/article/103068767/31204633501/527563" target="_blank">南宁良庆区2015年民俗文化旅游节开幕</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="main-colum">
+<div class="colum01 left">
+<div class=" height_07">
+<div class="pannel-tita02">
+<div class="pannel-Ltit left">文化</div>
+<span class="more"><a href="http://www.wenming.cn/wmzh_pd/#wyzh" target="_blank">文学艺术</a> | <a href="http://www.wenming.cn/hswh/" target="_blank">红色文化</a> | <a href="http://www.wenming.cn/wmzh_pd/#fwzh" target="_blank">民俗</a> | <a href="http://www.wenming.cn/wmzh_pd/#wszh" target="_blank">文史</a> | <a href="http://www.wenming.cn/wmzh_pd/#rwzh" target="_blank">人物</a> | <a href="http://www.wenming.cn/wmdjr_299/" target="_blank">我们的节日</a></span>
+</div>
+<div class="hr_5"></div>
+<div class="hr_1"></div>
+<div class="colum04 left">
+<div class="pannel">
+<div class="image-text1 ">
+
+<a href="http://interview.gmw.cn/node_78530.htm" target="_blank"><img width="240" height="160" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/sywhq/201509/W020150930320842102419.jpg" class="lazyload" alt='文艺名家讲故事专题' extra="title=''" /></a>
+<div class="image-show">
+<div class="img-title-dw"></div>
+<div class="image-text-tc05"><a href="http://interview.gmw.cn/node_78530.htm" target="_blank">文艺名家讲故事专题</a></div>
+</div>
+
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_8"></div>
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/wmwmobile/zt/201508/t20150831_2830048.shtml" target="_blank">以书会友 中国图书走向世界</a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/wmwmobile/zt/201410/t20141020_2239658.shtml" target="_blank">习近平关注过的文艺作品</a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/book/zttq/201409/t20140919_2187357.shtml" target="_blank">第十三届“五个一工程”</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="colum05 right pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center Simsun"><a href="./wmzh_pd/sy/201510/t20151028_2935764.shtml" target="_blank">"四吨扬州炒饭折"射出粗陋的文化创意</a></li>
+
+
+<li><a href="http://www.wenming.cn/wmzh_pd/jj_wmzh/201510/t20151028_2935572.shtml" target="_blank">读图 | 李石勇北京专场时装发布会：莲花元素的禅意表达</a></li>
+
+<li><a href="http://www.wenming.cn/book/srss/201510/t20151026_2930366.shtml" target="_blank">大家 | 曾被踩踏 翻译家草婴：他的一生像小草更像战士</a></li>
+
+<li><a href="http://www.wenming.cn/wmzh_pd/fw/whyc/zxdt/201510/t20151026_2929713.shtml" target="_blank">惠民 | 故宫将进入淡季时段 免费参观群体新增环卫工人</a></li>
+
+</ul>
+</div>
+<div class="hr_10"></div>
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue bold center Simsun"><a href="./wmzh_pd/sy/201510/t20151028_2935724.shtml" target="_blank">评论：名人再“躺枪”该担忧什么？</a></li>
+
+
+<li><a href="http://www.wenming.cn/wmzh_pd/fw/whyc/201510/t20151013_2905748.shtml" target="_blank">传承 | 中华老字号“庆丰包子铺”成立包子文化研究中心</a></li>
+
+<li><a href="http://www.wenming.cn/book/srss/201510/t20151013_2905713.shtml" target="_blank">组图 | 中国的诺奖效应：获奖者旧居变景区 名字成商标</a></li>
+
+<li><a href="http://www.wenming.cn/wmzh_pd/fw/whyc/201510/t20151009_2896049.shtml" target="_blank">堪忧 | 长城正消失：总长两万多公里 保存较好的不足10%</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="colum03 right bocc6666">
+<div class="pannel-tita03">
+<div class="pannel-Ltit left"><a href="http://www.wenming.cn/wmcb/gcz/" target="_blank">文明观察者</a></div>
+<span class="more"><a href="http://www.wenming.cn/wmcb/201407/t20140721_2073603.shtml" target="_blank">在线投稿</a></span>
+</div>
+<div class="hr_5"></div> 
+<div class="hr_1"></div>  
+<div class="pannel" style="height:100px; position:relative;">
+
+<div class="image-text4">
+<a href="http://www.wenming.cn/wmcb/gcz/zt/201510/t20151022_2923663.shtml" target="_blank"><img width="120" height="90" style="padding-right:10px;" src="http://images1.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images2.wenming.cn/web_wenming/syjj/lt_sy/201510/W020151022486561325212.jpg" class="lazyload" alt='爱面子这种“美德”' extra="title=''" /></a>
+<h5><a href="http://www.wenming.cn/wmcb/gcz/zt/201510/t20151022_2923663.shtml" target="_blank" class='font_14'>爱面子这种“美德”</a></h5>
+<p class="subtext "><a href="http://www.wenming.cn/wmcb/gcz/zt/201510/t20151022_2923663.shtml" target="_blank" class='font_12'>林语堂说过，“面子”这个东西，无法向外国人翻译，无法为之下定义。它比命运和恩惠还有力量。</a></p>
+</div>
+
+</div>
+
+
+
+
+
+<div class="hr_10"></div>
+<div class="hr_3"></div>
+
+ 
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li  >
+<span class="blue">曾　鑫</span>&nbsp;<a href="http://www.wenming.cn/wmcb/gcz/ss/201510/t20151023_2927210.shtml" target="_blank" class='font_14'>价值的尺度 <FONT style="FONT-SIZE: 9pt" color=#800000>当衡量人的社会价值只有一把尺子时</FONT></a>
+</li>
+
+<li  >
+<span class="blue">吴文望</span>&nbsp;<a href="http://www.wenming.cn/wmcb/gcz/zt/201510/t20151026_2931241.shtml" target="_blank" class='font_14'>为官为何要以"四君子"自喻 <FONT style="FONT-SIZE: 9pt" color=#800000>以塑"君子之政"</FONT></a>
+</li>
+
+<li  >
+<span class="blue">孙隆新</span>&nbsp;<a href="http://www.wenming.cn/wmcb/gcz/ls/201510/t20151013_2903449.shtml" target="_blank" class='font_14'>大阅兵：国之大事 在祀与戎</a>
+</li>
+
+<li  >
+<span class="blue">王统照</span>&nbsp;<a href="http://www.wenming.cn/wmcb/gcz/zt/201510/t20151010_2898050.shtml" target="_blank" class='font_14'>青岛素描 <FONT style="FONT-SIZE: 9pt" color=#993300 face=楷体_GB2312>混合着德国人的沉重</FONT></a>
+</li>
+
+<li  >
+<span class="blue">沈秀操</span>&nbsp;<a href="http://www.wenming.cn/wmcb/gcz/ss/201510/t20151015_2910672.shtml" target="_blank" class='font_14'>扶贫关键在扶智 <FONT style="FONT-SIZE: 9pt" color=#800000>改造“反正我是最穷的”思想</FONT></a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="index_Adver">
+
+<a href="http://archive.wenming.cn/jingtai/wscjz/index.html" target="_blank"><img width="1000" height="60" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/syzhq/gg/gg3/201509/W020150928438580427106.jpg" class="lazyload" alt='新疆维吾尔自治区成立60周年' extra="title=''" /></a>
+
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="main-colum">
+<div class="colum01 left">
+<div class="height_05">
+<div class="pannel-tita02">
+<div class="pannel-Ltit left">联盟</div>
+<span class="more"><a target="_blank" href="../../syjswmq/wmcl/yzyp_wmcl/201409/P020150504509287343969.doc"><font color="#ff0000">加入联盟申请表[下载]</font></a> | <a href="http://www.wenming.cn/syjswmq/wmcl/index.shtml" target="_blank">专题汇总</a> | <a href="http://www.wenming.cn/wmpl_pd/yczl/index.shtml" target="_blank">原创评论</a></span>
+</div>
+<div class="hr_10"></div>
+<div class="colum04 left">
+<div class="pannel">
+<div class="image-text1 ">
+
+<a href="http://gdgz.wenming.cn/zhutihuodong/201510/t20151026_2929642.htm" target="_blank"><img width="240" height="160" src="http://images1.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images2.wenming.cn/web_wenming/syjswmq/wmcl/rdzt_wmcl/201510/W020151026527424906174.jpg" class="lazyload" alt='"2.0"来了！人人都爱更文明的广州' extra="title=''" /></a>
+<div class="image-show">
+<div class="img-title-dw"></div>
+<div class="image-text-tc06"><a href="http://gdgz.wenming.cn/zhutihuodong/201510/t20151026_2929642.htm" target="_blank">"2.0"来了！人人都爱更文明的广州</a></div>
+</div>
+
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_3"></div>
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li class="blue blue01"><a href="http://xm.wenming.cn/wmcs/" target="_blank">厦门承建文明城市频道</a></li>
+
+<li class="blue blue01"><a href="http://gz.wenming.cn/china_Towns/" target="_blank">贵州承建文明村镇频道</a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/wcnr_pd/" target="_blank">四川承建未成年人频道</a></li>
+
+<li class="blue blue01"><a href="http://www.wenming.cn/wmdjr_299/" target="_blank">福州承建“我们的节日”</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="colum05 right pannel">
+<div class="pannel">
+<div class="pannel-title09"><dl><dt onMouseOver="showtab(2,1,9)" id="td_2_1" class="libg"><a href="./lianmeng/lmwz/"  target="_blank">联盟联播</a></dt><dt onMouseOver="showtab(2,2,9)" id="td_2_2" class=""><a href="http://www.wenming.cn/syjj/dfcz/" target="_blank">地方传真</a></dt></dl></div>
+</div>
+<div class="hr_3"></div>
+<div class="hr_5"></div>
+<div class="list01 point-tit">
+<div id="tab_2_1" class="show">
+<ul>
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/gz/201510/t20151028_2934835.shtml" target="_blank">【贵州】将建立统一社会信用代码制度 17年底实现全覆盖</a></li>
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/ln/201510/t20151028_2935287.shtml" target="_blank">【沈阳】推广"小微德育"成长工程 促进未成年人德育工作</a></li>
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/hb_1679/201510/t20151028_2934828.shtml" target="_blank">【武汉】多家企业给员工父母发"孝道工资"引发社会热议</a></li>
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/nmg/201510/t20151027_2934954.shtml" target="_blank">【乌海】抓细抓精打造幸福农村 开设便民连锁超市解难题</a></li>
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/sc/201510/t20151027_2934673.shtml" target="_blank">【成都】开展"榜样高校分享会"活动 道德模范与学生交流</a></li>
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/xz/201510/t20151027_2933307.shtml" target="_blank">【西藏】8.7万名党员到社区报到 "三单制"参与志愿服务</a></li>
+
+<li><a href="http://www.wenming.cn/syjj/dfcz/hlj/201510/t20151027_2934783.shtml" target="_blank">【哈尔滨】道德模范事迹巡讲“故事会”巡演活动进机关</a></li>
+
+<li><a href="./lianmeng/lmwz/201510/t20151026_2932246.shtml" target="_blank">换位体验 技能比拼 圆梦微心愿 各地多形式致敬环卫工人</a></li>
+
+</ul>
+</div>
+<div id="tab_2_2" class="hidden">
+<ul>
+
+<li><a href="./syjj/dfcz/bj/201510/t20151028_2936076.shtml" target="_blank">北京朝阳：2015中国3D技术与创意博览会开幕</a></li>
+
+<li><a href="./syjj/dfcz/sh/201510/t20151028_2936116.shtml" target="_blank">沪上将建立“文明办网联盟”</a></li>
+
+<li><a href="./syjj/dfcz/hb/201510/t20151028_2936106.shtml" target="_blank">全国敬业奉献模范郑久强:让实干精神成为新气象新风气</a></li>
+
+<li><a href="./syjj/dfcz/sc/201510/t20151028_2936007.shtml" target="_blank">遂宁将开展系列宣传公益活动</a></li>
+
+<li><a href="./syjj/dfcz/sc/201510/t20151028_2935982.shtml" target="_blank">绵阳：国学治村 民风巨变</a></li>
+
+<li><a href="./syjj/dfcz/zj/201510/t20151021_2934374.shtml" target="_blank">浙江丽水：戏曲传承发展“接地气” 婺剧文化滋润百姓生活</a></li>
+
+<li><a href="./syjj/dfcz/hn_1680/201510/t20151028_2936054.shtml" target="_blank">长沙组织宣讲报告会弘扬雷锋精神 践行“三严三实”</a></li>
+
+<li><a href="./syjj/dfcz/hn_1680/201510/t20151028_2936001.shtml" target="_blank">长沙：道德模范引领社区建设 趣味活动融洽邻里关系</a></li>
+
+</ul>
+</div>
+</div>
+</div>      
+<div class="hr_5"></div>
+</div>      
+</div>
+<div class="colum03 right bocc6666">
+<div class="height_05">
+<div class="pannel-tita03">
+<div class="pannel-Ltit left"><a href="http://wmdw.chengdu.cn/toindex.php" target="_blank">文明传播</a></div>
+<span class="more"><a href="https://wmdw.chengdu.cn/login.php" target="_blank">网络文明传播志愿者信息系统</a></span>
+</div>
+<div class="hr_10"></div>
+
+<div class="pannel">
+<div class="image-text4">
+
+<a href="http://hbwh.wenming.cn/zt2015/laozihao/xinan/201510/t20151027_2080939.html" target="_blank"><img width="150" height="100" style="padding-right:10px;" src="http://images.wenming.cn/web_wenming/images/index_pic_space.gif" data-original="http://images1.wenming.cn/web_wenming/lianmeng/bk/201510/W020151028325216717123.jpg" class="lazyload" alt='[老字号里的故事]陈麻婆豆腐:百年老字号也“任性”' extra="title=''" /></a>
+<h5 style="padding-top:10px" ><a href="http://hbwh.wenming.cn/zt2015/laozihao/xinan/201510/t20151027_2080939.html" target="_blank" class='font_14'>[老字号里的故事]陈麻婆豆腐:百年老字号也“任性”</a></h5>
+
+</div>
+</div> 
+
+
+
+
+<div class="hr_5"></div>
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li><a href="http://www.wenming.cn/sbhr_pd/hr365/gdfx/wft/" target="_blank">[好人365微访谈]<a target="_blank" href="http://weibo.com/p/100808283b53e89638690a3e5a768bced34f63/talk_home">魏凤和：被弃管3次小区的蜕变之道</a></a></li>
+<li><a href="http://ly.wenming.cn/wmcb/201510/t20151027_2081565.html" target="_blank">临沂网友分享假期旅游见闻 倡议出游别忘带上"文明"</a></li>
+</ul>
+</div>
+</div>
+<div class="pannel">
+<div class="list01 point-tit">
+<ul>
+
+<li><span class="left"><a href="http://hnxc.wenming.cn/bowen/qqgs/201510/t20151026_2075668.html" target="_blank">[我和爸妈·亲情故事]过半百有老妈可叫是上天眷顾</a></span><span class="right"  style="color:#663333"></span></li>
+
+<li><span class="left"><a href="http://sddy.wenming.cn/wmbb/201510/t20151020_2062884.html" target="_blank">东营网友写给未来的自己："当我老了 不悲不怆不忧伤"</a></span><span class="right"  style="color:#663333"></span></li>
+
+<li><span class="left"><a href="http://hz.wenming.cn/zt2015/yfx/" target="_blank">重阳节写给父母的一封信:“下辈子还做你们的儿女”</a></span><span class="right"  style="color:#663333"></span></li>
+
+</ul>
+</div>
+</div>
+<div class="hr_5"></div>
+<div class="pannel">
+<div class="pannel-title03"><span class="red-tex left">微博：</span><span class="font_12 black left"><a href="http://weibo.com/zgwmw" target="_blank" style="font-family:'SimSun'; font-size:14px;">新浪</a> | <a href="http://t.qq.com/wenming" target="_blank" style="font-family:'SimSun'; font-size:14px;">腾讯</a></span> <span class="more" style="font-size:14px;"><a href="http://www.wenming.cn/wmpl_pd/pdsm/" target="_blank" style="font-size:14px; color:#666;">名博沙龙</a> | <a href="http://login.home.news.cn/login.jsp" target="_blank">文明博客圈</a></span> </div>
+</div>
+</div>      
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="main-colum">
+<div class="boDE7C51">
+<div class="pannel-title01" style="border-bottom:1px solid #C00; height:31px;"><div class="pannel-title10"><div class="pannel-title05-left icon_wzq">网站群</div><div class="pannel-title10-right"><dl><dt onMouseOver="showtab(3,1,9)" id="td_3_1" class="libg"><a href="http://www.wenming.cn/syzhq/ljq/wmwcydw/" target="_blank">中央文明委成员单位</a></dt><dt onMouseOver="showtab(3,2,9)" id="td_3_2" class=""><a href="http://www.wenming.cn/syzhq/ljq/zyxcwhdw/" target="_blank">中央主要宣传文化单位</a></dt><dt onMouseOver="showtab(3,4,9)" id="td_3_4" class=""><a href="http://www.wenming.cn/syzhq/ljq/zdxwwz/" target="_blank">重点新闻网站</a></dt><dt onMouseOver="showtab(3,6,9)" id="td_3_6" class=""><a href="http://www.wenming.cn/syzhq/lmwz/" target="_blank">中国文明网联盟网站</a></dt><dt onMouseOver="showtab(3,3,9)" id="td_3_3" class=""><a href="http://www.wenming.cn/syzhq/ljq/dfwmwz/" target="_blank">地方文明网站</a></dt><dt onMouseOver="showtab(3,5,9)" id="td_3_5" class=""><a href="http://www.wenming.cn/syzhq/ljq/yqlj/" target="_blank">友情链接</a></dt></dl></div></div></div>
+<div class="pannel-link">
+<div id="tab_3_1" class="show">
+<ol class="font_12"><li><a href="http://www.zytzb.org.cn/zytzbwz/index.htm" target="_blank">中央统战部</a></li>
+<li><a href="http://www.chinapeace.org.cn/" target="_blank">中央政法委</a></li>
+<li><a href="http://www.gov.cn/" target="_blank">国务院办公厅</a></li>
+<li><a href="http://www.sdpc.gov.cn/" target="_blank">国家发展改革委</a></li>
+<li><a href="http://www.moe.gov.cn/" target="_blank">教育部</a></li>
+<li><a href="http://www.most.gov.cn/" target="_blank">科学技术部</a></li>
+<li><a href="http://www.miit.gov.cn/" target="_blank">工业和信息化部</a></li>
+<li><a href="http://www.mps.gov.cn/n16/index.html" target="_blank">公安部</a></li>
+<li><a href="http://www.mca.gov.cn/" target="_blank">民政部</a></li>
+<li><a href="http://www.mof.gov.cn/" target="_blank">财政部</a></li>
+<li><a href="http://www.mep.gov.cn/" target="_blank">环境保护部</a></li>
+<li><a href="http://www.mohurd.gov.cn/" target="_blank">住房城乡建设部</a></li>
+<li><a href="http://www.moc.gov.cn/" target="_blank">交通运输部</a></li>
+<li><a href="http://www.ccnt.gov.cn/" target="_blank">文化部</a></li>
+<li><a href="http://www.chinapop.gov.cn/zhuzhan/" target="_blank">国家卫生和计划生育委员会</a></li>
+<li><a href="http://www.sasac.gov.cn/n1180/index.html" target="_blank">国务院国资委</a></li>
+<li><a href="http://www.customs.gov.cn/publish/portal0/" target="_blank">海关总署</a></li>
+<li><a href="http://www.chinatax.gov.cn/n8136506/index.html" target="_blank">国家税务总局</a></li>
+<li><a href="http://www.saic.gov.cn/" target="_blank">国家工商总局</a></li>
+<li><a href="http://www.aqsiq.gov.cn/" target="_blank">国家质检总局</a></li>
+<li><a href="http://www.gov.cn/content_2358823.htm" target="_blank">国家新闻出版广播电影电视总局</a></li>
+<li><a href="http://www.sport.gov.cn/n16/index.html" target="_blank">国家体育总局</a></li>
+<li><a href="http://www.forestry.gov.cn/" target="_blank">国家林业局</a></li>
+<li><a href="http://www.cnta.gov.cn/" target="_blank">国家旅游局</a></li>
+<li><a href="http://www.cssn.cn/" target="_blank">中国社会科学院</a></li>
+<li><a href="http://www.circ.gov.cn/web/site0/" target="_blank">中国保监会</a></li>
+<li><a href="http://www.pbc.gov.cn/" target="_blank">中国人民银行</a></li>
+<li><a href="http://www.acftu.net/" target="_blank">全国总工会</a></li>
+<li><a href="http://www.ccyl.org.cn/" target="_blank">共青团中央</a></li>
+<li><a href="http://www.women.org.cn/" target="_blank">全国妇联</a></li>
+<li><a href="http://www.cflac.org.cn/" target="_blank">中国文联</a></li>
+<li><a href="http://www.chinawriter.com.cn/" target="_blank">中国作协</a></li>
+<li><a href="http://www.cast.org.cn/" target="_blank">中国科协</a></li>
+<li><a href="http://www.cdpf.org.cn/" target="_blank">中国残联</a></li>
+<li><a href="http://www.redcross.org.cn/" target="_blank">中国红十字总会</a></li>
+<li><a href="http://www.zgggw.gov.cn/templet/default/" target="_blank">中国关工委</a></li>
+</ol>           
+</div>
+<div id="tab_3_2" class="hidden">
+<ol class="font_12"><li><a href="http://www.cac.gov.cn" target="_blank">中央网信办</a></li>
+<li><a href="http://www.mcprc.gov.cn/" target="_blank">文化部</a></li>
+<li><a href="http://国家新闻出版广电总局.中国/" target="_blank">国家新闻出版广电总局</a></li>
+<li><a href="http://www.people.com.cn/" target="_blank">人民日报社</a></li>
+<li><a href="http://www.xinhuanet.com/" target="_blank">新华社</a></li>
+<li><a href="http://www.qstheory.cn/" target="_blank">求是杂志社</a></li>
+<li><a href="http://www.gmw.cn/" target="_blank">光明日报社</a></li>
+<li><a href="http://www.ce.cn/" target="_blank">经济日报社</a></li>
+<li><a href="http://www.cnr.cn/" target="_blank">中央人民广播电台</a></li>
+<li><a href="http://www.cctv.com/" target="_blank">中央电视台</a></li>
+<li><a href="http://gb.cri.cn/" target="_blank">中央国际广播电台</a></li>
+<li><a href="http://www.chinadaily.com.cn/" target="_blank">中国日报社</a></li>
+<li><a href="http://www.cssn.cn/" target="_blank">中国社会科学院</a></li>
+<li><a href="http://www.cctb.net/" target="_blank">中央编译局</a></li>
+<li><a href="http://www.cipg.org.cn/" target="_blank">中国外文局</a></li>
+<li><a href="http://www.cflac.org.cn/" target="_blank">中国文联</a></li>
+<li><a href="http://www.chinawriter.com.cn/" target="_blank">中国作协</a></li>
+<li><a href="http://www.xinhuanet.com/zgjx/" target="_blank">中国记协</a></li>
+<li><a href="http://www.cnpubg.com/main/" target="_blank">中国出版集团</a></li>
+</ol>               
+</div>
+<div id="tab_3_4" class="hidden">
+<ol class="font_12"><li><a href="http://www.xinhuanet.com/" target="_blank">新华网</a></li><li><a href="http://www.people.com.cn/" target="_blank">人民网</a></li><li><a href="http://www.china.com.cn/" target="_blank">中国网</a></li><li><a href="http://www.cctv.com/" target="_blank">中国网络电视台</a></li><li><a href="http://www.chinadaily.com.cn/" target="_blank">中国日报网</a></li><li><a href="http://gb.cri.cn/" target="_blank">国际在线</a></li><li><a href="http://www.youth.cn/" target="_blank">中国青年网</a></li><li><a href="http://www.ce.cn/" target="_blank">中国经济网</a></li><li><a href="http://www.tibet.cn/" target="_blank">中国西藏网</a></li><li><a href="http://www.taiwan.cn/" target="_blank">中国台湾网</a></li><li><a href="http://www.cnr.cn/" target="_blank">中广网</a></li><li><a href="http://www.gmw.cn/" target="_blank">光明网</a></li><li><a href="http://www.chinanews.com/" target="_blank">中国新闻网</a></li><li><a href="http://www.21dnn.com/" target="_blank">千龙网</a></li><li><a href="http://www.enorth.com.cn/" target="_blank">北方网</a></li><li><a href="http://www.eastday.com/" target="_blank">东方网</a></li><li><a href="http://www.southcn.com/" target="_blank">南方网</a></li><li><a href="http://www.rednet.cn/" target="_blank">红网</a></li><li><a href="http://www.cnhubei.com/" target="_blank">荆楚网</a></li><li><a href="http://www.nen.com.cn" target="_blank">东北新闻网</a></li><li><a href="http://www.cqnews.net/" target="_blank">华龙网</a></li><li><a href="http://www.cjn.cn/" target="_blank">长江网</a></li><li><a href="http://www.ts.cn/" target="_blank">天山网</a></li></ol>              
+</div>
+<div id="tab_3_6" class="hidden">
+<ol class="font_12  left">
+<li style="font-weight:bold; color:#c00">省联盟：</li>
+<li><a href="http://sc.wenming.cn/" target="_blank">四川</a></li>
+<li><a href="http://bj.wenming.cn/" target="_blank">北京</a></li>
+<li><a href="http://hub.wenming.cn/" target="_blank">湖北</a></li>
+<li><a href="http://sd.wenming.cn" target="_blank">山东</a></li>
+<li><a href="http://cq.wenming.cn/" target="_blank">重庆</a></li>
+<li><a href="http://sh.wenming.cn/" target="_blank">上海</a></li>
+<li><a href="http://gz.wenming.cn/" target="_blank">贵州</a></li>
+<li><a href="http://hb.wenming.cn/" target="_blank">河北</a></li>
+<li><a href="http://zj.wenming.cn" target="_blank">浙江</a></li>
+<li><a href="http://ah.wenming.cn/" target="_blank">安徽</a></li>
+<li><a href="http://yn.wenming.cn" target="_blank">云南</a></li>
+<li><a href="http://fj.wenming.cn/" target="_blank">福建</a></li>
+<li><a href="http://hen.wenming.cn/" target="_blank">河南</a></li>
+<li><a href="http://nx.wenming.cn" target="_blank">宁夏</a></li>
+<li><a href="http://gd.wenming.cn/" target="_blank">广东</a></li>
+<li><a href="http://xj.wenming.cn/" target="_blank">新疆</a></li>
+<li><a href="http://hun.wenming.cn/" target="_blank">湖南</a></li>
+<li><a href="http://gs.wenming.cn/" target="_blank">甘肃</a></li>
+<li><a href="http://shx.wenming.cn/" target="_blank">陕西</a></li>
+<li><a href="http://ln.wenming.cn/" target="_blank">辽宁</a></li>
+<li><a href="http://sx.wenming.cn/" target="_blank">山西</a></li>
+<li><a href="http://gx.wenming.cn/" target="_blank">广西</a></li>
+<li><a href="http://hlj.wenming.cn/" target="_blank">黑龙江</a></li>
+<li><a href="http://hn.wenming.cn/" target="_blank">海南</a></li>
+<li><a href="http://jiangxi.wenming.cn/" target="_blank">江西</a></li>
+</ol>  
+<div class="hr_1"></div>
+<ol class="font_12">
+<li style="font-weight:bold; color:#c00">直辖市城区联盟：</li>
+<li><a href="http://cq.wenming.cn/ybwmw/" target="_blank">重庆渝北</a></li>
+<li><a href="http://bj.wenming.cn/chy/" target="_blank">北京朝阳</a></li>
+<li><a href="http://tj.wenming.cn/hpwmw/" target="_blank">天津和平</a></li>
+<li><a href="http://tj.wenming.cn/hxwmw/" target="_blank">天津河西</a></li>
+<li><a href="http://bj.wenming.cn/xc/" target="_blank">北京西城</a></li>
+<li><a href="http://sh.wenming.cn/cnwmw/" target="_blank">上海长宁</a></li>
+<li><a href="http://sh.wenming.cn/jawm/" target="_blank">上海静安</a></li>
+<li><a href="http://bj.wenming.cn/dc/" target="_blank">北京东城</a></li>
+<li><a href="http://cq.wenming.cn/yzwmw/" target="_blank">重庆渝中</a></li>
+<li><a href="http://cq.wenming.cn/nawmw/" target="_blank">重庆南岸</a></li>
+<li><a href="http://bj.wenming.cn/hd/" target="_blank">北京海淀</a></li>
+<li><a href="http://sh.wenming.cn/xhwmw/" target="_blank">上海徐汇</a></li>
+<li><a href="http://sh.wenming.cn/pudong/" target="_blank">上海浦东</a></li>
+<li><a href="http://tj.wenming.cn/dlwmw/" target="_blank">天津东丽</a></li>
+<li><a href="http://tj.wenming.cn/hdwmw/" target="_blank">天津河东</a></li>
+<li><a href="http://sh.wenming.cn/fxwmw/" target="_blank">上海奉贤</a></li>
+<li><a href="http://tj.wenming.cn/bh/" target="_blank">天津滨海</a></li>
+<li><a href="http://bj.wenming.cn/tzh/" target="_blank">北京通州</a></li>
+<li><a href="http://bj.wenming.cn/hr/" target="_blank">北京怀柔</a></li>
+</ol>  
+<div class="hr_1"></div>
+<ol class="font_12">
+<li style="font-weight:bold; color:#c00">地级市联盟：</li>
+<li><a href="http://cd.wenming.cn/" target="_blank">成都</a></li>
+<li><a href="http://wh.wenming.cn/" target="_blank">威海</a></li>
+<li><a href="http://ahwh.wenming.cn/" target="_blank">芜湖</a></li>
+<li><a href="http://qd.wenming.cn" target="_blank">青岛</a></li>
+<li><a href="http://hf.wenming.cn/" target="_blank">合肥</a></li>
+<li><a href="http://hbwh.wenming.cn/" target="_blank">武汉</a></li>
+<li><a href="http://tl.wenming.cn/" target="_blank">铜陵</a></li>
+<li><a href="http://jc.wenming.cn/" target="_blank">晋城</a></li>
+<li><a href="http://ahhb.wenming.cn/" target="_blank">淮北</a></li>
+<li><a href="http://xa.wenming.cn/" target="_blank">西安</a></li>
+<li><a href="http://ly.wenming.cn/" target="_blank">临沂</a></li>
+<li><a href="http://yz.wenming.cn/" target="_blank">扬州</a></li>
+<li><a href="http://hz.wenming.cn/" target="_blank">惠州</a></li>
+<li><a href="http://zjsx.wenming.cn/" target="_blank">绍兴</a></li>
+<li><a href="http://sddy.wenming.cn/" target="_blank">东营</a></li>
+<li><a href="http://xc.wenming.cn/" target="_blank">宣城</a></li>
+<li><a href="http://gdgz.wenming.cn/" target="_blank">广州</a></li>
+<li><a href="http://nb.wenming.cn/" target="_blank">宁波</a></li>
+<li><a href="http://cs.wenming.cn/" target="_blank">长沙</a></li>
+<li><a href="http://fs.wenming.cn/" target="_blank">佛山</a></li>
+<li><a href="http://nj.wenming.cn/" target="_blank">南京</a></li>
+<li><a href="http://jscz.wenming.cn/" target="_blank">常州</a></li>
+<li><a href="http://gdzh.wenming.cn/" target="_blank">珠海</a></li>
+<li><a href="http://xm.wenming.cn/" target="_blank">厦门</a></li>
+<li><a href="http://jx.wenming.cn/" target="_blank">嘉兴</a></li>
+<li><a href="http://wf.wenming.cn/" target="_blank">潍坊</a></li>
+<li><a href="http://hs.wenming.cn" target="_blank">黄山</a></li>
+<li><a href="http://nn.wenming.cn/" target="_blank">南宁</a></li>
+<li><a href="http://ay.wenming.cn/" target="_blank">安阳</a></li>
+<li><a href="http://lnas.wenming.cn/" target="_blank">鞍山</a></li>
+<li><a href="http://nc.wenming.cn/" target="_blank">南昌</a></li>
+<li><a href="http://hnxc.wenming.cn/" target="_blank">许昌</a></li>
+<li><a href="http://zb.wenming.cn/" target="_blank">淄博</a></li>
+<li><a href="http://sz.wenming.cn/" target="_blank">苏州</a></li>
+<li><a href="http://dl.wenming.cn/" target="_blank">大连</a></li>
+<li><a href="http://fz.wenming.cn/" target="_blank">福州</a></li>
+<li><a href="http://scmy.wenming.cn/" target="_blank">绵阳</a></li>
+<li><a href="http://wx.wenming.cn/" target="_blank">无锡</a></li>
+<li><a href="http://gsjc.wenming.cn/" target="_blank">金昌</a></li>
+<li><a href="http://hnzz.wenming.cn/" target="_blank">株洲</a></li>
+<li><a href="http://ty.wenming.cn/" target="_blank">太原</a></li>
+<li><a href="http://jn.wenming.cn/" target="_blank">济南</a></li>
+<li><a href="http://gdzs.wenming.cn/" target="_blank">中山</a></li>
+<li><a href="http://zjwz.wenming.cn/" target="_blank">温州</a></li>
+<li><a href="http://qj.wenming.cn/" target="_blank">曲靖</a></li>
+<li><a href="http://hnyy.wenming.cn/" target="_blank">岳阳</a></li>
+<li><a href="http://heb.wenming.cn/" target="_blank">哈尔滨</a></li>
+<li><a href="http://zjhz.wenming.cn/" target="_blank">杭州</a></li>
+<li><a href="http://bt.wenming.cn/" target="_blank">包头</a></li>
+<li><a href="http://eeds.wenming.cn/" target="_blank">鄂尔多斯</a></li>
+<li><a href="http://szs.wenming.cn/" target="_blank">石嘴山</a></li>
+<li><a href="http://rz.wenming.cn/" target="_blank">日照</a></li>
+<li><a href="http://jxgz.wenming.cn/" target="_blank">赣州</a></li>
+<li><a href="http://hbxy.wenming.cn/" target="_blank">襄阳</a></li>
+<li><a href="http://nmgcf.wenming.cn/" target="_blank">赤峰</a></li>
+<li><a href="http://sy.wenming.cn/" target="_blank">沈阳</a></li>
+<li><a href="http://chz.wenming.cn/" target="_blank">滁州</a></li>
+<li><a href="http://jyg.wenming.cn/" target="_blank">嘉峪关</a></li>
+<li><a href="http://yc.wenming.cn/" target="_blank">宜昌</a></li>
+<li><a href="http://hnly.wenming.cn/" target="_blank">洛阳</a></li>
+<li><a href="http://bb.wenming.cn/" target="_blank">蚌埠</a></li>
+<li><a href="http://hnxx.wenming.cn/" target="_blank">新乡</a></li>
+<li><a href="http://qhd.wenming.cn/" target="_blank">秦皇岛</a></li>
+<li><a href="http://gy.wenming.cn/" target="_blank">贵阳</a></li>
+<li><a href="http://shjz.wenming.cn/" target="_blank">石家庄</a></li>
+<li><a href="http://ts.wenming.cn" target="_blank">唐山</a></li>
+<li><a href="http://gzbj.wenming.cn/" target="_blank">毕节</a></li>
+<li><a href="http://nt.wenming.cn/" target="_blank">南通</a></li>
+<li><a href="http://mas.wenming.cn/" target="_blank">马鞍山</a></li>
+<li><a href="http://hnhk.wenming.cn/" target="_blank">海口</a></li>
+<li><a href="http://ga.wenming.cn/" target="_blank">广安</a></li>
+<li><a href="http://hncd.wenming.cn/" target="_blank">常德</a></li>
+<li><a href="http://fy.wenming.cn/" target="_blank">阜阳</a></li>
+<li><a href="http://hnny.wenming.cn/" target="_blank">南阳</a></li>
+<li><a href="http://lntl.wenming.cn/" target="_blank">铁岭</a></li>
+<li><a href="http://yt.wenming.cn/" target="_blank">烟台</a></li>
+<li><a href="http://pj.wenming.cn/" target="_blank">盘锦</a></li>
+<li><a href="http://sxsz.wenming.cn/" target="_blank">朔州</a></li>
+<li><a href="http://zq.wenming.cn/" target="_blank">肇庆</a></li>
+<li><a href="http://lz.wenming.cn/" target="_blank">兰州</a></li>
+<li><a href="http://hbcd.wenming.cn/" target="_blank">承德</a></li>
+<li><a href="http://bz.wenming.cn/" target="_blank">亳州</a></li>
+<li><a href="http://py.wenming.cn/" target="_blank">濮阳</a></li>
+<li><a href="http://fjsm.wenming.cn/" target="_blank">三明</a></li>
+<li><a href="http://yk.wenming.cn/" target="_blank">营口</a></li>
+<li><a href="http://qz.wenming.cn/" target="_blank">泉州</a></li>
+<li><a href="http://nmgtl.wenming.cn/" target="_blank">通辽</a></li>
+<li><a href="http://jszj.wenming.cn" target="_blank">镇江</a></li>
+<li><a href="http://dg.wenming.cn/" target="_blank">东莞</a></li>
+<li><a href="http://jljl.wenming.cn/" target="_blank">吉林市</a></li>
+<li><a href="http://jm.wenming.cn/" target="_blank">江门</a></li>
+<li><a href="http://zz.wenming.cn/" target="_blank">郑州</a></li>
+<li><a href="http://sxbj.wenming.cn/" target="_blank">宝鸡</a></li>
+<li><a href="http://lw.wenming.cn/" target="_blank">莱芜</a></li>
+<li><a href="http://lf.wenming.cn/" target="_blank">廊坊</a></li>
+<li><a href="http://fjzz.wenming.cn/" target="_blank">漳州</a></li>
+<li><a href="http://scsn.wenming.cn/" target="_blank">遂宁</a></li>
+<li><a href="http://zy.wenming.cn/" target="_blank">遵义</a></li>
+<li><a href="http://xz.wenming.cn/" target="_blank">徐州</a></li>
+<li><a href="http://sxcz.wenming.cn/" target="_blank">长治</a></li>
+<li><a href="http://ahaq.wenming.cn/" target="_blank">安庆</a></li>
+<li><a href="http://gxwz.wenming.cn/" target="_blank">梧州</a></li>
+<li><a href="http://hd.wenming.cn/" target="_blank">邯郸</a></li>
+<li><a href="http://gxlz.wenming.cn/" target="_blank">柳州</a></li>
+<li><a href="http://yl.wenming.cn/" target="_blank">榆林</a></li>
+<li><a href="http://qy.wenming.cn/" target="_blank">庆阳</a></li>
+<li><a href="http://ahsz.wenming.cn/" target="_blank">宿州</a></li>
+<li><a href="http://gdcz.wenming.cn/" target="_blank">潮州</a></li>
+<li><a href="http://gzas.wenming.cn/" target="_blank">安顺</a></li>
+<li><a href="http://px.wenming.cn/" target="_blank">萍乡</a></li>
+<li><a href="http://ahcz.wenming.cn/" target="_blank">池州</a></li>
+<li><a href="http://sxya.wenming.cn/" target="_blank">延安</a></li>
+<li><a href="http://lnly.wenming.cn/" target="_blank">辽阳</a></li>
+<li><a href="http://tz.wenming.cn/" target="_blank">泰州</a></li>
+<li><a href="http://ahhn.wenming.cn/" target="_blank">淮南</a></li>
+<li><a href="http://la.wenming.cn/" target="_blank">六安</a></li>
+<li><a href="http://xn.wenming.cn/" target="_blank">西宁</a></li>
+<li><a href="http://gdsz.wenming.cn/" target="_blank">深圳</a></li>
+<li><a href="http://nxyc.wenming.cn/" target="_blank">银川</a></li>
+<li><a href="http://chc.wenming.cn/" target="_blank">长春</a></li>
+<li><a href="http://ls.wenming.cn/" target="_blank">拉萨</a></li>
+<li><a href="http://dq.wenming.cn/" target="_blank">大庆</a></li>
+<li><a href="http://smx.wenming.cn/" target="_blank">三门峡</a></li>
+<li><a href="http://hljyc.wenming.cn/" target="_blank">伊春</a></li>
+<li><a href="http://jdz.wenming.cn/" target="_blank">景德镇</a></li>
+<li><a href="http://klmy.wenming.cn/" target="_blank">克拉玛依</a></li>
+<li><a href="http://sdta.wenming.cn/" target="_blank">泰安</a></li>
+<li><a href="http://sq.wenming.cn/" target="_blank">商丘</a></li>
+<li><a href="http://jz.wenming.cn/" target="_blank">焦作</a></li>
+<li><a href="http://mzl.wenming.cn/" target="_blank">满洲里</a></li>
+<li><a href="http://sg.wenming.cn/" target="_blank">韶关</a></li>
+<li><a href="http://sxlf.wenming.cn/" target="_blank">临汾</a></li>
+<li><a href="http://km.wenming.cn/" target="_blank">昆明</a></li>
+<li><a href="http://wlmq.wenming.cn/" target="_blank">乌鲁木齐</a></li>
+<li><a href="http://wn.wenming.cn/" target="_blank">渭南</a></li>
+<li><a href="http://lncy.wenming.cn/" target="_blank">朝阳市</a></li>
+<li><a href="http://hnhy.wenming.cn/" target="_blank">衡阳</a></li>
+<li><a href="http://hnxt.wenming.cn/" target="_blank">湘潭</a></li>
+<li><a href="http://fjptq.wenming.cn/" target="_blank">平潭</a></li>
+<li><a href="http://nmgwh.wenming.cn/" target="_blank">乌海</a></li>
+<li><a href="http://scbz.wenming.cn/" target="_blank">巴中</a></li>
+<li><a href="http://lndd.wenming.cn/" target="_blank">丹东</a></li>
+<li><a href="http://hnkf.wenming.cn/" target="_blank">开封</a></li>
+<li><a href="http://fjpt.wenming.cn/" target="_blank">莆田</a></li>
+<li><a href="http://fjly.wenming.cn/" target="_blank">龙岩</a></li>
+<li><a href="http://cz.wenming.cn/" target="_blank">沧州</a></li>
+<li><a href="http://jssq.wenming.cn/" target="_blank">宿迁</a></li>
+<li><a href="http://hnlh.wenming.cn/" target="_blank">漯河</a></li>
+<li><a href="http://hbhs.wenming.cn/" target="_blank">黄石</a></li>
+<li><a href="http://hnxy.wenming.cn/" target="_blank">信阳</a></li>
+<li><a href="http://hbsy.wenming.cn/" target="_blank">十堰</a></li>
+<li><a href="http://nxwz.wenming.cn/" target="_blank">吴忠</a></li>
+<li><a href="http://hnzmd.wenming.cn/" target="_blank">驻马店</a></li>
+<li><a href="http://lnhld.wenming.cn/" target="_blank">葫芦岛</a></li>
+<li><a href="http://zjls.wenming.cn/" target="_blank">丽水</a></li>
+<li><a href="http://ynpe.wenming.cn/" target="_blank">普洱</a></li>
+<li><a href="http://ynlj.wenming.cn/" target="_blank">丽江</a></li>
+<li><a href="http://gdqy.wenming.cn/" target="_blank">清远</a></li>
+<li><a href="http://gxqz.wenming.cn/" target="_blank">钦州</a></li>
+<li><a href="http://gsby.wenming.cn/" target="_blank">白银</a></li>
+<li><a href="http://sdjn.wenming.cn/" target="_blank">济宁</a></li>
+<li><a href="http://wlcb.wenming.cn/" target="_blank">乌兰察布</a></li>
+<li><a href="http://sxxy.wenming.cn/" target="_blank">咸阳</a></li>
+<li><a href="http://hljmdj.wenming.cn/" target="_blank">牡丹江</a></li>
+<li><a href="http://gzlps.wenming.cn/" target="_blank">六盘水</a></li>
+</ol>  
+<div class="hr_1"></div>
+<ol class="font_12">
+<li style="font-weight:bold; color:#c00">县级市和县联盟：</li>
+<li><a href="http://zjg.wenming.cn/" target="_blank">张家港</a></li>
+<li><a href="http://xy.wenming.cn/" target="_blank">孝义</a></li>
+<li><a href="http://hljsfh.wenming.cn/" target="_blank">绥芬河</a></li>
+<li><a href="http://zjyy.wenming.cn/" target="_blank">余姚</a></li>
+<li><a href="http://gzkl.wenming.cn/" target="_blank">凯里</a></li>
+<li><a href="http://shz.wenming.cn/" target="_blank">石河子</a></li>
+<li><a href="http://jy.wenming.cn/" target="_blank">济源</a></li>
+<li><a href="http://xjkel.wenming.cn/" target="_blank">库尔勒</a></li>
+<li><a href="http://scxc.wenming.cn/" target="_blank">西昌</a></li>
+<li><a href="http://yndl.wenming.cn/" target="_blank">大理市</a></li>
+<li><a href="http://sdfc.wenming.cn/" target="_blank">肥城</a></li>
+<li><a href="http://lnhc.wenming.cn" target="_blank">海城</a></li>
+<li><a href="http://nmgetk.wenming.cn/" target="_blank">鄂托克前旗</a></li>
+<li><a href="http://hnnx.wenming.cn/" target="_blank">宁乡</a></li>
+<li><a href="http://sdxt.wenming.cn/" target="_blank">新泰</a></li>
+<li><a href="http://gsdh.wenming.cn/" target="_blank">敦煌</a></li>
+<li><a href="http://zjzj.wenming.cn/" target="_blank">诸暨</a></li>
+<li><a href="http://sdrs.wenming.cn/" target="_blank">乳山</a></li>
+<li><a href="http://nmgzge.wenming.cn/" target="_blank">准格尔旗</a></li>
+<li><a href="http://zjyq.wenming.cn/" target="_blank">乐清</a></li>
+<li><a href="http://zjtl.wenming.cn/" target="_blank">桐庐</a></li>
+<li><a href="http://hnyx.wenming.cn/" target="_blank">攸县</a></li>
+<li><a href="http://sxwq.wenming.cn/" target="_blank">吴起</a></li>
+<li><a href="http://gdlm.wenming.cn/" target="_blank">龙门</a></li>
+<li><a href="http://hncsx.wenming.cn/" target="_blank">长沙县</a></li>
+<li><a href="http://jsjy.wenming.cn/" target="_blank">江阴</a></li>
+<li><a href="http://hnlys.wenming.cn/" target="_blank">浏阳</a></li>
+<li><a href="http://sdsg.wenming.cn/" target="_blank">寿光</a></li>
+<li><a href="http://zjcxs.wenming.cn/" target="_blank">慈溪</a></li>
+<li><a href="http://zjcx.wenming.cn/" target="_blank">长兴</a></li>
+<li><a href="http://sxzd.wenming.cn/" target="_blank">志丹</a></li>
+<li><a href="http://hnxa.wenming.cn/" target="_blank">新安</a></li>
+<li><a href="http://jsyx.wenming.cn/" target="_blank">宜兴</a></li>
+<li><a href="http://fjha.wenming.cn/" target="_blank">惠安</a></li>
+<li><a href="http://jsrg.wenming.cn/" target="_blank">如皋</a></li>
+<li><a href="http://hnyc.wenming.cn/" target="_blank">永城</a></li>
+<li><a href="http://lndg.wenming.cn/" target="_blank">东港</a></li>
+<li><a href="http://ahdt.wenming.cn/" target="_blank">当涂</a></li>
+<li><a href="http://jsjr.wenming.cn/" target="_blank">句容</a></li>
+<li><a href="http://ahfx.wenming.cn/" target="_blank">肥西</a></li>
+<li><a href="http://fjss.wenming.cn/" target="_blank">石狮</a></li>
+<li><a href="http://zjyw.wenming.cn/" target="_blank">义乌</a></li>
+<li><a href="http://fjwp.wenming.cn/" target="_blank">武平</a></li>
+<li><a href="http://fjjj.wenming.cn/" target="_blank">晋江</a></li>
+<li><a href="http://zjhn.wenming.cn/" target="_blank">海宁</a></li>
+<li><a href="http://sdrc.wenming.cn/" target="_blank">荣成</a></li>
+<li><a href="http://ahch.wenming.cn/" target="_blank">巢湖</a></li>
+<li><a href="http://zjra.wenming.cn/" target="_blank">瑞安</a></li>
+<li><a href="http://fjsx.wenming.cn/" target="_blank">沙县</a></li>
+<li><a href="http://hnpy.wenming.cn/" target="_blank">平舆</a></li>
+<li><a href="http://bjyq.wenming.cn/" target="_blank">北京延庆</a></li>
+<li><a href="http://gdbl.wenming.cn/" target="_blank">博罗</a></li>
+<li><a href="http://hnbf.wenming.cn/" target="_blank">宝丰</a></li>
+<li><a href="http://jscs.wenming.cn/" target="_blank">常熟</a></li>
+<li><a href="http://ahng.wenming.cn/" target="_blank">宁国</a></li>
+<li><a href="http://sdzp.wenming.cn/" target="_blank">邹平</a></li>
+<li><a href="http://lnfc.wenming.cn/" target="_blank">凤城</a></li>
+</ol>  
+             
+</div>
+<div id="tab_3_3" class="hidden">
+<ol class="font_12"><li><a href="http://www.bjwmb.gov.cn/" target="_blank">首都文明网</a></li><li><a href="http://www.tjwenming.cn/" target="_blank">天津文明网</a></li><li><a href="http://www.hbjswm.gov.cn/" target="_blank">河北文明网</a></li><li><a href="http://www.lnwmb.com/" target="_blank">辽宁文明网</a></li><li><a href="http://wm.jschina.com.cn/" target="_blank">江苏文明网</a></li><li><a href="http://wmw.dbw.cn/" target="_blank">黑龙江省文明网</a></li><li><a href="http://www.wmsh.gov.cn/" target="_blank">上海文明网</a></li><li><a href="http://www.zjwmw.com/" target="_blank">浙江文明网</a></li><li><a href="http://wmf.fjsen.com/" target="_blank">福建文明风</a></li><li><a href="http://wmjs.jxwmw.cn/" target="_blank">江西文明网</a></li><li><a href="http://www.hnwmw.com/" target="_blank">湖南文明网</a></li><li><a href="http://www.hbwmw.gov.cn/" target="_blank">荆楚文明网</a></li><li><a href="http://www.hnwenming.com/" target="_blank">海南文明网</a></li><li><a href="http://www.gzwmb.cn/" target="_blank">贵州文明网</a></li><li><a href="http://www.godppgs.gov.cn/" target="_blank">甘肃文明网</a></li><li><a href="http://www.jnwmb.com.cn/" target="_blank">济南文明网</a></li><li><a href="http://sywm.syd.com.cn/" target="_blank">沈阳文明网</a></li><li><a href="http://wm.eastday.com/" target="_blank">东方文明</a></li><li><a href="http://www.hzwmw.com/" target="_blank">杭州文明在线</a></li><li><a href="http://www.wmgz.gov.cn/" target="_blank">广州文明网</a></li><li><a href="http://www.hbwm.gov.cn/" target="_blank">淮北文明网</a></li><li><a href="http://www.wzwmw.com/" target="_blank">温州文明网</a></li><li><a href="http://xa.wenming.cn/" target="_blank">西安文明网</a></li><li><a href="http://jcwmw.jconline.cn/" target="_blank">晋城文明网</a></li><li><a href="http://www.ntwenming.com/home/index.viso" target="_blank">南通文明网</a></li><li><a href="http://www.jxwmw.gov.cn/" target="_blank">嘉兴文明网</a></li><li><a href="http://www.jnwmw.com/civil/index.html" target="_blank">济宁文明网</a></li><li><a href="http://www.zsnews.cn/zt/wenmingzs/" target="_blank">中山文明网</a></li><li><a href="http://www.glwmw.com/" target="_blank">桂林文明网</a></li><li><a href="http://www.ycwmb.gov.cn/" target="_blank">伊春文明网</a></li><li><a href="http://www.wm.suzhou.gov.cn/index.html" target="_blank">文明苏州网</a></li><li><a href="http://wm.cnxiantao.com/index.asp" target="_blank">仙桃文明网</a></li><li><a href="http://www.kelwm.com/" target="_blank">库尔勒精神文明网</a></li><li><a href="http://www.lywmw.cn/" target="_blank">洛阳文明网</a></li><li><a href="http://wmw.hkwb.net/" target="_blank">海口文明网</a></li><li><a href="http://www.ddwenming.com/" target="_blank">丹东文明网</a></li><li><a href="http://www.bjcywm.gov.cn/" target="_blank">北京朝阳区文明网</a></li><li><a href="http://www.bjsywm.gov.cn/" target="_blank">北京顺义区文明网</a></li><li><a href="http://www.bjhrwm.gov.cn/" target="_blank">北京怀柔区文明网</a></li><li><a href="http://wmb.ijjnews.com/" target="_blank">晋江文明网</a></li><li><a href="http://www.bjxcwm.gov.cn/" target="_blank">北京西城区文明网</a></li><li><a href="http://www.wenming.gd.cn/" target="_blank">肇庆文明网</a></li><li><a href="http://zcwmw.cn/" target="_blank">淄川文明网</a></li><li><a href="http://www.yantawmb.com/" target="_blank">雁塔文明网</a></li><li><a href="http://www.czwmw.com.cn" target="_blank">潮州文明网</a></li><li><a href="http://dlwenming.enorth.com.cn/" target="_blank">天津东丽区文明网</a></li><li><a href="http://dongannews.com/channel.aspx?chid=17" target="_blank">东安文明网</a></li><li><a href="http://www.hlanda.gov.cn/html/wmw/index.html" target="_blank">安达文明网</a></li><li><a href="http://www.qzwmzx.com/" target="_blank">衢州文明在线</a></li><li><a href="http://www.aihui.gov.cn/html/ahwmw/" target="_blank">爱辉文明网</a></li></ol>              
+</div>
+<div id="tab_3_5" class="hidden">
+<ol class="font_12"><li><a href="http://www.zhiyuanfuwu.com/" target="_blank">中国志愿服务基金会</a></li>
+<li><a href="http://www.kids21.cn/index.jsp" target="_blank">中国未成年人网</a></li>
+<li><a href="http://www.cncv.org.cn/" target="_blank">中国社区志愿服务网</a></li>
+<li><a href="http://net.china.cn/" target="_blank">违法和不良信息举报中心</a></li>
+<li><a href="http://www.k618.cn/" target="_blank">未来网</a></li>
+<li><a href="http://www.zlb.gov.cn/" target="_blank">澳门中联办</a></li>
+<li><a href="http://politics.chinaso.com/" target="_blank">中国搜索·时政</a></li>
+<li><a href="http://cn-e.cn/index.html" target="_blank">中国伦理学会</a></li>
+<li><a href="http://www.workercn.cn/" target="_blank">中工网</a></li>
+<li><a href="http://www.wmgm.org/" target="_blank">文明公民网</a></li>
+<li><a href="http://bhxqxst.com/" target="_blank">社会主义核心价值观网上修身堂</a></li>
+<li><a href="http://haoren.hebei.com.cn/" target="_blank">河北好人网</a></li>
+<li><a href="http://www.crt.com.cn/" target="_blank">红色旅游网</a></li>
+<li><a href="http://www.xibaipo.gov.cn/" target="_blank">西柏坡</a></li>
+<li><a href="http://www.1921.org.cn/" target="_blank">中华魂网</a></li>
+<li><a href="http://now.taobao.com/?qq-pf-to=pcqq.c2c" target="_blank">天天正能量</a></li>
+<li><a href="http://www.enpctn.com.cn/" target="_blank">企业文明网</a></li>
+<li><a href="http://www.pad.gov.cn/" target="_blank">公益广告网</a></li>
+<li><a href="http://hywmw.com/" target="_blank">华阴文明网</a></li>
+<li><a href="http://www.humanrights.cn/cn/index.htm" target="_blank">中国人权网</a></li>
+<li><a href="http://www.gdwh.com.cn/" target="_blank">广东文化网</a></li>
+<li><a href="http://www.cpd.com.cn/" target="_blank">中国警察网</a></li>
+<li><a href="http://www.hshaoren.com/" target="_blank">衡水好人网</a></li>
+<li><a href="http://hzgyggw.org/" target="_blank">杭州公益广告网</a></li>
+</ol>               
+</div>
+</div>
+</div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div id="bottom">
+<div id="footer">
+<ol>
+<li><a target="_blank" href="http://www.wenming.cn/syzhq/gywm/index.shtml">关于我们</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.wenming.cn/syzhq/gywm/">联系我们</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.wenming.cn/syzhq/wylj/">我要链接</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.wenming.cn/syzhq/rczp/">人才招聘</a>&nbsp;|&nbsp;版权声明&nbsp;|&nbsp;<a target="_blank" href="http://www.wenming.cn/syzhq/lmwz/">联盟网站</a>&nbsp;|&nbsp;<a target="_blank" href="http://mail.wenming.cn">文明邮箱</a>&nbsp;|&nbsp;<a target="_blank" href="http://archive.wenming.cn">旧版回顾</a></li>
+<div class="hr_10"></div>
+<li>中共中央宣传部&nbsp;中央文明办主办</li>
+<li>新华通讯社协办&nbsp;&nbsp;新华网承办</li>
+<li>中国文明网&nbsp;&copy;版权所有</li>
+<li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备10031449号</a>&nbsp;&nbsp;互联网新闻信息服务许可证号 1012010003</li>
+</ol>
+<div class="img"><a href="http://bszs.conac.cn/sitename?method=show&id=0974D9D9EC042C0FE053012819ACC784" target="_blank"><img src="http://images1.wenming.cn/web_wenming/images/index20150105-red.png" width="80" height="80" /></a></div>
+</div>
+</div>
+<div class="wechat">
+  <div style="height:80px;"><a href="http://www.wenming.cn/wmwmobile/wxq/" target="_blank"><img src="http://images.wenming.cn/web_wenming/images/index-erweima-150718.jpg" width="80" height="80" /></a></div>
+  <div class="nav">
+      <ul class="side_nav">
+        <li>
+        <a  href="http://www.wenming.cn/specials/sxdt/fifthmd/dyzhsjz_27621/ddmfmd/" target="_blank">道德模范</a>
+        <div class="piaoc-img"><div class="left"><a  href="http://www.wenming.cn/specials/sxdt/fifthmd/dyzhsjz_27621/ddmfmd/" target="_blank">第五届<br/>全国道德模范名单</a></div><div class="right"><a  href="http://www.wenming.cn/specials/sxdt/fifthmd/dyzhsjz_27621/ddmfmd/" target="_blank"><img src="http://images1.wenming.cn/web_wenming/images/piaoc-img03-150630.jpg" /></a></div></div>
+        </li>
+        <li>
+        <a  href="http://www.wenming.cn/hswh/jnkzsl70zn/" target="_blank">纪念抗战</a>
+        <div class="piaoc-img"><div class="left"><a  href="http://www.wenming.cn/hswh/jnkzsl70zn/" target="_blank">纪念中国人民抗战胜利70周年</a></div><div class="right"><a  href="http://www.wenming.cn/hswh/jnkzsl70zn/" target="_blank"><img src="http://images.wenming.cn/web_wenming/images/piaoc-img04-150630.jpg" /></a></div></div>
+        </li>
+        <li>
+        <a  href="http://download.xinhuanet.com/logo/logo.ai" target="_blank" style="color:#F00; font-weight:bold;">标识下载</a>
+        <div class="piaoc-img"><div class="left"><a  href="http://download.xinhuanet.com/logo/logo.ai" target="_blank">抗战胜利70周年<br>纪念活动标识</a></div><div class="right"><a  href="http://download.xinhuanet.com/logo/logo.ai" target="_blank"><img src="http://images1.wenming.cn/web_wenming/images/piaoc-img01-150805.png" /></a></div></div>
+        </li>
+        <li>
+        <a  href="http://www.wenming.cn/ziliao/wenjian/zhuti/xuanjiao/201412/t20141231_2379610.shtml" target="_blank">四个一批</a>
+        <div class="piaoc-img"><div class="left"><a  href="http://www.wenming.cn/ziliao/wenjian/zhuti/xuanjiao/201412/t20141231_2379610.shtml" target="_blank">"四个一批"网络推荐评审系统</a></div><div class="right"><a  href="http://www.wenming.cn/ziliao/wenjian/zhuti/xuanjiao/201412/t20141231_2379610.shtml" target="_blank"><img src="http://images.wenming.cn/web_wenming/images/piaoc-img05-150630.jpg" /></a></div></div>
+        </li>
+        <li>
+        <a class="bold"  href="http://www.wenming.cn/syjswmq/wmcl/yzyp_wmcl/201409/P020150504509287343969.doc" target="_blank">建站申请</a>
+        <div class="piaoc-img"><div class="left"><a  href="http://www.wenming.cn/syjswmq/wmcl/yzyp_wmcl/201409/P020150504509287343969.doc" target="_blank">加入联盟网站<br/>申请表<span style="color:#f00">[下载]</span></a></div><div class="right"><a  href="http://www.wenming.cn/syjswmq/wmcl/yzyp_wmcl/201409/P020150504509287343969.doc" target="_blank"><img src="http://images1.wenming.cn/web_wenming/images/index20150923-01.jpg" /></a></div></div>
+        </li>
+		<li>
+        <a class="bold"  href="http://www.wenming.cn/zyfw_298/yw_zyfw/201510/t20151023_2928456.shtml" target="_blank">四个100</a>
+        <div class="piaoc-img"><div class="left"><a  href="http://www.wenming.cn/zyfw_298/yw_zyfw/201510/t20151023_2928456.shtml" target="_blank">“四个100”<br/>推荐表</a></div><div class="right"><a  href="http://www.wenming.cn/zyfw_298/yw_zyfw/201510/t20151023_2928456.shtml" target="_blank"><img src="http://images.wenming.cn/web_wenming/images/piaoc-img08-151026.jpg" /></a></div></div>
+        </li>
+		
+      </ul>
+  </div>
+</div>
+<script type="text/javascript" src="http://images1.wenming.cn/web_wenming/images/showtab121011.js"></script> <!--tab切换-->
+<!--[if IE 6]> 
+<script type="text/javascript" src="http://images.wenming.cn/web_wenming/images/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">DD_belatedPNG.fix('*');</script>
+<![endif]--> 
+<div class="hr365-pc">
+<ol id="keleyi-menu"> 
+<div  style="width:310px; float:right;">                                                 
+<li><div class="hr365">
+<div class="hr365-title"><img src="http://images1.wenming.cn/web_wenming/images/index20140905-03.jpg" usemap="#Mapb01" width="310" height="38" />
+<map name="Mapb01" id="Mapb01"><area shape="rect" coords="4,4,142,37" href="http://www.wenming.cn/sbhr_pd/hr365/" target="_blank" />
+</map>
+</div>
+<div class="hr365-bg">
+<div class="hr_10"></div>
+<div class="pannel-inner10">
+
+
+<div class="img-95-125 left"><a href="http://www.wenming.cn/sbhr_pd/hr365/jyfx/201510/t20151026_2931695.shtml" target="_blank"><img src="http://images2.wenming.cn/web_wenming/syjj/ddby/201510/W020151027572845332082.jpg" alt="罗丽秋.jpg" title='' width='95' height='125' /></a></div>
+<div class="C-text01"><a href="http://www.wenming.cn/sbhr_pd/hr365/jyfx/201510/t20151026_2931695.shtml" target="_blank">好老师用爱感动残障儿童</a></div>
+<div class="img-sum font_12"><a href="http://www.wenming.cn/sbhr_pd/hr365/jyfx/201510/t20151026_2931695.shtml" target="_blank">她是一名特教老师，6年来，她的悉心教导和无私关怀，赢得数十位残障儿童的爱戴。在吉林通榆，好老师罗丽秋被残障孩子们亲切称为“好妈妈”。</a> </div>
+
+</div>
+<div class="hr_5"></div>
+<div class="line"></div>
+<div class="hr_5"></div>
+<div class="R-tex"><a href="http://haoren.dc.10086.cn/" target="_blank">欢迎推荐线索
+</a>&nbsp;|&nbsp;<a href="http://www.weibo.com/p/100808e4764ee55932f3f09e75869ed9c64a34?k=%25E5%25A5%25BD%25E4%25BA%25BA365&from=huati_topic" target="_blank">评论</a>&nbsp;|&nbsp;<a href="http://www.wenming.cn/sbhr_pd/hr365/" target="_blank">查看更多</a></div>
+</div>
+<div class="hr365-fot"></div>
+<div class="hr_10"></div>
+</div>
+<div class="close3" onClick="$('.hr365').hide();$(this).hide()"><img src="http://images.wenming.cn/web_wenming/images/index20140905-02.jpg" width="11" height="11" /></div>
+</li>
+</div>
+</ol>
+</div>
+<script type="text/javascript"> 
+//飘窗
+$(function(){      
+      
+  function rigScroll(){
+    var winWidth=$(window).width();
+    if(winWidth<1024){
+      $(".wechat").css({"left":10})
+
+    }else{      
+      var winRig=(winWidth)/2-610;
+      $(".wechat").css({"left":0px})
+    }
+  }
+  rigScroll()
+  $(window).scroll(function() {
+    rigScroll()
+  });
+  
+  $(window).resize(function() {
+    rigScroll()
+  });
+})
+</script>
+<script language="javascript"> 
+// 延时加载
+$(document).ready(function(){
+    $("img.lazyload").lazyload({ threshold : 300,failurelimit : 30 });  
+var width = $(".itema01").width();
+    $(".slides_containera01").css("width",$(".itema01").size() * width);
+    var timer = setInterval(move,6000);
+    var iNow = 0;
+    function move(){
+        if(iNow >= $(".itema01").size()){
+            iNow =0;
+        }
+        $(".slides_containera01").animate({left:-iNow * width })
+        iNow++;
+    }
+   })
+</script>
+<script> 
+// 顶部及大图轮播
+/*鼠标移过，左右按钮显示*/
+$(".foucua01").hover(function(){
+  $(this).find(".prev,.next").fadeTo("show",0.1);
+},function(){
+  $(this).find(".prev,.next").hide();
+})
+/*鼠标移过某个按钮 高亮显示*/
+
+$(".prev,.next").hover(function(){
+  $(this).fadeTo("show",0.7);
+
+},function(){
+  $(this).fadeTo("show",0.1);
+})
+$(".foucua01").slide({ titCell:".num ul" , mainCell:".slides_item" , effect:"fold", autoPlay:true, delayTime:1000 , autoPage:true,interTime:8000 });//如果不输出数字autoPage:"<li><a></a></li>"
+$(".foucua02").slide({ titCell:".num01 ul" , mainCell:".slides_item" , effect:"fold", autoPlay:true, delayTime:1000 , autoPage:true ,interTime:5000});//delayTime:效果速度//effect：效果的展现形式
+$(".foucua03").slide({ titCell:".num ul" , mainCell:".slides_item" , effect:"fold", autoPlay:true, delayTime:1000 , autoPage:true ,interTime:10000});
+$(".foucua04").slide({ titCell:".num ul" , mainCell:".slides_item" , effect:"fold", autoPlay:true, delayTime:1000 , autoPage:true ,interTime:5000});//delayTime:效果速度//effect：效果的展现形式
+$(".foucua05").slide({ titCell:".num ul" , mainCell:".slides_item" , effect:"fold", autoPlay:true, delayTime:1000 , autoPage:true ,interTime:5000});
+$(".foucua06").slide({ titCell:".num ul" , mainCell:".slides_item" , effect:"fold", autoPlay:true, delayTime:1000 , autoPage:true ,interTime:5000});
+    $(".image-show").hide();
+    
+    $(".image-text1").hover(function(){
+        $(this).find(".image-show").show()
+    },function(){
+        $(this).find(".image-show").hide()
+        
+    }); 
+        
+</script>
+<div style="display:none;"> <!--统计代码-->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4983cf474db0055dba496f7b56dc6f2a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" src="http://202.123.107.15/webdig.js?z=11"></script>
+<script type="text/javascript">wd_paramtracker("_wdxid=000000000000000000000000000000000000000000")</script>
+<a href="http://webscan.360.cn/index/checkwebsite/url/www.wenming.cn" name="af708965cdc670a691dedfa72cb5fd1c" >360网站安全检测平台</a>
+</div>
+<div style="display:none;"></div>
+</body>
+</html>

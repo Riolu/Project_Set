@@ -1,0 +1,536 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+<html dir="ltr" mozdisallowselectionprint moznomarginboxes>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<link rel="icon"  type="image/x-icon" href="/xtswyx/images/swyx/favicon.ico" />  
+	<link rel="shortcut icon" type="image/x-icon" href="/xtswyx/images/swyx/favicon.ico" />
+	<link rel="bookmark" type="image/x-icon" href="/xtswyx/images/swyx/favicon.ico" />
+    <title>SHANGHAI CENTER FOR SYSTEMS BIOMEDICINE</title>
+    <link type="text/css" rel="stylesheet" href="/xtswyx/css/swyxen.css"/>
+    <script type="text/javascript" src="/xtswyx/js/jquery.js"></script>
+    <script type="text/javascript" src="/xtswyx/js/swyxen/main_date.js" ></script>
+    <script src="/xtswyx/js/util.js"></script>
+    <script type="text/javascript">
+		function subSubject(subject,length){
+			if(subject!=null&&subject.length>length)
+				subject=subject.substring(0,length)+"......";
+			if(subject==null)
+				subject="";
+			return subject;
+		}
+		/*ie6伪类*/
+		$(document).ready(function() {
+			$(".head_menu_lif").hover(function() {
+					$(this).addClass("blue");
+				}, function() {
+					$(this).removeClass("blue");
+				});
+		});
+    </script>
+  </head>
+ <body>
+<div class="head_top" id="head_top">
+   <div class="head_top_main">
+		<div class="head_showTime">
+			<p id="nowTime" ></p>
+		</div>
+		<div class="head_top_main_link">      
+			<a href="http://www.sjtu.edu.cn/">SJTU</a>
+			<span>|</span><a href="./statichtmlen.do?method=getStaticHtmlContent&type=lxwmen">Contact</a>
+			<span>|</span><a href="./home.do?method=getHomeList">中文版本</a><span>|</span>
+		</div>
+		<div class="head_top_main_search">
+			<form id="search_form" action="./keywordsearchen.do?method=getKeywordsList" method="post" target="_blank" style="float: left;">
+			    <img src="./images/swyx/search.png" style="float:left;height: 20px;">
+				<input type="text" name="keywords" id="keywords" value="Search" class="txts" onblur="if (this.value=='') this.value='Search';" onfocus="if (this.value=='Search') this.value='';">
+				<input type="image" id="searchKeywordSubmit" alt="Search" src="./images/swyx/search_select.png" class="search_select">
+			</form>
+		</div>
+    </div>  
+    <div class="head_top_bg"></div> 
+</div>
+<div class="page">
+	<div class="head_menu">
+		<div class="head_menu_bg"></div>
+		<ul class="head_menu_ulf">
+			<li class="head_menu_lif">
+				<a class="head_menu_af" href="./homeen.do?method=getHomeList">Home</a>
+			</li>
+			<li class="head_menu_lif">
+				<a class="head_menu_af" href="./statichtmlen.do?method=getStaticHtmlContent&type=lsen">About SCSB</a>
+				<ul>
+				   <li><a href="./statichtmlen.do?method=getStaticHtmlContent&type=lsen">History</a></li>
+				   <li><a href="./statichtmlen.do?method=getStaticHtmlContent&type=yzjsen">Dean's Corner</a></li>
+				   <li><a href="./reporten.do?method=getReportList&type=nben">Dean's Report</a></li>
+			   </ul>
+			</li>
+			<li class="head_menu_lif">
+			   <a class="head_menu_af" href="./peopleen.do?method=getPeopleList&type=ryen">Faculty</a>
+			</li>
+			<li class="head_menu_lif">
+			   <a class="head_menu_af" href="./achievementsen.do?method=getAchievementsList&type=kycgen">Achievements</a>
+			</li>
+			<li class="head_menu_lif">
+			   <a class="head_menu_af" href="./statichtmlen.do?method=getStaticHtmlContent&type=yqen">Research Support</a>
+			   <ul>
+					<li><a href="http://202.121.180.225/">Department Faditres</a></li>
+					<li><a href="./statichtmlen.do?method=getStaticHtmlContent&type=jjen">Research</a></li>
+			   </ul>
+			</li>
+			<li class="head_menu_lif">
+			   <a class="head_menu_af" href="./statichtmlen.do?method=getStaticHtmlContent&type=ssen">Education</a>
+			   <ul>
+					<li><a href="./statichtmlen.do?method=getStaticHtmlContent&type=ssen">Master Program</a></li>
+					<li><a href="./statichtmlen.do?method=getStaticHtmlContent&type=bsen">PhD Program</a></li>
+					<li><a href="./statichtmlen.do?method=getStaticHtmlContent&type=bshen">Postdoctorad Program</a></li>
+			   </ul>
+			</li>
+			<li class="head_menu_lif">
+			   <a class="head_menu_af" href="./calendaren.do?method=getCalendar&type=rlen">Events</a>
+			   <ul>
+					<li><a href="./calendaren.do?method=getCalendar&type=rlen">Calendar</a></li>
+					<li><a href="./dynamichtmlen.do?method=getDynamicHtmlList&type=xwen">News</a></li>
+					<li><a href="./academicforumen.do?method=getAcademicForumList&type=jzen">Seminars And Lectures</a></li>
+					<li><a href="./photovideoen.do?method=getPhotoVideoenList&type=zpspjen">Photo Gallery And Videotape</a></li>
+			   </ul>
+			</li> 
+			<li class="head_menu_lif">
+			   <a class="head_menu_af" href="./alumnien.do?method=getAlumniList&type=xyhen">Alumni</a>
+			</li>
+			<li class="head_menu_lif">
+			   <a class="head_menu_af" href="./statichtmlen.do?method=getStaticHtmlContent&type=jrwmen">Join Us</a>
+			</li>
+			<li class="clert"></li>
+		  </ul>
+	</div>
+  
+
+<div class="main_content">
+		<div class="main_row_area">
+		  <div id="contentnr" class="rollPic_main">
+				<div class="slider_box" id="slider_name">
+					 <ul class="silder_con" style="left: -980px; width: 5880px;">
+					     
+							 <li class="silder_panel clearfix">
+								<div class="silder_picTitle">
+									 <a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=75" target="_blank">
+								          SJTU Conveve the Academic Council Meeting of Key Laboratory of Systems Biomedicine, Ministry of Education
+								     </a>
+								</div>
+								<a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=75" target="_blank"><img onerror="javascript:this.src='/xtswyx/images/swyx/no_image.jpg'" src="../uploadfiles/2015/en/tpxcen/wCSMTLpdDcHMlKz.jpg"></a>
+							 </li>
+					     
+							 <li class="silder_panel clearfix">
+								<div class="silder_picTitle">
+									 <a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=74" target="_blank">
+								          SCSB Won the Championship for the SJTU Safty Knowledge Contest
+								     </a>
+								</div>
+								<a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=74" target="_blank"><img onerror="javascript:this.src='/xtswyx/images/swyx/no_image.jpg'" src="../uploadfiles/2015/en/tpxcen/bJXlXMsGDiAVQ7w.jpg"></a>
+							 </li>
+					     
+							 <li class="silder_panel clearfix">
+								<div class="silder_picTitle">
+									 <a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=73" target="_blank">
+								          The 4th SCSB Friendly Badminton competition
+								     </a>
+								</div>
+								<a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=73" target="_blank"><img onerror="javascript:this.src='/xtswyx/images/swyx/no_image.jpg'" src="../uploadfiles/2015/en/tpxcen/W4xQgk7EekrDaCs.png"></a>
+							 </li>
+					     
+							 <li class="silder_panel clearfix">
+								<div class="silder_picTitle">
+									 <a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=72" target="_blank">
+								          SCSB-MICHIGAN United won the second place in the Faculty's Badminton Competition 
+								     </a>
+								</div>
+								<a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=72" target="_blank"><img onerror="javascript:this.src='/xtswyx/images/swyx/no_image.jpg'" src="../uploadfiles/2015/en/tpxcen/Qlz5gwmHa8YUV0B.jpg"></a>
+							 </li>
+					     
+							 <li class="silder_panel clearfix">
+								<div class="silder_picTitle">
+									 <a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=71" target="_blank">
+								          Graduation Ceremony of 2015
+								     </a>
+								</div>
+								<a href="./propagandaen.do?method=getPropagandaContent&type=tpxcen&id=71" target="_blank"><img onerror="javascript:this.src='/xtswyx/images/swyx/no_image.jpg'" src="../uploadfiles/2015/en/tpxcen/GXVkFkW1pH5s6sk.png"></a>
+							 </li>
+					     
+					 </ul>
+					 <ul class="silder_nav clearfix">   
+					 	
+					              
+							       
+							        <li class="current" style="opacity: 0.5;">1</li>  
+							       
+							       
+							       
+							   
+						 
+					              
+							       
+							       
+							       
+							        <li style="opacity: 0.5;">2</li>  
+							       
+							   
+						 
+					              
+							       
+							       
+							       
+							        <li style="opacity: 0.5;">3</li>  
+							       
+							   
+						 
+					              
+							       
+							       
+							       
+							        <li style="opacity: 0.5;">4</li>  
+							       
+							   
+						 
+					              
+							       
+							       
+							        <li class="current" style="opacity: 1;">5</li>  
+							       
+							       
+							   
+						  
+					 </ul>
+					 <a class="prev" style="opacity: 0.2;">Prev</a>
+					 <a class="next" style="opacity: 0.2;">Next</a>
+				</div>
+		  </div>
+		  <div class="row_box" style="margin-left:3px;width: 322px;height: 320px;">
+			 <div class="row_box_head">
+				 <strong class="row_box_title">News and Notices</strong>
+				 <a class="row_box_more" href="./dynamichtmlen.do?method=getDynamicHtmlList&type=xwen" target="_blank">More>></a>
+			 </div>
+			 <div class="row_box_content" style="height: 220px;">
+				 <div style="padding:2px 0px 2px 2px;line-height:21px">
+			        <ul>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">07/29/2015</span>
+								 <a title="Job-Hunting Exchange Sucessfully Held in SCSB" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=48">
+								      
+							                
+									       
+									        Job-Hunting Exchange Sucessfully Held ...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">07/27/2015</span>
+								 <a title="SJTU Conveve the Academic Council Meeting of Key Laboratory of Systems Biomedicine, Ministry of Education" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=47">
+								      
+							                
+									       
+									        SJTU Conveve the Academic Council Meet...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">07/14/2015</span>
+								 <a title="SCSB Won the Championship for the SJTU Safty Knowledge Contest" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=46">
+								      
+							                
+									       
+									        SCSB Won the Championship for the SJTU...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">06/16/2015</span>
+								 <a title="The 4th SCSB Friendly Badminton competition" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=45">
+								      
+							                
+									       
+									        The 4th SCSB Friendly Badminton compet...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">06/04/2015</span>
+								 <a title="Structural changes of gut microbiota in a rat non-alcoholic fatty liver disease model treated with a Chinese herbal formula" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=37">
+								      
+							                
+									       
+									        Structural changes of gut microbiota i...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">01/14/2015</span>
+								 <a title="Chemical Reviews Publishes Review from Dr. Xun-Xiang Guo" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=11">
+								      
+							                
+									       
+									        Chemical Reviews Publishes Review from...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">01/07/2015</span>
+								 <a title="Mycobacterium Tuberculosis Proteome Microarray for Global Studies of Protein Function and Immunogenicity" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=20">
+								      
+							                
+									       
+									        Mycobacterium Tuberculosis Proteome Mi...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">12/02/2014</span>
+								 <a title="Copper-catalyzed annulation of heteroaromatic β-halo-α,β-unsaturated carboxylic acids with alkynes for the synthesis of indolo[2,3-c]pyrane- 1-ones and thieno[2,3-c]pyrane-7-ones" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=19">
+								      
+							                
+									       
+									        Copper-catalyzed annulation of heteroa...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">11/17/2014</span>
+								 <a title="RNA Interference Against Cancer/Testis Genes Identifies Dual Specificity Phosphatase 21 as a Potential Therapeutic Target in Human Hepatocellular Carcinoma" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=15">
+								      
+							                
+									       
+									        RNA Interference Against Cancer/Testis...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">11/04/2014</span>
+								 <a title="Lyapunov function as potential function: A dynamical equivalence" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=13">
+								      
+							                
+									       
+									        Lyapunov function as potential functio...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+				            <li class="row_box_content_li">
+								 <span class="row_box_content_time">10/31/2014</span>
+								 <a title="Genome‑wide profiling of untranslated regions by paired‑end ditag sequencing reveals unexpected transcriptome complexity in yeast" href="dynamichtmlen.do?method=getDynamicHtmlContent&type=xwen&id=26">
+								      
+							                
+									       
+									        Genome‑wide profiling of untranslated ...  
+									       
+									       
+									   
+								 </a>
+							</li>
+				        
+			        </ul>
+				 </div>
+			 </div>
+		 </div>
+		 <script src="./js/swyxen/main_slide.js" type="text/javascript"></script>
+		 <div class="clear"></div>
+	  </div> 
+	  <div class="main_row_area">
+			<div class="lectures">
+				<div id="enevents">
+				   <ul class="eng-event">
+					  <li class="eng-event-1">
+						 <div class="eng-lectures">
+							 <h2 style="font-family: Georgia, &quot;Times New Roman&quot;, serif;
+							">LECTURES</h2>
+						 </div>
+						<div class="eng-more">
+							<a href="./academicforumen.do?method=getAcademicForumList&type=jzen" target="_blank">MORE EVENTS>></a>
+						</div>
+					  </li>
+					  
+						    <li class="engevent eng-event-2"> 
+							  <h4>
+								 <a href="./academicforumen.do?method=getAcademicForumContent&type=jzen&id=85" title="Mass Spectrometry for Comprehensive and Quantitative Metabolomics" target="_blank">
+								      
+							                
+									       
+									       
+									        Mass Spectrometry for Comprehensive and Quantitative Metabolomics  
+									       
+									    
+								 </a>
+							  </h4>
+							  <div class="engevent-data">
+								 <p>11/16/2015~11/16/2015</p>
+								 <p style="padding-top:5px;">
+								 	 
+							                
+									       
+									       
+									        Room A213 Shanghai Center for Systems Biomedicine  
+									       
+									    
+								  </p>
+							  </div>
+						   </li>
+					  
+						    <li class="engevent eng-event-3"> 
+							  <h4>
+								 <a href="./academicforumen.do?method=getAcademicForumContent&type=jzen&id=82" title="Structure and Dynamics of 30-nm Chromatin Fiber in Gene Regulation" target="_blank">
+								      
+							                
+									       
+									       
+									        Structure and Dynamics of 30-nm Chromatin Fiber in Gene Regulation  
+									       
+									    
+								 </a>
+							  </h4>
+							  <div class="engevent-data">
+								 <p>09/22/2015~09/22/2015</p>
+								 <p style="padding-top:5px;">
+								 	 
+							                
+									       
+									       
+									        Room A213 Shanghai Center for Systems Biomedicine   
+									       
+									    
+								  </p>
+							  </div>
+						   </li>
+					  
+						    <li class="engevent eng-event-4"> 
+							  <h4>
+								 <a href="./academicforumen.do?method=getAcademicForumContent&type=jzen&id=84" title="Global biochemical analysis of the subcellular localisation of yeast proteins" target="_blank">
+								      
+							                
+									       
+									        Global biochemical analysis of the subcellular localisation of yeast p...  
+									       
+									       
+									    
+								 </a>
+							  </h4>
+							  <div class="engevent-data">
+								 <p>09/22/2015~09/22/2015</p>
+								 <p style="padding-top:5px;">
+								 	 
+							                
+									       
+									       
+									        Room A213 Shanghai Center for Systems Biomedicine   
+									       
+									    
+								  </p>
+							  </div>
+						   </li>
+					  
+						    <li class="engevent eng-event-5"> 
+							  <h4>
+								 <a href="./academicforumen.do?method=getAcademicForumContent&type=jzen&id=83" title="Epigenetic regulation in heart development" target="_blank">
+								      
+							                
+									       
+									       
+									        Epigenetic regulation in heart development  
+									       
+									    
+								 </a>
+							  </h4>
+							  <div class="engevent-data">
+								 <p>09/02/2015~09/02/2015</p>
+								 <p style="padding-top:5px;">
+								 	 
+							                
+									       
+									       
+									        Room A213 Shanghai Center for Systems Biomedicine   
+									       
+									    
+								  </p>
+							  </div>
+						   </li>
+					  
+					  <li class="clearfix"></li>
+				   </ul>
+				</div>
+			</div>   
+	   </div>
+   </div>
+   <div class="clear"></div>
+
+   <div class="foot">
+	  <div class="foot_nav">
+		   <div class="foot_nav_navigation"></div>
+	</div>
+	<div class="footCnt">
+		<div class="foot_inf">
+			<div class="info">
+				   CopyRight <span style="font-family: arial;font-size: 14px">©</span> 20014-2020 <a class="banquan" href="http://scsb.sjtu.edu.cn"><b> Shanghai Center for Systems Biomedicine</b></a> All rights reserved.<a href="http://cert.sjtu.edu.cn/beian/show.asp?number=793">Copyright © ICP-2010793 </a><br>Address：Wenxuan Medical Building, 800 Dong Chuan Rd, Shanghai Tel & Fax：021-34206059<br>
+			 </div>
+		 </div>
+	 </div>
+    </div>
+</div> 
+ <script type="text/javascript">showTime();</script>
+     <script type="text/javascript">
+		 $("#searchKeywordSubmit").click( function() {
+			  var keywords = $("#keywords").val();
+			  if(keywords==''||keywords=='Search'){
+		          alert('please input the keyword！');
+		          return false;
+			   }else{
+				   $("#search_form").submit();
+				   return true;
+			 }
+		  });
+    </script>
+  </body>
+</html>
+
+

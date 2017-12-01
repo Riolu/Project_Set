@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="/sjcj/jyfx/tpjyfx/css/jyfx_style.css" />
+<script type="text/javascript"	src="/sjcj/dwr/engine.js"></script>
+<script type="text/javascript"	src="/sjcj/dwr/util.js"></script>
+<script type="text/javascript"	src="/sjcj/dwr/interface/codeLoad.js"></script>
+<script type="text/javascript"	src="/sjcj/dwr/interface/supload.js"></script>
+<script type="text/javascript"	src="/sjcj/dwr/interface/jyfxdwr.js"></script>
+<script type="text/javascript"	src="/sjcj/dwr/interface/xzdwr.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="/sjcj/wfc/js/My97DatePicker/WdatePicker.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sjcj/jyfx/js/jyfx.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sjcj/wfc/js/wfc.js"></script>
+<script language="JavaScript" type="text/javascript" src="/sjcj/jyfx/js/jquery-1.7.min.js"></script>
+<title>登录页面</title>
+<script type="text/javascript">
+$(function(){
+	
+	/** 判断登陆系统 设置验证码格式
+		var p = navigator.platform; 
+		system.win = p.indexOf("Win") == 0;  
+	    system.mac = p.indexOf("Mac") == 0;  
+	    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);  
+	    if(system.win||system.mac||system.xll){  
+			$(".yzm_pic").css("width","100");
+			$(".yzm_pic").css("height","35");
+	    }
+	**/
+	
+});
+</script>
+</head>
+
+<body>
+<!--头部-->
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+	function updateUserPwd(){
+		//dialog("修改密码","iframe:/sjcj/LoginAction.do?actionType=updatepwd","300px","200px","html");
+		var url = "/sjcj/LoginAction.do?actionType=updatepwd";
+	   	var feature ="width=420,height=350,menubar=no,toolbar=no,Top=200,Left=450,scrollbars=no,status=no";     
+	   	popWindow = window.open(url, null, feature);
+	}
+</script>
+<!--top-->
+<div class="top">
+	<ul class="w1200" id="subpageul"><!--  -->
+	<a href="javascript:void(0);" style="float: left;"><img width="175" height="40" src="/sjcj/jyfx/tpjyfx/imgs/dl_logo_sjtu10248.png" /><img width="185" height="40" src="/sjcj/jyfx/tpjyfx/imgs/dl_logo_public.png" /></a>
+	
+    </ul>
+</div>
+<!--top END-->
+<!--导航-->
+
+<!--导航 END -->
+
+<!--头部  END-->
+
+<!--content-->
+<div class="dl_con">
+	<ul class="w1200">
+    	<!-- 代码 开始 -->
+        <div id="example" class="dl_ban">
+            <div id="slides"><!--Slide控件开始-->
+                <div id="imgs" class="slides_container tab-content">
+                	<div class="img_move_slideway" >
+	                    <div id="img1" class="slideShowDiv" >
+	                        	<img src="/sjcj/jyfx/tpjyfx/imgs/dl_ban01.jpg"/>
+		                        <input type="button" class="ban01_and_btn" onclick="window.open('http://mobile.njcdata.com/attach/mobile/jyfx.apk')"/>
+		                        <input type="button" class="ban01_ios_btn" />
+	                    </div>
+	                    <div id="img2" class="slideShowDiv" >
+	                        	<img src="/sjcj/jyfx/tpjyfx/imgs/dl_ban02.jpg"/>
+		                        <input type="button" class="ban01_and_btn" onclick="window.open('http://mobile.njcdata.com/attach/mobile/jyfx.apk')"/>
+		                        <input type="button" class="ban01_ios_btn" />
+	                    </div>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" onclick="changeIndexImg('pre', false);" class="prev" id="J_pre"><img src="/sjcj/jyfx/tpjyfx/imgs/dl_jt_left.png" width="24" height="43" alt="Arrow Prev"></a>
+                <a href="javascript:void(0);" onclick="changeIndexImg('next', false);" class="next" id="J_next"><img src="/sjcj/jyfx/tpjyfx/imgs/dl_jt_right.png" width="24" height="43" alt="Arrow Next"></a>
+            </div><!--Slide控件结束-->
+        </div>
+        <form name="form1" id="form1" action="/sjcj/LoginAction.do" method="post">
+        <div class="dl_wk">
+        	<h3 class="dl_tit">用户登录</h3>
+            <ul>
+	            
+	            <li id="msg" style="color: red;" align="left"></li>
+            	<li><input name="usercode" id="usercode" type="text" value="用户名" class="dl_yhm" onfocus="checkFocusUsercode();" onblur="checkBlurUsercode();"/></li>
+                <li><input name="pwd" id="pwd" type="password" value="密码" class="dl_mm" onfocus="checkFocusPwd();" onblur="checkBlurPwd();"/></li>
+            	<li><input name="vpwd" id="vpwd" type="text" value="验证码" class="dl_yzm" onfocus="checkFocusVpwd();" onblur="checkBlurVpwd();"/><img onclick="reloadCode();"  class="yzm_pic" id="rpdimg" src="/sjcj/wfc_r4d.so?type=r4d" /></li>
+                <li><input type="button" value="登录" class="dl_btn" onclick="checkSubmitForm();"/></li>
+            </ul>
+            <input type="hidden" name="actionType" value="singlelogin"/>
+            
+			<input type="hidden" name="cmd" value=""/>
+			<input type="hidden" name="newloginpage" value="1"/>
+        </div>
+        </form>
+    </ul>
+</div>
+<!--content END-->
+
+<!--脚部信息-->
+
+
+<div class="foot">
+	<ul>
+    	<li>
+    		<img width="175" height="40" src="/sjcj/jyfx/tpjyfx/imgs/dl_logo_sjtu10248.png" />
+    	</li>
+        <li>
+        	<p class="mt10">Copyright 新锦成数据　All Rights Reserved</p>
+            <p>建议分辨率：1280*720以上，建议使用IE7以上浏览器</p>
+            <p>客服热线：400-188-9036</p>
+        </li>
+        <li style="padding-top:20px;">
+        	<!-- WPA Button Begin -->
+			<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA1NzA1MF84Mjg4NF80MDAxODg5MDM2Xw"></script>
+			<!-- WPA Button End -->
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1256277493'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256277493' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!--脚部信息  END-->
+<script type="text/javascript">
+// 全局变量，指示图片是否更换结束
+var isChanged = true;
+// 图片轮播定时器
+var changeTimer = null;
+// 启动图片轮播
+autoChange();
+// 图片轮播方法
+function autoChange() {
+	changeIndexImg("next", true);
+	changeTimer = setTimeout(autoChange, 3000);
+}
+
+function changeIndexImg(type, isAuto){//切换登陆页的图片
+	var slideway = $(".img_move_slideway");
+	if (!isAuto) {
+		clearTimeout(changeTimer);
+	}
+	if (isChanged) {
+		isChanged = false;
+		if(type=="pre"){//上一个
+			 var last = $(".img_move_slideway div:last");
+			 var tt = last.clone(true).css("width","0");
+			 slideway.prepend(tt);
+			 $(tt).animate({width:"650"},500,function(){
+				 last.remove();
+				 isChanged = true;
+				 if (!isAuto) {
+					 changeTimer = setTimeout(autoChange, 3000);
+				 }
+			 });
+		}
+		if(type=="next"){//下一个
+			var first = $(".img_move_slideway div:first");
+			var tt = first.clone(true);
+			slideway.append(tt);
+			$(first).animate({width:"0"},500,function(){
+				first.remove();
+				isChanged = true;
+				if (!isAuto) {
+					 changeTimer = setTimeout(autoChange, 3000);
+				 }
+			});
+		}
+	}
+}
+
+
+if (window != top || null != document.getElementById('mian_left')){
+	top.location.href = '/sjcj/jyfx/tpjyfx/login.jsp';
+}
+String.prototype.trim=function(){
+        return this.replace(/(^\s*)|(\s*$)/g, "");
+} 
+function checkSubmitForm(){
+    var usercodeObj = document.getElementById('usercode');
+    var pwdObj = document.getElementById('pwd');
+    var vpwdObj = document.getElementById('vpwd');
+    //var msg = document.getElementById('msg');
+    if('' == usercodeObj.value || usercodeObj.value.trim().length == 0){
+    	msg.innerHTML='用户名不能为空！';
+		usercodeObj.value = usercodeObj.value.trim();
+		usercodeObj.focus();
+		return false;
+    }
+    if('' == pwdObj.value || pwdObj.value.trim().length == 0){
+        msg.innerHTML='密码不能为空！';
+    	pwdObj.value = pwdObj.value.trim();
+		pwdObj.focus();
+		return false;
+    }
+    if('' == vpwdObj.value || vpwdObj.value.trim().length == 0){
+        msg.innerHTML='验证码不能为空！';
+    	vpwdObj.value = vpwdObj.value.trim();
+		vpwdObj.focus();
+		return false;
+    }else if(vpwdObj.value.trim().length <4 ){
+     	msg.innerHTML='验证码不正确！';
+     	vpwdObj.focus();
+		return false;
+    }
+	//$('#logining').html('<img src="/sjcj/images/spinner1.gif">登录中...');
+	document.getElementById('form1').submit();
+}
+function reloadCode(){
+	document.getElementById('rpdimg').src= '/sjcj/wfc_r4d.so?type=r4d&t='+new Date().getTime();
+}
+if (document.addEventListener){//如果是Firefox    
+	document.addEventListener("keypress", fireFoxHandler, true);    
+}else{    
+	document.attachEvent("onkeypress", ieHandler);    
+}    
+function fireFoxHandler(evt){    
+	//alert("firefox");    
+	if(evt.keyCode == 13){    
+		checkSubmitForm();    
+	}    
+}   
+function ieHandler(evt){    
+	//alert("IE");    
+	if(evt.keyCode == 13){    
+		checkSubmitForm();;    
+	}  
+}
+function checkFocusUsercode(){
+	var usercode = document.getElementById("usercode").value;
+	if(usercode=="用户名"){
+		usercode = "";
+		document.getElementById("usercode").value=usercode;
+	}
+}
+function checkBlurUsercode(){
+	var usercode = document.getElementById("usercode").value;
+	if(usercode==""){
+		usercode = "用户名";
+		document.getElementById("usercode").value=usercode;
+	}
+}
+function checkFocusPwd(){
+	var pwd = document.getElementById("pwd").value;
+	if(pwd=="密码"){
+		pwd = "";
+		document.getElementById("pwd").value=pwd;
+	}
+}
+function checkBlurPwd(){
+	var pwd = document.getElementById("pwd").value;
+	if(pwd==""){
+		pwd = "密码";
+		document.getElementById("pwd").value=pwd;
+	}
+}
+function checkFocusVpwd(){
+	var vpwd = document.getElementById("vpwd").value;
+	if(vpwd=="验证码"){
+		vpwd = "";
+		document.getElementById("vpwd").value=vpwd;
+	}
+}
+function checkBlurVpwd(){
+	var vpwd = document.getElementById("vpwd").value;
+	if(vpwd==""){
+		vpwd = "验证码";
+		document.getElementById("vpwd").value=vpwd;
+	}
+}
+</script>
+</body>
+</html>

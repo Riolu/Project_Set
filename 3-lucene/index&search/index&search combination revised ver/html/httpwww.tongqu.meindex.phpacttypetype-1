@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--qq登录验证用-->
+    <meta property="qc:admins" content="5455006266715655"/>
+    <!--ios-->
+            <meta name="apple-itunes-app" content="app-id=933524040, app-argument=tongqu:">
+        <!-- force ie to use the newest engine,and duo core to use chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!--开启响应式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="keywords"
+          content="同去"/>
+    <meta name="description" content="同去网，一站式活动平台"/>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content=" 2;http://www.tongqu.me/static/downloadchrome.html"/>
+    <![endif]-->
+
+    <title>同去网</title>
+
+
+    <!-- the add-on css  -->
+                        <link href="http://www.tongqu.me/js/lib/bootstrap/dist/css/bootstrap.css?hash=aafac6" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/lib/fontawesome/css/font-awesome.css?hash=d747d5" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/act.css?hash=e0b6fc" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/button.css?hash=d1b805" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/color.css?hash=b738d0" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/general.css?hash=608f01" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/layout.css?hash=72e8c0" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/message.css?hash=d41d8c" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/modal.css?hash=3ae068" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/nav.css?hash=507ea7" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/page.css?hash=7d0edf" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/team.css?hash=1418a7" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/ng/directive/tqavatar/tqavatar.css?hash=c3640e" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/ng/directive/tqPage/tqPage.css?hash=50c7fa" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/app/act_type/act_type.css?hash=4d499b" rel="stylesheet" media="screen">
+                <!-- end of add-on css  -->
+
+    <script>
+        "use strict";
+        var g_url = {};
+        g_url.site_url = function (url) {
+            var site_url = "http://www.tongqu.me/index.php";// http://tongqu.me/index.php
+            // ltrim the '/'
+            if (url.indexOf('/') === 0) {
+                url = url.substr(1);
+            }
+            return site_url + '/' + url;
+        };
+
+        g_url.base_url = function (url) {
+            var base_url = "http://www.tongqu.me/";// http://tongqu.me/
+            if (url.indexOf('/') === 0) {
+                url = url.substr(1);
+            }
+            return base_url + url;
+        };
+
+    </script>
+
+    <!-- the js that has to be loaded in the header -->
+                    <!-- end of pre js -->
+
+</head>
+
+<body class="dy-skin-default" ng-app="tqApp">
+<!-- the js var eg:ueditor URL-->
+    <script>
+            </script>
+    <script>
+        var g_all_act_types = [{"typeid":"9","typename":"\u62db\u65b0","recommended":"","rank":"1"},{"typeid":"2","typename":"\u8bb2\u5ea7","recommended":"","rank":"3"},{"typeid":"1","typename":"\u827a\u672f","recommended":"","rank":"4"},{"typeid":"10","typename":"\u6237\u5916","recommended":"","rank":"5"},{"typeid":"4","typename":"\u62db\u8058","recommended":"","rank":"7"},{"typeid":"5","typename":"\u6e38\u5b66","recommended":"","rank":"8"},{"typeid":"7","typename":"\u6bd4\u8d5b","recommended":"","rank":"9"},{"typeid":"8","typename":"\u5176\u4ed6","recommended":"","rank":"14"}];var g_all_act_time_status = [{"time_status":2,"status_name":"\u672a\u5f00\u59cb\u62a5\u540d"},{"time_status":1,"status_name":"\u6b63\u5728\u62a5\u540d"},{"time_status":3,"status_name":"\u6b63\u5728\u8fdb\u884c"},{"time_status":4,"status_name":"\u5df2\u7ed3\u675f"}];var g_mobile_view = false;var g_user_info = {"user_login":false};var g_config = {"nav":"act"};var g_init_type_acts = {"count":513,"acts":[{"actid":"10752","name":"\u804c\u4e1a\u7cfb\u5217\u6d3b\u52a8 | \u5feb\u6d88\u3001\u91d1\u878d\u3001\u54a8\u8be2\u3001\u4e92\u8054\u7f51\u5404\u4e2a\u7a81\u7834","type":"2","location":"\u6d77\u5e02\u957f\u5b81\u533a\u5b89\u5316\u8def492\u53f7\u6613\u56edB\u5e62301\u5ba4","poster_id":"6806","source":"BeBeyond","start_time":"2015-11-07 14:00","end_time":"2015-11-07 15:00","sign_start_time":"2015-10-28 14:19","sign_end_time":"2015-11-07 10:19","member_count":"0","max_member":"30","view_count":"5","comment_count":"0","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151028\/normal_c738ad2b37d336c44b5d15865f7de036.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10750","name":"\u767e\u9b3c\u591c\u884c\u9f50\u95f9\u534e\u5e08","type":"10","location":"\u4ea4\u5927\u534e\u5e08","poster_id":"6805","source":"\u4e92\u5e94&\u6708\u5149\u90e8\u843d","start_time":"2015-10-31 18:30","end_time":"2015-10-31 21:00","sign_start_time":"2015-10-28 12:34","sign_end_time":"2015-10-31 16:34","member_count":"0","max_member":"100","view_count":"39","comment_count":"0","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151028\/normal_396ba2d2e184e1cf05469cbefc4cd9d7.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10749","name":"\u7b2c\u4e00\u5c4a\u201c\u65b0\u751f\u676f\u201d\u79d1\u6280\u521b\u65b0\u5927\u8d5b\uff08\u65e0\u4eba\u673a\u5927\u8d5b\uff09\u5ba3\u8bb2\u66a8\u57f9\u8bad\u5927\u4f1a","type":"7","location":"\u4e1c\u4e2d\u96624-101","poster_id":"6804","source":"\u4e0a\u6d77\u4ea4\u5927\u7535\u9662\u79d1\u534f","start_time":"2015-11-01 19:30","end_time":"2015-11-01 21:00","sign_start_time":"2015-10-28 12:00","sign_end_time":"2015-11-01 19:15","member_count":"1","max_member":"100","view_count":"70","comment_count":"0","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151028\/normal_73c9179cef070f0f86c1970ff13e10a4.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10748","name":"\u5982\u679c\u6ca1\u65f6\u95f4\uff0c\u81f3\u5c11\u542c\u542c\u8fd9\u5802\u8bfe\u2014\u2014\u5e2e\u4f60\u5b9e\u4e60\u62a2\u5230\u624b\uff01","type":"2","location":"\u4e0a\u6d77\u5e02\u957f\u5b81\u533a\u5b89\u5316\u8def492\u53f7\u6613\u56edB\u5e62301\u5ba4","poster_id":"6803","source":"BeBeyond","start_time":"2015-10-31 14:00","end_time":"2015-10-31 15:00","sign_start_time":"2015-10-28 10:43","sign_end_time":"2015-10-31 10:43","member_count":"0","max_member":"30","view_count":"56","comment_count":"0","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151028\/normal_29f1d09b857f1d1289a08180e7e9476d.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10747","name":"\u7559\u5b66 MiniWorkshop \u7cfb\u5217 | \u7b80\u5386\u3001\u9009\u6821\u3001\u8054\u7cfb\u6559\u6388","type":"2","location":"\u4e0a\u6d77\u5e02\u957f\u5b81\u533a\u5b89\u5316\u8def492\u53f7\u6613\u56edB\u5e62301\u5ba4","poster_id":"6802","source":"BeBeyond","start_time":"2015-10-31 14:00","end_time":"2015-10-31 15:00","sign_start_time":"2015-10-28 10:41","sign_end_time":"2015-10-31 10:41","member_count":"0","max_member":"30","view_count":"14","comment_count":"0","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151028\/normal_c30e0b417dcac6da6d745a625c1b8635.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10746","name":"\u5929\u98ce\u8bc1\u5238\u91d1\u878d\u57082016\u6821\u56ed\u62db\u8058","type":"4","location":"\u4e0a\u6d77\u4ea4\u5927","poster_id":"6798","source":"\u5929\u98ce\u8bc1\u5238\u80a1\u4efd\u6709\u9650\u516c\u53f8","start_time":"2015-10-31 22:24","end_time":"2015-11-27 22:24","sign_start_time":"2015-10-27 22:24","sign_end_time":"2015-10-30 22:24","member_count":"0","max_member":"0","view_count":"37","comment_count":"0","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151027\/normal_9f7b37fc8d5bb8fd4980e642b280c789.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10745","name":"\u540c\u58f0\u4f20\u8bd1\u8bb2\u5ea7","type":"2","location":"\u9038\u592b\u697c208","poster_id":"6797","source":"\u82f1\u8bed\u89d2\u534f\u4f1a","start_time":"2015-10-30 18:30","end_time":"2015-10-31 11:00","sign_start_time":"2015-10-27 22:30","sign_end_time":"2015-10-30 18:00","member_count":"15","max_member":"0","view_count":"128","comment_count":"4","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151027\/normal_fcf09caf7256540f7327f51652ef9928.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10744","name":"\u4e07\u5723\u8282\u665a\u4f1a\u66a8\u6cd5\u8bed\u6c99\u9f99","type":"8","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u5149\u5f6a\u697c\u4e8c\u5c42\u97f3\u4e50\u5385\u53caDIY\u70f9\u996a\u5ba4","poster_id":"6796","source":"\u4e2d\u6cd5\u534f\u4f1a","start_time":"2015-10-30 19:00","end_time":"2015-10-30 21:30","sign_start_time":"2015-10-27 22:09","sign_end_time":"2015-10-30 12:09","member_count":"0","max_member":"0","view_count":"82","comment_count":"0","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151027\/normal_0412988eeff9ab8045f798e88a723b76.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10743","name":"\u5e73\u5b89\u94f6\u884c\u4e0a\u6d77\u81ea\u8d38\u8bd5\u9a8c\u533a\u5206\u884c2016\u6821\u56ed\u62db\u8058\u5ba3\u8bb2\u4f1a","type":"4","location":"\u5b66\u672f\u6d3b\u52a8\u4e2d\u5fc3\u6f14\u8bb2\u5385","poster_id":"6795","source":"\u5e73\u5b89\u94f6\u884c\u4e0a\u6d77\u81ea\u8d38\u8bd5\u9a8c\u533a\u5206\u884c","start_time":"2015-10-28 19:00","end_time":"2015-10-28 21:00","sign_start_time":"2015-10-27 22:00","sign_end_time":"2015-10-28 18:00","member_count":"0","max_member":"100","view_count":"214","comment_count":"0","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151027\/normal_4606bba7e111390cb576e7fd6c68406c.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10741","name":"\u9996\u5c4a\u817e\u8baf\u4f18\u56fe\u9ad8\u6821\u521b\u65b0\u5927\u8d5b\uff0c\u7b49\u4f60\u6765\u6218\uff01","type":"7","location":"\u4e0a\u6d77\u4ea4\u5927","poster_id":"6792","source":"\u817e\u8baf\u4f18\u56fe","start_time":"2015-10-30 16:31","end_time":"2015-12-25 16:31","sign_start_time":"2015-10-27 16:31","sign_end_time":"2015-10-28 16:31","member_count":"1","max_member":"0","view_count":"227","comment_count":"0","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151027\/normal_e3848f6835fc26f9cf1b3bec3cfb56cc.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"}],"opt":{"type_id":"-1","time_status":0,"number":10,"offset":0,"team_id":0,"poster":"normal","order":"hotvalue","desc":"true","count":513}};var g_acts_recommend = [{"actid":"10470","name":"\u4e0a\u6d77\u4ea4\u5927\u98de\u7fbd\u534f\u4f1a\u62db\u65b0\u5566\uff01\uff01\uff01","start_time":"2015-11-01 23:23","end_time":"2015-12-31 23:23","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u95f5\u884c\u6821\u533a","sign_start_time":"2015-10-09 23:23","sign_end_time":"2015-10-31 23:23","time_status":1,"poster_id":"6449","creatorid":"25748","team_id":"463","member_count":"2","max_member":"0","source":"\u4ea4\u5927\u98de\u7fbd\u81ea\u7136\u534f\u4f1a","public":"0","status":"1","type":"9","time_status_str":"\u6b63\u5728\u62a5\u540d","view_count":"441","view_count_today":"441","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151009\/normal_cc91130ac9fd12465d0a7893014780f0.jpg"},{"actid":"10455","name":"\u4e00\u8d77\u5468\u4e94\u00b7\u591c\u8dd1\u8d77\u6765\uff08\u6bcf\u5468\u4e94\u665a\u4e0a\u56fa\u5b9a\u6d3b\u52a8\uff09","start_time":"2016-01-01 20:11","end_time":"2016-01-01 20:12","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u51ef\u65cb\u95e8\u81f3\u6ee8\u6c5f\u516c\u56ed","sign_start_time":"2015-10-08 20:11","sign_end_time":"2016-01-01 20:10","time_status":1,"poster_id":"6425","creatorid":"51333","team_id":"0","member_count":"14","max_member":"0","source":"\u6708\u5149\u90e8\u843d","public":"0","status":"1","type":"10","time_status_str":"\u6b63\u5728\u62a5\u540d","view_count":"913","view_count_today":"913","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151008\/normal_d6e20f5adb4469611c925c636fd79fef.png"},{"actid":"10666","name":"\u4ea4\u5927\u4e3b\u9898\u68d2\u7403\u670d\u6d3b\u52a8","start_time":"2015-11-02 20:07","end_time":"2015-11-08 21:07","location":"\u4e0a\u6d77\u4ea4\u5927\u95f5\u884c\u6821\u533a","sign_start_time":"2015-10-22 20:05","sign_end_time":"2015-11-01 19:07","time_status":1,"poster_id":"6707","creatorid":"5058","team_id":"478","member_count":"36","max_member":"0","source":"SupremeDress","public":"0","status":"1","type":"8","time_status_str":"\u6b63\u5728\u62a5\u540d","view_count":"25626","view_count_today":"25626","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151022\/normal_aeafafba05a2f208c1775634fe9db3e2.jpg"},{"actid":"10547","name":"\u81f4\u8fdc\u6e38\u6cf3\u5065\u8eab\u9986\u9986\u5e86\u5de8\u732e\uff0c\u79c1\u6559\u8bfe\u7a0b\u4e70\u4e00\u9001\u4e00","start_time":"2015-10-31 00:00","end_time":"2015-10-31 23:59","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u81f4\u8fdc\u6e38\u6cf3\u5065\u8eab\u9986","sign_start_time":"2015-10-16 20:00","sign_end_time":"2015-10-30 23:59","time_status":1,"poster_id":"6565","creatorid":"25574","team_id":"473","member_count":"0","max_member":"0","source":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u81f4\u8fdc\u6e38\u6cf3\u5065\u8eab\u9986","public":"0","status":"1","type":"8","time_status_str":"\u6b63\u5728\u62a5\u540d","view_count":"756","view_count_today":"756","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151014\/normal_4ea76aa3044d704fb5612c528c150535.jpg"}];    </script>
+<!-- end of js var-->
+<div id="global-nav" class="navbar navbar-default navbar-fixed-top" ng-controller="MainNavCtrl" ng-cloak>
+    <div class="nav-content">
+        <div class="nav navbar-nav navbar-header">
+            <li>
+                <img src="/images/logo.png"/>
+            </li>
+            <li>
+                <a href="/" style="text-decoration:none">同去</a>
+            </li>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <a href="/" ng-class="{'active': nav == 'home'}">首页</a>
+            </li>
+            <li>
+                <a href="/index.php/act/type" ng-class="{'active': nav == 'act'}">活动</a>
+            </li>
+            <li>
+                <a href="/index.php/team/browse" ng-class="{'active': nav == 'team'}">团队</a>
+            </li>
+                        <li>
+                <a href="/index.php/app" ng-class="{'active': nav == 'app'}">客户端
+                    <!--<span class="badge bg-red">&nbsp;New!&nbsp;</span>-->
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="!userService.isLogin">
+            <li>
+                <a href="/index.php/user/login">登录</a>
+            </li>
+            <li ng-hide="userService.isLogin">
+                <a href="/index.php/user/register/mobile">注册</a>
+            </li>
+        </ul>
+        <ul id="nav-user" class="nav navbar-nav navbar-right" ng-if="userService.isLogin">
+            <li>
+                <a href="/index.php/user/home">{{userService.data.user_name | tqLimit:8}}</a>
+            </li>
+            <li class="divider">
+            </li>
+            <li dropdown>
+                <a class="dropdown-toggle">
+                    <i class="fa fa-envelope-o"></i>
+                </a>
+                <ul id="notification" class="dropdown-menu" role="menu">
+                    <li><a class="help-block" ng-show="msg.navMsg.length==0">没有任何消息</a></li>
+                    <li ng-repeat="m in msg.navMsg | limitTo:5">
+                        <a target="_blank" ng-href="{{m.href}}" ng-click="read.id(m.msg_id)">
+                            <img class="col-xs-2" ng-src="{{m.sender.avatar}}"/>
+                            <div class="col-xs-10">
+                                <span class="person" ng-bind="m.sender.name"></span>&nbsp;&nbsp;
+                                <span class="action" ng-bind="m.action"></span>
+                                </br>
+                                <div class="detail" ng-bind="m.detail" title="{{m.detail}}"></div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </a>
+                    </li>
+                    <li ng-hide="msg.navMsg.length==0">
+                        <a class="btn btn-default check-all" href="http://www.tongqu.me/index.php/user/message">查看全部</a>
+                    </li>
+                </ul>
+            </li>
+            <li dropdown>
+                <a class="dropdown-toggle">
+                    <i class="fa fa-gear"></i>
+                </a>
+                <ul id="user-setting" class="dropdown-menu" role="menu">
+                    <li><a href="/index.php/user/home">个人中心</a></li>
+                    <li><a href="/index.php/user/logout">退出登录</a></li>
+                </ul>
+            </li>
+            <li dropdown>
+                <a class="dropdown-toggle">
+                    <i class="fa fa-plus"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="/index.php/act/detail/create">发布活动</a></li>
+                    <li><a href="/index.php/team/create">创建团队</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="navbar-form navbar-right form-inline" role="search" id="nav-search"
+              action="http://www.tongqu.me/index.php/search" method="get">
+            <div class="form-group has-feedback">
+                <input type="text" ng-model="selected"
+                       placeholder="活动，团队" ng-enter="search()" class="form-control"
+                       autocomplete="off">
+                <span class="glyphicon glyphicon-search form-control-feedback" ng-click="search()"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="feedback" aria-hidden="true" ng-controller="FeedBackDialogCtrl">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">反馈信息</h4>
+            </div>
+
+            <div class="modal-body">
+                                    请先登录。
+                            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" ng-click="fdbacksub(fdback)">提交反馈</button>
+            </div>
+        </div>
+    </div>
+</div><div class="wrap" ng-controller="ActTypeCtrl" ng-cloak>
+    <div class="user-option center-content">
+        <div>
+            <span class="title">
+                分类：
+            </span>
+            <span class="item" ng-repeat="type in types" ng-class="{active:($parent.type.typeid==type.typeid)}"
+                  ng-click="changeType(type)" ng-bind="type.typename">
+            </span>
+        </div>
+        <div>
+            <span class="title">
+                状态：
+            </span>
+            <span class="item" ng-repeat="status in statuses|orderBy:'time_status'"
+                  ng-class="{active:($parent.status.time_status==status.time_status)}"
+                  ng-click="changeStatus(status)" ng-bind="status.status_name">
+            </span>
+        </div>
+    </div>
+    <div class="sort-bar">
+        <div class="center-content">
+            <div class="col-xs-1">
+                <i class="fa fa-sliders bar-icon"></i>
+            </div>
+            <div ng-repeat="method in sortMethods" class="col-xs-2 one-sort"
+                ng-class="{active:(order==method.key)}"
+                ng-click="sortActs(method.key)">
+                <span ng-bind="method.name"></span>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="center-content">
+        <div class="col-lg-8 list">
+            <tq-one-act ng-repeat="act in acts" tq-act="act" tag="1">
+            </tq-one-act>
+            <div class="help-block" ng-hide="acts.length">抱歉，暂时没有该类型活动。</div>
+            <tq-page total-items="total_count" items-per-page="number" callback="changePage($page)"></tq-page>
+        </div>
+        <div class="col-lg-4 recommend" ng-hide="mobileView">
+            <a href="http://www.tongqu.me/index.php/act/detail/create" class="btn tq-btn-orange create-act"><i class="fa fa-plus"></i> 发布活动
+            </a>
+            <div class="title">推荐活动</div>
+                <tq-one-act ng-repeat="act in acts_recommend" tq-act="act" tag="2"></tq-one-act>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+<script type='text/ng-template' id='tqOneAct.html'>
+    <div ng-if="mobileView" class="one-list-act mobile" fade-in>
+        <div class="act-poster col-xs-4" ng-click="showDetail(act.actid)">
+            <act-poster class="poster" poster="{{act.poster}}" type="{{act.type}}" delay-load="{{$parent.$index * 300}}"></act-poster>
+        </div>
+        <div class="act-info col-xs-8">
+            <div class="act-title" ng-click="showDetail(act.actid)">
+                {{act.name}}
+            </div>
+            <div class="act-desc">
+                <div class="act-status label"
+                    ng-class="{'label-danger':act.time_status==0,
+                              'label-success':act.time_status==1,
+                              'label-info':act.time_status==2||act.time_status==3,
+                              'label-default':act.time_status>3}">
+                    {{actStatus[act.time_status]}}
+                </div>
+                <p class="time" ng-switch="act.time_status">
+                    <span ng-switch-when="2">报名：{{act.sim_sign_start_time}}</span>
+                    <span ng-switch-when="1">截止：{{act.sim_sign_end_time}}</span>
+                    <span ng-switch-when="6">开始：{{act.sim_start_time}}</span>
+                    <span ng-switch-default>结束：{{act.sim_end_time}}</span>
+                </p>
+                <p>人数：{{act.member_count}}&nbsp;/&nbsp;{{act.max_member != '0' ? act.max_member : '人数不限' }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div ng-if="tag==1&&!mobileView" class="one-list-act" fade-in>
+        <div class="act-poster col-xs-3" ng-click="showDetail(act.actid)">
+            <act-poster class="poster" poster="{{act.poster}}" type="{{act.type}}"></act-poster>
+        </div>
+        <div class="act-info col-xs-9">
+            <div class="act-title" ng-click="showDetail(act.actid)">
+                {{act.name}}
+            </div>
+            <div class="act-desc">
+                <div class="act-status label"
+                    ng-class="{'label-danger':act.time_status==0,
+                              'label-success':act.time_status==1,
+                              'label-info':act.time_status==2||act.time_status==3,
+                              'label-default':act.time_status>3}">
+                    {{actStatus[act.time_status]}}
+                </div>
+                <p ng-show="act.time_status==0||act.time_status>=3">时间：{{act.start_time}} --- {{act.end_time}}</p>
+                <p ng-show="act.time_status==1||act.time_status==2">报名：{{act.sign_start_time}} --- {{act.sign_end_time}}</p>
+                <p>地点：{{act.location}}</p>
+                <p>人数：{{act.member_count}}&nbsp;/&nbsp;{{act.max_member != '0' ? act.max_member : '人数不限' }}
+                </p>
+                <p>发起：<span ng-hide="act.source">无</span><span ng-click="showTeam(act.team_id)"
+                    ng-class="{'tq-redder':act.team_id && act.team_id!=0,
+                    'tq-cursor':act.team_id && act.team_id!=0}">{{act.source | limitTo:14}}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div ng-if="tag==2" class="one-related-act" fade-in>
+        <div class="poster-con" ng-click="showDetail(act.actid)">
+            <act-poster poster="{{act.poster}}" type="{{act.type}}"></act-poster>
+        </div>
+        <div class="desc-con">
+            <div class="name" ng-click="showDetail(act.actid)" title="{{act.name}}" ng-class="{small:act.name.length>25,ssmall:act.name.length>30}">
+                {{act.name}}
+            </div>
+            <div class="time">
+                <span class="num" ng-bind="getDiffTimeNum(act.end_time)"></span>
+                <span ng-bind="getDiffTimeUnit(act.end_time)"></span>后结束
+            </div>
+            <div class="source">
+                <span ng-click="showTeam(act.team_id)" ng-class="{'tq-redder':act.team_id && act.team_id!=0, 'tq-cursor':act.team_id && act.team_id!=0}">
+                    {{act.source}}
+                </span>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</script>
+
+<div id="go-to">
+    <div title="回到顶部" onclick="go_top()" class="up-down"><i class="fa fa-angle-up"></i></div>
+    <div title="回到底部" onclick="go_bottom()" class="up-down"><i class="fa fa-angle-down"></i></div>
+</div>
+
+    <div id="footer">
+        <div class="content">
+            <div class="pull-left">
+                <p>友情链接:&nbsp;<a target="_blank" href="http://zhai.me">宅米&nbsp;zhai.me</a></p>
+                <p>&copy&nbsp;2015&nbsp;Tongqu&nbsp;沪ICP备11039570号</p>
+                <a href="http://www.dongyueweb.com" target="_blank">Powered&nbsp;by&nbsp;东岳网络工作室</a>
+            </div>
+            <div class="pull-right right-part">
+                <div>
+                    <!--QQ 客服的代码，记的换qq号！-->
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2575386529&site=qq&menu=yes"><img border="0"
+                                                                                                               src="http://wpa.qq.com/pa?p=2:2575386529:41"
+                                                                                                               alt="点击联系同去网客服"
+                                                                                                               title="点击联系同去网客服"/></a>
+                </div>
+                <!--end of QQ 客服 -->
+
+                <div style="margin:-1px -10px 0px 10px">
+                    <iframe scrolling="no" frameborder="0" allowtransparency="true"
+                            src="http://widget.renren.com/plugin/followbutton?page_id=601387858&color=0&model=1"
+                            style="width:150px;height:40px;"></iframe>
+                </div>
+
+                <div>
+                    <a href="http://www.tongqu.me/index.php/contact">联系我们</a>
+                </div>
+
+                <div>
+                    <a href="http://www.tongqu.me/index.php/disclaimer">免责声明</a>
+                </div>
+                <div>
+                    <a href="/index.php/app">移动端下载</a>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+
+<!--include the js files-->
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/jquery/dist/jquery.js?hash=33e0d9"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/bootstrap/dist/js/bootstrap.js?hash=44d449"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular.js?hash=4e8cda"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular-route.js?hash=cf6da4"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular-sanitize.js?hash=fb74af"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular-cookies.js?hash=835d4e"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/ui-bootstrap-tpls-0.11.2.js?hash=7676b7"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular-locale_zh-cn.js?hash=ac012f"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/sprintf.js/sprintf.min.js?hash=f71a7c"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/sprintf.js/angular-sprintf.min.js?hash=21d516"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/date-time/moment.js?hash=2a84ee"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/tq.js?hash=e5aecd"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/constant.js?hash=40df5c"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/app.js?hash=da6f1a"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/service.js?hash=051196"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/filters.js?hash=75ae1b"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/controller.js?hash=4ccf4d"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/directive.js?hash=8bb5ef"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/directive/act/oneAct.js?hash=100210"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/directive/team/oneTeam.js?hash=2a1054"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/directive/actPoster/actPoster.js?hash=b1ab95"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/message/parser.js?hash=e2e51f"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/message/storage.js?hash=f00fc5"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/message/back.js?hash=507f34"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/message/main.js?hash=6cd8e6"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/directive/tqavatar/tqavatar.js?hash=c1011e"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/weixin/WeixinApi.js?hash=3e7e99"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/directive/tqPage/tqPage.js?hash=8515b3"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/app/act_type/controller.js?hash=e40b5e"></script>
+    <script>
+    // 回到顶部的代码
+    // TODO:把它变成angular的代码
+    var last_height = 0;
+    $(window).scroll(function () {
+        //console.log($(window).scrollTop());
+        if ($(window).scrollTop() > (200)) {
+            $('#go-to').fadeIn();
+        } else {
+            $('#go-to').fadeOut();
+        }
+    });
+
+    // go to top and bottom
+    function go_top() {
+        $("html, body").animate({scrollTop: 0}, 'slow');
+    }
+
+    function go_bottom() {
+        var bottom = $(document).height();
+        $("html, body").animate({scrollTop: bottom}, 'slow');
+    }
+
+    function showFeedback() {
+        $('#feedback').modal('show');
+    }
+</script>
+    <!--百度统计-->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?fcd79bd95b6da3b03dfe6cbc0dd48b21";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+</html>

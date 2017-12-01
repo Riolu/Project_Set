@@ -1,0 +1,57 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>人民网通行证-登录</title>
+<link href="/resource/css/passport.css" rel="stylesheet" type="text/css" />
+<script src="/resource/js/jquery.js" type="text/javascript"></script>
+<script src="/resource/js/jquery.form.js" type="text/javascript"></script>
+<script src="/resource/js/sso.js" type="text/javascript"></script>
+<script src="/resource/js/sso_web.js" type="text/javascript"></script>
+<script src="/resource/js/login.js" type="text/javascript"></script>
+<script type="text/javascript">
+	CONTEXT_PATH = "";
+</script>
+</head>
+<body>
+	<div class="page_Login">
+		<nav>
+			<div class="nav">
+				<a href="/login"><img src="/resource/images/logo_txz.png" class="fl" alt="人民网" /></a>
+				<div class="fr">
+					<a href="http://www.people.com.cn/">人民网首页</a>
+					<a href="javascript:void(0)">帮助</a>
+				</div>
+			</div>
+		</nav>
+		<section>
+			<div class="main">
+				<div class="box_login">
+					<form id="form_login" action="/login" method="post" class="form-horizontal">
+						<fieldset>
+							<legend>欢迎登录人民网通行证</legend>
+							<input type="text" id="username" name="username"  placeholder="用户名 / 邮箱 / 绑定手机号" data-widget="username" class="wgt_txt_01" />
+							<input type="password" id="password" name="password" class="wgt_txt_01" />
+							<div class="clearfix m5">
+								<label class="fl"><input type="checkbox" id="rember" name="rember" checked="checked" /> 记住登录状态</label>
+								<a class="fr" href="/u/findpwd/phone">忘记密码？</a>
+							</div>
+							<div class="clearfix m5" id="message"></div>
+							<button id="submit" type="submit" class="btn_login wgt_btn_01">登录</button>
+							<div>还没有人民网通行证帐号？ <a href="/u/reg?appCode=&fromUrl=">立即注册</a></div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer><div class="footer">1997-2015 by www.people.com.cn. All Rights Reserved</div></footer>
+	</div>
+</body>
+</html>

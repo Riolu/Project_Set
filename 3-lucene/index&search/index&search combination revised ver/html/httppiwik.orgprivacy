@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<!-- This site is optimized with the Yoast SEO plugin v2.3.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Privacy - Analytics Platform - Piwik</title>
+<link rel="canonical" href="http://piwik.org/privacy/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Privacy - Analytics Platform - Piwik" />
+<meta property="og:url" content="http://piwik.org/privacy/" />
+<meta property="og:site_name" content="Analytics Platform - Piwik" />
+<meta property="article:publisher" content="https://www.facebook.com/Piwik" />
+<meta property="og:image" content="http://internetdefenseleague.org/images/badges/final/super_badge.png" />
+<meta property="og:image" content="https://www.resetthenet.org/images/banner-take-back.png" />
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"\/wp-includes\/js\/wp-emoji.js?ver=4.3","twemoji":"\/wp-includes\/js\/twemoji.js?ver=4.3"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" href="/wp-content/plugins/multilingual-press-pro/css/frontend.css?ver=4.3">
+<link rel="stylesheet" href="/wp-content/plugins/cc-syntax-highlight/highlight/tomorrow-night.css">
+<link rel="stylesheet" href="/wp-content/themes/piwik/assets/css/main.min.css?ver=4e6facf06b484b7a4e30141789370add">
+<script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/highlight.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js'></script>
+<script>window.jQuery || document.write('<script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/modernizr-2.6.2.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.backstretch.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.dlmenu.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/bootstrap-slider.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.swfobject.1-1-1.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/youTubeEmbed-jquery-1.0.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/url_builder.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.sticky.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.validate.min.js'></script>
+
+  <link rel="alternate" type="application/rss+xml" title="Analytics Platform - Piwik Feed" href="http://piwik.org/feed/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+    <!--[if lt IE 9]>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/html5shiv.js"></script>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="page page-id-91 privacy">
+
+  <!--[if lt IE 7]><div class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+  <button class="navbar-toggle-menu" type="button" data-toggle="collapse" data-target=".sidebar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+<div class="sidebar affix" role="complementary">
+
+	<aside>
+		<div id="side-wrap">
+			<div id="side-main">
+				<header class="banner" role="banner">
+					<a class="page-title brand" href="http://piwik.org/"> <i class="ficon-piwik_logo header-logo"></i> Open Analytics Platform </a>
+					<!-- languages -->
+					<div class="language-widget ui-dropdown">
+											</div>
+				</header>
+
+				<nav class="nav-main dl-menuwrapper" id="menu" role="navigation">
+					<ul id="menu-sidebar-header-original" class="nav"><li class="dropdown menu-learn-more"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Learn more <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-what-is-piwik"><a href="http://piwik.org/what-is-piwik/">What is Piwik?</a></li>
+	<li class="menu-features"><a href="http://piwik.org/features/">Features</a></li>
+	<li class="menu-integrations"><a href="http://piwik.org/integrate/">Integrations</a></li>
+	<li class="menu-log-analytics"><a href="http://piwik.org/log-analytics/">Log Analytics</a></li>
+	<li class="menu-roadmap"><a href="http://piwik.org/roadmap/">Roadmap</a></li>
+	<li class="menu-changelog"><a href="http://piwik.org/changelog/">Changelog</a></li>
+	<li class="menu-enterprise"><a target="_blank" href="https://piwik.pro/enterprise/?pk_source=Piwik.org&#038;pk_medium=Enterprise_Menu_link&#038;pk_campaign=PO_Enterprise">Enterprise</a></li>
+</ul>
+</li>
+<li class="dropdown menu-community"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://">Community <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-get-involved"><a href="http://piwik.org/get-involved/">Get involved</a></li>
+	<li class="menu-translators"><a href="http://piwik.org/translations/">Translators</a></li>
+	<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+	<li class="menu-contact-the-team"><a href="http://piwik.org/contact/">Contact the team</a></li>
+</ul>
+</li>
+<li class="dropdown menu-help"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Help <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-user-guides"><a href="http://piwik.org/docs">User Guides</a></li>
+	<li class="menu-faq"><a href="http://piwik.org/faq">FAQ</a></li>
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-consulting"><a href="http://piwik.org/consulting/">Consulting</a></li>
+	<li class="menu-issue-tracker"><a target="_blank" href="https://github.com/piwik/piwik/issues">Issue tracker</a></li>
+</ul>
+</li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org/">Marketplace</a></li>
+<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-hosting"><a href="http://piwik.org/hosting/">Hosting</a></li>
+<li class="dropdown menu-about"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://piwik.org/about/">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-jobs-were-hiring"><a href="http://piwik.org/jobs/">Jobs (we&#8217;re hiring!)</a></li>
+	<li class="menu-history"><a href="http://piwik.org/history/">History</a></li>
+	<li class="menu-press"><a href="http://piwik.org/press/">Press</a></li>
+	<li class="menu-testimonials"><a href="http://piwik.org/testimonials">Testimonials</a></li>
+	<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+	<li class="menu-team"><a href="http://piwik.org/team/">Team</a></li>
+</ul>
+</li>
+<li class="menu-blog"><a href="http://piwik.org/blog/">Blog</a></li>
+</ul>				</nav>
+				<div style="clear: both"> </div>
+			</div>
+		</div>
+		<div class="content-info side-footer" role="contentinfo">
+			<ul id="menu-sidebar-footer" class="nav"><li class="menu-download"><a href="http://piwik.org/download/">Download</a></li>
+<li class="menu-demo"><a target="_blank" href="http://demo.piwik.org">Demo</a></li>
+</ul>			<form role="search" method="get" class="form-inline" action="http://piwik.org/">
+  <div class="form-group search-form">
+    <input type="search" value="" name="s" class="ui-search-field form-control" placeholder="Search phrase...">
+    <label class="hide">Search for:</label>
+     <button type="submit" class="btn-search"><i class="ficon-search"></i></button>
+  </div>
+</form>
+			<div class="side-footer-bottom">
+				<hr class="separate">
+				<a href="http://piwik.pro/?pk_source=Piwik.org&pk_medium=Banner_link&pk_campaign=PO_Explore_Piwik_Pro" title="Explore our professional services at Piwik PRO" class="page-switch">
+					<span class="piwik_logo">Piwik Pro - Explore our business offer</span>
+					<span class="text">Explore our business offer.</span>
+				</a>
+			</div>
+			<div style="clear: both"> </div>
+
+		</div>
+	</aside><!-- /.sidebar -->
+
+</div>
+   <div class="container-content">
+        <header class="page-header default text-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Privacy</h1>
+                                
+                            </div>
+        </div>
+    </div>
+</header>
+    
+     <div class="wrap container-main" role="document">
+      <article>
+   <div class="container">
+       <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                  <h2>Web Analytics Privacy in Piwik</h2>
+<p>Piwik ensures the privacy of your users and analytics data. When using Piwik, <b>YOU</b> keep control of your data. Your data is stored in your own MySQL database, and logs or report data will never be sent to other servers by Piwik.</p>
+<p>In March 2011, the Independent Center for Privacy Protection in Germany (ULD) <a href="/blog/2011/03/piwik-can-be-used-in-compliance-with-data-protection-laws/">recommended Piwik as privacy-compliant web analytics software</a>.</p>
+<p>In January 2014, the Center for Data Privacy Protection in France (CNIL) <a href="http://piwik.org/blog/2014/01/independent-center-data-privacy-protection-france-cnil-recommends-piwik-compliance-data-protection-laws/">recommended Piwik as the only tool that can easily ensure full compliance</a> with privacy regulations. In July 2014 the <a href="http://piwik.org/blog/2014/10/cnil-recommends-piwik-analytics-tool-no-cookie-consent/">French CNIL recommends Piwik: the only analytics tool that does not require Cookie Consent</a>.</p>
+<p>Piwik privacy compliance is also reflected by the many government agencies who already trust and rely on Piwik (in Europe, Asia, North America, Africa) for providing self-hosted web analytics.</p>
+<p><a href="/docs/privacy/"><b>Read how to setup privacy settings in Piwik</b></a></p>
+<h2>Privacy Applied to Web Analytics Logs: a Philosophical Choice?</h2>
+<p>Privacy on the Internet is a major concern for many users, webmasters and companies today. We spend so much time online that access to our Internet activity logs (websites, pages visited, internet searches) can reveal a lot of personal information about ourselves, our life, and work.</p>
+<p><strong><a href="http://piwik.org/blog/2014/01/data-privacy-day-january-28th/">Read our blog post on Data Privacy Day</a></strong> to learn more about why Privacy is important.</p>
+<p>When you use a web analytics tool such as Google Universal Analytics, your web analytics data is tracked, stored and owned by the company providing you with the free analytics service. While they provide an excellent service for free, they also re-use the visitor log data tracked on your website to enrich existing profiles for a given user or IP address.</p>
+<p>Here are just a few examples of how websites can gather your personal information while you are away from the website:</p>
+<h3>Google</h3>
+<p>If you use Google Analytics on your website, Google would not only know all of the IP addresses (and other browser unique identifiers) of visitors to your website (and which pages they looked at on your site), but because most other websites use GA as well (or another Google product), Google would also, for example, know the 6 other websites that person visited earlier that day and the 367 websites he looked at in the last month. Because more than 60% of all websites on the Internet use GA , Google Adsense or another Google product using tracking beacons &#8211; <a href="http://w3techs.com/blog/entry/google_cant_track_every_single_click_of_your_web_surfing_only_most_of_them" target="_blank">&#8220;Only 36.5% of the web is Google-free&#8221;</a> &#8211; Google is able to build a very accurate picture of most websites visited by any given user.</p>
+<h3>Facebook?</h3>
+<p>Facebook Social widgets are used on already more than 19% of all websites &amp; blogs (<a href="http://w3techs.com/technologies/overview/social_widget/all" target="_blank">source w3techs</a>). When you visit a website with a Facebook Like button (or any other FB functionality) your browser will send data (and your IP address) to Facebook. Recently it was made public that Facebook creates <a href="http://yro.slashdot.org/story/11/10/18/1429223/facebook-is-building-shadow-profiles-of-non-users" target="_blank">shadow profiles</a> of logged out users. This means that even if you are logged out or not a Facebook member, they still keep track of the websites and articles your IP address (and other browser unique identifiers) was looking at.</p>
+<h2>Why is this profiling for marketing purposes considered a “problem” for some Piwik users?</h2>
+<p>Privacy is becoming increasingly important to us as we spend more of our lives ‘connected’ on the internet. While Google is providing a multitude of amazing services for free – for which we are very thankful – we are at the same time concerned about where and how our private information is being used. Websites like Google (and increasingly Facebook) are able to build an enormous profile of all websites and pages looked at by most (nearly all) Internet users worldwide (even if they are not Google or Facebook users).</p>
+<p>One of their main goals is to improve the re-marketing of Google Ads and Facebook Ads to Internet users and find the right advertising segments for the right ad. But many Internet users and website operators are growing concerned about what could be termed a Global Internet User Activity Database and its moral implications. You don’t need to be a Privacy Junkie to be interested in the challenges and moral implications of gathering so much data on the Internet. We choose not to discuss the details here but recommend you check out the <a href="https://www.eff.org/issues/privacy" target="_blank">Privacy section of the EFF website</a> to learn more.</p>
+<p><strong>Update:</strong> <a href="http://piwik.org/blog/2014/06/resetthenet/">How you can help make a difference against mass surveillance.</a> (Piwik) </p>
+<h3>Opting out of all data collection &amp; Remain Anonymous online</h3>
+<p>To opt-out of all web tracking technologies (including Google Analytics and Piwik), using an extension such as <a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/" target="_blank">Noscript</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/ghostery/" target="_blank">Ghostery</a> is the safest way: these browser extensions will disable all the known JavaScript trackers and ensure that your browser does not send a request to external tracking servers. If you wish to browse the Internet without your IP address being tracked at all, please consider using <a href="https://www.torproject.org/projects/torbrowser.html.en" target="_blank">Tor Browser</a> which will automatically connect you to the secured and anonymous Tor network. If you wish to send and receive emails that are coded to make sure that a surveillance agent or thief that intercepts your email can&#8217;t read it, check out the <a href="https://emailselfdefense.fsf.org/" target="_blank">email self defense guide</a>. If you wish to stay completely anonymous online, please see the PDF guide <a href="http://piwik.org/wp-content/uploads/2012/01/How-to-remain-anonymous-online.pdf">How to remain anonymous online?</a></p>
+<h3>Conclusion</h3>
+<p>Piwik is the leading self-hosted, privacy compliant, decentralized, modern &amp; Free (GPL License) web analytics platform, a building block of the free and open Internet. By using Piwik and configuring a few options as explained in this guide, you will ensure that all of your valuable information is private and owned by one person (you!) and that your website also, just as importantly, respects your visitors’ privacy.</p>
+<p><center></center></p>
+<p><a href="http://internetdefenseleague.org" target="_blank"><img alt="Member of The Internet Defense League" src="http://internetdefenseleague.org/images/badges/final/super_badge.png" /></a></p>
+<p><a href="https://www.resetthenet.org/" target="_blank"><img src="https://www.resetthenet.org/images/banner-take-back.png" /></a></p>
+<p></p>
+              </div>
+       </div>
+   </div>
+</article>
+     </div><!-- /.wrap -->
+
+   <div class="wrapper-body">
+<div class="row extra-foot">
+    <div class="container">
+        <div class="col-md-6 anyquest">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/piwik_help.jpg" class="any-q">
+            <h3>Any questions? </h3>
+            <p>Many answers and more information about Piwik You can find here:</p>
+            <ul class="inline">
+                <li><a href="/docs/">User Guides</a></li>
+                <li><a href="http://forum.piwik.org/">Forums</a></li>
+                <li><a href="/faq/">FAQs</a></li>
+	            <li><a href="http://piwik.pro?pk_source=Piwik.org&pk_medium=footer_link&pk_campaign=PO_Pro_Solutions" target="_blank">PRO Solutions</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/socials.png" class="socials">
+            <h3>We are social </h3>
+            <p>Follow us:</p>
+            <ul class="inline">
+                <li><a href="/newsletter/">Newsletter</a></li>
+                <li><a href="http://www.facebook.com/Piwik">Facebook</a></li>
+                <li><a href="http://twitter.com/piwik">Twitter</a></li>
+                <li><a href="http://www.linkedin.com/groups?gid=867857" target="_blank">Linkedin</a></li>
+                <li><a href="https://github.com/piwik/piwik">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="container footer-page footer-updated">
+    <div class="row">
+        <div class="col-lg-11 col-md-11 foot-cc">
+            <a href="http://piwik.org/thank-you-all/"><img src="http://piwik.org/wp-content/themes/piwik/assets/img/cc.png" class="clearcode"></a>
+            <span class="pworg">Piwik.org. &copy; 2015</span>
+            <ul id="menu-footer" class="nav"><li class="menu-piwik-cloud"><a href="http://piwik.org/hosting/">Piwik Cloud</a></li>
+<li class="active menu-privacy active"><a href="http://piwik.org/privacy/">Privacy</a></li>
+<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+<li class="menu-developers"><a target="_blank" href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org">Marketplace</a></li>
+<li class="menu-credits"><a href="http://piwik.org/thank-you-all/">Credits</a></li>
+</ul>            <span class="respect">Piwik respects your privacy and gives you full control over your data.</span>
+        </div>
+    </div>
+</footer>
+</div>
+   </div>
+  <!-- Piwik -->
+<!-- Load Piwik.js from demo2 for continuous testing -->
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/") + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker((("https:" == document.location.protocol) ? "https://demo.piwik.org/" : "http://demo.piwik.org/") + "piwik.php", 1);
+piwikTracker.setCookieDomain('*.piwik.org');
+
+if(document.domain != 'piwik.org') {
+  piwikTracker.setDocumentTitle(document.domain + "/" + document.title);
+}
+
+// Set the domain the visitor landed on, in the Custom Variable
+if(!piwikTracker.getCustomVariable(1)) { 
+  piwikTracker.setCustomVariable(1, "Domain landed", document.domain );
+}
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();  
+} catch( err ) {}
+</script><noscript><p><img src="http://demo.piwik.org/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+
+
+<!-- We're tracking data in demo2.piwik.org for purpose of testing Piwik. Signed: the Piwik core team -->
+<script type="text/javascript">
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/");
+    try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.setCookieDomain('*.piwik.org');
+        // Track Javascript Errors as Events
+        piwikTracker.enableJSErrorTracking();
+        
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+</script>
+  <script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/syntax_highlight.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/scripts.min.js?ver=160b62610afbe732febb44f9896f3afd'></script>
+
+  <div id="fb-root"></div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.274 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-10-28 01:00:34 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1ArrayArrayArray/xhtml" lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        上海交通大学教务处 -- 夏季学期 Summer Session -- 首页
+    </title>
+
+    <script language="JavaScript" type="text/JavaScript" src="js/AddFavorite.js"></script>
+
+    <script language="JavaScript" type="text/JavaScript" src="js/SetHomePage.js"></script>
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+
+    <script src="js/jquery.soChange.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body onload="changeSubject(1);ShowLast()">
+    <div id="header">
+        <div id="top">
+            <a href="javascript:void(0);" class="logo"><img src="images/logo.jpg"></a>
+            <div class="login"><a href="javascript:void(0);" onclick="SetHome(this,'www.jwc.sjtu.edu.cn')" class="house" title="设为首页"></a><a href="javascript:void(0);" onclick="AddFavorite('www.jwc.sjtu.edu.cn','上海交通大学夏季学期')" class="star_gray" title="加入收藏"></a><a href="javascript:void(0);" class="mail_gray" title="联系我们"></a></div>
+            
+                <div class="seach"><input type="text" class="keyword" name="tbKeyword" value="" id="tbKeyword" runat="server"><a class="seach_btn"><img src="images/seachBTn.jpg" onclick="window.location.href='198677.htm?Keyword='+tbKeyword.value;"></a></div>
+            
+        </div>
+        <!--top end-->
+    </div>
+    <!--hreder end-->
+    <div style="clear: both"></div><div id="nav"><div id="nav_content"><ul><li><a href="198671.htm" target="_self"><img src="images/HomeBG.png"></a></li><li class="Mar-r"><a href="198809.htm" target="_self">中文授课课程 Chinese Courses</a></li><li class="Mar-r"><a href="198672.htm" target="_self">英文授课课程 English Courses</a></li><li class="Mar-r"><a href="198675.htm" target="_self">夏季学期指南 Guide</a></li><li id="never_ch" class="Mar-r"><a href="198676.htm" target="_self">校外同学报名<br>          Admissions & Aid</a></li></ul></div></div>
+    <!--nav end-->
+    <div style="clear: both">
+    </div>
+    <div id="pageBody">
+        
+                <div id="slider" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT"><div class="changeDiv" style="min-width:932px;"><div id="sliderBg"><img src="/Upload/Content/635327226177560000_2_16441.jpg" width="672" height="263"></div><div id="slider_words" style="float:left;"><p class="words_title">夏季学期课程</p><span>
+上海交通大学2015年夏季学期选课注册及教学日程安排
+根据上海交通大学校历安排，2015年上海交通大学夏季学期起讫时间为2015年7月6日至7月31日（星期一至星期五），本科教学活动及考试安排共4周。作息时间每节课45分钟，小课间10分钟，大课间20分钟。课程介绍和课程安排等陆续…</span><a href="198678-1980000003560.htm" target="_blank" style="float: right;"><img src="images/xxnr.jpg"></a></div></div><div class="changeDiv" style="min-width:932px;"><div id="sliderBg"><img src="/Upload/Content/634991393853345267_2_84730.jpg" width="672" height="263"></div><div id="slider_words" style="float:left;"><p class="words_title">唐诗宋词人文解读</p><span>
+《唐诗宋词人文解读》是面向全校本科生开设的1门人文科学类通选课程，是上海交通大学2008年首次立项建设的24门通识教育核心课程之一。　　本课程属于人文科学类通识课程，课程以诗词的基本知识为基础，以唐诗宋词的发展历史为经，作家作品为纬，文本解读与精神感悟并举，重在…</span><a href="198678-1980000002693.htm" target="_blank" style="float: right;"><img src="images/xxnr.jpg"></a></div></div><div class="changeDiv" style="min-width:932px;"><div id="sliderBg"><img src="/Upload/Content/634991404397545267_2_59443.jpg" width="672" height="263"></div><div id="slider_words" style="float:left;"><p class="words_title">“名家讲堂”第一讲“大中东…</p><span>
+张信刚教授是世界知名的生物医学工程专家，通晓中、英、法文，并对中国与西方文化，以及中西方社会发展史有深入的认识。他此次是在应邀为我校约两百名学生讲授“文明交往”的通识教育“名家名课”（32学时）的间隙，抽出宝贵的时间再为全校师生奉献一道精神大餐。张教授在校期…</span><a href="198678-1980000002694.htm" target="_blank" style="float: right;"><img src="images/xxnr.jpg"></a></div></div></div>
+            
+        <!--slider end-->
+        <div style="clear: both">
+        </div>
+        <div id="lesson">
+            <script language="JavaScript" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT">
+			var nCount=3;
+			var oArray = new Array();
+			function changeSubject(oTag)
+			{
+			for(i=0;i < nCount;i++)
+			{
+			var id="mt_"+oArray[i];
+
+			if(i+1==oTag)
+			{
+			document.getElementById("mt_"+oArray[i]).className="blue";
+			document.getElementById("mt_"+oArray[i]).firstChild.className="mouseover";
+			document.getElementById("vt_"+oArray[i]).style.display="";
+			}
+			else
+			{
+			document.getElementById("mt_"+oArray[i]).className="";
+			document.getElementById("mt_"+oArray[i]).firstChild.className="";
+			document.getElementById("vt_"+oArray[i]).style.display="none";
+			}
+			}
+
+			}
+		</script><div id="lesson_tab" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT"><ul><script language="JavaScript" type="text/JavaScript">
+				oArray[0]="198679";
+			</script><li id="mt_198679" onmouseover="changeSubject(1);this.style.cursor='hand';" class="blue"><a href="198679.htm" class="mouseover">通知通告/Notice</a></li><script language="JavaScript" type="text/JavaScript">
+				oArray[1]="198680";
+			</script><li id="mt_198680" onmouseover="changeSubject(2);this.style.cursor='hand';" class="blue"><a href="198680.htm" class="mouseover">课程列表/Courses</a></li><script language="JavaScript" type="text/JavaScript">
+				oArray[2]="1980662";
+			</script><li id="mt_1980662" onmouseover="changeSubject(3);this.style.cursor='hand';" class="blue"><a href="1980662.htm" class="mouseover">友情链接</a></li></ul></div>
+            
+                    <script language="JavaScript" type="text/JavaScript" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT">
+			//function ShowInfo(Contents_ID)
+			//{
+			//$("#RightInfo_"+Contents_ID).show().siblings("div").hide();
+			//}
+
+			function ShowLast()
+			{
+			for(i=0;i<6;i++)
+			{
+			//alert($("[name='pic']:img:eq("+i+")").attr("src").length);
+			if($("[name='pic']:img:eq("+i+")").attr("src").length!=0)
+			{
+			$(".lesson_click:eq("+i+")").show();
+			break;
+			}
+			}
+			}
+		</script><div style="clear:both" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT"></div><div class="lesson_news_box" id="vt_198679" style="display:none;" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT"><ul class="lesson_news"><li id="Info_1980000005258"><span>
+					[2015-04-20]
+				</span><a href="198679-1980000005258.htm" target="_blank">关于2015年夏季学期课程开放及选课的通知（更新）</a></li><li id="Info_1980000005257"><span>
+					[2015-04-20]
+				</span><a href="198679-1980000005257.htm" target="_blank">2015年夏季学期选课及相关咨询联系方式</a></li><li id="Info_1980000005256"><span>
+					[2015-04-20]
+				</span><a href="198679-1980000005256.htm" target="_blank">上海交通大学2015年夏季学期选课注册及教学日程安排</a></li><li id="Info_1980000004657"><span>
+					[2014-06-25]
+				</span><a href="198679-1980000004657.htm" target="_blank">关于上海交通大学夏季学期校外学生报到提示</a></li></ul><div class="lesson_click" style="display:none;" id="RightInfo_1980000005258"><table width="290" border="0"><tr><td width="186" rowspan="3"><img src="" width="175" height="118" name="pic"></td><td width="94" style="color:#07378c;">关于2015年夏…</td></tr><tr><td><div align="right">上海交大</div></td></tr><tr><td style="text-indent:15px;"><a href="198679-1980000005258.htm">
+各位同学：
+感谢您对上海交通大学夏季学期的关注，我们将为同学开放…</a></td></tr></table></div><div class="lesson_click" style="display:none;" id="RightInfo_1980000005257"><table width="290" border="0"><tr><td width="186" rowspan="3"><img src="" width="175" height="118" name="pic"></td><td width="94" style="color:#07378c;">2015年夏季学…</td></tr><tr><td><div align="right">上海交大</div></td></tr><tr><td style="text-indent:15px;"><a href="198679-1980000005257.htm">
+联系电话：
+1. 西南片和C9成员高校学生选课及相关咨询
+ （西南片）…</a></td></tr></table></div><div class="lesson_click" style="display:none;" id="RightInfo_1980000005256"><table width="290" border="0"><tr><td width="186" rowspan="3"><img src="" width="175" height="118" name="pic"></td><td width="94" style="color:#07378c;">上海交通大学…</td></tr><tr><td><div align="right">上海交大</div></td></tr><tr><td style="text-indent:15px;"><a href="198679-1980000005256.htm">
+根据上海交通大学校历安排，2015年上海交通大学夏季学期起讫时间为20…</a></td></tr></table></div><div class="lesson_click" style="display:none;" id="RightInfo_1980000004657"><table width="290" border="0"><tr><td width="186" rowspan="3"><img src="" width="175" height="118" name="pic"></td><td width="94" style="color:#07378c;">关于上海交通…</td></tr><tr><td><div align="right">上海交大</div></td></tr><tr><td style="text-indent:15px;"><a href="198679-1980000004657.htm">
+各位同学：
+按照安排，上海交通大学夏季学期校外学生报到时间为7月3…</a></td></tr></table></div></div>
+                
+                    <div style="clear: both" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT"></div><div class="news_box" id="vt_198680" style="display:none;" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT"><ul><li style="margin-right: 7px;"><table width="296" border="0" style="margin: 0 auto;" class="news_tab"><tr><td width="183" rowspan="3"><img src="/Upload/Content/634991415661165267_2_43927.jpg" width="174" height="116"></td><td width="103"><span class="news_box_title">模型飞机的设计…</span></td></tr><tr><td><div align="right"><span class="title_name"></span></div></td></tr><tr><td><a href="198680-1980000002866.htm">课程将深入浅出地介绍低速模型飞行涉及到的两维和三维空气动力学知识，…</a></td></tr></table></li><li style="margin-right: 7px;"><table width="296" border="0" style="margin: 0 auto;" class="news_tab"><tr><td width="183" rowspan="3"><img src="/Upload/Content/634991417691215267_2_22656.jpg" width="174" height="116"></td><td width="103"><span class="news_box_title">可持续与能源有…</span></td></tr><tr><td><div align="right"><span class="title_name"></span></div></td></tr><tr><td><a href="198680-1980000002865.htm">能源和排放在全球的制造和服务企业变得越来越重要。在产品设计、制造、…</a></td></tr></table></li><li style="margin-right: 7px;"><table width="296" border="0" style="margin: 0 auto;" class="news_tab"><tr><td width="183" rowspan="3"><img src="/Upload/Content/634991421429475267_2_22844.jpg" width="174" height="116"></td><td width="103"><span class="news_box_title">系统仿真System…</span></td></tr><tr><td><div align="right"><span class="title_name"></span></div></td></tr><tr><td><a href="198680-1980000002864.htm">该课程包括讲课、实验和3次大作业。课程主要包括特定环境下的仿真建模…</a></td></tr></table></li></ul></div>
+                
+                    <div style="clear:both" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT"></div><div class="news_box" id="vt_1980662" style="display:none;" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:GoodoNS="urn:WT"><div class="YQ_link"><table width="929" border="0" cellspacing="0" cellpadding="0"><tr><td width="192" height="32"><a href="http://summer.pku.edu.cn" target="_blank" title="北京大学暑期学校">北京大学暑期学校</a></td><td width="192" height="32"><a href="http://www.sjtu.edu.cn" target="_blank" title="上海交通大学">上海交通大学</a></td></tr></table></div></div>
+                
+        </div>
+        <!--lesson end-->
+        <div style="clear: both"></div><div id="line"></div><div id="foot"><p style="text-align:center;display:none;">
+			上海交通大学教务处<span>|</span>沪交ICP备05160<span>|</span> 联系我们<span>|</span>访问量<span id="SiteCounter"></span></p><p style="text-align:center;">
+			上海交通大学 Shanghai Jiao Tong University
+		</p><p style="text-align:center;">
+			Copyright @ Shanghai Jiao Tong University .,All Right Reserved.
+		</p></div><script language="javascript" type="text/javascript">
+		
+    GetCount('1');
+    function GetCount(oValue)
+    {
+        var oXml = new ActiveXObject("Microsoft.XMLDOM");
+        oXml.async = false;
+        oXml.loadXML("<Goodo AddValue='"+oValue+"'></Goodo>");
+            
+        var oXMLHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+        oXMLHTTP.open("POST", "../../../SiteCounter/wsSiteCounter.asmx/CountGet", false);
+        oXMLHTTP.send(oXml);
+	   // alert(oXMLHTTP.responseText);
+    	
+        oXml.async = false;
+        oXml.loadXML(oXMLHTTP.responseText)
+       
+        var Count=new Number(1);
+        if(oXml.documentElement!=null&&isNaN(oXml.documentElement.text)==false)
+        {
+            Count=oXml.documentElement.text;
+        }
+		SiteCounter.innerHTML=Count;
+    }
+	
+	</script>
+    </div>
+    <!--pageBody end-->
+    <!--index end-->
+</body>
+</html>
+
+<script type="text/javascript">
+$(function () {
+	$('#slider div.changeDiv').soChange({
+                slideTime:1000,//平滑过渡时间，默认为1000ms，为0或负值时，忽略changeType方式，切换效果为直接显示隐藏
+				autoChange:true,//是否自动切换，默认为true
+				overStop:true,//鼠标经过切换对象时，是否停止切换，并于鼠标离开后重启自动切换，前提是已开启自动切换
+				changeTime:3000//自动切换时间
+
+	});
+	});
+</script>
+

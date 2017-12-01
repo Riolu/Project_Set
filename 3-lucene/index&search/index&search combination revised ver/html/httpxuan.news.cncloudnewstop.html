@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>网眼新华-新时空-新华网</title>
+	<meta name="keywords" content="炫空间,新华网,新闻,交友,博客,微博,相册,视频,网眼" />
+<meta name="description" content="炫空间网眼新华，提供免打扰的纯净阅读环境，带来专注的沉浸式阅读体验，在同一页面上即能查看所有新闻，无需辗转于不同页面。" />
+
+
+	<!-- ua过滤，暂时由前端处理，之后由服务器来处理-->
+	<script src="http://tmisc.home.news.cn/cloudnews/res/dest/common/useragents-min.js"></script>
+	<script>
+		var Browsers = new UserAgents(navigator.userAgent),
+			browserName = Browsers.browser.name ? Browsers.browser.name : '',
+			browserVersionMajor = Browsers.browser.version ? Browsers.browser.version.major : '';
+			
+		if(browserName == 'Internet Explorer' && (browserVersionMajor == '6' || browserVersionMajor == '7')){
+			 top.location.href = 'http://tmisc.home.news.cn/cloudnews/res/template/browser-tip.html';
+		}
+	</script>
+	
+	<link href="http://tmisc.home.news.cn/cloudnews/res/dest/common/reset-min.css" rel="stylesheet" type="text/css" />
+	<link href="http://tmisc.home.news.cn/cloudnews/res/gallery/highslide/highslide.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="http://tmisc.home.news.cn/cloudnews/res/dest/news-more/news-top-min.css" />
+<script type="text/javascript" src="http://tmisc.home.news.cn/cloudnews/res/dest/news-more/top-min.js"></script>
+	<script src="http://tmisc.home.news.cn/cloudnews/res/gallery/highslide/highslide.js"></script>
+	<script src="http://tmisc.home.news.cn/cloudnews/res/gallery/jquery/1.9.1/jquery-min.js"></script>
+	<script src="http://tmisc.home.news.cn/cloudnews/res/build/seed-min.js"></script>
+	<script src="http://tmisc.home.news.cn/cloudnews/res/config.js"></script>
+</head>
+<body data-page="top-eye">
+	<div class="top">
+		<div class="top-body">
+			<div class="top-body-content">
+				<a class="top-logo" href="http://xuan.news.cn/">炫空间</a>
+				<ul class="top-link">
+					<li class="top-link-item top-app"><a href="http://app.news.cn/" target="_blank">客户端</a></li>
+					<li class="top-link-item top-weixin"><a href="javascript:void(0);">新华炫<span class="code-img"></span></a></li>
+					<li class="top-link-item top-space"><a href="http://my.xuan.news.cn/" target="_blank">炫体验</a></li>
+				</ul>
+				<ul class="top-nav">
+					<li class="top-nav-item top-index"><a href="http://xuan.news.cn/">首页</a></li>
+					<li class="top-nav-item top-news">
+						<a href="http://xuan.news.cn/news/index.html">新闻</a>
+						<div class="top-nav-sub-block sub-news">
+							<div class="top-nav-sub-shadow"></div>
+							<ul class="top-nav-sub">
+								<li class="top-nav-sub-item top-sub-news"><a href="http://xuan.news.cn/news/index.html">新闻</a></li>
+								<li class="top-nav-sub-item top-sub-photo"><a href="http://xuan.news.cn/news/news-photo.html">图集</a></li>
+								<li class="top-nav-sub-item top-sub-video"><a href="http://xuan.news.cn/news/news-video.html">视频</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="top-nav-item top-interaction">
+						<a href="http://xuan.news.cn/hd/index.html">互动</a>
+						<div class="top-nav-sub-block sub-interaction">
+							<div class="top-nav-sub-shadow"></div>
+							<ul class="top-nav-sub">
+								<li class="top-nav-sub-item top-sub-debate"><a href="http://xuan.news.cn/hd/index.html">辩论</a></li>
+								<li class="top-nav-sub-item top-sub-vote"><a href="http://xuan.news.cn/hd/vote.html">投票</a></li>
+								<li class="top-nav-sub-item top-sub-investigate"><a href="http://xuan.news.cn/hd/investigate.html">调查</a></li>
+								<li class="top-nav-sub-item top-sub-topic"><a href="http://xuan.news.cn/hd/topic.html">话题</a></li>
+								<li class="top-nav-sub-item top-sub-interlocution"><a href="http://xuan.news.cn/hd/interlocution.html">问答</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="top-nav-item top-newpasce"><a href="http://xuan.news.cn/newspace/index.html">时空</a></li>
+					<li class="top-nav-item top-eye"><a href="http://xuan.news.cn/cloudnews/top.html">网眼</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="top-shadow"></div>
+	</div>
+<div class="wrap" id="wrap">
+	<!-- <div class="header" id="header" channelId="" siteId=""></div> -->
+	<div class="container" id="container">
+		<div class="c_left" id="c_left">
+			<div class="logo"></div>
+			<div class="time_selector">
+				<div class="time_years" top="0" id="time_years"></div>
+			</div>
+		</div>
+		<div class="c_right clearfix" id="c_right"></div>
+		<div class="black_cover" id="black_cover" style="display: none;"></div>
+	</div>
+	<div class="footer" id="footer"></div>
+</div>
+<div class="loading" id="loading" style="display: none;"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/headline-news/loading.gif" /></div>
+<script>
+//对于头条中的图片进行处理
+$(function(){
+	$('#c_right').delegate('.news_img_wrap a', 'click', function(){
+		hs.graphicsDir = 'http://tmisc.home.news.cn/cloudnews/res/gallery/highslide/graphics/';
+		hs.wrapperClassName = 'wide-border';
+			
+		hs.expand(this);
+		return false;
+	});
+});
+
+
+KISSY.use('event, headline-news/main',function(S, Event, HeadlineNews){
+	new HeadlineNews().init();
+});
+</script>
+<script type="text/javascript" src="http://da.xuan.news.cn/js/config/global-cfg.js"></script>
+<script type="text/javascript" charset="utf-8">    
+
+
+window._xh_st_global_obj.location="-";
+
+window._xh_st_global_obj.cfg_1={        
+        ck:"",     
+        et:"", 
+        cb:"cloudnews",
+        wt:"1", 
+        at:"xz",
+        pt:"1", 
+        ce:"1", 
+        ct:"",  
+        th:"",  
+        st:"1",  
+        ni:"cloudnews",    
+        cf:"",      
+        xzn:"kan",    
+    ext:function(){}
+
+
+};  
+
+
+</script>     
+<script type="text/javascript" src="http://da.xuan.news.cn/js/fetch/st-main.js?st-cfg=config/xz-config&st-v=combine-st/combine-st" id="st-main"></script>
+<div style="display:none">
+   <div id="fwl">010070220010000000000000011200000000000000</div>
+   <script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script>
+   <script type="text/javascript">wd_paramtracker("_wdxid=010070220010000000000000011200000000000000")</script>
+   <noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010070220010000000000000011200000000000000" border="0" /></noscript>
+</div>
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="filetype" content="1">
+<meta name="publishedtype" content="1">
+<meta name="pagetype" content="2">
+<meta name="catalogs" content="64114">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>中国共产党新闻网</title>
+<link href="/img/2006cpc/zl/page.css" rel="stylesheet" type="text/css">
+<script src="/css/2006cpc/menu_left.js"></script>
+<script language="JavaScript">
+//加到频道的脚本
+function FieldSearchFormTwo_onsubmit(){
+	var SQLTitle="";
+	if(document.FieldSearchFormTwo.Content.value!=""){
+		var oldStr=document.FieldSearchFormTwo.Content.value;
+		 var searchStr=searchWordPro(oldStr);
+			 SQLTitle="("+"正文=("+ searchStr + ") or "+"标题=("+searchStr+ ") or "+"作者=("+searchStr  + "))";
+			SQLTitle=searchStr;
+			document.FieldSearchFormTwo.searchword.value=SQLTitle;
+			return true;
+	}else
+	{
+	alert("检索表达式不允许为空！");
+	return false;
+	}
+}
+function searchWordPro(vsearchWord){
+	var tempStr="";
+	var isSpace=false;
+	vsearchWord=alltrim(vsearchWord);
+	var word_array =vsearchWord.split(" ");
+	if(word_array.length<2) return vsearchWord;
+	for (loop=0; loop < word_array.length;loop++)
+	{
+		if((alltrim(word_array[loop]).toLowerCase()=="or") ||(alltrim(word_array[loop]).toLowerCase()=="and")){
+			return vsearchWord;
+		}else{
+			if(loop==0)
+				tempStr=word_array[loop];
+			else{
+				if(alltrim(word_array[loop])!="")
+					tempStr=tempStr+" and "+word_array[loop];
+				}
+		}
+	}
+	return tempStr;
+}
+function alltrim(a_strVarContent) 
+{ 
+var pos1, pos2, newstring; 
+pos1 = 0; 
+pos2 = 0; 
+newstring = "" 
+if ( a_strVarContent.length > 0 ) 
+{ 
+for( i=0; i<a_strVarContent.length; i++) 
+{ 
+if ( a_strVarContent.charAt(i) == " " ) 
+pos1 = pos1 + 1; 
+else 
+break; 
+} 
+for( i=a_strVarContent.length-1; i>=0 ; i--) 
+{ 
+if ( a_strVarContent.charAt(i) == " " ) 
+pos2 = pos2 + 1; 
+else 
+break; 
+} 
+newstring = a_strVarContent.substring(pos1, a_strVarContent.length-pos2) 
+} 
+return newstring; 
+} 
+
+</script>
+</head>
+<style>
+.nav{
+    color:#CC6666;
+}
+.nav a:link,.nav a:visited,.nav a:hover{
+   color:#CC0000;
+   font-weight:bold;
+   padding:0 4px;
+}
+</style>
+<body leftmargin="0" topmargin="0" style="background:url(/img/2006cpc/bbg_b.gif) repeat-y center;">
+
+<table width="1003" class="m0" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="213"><a href="http://cpc.people.com.cn"><img src="/img/2007cpc_wenben/iamges/wbc/wbc_01.jpg" width="213" height="88" border="0" /></a></td>
+    <td background="/img/2007cpc_wenben/iamges/wbc/wbc_02.jpg"><table width="100%" border="0" cellspacing="3" cellpadding="0">
+      <tr>
+        <td height="20" class="nav"><a href='http://cpc.people.com.cn/GB/64093/64094/index.html' target='_blank'>高层动态</a>|<a href='http://cpc.people.com.cn/GB/64093/117005/index.html' target='_blank'>领导活动</a>|<a href='http://cpc.people.com.cn/GB/64093/64102/index.html' target='_blank'>干部论坛</a>|<a href='http://cpc.people.com.cn/GB/64093/64104/index.html' target='_blank'>时代先锋</a>|<a href='http://cpc.people.com.cn/GB/64107/index.html' target='_blank'>各项工作</a>|<a href='http://dangjian.people.com.cn/' target='_blank'>党建</a>|<a href='http://fanfu.people.com.cn' target='_blank'>反腐</a>|<a target="_blank" href="http://renshi.people.com.cn/">人事</a>|<a target="_blank" href="http://renshi.people.com.cn/GB/139627/index.html">公告</a>|<a href='http://cpc.people.com.cn/GB/64093/219372/index.html' target='_blank'>海外</a>|<a href='http://cpc.people.com.cn/GB/64093/64095/index.html' target='_blank'>外媒</a>|<a href='http://cpc.people.com.cn/GB/64093/64387/index.html' target='_blank'>综合</a>|<a href='http://cpc.people.com.cn/GB/64093/87393/index.html' target='_blank'><font color='#000000'>讣告</font></a></td>
+      </tr><tr>
+        <td height="20" class="nav"><a href='http://theory.people.com.cn/' target='_blank'>理论</a>|<a href='http://cpc.people.com.cn/pinglun/' target='_blank'>评论</a>|<a href='http://71.people.com.cn/' target='_blank'>社区</a>|<a href='http://71bbs.people.com.cn/boardList.do?action=postList&boardId=14' target='_blank'>论坛</a>|<a href='http://cpc.people.com.cn/GB/66888/index.html' target='_blank'>访谈</a>|<a href='http://cpc.people.com.cn/shipin/' target='_blank'>视听</a>|<a href='http://dangshi.people.com.cn' target='_blank'>党史</a>|<a href='http://cpc.people.com.cn/GB/64162/index.html' target='_blank'>资料</a>|<a href='http://cpc.people.com.cn/GB/64184/64186/index.html' target='_blank'>文献</a>|<a href='http://cpc.people.com.cn/GB/69112/index.html' target='_blank'>纪念馆</a>|<a href='http://cpc.people.com.cn/GB/64162/64165/88453/index.html' target='_blank'>党史今天</a>|<a href='http://cpc.people.com.cn/GB/67481/index.html' target='_blank'>专题</a>|<a href='http://cpc.people.com.cn/GB/64093/67206/index.html' target='_blank'>周刊</a>|<a href='http://cpc.people.com.cn/GB/347922/349414/index.html' target='_blank'>图书</a>|<a href='http://cpc.people.com.cn/GB/68742/index.html' target='_blank'>杂志</a></td>
+      </tr>
+      <tr>
+        <td align="center"><img src="/img/2007cpc_wenben/iamges/wbc/wbc_05.jpg" alt=" " width="471" height="25" border="0" usemap="#Map" /></td>
+      </tr>
+    </table></td>
+    <td width="140"><a href="http://www.people.com.cn"><img src="/img/2007cpc_wenben/iamges/wbc/wbc_04.jpg" alt=" " width="140" height="88" border="0" /></a></td>
+  </tr>
+</table>
+<table width="1003" class="m0"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="top"><table width="784" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="7"><img src="/img/2006cpc/2j/2j_a2_01.gif" width="7" height="30"></td>
+          <td valign="bottom" background="/img/2006cpc/2j/2j_a2_02.gif"><table width="100%"  border="0" cellspacing="5" cellpadding="0" class="table2jred2">
+            <tr>
+              <td width="50%"><strong><a href="http://cpc.people.com.cn/">中国共产党新闻</a> &gt;&gt; <a href="http://cpc.people.com.cn/GB/64114/index.html">中共中央直属机构</a></strong></td>
+              <td width="50%">&nbsp;</td>
+            </tr>
+          </table>          </td>
+          <td width="7"><img src="/img/2006cpc/2j/2j_a2_03.gif" width="7" height="30"></td>
+        </tr>
+    </table>
+      <table width="784" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td bgcolor="#FFFFFF" style="border-left:#7B7B7B 1px solid; border-right:#7B7B7B 1px solid ">           <head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>新建网页 12</title>
+</head>
+
+<html>
+
+<body>
+
+<div align="center">
+	<br>
+　<table width=709 borderColor="#ff9900" cellSpacing="4" cellPadding="4" border="3" id="table1" style="border-bottom-style: solid; border-top-width: 1px;border-bottom-width: 0px; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 1px">
+
+    <tr><td colspan="3" height="48">    
+		<p align="center"><b><font face="宋体" size="5" color="#000080">党中央部门机构</font></b></td></tr>
+
+    <tr><td width=333>    <font face="宋体" size="4">中央纪律检查委员会机关<br>
+		</font><font face="宋体">（监察部与其合署办公）</font></td>
+		<td witdth=200 width="226">
+		<font face="宋体" size="4">书记： 
+		<a target="_blank" href="http://cpc.people.com.cn/GB/64192/106049/index.html">		  
+		<span style="text-decoration: none">王岐山</span></font></td>
+		<td width=100 align="center">
+
+      <font face="宋体" size="4">
+
+       <a target="_blank" href="http://fanfu.people.com.cn/">
+		<span style="text-decoration: none">相关报道</span></font></td></tr>
+
+    <tr><td width=333>    <font face="宋体" size="4">中央办公厅</font></td>
+		<td witdth=200 width="226">
+		<font face="宋体" size="4">主任： 
+		  
+		<a target="_blank" href="http://cpc.people.com.cn/GB/64192/351807/index.html">
+		<span style="text-decoration: none">栗战书</span></a></font></td>
+		<td width=100 align="center">
+</td></tr>
+
+    <tr><td width=333 height="21">    <font face="宋体" size="4">中央组织部</font></td>
+		<td witdth=200 height="21" width="226"><font face="宋体" size="4">部长： 
+		 <a target="_blank" href="http://cpc.people.com.cn/GB/64192/351805/index.html">
+		<span style="text-decoration: none">赵乐际</span></a></font></td>
+		<td width=100 height="21" align="center">
+
+      <font face="宋体" size="4">
+		<a target="_blank" href="http://renshi.people.com.cn/GB/139620/index.html">
+		<span style="text-decoration: none">相关报道</span></a></font></td></tr>
+
+    <tr><td>    <font face="宋体" size="4">中央宣传部<br>
+		</font>    <font face="宋体">（中央精神文明建设指导委员会办公室设在中央宣传部，由中央宣传部代管）</font></td><td width="226">
+		<font face="宋体" size="4">部长： <a target="_blank" href="http://cpc.people.com.cn/GB/64192/351797/index.html">
+		<span style="text-decoration: none">刘奇葆</span></a></font></td>
+		<td align="center">
+
+       <font face="宋体" size="4">
+		<a target="_blank" href="http://www.wenming.cn/">
+		<span style="text-decoration: none">相关报道</span></a></font></td></tr>
+
+    <tr>
+    <td><font face="宋体" size="4">
+	<span style="text-decoration: none">中央统战部</span></font></td>
+    <td width="226"><font face="宋体" size="4">部长： 
+	 <a target="_blank" href="http://cpc.people.com.cn/GB/64242/175403/10480780.html">
+	<span style="text-decoration: none">孙春兰</span></a></font></td>
+	<td align="center">
+
+       <font face="宋体" size="4">
+		<a target="_blank" href="http://tyzx.people.cn/">
+		<span style="text-decoration: none">相关报道</span></a></font></td></tr>
+
+    <tr>
+    <td><font face="宋体" size="4">
+	<span style="text-decoration: none">中央对外联络部</span></font></td>
+    <td width="226"><font face="宋体" size="4">部长： <a target="_blank" href="http://cpc.people.com.cn/GB/64114/74938/74939/6127890.html">
+	<span style="text-decoration: none">王家瑞</span></a></font></td>
+	<td align="center">
+
+       <font face="宋体" size="4">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/64107/64112/index.html">
+		<span style="text-decoration: none">相关报道</span></a></font></td></tr>
+
+    <tr><td><font face="宋体" size="4">中央政法委员会机关<br>
+		</font><font face="宋体">（中央社会治安综合治理委员会办公室）</font></td><td width="226">
+		<font face="宋体" size="4">书记：   
+		<a target="_blank" href="http://cpc.people.com.cn/GB/64192/351804/index.html"><span style="text-decoration: none">孟建柱</span></font></td>
+		<td align="center"><font face="宋体" size="4">
+		<a target="_blank" href="http://www.chinapeace.gov.cn/">
+		<span style="text-decoration: none">相关报道</span></a></font>
+
+</td></tr>
+
+    <tr><td><font face="宋体" size="4">中央政策研究室</font></td>
+    <td width="226"><font face="宋体" size="4">主任：   
+		 <a target="_blank" href="http://cpc.people.com.cn/GB/64192/106129/index.html">
+	<span style="text-decoration: none">王沪宁</a></font></td>
+    <td align="center">  　</td></tr>
+
+    <tr><td><font face="宋体" size="4">中央台湾工作办公室<br>
+		</font><font face="宋体">（国务院台湾事务办公室）</font></td>
+    <td width="226"><font face="宋体" size="4">主任：  
+		 <a target="_blank" href="http://renshi.people.com.cn/n/2013/0318/c139617-20819104.html">
+	<span style="text-decoration: none">张志军</span></a></font></td>
+    <td align="center"><font face="宋体" size="4">
+		<a target="_blank" href="http://www.gwytb.gov.cn/">
+		<span style="text-decoration: none">相关报道</span></a></font></td></tr>
+
+    <tr>
+		<td><font size="4">中央财经领导小组办公室</font></td><td width="226">
+		<font size="4">主任： 刘　鹤</font></td>
+		<td align="center">
+		 　</td>
+	</tr>
+
+	<tr>
+		<td><font face="宋体" size="4">中央外事工作领导小组办公室</font></td><td width="226">
+		<font face="宋体" size="4">主任：  
+		 <a target="_blank" href="http://gbzl.people.com.cn/grzy.php?id=121001413">
+		<span style="text-decoration: none">杨洁篪</span></a></font></td>
+		<td align="center">
+		 　</td>
+	</tr>
+
+    <tr><td><font face="宋体" size="4">
+中央机构编制委员会办公室</font></td>
+    <td width="226"><font face="宋体" size="4">主任： 张纪南</font></td>
+    <td align="center"><font face="宋体" size="4">
+		<a target="_blank" href="http://www.scopsr.gov.cn/">
+		<span style="text-decoration: none">相关报道</span></a></font></td></tr>
+
+    <tr>
+			<td width="330"><font face="宋体" size="4">
+中央直属机关工作委员会</font></td>
+    <td width="224"><font face="宋体" size="4">书记： 
+	 <a target="_blank" href="http://cpc.people.com.cn/GB/64192/351807/index.html">
+	<span style="text-decoration: none">栗战书</span></a></font></td>
+    <td align="center" width="99">  <font face="宋体" size="4">  <a target="_blank" href="http://www.zzdjw.com/">
+	<span style="text-decoration: none">相关报道</span></a></font></td>
+	</tr>
+	<tr>
+		<td width="330"><font face="宋体" size="4">
+		<span style="text-decoration: none">中央国家机关工作委员会</span></font></td>
+    <td width="224"><font face="宋体" size="4">书记：   
+	<a  target="_blank" href="http://cpc.people.com.cn/GB/64192/352061/index.html">
+	<span style="text-decoration: none">杨　晶</font></td>
+    <td align="center" width="99">  <font face="宋体" size="4">
+	<a target="_blank" href="http://www.zgg.org.cn/">
+	<span style="text-decoration: none">相关报道</span></a></font></td>
+		</tr>
+
+    </table></div>
+
+</body>
+
+</html>
+<div align="center">
+<table width=709 borderColor="#ff9900" cellSpacing="4" cellPadding="4" border="3" id="table1" style="border-bottom-style: solid; border-top-width: 0px;border-bottom-width: 3px; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 1px">
+
+    	<tr>
+    <td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px" colspan="3" height="46">
+	<p align="center"><font face="宋体" color="#000080" size="5"><b>党中央直属事业单位</b></font></td>
+	</tr>
+
+    	<tr>
+    <td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
+	<font face="宋体" size="4">
+	<span style="text-decoration: none">中央党校</span></font></td>
+    <td width="224" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><font face="宋体" size="4">校长：   
+	<span style="text-decoration: none">
+	<a target="_blank" href="http://cpc.people.com.cn/GB/64192/64230/index.html">刘云山</a></span></font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><font face="宋体" size="4">
+	<a target="_blank" href="http://www.ccps.gov.cn/">
+	<span style="text-decoration: none">相关报道</span></a></font></td>
+	</tr>
+
+    	<tr>
+		<td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
+		<font face="宋体" size="4">
+		中央文献研究室</font></td>
+    <td width="224" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><font face="宋体" size="4">主任： 
+	 <span style="text-decoration: none">冷　溶</span></font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">  <font face="宋体" size="4">
+	<a target="_blank" href="http://www.wxyjs.org.cn/">
+	<span style="text-decoration: none">相关报道</span></a></font></td>
+		</tr>
+
+    <tr><td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
+		<font face="宋体" size="4">
+		中央党史研究室</font></td>
+    <td width="224" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
+	<font size="4" face="宋体">主任： 曲青山</font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">  
+	<font size="4"><a target="_blank" href="http://www.zgdsw.org.cn/">相关报道</a></font></td></tr>
+
+    <tr><td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
+		<font face="宋体" size="4">
+			中央编译局</font></td>
+    <td width="224" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
+	<font size="4" face="宋体">局长： 贾高建</font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">  
+	<font size="4">
+	<a target="_blank" href="http://www.cctb.net/">相关报道</a></font></td></tr>
+
+    <tr><td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
+		<font face="宋体" size="4">
+		<span style="text-decoration: none">人民日报社 
+		</span></font></td>
+    <td width="224" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><font face="宋体" size="4">社长： 
+	 <span style="text-decoration: none">杨振武</span></font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">  <font face="宋体" size="4">
+	 <a target="_blank" href="http://www.people.com.cn/GB/50142/104580/index.html">
+	<span style="text-decoration: none">相关报道</span></a></font></td></tr>
+
+    <tr>
+		<td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
+		<font face="宋体" size="4">
+		
+		<span style="text-decoration: none">求是杂志社</span></font></td>
+    <td width="224" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px"><font face="宋体" size="4">社长： 
+	 <span style="text-decoration: none">李　捷</span></font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">  <font face="宋体" size="4">
+	 <a target="_blank" href="http://theory.people.com.cn/GB/82288/83845/index.html">
+	<span style="text-decoration: none">相关报道</span></a></font></td>
+	</tr>
+		<tr>
+<td style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">
+		<font face="宋体" size="4"><span style="text-decoration: none">光明日报社</span></font></td>
+    	<td width="224"><font face="宋体" size="4">总编辑：何东平</font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">  <font face="宋体" size="4">
+	 <a target="_blank" href="http://www.gmw.cn/">
+	<span style="text-decoration: none">相关报道</span></a></font></td>
+    	</tr>
+	<tr>
+    <td><font face="宋体" size="4">中国浦东干部学院</font></td>
+    <td width="224"><font face="宋体" size="4">院长：  
+		 <a target="_blank" href="http://cpc.people.com.cn/GB/64192/351805/index.html">
+		<span style="text-decoration: none">赵乐际</span></a></font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">  <font face="宋体" size="4">
+	 <a target="_blank" href="http://www.celap.org.cn/">
+	<span style="text-decoration: none">相关报道</span></a></font></td>
+	</tr>
+		<tr>
+		<td width="330"><font face="宋体" size="4">中国井冈山干部学院</font></td>
+    	<td width="224"><font face="宋体" size="4">院长： 
+		 <a target="_blank" href="http://cpc.people.com.cn/GB/64192/351805/index.html">
+		<span style="text-decoration: none">赵乐际</span></a></font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">  <font face="宋体" size="4">
+	 <a target="_blank" href="http://www.celaj.gov.cn/">
+	<span style="text-decoration: none">相关报道</span></a></font></td>
+    	</tr>
+	<tr>
+		<td height="29"><font face="宋体" size="4">中国延安干部学院</font></td>
+    <td width="224" height="29"><font face="宋体" size="4">院长：  
+	 	 <a target="_blank" href="http://cpc.people.com.cn/GB/64192/351805/index.html">
+		<span style="text-decoration: none">赵乐际</span></a></font></td>
+    <td align="center" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px">  <font face="宋体" size="4">
+	 <a target="_blank" href="http://www.celay.org.cn/">
+	<span style="text-decoration: none">相关报道</span></a></font></td>
+		</tr>
+	
+    </table>
+</div>
+            </td>
+        </tr>
+      </table></td>
+    <td width="201" align="left" valign="top">      
+        <table width="195" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td background="/img/2006cpc/p2/zz_c_01_2.jpg"><img src="/img/2006cpc/2j/ddd_01.jpg" width="195" height="19" hspace="0" vspace="0"></td>
+        </tr>
+        <tr>
+          <td background="/img/2006cpc/p2/zz_c_01_2.jpg"><table width="96%"  border="0" cellspacing="0" cellpadding="0" >
+              <tr>
+                <td width="20"><img src="/img/2006cpc/p2/zz_c_01_a.jpg" width="9" height="3" hspace="4" align="absmiddle"></td>
+                <td width="64" ><a target="_blank" href="http://cpc.people.com.cn/GB/68742/index.html" class="a14red">期刊杂志</a></td>
+                <td height="17" background="/img/2006cpc/p2/zz_c_01_c.jpg">&nbsp;</td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td align="center" background="/img/2006cpc/p2/zz_c_01_2.jpg"><table width="166" height="112" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="8"></td>
+              </tr><tr>
+              <td><table border="1" width="100%" style="border-collapse: collapse">
+	<tr>
+		<td align="center" height="21">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/69115/index.html">党的文献</a></td>
+		<td height="21" align="center">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/69158/index.html">中共党史研究</a></td>
+	</tr>
+	<tr>
+		<td height="21" align="center">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/112510/index.html">百年潮</a></td>
+		<td align="center">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/106364/index.html">世纪风采</a></td>
+	</tr>
+	<tr>
+		<td align="center" height="22">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/137068/index.html">红岩春秋</a></td>
+		<td align="center" height="22">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/69118/index.html">党史博览</a></td>
+	</tr>
+	<tr>
+		<td align="center" height="22">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/97910/index.html">党史文苑</a></td>
+		<td align="center" height="22">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/70427/index.html">党史纵览</a></td>
+	</tr>
+	<tr>
+		<td align="center" height="22">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/77130/index.html">湘潮</a></td>
+		<td align="center" height="22">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/68742/84762/index.html">北京党史</a></td>
+	</tr>
+</table><br>
+</td>
+            </tr></td>
+              </tr>              
+          </table></td>
+        </tr>
+      </table>      
+            
+      <table width="195" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td background="/img/2006cpc/p2/zz_c_01_2.jpg"><table width="96%"  border="0" cellspacing="0" cellpadding="0" >
+            <tr>
+              <td width="20"><img src="/img/2006cpc/p2/zz_c_01_a.jpg" width="9" height="3" hspace="4" align="absmiddle"></td>
+              <td width="82"  ><a target="_blank" href="http://dangshi.people.com.cn/" class="a14red">最新推荐</a></td>
+              <td width="85" height="17" background="/img/2006cpc/p2/zz_c_01_c.jpg">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+        <td align="center" background="/img/2006cpc/p2/zz_c_01_2.jpg"><table width="100%" height="6"  border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td></td>
+          </tr>
+        </table>              
+    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table5b"><tr>
+                  <td height="22"><table border="1" width="100%" style="border-collapse: collapse">
+	<tr>
+		<td align="center">
+		<a target="_blank" href="http://dangshi.people.com.cn/GB/151935/196989/index.html">2010年全国党史工作会议</a></td>
+	</tr>
+	<tr>
+		<td align="center">
+		<a target="_blank" href="http://dangshi.people.com.cn/GB/170835/index.html">开国上将纪念馆</a></td>
+	</tr>
+	<tr>
+		<td align="center">
+		<a target="_blank" href="http://cpc.people.com.cn/GB/64184/64186/index.html">经典著作：领导人文集</a></td>
+	</tr>
+	<tr>
+		<td align="center">
+		<a target="_blank" href="http://dangshi.people.com.cn/GB/173577/11928801.html">历届党代会党章修改变迁</a></td>
+	</tr>
+	<tr>
+		<td align="center">
+		<a target="_blank" href="http://dangshi.people.com.cn/GB/144964/index.html">革命先辈网上纪念馆</a></td>
+	</tr>
+	<tr>
+		<td align="center">
+		<a target="_blank" href="http://dangshi.people.com.cn/GB/145920/8816698.html">共和国脚步——1949年档案</a></td>
+	</tr>
+	<tr>
+		<td align="center">
+		<a target="_blank" href="http://dangshi.people.com.cn/GB/151935/151936/index.html">五四运动九十周年</a></td>
+	</tr>
+	</table></td>
+                </tr><tr>
+                  <td>&nbsp;</td>
+                </tr>
+            </table></td>
+        </tr>
+      </table>      
+      
+      <table width="195" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td background="/img/2006cpc/p2/zz_c_01_2.jpg"><table width="96%"  border="0" cellspacing="0" cellpadding="0" >
+            <tr>
+              <td width="20"><img src="/img/2006cpc/p2/zz_c_01_a.jpg" width="9" height="3" hspace="4" align="absmiddle"></td>
+              <td width="82"  ><a target="_blank" href="/GB/64162/64168/index.html" class="a14red">历次党代会</a></td>
+              <td width="85" height="17" background="/img/2006cpc/p2/zz_c_01_c.jpg">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+        <td align="center" background="/img/2006cpc/p2/zz_c_01_2.jpg"><table width="100%" height="6"  border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td></td>
+          </tr>
+        </table>              
+    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table5b"><tr>
+                  <td height="22"><a href='/GB/64162/64168/index.html' target='_blank'>中共一大　1921年7月23日至31日<br><br>中共二大　1922年7月16日至23日<br><br>中共三大　1923年6月12日至20日<br><br>中共四大　1925年1月11日至22日<br></a><br>……</td>
+                </tr><tr>
+                  <td>&nbsp;</td>
+                </tr>
+            </table></td>
+        </tr>
+      </table>      
+      <table width="195" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td background="/img/2006cpc/p2/zz_c_01_2.jpg"><table width="96%"  border="0" cellspacing="0" cellpadding="0" >
+            <tr>
+              <td width="20"><img src="/img/2006cpc/p2/zz_c_01_a.jpg" width="9" height="3" hspace="4" align="absmiddle"></td>
+              <td width="82"><a class="a14red" target="_blank"><font color=#e10000 size=3><b><a href="http://cpc.people.com.cn/GB/69112/index.html" class="a14red">纪念馆</a></b></font></a></td>
+              <td width="85" height="17" background="/img/2006cpc/p2/zz_c_01_c.jpg">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+        <td align="center" background="/img/2006cpc/p2/zz_c_01_2.jpg"><table width="100%" height="6"  border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td></td>
+          </tr>
+        </table>              
+    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table5b"><tr>
+                  <td height="22"><table width="98%" border="0" cellspacing="4" cellpadding="4">
+                         <tr>
+                            <td align="center"><a href="http://cpc.people.com.cn/GB/69112/70190/index.html" target=_blank><img src="/mediafile/200905/19/F200905191615352359218572.jpg" width="65" height=43 vspace="4" border="1" class="imgb" alt="党旗"></a>
+</td>
+                            <td align="center"><a href="http://cpc.people.com.cn/GB/69112/75843/index.html" target=_blank><img src="/mediafile/200905/19/F200905191616572354414461.jpg" width="65" height=43 vspace="4" border="1" class="imgb" alt="党徽"></a>
+</td></tr>
+<tr>
+                            <td align="center">毛泽东纪念馆</td>
+                            <td align="center">周恩来纪念馆</td></tr>
+<tr>
+                            <td align="center"><a href="http://cpc.people.com.cn/GB/69112/73583/index.html" target=_blank><img src="/mediafile/200905/19/F200905191626052293167272.jpg" width="65" height=43 vspace="4" border="1" class="imgb" alt="党章"></a>
+</td>
+                            <td align="center"><a href="http://cpc.people.com.cn/GB/69112/73585/index.html" target=_blank><img src="/mediafile/200905/19/F200905191627103217080382.jpg" width="65" height=43 vspace="4" border="1" class="imgb" alt="入党誓词"></a>
+</td></tr>
+<tr>
+                            <td align="center">刘少奇纪念馆</td>
+                            <td align="center">朱德纪念馆</td></tr>
+
+                        </table></td>
+                </tr><tr>
+                  <td>&nbsp;</td>
+                </tr>
+            </table></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table>
+<table width="1003" class="m0" style="margin:0 auto;" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" bgcolor="#C40004"><br>
+          <table width="1003" border="0" cellspacing="5" class="table5W">
+              <tr align="center">
+                <td>镜像：<a href="http://www.peopledaily.co.jp/" class=navy target="_blank">日本</a>　 <a href="http://www.peopledaily.edu.cn/" class=navy target="_blank">教育网</a>　 <a href="http://www.peopledaily.ac.cn/" class=navy target="_blank">科技网</a><br>
+           <a href="mailto:cpc@peopledaily.com.cn">E_mail:cpc@peopledaily.com.cn </a> 新闻线索:<a href="mailto:cpc@peopledaily.com.cn">cpc@peopledaily.com.cn</a><br>
+           <br>
+           <a href="http://www.people.com.cn/GB/1018/22259/index.html" target="_blank" class="navy">人民日报社概况</a> | <a href="http://www.people.com.cn/GB/50142/index.html" target="_blank" class="navy">关于人民网</a> | <a href="http://past.people.com.cn/GB/other7018/7025/index.html" class="navy" >招聘英才</a> | <a href="http://www.people.com.cn/GB/1018/index.html" target="_blank" class="navy">帮助中心</a> | <a href="http://www.people.com.cn/GB/51086/index.html" target="_blank" class="navy">广告服务</a> | <a href="http://www.people.com.cn/GB/50142/50462/index.html" target="_blank" class="navy">合作加盟</a> | <a href="http://past.people.com.cn/GB/other7018/7024/index.html" target="_blank" class="navy">网站声明</a> | <a href="http://www.people.com.cn/GB/50142/50459/57871/4064597.html" target="_blank" class="navy">网站律师</a> | <a href="http://www.people.com.cn/GB/50142/50474/index.html" class=navy target="_blank">联系我们</a> | <a href="http://english.peopledaily.com.cn/other/about.shtml" class=navy>ENGLISH</a>　 <a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0102000101300040" target="_blank"><br>
+           <span class="navy">京ICP证000006号</span>|</a> <a href="http://www.people.com.cn/crfiles/wscbxk.html" target="_blank" class="navy">网上传播视听节目许可证（0104065）</a>| <a href="http://www.people.com.cn/crfiles/ad0394.html" target="_blank" class="navy">京朝工商广字第0394号</a></td>
+              </tr>
+        </table></td></tr>
+
+
+
+      <tr>
+        <td align="center" bgcolor="#C40004"><table width="600" border="0" class="table5W">
+            <tr>
+              <td width="70" align="center"> </td>
+              <td width="430" align="center"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0102000101300040" target="_blank"> </a> 人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br>
+            Copyright &copy; 1997-2013 by www.people.com.cn. all rights reserved<br>
+              </td>
+              <td width="86"><font color="#FF0000"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0102000101300040" target="_blank"><img src="/pic/gongshang.gif" width="40" height="48" align="middle" border="0"></a></font></td>
+            </tr>
+        </table>
+          <br></td>
+      </tr>
+    </table>
+<map name="Map" id="Map">
+<area shape="rect" coords="1,1,54,24" href="http://cpc.people.com.cn/"  target="_blank">
+<area shape="rect" coords="62,2,94,24" href="http://cpc.people.com.cn/BIG5/" target="_blank">
+<area shape="rect" coords="102,2,165,24" href="http://tibet.people.com.cn/" target="_blank">
+<area shape="rect" coords="173,2,209,23" href="http://korean.people.com.cn/" target="_blank">
+<area shape="rect" coords="225,1,242,26" href="http://mongol.people.com.cn/" target="_blank">
+<area shape="rect" coords="252,4,307,21" href="http://english.cpc.people.com.cn/" target="_blank">
+<area shape="rect" coords="314,4,354,21" href="http://jpn_cpc.people.com.cn/" target="_blank">
+<area shape="rect" coords="366,2,469,24" href="http://russian.cpc.people.com.cn/" target="_blank">
+</map>
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>

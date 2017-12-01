@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="description" content="" />
+<meta name="keywords" content="<a href='http://cpc.people.com.cn/GB/67481/347421/349620/index.html' target='_blank'>迎接党的十八大</a><a href='http://cpc.people.com.cn/GB/67481/347421/349694/index.html' target='_blank'>十八大代表访谈录</a><a href='http://cpc.people.com.cn/GB/67481/244190/index.html' target='_blank'>科学发展 成就辉煌</a>" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="103050" />
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+<title>对党说句心里话--专题报道--人民网</title>
+<!-- 调用样式表 -->
+<link rel="stylesheet" href="/img/2011dd1xinlihua/page.css" type="text/css" media="all"  />
+<!--[if IE 6]>
+<style type="text/css">
+.p1_left .div03 span em{ margin-left:14px;}
+.p1_left .div03{ border-left:#D60000 2px solid; border-right:#D60000 2px solid; width:605px; background:#fff; padding:10px 15px;}
+.p1_right .div02 ul{ padding:10px 5px;}
+</style>
+<![endif]-->
+<!--[if !IE]><!-->
+<style type="text/css">
+.p1_left .div01 div ul textarea{ margin-left:0px;}
+</style>
+<!--<![endif]-->
+<script language="javascript" type="text/javascript" src="/img/17da/liuyan/bbsarea.js"></script>
+<script language="javascript">
+function submitBbs(formbbs){
+	var baseurl="http://comments.people.com.cn/bbs_new/app/src/main/?action=parse_publish&op=ins&channel_id=64036&nid=";
+	var nid=null;
+	var cont=formbbs.content.value;
+	if(cont==null||cont==""){
+		alert("请输入留言内容");
+		return false;
+	}
+	if(formbbs.bbstype[0].checked){//个人身份
+		nid=formbbs.select5.value;
+		if(nid==null||nid<=0){
+			alert("请选择所在城市");
+			return false;
+		}else{
+			formbbs.action=baseurl+nid;
+			formbbs.yonghuming.value=formbbs.yonghuming1.value;
+			if(formbbs.yonghuming.value=='不署名则默认为匿名发表')formbbs.yonghuming.value="";
+			formbbs.yonghuming1.value="";
+			formbbs.yonghuming2.value="";
+			
+			return true;
+		}
+	}else if(formbbs.bbstype[1].checked){//党组织(单位)身份
+		nid="http://comments.people.com.cn/bbs_new/app/src/main/?action=parse_publish&op=ins&channel_id=64036&bid=9754015";
+		if(formbbs.yonghuming2.value=='请填写党组织名称'||formbbs.yonghuming2.value==''){
+			alert("请填写党组织名称");
+			return false;
+		}else{
+			formbbs.action=nid;
+			formbbs.yonghuming.value=formbbs.yonghuming2.value;
+			return true;
+		}
+	}
+	return false;
+}
+
+function checkBbs(cityselect){
+	var baseurl="http://comments.people.com.cn/bbs_new/app/src/main/?action=list&channel_id=64036&nid=";
+	var baseurl1="http://comments.people.com.cn/bbs_new/app/src/main/?action=list&channel_id=64036&uid=";
+	var nid=null;
+	nid=cityselect.value;
+	if(formbbs.bbstype[1].checked){
+		window.open("http://comments.people.com.cn/bbs_new/app/src/main/?action=list&nid=103731");
+		}
+	else if(nid==null||nid<=0){
+		alert("请选择所在城市");
+		return false;
+	}else{
+		if(cityselect.selectedIndex==0)
+			window.open(baseurl1+nid);
+		else 
+			window.open(baseurl+nid);
+	}
+}
+
+function initSelect(){
+initSelectArea(document.all.formbbs.select4);
+initSelectArea(document.all.selecta);
+initSelectArea(document.all.selectc);
+}
+
+function mail(){
+document.all.mail.href='mailto:'+ document.all.UserName22.value + '?subject=人民网十七大特别报道：对党说句心里话' + '&body=' + 'http://cpc.people.com.cn/GB/67481/103050/';
+}
+function copyToClipBoard(){
+var clipBoardContent="";
+clipBoardContent+=document.title;
+clipBoardContent+="|";
+clipBoardContent+=this.location.href;
+window.clipboardData.setData("Text",clipBoardContent);
+alert("复制成功，您可以将其粘贴到QQ/MSN上的好友啦！");
+}
+</script>
+<script src="/img/2011xinjiangpd/swfobject.js" language="javascript"></script>
+<script language="javascript">
+function postMsg(){
+ if (document.form1.content.value==null || document.form1.content.value=="" ) {
+  alert("发言内容不能为空！");
+  return;
+ }
+  else {
+  document.form1.submit();
+ }
+}
+function renew_parent(form,parent_token)
+{
+ form.pid.value=parent_token;
+}
+function checkboard(){
+	var res = true;
+	if (form1.content.value==null || form1.content.value=="") {
+		alert("发言内容不能为空！");
+		res = false;
+	}
+	return res;
+}
+</script>
+</head>
+
+<body onload="initSelect();"><div id="liuyan_b">&nbsp;</div>
+
+<!--top-->
+<div class="top01 width980"><img src="/img/2011dd1xinlihua/images/logo.gif" alt=" " width="235" height="36" border="0" usemap="#Map" /><!--<span>&nbsp;&nbsp;&nbsp;&nbsp;合作媒体：<a href="http://www.baidu.com/" target="_blank"><img src="/img/2011dd1xinlihua/images/baidu.gif" width="81" height="33" /></a></span>--><em class="withe"><a href='http://dangjian.people.com.cn/GB/136058/395166/index.html' target='_blank'>本网专题：“三严三实”专题教育</a><a href='http://theory.people.com.cn/GB/40557/359404/index.html' target='_blank'>凝聚中国力量 实现中国梦</a><a href='http://fanfu.people.com.cn/GB/143349/353985/index.html' target='_blank'>贯彻落实《八项规定》</a></em></div>
+<div class="top02 clear width980 clearfix"><img src="/img/2011dd1xinlihua/images/top1801b.jpg" width="980" height="72" /><img src="/img/2011dd1xinlihua/images/top1802.jpg" width="980" height="51" /><img src="/img/2011dd1xinlihua/images/top1803.jpg" width="980" height="48" /><img src="/NMediaFile/2015/0609/MAIN201506091053350184045496111.jpg" width="628" height="121" border="0"/>
+<img src="/img/2011dd1xinlihua/images/top1805.jpg" width="352" height="121" /></div>
+<!--top end-->
+<div class="con_bg clearfix">
+<!--p1-->
+
+  <div class="p1_content clearfix">
+    <div class="p1_left clearfix marg_bt10">
+       <!--九十年周年新起点-->
+         <iframe marginheight="0" marginwidth="0" frameborder="0" width="639" height="505" scrolling="no" allowtransparency='true' src="http://mydesign.people.com.cn/dds/jiao.html" ></iframe>
+       <!--九十年周年新起点 end-->
+       <!--回顾光辉九十年-->
+       <h1 class="clear"><img src="/img/2011dd1xinlihua/images/18datit02a.jpg" width="639" height="58" alt="我想对党写寄语" /></h1>
+       <h2 class="red"><em>写下寄语</em><i><a href="http://www.people.com.cn/GB/83652/83658/index.html" target="_blank">留言须知</a></i></h2>
+       <form id="formbbs"  method="post" action="">
+			  <input id="yonghuming" name="yonghuming" type="hidden" value="" />
+       <ul class="div02 clearfix">
+          <li><input id="bbstype" name="bbstype" type="radio" value="0" checked="checked" />我来自<select id="select4" onchange="initSelectCity(document.all.formbbs.select4,document.all.formbbs.select5)">
+                      <option value="0">请选择省份</option>
+                    </select>
+                    <select id="select5">
+                      <option value="0">请选择城市</option>
+                    </select>&nbsp;&nbsp;<input id="bbstype" name="bbstype" type="radio" value="1" />以党组织名义寄语<input id="yonghuming2" type="text" onblur="if(this.value==''){this.value='请填写党组织名称';}" onclick="if(this.value=='请填写党组织名称'){this.value='';}" value="请填写党组织名称" class="t01" /></li>
+          <li><textarea name="content" cols="" rows=""></textarea></li>
+          <li class="t02">昵称：<input name="Username" type="text" class="one" align="absmiddle" /><!--<input name="Username" type="text" onblur="if(this.value==''){this.value='用户名';}" onclick="if(this.value=='用户名'){this.value='';}" value="用户名" class="one" /><input name="Password" type="Password" class="one" onfocus="this.value='';this.className=' '" value="密码" /><i class="red"><a href="http://71bbs.people.com.cn/qgregister.php" target="_blank">注册</a></i>-->&nbsp;&nbsp;&nbsp;&nbsp;<input type="image" name="submit" value="留言" src="/img/2011dd1xinlihua/images/p1_11.gif" width="69" height="20" onclick="return submitBbs(formbbs);"/>
+                    <input type="image" name="Submit52" value="重写" src="/img/2011dd1xinlihua/images/p1_12.gif" width="69" height="20" onclick="clear()"/>
+                    <input type="image" name="Submit53" value="查看" src="/img/2011dd1xinlihua/images/p1_13.gif" width="69" height="20" onclick="checkBbs(document.all.formbbs.select5);return false;"/></li>
+       </ul>
+       </form>
+       <h3><em class="red">最新留言</em><i class="org"><a href="http://comments.people.com.cn/bbs_new/app/src/main/?action=list&uid=103050" target="_blank">查看全部&gt;&gt;</a></i></h3>
+      <div class="div03">
+        <div class="Cont1" id="Cont_m">
+           <div id="List_m1">
+           <dl>
+             
+             　　网友202.100.93.★  ：作为一名初一的中学生，我衷心祝愿我们的祖国更加繁荣昌盛，祝愿十八大顺利召开。 庆阳市第五中学七五班 王 晗 <br>　　网友123.150.197.★  ：看了这些优秀前辈的事迹，心中涌出无限敬佩之情。我要认真努力，从身边的小事做起，向楷模学习！这次网上评选使我受教育颇深，我的爷爷也是一名共产党员，年轻时参加过抗美。<br>　　网友125.39.39.★ ：希望退休工资公正合理 取消双轨制得民心 
+ <br>　　网友118.123.2.★ ：党的十八大胜利召开，必定敲响腐败分子的丧钟！必定领导全党全全国人民发展经济走向更加繁荣昌盛，必定更加增强我们党执政的稳固性。预祝党的十八大圆满胜利开幕！<br>　　 网友123.150.197.★ ：社会主义国家，必须坚持共产党的领导，保持共产党的纯洁，巩固社会主义信仰，才能实现共产主义！<br>　　 网友124.232.149.★ ：预祝党的十八大胜利召开!中国共产党立党为公,执政为民.我是一名党员,将永远跟党走,同时,希望我们党更加惩治腐败,重视依法保护每一名普通党员的合法权益。<br>　　网友60.217.232.★  ：作为党员，衷心希望：党风正，腐败除，浮夸无。民心顺，气势高，富安康，复兴到！ <br>　　 网友118.123.2.★：我是一名共产党员、亲爱的党，敬爱的党，因为你，我们变得强大，因为你，我们变得幸福。感谢您！伟大的党！<br>　　网友59.57.12.★ ：祖国有和平，人民有和平，愿党永远跟着和平走！愿祖国繁荣昌盛，永不衰竭！
+           </dl>
+           </div>
+<div id="List_m2"></div>
+</div>
+<script type="text/javascript">
+		var speed_1 = 10; //速度(毫秒)
+		var space_1 = 10; //每次移动(px)
+		var PageHeight_1 = 284; //翻页宽度
+		var fill_1 = 0; //整体移位
+		var moveLock_1m = false;
+		var moveTimeObj_1;
+		var moveWay_1m = "down";
+		var comp_1m = 0;
+		var autoPlayObj_1m=null;
+		
+		GetObj("List_m2").innerHTML=GetObj("List_m1").innerHTML;
+		GetObj('Cont_m').scrollTop=fill_1>=0?fill_1:GetObj('List_m1').scrollHeight-Math.abs(fill_1);
+		GetObj("Cont_m").onmouseover=function(){clearInterval(autoPlayObj_1m)}
+		GetObj("Cont_m").onmouseout=function(){AutoPlay_1m()}
+		AutoPlay_1m();
+
+		function GetObj(objName){
+			if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}
+		}
+		
+		function AutoPlay_1m(){
+			clearInterval(autoPlayObj_1m);
+			autoPlayObj_1m=setInterval('GoDown_m();StopDown_m();',3000)
+		}
+		
+		function GoUp_m(){
+			if(moveLock_1m)return;
+			clearInterval(autoPlayObj_1m);
+			moveLock_1m=true;
+			moveWay_1m="up";
+			moveTimeObj_1=setInterval('ScrUp_m();',speed_1);
+		}
+		
+		function StopUp_m(){
+		if(moveWay_1m == "down"){return};
+		clearInterval(moveTimeObj_1);
+		if((GetObj('Cont_m').scrollTop-fill_1)%PageHeight_1!=0){
+		comp_1m=fill_1-(GetObj('Cont_m').scrollTop%PageHeight_1);
+		CompScr_1m()}else{moveLock_1m=false}
+		AutoPlay_1m()}
+		
+		function ScrUp_m(){
+		if(GetObj('Cont_m').scrollTop<=0){GetObj('Cont_m').scrollTop=GetObj('Cont_m').scrollTop+GetObj('List_m1').offsetHeight}
+		GetObj('Cont_m').scrollTop-=space_1
+		}
+		
+		function GoDown_m(){
+			clearInterval(moveTimeObj_1);
+			if(moveLock_1m)return;
+			clearInterval(autoPlayObj_1m);
+			moveLock_1m=true;
+			moveWay_1m="right";
+			ScrDown_m();
+			moveTimeObj_1=setInterval('ScrDown_m()',speed_1)
+		}
+		
+		function StopDown_m(){
+			if(moveWay_1m == "left"){return};
+			clearInterval(moveTimeObj_1);
+			if(GetObj('Cont_m').scrollTop%PageHeight_1-(fill_1>=0?fill_1:fill_1+1)!=0){
+				comp_1m=PageHeight_1-GetObj('Cont_m').scrollTop%PageHeight_1+fill_1;
+				CompScr_1m()
+			}
+			else{moveLock_1m=false}
+			AutoPlay_1m()
+		}
+		
+		function ScrDown_m(){
+		if(GetObj('Cont_m').scrollTop>=GetObj('List_m1').scrollHeight){GetObj('Cont_m').scrollTop=GetObj('Cont_m').scrollTop-GetObj('List_m1').scrollHeight}
+		GetObj('Cont_m').scrollTop+=space_1
+		}
+		
+		function CompScr_1m(){
+			if(comp_1m==0){moveLock_1m=false;return}
+			var num,TempSpeed=speed_1,TempSpace=space_1;
+			if(Math.abs(comp_1m)<PageHeight_1/2){
+				TempSpace=Math.round(Math.abs(comp_1m/space_1));
+				if(TempSpace<1){TempSpace=1}
+			}
+			if(comp_1m<0){
+				if(comp_1m<-TempSpace){
+					comp_1m+=TempSpace;
+					num=TempSpace
+				}
+				else{num=-comp_1m;comp_1m=0}
+				GetObj('Cont_m').scrollTop-=num;
+				setTimeout('CompScr_1m()',TempSpeed)
+			}	
+			else{if(comp_1m>TempSpace){comp_1m-=TempSpace;num=TempSpace}
+			else{num=comp_1m;
+			comp_1m=0}
+			GetObj('Cont_m').scrollTop+=num;
+			setTimeout('CompScr_1m()',TempSpeed)}
+		}
+		</script>
+          <span><em class=" red">推荐给朋友</em><a href="javascript:copyToClipBoard();"><img src="/img/2011dd1xinlihua/images/p1_15.gif" width="75" height="20" /></a>&nbsp;<img src="/img/2011dd1xinlihua/images/p1_16.gif" width="2" height="27" />&nbsp;<input type="text" name="UserName22" size="12" value="请填写对方邮箱地址" />
+                <a id="mail" href="#" onclick="mail();"><img alt="发送" src="/img/17da/liuyan/fasong.gif" style="margin:0 0 -5px 24px;"/></a></span>
+       </div>
+       <div class="clear"><img src="/img/2011dd1xinlihua/images/p1_19.gif" width="639" height="9" alt=" " /></div>
+       <!--回顾光辉九十年 end-->
+    </div>
+    <div class="p1_right">
+      <iframe marginheight="0" marginwidth="0" frameborder="0" width="293" height="505" scrolling="no" allowtransparency='true' src="http://mydesign.people.com.cn/dds/liuyan.php" ></iframe>
+      <!--<div><a href="http://cpc.people.com.cn/GB/67481/347421/347630/index.html" target="_blank"><img src="/img/2011dd1xinlihua/images/jiyusbd.jpg" width="293" height="230" border="0" usemap="#Map2" /></a>
+        <map name="Map2" id="Map2">
+          <area shape="rect" coords="15,183,83,214" href="javascript:disa();" />
+          <area shape="rect" coords="90,182,160,216" href="http://comments.people.com.cn/bbs_new/app/src/main/?action=list&uid=347630" target="_blank" alt="查看全部留言" />
+        </map>        
+      </div>-->
+      <h2 class="red"><a href='http://cpc.people.com.cn/GB/64114/' target='_blank'>中央直属机构报道集</a></h2>
+      <div class="div02">
+         <div id="demo_b" style="overflow:hidden;height:200px;width:280px;color:#C20000;border:0;margin-top:10px;"><table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="12"></td>
+                  <td ><div id="demo_b1">
+                      <table width="280" border="0" align="center" cellpadding="0" cellspacing="0" class="main_11">
+                        <tr valign="top"><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/83904/index.html' target='_blank'>中央档案馆</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://acwf.people.com.cn/' target='_blank'>中华全国妇女联合会</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/83480/index.html' target='_blank'>中共中央编译局</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/98833/index.html' target='_blank'>共青团中央</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://acftu.people.com.cn/' target='_blank'>中华全国总工会</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://theory.people.com.cn/GB/82288/83845/index.html' target='_blank'>求是杂志社</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/76119/index.html' target='_blank'>中共中央党史研究室</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/76117/index.html' target='_blank'>中共中央文献研究室</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://www.people.com.cn/GB/50142/104580/index.html' target='_blank'>人民日报社</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/75425/index.html' target='_blank'>中共中央党校</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/75510/index.html' target='_blank'>中央国家机关工委</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/64134/index.html' target='_blank'>中央直属机关工委</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/64136/index.html' target='_blank'>中央综治委</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/75462/index.html' target='_blank'>中　央　编　办</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/64139/index.html' target='_blank'>中央对外宣传办公室</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/64138/index.html' target='_blank'>中共中央台办</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/64135/index.html' target='_blank'>中共中央政法委员会</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/74938/index.html' target='_blank'>中共中央对外联络部</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/75372/index.html' target='_blank'>中共中央统战部</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/75332/index.html' target='_blank'>中共中央宣传部</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/75347/index.html' target='_blank'>中共中央组织部</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/64124/index.html' target='_blank'>中共中央办公厅</a></td>
+                          <td>&nbsp;</td><td width="12" vlign=top><a href='http://cpc.people.com.cn/GB/64114/75234/index.html' target='_blank'>中　央　纪　委</a></td>
+                          <td>&nbsp;</td></tr>
+                      </table>
+                  </div></td>
+                  <td id="demo_b2" width="0"></td>
+                </tr>
+              </table>
+                </div>
+                <script>
+			  var speed=18
+			  demo_b2.innerHTML=demo_b1.innerHTML
+			  function Marquee(){
+			  if(demo_b2.offsetWidth-demo_b.scrollLeft<=0)
+			  demo_b.scrollLeft-=demo_b1.offsetWidth
+			  else{
+			  demo_b.scrollLeft++
+			  }
+			  }
+			  var MyMar=setInterval(Marquee,speed)
+			  demo_b.onmouseover=function() {clearInterval(MyMar)}
+			  demo_b.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+		 	    </script>
+      <h2 class="red"><a href='http://liuyan.people.com.cn/' target='_blank'>地方领导留言板</a></h2>
+      
+        <div id="divlan"></div>
+<script type="text/javascript">
+swfobject.embedSWF("/img/2011dd1xinlihua/cpcmap.swf?"+Math.random(), "divlan", "291", "291", "9.0.0", "",false,{wmode:"transparent"},false);
+</script>
+    </div>
+  </div>
+
+<!--p1 end-->
+<!--p2-->
+<div class="p2_content clearfix">
+  <div class="left">
+     <!--<iframe marginheight="0" marginwidth="0" frameborder="0" width="685" height="335" scrolling="no" allowtransparency='true' src="http://t.people.com.cn/dwwbhd.html" ></iframe>-->
+     <div class="withe title01"><a href="" target=_blank></a>　　　　<a href="http://t.people.com.cn/">进入人民微博&gt;&gt;</a></div>
+     <div class="iframe01"><iframe src="http://t.people.com.cn/mframe.action?k=群众路线&height=300" height="250" width="600" scrolling="no" frameborder="0" id="zhongban"></iframe> <script src='http://www.people.com.cn/js/zhongban.js' language='javascript' type='text/javascript'></script></div>
+     <div class="clear"><img src="http://t.people.com.cn:80/microblog//specialsubject/dangwang/css/p2_03.gif" width="684" height="9" /></div>
+  </div>
+  <div class="right">
+     <h2 class="clear red">手机参与</h2>
+     <p><br>欢迎登陆<br><a href="http://wap.people.com.cn/" target='_blank' target="_blank" style="color: black;" target='_blank'><b>手机人民网</b></a><br><a href="http://wap.people.com.cn/" target='_blank'><font color="#ff0000">wap.people.com.cn</font></a><br>参与讨论</p>
+  </div>
+</div>
+<div class="p2_pic clear"><a href="http://theory.people.com.cn/GB/40557/359694/index.html" target="_blank"><img src="/NMediaFile/2013/0426/MAIN201304261053128549954630919.jpg" border="0" alt=""/></a>
+<a href="http://fanfu.people.com.cn/GB/143349/353985/index.html" target="_blank"><img src="/NMediaFile/2013/0426/MAIN201304261053124335712552826.jpg" border="0"/></a>
+<a href="http://theory.people.com.cn/GB/40557/359404/index.html" target="_blank"><img src="/NMediaFile/2013/0426/MAIN201304261053125797391940188.jpg" border="0" alt=""/></a>
+<a href="http://dangjian.people.com.cn/GB/136058/359613/index.html" target="_blank"><img src="/NMediaFile/2013/0426/MAIN201304261053127153368874329.jpg" border="0"/></a>
+<a href="http://cpc.people.com.cn/GB/64192/index.html" target="_blank"><img src="/NMediaFile/2013/0426/MAIN201304261113587791362296563.jpg" border="0"/></a>
+<a href="http://cpc.people.com.cn/GB/67481/94157/360477/index.html" target="_blank"><img src="/NMediaFile/2013/0426/MAIN201304261053122691190452425.jpg" border="0"/></a>
+</div>
+<!--p2 end-->
+<!--link-->
+<div class="link clear">
+   <h3 class="red"><em>友情链接</em></h3>
+   <p><a target="_blank" href="http://www.zytzb.cn/zytzbwz/index.htm">中央统战部</a><a target="_blank" href="http://www.idcpc.org.cn/index_zhongwen.htm">中联部</a><a target="_blank" href="http://www.scio.gov.cn/">中央外宣办</a><a target="_blank" href="http://www.chinaorg.cn/">中央编办</a><a target="_blank" href="http://www.ccps.gov.cn/">中央党校</a><a target="_blank" href="http://www.people.com.cn">《人民日报》社</a><a target="_blank" href="http://www.qsjournal.com.cn/">《求是》</a><a target="_blank" href="http://www.cctb.net/">中央编译局</a><a target="_blank" href="http://www.saac.gov.cn/">中央档案馆</a><a target="_blank" href="http://cpc.people.com.cn/GB/64114/index.html">更多中央部委</a><br><a target="_blank" href="http://www.mfa.gov.cn/">外交部</a><a target="_blank" href="http://www.ndrc.gov.cn/">发展改革委</a><a target="_blank" href="http://www.moe.gov.cn/">教育部</a><a target="_blank" href="http://www.most.gov.cn">科技部</a><a target="_blank" href="http://www.costind.gov.cn">国防科工委</a><a target="_blank" href=http://www.seac.gov.cn/">国家民委</a><a target="_blank" href="http://www.mps.gov.cn/n16/index.html">公安部</a><a target="_blank" href="http://www.mos.gov.cn/mos/cms/html/3/index.html">监察部</a><a target="_blank" href="http://www.mca.gov.cn/">民政部</a><a target="_blank" href="http://www.moj.gov.cn/">司法部</a><a target="_blank" href="http://www.mof.gov.cn/">财政部</a><a target="_blank" href="http://cpc.people.com.cn/GB/64176/64182/index.html">更多国务院部委</a><br>　地方政府网站<a target="_blank" href="http://www.beijing.gov.cn/">北京</a><a target="_blank" href="http://www.hebei.gov.cn/">河北</a><a href='http://www.shanxigov.cn' target='_blank'>山西</a><a target="_blank" href="http://www.nmg.gov.cn/">内蒙古</a><a target="_blank" href="http://www.ln.gov.cn/">辽宁</a><a href='http://cpc.people.com.cn/GB/64176/64182/index.html' target='_blank'>更多</a>||<a target="_blank" href="http://www.xinhuanet.com">新华网</a><a target="_blank" href="http://www.cntv.cn/index.shtml">央视网</a><a target="_blank" href="http://www.china.com.cn/">中国网</a><a target="_blank" href="http://gb.cri.cn/">国际在线</a><a target="_blank" href="http://www.youth.cn/">中青网</a><a target="_blank" href="http://www.ce.cn/">中国经济网</a></p>
+</div>
+</div>
+<script type="text/javascript">
+function disa(){
+	var winWidth ;
+    var winHeight ;
+	var ly_a=document.getElementById("liuyan_a");
+	var ly_b=document.getElementById("liuyan_b");
+
+             if (window.innerWidth)
+                   winWidth = window.innerWidth;
+             else if ((document.body) && (document.body.clientWidth))
+                   winWidth = document.body.clientWidth;
+            
+	ly_a.style.display="block";
+	ly_b.style.display="block";
+	ly_b.style.width=winWidth+"px";
+	ly_b.style.height=2200+"px";
+	//alert(winHeight);
+	}
+function closea(){
+	  document.getElementById("liuyan_a").style.display="none";
+	  document.getElementById("liuyan_b").style.display="none";
+	}
+
+</script>
+<div class="liuyan" id="liuyan_a">
+  <h3><img src="/img/MAIN/2012/08/112274/images/ly_05.gif" width="45" height="34" /><a href="#" onclick="closea();">[关闭]</a></h3>
+  <form name="form1" method="post" action="http://comments.people.com.cn/bbs_new/app/src/main/?action=parse_publish&op=ins&nid=347630"  onSubmit="return checkboard()">
+    <INPUT type=hidden name=pid value=0 />
+  <table border="0" align="center" cellpadding="0" cellspacing="15">
+    <tr>
+      <td>昵称：
+        <input type="text" style="width:114px;" name="yonghuming"  />
+       </td>
+    </tr>
+    <tr>
+      <td><textarea cols="" rows="" style="width:364px;height:110px;border:1px solid #ffa1a1;" name="content" wrap="VIRTUAL" onFocus="getVeriCode(0);"></textarea></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="JavaScript:postMsg();"><img src="/img/MAIN/2012/08/112274/images/ly_10.gif" width="84" height="26" /></a>&nbsp;<a href="http://comments.people.com.cn/bbs_new/app/src/main/?action=list&nid=347630" target="_blank"><img src="/img/MAIN/2012/08/112274/images/ly_12.gif" width="84" height="26" /></a></td>
+    </tr>
+  </table>
+  </form>
+</div>
+<!--copyright-->
+<div class="copyright clear width980"><style type="text/css">
+#copyright{width:980px; margin:0px auto; font-size:12px; text-align:center; padding:20px 0; line-height:180%; clear:both;}
+</style>
+<div id="copyright">人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br />
+Copyright &copy; 1997-2015 by www.people.com.cn. all rights reserved</div></div>
+<map name="Map" id="Map">
+    <area shape="rect" coords="3,4,83,33" href="http://www.people.com.cn/" target="_blank" alt="人民网" />
+    <area shape="rect" coords="93,5,232,33" href="http://cpc.people.com.cn/" target="_blank" alt="中国共产党新闻网" />
+  </map>
+</body>
+</html>

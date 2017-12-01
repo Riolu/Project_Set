@@ -1,0 +1,665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>上海交通大学核科学与工程学院</title>
+    <link rel="stylesheet" href="cssD/style.css" type="text/css" media="screen" />
+  	<link rel="stylesheet" href="cssD/slide.css" type="text/css" media="screen" />
+	<!-- jQuery - the core -->
+	<script src="cssD/js/jquery-1.3.2.min.js" type="text/javascript"></script>
+	<!-- Sliding effect -->
+	<script src="cssD/js/slide.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="css/style.css" media="screen">
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/mbbg.jpg);
+	background-color: #157294;
+	background-repeat: repeat-x;
+}
+-->
+</style>
+<link href="css/goodnav.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.litenav.js" type="text/javascript"></script>
+    <link href="css/physics.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type=text/javascript>
+$(function(){
+	$('#webmenu li').hover(function(){
+		$(this).children('ul').stop(true,true).show('slow');
+	},function(){
+		$(this).children('ul').stop(true,true).hide('slow');
+	});
+	
+	$('#webmenu li').hover(function(){
+		$(this).children('div').stop(true,true).show('slow');
+	},function(){
+		$(this).children('div').stop(true,true).hide('slow');
+	});
+});
+function mysubmit(){
+	var user = $("#log").val();
+	var pass = $("#pwd").val();
+	$.get('?a=login&user='+user+'&pass='+pass, function(o){
+		if(o == ''){
+			alert("用户名或密码错误");
+		}else{
+			location.href = "index.php";
+		}
+		});
+	return false;
+}
+</script>
+<style type="text/css">
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family:"雅黑宋体", "微软雅黑", "新宋体", "宋体";
+	font-family:"雅黑宋体", "微软雅黑", "新宋体", "宋体";
+	font-size:16px;
+	font-size:17px;
+	color:#FFF;
+	text-align:left;
+	background-color: #ddeff9;
+	background-image: url(images/mbbg.jpg);
+	background-repeat: repeat-x;
+}
+a {
+	color:#FFF;
+	text-decoration:none;
+}
+ul {
+	list-style:none;
+}
+#webmenu {
+	height:37px;
+	background:#333;
+	font-size:1.3em;
+	text-align:center;
+}
+#webmenu a {
+	font-size:0.65em;
+}
+#webmenu li ul {
+	display:none;
+}
+#webmenu li ul li {
+	float:none;
+}
+*html #webmenu li ul li {
+	display:inline;
+}
+#webmenu li ul a {
+	float:none;
+	height:32px;
+	line-height:32px;
+	padding:0 10px;
+	text-transform:capitalize;
+}
+#webmenu .height-auto {
+	line-height:15px;
+	padding:5px 10px;
+}
+.second-menu, .third-menu, .fourth-menu {
+	position:absolute;
+}
+.first-menu li {
+	float:left;
+	position:relative;
+}
+.first-menu a {
+	float:left;
+	display:block;
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	background:#333;
+	border-top:1px solid #4a4a4a;
+	border-left:1px solid #4a4a4a;
+	border-bottom:1px solid #242424;
+	border-right:1px solid #242424;
+	font-size:.7em;
+}
+.first-menu a:hover {
+	background:#4698ca;
+	border-top:1px solid #5db1e0;
+	border-left:1px solid #5db1e0;
+}
+.second-menu {
+	top:37px;
+	right:0;
+}
+*html .second-menu {
+	right:-1px;
+}
+.second-menu a {
+	font-size:11px;
+}
+.second-menu a.arrow {
+	background:#3a3a3a url(image/arrow.gif) no-repeat right top;
+}
+.second-menu a.arrow:hover {
+	background:#4698ca url(image/arrow.gif) no-repeat right -32px;
+}
+.second-menu a.arrow-02 {
+	background:#3a3a3a url(image/arrow.gif) no-repeat right -64px;
+}
+.second-menu a.arrow-02:hover {
+	background:#4698ca url(image/arrow.gif) no-repeat right -110px;
+}
+.third-menu, .fourth-menu {
+	width:240px;
+	top:0;
+	left:177px;
+}
+.third-menu a {
+	background:#4c4c4c;
+	font-weight:normal;
+	border-top:1px solid #595959;
+	border-left:1px solid #595959;
+	border-bottom:1px solid #333;
+	border-right:1px solid #333;
+}
+#subMgm {
+	width:177px;
+}
+#subMgm .third-menu {
+	left:177px;
+}
+#subMgm .fourth-menu {
+	left:177px;
+}
+#subMusic, #subNews {
+	width:177px;
+}
+</style>
+
+
+<link href="css/goodnav.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.litenav.js" type="text/javascript"></script>
+    <link href="css/physics.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+<!--
+.STYLE3 {font-size: 14px}
+-->
+    </style>
+</head>
+
+<body>
+	<!-- Login -->
+	<div id="toppanel">
+	<div id="panel">
+		<div class="content clearfix">
+			<div class="left">
+				<h1 class="STYLE3">SNSE 欢迎您！</h1>
+		</div>
+			<div class="left">
+				<form class="clearfix" action="#" method="post" onsubmit="return mysubmit();">
+					<h1 class="padlock STYLE3">教师/管理员登录</h1>
+					<label class="grey" for="log">用户名:</label>
+					<input class="field" type="text" name="log" id="log" value="" size="23" />
+					<label class="grey" for="pwd">密码:</label>
+					<input class="field" type="password" name="pwd" id="pwd" size="23" />
+	            	 			<div class="clear"></div>
+					<input type="submit" name="submit" value="Login" class="bt_login" />
+					<a class="lost-pwd" href="#">忘记密码</a>
+				</form>
+			</div>
+		  <div class="left right"></div>
+		</div>
+	</div> <!-- /login -->	
+
+    <!-- The tab on top -->	
+	<div class="tab">
+		<ul class="login">
+	    	<li class="left">&nbsp;</li>
+	        <li>您好，游客</li>
+	    			<li class="sep">|</li>
+			<li id="toggle">
+				<a id="open" class="open" href="#">用户登录</a>
+				<a id="close" style="display: none;" class="close" href="#">关闭</a>			
+			</li>
+				    	<li class="right">&nbsp;</li>
+		</ul> 
+	</div> <!-- / top -->
+	
+</div> <!--panel -->
+	
+<div align="center">
+<table width="1024" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <th height="150" colspan="2" align="center" valign="top" scope="col"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="600" rowspan="2" align="left" valign="middle" scope="col"><img src="images/topZI2.png" width="600" height="134" /></th>
+        <th align="left" valign="middle" class="di" scope="col">&nbsp;</th>
+      </tr>
+      <tr>
+        <th align="left" valign="middle" scope="col">&nbsp;</th>
+      </tr>
+    </table></th>
+  </tr>
+  <tr>
+    <td colspan="2" align="left" valign="middle">
+<ul id="webmenu" class="first-menu" style="position:relative;z-index:1;">
+  <li><a href="?" style="color:#ff0; background:none; border:none;" target="_self">首 页</a></li>
+  
+  <li><a href="" target="_self">学院概况</a>
+    <ul style="display: none;" id="subMusic" class="second-menu">
+                       <li><a href="?a=col2&id=343" target="_self">学院介绍</a></li>
+               <li><a href="?a=col2&id=344" target="_self">机构设置</a></li>
+               <li><a href="?a=col2&id=345" target="_self">领导介绍</a></li>
+               <li><a href="?a=col2&id=346" target="_self">行政机构</a></li>
+               <li><a href="?a=col2&id=347" target="_self">历任领导</a></li>
+               <li><a href="?a=col2&id=348" target="_self">院史沿革</a></li>
+               <li><a href="?a=col2&id=349" target="_self">学院地图</a></li>
+      	    </ul>
+  </li>
+  
+    <li><a href="#" class="arrow" target="_self">师资队伍</a>
+    <ul style="display: none;" id="subMgm" class="second-menu">
+         <li><a href="?a=staff_info&id=350" target="_self">师资概况</a></li>
+         <li><a href="?a=staff_work" target="_self">在职教师</a></li>
+         <li><a href="?a=staff&cat=21" target="_self">兼职教授</a></li>
+         <li><a href="?a=staff&&cat=22" target="_self">客座研究员</a></li>
+         <li><a href="?a=staff&&cat=23" target="_self">顾问教授</a></li>
+         <li><a href="?a=staff_info&id=355" target="_self">博士后</a></li>
+    </ul>
+  </li>  
+  <li><a href="#" class="arrow" target="_self">科学研究</a>
+      <ul style="display: none;" id="subMgm" class="second-menu">
+			<li><a href="#" class="arrow" target="_self">研究方向</a>			
+			   <ul class="third-menu">
+                  <li><a href="?a=research&id=356" target="_self">核反应堆热工水力</a></li>
+      	         <li><a href="?a=research&id=358" target="_self">核安全与系统仿真</a></li>
+      	         <li><a href="?a=research&id=359" target="_self">反应堆结构材料</a></li>
+      	         <li><a href="?a=research&id=360" target="_self">核燃料循环</a></li>
+      	         <li><a href="?a=research&id=361" target="_self">核辐射防护与环境保护</a></li>
+      	         <li><a href="?a=research&id=495" target="_self">核电关键设备</a></li>
+      	         <li><a href="?a=research&id=597" target="_self">核反应堆物理</a></li>
+      	         <li><a href="?a=research&id=600" target="_self">1</a></li>
+      				   </ul>
+		    </li>
+		     <li><a href="#" class="arrow" target="_self">实验室</a>
+			   <ul class="third-menu">
+                  <li><a href="?a=lab&id=362" target="_self">超临界水堆联合实验室</a></li>
+      	         <li><a href="?a=lab&id=363" target="_self">热工水力安全验证技术联合实验室</a></li>
+      	         <li><a href="?a=lab&id=364" target="_self">核化工及放射化学联合实验室</a></li>
+      	         <li><a href="?a=lab&id=365" target="_self">核材料及腐蚀性能联合实验室</a></li>
+      	         <li><a href="?a=lab&id=366" target="_self">核辐射防护及环境保护实验室</a></li>
+      	         <li><a href="?a=lab&id=367" target="_self">核反应堆仿真及软件联合实验室</a></li>
+      	         <li><a href="?a=lab&id=494" target="_self">核电泵阀系统实验室</a></li>
+      				   </ul>
+			 </li>
+	  </ul>
+   </li>	 
+<li><a href="#" target="_self">合作交流</a>
+	 <ul style="display: none;" id="subMgm" class="second-menu">
+                 <li><a href="?a=coo&id=368" target="_self">概况介绍</a></li>
+      	         <li><a href="?a=coo&id=369" target="_self">交流项目</a></li>
+      	         <li><a href="?a=coo&id=370" target="_self">产学研合作</a></li>
+      	         <li><a href="?a=coo&id=371" target="_self">国际会议</a></li>
+      	         <li><a href="?a=coo&id=372" target="_self">外事办事指南</a></li>
+      	         <li><a href="?a=coo&id=373" target="_self">出入境办理流程</a></li>
+      	      </ul>
+</li>
+	  
+	  
+      <li><a href="#" target="_self">人才培养</a>
+	 <ul style="display: none;" id="subMgm" class="second-menu">
+                <li><a href="?a=train&id=374" target="_self">概况介绍</a></li>
+      	         <li><a href="?a=train&id=375" target="_self">本科生</a></li>
+      	         <li><a href="?a=train&id=376" target="_self">硕士研究生 </a></li>
+      	         <li><a href="?a=train&id=377" target="_self">博士生研究生</a></li>
+      	         <li><a href="?a=train&id=378" target="_self">博士后</a></li>
+      	         <li><a href="?a=train&id=379" target="_self">工程硕士</a></li>
+      	         <li><a href="?a=train&id=380" target="_self">企业培养</a></li>
+      	         <li><a href="?a=train&id=381" target="_self">教务通知</a></li>
+      	        </ul>
+	  </li>
+	  
+      <li><a href="#" target="_self">招生就业</a>
+	   <ul id="subNews" class="second-menu">
+                  <li><a href="?a=enroll&id=382" target="_self">招生信息</a></li>
+      	         <li><a href="?a=enroll&id=383" target="_self">就业信息</a></li>
+      	         <li><a href="?a=enroll&id=384" target="_self">招聘信息</a></li>
+      		    </ul>
+	  </li>
+	  
+<li><a href="#" target="_self">科研成果</a>
+	 <ul style="display: none;" id="subMgm" class="second-menu">
+                <li><a href="?a=fruit&id=385" target="_self">科研概况</a></li>
+      	         <li><a href="?a=fruit&id=386" target="_self">重大项目</a></li>
+      	         <li><a href="?a=fruit&id=387" target="_self">发表论文</a></li>
+      	         <li><a href="?a=fruit&id=388" target="_self">专利</a></li>
+      	         <li><a href="?a=fruit&id=389" target="_self">专著</a></li>
+      	         <li><a href="?a=fruit&id=390" target="_self">获奖</a></li>
+      	        </ul>
+</li>    
+ <li><a href="#" target="_self">规章制度</a>
+	  <ul style="display: none;" id="subMgm" class="second-menu">
+	           <li><a href="?a=rr&id=391" target="_self">实验室管理制度</a></li>
+      	         <li><a href="?a=rr&id=392" target="_self">行政管理制度</a></li>
+      	         <li><a href="?a=rr&id=394" target="_self">机动学院制度</a></li>
+      	         <li><a href="?a=rr&id=395" target="_self"> 文件下载</a></li>
+      	       </ul>
+</li>
+<li><a href="?lang=1" target="_blank">English</a></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td height="300" align="center" valign="top">
+<script type="text/javascript" src="js/image.js"></script>
+          <div style="clear:both; width:1024px; margin:0 auto; height:300px; padding-top:0px;">
+          <div id="imgADPlayer"></div>
+		  <script type="text/javascript" language="JavaScript">
+//<![CDATA[
+PImgPlayer.addItem( "", "#", "images/01.jpg");
+PImgPlayer.addItem( "", "#", "images/02.jpg");
+PImgPlayer.addItem( "", "#", "images/03.jpg");
+PImgPlayer.addItem( "", "#", "images/04.jpg");
+
+PImgPlayer.init( "imgADPlayer", 1024, 300 );
+//]]>
+</script></td>
+  </tr>
+  <tr>
+    <td height="950" align="center" valign="top" background="images/xinwenbg2.jpg" bgcolor="#FFFFFF"><table width="1004" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <th height="40" colspan="2" scope="col">&nbsp;</th>
+      </tr>
+      <tr>
+        <td width="667" height="271" align="left" valign="middle"><table width="650" cellspacing="0" cellpadding="0">
+          <tr align="center">
+            <td height="240" align="center" valign="middle" style="BORDER-top: rgb(0,0,0) 1px dotted; BORDER-bottom: rgb(0,0,0) 1px dotted; BORDER-left: rgb(0,0,0) 1px dotted; BORDER-right: rgb(0,0,0) 1px dotted"><table width="640" border="0" align="center" cellpadding="0" cellspacing="0">
+            	              <tr>
+                <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-10-09]</span><span class="nr"> <a href="?a=news&id=660" target="_blank" class="nr">第八届SJTU-UT-XJTU三校核科学与技术国际研讨会议圆满成功</a></span></th>
+              </tr>
+                            <tr>
+                <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-06-05]</span><span class="nr"> <a href="?a=news&id=653" target="_blank" class="nr">上海市核电办、经信委领导一行到核学院调研</a></span></th>
+              </tr>
+                            <tr>
+                <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-06-01]</span><span class="nr"> <a href="?a=news&id=651" target="_blank" class="nr">核学院师生参观AP1000全球首堆三门核电</a></span></th>
+              </tr>
+                            <tr>
+                <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-04-13]</span><span class="nr"> <a href="?a=news&id=650" target="_blank" class="nr">核反应堆工程设计专业65届校友毕业50周年返校座谈会召开</a></span></th>
+              </tr>
+                            <tr>
+                <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-03-31]</span><span class="nr"> <a href="?a=news&id=648" target="_blank" class="nr">核电宣讲团牵手交大二附中开展核电科普进校园活动</a></span></th>
+              </tr>
+                            <tr>
+                <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-03-23]</span><span class="nr"> <a href="?a=news&id=647" target="_blank" class="nr">超临界水棒束传热实验工作获第七届超临界水堆国际会议最佳论文奖</a></span></th>
+              </tr>
+                            <tr>
+                <td height="30" align="right" valign="bottom" class="duan"><div align="right"><a href="?a=news_list" target="_blank" class="xueshudongtai">更多-&gt;&gt;&gt;</a></div></td>
+                </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="337" align="center" valign="middle"><table width="330" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <th height="260" align="center" valign="middle" bgcolor="#000000" scope="col">
+			<table width="330" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <th height="260" scope="col">
+			 <!-- 代码 开始 -->
+    <div id="hotpic">
+        <div id="NewsPic">
+        	            <a target="_blank" href="?a=news&id=640" style="visibility: visible; display: block;">
+                <img width="330px" height="226px" src="upload/ed945bf653c54e40f0c1d6875f7663ff.jpg" class="Picture" alt="  --" title="  --" /></a>
+                        <a target="_blank" href="?a=news&id=587" style="visibility: visible; display: block;">
+                <img width="330px" height="226px" src="upload/db40eb2dbe9918d55f1ab4feb8b1af8e.jpg" class="Picture" alt="" title="" /></a>
+                        <a target="_blank" href="?a=news&id=416" style="visibility: visible; display: block;">
+                <img width="330px" height="226px" src="upload/b5bae7ca6d320392d8467670d75f7fa7.jpg" class="Picture" alt="" title="" /></a>
+                        <a target="_blank" href="?a=news&id=417" style="visibility: visible; display: block;">
+                <img width="330px" height="226px" src="upload/d93cda2787f073bee21269fc528ccc9d.jpg" class="Picture" alt="--" title="--" /></a>
+                        <a target="_blank" href="?a=news&id=418" style="visibility: visible; display: block;">
+                <img width="330px" height="226px" src="upload/468c89842db74346542bcbeb1807626f.jpg" class="Picture" alt="-" title="-" /></a>
+                        <a target="_blank" href="?a=news&id=419" style="visibility: visible; display: block;">
+                <img width="330px" height="226px" src="upload/4393956d8b6549f45c630500c07c329c.jpg" class="Picture" alt="-" title="-" /></a>
+                        <a target="_blank" href="?a=news&id=340" style="visibility: visible; display: block;">
+                <img width="330px" height="226px" src="upload/f6a0ee577c8cec8afe9e6718eea94e87.jpg" class="Picture" alt="-" title="-" /></a>
+                        <div class="Nav">
+                <span class="Normal">7</span>
+                <span class="Normal">6</span>
+                <span class="Normal">5</span>
+                <span class="Normal">4</span>
+                <span class="Normal">3</span>
+                <span class="Normal">2</span>
+                <span class="Cur">1</span>            </div>
+        </div>
+        <div id="NewsPicTxt" style="width: 330px; overflow: hidden"><a target="_blank" href="3">第1张图片的说明文字</a></div>
+    </div>
+    <script type="text/javascript">
+        $('#hotpic').liteNav(1000);
+    </script>
+    <!-- 代码 结束 -->			</th>
+          </tr>
+        </table>			</th>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="40">&nbsp;</td>
+        <td height="40">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="278" align="left" valign="middle">		
+		<table width="650" cellspacing="0" cellpadding="0">
+                        <tr align="center">
+                        <td height="240" valign="middle" style="BORDER-top: rgb(0,0,0) 1px dotted; BORDER-bottom: rgb(0,0,0) 1px dotted; BORDER-left: rgb(0,0,0) 1px dotted; BORDER-right: rgb(0,0,0) 1px dotted"><table width="640" border="0" align="center" cellpadding="0" cellspacing="0">
+                        	                          <tr>
+                            <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-10-21] </span><a href="?a=bbs&id=662" target="_blank" class="nr">学术报告</a></th>
+                          </tr>
+                                                    <tr>
+                            <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-10-20] </span><a href="?a=bbs&id=661" target="_blank" class="nr">学术报告《华龙一号反应堆实验研究》</a></th>
+                          </tr>
+                                                    <tr>
+                            <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-10-08] </span><a href="?a=bbs&id=659" target="_blank" class="nr">2016年度国核软件中心校园招聘</a></th>
+                          </tr>
+                                                    <tr>
+                            <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-09-16] </span><a href="?a=bbs&id=658" target="_blank" class="nr">Goon Cherl Park教授学术报告</a></th>
+                          </tr>
+                                                    <tr>
+                            <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-07-22] </span><a href="?a=bbs&id=657" target="_blank" class="nr">Wang Bin 教授学术讲座通知</a></th>
+                          </tr>
+                                                    <tr>
+                            <th height="30" align="left" valign="middle" class="duan" scope="col"><span class="duanBlue">[2015-07-03] </span><a href="?a=bbs&id=656" target="_blank" class="nr">Choi Jor-Shan(蔡助山）教授讲座通知</a></th>
+                          </tr>
+                                                    <tr>
+                            <td height="30" align="center" valign="bottom" class="duan"><div align="right"><a href="?a=bbs_list" target="_blank" class="duan2">更多-&gt;&gt;&gt;</a></div></td>
+                          </tr>
+                        </table></td>
+                        </tr>
+            </table></td>
+        <td align="right" valign="middle"><table width="330" cellspacing="0" cellpadding="0">
+          <tr align="center">
+            <td height="240" valign="middle" style="BORDER-top: rgb(0,0,0) 1px dotted; BORDER-bottom: rgb(0,0,0) 1px dotted; BORDER-left: rgb(0,0,0) 1px dotted; BORDER-right: rgb(0,0,0) 1px dotted"><table width="320" border="0" cellspacing="0" cellpadding="0">
+            	              <tr>
+                <th width="84" align="left" valign="top" class="duan" scope="col"><span class="duanBlue">[14-07-28]</span><span class="nr"></span></th>
+                <th height="32" align="left" valign="top" class="duan" scope="col"><p class="xueshudongtai"><a href="?a=aca&id=423" target="_blank" class="duan">国际核工程计算流体力学青年研讨会顺利召开</a></p>                  </th>
+              </tr>
+                            <tr>
+                <th width="84" align="left" valign="top" class="duan" scope="col"><span class="duanBlue">[14-07-28]</span><span class="nr"></span></th>
+                <th height="32" align="left" valign="top" class="duan" scope="col"><p class="xueshudongtai"><a href="?a=aca&id=431" target="_blank" class="duan">核科学与工程学院本科生师生交流会暨实验室参观活动顺利举行</a></p>                  </th>
+              </tr>
+                            <tr>
+                <th width="84" align="left" valign="top" class="duan" scope="col"><span class="duanBlue">[14-07-28]</span><span class="nr"></span></th>
+                <th height="32" align="left" valign="top" class="duan" scope="col"><p class="xueshudongtai"><a href="?a=aca&id=433" target="_blank" class="duan">先进核能系统热工水力基础研究国际合作示范基地学术委员会成立</a></p>                  </th>
+              </tr>
+                            <tr>
+                <th width="84" align="left" valign="top" class="duan" scope="col"><span class="duanBlue">[14-07-28]</span><span class="nr"></span></th>
+                <th height="32" align="left" valign="top" class="duan" scope="col"><p class="xueshudongtai"><a href="?a=aca&id=434" target="_blank" class="duan">核科学与工程学院与上海核工程研究设计院开展足球友谊赛</a></p>                  </th>
+              </tr>
+                            <tr>
+                <th width="84" align="left" valign="top" class="duan" scope="col"><span class="duanBlue">[14-07-25]</span><span class="nr"></span></th>
+                <th height="32" align="left" valign="top" class="duan" scope="col"><p class="xueshudongtai"><a href="?a=aca&id=341" target="_blank" class="duan">核学院研究生党支部举办欢送毕业生篮球友谊赛</a></p>                  </th>
+              </tr>
+                            <tr>
+                <td align="left" valign="top">&nbsp;</td>
+                <td align="left" valign="middle" class="meberziBiao"><div align="right"><a href="?a=aca_list" target="_blank" class="STYLE1">更多--&gt;&gt;&gt;</a></div></td>
+              </tr>
+
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="40" align="left" valign="top">&nbsp;</td>
+        <td rowspan="2" align="center" valign="top">
+		<table width="330" cellspacing="0" cellpadding="0">
+          <tr align="center">
+            <td height="300" valign="top" style="BORDER-top: rgb(0,0,0) 1px dotted; BORDER-bottom: rgb(0,0,0) 1px dotted; BORDER-left: rgb(0,0,0) 1px dotted; BORDER-right: rgb(0,0,0) 1px dotted"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <th scope="col"><img src="images/Hlink.jpg" width="330" height="196" border="0" usemap="#Map" /></th>
+              </tr>
+              <tr>
+                <td><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <th align="left" valign="middle" class="nr" scope="col"><p class="duanBlue">973项目 <a href="http://973scwr.sjtu.edu.cn/" target="_blank" class="duanBlue">超临界水堆关键问题的基础研究</a> </p>
+                      <p class="duanBlue"><a href="http://www.nuthos-8.org/" target="_blank" class="duanBlue">国际会议 NUTHOS-8</a></p>
+                      <p class="duanBlue"><a href="http://www.sjtu.edu.cn/" target="_blank" class="duanBlue">上海交通大学</a>　　　 <a href="http://www.snptc.com.cn/" target="_blank" class="duanBlue">国家核电技术公司</a></p>
+                      <p class="duanBlue"> <a href="http://www.caea.gov.cn/n16/index.html" target="_blank" class="duanBlue">国家原子能机构</a>　　<a href="http://www.npic.ac.cn/" target="_blank" class="duanBlue"> 中国核动力研究设计院</a> </p>
+                      <p class="duanBlue"><a href="http://www.chinanuclear.cn/bbs/" target="_blank" class="duanBlue">中国核电论坛</a>　　　 <a href="http://www.snerdi.com.cn/" target="_blank" class="duanBlue">上海核工程研究设计院</a> </p>
+                      <p class="duanBlue"><a href="http://www.cgnpc.com.cn/" target="_blank" class="duanBlue">中国广东核电集团</a>　 <a href="http://www.zdt.com.cn/" target="_blank" class="duanBlue">中国电力投资集团公司</a> </p></th>
+                  </tr>
+                  
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table>		</td>
+      </tr>
+      <tr>
+        <td height="271" align="left" valign="middle"><table width="640" border="0" align="left" cellpadding="0" cellspacing="0">
+        	          <tr>
+            <th width="101" height="100" align="center" valign="middle" bgcolor="#CCCCCC" scope="col"><img src="upload/90bb832c3a76e98cef2ebad3e34a7381.jpg" width="100" height="100" /></th>
+            <th width="539" align="right" valign="top" scope="col"><table width="530" border="0" align="right" cellpadding="0" cellspacing="0">
+              <tr>
+                <th height="30" align="left" valign="middle" scope="col"><span class="duanBlue">[2015-03-31]</span><span class="nr"> <a href="?a=stu&id=649" target="_blank" class="nr">核电宣讲团牵手交大二附中开展核电科普进校园活动</a></span></th>
+              </tr>
+              <tr>
+                <td align="left" valign="middle">
+                	<p class="nr">3月23日下午，上海交通大学核电宣讲团在团长余健明的带领下来到交大第二附属中学，开展了一堂别开生面的核电科普知识讲座。交大二附中教务办沈主任及初中二年级5个班级共计150余位学生参与了此次讲座。
+核电宣讲团作</p></td>
+              </tr>
+            </table></th>
+          </tr>
+                    <tr>
+            <td height="13" colspan="2">&nbsp;</td>
+            </tr>
+                                <tr>
+            <th width="101" height="100" align="center" valign="middle" bgcolor="#CCCCCC" scope="col"><img src="upload/3d39f1a425611e835a513d0559102169.jpg" width="100" height="100" /></th>
+            <th width="539" align="right" valign="top" scope="col"><table width="530" border="0" align="right" cellpadding="0" cellspacing="0">
+              <tr>
+                <th height="30" align="left" valign="middle" scope="col"><span class="duanBlue">[2014-07-31]</span><span class="nr"> <a href="?a=stu&id=342" target="_blank" class="nr">2011年福岛核电站事故给核电工业带来了巨大的冲击</a></span></th>
+              </tr>
+              <tr>
+                <td align="left" valign="middle">
+                	<p class="nr">2011年福岛核电站事故给核电工业带来了巨大的冲击，日本政府要重启核电的做法引发了3月9日东京爆发3.2万人的"反核"大游行。但不可否认，核电仍然是性价比高、碳排量低的发电方式。核电在美国、俄罗斯、加拿大这些能源</p></td>
+              </tr>
+            </table></th>
+          </tr>
+                      <tr>
+            <td height="7" colspan="2"><div align="right"><a class="nr" href="?a=stu_list">更多-&gt;&gt;&gt;</a></div></td>
+          </tr>
+                                
+        </table></td>
+        </tr>
+      	
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td align="left" valign="top" bgcolor="#99CCFF">
+	<div id=demo style="OVERFLOW: hidden; WIDTH: 1020px; align: center">
+  <table cellspacing="0" cellpadding="0" align="center" 
+border="0">
+    <tbody>
+      <tr>
+        <td id="marquePic1" valign="top">
+		
+<table width="1004" height="132" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="95" height="103" align="center"><img src="images/jiaoliuhuiyi/suotu/1996年江泽民总书记到家中看望钱学森.jpg" width="95" height="100" /></td>
+    <td width="95" align="center"><img src="images/jiaoliuhuiyi/suotu/1988年11月，朱鎔基总理参观“上海一号”机器人.jpg" width="95" height="100" /></td>
+    <td width="95" align="center"><img src="images/jiaoliuhuiyi/suotu/1996年江泽民总书记到家中看望钱学森.jpg" width="95" height="100" /></td>
+    <td width="95" align="center"><img src="images/jiaoliuhuiyi/suotu/2006年4月，孟光院长向江总书记介绍学院的发展.jpg" width="95" height="100" /></td>
+    <td width="95" align="center"><img src="images/jiaoliuhuiyi/suotu/徐匡迪视察实验室.jpg" width="95" height="100" /></td>
+    <td width="95" align="center"><img src="images/jiaoliuhuiyi/suotu/毕业学子与张杰校长合影.jpg" width="95" height="100" /></td>
+    <td width="95" align="center"><img src="images/jiaoliuhuiyi/suotu/77、78级院友毕业三十周年之际返校.jpg" width="95" height="100" /></td>
+    <td width="95" align="center"><img src="images/jiaoliuhuiyi/suotu/江泽民与朱物华握手.jpg" width="95" height="100" /></td>
+    <td width="95" align="center"><img src="images/jiaoliuhuiyi/suotu/82届动力系26071班校友返校.jpg" width="95" height="100" /></td>
+    <td width="95" align="center"><img src="images/jiaoliuhuiyi/suotu/机械与动力工程学院研制的我国第一台电梯用于北京火车站.jpg" width="95" height="100" /></td>
+  </tr>
+  <tr>
+    <td height="6" align="center"></td>
+    <td align="center"></td>
+    <td align="center"></td>
+    <td align="center"></td>
+    <td align="center"></td>
+    <td align="center"></td>
+    <td align="center"></td>
+    <td align="center"></td>
+    <td align="center"></td>
+    <td align="center"></td>
+  </tr>
+</table>		</td>
+        <td id="marquePic2" valign="top"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <p>
+  <script type=text/javascript> 
+var speed=30 
+marquePic2.innerHTML=marquePic1.innerHTML 
+function Marquee(){ 
+if(demo.scrollLeft>=marquePic1.scrollWidth){ 
+demo.scrollLeft=0 
+}else{ 
+demo.scrollLeft++ 
+}} 
+var MyMar=setInterval(Marquee,speed) 
+demo.onmouseover=function() {clearInterval(MyMar)} 
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+  </script>
+	</td>
+  </tr>
+  
+  <map name="Map" id="Map">
+  <area shape="rect" coords="4,5,326,57" href="?a=dang&id=426" target="_blank" />
+  <area shape="rect" coords="7,64,329,125" href="?a=enroll&id=384" target="_blank" />
+</map>
+
+  <tr>
+    <td height="90" align="center" valign="middle" bgcolor="#F2F2F2"><table width="1024" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="415" scope="col"><span class="nr"><img src="images/foot_sjtu.gif" width="280" height="66" /></span></th>
+        <th width="432" height="130" align="left" valign="middle" scope="col"><p class="nrY">上海交通大学核科学与工程学院版权所有 @2006-2014</p>
+            <p class="nrY">地址：中国·上海市闵行区东川路800号   200240</p>
+          <p class="nrY"> 网址：：http://nsse.sjtu.edu.cn</p>
+        <p class="nrY"> 电话：021-34205182   传真：021-34205182</p></th>
+        <th width="153" scope="col">&nbsp;</th>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><img src="images/04liness.jpg" width="1024" height="2" /></td>
+  </tr>
+</table>
+
+</body>
+</html>

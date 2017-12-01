@@ -1,0 +1,1002 @@
+<html>
+<head>
+<title>每日新闻排行榜--新闻中心--人民网</title>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<link rel="stylesheet" href="/css/people.css" type="text/css">
+<script src="/css/search.js"></script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="2" marginwidth="2" topmargin="6" marginheight="6">
+<center><!-- #BeginLibraryItem "/Library/top.lbi" -->
+
+
+
+
+
+<script language=javascript>
+
+
+
+<!--
+
+ 
+
+function checkform(){
+
+if(document.forms[0].LoginName.value==""){
+
+    alert("请输入用户名！");
+
+	document.forms[0].LoginName.focus();
+
+	return false;
+
+	}
+
+if(document.forms[0].passwd.value==""){
+
+    alert("请输入密码！");
+
+	document.forms[0].passwd.focus();
+
+	return false;
+
+	}
+
+
+
+}
+
+
+
+
+
+//-->
+
+
+
+
+
+
+
+<!--
+
+function FieldSearchForm_onsubmit(){
+
+	var SQLTitle="";
+
+	if(document.FieldSearchForm.Content.value!=""){
+
+		var oldStr=document.FieldSearchForm.Content.value;
+
+		 var searchStr=searchWordPro(oldStr);
+
+		 		 SQLTitle="("+"正文=("+ searchStr + ") or "+"标题=("+searchStr + ") or "+"作者=("+searchStr + "))";
+
+			document.FieldSearchForm.searchword.value=SQLTitle;
+
+			return true;
+
+	}else
+
+	{
+
+	alert("检索表达式不允许为空！");
+
+	return false;
+
+	}
+
+}
+
+function FieldSearchFormTwo_onsubmit(){
+
+	var SQLTitle="";
+
+	if(document.FieldSearchFormTwo.Content.value!=""){
+
+		var oldStr=document.FieldSearchFormTwo.Content.value;
+
+		 var searchStr=searchWordPro(oldStr);
+
+			 SQLTitle="("+"正文=("+ searchStr + ") or "+"标题=("+searchStr+ ") or "+"作者=("+searchStr + "))";
+
+			document.FieldSearchFormTwo.searchword.value=SQLTitle;
+
+			return true;
+
+	}else
+
+	{
+
+	alert("检索表达式不允许为空！");
+
+	return false;
+
+	}
+
+
+
+}
+function searchWordPro(vsearchWord){
+	var tempStr="";
+	var isSpace=false;
+	vsearchWord=alltrim(vsearchWord);
+	var word_array =vsearchWord.split(" ");
+	if(word_array.length<2) return vsearchWord;
+	for (loop=0; loop < word_array.length;loop++)
+	{
+		if((alltrim(word_array[loop]).toLowerCase()=="or") ||(alltrim(word_array[loop]).toLowerCase()=="and")){
+			return vsearchWord;
+		}else{
+			if(loop==0)
+				tempStr=word_array[loop];
+			else{
+				if(alltrim(word_array[loop])!="")
+					tempStr=tempStr+" and "+word_array[loop];
+				}
+		}
+	}
+	return tempStr;
+}
+function alltrim(a_strVarContent) 
+{ 
+var pos1, pos2, newstring; 
+
+pos1 = 0; 
+pos2 = 0; 
+newstring = "" 
+
+if ( a_strVarContent.length > 0 ) 
+{ 
+for( i=0; i<a_strVarContent.length; i++) 
+{ 
+if ( a_strVarContent.charAt(i) == " " ) 
+pos1 = pos1 + 1; 
+else 
+break; 
+} 
+
+for( i=a_strVarContent.length-1; i>=0 ; i--) 
+{ 
+if ( a_strVarContent.charAt(i) == " " ) 
+pos2 = pos2 + 1; 
+else 
+break; 
+} 
+
+newstring = a_strVarContent.substring(pos1, a_strVarContent.length-pos2) 
+
+} 
+
+return newstring; 
+} 
+
+
+
+
+
+//-->
+
+</script>
+
+
+
+<img src="/img/dot_red.gif" width="762" height="1"><br>
+
+<table width="762" border="0" cellspacing="0" cellpadding="0" bgcolor="#E3E3E3">
+
+  <tr> 
+
+    <td width="435"><img src="/img/versions.gif" width="388" height="17" usemap="#version" border="0"></td>
+
+    <td valign="bottom" width="1"><img src="/img/dot_red.gif" width="1" height="15"></td>
+
+   <td align="center" valign="bottom"><a href="http://www.people.com.cn/GB/21596/index.html" class="anavys">人民日报</a></td>
+
+
+
+
+
+
+
+      <td width="1" valign="bottom"><img src="/img/dot_red.gif" width="1" height="15"></td>
+
+
+
+
+
+
+
+      <td align="center" valign="bottom"><a href="http://bbs.people.com.cn/bbs/start" class="anavys">强国社区</a></td>
+
+
+
+
+
+
+
+      <td width="1" valign="bottom"><img src="/img/dot_red.gif" width="1" height="15"></td>
+
+
+
+
+
+
+
+      <td align="center" valign="bottom"><a href="http://www.peoplemail.com.cn/" class="anavys">人民邮局</a></td>
+
+
+
+
+
+
+
+      <td width="1" valign="bottom"><img src="/img/dot_red.gif" width="1" height="15"></td>
+
+
+
+
+
+
+
+      <td align="center" valign="bottom"><a href="http://newsinfo.people.com.cn/" class="anavys">信息服务</a></td>
+
+
+
+
+
+
+
+      <td width="1" valign="bottom"><img src="/img/dot_red.gif" width="1" height="15"></td>
+
+
+
+
+
+
+
+      
+
+    <td align="center" valign="bottom"><a href="http://bkdy.people.com.cn/" class="anavys">报刊订阅</a></td>
+
+
+
+
+
+    <td width="2"><img src="/img/dot_red.gif" width="2" height="17"></td>
+
+  </tr>
+
+</table>
+
+<img src="/img/spacer.gif" width="1" height="1"><br>
+
+<table width="770" border="0" cellpadding="3" cellspacing="0">
+
+  <tr> 
+
+    <td bgcolor="b7d8f7" align="center" valign="bottom"> <table width="740" border="0" cellspacing="2" cellpadding="0">
+
+        <tr> 
+
+          <td><a href="http://www.people.com.cn/">首页</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="/GB/index.html">新闻中心</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://politics.people.com.cn/">时政</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://unn.people.com.cn/">地方</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://world.people.com.cn/">国际</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://opinion.people.com.cn/">观点</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://finance.people.com.cn/">财经</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://www.sportsonline.com.cn/GB/index.html" target="_blank">体育</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://edu.people.com.cn/">教育</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://ent.people.com.cn/">娱乐</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://society.people.com.cn/">社会</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://it.people.com.cn/">ＩＴ</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://scitech.people.com.cn/">科技</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://culture.people.com.cn/">文化</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://tw.people.com.cn/">海峡两岸</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://tv.people.com.cn/">多媒体</a></td>
+
+        </tr>
+
+        <tr> 
+
+          <td><a href="http://pic.people.com.cn/">图片</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://npc.people.com.cn/">人大新闻</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://military.people.com.cn/">军事</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://env.people.com.cn/">环保</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://lady.people.com.cn/">时尚</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://house.people.com.cn/" target="_blank">房产</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://auto.people.com.cn/">汽车</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://www.people.com.cn/GB/14738/index.html">书画</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://health.people.com.cn/">健康</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://www.people.com.cn/GB/14838/index.html">旅游</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://media.people.com.cn/">电视</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://olympic.people.com.cn/" target="_blank">奥运</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://old.sportsonline.com.cn/GB/channel3/3061/index.html" target="_blank">彩票</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://www.people.com.cn/GB/26442/index.html">专题</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://www.people.com.cn/GB/29999/index.html" target="_blank">资料中心</a><img src="/img/dot_navy.gif" width="5" height="1" hspace="7" align="absmiddle"><a href="http://sms.people.com.cn/" target="_blank">短 
+            信</a></td>
+
+        </tr>
+
+      </table></td>
+
+  </tr>
+
+</table>
+
+<img src="/img/dot_red.gif" width="762" height="4" vspace="1"><br>
+
+<table border="0" cellspacing="0" width="768" bgcolor="e3e3e3">
+
+  <tr align="center"> 
+
+    <td width="157">2015年10月28日 星期三</td>
+
+    <form name="mail" method="post" action="http://www.peoplemail.com.cn/extend/gb/NULL/NULL/NULL/SignIn.gen" onSubmit="return checkform();"><input type="hidden" name="DomainName" value="peoplemail.com.cn">
+
+      <td width="40">用户名</td>
+
+	  
+
+	  
+
+      <td width="65"> <input type="text" id=text1  name="LoginName" size="8"> </td>
+
+      <td width="26">密码</td>
+
+      <td width="65">   <input type="password" name="passwd"  size="8"> </td>
+
+	    <input type=hidden name=NeedIpCheck2 value=on>
+
+              <input type=hidden name=NeedMoreSecurity value=ON>
+
+              <input type=hidden name=SecurityMode value=on>
+
+      <td width="54"> <input type="submit" name="login" value="登录"> </td>
+
+   
+
+	   </form>
+
+
+
+	
+
+    <td width="40">&nbsp;</td>
+
+ 	
+
+	  <form name="FieldSearchForm" method="post" action="http://search.people.com.cn/was40/people/GB/smindex.jsp?type=1&amp;channel= " onSubmit="return FieldSearchForm_onsubmit();">
+
+                  <td width="90" class="t12l12blue1">
+
+                 <input type="text" name=Content size="10" value="关键词"> 
+
+                        <input type="hidden" name="searchword">
+
+                    </td>
+
+                    <td width="31"> 
+
+                      <input type="image" border="0" name="Submit3" value="submit" src="/img/new/search.gif" width="33" height="19">
+
+                    </td>
+
+                  </form>
+
+	
+
+	
+
+    <td width="54"><a href="http://search.people.com.cn/was40/search/rmrbsearch.htm" target="_blank">分类检索</a></td>
+
+   <td align="center"><a href="http://www.people.com.cn/GB/24hour/index.html" class="anavys">滚动新闻</a>　<a href="http://maillist.people.com.cn/maillist.html" class="anavys">新闻订阅</a></td>
+
+
+
+  </tr>
+
+</table>
+
+<img src="/img/spacer.gif" width="5" height="7"><br>
+
+<TABLE width=770 border=0>
+
+
+
+<TBODY>
+
+
+
+<TR>
+
+
+
+<TD width=173><img height="61" width="173" src="/img/2014peoplelogo/rmw_logo_ph.jpg"> </TD>
+
+
+
+<TD><IFRAME marginWidth=0 marginHeight=0 src="http://ads.people.com.cn/html.ng/channel_range=1/1000/&amp;channel_id=28053&amp;PagePos=1&amp;size=46860&amp;site=people" frameBorder=0 width=468 scrolling=no height=60 BORDERCOLOR="#000000">
+
+
+
+    <SCRIPT LANGUAGE="JavaScript1.1"   SRC="http://ads.people.com.cn/js.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=1&size=46860&site=people">
+
+
+
+    </SCRIPT>
+
+
+
+            <NOSCRIPT> <A href="http://ads.people.com.cn/click.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=1&size=46860&site=people" TARGET="_top"> 
+
+
+
+            <img src="http://ads.people.com.cn/image.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=1&size=46860&site=people" width=468 height=60 border=0></a> 
+
+
+
+            </NOSCRIPT> </IFRAME></TD>
+
+
+
+<TD vAlign=center width=113><IFRAME marginWidth=0 marginHeight=0 src="http://ads.people.com.cn/html.ng/channel_range=1/1000/&amp;channel_id=28053&amp;PagePos=23&amp;size=txt&amp;site=people" frameBorder=0 width="100%" scrolling=no height=16 BORDERCOLOR="#000000"> 
+
+
+
+        <SCRIPT LANGUAGE="JavaScript1.1"   SRC="http://ads.people.com.cn/js.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=23&size=txt&site=people">
+
+
+
+    </SCRIPT>
+
+
+
+        <NOSCRIPT> <A href="http://ads.people.com.cn/click.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=23&size=txt&site=people" TARGET="_top"> 
+
+
+
+        <img src="http://ads.people.com.cn/image.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=23&size=txt&site=people" WIDTH=100% HEIGHT=16 border=0></a> 
+
+
+
+        </NOSCRIPT> </IFRAME><IFRAME marginWidth=0 marginHeight=0 src="http://ads.people.com.cn/html.ng/channel_range=1/1000/&amp;channel_id=28053&amp;PagePos=24&amp;size=txt&amp;site=people" frameBorder=0 width="100%" scrolling=no height=16 BORDERCOLOR="#000000">
+
+
+
+    <SCRIPT LANGUAGE="JavaScript1.1"   SRC="http://ads.people.com.cn/js.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=24&size=txt&site=people ">
+
+
+
+    </SCRIPT>
+
+
+
+            <NOSCRIPT> <A href="http://ads.people.com.cn/click.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=24&size=txt&site=people " TARGET="_top"> 
+
+
+
+            <img src="http://ads.people.com.cn/image.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=24&size=txt&site=people " width=100% height=16 border=0></a> 
+
+
+
+            </NOSCRIPT> </IFRAME><IFRAME marginWidth=0 marginHeight=0 src="http://ads.people.com.cn/html.ng/channel_range=1/1000/&amp;channel_id=28053&amp;PagePos=25&amp;size=txt&amp;site=people " frameBorder=0 width="100%" scrolling=no height=16 BORDERCOLOR="#000000">
+
+
+
+    <SCRIPT LANGUAGE="JavaScript1.1"   SRC="http://ads.people.com.cn/js.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=25&size=txt&site=people ">
+
+
+
+    </SCRIPT>
+
+
+
+            <NOSCRIPT> <A href="http://ads.people.com.cn/click.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=25&size=txt&site=people " TARGET="_top"> 
+
+
+
+            <img src="http://ads.people.com.cn/image.ng/params.richmedia=yes&channel_range=1/1000/&channel_id=28053&PagePos=25&size=txt&site=people " width=100% height=16 border=0></a> 
+
+
+
+            </NOSCRIPT> </IFRAME></TD></TR></TBODY></TABLE>
+
+<!-- #EndLibraryItem --><img src="/img/rank/news_topimg.gif" width="761" height="24"><br>
+  <table width="761" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td width="11" valign="top"><img src="/img/rank/news_limg.gif" width="11" height="191"></td>
+      <td valign="top" align="center" background="img/rank/news_bg.gif"> 
+        <table width="750" border="0" cellspacing="0" cellpadding="5">
+          <tr> 
+            <td width="281" align="right"><img src="/img/rank/news_title.gif" width="175" height="30"></td>
+            <td width="131"><img src="/img/rank/news_img1.jpg" width="96" height="15"></td>
+            <td class="t12l12blackb" width="168">2015年10月28日 星期三</td>
+            <td width="130"><a href="/GB/28053/review/"><img src="/img/rank/news_review.gif" width="68" height="39" border="0"></a><br>
+              <a href="http://news.people.com.cn/GB/28165/index.html"><font color="#CC6633"><b>网友热评排行榜</b></font></a></td>
+          </tr>
+        </table>
+		<table width="750" border="0" cellspacing="0" cellpadding="5">
+          <tr> 
+            <td align="left" style="padding-left:150px;"><a href="http://news.people.com.cn/GB/124652/index.html"><font color="#CC6633"><b>每周新闻排行榜</b></font></a> <font color="#CC6633">|</font> <a href="http://news.people.com.cn/GB/124658/index.html"><font color="#CC6633"><b>每月新闻排行榜</b></font></a></td>
+          </tr>
+        </table>
+        <table width="750" border="0" cellspacing="0" cellpadding="5">
+          <tr> 
+            <td width="67" align="right" valign="top"><img src="/img/rank/news_img2.jpg" width="10" height="108"></td>
+            <td width="663" valign="top" align="center">
+              <table width="80%" border="0" cellspacing="1" cellpadding="3" bgcolor="d2d2d2">
+	       		<tr bgcolor="#FFFFFF"><td width="7%" align="center">序号</td><td align=center>标题</td><td align=center>来源</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">1</td><td><a href="http://pic.people.com.cn/n/2015/1027/c1016-27743640.html" class="anavy">湖南运钞车爆胎坠桥致3死&nbsp;散落400万现金</a></td><td align=center>人民网-图片频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">2</td><td><a href="http://pic.people.com.cn/n/2015/1028/c1016-27748124.html" class="anavy">郑州抢劫银行主犯有4妻12子女&nbsp;美妻和睦相处</a></td><td align=center></td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">3</td><td><a href="http://finance.people.com.cn/n/2015/1027/c1004-27744890.html" class="anavy">人社部:企退人员养老金月人均水平超2200元</a></td><td align=center>人民网-财经频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">4</td><td><a href="http://world.people.com.cn/n/2015/1027/c1002-27744594.html" class="anavy">王毅外长：奉劝美方不要无事生非</a></td><td align=center>人民网-国际频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">5</td><td><a href="http://lady.people.com.cn/n/2015/1027/c1014-27743033.html" class="anavy">范冰冰高圆圆美貌竟然不敌她！史上最全女星合影谁是终极抢镜王</a></td><td align=center>人民网-时尚频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">6</td><td><a href="http://picchina.people.com.cn/n/2015/1027/c213236-27742835.html" class="anavy">杭州刷新世界最长信封链条纪录</a></td><td align=center>人民网-图说中国</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">7</td><td><a href="http://money.people.com.cn/n/2015/1027/c42877-27742806.html" class="anavy">存款利率上限放开&nbsp;钱存哪家银行最划算(表)</a></td><td align=center>人民网-金融频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">8</td><td><a href="http://pic.people.com.cn/n/2015/1027/c1016-27743596.html" class="anavy">女子花10万购40万假币&nbsp;发现是冥币后报警被拘</a></td><td align=center>人民网-图片频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">9</td><td><a href="http://picchina.people.com.cn/n/2015/1027/c213236-27742928.html" class="anavy">男婴被遗弃脸上爬满蚂蚁&nbsp;生父被警方逮捕</a></td><td align=center>广州日报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">10</td><td><a href="http://picchina.people.com.cn/n/2015/1027/c213236-27742999.html" class="anavy">100元人民币多出一个角&nbsp;专家鉴定是真币</a></td><td align=center>荆楚网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">11</td><td><a href="http://finance.people.com.cn/n/2015/1027/c1004-27744925.html" class="anavy">人社部：前三季度21地区调整最低工资标准&nbsp;平均增幅13.3%</a></td><td align=center>人民网-财经频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">12</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27742499.html" class="anavy">这些规定，离你不远</a></td><td align=center>人民网－人民日报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">13</td><td><a href="http://lady.people.com.cn/n/2015/1028/c1014-27747529.html" class="anavy">周杰谈“尔康”被黑：混得不好又怎样&nbsp;《还珠格格》主演配角现状开扒</a></td><td align=center>人民网-时尚频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">14</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27742483.html" class="anavy">国务院调整国务院扶贫开发领导小组组成人员</a></td><td align=center>人民网－人民日报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">15</td><td><a href="http://fanfu.people.com.cn/n/2015/1027/c64371-27743075.html" class="anavy">贵州省瓮福集团公司原董事长何浩明(正厅级)被立案侦查</a></td><td align=center>人民网－中国共产党新闻网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">16</td><td><a href="http://cpc.people.com.cn/xuexi/n/2015/1027/c385474-27743096.html" class="anavy">习近平主持17次深改组会议&nbsp;&quot;十三五&quot;将推动改革迈向纵深</a></td><td align=center>人民网－中国共产党新闻网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">17</td><td><a href="http://leaders.people.com.cn/n/2015/1027/c58278-27742739.html" class="anavy"><br>老太被撞后坚持等肇事者回家“取钱”&nbsp;两拒120身亡</a></td><td align=center>扬子晚报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">18</td><td><a href="http://renshi.people.com.cn/n/2015/1027/c139617-27744378.html" class="anavy">陈肇雄、冯飞任工信部副部长（图/简历）</a></td><td align=center>人民网－中国共产党新闻网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">19</td><td><a href="http://fanfu.people.com.cn/n/2015/1027/c64371-27743516.html" class="anavy">新疆一干部参加“哥儿们间的聚会”被党内警告</a></td><td align=center>中央纪委监察部网站</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">20</td><td><a href="http://culture.people.com.cn/n/2015/1027/c87423-27744231.html" class="anavy">人民文化证实：著名剧作家、词作家阎肃去世为假消息</a></td><td align=center>人民网-文化频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">21</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27745955.html" class="anavy">图解：党员不能炒股？计生政策将废止？你想多了！</a></td><td align=center>人民网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">22</td><td><a href="http://health.people.com.cn/n/2015/1027/c21471-27744485.html" class="anavy">身高影响寿命！揭秘人体十个短寿征兆</a></td><td align=center>人民网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">23</td><td><a href="http://health.people.com.cn/n/2015/1027/c21471-27744381.html" class="anavy">这样吃生姜等于吃砒霜&nbsp;2种吃法会致癌</a></td><td align=center>光明网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">24</td><td><a href="http://renshi.people.com.cn/n/2015/1027/c139617-27744701.html" class="anavy">国务院任免一批国家工作人员</a></td><td align=center>人民网－中国共产党新闻网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">25</td><td><a href="http://picchina.people.com.cn/n/2015/1027/c213236-27742756.html" class="anavy">模特彩妆造型走秀T台&nbsp;靓丽外观夺人眼</a></td><td align=center>中国新闻网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">26</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27746513.html" class="anavy">国防部：中国海军兰州舰、台州舰依法警告美舰挑衅</a></td><td align=center>人民网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">27</td><td><a href="http://lady.people.com.cn/n/2015/1027/c1014-27743191.html" class="anavy">组图:刘涛王鸥&nbsp;揭《琅琊榜》11位女配角素颜都很赞</a></td><td align=center></td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">28</td><td><a href="http://renshi.people.com.cn/n/2015/1027/c139617-27742805.html" class="anavy">赵晓君任四平市委书记</a></td><td align=center>吉林日报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">29</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27742502.html" class="anavy">360度“扫描”，确保识人知人（深度关注·选人用人新气象①）</a></td><td align=center>人民网－人民日报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">30</td><td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742452.html" class="anavy">人民日报评论员：时和势都在我们这边</a></td><td align=center>人民网－人民日报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">31</td><td><a href="http://politics.people.com.cn/n/2015/1028/c1001-27746953.html" class="anavy">通报五起落实“两个责任”不力受到责任追究的典型案件</a></td><td align=center>人民网－人民日报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">32</td><td><a href="http://pic.people.com.cn/n/2015/1027/c1016-27743542.html" class="anavy">荆州一酒店设黄色会所&nbsp;提供“莞式服务”被查处</a></td><td align=center>人民网-图片频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">33</td><td><a href="http://cpc.people.com.cn/n/2015/1028/c87228-27748324.html" class="anavy">震撼华尔街的“瓷娃娃”丁红玉用诚信感动全中国</a></td><td align=center>华西都市报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">34</td><td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742457.html" class="anavy">人民日报人民时评：该让孩子们多玩一玩了</a></td><td align=center>人民网－人民日报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">35</td><td><a href="http://renshi.people.com.cn/n/2015/1027/c139617-27744238.html" class="anavy">常和平任江苏常州市副市长、市公安局局长（简历）</a></td><td align=center>人民网－中国共产党新闻网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">36</td><td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27745538.html" class="anavy">人民网评：不要被“火腿培根致癌”吓坏了！</a></td><td align=center>人民网-观点频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">37</td><td><a href="http://legal.people.com.cn/n/2015/1027/c42510-27744999.html" class="anavy">山西打掉黑恶势力150个&nbsp;涉多名人大代表、政协委员</a></td><td align=center>人民网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">38</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27742482.html" class="anavy">国务院印发《关于促进快递业发展的若干意见》</a></td><td align=center>人民网－人民日报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">39</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27742561.html" class="anavy">俄对IS发起最大火力空袭&nbsp;24小时袭击在叙94处恐怖分子目标</a></td><td align=center>人民网-环球时报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">40</td><td><a href="http://society.people.com.cn/n/2015/1027/c1008-27744124.html" class="anavy">交通处罚11月起要放大招&nbsp;“危险驾驶罪”将入刑</a></td><td align=center>人民网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">41</td><td><a href="http://ent.people.com.cn/n/2015/1027/c1012-27746048.html" class="anavy">孙俪晒女儿小花偷穿高跟鞋照片&nbsp;被赞小胖脚萌萌哒</a></td><td align=center>人民网-娱乐频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">42</td><td><a href="http://renshi.people.com.cn/n/2015/1027/c139617-27744755.html" class="anavy">谭铁牛任中国科学院副院长（图/简历）</a></td><td align=center>人民网－中国共产党新闻网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">43</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27742197.html" class="anavy">专家:美新型核潜艇对中国威胁大&nbsp;并非要取代航母</a></td><td align=center>人民网-军事频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">44</td><td><a href="http://cpc.people.com.cn/n/2015/1027/c82429-27744597.html" class="anavy">【党报早读】赵晓君任吉林省四平市委书记（图）</a></td><td align=center>人民网－中国共产党新闻网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">45</td><td><a href="http://ent.people.com.cn/n/2015/1028/c1012-27748049.html" class="anavy">刘亦菲穿睡衣酒店自拍&nbsp;45度角妩媚迷人皮肤超好</a></td><td align=center>人民网-娱乐频道</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">46</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27745298.html" class="anavy">港媒：中美或南海掰手腕&nbsp;中国航母克星让美军丧胆</a></td><td align=center>中国航空报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">47</td><td><a href="http://media.people.com.cn/n/2015/1027/c40606-27742633.html" class="anavy">田亮称不再带女儿上真人秀&nbsp;遵守规定不让森碟代言</a></td><td align=center>京华时报</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">48</td><td><a href="http://fanfu.people.com.cn/n/2015/1027/c64371-27745322.html" class="anavy">“纪律处分条例”背后的案例故事(三)：严守廉洁纪律</a></td><td align=center>中央纪委监察部网站</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">49</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27745259.html" class="anavy">人社部回应今年国考招录人数创新高：退休人数集中</a></td><td align=center>人民网</td></tr><tr bgcolor="#FFFFFF"><td width="7%" align="center" class="fblack">50</td><td><a href="http://theory.people.com.cn/n/2015/1027/c148980-27744845.html" class="anavy">学者观察：“十三五”规划将有哪些特点值得我们关注？</a></td><td align=center>人民网－中国共产党新闻网</td></tr>     
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table width="750" border="0" cellspacing="10" cellpadding="0">
+          <tr align="center" valign="top"> 
+            <td width="375"> 
+              <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+                  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">时&nbsp;&nbsp;&nbsp;&nbsp;政</td>
+                </tr>
+                <tr bgcolor="#BF9100"> 
+                  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+                </tr>
+              </table>
+              <table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+		<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27742499.html" class="anavy">这些规定，离你不远</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27742483.html" class="anavy">国务院调整国务院扶贫开发领导小组组成人员</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27745955.html" title="图解：党员不能炒股？计生政策将废止？你想多了！" class="anavy">图解：党员不能炒股？计生政策将废止？你想…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://politics.people.com.cn/n/2015/1026/c1001-27737694.html" class="anavy">把党规党纪刻印在全体党员心上</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27742502.html" title="360度“扫描”，确保识人知人（深度关注·选人用人新气象①）" class="anavy">360度“扫描”，确保识人知人（深度关注…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://politics.people.com.cn/n/2015/1028/c1001-27746953.html" title="通报五起落实“两个责任”不力受到责任追究的典型案件" class="anavy">通报五起落实“两个责任”不力受到责任追究…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://legal.people.com.cn/n/2015/1027/c42510-27744999.html" title="山西今年以来打掉黑恶势力150个 涉多名人大代表、政协委员" class="anavy">山西今年以来打掉黑恶势力150个&nbsp;涉多名…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27742482.html" class="anavy">国务院印发《关于促进快递业发展的若干意见》</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://politics.people.com.cn/n/2015/1026/c1001-27737693.html" title="九月份全国共查处违反中央八项规定精神问题3490起" class="anavy">九月份全国共查处违反中央八项规定精神问题…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://society.people.com.cn/n/2015/1027/c1008-27744124.html" title="交通处罚11月起要放大招 “危险驾驶罪”将入刑" class="anavy">交通处罚11月起要放大招&nbsp;“危险驾驶罪”…</a></td></tr> 
+              </table>
+            </td>
+            <td width="375"> 
+              <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+                  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">中国共产党新闻</td>
+                </tr>
+                <tr bgcolor="#BF9100"> 
+                  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+                </tr>
+              </table>
+              <table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+		<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://cpc.people.com.cn/xuexi/n/2015/1026/c385474-27738367.html" title="学者观察：习近平的四个研判勾勒“十三五”蓝图" class="anavy">学者观察：习近平的四个研判勾勒“十三五”…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://fanfu.people.com.cn/n/2015/1026/c64371-27738364.html" title="福建省人社厅原副厅长黄小梅被留党察看、行政撤职" class="anavy">福建省人社厅原副厅长黄小梅被留党察看、行…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://renshi.people.com.cn/n/2015/1026/c139617-27739746.html" title="张子兴任深圳市委常委、市纪委书记(图/简历)" class="anavy">张子兴任深圳市委常委、市纪委书记(图/简…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://renshi.people.com.cn/n/2015/1026/c139617-27738428.html" class="anavy">北京市委组织部发布李岚任前公示（图/简历)</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://fanfu.people.com.cn/n/2015/1026/c64371-27738548.html" class="anavy">河南省委政法委副书记徐合民接受组织调查</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://renshi.people.com.cn/n/2015/1026/c139617-27737954.html" class="anavy">上海市市管干部提任前公示（图/简历）</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://renshi.people.com.cn/n/2015/1026/c139617-27738012.html" class="anavy">贵州省管干部任前公示（简历）</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://fanfu.people.com.cn/n/2015/1027/c64371-27743075.html" title="贵州省瓮福集团公司原董事长何浩明(正厅级)被立案侦查" class="anavy">贵州省瓮福集团公司原董事长何浩明(正厅级…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://cpc.people.com.cn/xuexi/n/2015/1027/c385474-27743096.html" title="习近平主持17次深改组会议 &quot;十三五&quot;将推动改革迈向纵深" class="anavy">习近平主持17次深改组会议&nbsp;&quot;十三五&quot;将…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://renshi.people.com.cn/n/2015/1027/c139617-27744378.html" class="anavy">陈肇雄、冯飞任工信部副部长（图/简历）</a></td></tr>
+              </table>
+            </td>
+          </tr>
+		  <tr align="center" valign="top"> 
+            <td width="375"> 
+              <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+                  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">观&nbsp;&nbsp;&nbsp;&nbsp;点</td>
+                </tr>
+                <tr bgcolor="#BF9100"> 
+                  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+                </tr>
+              </table>
+              <table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+		<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://opinion.people.com.cn/n/2015/1026/c1003-27737679.html" class="anavy">人民日报任仲平：向着第一个百年目标迈进</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://politics.people.com.cn/n/2015/1027/c1001-27745955.html" title="图解：党员不能炒股？计生政策将废止？你想多了！" class="anavy">图解：党员不能炒股？计生政策将废止？你想…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742452.html" class="anavy">人民日报评论员：时和势都在我们这边</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742457.html" class="anavy">人民日报人民时评：该让孩子们多玩一玩了</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27745538.html" class="anavy">人民网评：不要被“火腿培根致癌”吓坏了！</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://opinion.people.com.cn/n/2015/1026/c1003-27741367.html" title="人民网评：“十三五”规划的是五年，面向的是百年" class="anavy">人民网评：“十三五”规划的是五年，面向的…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://opinion.people.com.cn/n/2015/1028/c1003-27746924.html" class="anavy">人民日报评论员：以前瞻性引领更长远发展</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742500.html" title="人民日报红船观澜：从严治党，从抓主体责任做起" class="anavy">人民日报红船观澜：从严治党，从抓主体责任…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27742473.html" class="anavy">人民日报人民论坛：让纪律运行于心灵轨道</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://opinion.people.com.cn/n/2015/1027/c1003-27744118.html" title="京华时报：“最大份炒饭”纪录无效，打了谁的脸" class="anavy">京华时报：“最大份炒饭”纪录无效，打了谁…</a></td></tr> 
+              </table>
+            </td>
+            <td width="375"> 
+              <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+                  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">理&nbsp;&nbsp;&nbsp;&nbsp;论</td>
+                </tr>
+                <tr bgcolor="#BF9100"> 
+                  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+                </tr>
+              </table>
+              <table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+		<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://cpc.people.com.cn/xuexi/n/2015/1026/c385474-27738367.html" title="学者观察：习近平的四个研判勾勒“十三五”蓝图" class="anavy">学者观察：习近平的四个研判勾勒“十三五”…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://theory.people.com.cn/n/2015/1027/c148980-27744845.html" title="学者观察：“十三五”规划将有哪些特点值得我们关注？" class="anavy">学者观察：“十三五”规划将有哪些特点值得…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://dangshi.people.com.cn/n/2015/1026/c85037-27739699.html" class="anavy">【图解】回顾新中国历次五年规划（计划）</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://theory.people.com.cn/n/2015/1027/c148980-27744337.html" title="学者观察：从“任仲平”文章看“十三五”规划如何定位" class="anavy">学者观察：从“任仲平”文章看“十三五”规…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://theory.people.com.cn/n/2015/1027/c40531-27743316.html" class="anavy">用发展眼光看待延迟退休</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://theory.people.com.cn/n/2015/1026/c40531-27737864.html" class="anavy">于向东：推进“三严三实”常态化</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://theory.people.com.cn/n/2015/1027/c40531-27743176.html" title="以蹄疾步稳的节奏全面深化改革：关键之年凸显六大亮点" class="anavy">以蹄疾步稳的节奏全面深化改革：关键之年凸…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://theory.people.com.cn/n/2015/1028/c226269-27748536.html" title="【导读】聚焦：事业单位公开招聘制度如何完善？" class="anavy">【导读】聚焦：事业单位公开招聘制度如何完…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://theory.people.com.cn/n/2015/1027/c226269-27743601.html" title="【导读】聚焦:“国考”报名更趋理性 基层职位报名人数增加" class="anavy">【导读】聚焦:“国考”报名更趋理性&nbsp;基层…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://theory.people.com.cn/n/2015/1026/c226269-27739061.html" title="【导读】回眸十二五：世界感知中国经济的五个关键字" class="anavy">【导读】回眸十二五：世界感知中国经济的五…</a></td></tr>
+              </table>
+            </td>
+          </tr>
+          <tr align="center" valign="top"> 
+            <td width="375"> 
+              <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+                  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">国&nbsp;&nbsp;&nbsp;&nbsp;际</td>
+                </tr>
+                <tr bgcolor="#BF9100"> 
+                  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+                </tr>
+              </table>
+              <table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+		 <tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://world.people.com.cn/n/2015/1027/c1002-27744594.html" class="anavy">王毅外长：奉劝美方不要无事生非</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://world.people.com.cn/n/2015/1026/c1002-27740134.html" class="anavy">国际观察：习近平访英推动“西方向东看”转向</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://world.people.com.cn/n/2015/1028/c1002-27746950.html" class="anavy">中方就美舰进入我南沙岛礁近海提出严正交涉</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://world.people.com.cn/n/2015/1026/c1002-27737776.html" title="中朝举行开城、安州志愿军烈士陵园修缮工程竣工仪式" class="anavy">中朝举行开城、安州志愿军烈士陵园修缮工程…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://msn.people.com.cn/world/n/2015/1026/c364771-27739827.html" class="anavy">84岁默多克新恋情曝光&nbsp;女友59岁曾是名模</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://world.people.com.cn/n/2015/1026/c1002-27741815.html" title="“乌云中见阳光” 500余代表北京热议中日关系" class="anavy">“乌云中见阳光”&nbsp;500余代表北京热议中…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://world.people.com.cn/n/2015/1028/c1002-27746948.html" class="anavy">中英关系顶层设计绘就美好未来</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://world.people.com.cn/n/2015/1026/c1002-27739771.html" title="日媒谈中国游客素质问题：日本不应五十步笑百步" class="anavy">日媒谈中国游客素质问题：日本不应五十步笑…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://world.people.com.cn/n/2015/1027/c1002-27746686.html" title="外交部副部长召见美驻华大使 就美舰挑衅提出严正交涉" class="anavy">外交部副部长召见美驻华大使&nbsp;就美舰挑衅提…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://world.people.com.cn/n/2015/1027/c1002-27742472.html" class="anavy">中英务实合作成果“飞入寻常百姓家”</a></td></tr>
+              </table>
+            </td>
+            <td width="375"> 
+              <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+                  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">经&nbsp;&nbsp;&nbsp;&nbsp;济</td>
+                </tr>
+                <tr bgcolor="#BF9100"> 
+                  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+                </tr>
+              </table>
+              <table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+		<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://finance.people.com.cn/n/2015/1027/c1004-27744890.html" title="人社部:企退人员养老金月人均水平超2200元" class="anavy">人社部:企退人员养老金月人均水平超220…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://money.people.com.cn/n/2015/1027/c42877-27742806.html" class="anavy">存款利率上限放开&nbsp;钱存哪家银行最划算(表)</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://finance.people.com.cn/n/2015/1027/c1004-27744925.html" title="人社部：前三季度21地区调整最低工资标准 平均增幅13.3%" class="anavy">人社部：前三季度21地区调整最低工资标准…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://money.people.com.cn/n/2015/1026/c42877-27740136.html" class="anavy">过去五年，传统产业植入互联网基因</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://finance.people.com.cn/n/2015/1026/c1004-27737842.html" title="6.9%的经济增长是发展规律与阶段特征的客观反映" class="anavy">6.9%的经济增长是发展规律与阶段特征的…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://finance.people.com.cn/n/2015/1026/c1004-27738900.html" class="anavy">十八届五中全会今起召开&nbsp;议题聚焦十三五规划</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://money.people.com.cn/n/2015/1027/c42877-27743503.html" title="金台观察：习近平访英打造人民币国际化2.0版" class="anavy">金台观察：习近平访英打造人民币国际化2.…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://money.people.com.cn/n/2015/1027/c42877-27742888.html" title="多企业裁员O2O行业将现离职潮？ 烧钱带来无效用户" class="anavy">多企业裁员O2O行业将现离职潮？&nbsp;烧钱带…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://finance.people.com.cn/n/2015/1027/c1004-27742896.html" class="anavy">高铁提速中国&nbsp;每年9亿人次离不开它</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://finance.people.com.cn/n/2015/1026/c1004-27738006.html" title="“三证合一”送简政放权大礼包 百姓提速创业梦" class="anavy">“三证合一”送简政放权大礼包&nbsp;百姓提速创…</a></td></tr>
+              </table>
+            </td>
+          </tr>
+          <tr align="center" valign="top"> 
+            <td width="375"> 
+              <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+                  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">军&nbsp;&nbsp;&nbsp;&nbsp;事</td>
+               </tr>
+                <tr bgcolor="#BF9100"> 
+                  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+                </tr>
+              </table>
+              <table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+		 <tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27746513.html" title="国防部：中国海军兰州舰、台州舰依法警告美舰挑衅" class="anavy">国防部：中国海军兰州舰、台州舰依法警告美…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27742561.html" title="俄对IS发起最大火力空袭 24小时袭击在叙94处恐怖分子目标" class="anavy">俄对IS发起最大火力空袭&nbsp;24小时袭击在…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27742197.html" title="专家:美新型核潜艇对中国威胁大 并非要取代航母" class="anavy">专家:美新型核潜艇对中国威胁大&nbsp;并非要取…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27745298.html" title="港媒：中美或南海掰手腕 中国航母克星让美军丧胆" class="anavy">港媒：中美或南海掰手腕&nbsp;中国航母克星让美…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://military.people.com.cn/n/2015/1026/c1011-27740476.html" class="anavy">组图：南海舰队大批军舰出动摆兵布阵</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://military.people.com.cn/n/2015/1028/c1011-27748894.html" title="人民日报海外版：美舰闯南海是玩火 后果很严重" class="anavy">人民日报海外版：美舰闯南海是玩火&nbsp;后果很…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27745884.html" title="解放军弹药押运兵在列车站台举行15分钟婚礼(组图)" class="anavy">解放军弹药押运兵在列车站台举行15分钟婚…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27744420.html" title="南空航空兵某师鲜有败绩 飞行员撂重话让团领导脸红" class="anavy">南空航空兵某师鲜有败绩&nbsp;飞行员撂重话让团…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://military.people.com.cn/n/2015/1027/c1011-27745061.html" title="王毅回应美军舰赴南海岛礁12海里：不要无事生非" class="anavy">王毅回应美军舰赴南海岛礁12海里：不要无…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://military.people.com.cn/n/2015/1026/c1011-27741289.html" title="高清：实拍解放军演习向“敌”前沿冲击 主战坦克战场机动" class="anavy">高清：实拍解放军演习向“敌”前沿冲击&nbsp;主…</a></td></tr>
+              </table>
+            </td>
+            <td width="375"> 
+              <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+                  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">教&nbsp;&nbsp;&nbsp;&nbsp;育</td>
+                </tr>
+                <tr bgcolor="#BF9100"> 
+                  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+                </tr>
+              </table>
+              <table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+		 <tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://edu.people.com.cn/gongwuyuan/n/2015/1026/c88733-27741668.html" class="anavy">国考众生相：企业员工职场不顺想回“体制内”</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://edu.people.com.cn/n/2015/1026/c1053-27739539.html" title="进入大四心中发慌？围观2016届高校毕业生就业月历" class="anavy">进入大四心中发慌？围观2016届高校毕业…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://edu.people.com.cn/n/2015/1027/c1053-27744627.html" class="anavy">韩国女博士教士兵学跳芭蕾</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://edu.people.com.cn/n/2015/1027/c1053-27743528.html" class="anavy">中学开运动会遇大雨&nbsp;上千学生淋雨校领导打伞</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://edu.people.com.cn/n/2015/1027/c1053-27743192.html" title="南科大将新增3专业 计划招生160个博士200个硕士" class="anavy">南科大将新增3专业&nbsp;计划招生160个博士…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://edu.people.com.cn/n/2015/1028/c1006-27747284.html" class="anavy">修订版小学语文教材反映传统文化课文将占三成</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://edu.people.com.cn/gongwuyuan/n/2015/1026/c88733-27741704.html" title="2016国考或已悄然升温 在职公务员走遴选途径" class="anavy">2016国考或已悄然升温&nbsp;在职公务员走遴…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://edu.people.com.cn/n/2015/1027/c1053-27743643.html" title="大一女生为全班同学作“藏头诗” 写诗300多首" class="anavy">大一女生为全班同学作“藏头诗”&nbsp;写诗30…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://edu.people.com.cn/n/2015/1027/c1053-27743492.html" title="中国向考试作弊下狠手 印度网友：要跟上中国脚步" class="anavy">中国向考试作弊下狠手&nbsp;印度网友：要跟上中…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://edu.people.com.cn/n/2015/1026/c1053-27739660.html" class="anavy">大山里的“零零后”：半个足球场&nbsp;一个足球梦</a></td></tr>
+              </table>
+            </td>
+          </tr>
+		<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">Ｉ&nbsp;&nbsp;&nbsp;&nbsp;Ｔ</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://it.people.com.cn/n/2015/1026/c1009-27741679.html" title="流量不清零后消耗疑变快 网友9天用完整月流量" class="anavy">流量不清零后消耗疑变快&nbsp;网友9天用完整月…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://it.people.com.cn/n/2015/1026/c1009-27738411.html" class="anavy">“双11”新车半价？&nbsp;馅饼OR陷阱</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://it.people.com.cn/n/2015/1027/c1009-27743432.html" class="anavy">中关村的变迁：从卖产品到卖创意</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://it.people.com.cn/n/2015/1026/c1009-27741093.html" title="2015胡润女富豪榜发布：周群飞500亿元登顶" class="anavy">2015胡润女富豪榜发布：周群飞500亿…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://homea.people.com.cn/n/2015/1027/c41390-27743422.html" class="anavy">买电视机装挂架为何另收100元</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://it.people.com.cn/n/2015/1028/c1009-27746756.html" class="anavy">过去五年见证中国互联网产业发展奇迹</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://tc.people.com.cn/n/2015/1026/c183008-27738937.html" title="黑莓新手机Priv正式开启预定 售价超过苹果" class="anavy">黑莓新手机Priv正式开启预定&nbsp;售价超过…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://it.people.com.cn/n/2015/1026/c114490-27740657.html" class="anavy">2015年胡润IT富豪榜：李彦宏被挤出前三</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://tc.people.com.cn/n/2015/1027/c183008-27743763.html" title="iOS 9疯狂偷跑流量惹怒果粉：苹果悲剧了！" class="anavy">iOS&nbsp;9疯狂偷跑流量惹怒果粉：苹果悲剧…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://homea.people.com.cn/n/2015/1026/c41390-27738339.html" class="anavy">空调主业不振&nbsp;奥克斯难脱二三流品牌命运</a></td></tr>
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">科&nbsp;&nbsp;&nbsp;&nbsp;技</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://scitech.people.com.cn/n/2015/1027/c1007-27744824.html" title="袁隆平卸任湖南杂交水稻研究中心主任 将专心做科研" class="anavy">袁隆平卸任湖南杂交水稻研究中心主任&nbsp;将专…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://scitech.people.com.cn/n/2015/1027/c1057-27742246.html" class="anavy">1万个充电桩将进驻北京</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://scitech.people.com.cn/n/2015/1027/c1007-27743167.html" class="anavy">阿富汗地震发生后9小时&nbsp;中国西藏再次地震</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://scitech.people.com.cn/n/2015/1026/c1057-27737577.html" class="anavy">我国新能源客车有望规模性进入国际市场</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://scitech.people.com.cn/n/2015/1026/c1007-27738347.html" title="媒体称火腿、培根等被列为致癌物 世卫否认发布报告" class="anavy">媒体称火腿、培根等被列为致癌物&nbsp;世卫否认…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://scitech.people.com.cn/n/2015/1026/c1007-27739622.html" class="anavy">医学教授乘高铁途中救治心梗患者获网友点赞</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://scitech.people.com.cn/n/2015/1026/c1057-27737542.html" class="anavy">中美发现恐龙灭绝前新哺乳动物</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://scitech.people.com.cn/n/2015/1027/c1007-27745132.html" class="anavy">阿富汗地震存在两次破裂&nbsp;成因与汶川地震相同</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://scitech.people.com.cn/n/2015/1028/c1007-27747307.html" class="anavy">上海交大青蒿代谢工程育种研究取得重大突破</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://scitech.people.com.cn/n/2015/1026/c1007-27741989.html" title="&quot;明天小小科学家&quot;揭晓 业内人士:多给偏远地区孩子点机会" class="anavy">&quot;明天小小科学家&quot;揭晓&nbsp;业内人士:多给偏…</a></td></tr>
+			</table>
+		</td>
+		</tr>
+		<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">文&nbsp;&nbsp;&nbsp;&nbsp;化</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://culture.people.com.cn/n/2015/1027/c87423-27744231.html" title="人民文化证实：著名剧作家、词作家阎肃去世为假消息" class="anavy">人民文化证实：著名剧作家、词作家阎肃去世…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://culture.people.com.cn/n/2015/1026/c1013-27737734.html" class="anavy">争议之下，网络文学怎么走</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://culture.people.com.cn/n/2015/1027/c87423-27745228.html" class="anavy">从“被去世”频发看社交媒体的“跟风病”</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://culture.people.com.cn/n/2015/1026/c22219-27739289.html" title="黄飞鸿离世90载墓葬仍是谜 病逝后无钱买棺木" class="anavy">黄飞鸿离世90载墓葬仍是谜&nbsp;病逝后无钱买…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://culture.people.com.cn/n/2015/1026/c22219-27738917.html" class="anavy">孙中山宋庆龄结婚百年纪念&nbsp;多件珍藏首次公开</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://culture.people.com.cn/n/2015/1026/c22219-27738091.html" title="《琅琊榜》虐心结局不能改 续集将另起炉灶[图]" class="anavy">《琅琊榜》虐心结局不能改&nbsp;续集将另起炉灶…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://culture.people.com.cn/n/2015/1026/c22219-27738755.html" title="&quot;故宫游免费&quot;获赞：免费取得了&quot;一石三鸟&quot;之效" class="anavy">&quot;故宫游免费&quot;获赞：免费取得了&quot;一石三鸟…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://culture.people.com.cn/n/2015/1026/c87423-27738144.html" title="电视剧《书圣王羲之》发布主题歌 专家赞其“四美”" class="anavy">电视剧《书圣王羲之》发布主题歌&nbsp;专家赞其…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://culture.people.com.cn/n/2015/1028/c87423-27747147.html" title="播报:敬一丹感叹阅读问题 天安门城楼城台大修获批" class="anavy">播报:敬一丹感叹阅读问题&nbsp;天安门城楼城台…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://culture.people.com.cn/n/2015/1027/c22219-27744122.html" title="丽江古城遭遇“最烦恼10月” 未来走向何方？" class="anavy">丽江古城遭遇“最烦恼10月”&nbsp;未来走向何…</a></td></tr>
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">娱&nbsp;&nbsp;&nbsp;&nbsp;乐</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://ent.people.com.cn/n/2015/1027/c1012-27746048.html" title="孙俪晒女儿小花偷穿高跟鞋照片 被赞小胖脚萌萌哒" class="anavy">孙俪晒女儿小花偷穿高跟鞋照片&nbsp;被赞小胖脚…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://ent.people.com.cn/n/2015/1028/c1012-27748049.html" title="刘亦菲穿睡衣酒店自拍 45度角妩媚迷人皮肤超好" class="anavy">刘亦菲穿睡衣酒店自拍&nbsp;45度角妩媚迷人皮…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://ent.people.com.cn/n/2015/1027/c1012-27743298.html" title="高圆圆带闺蜜台湾夜市吃串 当&quot;女汉子&quot;大口咬肉依旧很美" class="anavy">高圆圆带闺蜜台湾夜市吃串&nbsp;当&quot;女汉子&quot;大…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://ent.people.com.cn/n/2015/1027/c1012-27744410.html" class="anavy">网传杨坤吸毒被抓&nbsp;本人否认：警卫在保护我</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://ent.people.com.cn/n/2015/1026/c1012-27741159.html" title="霍思燕爱子见肉龙表情夸张 杜江：凌乱了(图)" class="anavy">霍思燕爱子见肉龙表情夸张&nbsp;杜江：凌乱了(…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://ent.people.com.cn/n/2015/1026/c1012-27740274.html" title="杨幂重新关注胡歌二人分别回应 过往感情扑朔迷离" class="anavy">杨幂重新关注胡歌二人分别回应&nbsp;过往感情扑…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://ent.people.com.cn/n/2015/1026/c1012-27741221.html" title="&quot;大好时光&quot;剧情打破网友幻想 胡歌终究没跟韩东君凑成对" class="anavy">&quot;大好时光&quot;剧情打破网友幻想&nbsp;胡歌终究没…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://ent.people.com.cn/n/2015/1027/c1012-27744860.html" title="郑爽暴瘦变纸片人 细腰尖下巴脸颊凹陷认不出/图" class="anavy">郑爽暴瘦变纸片人&nbsp;细腰尖下巴脸颊凹陷认不…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://ent.people.com.cn/n/2015/1028/c1012-27748245.html" title="马景涛与小娇妻拍婚纱照甜蜜拥吻 两儿子穿西装帅气出镜" class="anavy">马景涛与小娇妻拍婚纱照甜蜜拥吻&nbsp;两儿子穿…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://ent.people.com.cn/n/2015/1026/c1012-27739784.html" title="日刊:赵薇素颜挤电梯无人识 贾静雯喜得千金友人送祝福" class="anavy">日刊:赵薇素颜挤电梯无人识&nbsp;贾静雯喜得千…</a></td></tr>
+			</table>
+		</td>
+		</tr>	
+		<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			      <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">海峡两岸</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://tw.people.com.cn/n/2015/1026/c14657-27739174.html" class="anavy">朱立伦南下深入绿营铁票区抢票&nbsp;地方大佬力挺</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://tw.people.com.cn/n/2015/1026/c14657-27739794.html" title="朱立伦感受支持者热情：争取2016胜选的心情回来了" class="anavy">朱立伦感受支持者热情：争取2016胜选的…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://tw.people.com.cn/n/2015/1026/c14657-27738994.html" title="新党游行庆台湾光复70周年 &quot;蓝委&quot;现场吁泛蓝大团结" class="anavy">新党游行庆台湾光复70周年&nbsp;&quot;蓝委&quot;现场…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://tw.people.com.cn/n/2015/1026/c14657-27738929.html" title="朱立伦避谈&quot;朱王配&quot;：王金平留&quot;立法院&quot;更有贡献" class="anavy">朱立伦避谈&quot;朱王配&quot;：王金平留&quot;立法院&quot;…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://tw.people.com.cn/n/2015/1026/c14657-27737724.html" class="anavy">两岸各界共同纪念台湾光复70周年</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://tw.people.com.cn/n/2015/1027/c14657-27743423.html" title="洪秀柱回访台中&quot;立柱&quot;发源地 吁民众坚定支持国民党" class="anavy">洪秀柱回访台中&quot;立柱&quot;发源地&nbsp;吁民众坚定…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://tw.people.com.cn/n/2015/1027/c14657-27744764.html" title="绿营借&quot;换柱&quot;黑朱立伦 蓝营怒揭&quot;民进党的汤圆传奇&quot;" class="anavy">绿营借&quot;换柱&quot;黑朱立伦&nbsp;蓝营怒揭&quot;民进党…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://tw.people.com.cn/n/2015/1026/c14657-27739049.html" class="anavy">朱立伦痛批绿营抹黑奥步：让他们继续当在野党</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://tw.people.com.cn/n/2015/1027/c14657-27746029.html" class="anavy">评论：朱立伦的最后机会</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://tw.people.com.cn/n/2015/1026/c14657-27741111.html" title="台中议会蓝绿吵成一团 各不相让议事两度中断（图）" class="anavy">台中议会蓝绿吵成一团&nbsp;各不相让议事两度中…</a></td></tr>
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			      <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">港&nbsp;&nbsp;&nbsp;&nbsp;澳</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://hm.people.com.cn/n/2015/1026/c42272-27739723.html" title="澳门至香港喷射船撞不明漂浮物 逾百人受伤（组图）" class="anavy">澳门至香港喷射船撞不明漂浮物&nbsp;逾百人受伤…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://hm.people.com.cn/n/2015/1028/c42272-27748552.html" title="澳门舆论关注中共十八届五中全会：吹响进军全面小康号角" class="anavy">澳门舆论关注中共十八届五中全会：吹响进军…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://hm.people.com.cn/n/2015/1027/c42272-27743589.html" class="anavy">大熊猫艺术展香港站揭幕</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://hm.people.com.cn/n/2015/1026/c42272-27741160.html" class="anavy">前9月内地与港澳贸易额一降一升</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://hm.people.com.cn/n/2015/1026/c42272-27739087.html" class="anavy">在港内地女生接假内地官员电话&nbsp;被骗60万</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://hm.people.com.cn/n/2015/1027/c42272-27743563.html" title="Uber宣布进军澳门 特区政府称将严厉打击违法行为" class="anavy">Uber宣布进军澳门&nbsp;特区政府称将严厉打…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://hm.people.com.cn/n/2015/1027/c42272-27745497.html" title="绿海龟暴尸沙滩 体内充斥尼龙绳等海洋垃圾（图）" class="anavy">绿海龟暴尸沙滩&nbsp;体内充斥尼龙绳等海洋垃圾…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://hm.people.com.cn/n/2015/1027/c42272-27745618.html" class="anavy">香港应调整角色迎接机遇</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://hm.people.com.cn/n/2015/1027/c42272-27745617.html" title="香港外访大学生组织“未来之星同学会”庆祝成立十周年" class="anavy">香港外访大学生组织“未来之星同学会”庆祝…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://hm.people.com.cn/n/2015/1028/c42272-27748641.html" class="anavy">香港旅行团广东遇车祸&nbsp;12名港人受伤</a></td></tr>
+			</table>
+		</td>
+		</tr>
+		<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			      <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">人大新闻</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://npc.people.com.cn/n/2015/1023/c14576-27733666.html" class="anavy">傅莹会见日本民主党国际部部长</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://npc.people.com.cn/n/2015/1027/c14576-27743558.html" title="山西省人大常委会调研忻州市建设工程抗震设防情况" class="anavy">山西省人大常委会调研忻州市建设工程抗震设…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://npc.people.com.cn/n/2015/1022/c14576-27728500.html" title="2015年全国人大代表交通运输专题研讨班在深圳举办" class="anavy">2015年全国人大代表交通运输专题研讨班…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://npc.people.com.cn/n/2015/1026/c14576-27739984.html" title="全国人大常委会专题调研报告：严重侵害妇女人身权利犯罪突出" class="anavy">全国人大常委会专题调研报告：严重侵害妇女…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://npc.people.com.cn/n/2015/1021/c14576-27722303.html" class="anavy">外事委员会举行第三十五次全体会议</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://npc.people.com.cn/n/2015/1021/c14576-27722420.html" title="老年人权益保障法鼓励开设老年病专科 专家：法律须落地" class="anavy">老年人权益保障法鼓励开设老年病专科&nbsp;专家…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://npc.people.com.cn/n/2015/1021/c14576-27722323.html" class="anavy">外事委员会赴黑龙江省进行立法调研</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://npc.people.com.cn/n/2015/1022/c14576-27728490.html" title="新疆自治区人大常委会对乌鲁木齐市混合所有制经济情况进行调研" class="anavy">新疆自治区人大常委会对乌鲁木齐市混合所有…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://npc.people.com.cn/n/2015/1026/c14576-27739389.html" title="业内称房产税开征成大势所趋 设计合理考验立法者智慧" class="anavy">业内称房产税开征成大势所趋&nbsp;设计合理考验…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://npc.people.com.cn/n/2015/1021/c14576-27722318.html" title="全国人大代表团访问墨西哥并出席中墨议会论坛第三次会议" class="anavy">全国人大代表团访问墨西哥并出席中墨议会论…</a></td></tr>
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			      <td width="81%" align="left" background="img/rank/news_listbg.gif" class="t16l12brown">中国央企新闻</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://ccnews.people.com.cn/n/2015/1027/c141677-27744607.html" title="中纪委：杭州第五轮巡视5家国企 公布巡视组联系方式" class="anavy">中纪委：杭州第五轮巡视5家国企&nbsp;公布巡视…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://ccnews.people.com.cn/n/2015/1027/c141677-27744535.html" title="国资委：9月份查处违反中央八项规定精神问题38起" class="anavy">国资委：9月份查处违反中央八项规定精神问…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://ccnews.people.com.cn/n/2015/1026/c141677-27740180.html" class="anavy">中粮饲料召开2015年新饲料行业发展峰会</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://ccnews.people.com.cn/n/2015/1026/c141677-27740013.html" class="anavy">中国研制C929大型客机&nbsp;欲取代波音777</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://ccnews.people.com.cn/n/2015/1026/c141677-27738244.html" class="anavy">国有企业改革迈上新征程</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://ccnews.people.com.cn/n/2015/1027/c141677-27743377.html" class="anavy">乌鲁木齐高铁新站即将投运（图片）</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://ccnews.people.com.cn/n/2015/1026/c141677-27738921.html" title="国务院督促国企改革 员工持股指导意见或加快出台" class="anavy">国务院督促国企改革&nbsp;员工持股指导意见或加…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://ccnews.people.com.cn/n/2015/1026/c141677-27741243.html" title="中央第三轮巡视启动 将巡视证监会等31家单位" class="anavy">中央第三轮巡视启动&nbsp;将巡视证监会等31家…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://ccnews.people.com.cn/n/2015/1026/c141677-27739170.html" class="anavy">就愿意围着大飞机转（关注）</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://ccnews.people.com.cn/n/2015/1026/c141677-27741248.html" title="中国经济简讯：“华龙一号”首堆示范工程施工进展顺利" class="anavy">中国经济简讯：“华龙一号”首堆示范工程施…</a></td></tr>
+			</table>
+		</td>
+		</tr>	
+		<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">图&nbsp;&nbsp;&nbsp;&nbsp;片</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://pic.people.com.cn/n/2015/1027/c1016-27743640.html" class="anavy">湖南运钞车爆胎坠桥致3死&nbsp;散落400万现金</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://pic.people.com.cn/n/2015/1026/c1016-27739321.html" class="anavy">陕西宝鸡夜跑女老师被害案告破:嫌犯已被抓获</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://pic.people.com.cn/n/2015/1028/c1016-27748124.html" title="郑州抢劫银行主犯有4妻12子女 美妻和睦相处" class="anavy">郑州抢劫银行主犯有4妻12子女&nbsp;美妻和睦…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://pic.people.com.cn/n/2015/1027/c1016-27743596.html" title="女子花10万购40万假币 发现是冥币后报警被拘" class="anavy">女子花10万购40万假币&nbsp;发现是冥币后报…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://pic.people.com.cn/n/2015/1026/c1016-27738571.html" title="家长派房车驻校保证孩子午休 保姆当街炒菜做饭" class="anavy">家长派房车驻校保证孩子午休&nbsp;保姆当街炒菜…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://pic.people.com.cn/n/2015/1026/c1016-27739015.html" title="为全面建成小康社会奠定坚实基础——“十二五”期间中国经济社会发展述评" class="anavy">为全面建成小康社会奠定坚实基础——“十二…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://pic.people.com.cn/n/2015/1027/c1016-27743542.html" title="荆州一酒店设黄色会所 提供“莞式服务”被查处" class="anavy">荆州一酒店设黄色会所&nbsp;提供“莞式服务”被…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://pic.people.com.cn/n/2015/1027/c1016-27744802.html" class="anavy">郑州16年前银行劫案告破&nbsp;匪首已成亿万富豪</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://pic.people.com.cn/n/2015/1026/c1016-27739570.html" title="南京一车主花数千元 将力帆“整容”成宝马被罚500元" class="anavy">南京一车主花数千元&nbsp;将力帆“整容”成宝马…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://pic.people.com.cn/n/2015/1026/c1016-27741825.html" title="流浪猫被6只雪貂“收养” 同吃同住画面好有爱" class="anavy">流浪猫被6只雪貂“收养”&nbsp;同吃同住画面好…</a></td></tr>
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">书&nbsp;&nbsp;&nbsp;&nbsp;画</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://art.people.com.cn/n/2015/1021/c206244-27722180.html" title="给你一个二刷《琅琊榜》的理由：深扒剧中的书法墨迹" class="anavy">给你一个二刷《琅琊榜》的理由：深扒剧中的…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://art.people.com.cn/n/2015/1022/c206244-27726464.html" title="工地挖出汉代金丝楠木棺材板 卖出5000元获罪" class="anavy">工地挖出汉代金丝楠木棺材板&nbsp;卖出5000…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://art.people.com.cn/n/2015/1026/c206244-27738739.html" class="anavy">抗战胜利70周年纪念币半月升值九倍</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://art.people.com.cn/n/2015/1022/c206244-27728405.html" title="Katerina Plotnikova——童话般摄影作品欣赏" class="anavy">Katerina&nbsp;Plotnikova—…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://art.people.com.cn/n/2015/1022/c206244-27727529.html" class="anavy">世界宝石、玉石原石大赏（二）</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://art.people.com.cn/n/2015/1022/c206244-27728860.html" class="anavy">揭秘习主席送给英国女王哪些邮票</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://art.people.com.cn/n/2015/1026/c399668-27740512.html" class="anavy">让时间静止：日本艺术家森本草介唯美作品欣赏</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://art.people.com.cn/n/2015/1023/c206244-27731692.html" class="anavy">奇石博览会亮相武汉(图)</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://art.people.com.cn/n/2015/1026/c206244-27738911.html" class="anavy">全球最珍贵饼干拍出1.5万英镑（图）</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://art.people.com.cn/n/2015/1026/c206244-27739538.html" class="anavy">古代钱币上钱文都是谁写的？</a></td></tr>
+			</table>
+		</td>
+		</tr>	
+		<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">环&nbsp;&nbsp;&nbsp;&nbsp;保</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://env.people.com.cn/n/2015/1027/c1010-27743186.html" title="农田水利工程保障国家粮食安全发挥不可替代的作用" class="anavy">农田水利工程保障国家粮食安全发挥不可替代…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://env.people.com.cn/n/2015/1026/c1010-27738920.html" title="潘岳：环境政策法制工作亟须研究解决9个重点问题" class="anavy">潘岳：环境政策法制工作亟须研究解决9个重…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://env.people.com.cn/n/2015/1026/c1010-27737865.html" title="北京一人伙同村官占耕地建酒店 致203亩耕地被毁" class="anavy">北京一人伙同村官占耕地建酒店&nbsp;致203亩…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://env.people.com.cn/n/2015/1026/c1010-27737923.html" title="大众&quot;排放门&quot;成热门话题 尾气零排放离我们有多远？" class="anavy">大众&quot;排放门&quot;成热门话题&nbsp;尾气零排放离我…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://env.people.com.cn/n/2015/1026/c1010-27738314.html" title="较强冷空气袭北方 内蒙古黑龙江部分地区有大雪" class="anavy">较强冷空气袭北方&nbsp;内蒙古黑龙江部分地区有…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://env.people.com.cn/n/2015/1026/c1010-27738290.html" class="anavy">中国东北现雾霾&nbsp;长春成“雾都”(组图)</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://env.people.com.cn/n/2015/1026/c1010-27737965.html" class="anavy">农业秸秆焚烧困扰大气污染防控</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://env.people.com.cn/n/2015/1027/c1010-27743706.html" class="anavy">英海豚海岸边上演罕见集体表演秀（组图）</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://env.people.com.cn/n/2015/1027/c1010-27743657.html" title="英国北部上万只八哥集体迁徙 遮天蔽日(组图)" class="anavy">英国北部上万只八哥集体迁徙&nbsp;遮天蔽日(组…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://env.people.com.cn/n/2015/1026/c1010-27738667.html" class="anavy">助力绿色环保&nbsp;“唯美空间”且行且落实</a></td></tr>
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">旅&nbsp;&nbsp;&nbsp;&nbsp;游</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://travel.people.com.cn/n/2015/1022/c41570-27726767.html" class="anavy">游客黑名单制度：在困境中前行</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://travel.people.com.cn/n/2015/1023/c41570-27733257.html" title="赏枫叶只知道香山就OUT了！十大“枫”景游览地一览" class="anavy">赏枫叶只知道香山就OUT了！十大“枫”景…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://travel.people.com.cn/n/2015/1025/c41570-27736481.html" title="天津大学生发射自制火箭 靠水压飞上百米高空（高清）" class="anavy">天津大学生发射自制火箭&nbsp;靠水压飞上百米高…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://travel.people.com.cn/n/2015/1027/c41570-27745380.html" title="酒店赠假“港澳游VIP卡” 游客被强制消费上万元" class="anavy">酒店赠假“港澳游VIP卡”&nbsp;游客被强制消…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://travel.people.com.cn/n/2015/1022/c41570-27728579.html" class="anavy">高清：中国古村落住进了“洋”村民</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://travel.people.com.cn/n/2015/1021/c41570-27724862.html" class="anavy">重阳时节携父母赏秋景&nbsp;三种出游方式推荐</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://travel.people.com.cn/n/2015/1021/c41570-27723302.html" class="anavy">“黄金时代”&nbsp;去大不列颠感受伦敦的英式风情</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://travel.people.com.cn/n/2015/1021/c41570-27722372.html" title="内地游客在港被殴致死 或参加&quot;黑旅行社&quot;低价团" class="anavy">内地游客在港被殴致死&nbsp;或参加&quot;黑旅行社&quot;…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://travel.people.com.cn/n/2015/1023/c41570-27730893.html" class="anavy">高清：重庆车展美女车模引市民围观拍摄</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://travel.people.com.cn/n/2015/1022/c41570-27726072.html" title="国家旅游局彻查景区宰客 十三陵&quot;黑店&quot;用&quot;阴阳菜单&quot;" class="anavy">国家旅游局彻查景区宰客&nbsp;十三陵&quot;黑店&quot;用…</a></td></tr>
+			</table>
+		</td>
+		</tr>		
+		<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">女&nbsp;&nbsp;&nbsp;&nbsp;性</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://lady.people.com.cn/n/2015/1026/c1014-27738448.html" title="Angelababy素颜出镜颜值不敌冯小刚？ 惊呆！证件照揭明星素颜真相" class="anavy">Angelababy素颜出镜颜值不敌冯小…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://lady.people.com.cn/n/2015/1027/c1014-27743033.html" title="范冰冰高圆圆美貌竟然不敌她！史上最全女星合影谁是终极抢镜王" class="anavy">范冰冰高圆圆美貌竟然不敌她！史上最全女星…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://lady.people.com.cn/n/2015/1028/c1014-27747529.html" title="周杰谈“尔康”被黑：混得不好又怎样 《还珠格格》主演配角现状开扒" class="anavy">周杰谈“尔康”被黑：混得不好又怎样&nbsp;《还…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://lady.people.com.cn/n/2015/1026/c1014-27741961.html" class="anavy">黄晓明获影帝&nbsp;婚后首次出国想baby</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://lady.people.com.cn/n/2015/1026/c353205-27741986.html" title="柳岩承认整容 揭露范冰冰Angelababy等女星真实身材" class="anavy">柳岩承认整容&nbsp;揭露范冰冰Angelaba…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://lady.people.com.cn/n/2015/1027/c1014-27743191.html" title="组图:刘涛王鸥 揭《琅琊榜》11位女配角素颜都很赞" class="anavy">组图:刘涛王鸥&nbsp;揭《琅琊榜》11位女配角…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://lady.people.com.cn/n/2015/1026/c1014-27738469.html" title="范冰冰赵薇李湘未PS照悲催 女神卸妆后颜值打对折" class="anavy">范冰冰赵薇李湘未PS照悲催&nbsp;女神卸妆后颜…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://lady.people.com.cn/n/2015/1026/c1014-27738286.html" title="柳岩承认整容 郑爽张雨绮 公开整容的女星真的变美了吗" class="anavy">柳岩承认整容&nbsp;郑爽张雨绮&nbsp;公开整容的女星…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://lady.people.com.cn/n/2015/1026/c1014-27738539.html" class="anavy">毛衣搭配半身裙&nbsp;甜美造型人人爱</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://lady.people.com.cn/n/2015/1027/c1014-27743631.html" title="不要怀疑！刘雯告诉你：针织衫才是秋日最佳穿搭伙伴" class="anavy">不要怀疑！刘雯告诉你：针织衫才是秋日最佳…</a></td></tr>
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">健&nbsp;&nbsp;&nbsp;&nbsp;康</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://health.people.com.cn/n/2015/1025/c14739-27736575.html" class="anavy">哪种血型易得癌症&nbsp;B型比其他血型更健康</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://health.people.com.cn/n/2015/1025/c14739-27736506.html" class="anavy">人一天是否必须睡足8小时&nbsp;每天睡多久能长寿</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://health.people.com.cn/n/2015/1027/c21471-27744485.html" class="anavy">身高影响寿命！揭秘人体十个短寿征兆</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://health.people.com.cn/n/2015/1027/c21471-27744381.html" class="anavy">这样吃生姜等于吃砒霜&nbsp;2种吃法会致癌</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://health.people.com.cn/n/2015/1025/c14739-27736547.html" class="anavy">心跳与寿命长短相关&nbsp;心跳多少的人最长寿</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://health.people.com.cn/n/2015/1027/c21471-27744343.html" class="anavy">哪些人不能吃苹果？苹果有什么禁忌？</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://health.people.com.cn/n/2015/1025/c14739-27736549.html" class="anavy">生吃大蒜最能防癌&nbsp;五类人食用却会短命</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://health.people.com.cn/n/2015/1027/c21471-27744354.html" class="anavy">“温则通，通则不痛”&nbsp;敷热毛巾竟能治十种病</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://health.people.com.cn/n/2015/1026/c21471-27739199.html" class="anavy">秋天喝碗养生粥，延年益寿</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://health.people.com.cn/n/2015/1025/c14739-27736475.html" class="anavy">你最该知道的十大血脂常识</a></td></tr>
+			</table>
+		</td>
+		</tr>			
+		<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">房&nbsp;&nbsp;&nbsp;&nbsp;产</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://house.people.com.cn/n/2015/1026/c164220-27738145.html" title="70大中城市超半数房价环比上涨 深圳房价比去年涨了近四成" class="anavy">70大中城市超半数房价环比上涨&nbsp;深圳房价…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://house.people.com.cn/n/2015/1026/c164220-27737960.html" class="anavy">“双降”之下楼市何去何从?</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://house.people.com.cn/n/2015/1026/c164220-27737945.html" title="年内5次降息为买房人减负 百万房贷20年利息省17万" class="anavy">年内5次降息为买房人减负&nbsp;百万房贷20年…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://house.people.com.cn/n/2015/1027/c164220-27744632.html" class="anavy">北京新房源成交单价近20万&nbsp;</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://house.people.com.cn/n/2015/1026/c164220-27737982.html" class="anavy">贝克汉姆欲购价值2.7亿英国最贵庄园</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://house.people.com.cn/n/2015/1026/c164220-27737966.html" title="北京新房和二手房连续7个月环比上涨 涨幅有所回落" class="anavy">北京新房和二手房连续7个月环比上涨&nbsp;涨幅…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://house.people.com.cn/n/2015/1028/c164220-27747369.html" title="成都楼市问题多 开发商跑路与物业管理失位频现" class="anavy">成都楼市问题多&nbsp;开发商跑路与物业管理失位…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://house.people.com.cn/n/2015/1026/c164220-27738011.html" title="评论：上半年深楼市量价暴涨 已开始丧失上涨动力" class="anavy">评论：上半年深楼市量价暴涨&nbsp;已开始丧失上…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://house.people.com.cn/n/2015/1026/c194441-27737541.html" class="anavy">房贷利率6连降现最低值&nbsp;房价地价倒挂</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://house.people.com.cn/n/2015/1026/c164220-27738353.html" title="葛洲坝地产依赖“借鸡生蛋” 拿到地王如何开发？" class="anavy">葛洲坝地产依赖“借鸡生蛋”&nbsp;拿到地王如何…</a></td></tr>
+</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">汽&nbsp;&nbsp;&nbsp;&nbsp;车</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://auto.people.com.cn/n/2015/1026/c1049-27737997.html" title="26日行情：迈腾让利2.05万 车市人气小幅回升" class="anavy">26日行情：迈腾让利2.05万&nbsp;车市人气…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://auto.people.com.cn/n/2015/1027/c1005-27742899.html" title="27日行情：奔驰GLK优惠5.5万 车市或提前入冬" class="anavy">27日行情：奔驰GLK优惠5.5万&nbsp;车市…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://auto.people.com.cn/n/2015/1026/c1005-27738045.html" title="不止占用应急车道 一图掌握扣6分交通违法行为" class="anavy">不止占用应急车道&nbsp;一图掌握扣6分交通违法…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://auto.people.com.cn/n/2015/1026/c1005-27739113.html" class="anavy">秋季爱车保养注意事项&nbsp;要为冬季提前做好预防</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://auto.people.com.cn/n/2015/1028/c1005-27747226.html" title="28日行情：奥迪A6L优惠9.37万 “微增长”成车市主旋律" class="anavy">28日行情：奥迪A6L优惠9.37万&nbsp;“…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://auto.people.com.cn/n/2015/1026/c1005-27738465.html" class="anavy">购置税半价&nbsp;五款热门合资品牌SUV推荐</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://auto.people.com.cn/n/2015/1026/c1005-27738426.html" title="曝哈弗H9 3.0T版内饰谍照 配8AT电子挡杆" class="anavy">曝哈弗H9&nbsp;3.0T版内饰谍照&nbsp;配8AT…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://auto.people.com.cn/n/2015/1027/c1005-27742916.html" class="anavy">定向增发缩水&nbsp;长城“新能源+轿车”出师不利</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://auto.people.com.cn/n/2015/1026/c1005-27738041.html" title="预售26.98万起 江铃福特撼路者30日将上市" class="anavy">预售26.98万起&nbsp;江铃福特撼路者30日…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://auto.people.com.cn/n/2015/1027/c1005-27743362.html" class="anavy">起亚国产智跑最新实车图曝光&nbsp;定名为KX5</a></td></tr>
+			</table>
+		</td>
+		</tr>		
+		<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">社&nbsp;&nbsp;&nbsp;&nbsp;会</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://society.people.com.cn/n/2015/1026/c136657-27740866.html" title="6岁男孩开生日宴每桌菜上万 还送iPad和名牌包" class="anavy">6岁男孩开生日宴每桌菜上万&nbsp;还送iPad…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://society.people.com.cn/n/2015/1027/c1008-27744124.html" title="交通处罚11月起要放大招 “危险驾驶罪”将入刑" class="anavy">交通处罚11月起要放大招&nbsp;“危险驾驶罪”…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://society.people.com.cn/n/2015/1027/c229589-27744679.html" class="anavy">阎肃老先生去世？家人辟谣&nbsp;称将追究法律责任</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://society.people.com.cn/n/2015/1027/c1008-27746140.html" title="湖南运钞车高速路爆胎坠桥致3死 400万未被哄抢" class="anavy">湖南运钞车高速路爆胎坠桥致3死&nbsp;400万…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://society.people.com.cn/n/2015/1027/c136657-27746462.html" title="房东开水烫伤幼童案在沪宣判 一审房东被判死缓" class="anavy">房东开水烫伤幼童案在沪宣判&nbsp;一审房东被判…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://society.people.com.cn/n/2015/1026/c1008-27740155.html" class="anavy">近半数湿巾含禁用防腐剂&nbsp;心相印等榜上有名</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://society.people.com.cn/n/2015/1026/c1008-27737784.html" class="anavy">投资2300万元&nbsp;污水处理厂闲置一年多</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://society.people.com.cn/n/2015/1026/c1008-27738253.html" class="anavy">女子跳江瞬间&nbsp;公交司机停车冲下救人(图)</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://society.people.com.cn/n/2015/1026/c1008-27737689.html" class="anavy">醒来！数千亿住宅维修金</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://society.people.com.cn/n/2015/1028/c136657-27746982.html" class="anavy">黄标车提前淘汰最高补4.8万元</a></td></tr>
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			  <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">传&nbsp;&nbsp;&nbsp;&nbsp;媒</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://media.people.com.cn/n/2015/1026/c120837-27737912.html" title="陆川全程记录爱妻胡蝶生子过程 &quot;小葫芦&quot;照片曝光" class="anavy">陆川全程记录爱妻胡蝶生子过程&nbsp;&quot;小葫芦&quot;…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://media.people.com.cn/n/2015/1027/c40606-27742633.html" title="田亮称不再带女儿上真人秀 遵守规定不让森碟代言" class="anavy">田亮称不再带女儿上真人秀&nbsp;遵守规定不让森…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://media.people.com.cn/n/2015/1026/c40606-27737843.html" title="&quot;琅琊榜&quot;为什么好看 属于处女座的剧是如何炼成的" class="anavy">&quot;琅琊榜&quot;为什么好看&nbsp;属于处女座的剧是如…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://media.people.com.cn/n/2015/1026/c40606-27737854.html" title="传媒大亨默多克曝新恋情 新女友系前名模相差25岁" class="anavy">传媒大亨默多克曝新恋情&nbsp;新女友系前名模相…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://media.people.com.cn/n/2015/1027/c40606-27742611.html" title="《蚁人》破五亿终夺周冠军 《夏洛特烦恼》后劲足" class="anavy">《蚁人》破五亿终夺周冠军&nbsp;《夏洛特烦恼》…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://media.people.com.cn/n/2015/1027/c40606-27742588.html" title="江苏卫视公布明年重点综艺 &quot;大脑&quot;回归&quot;非诚&quot;升级" class="anavy">江苏卫视公布明年重点综艺&nbsp;&quot;大脑&quot;回归&quot;…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://media.people.com.cn/n/2015/1028/c120837-27747099.html" title="汪涵首档网络综艺节目曝光 优酷土豆2016开年播出" class="anavy">汪涵首档网络综艺节目曝光&nbsp;优酷土豆201…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://media.people.com.cn/n/2015/1027/c40606-27743495.html" title="《奇迹：追逐彩虹》中国戏份杀青 &quot;小飞流&quot;演男一号" class="anavy">《奇迹：追逐彩虹》中国戏份杀青&nbsp;&quot;小飞流…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://media.people.com.cn/n/2015/1028/c120837-27747118.html" title="孟非对饮金星赞其酒量好 或组&quot;非诚&quot;全新&quot;铁三角&quot;" class="anavy">孟非对饮金星赞其酒量好&nbsp;或组&quot;非诚&quot;全新…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://media.people.com.cn/n/2015/1027/c40606-27743545.html" title="秋风行动查办“三假”案件73起 又查处一批假记者" class="anavy">秋风行动查办“三假”案件73起&nbsp;又查处一…</a></td></tr>
+			</table>
+		</td>
+		</tr>
+    	<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			      <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">人民电视</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://tv.people.com.cn/n/2015/1026/c222296-27741756.html" title="红色年代传奇大剧《大秧歌》登荧屏 导演揭秘”男男CP”" class="anavy">红色年代传奇大剧《大秧歌》登荧屏&nbsp;导演揭…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://tv.people.com.cn/n/2015/1026/c374224-27740562.html" class="anavy">陈华：我如何用3年收获3亿用户？</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://tv.people.com.cn/n/2015/1026/c39805-27740859.html" title="全球最贵饼干：103年前的饼干拍出14.6万  来自泰坦尼克号" class="anavy">全球最贵饼干：103年前的饼干拍出14.…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://tv.people.com.cn/n/2015/1026/c39805-27739675.html" class="anavy">吉林一栋居民楼阳台塌落&nbsp;&nbsp;已造成1死4伤&nbsp;</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://tv.people.com.cn/n/2015/1026/c25060-27739502.html" title="关注欧洲难民危机：利比亚——海滩上又发现14具难民遗体" class="anavy">关注欧洲难民危机：利比亚——海滩上又发现…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://tv.people.com.cn/n/2015/1026/c39805-27740848.html" title="扬州政府通报4吨炒饭去向：约300斤送养殖场" class="anavy">扬州政府通报4吨炒饭去向：约300斤送养…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://tv.people.com.cn/n/2015/1026/c39805-27740863.html" class="anavy">环卫小伙8年间用歌声打动女强人</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://tv.people.com.cn/n/2015/1026/c39805-27740887.html" class="anavy">“萌”狐狸来了：动物版“舞林大会”嗨翻全场</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://tv.people.com.cn/n/2015/1026/c39805-27740854.html" class="anavy">老人撕碎4万多现金&nbsp;&nbsp;银行加班拼凑</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://tv.people.com.cn/n/2015/1026/c39805-27740912.html" title="南京：网络交友需谨慎——女子轻信男网友  失身又失财" class="anavy">南京：网络交友需谨慎——女子轻信男网友&nbsp;…</a></td></tr>
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			      <td width="81%" align="left" background="img/rank/news_listbg.gif" class="t16l12brown">体&nbsp;&nbsp;&nbsp;&nbsp;育</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			<tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">1</td><td><a href="http://sports.people.com.cn/n/2015/1027/c22155-27743121.html" title="组图：WTA年终总决赛 李娜出席记者会笑声不断" class="anavy">组图：WTA年终总决赛&nbsp;李娜出席记者会笑…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">2</td><td><a href="http://sports.people.com.cn/n/2015/1026/c22137-27738488.html" class="anavy">组图：恒大最后时刻被扳平&nbsp;中超冠军庆典泡汤</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">3</td><td><a href="http://sports.people.com.cn/n/2015/1026/c22176-27737455.html" class="anavy">中美职业篮球对抗赛中方3分险胜</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">4</td><td><a href="http://sports.people.com.cn/n/2015/1026/c22155-27739102.html" title="外援多达6人热身赛输多胜少 京韵女排能否合洋拍" class="anavy">外援多达6人热身赛输多胜少&nbsp;京韵女排能否…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">5</td><td><a href="http://sports.people.com.cn/n/2015/1026/c22149-27738487.html" title="恩师宫鲁鸣：罹患癌症的女篮国手“不应被忘记”" class="anavy">恩师宫鲁鸣：罹患癌症的女篮国手“不应被忘…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">6</td><td><a href="http://sports.people.com.cn/n/2015/1026/c22134-27738534.html" title="中超冠军本轮难产 “莫须有”判罚左右争冠格局" class="anavy">中超冠军本轮难产&nbsp;“莫须有”判罚左右争冠…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">7</td><td><a href="http://sports.people.com.cn/n/2015/1027/c149182-27743691.html" class="anavy">亚足联驳回希拉尔上诉&nbsp;恒大亚冠决赛对手不变</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">8</td><td><a href="http://sports.people.com.cn/n/2015/1027/c22155-27743396.html" title="法国站国羽仅获一金 李永波：女单已无优势可言" class="anavy">法国站国羽仅获一金&nbsp;李永波：女单已无优势…</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">9</td><td><a href="http://sports.people.com.cn/n/2015/1026/c22176-27741968.html" class="anavy">中国女足“布氏理念”确立：控制球&nbsp;向前进攻</a></td></tr><tr bgcolor="#FFFFFF"><td width="1%" align="center" class="fblack">10</td><td><a href="http://sports.people.com.cn/n/2015/1026/c35862-27740040.html" title="高清：女子万米昆明选手夺冠 肖永丽掉鞋不掉队" class="anavy">高清：女子万米昆明选手夺冠&nbsp;肖永丽掉鞋不…</a></td></tr>
+			</table>
+		</td>
+		</tr>
+        <!--<tr align="center" valign="top"> 
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			  <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			      <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">男&nbsp;&nbsp;&nbsp;&nbsp;士</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			
+			</table>
+		</td>
+		<td width="375"> 
+			<table width="95%" border="0" cellspacing="0" cellpadding="0">
+			<tr> 
+			      <td width="19%"><img src="/img/rank/news_listimg.gif" width="73" height="19"></td>
+			      <td width="81%" background="img/rank/news_listbg.gif" class="t16l12brown">中国政府</td>
+			</tr>
+			<tr bgcolor="#BF9100"> 
+			  <td colspan="2" height="2"><img src="/img/spacer.gif" width="1" height="2"></td>
+			</tr>
+			</table>
+			<table width="95%" border="0" cellspacing="1" cellpadding="3" bgcolor="#BF9100">
+			
+			</table>
+		</td>
+		</tr>-->							
+        </table>
+      </td>
+	      </tr>
+    <tr>
+      <td width="11" valign="top">&nbsp;</td>
+      <td valign="top" align="center"><img src="/img/rank/news_btmimg.gif" width="750" height="14"></td>
+    </tr>
+  </table>
+  <!-- 版权栏 -->
+<style>
+#copyright{clear:both; margin:15px auto 5px; padding-top:10px; width:980px; height:auto; color:#333; font-size:12px; text-align:center;}
+#copyright p{margin:0 0 2px 0; text-align:center;}
+#copyright a{color:#333;}
+#copyright p.p5{padding:5px 0;}
+#copyright p.pb10{width:980px; margin:0 auto; padding-bottom:10px; word-break:keep-all; line-height:28px; overflow:hidden;}
+#copyright p.mt10{margin-top:10px;}
+#copyright p.mt10 span.red{color:#cc0000;}
+#copyright p.mt10 span.red a:link,#copyright p.mt10 span.red a:hover,#copyright p.mt10 span.red a:visited{color:#cc0000; text-decoration:none;}
+</style>
+<div id="copyright">
+<p>镜像:<a href="http://www.people.com.cn/" target="_blank" >日本</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.peopledaily.edu.cn/" target="_blank">教育网</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.peopledaily.ac.cn/" target="_blank">科技网</a></p>
+<p>呼叫热线&nbsp;&nbsp;4008-100-300&nbsp;&nbsp;服务邮箱&nbsp;&nbsp;<a href="mailto:kf@people.cn">kf@people.cn</a></p>
+<p class="p5"><a href="http://www.people.com.cn/GB/1018/22259/index.html" target="_blank">人民日报社概况</a>
+ | <a href="http://www.people.com.cn/GB/50142/353480/353481/index.html" target="_blank">关于人民网</a>
+ | <a href="http://58.68.146.35/exam_print/" target="_blank">考生服务</a>
+ | <a href="http://www.people.com.cn/GB/1018/245490/index.html" target="_blank">招聘英才</a>
+ | <a href="http://www.people.com.cn/GB/208743/index.html" target="_blank">广告服务</a>
+ | <a href="http://www.people.com.cn/GB/50142/50462/index.html" target="_blank">合作加盟</a>
+ | <a href="http://gonggao.people.com.cn/" target="_blank">供稿服务</a>
+ | <a href="http://www.people.com.cn/n/2013/1227/c373005-23961344.html" target="_blank">网站声明</a>
+ | <a href="http://www.people.com.cn/n/2013/1227/c373006-23961372.html" target="_blank">网站律师</a>
+ | <a href="http://kf.people.com.cn/" target="_blank">呼叫中心</a>
+ | <a href="http://english.peopledaily.com.cn/102840/7560415.html" target="_blank">ENGLISH</a>
+</p>
+<p class="pb10"><a href="http://www.people.com.cn/img/2011zzzs/2011icp.htm" target="_blank">京ICP证000006号</a>
+ | 京公网安备110000000008号
+ | <a href="http://www.people.com.cn/img/2011zzzs/2011xxwlcb.htm" target="_blank">网上传播视听节目许可证（0104065）</a>
+ | <a href="http://tv.people.com.cn/GB/6983227.html" target="_blank">中国互联网视听节目服务自律公约</a>
+</p>
+<p class="mt10"><span class="red">人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用</span><br />
+<span>Copyright &copy; 1997-2015 by www.people.com.cn. all rights reserved</span><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0102000101300040" target="_blank"><img src="/img/2011people/images/gongshang.gif" width="40" style="float:right;margin:-50px 190px 0 0px;" height="48" alt="" align="middle" border="0" /></a></p>
+</div>
+<!-- 版权栏结束 -->
+  </center>
+</body>
+</html>

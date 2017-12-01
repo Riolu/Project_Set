@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="publishid" content="1163093.0.1002.0"/>
+<link href="http://www.locpg.hk/static/css/zlb_base1508.css" rel="stylesheet" type="text/css" />
+<link href="http://www.locpg.hk/static/css/base.css" rel="stylesheet" type="text/css" />
+<base target="_blank" />
+<title>香港中联办 - 中央人民政府驻香港特别行政区联络办公室</title>
+    <meta name="description" content="  " />
+<!-- table -->
+<script type="text/javascript" src="http://www.locpg.hk/static/js/jquery_tab.js"></script>  
+<script type="text/javascript" src="http://www.locpg.hk/static/js/common_tab.js"></script> 
+<!-- 焦点轮播图 -->
+<script type="text/javascript" src="http://www.locpg.hk/static/js/jquery_jd.js"></script>  
+<script type="text/javascript" src="http://www.locpg.hk/static/js/jquery_jdt.js"></script> 
+<!-- 爱祖国爱香港 -->
+<script type="text/javascript" src="http://www.locpg.hk/static/js/jquery.js"></script>
+<script type="text/javascript" src="http://www.locpg.hk/static/js/lrtk.js"></script>
+<script type="text/javascript" src="http://images.cac.gov.cn/js/jquery.reveal.js"></script>
+<script src="http://www.locpg.hk/static/js/jq.js" type="text/javascript"></script>
+<script type="text/javascript"> 
+// JavaScript Document
+$(function(){
+$(".tab1 .tab_title1 li").mouseover(function () {
+$(this).addClass('active');
+$(this).siblings().removeClass('active')
+var _index = $(this).index();
+$(this).parent().parent().parent().find('.tab_box_content').eq(_index).show().siblings().hide();
+})		   
+})// JavaScript Document 
+</script>
+<script type="text/javascript"> 
+$(document).ready(function() {	
+ 
+$("ul#topnav li").hover(function() {
+ 
+	$(this).addClass("on");
+ 
+	$(this).find("span").show(); //Show the subnav
+ 
+} , function() { 
+ 
+	$(this).removeClass("on");
+ 
+	$(this).find("span").hide(); 
+ 
+});	
+ 
+});
+ 
+ 
+ 
+</script> 
+<script type="text/javascript"> 
+function KeyDown()
+ 
+{
+ 
+	if (event.keyCode == 13)
+ 
+	{   
+ 
+		searchsearch();
+ 
+	}
+ 
+}
+ 
+function searchsearch(){
+ 
+	var searchword = document.getElementById("sw").value;
+ 
+	if(searchword.replace(/\s/g)==""){
+ 
+		alert("请输入检索词");
+ 
+		return;
+ 
+	}
+ 
+	function LTrim(s)
+ 
+	{
+ 
+		for(var i=0;i<s.length;i++)
+ 
+			if(s.charAt(i)!=' ')
+ 
+			 return s.substring(i,s.length);
+ 
+		 return "";
+ 
+	}
+ 
+	function RTrim(s)
+ 
+	{
+ 
+		for(var i=s.length-1;i>=0;i--)
+ 
+			if(s.charAt(i)!=' ')
+ 
+				return s.substring(0,i+1);
+ 
+			return "";
+ 
+	}
+ 
+	
+ 
+	function Trim(s)
+ 
+	{
+ 
+		return RTrim(LTrim(s));
+ 
+	}
+ 
+	searchword = Trim(searchword);
+ 
+	searchword = searchword.replace(/\s{1,20}/," ");//只保留一個空格
+ 
+	var swArray = searchword.split(" ");
+ 
+	for(var i=0;i<swArray.length;i++)
+ 
+	{
+ 
+		if(i==0)
+ 
+		{
+ 
+			searchword = Trim(swArray[0]);
+ 
+		}
+ 
+		else
+ 
+		{
+ 
+			searchword = searchword + "*" + Trim(swArray[i]);
+ 
+		}
+ 
+	}
+ 
+	document.getElementById("searchword").value = searchword;
+ 
+	document.getElementById("zlb").submit();
+ 
+}
+ 
+ 
+ 
+</script>
+<script type="text/javascript">
+var userAgent = navigator.userAgent.toLowerCase(),l=window.location;
+var platform;
+  if(userAgent == null || userAgent == '' || (l.href.indexOf('f=pad') != -1) ){
+    platform = 'web'
+}else{
+   if(userAgent.indexOf("mi pad" ) != -1 ||userAgent.indexOf("xiaomi/miuibrowser")!= -1||userAgent.indexOf("ipad" )!=-1){
+platform = 'pad';
+        //location.href = "http://www.news.cn/ipad/index.htm" ;
+    } else if (userAgent.match(/iphone/i)||userAgent.match( /iphone os/i)||userAgent.match( /android/i)||userAgent.match(/windows mobile/i)||userAgent.match( /ucweb/i)){
+        platform = 'phone'
+location.href = "http://m.locpg.hk";
+    } else if (userAgent.indexOf('gecko') > -1 && userAgent.indexOf( 'khtml') == -1 && userAgent.indexOf('firefox' ) == -1 && userAgent.indexOf( '11.0') == -1){
+        platform = 'other mobile';
+        location.href = "http://m.locpg.hk";
+    }
+}
+</script>
+<body>
+<div class="top_area">
+<div class="box01">
+<div class="box02l">
+<div class="time">
+<div class="date"><span id="date"></span>&nbsp;<span id="todate"></span></div>
+</div>
+</div>
+<div class="box02r">
+<script type="text/javascript">
+var ftzw = "tp://big5.locpg.hk/gate/big5/www.locpg.hk/";
+var jtzw = "tp://www.locpg.hk";
+var currUrl = document.URL;
+var flag = currUrl.indexOf("gate/big5");
+if(flag<0)
+document.write('<a href="ht'+ftzw+'" class="wenzi01" target="_blank">中文繁体</a>');
+else
+document.write('<a href="ht'+jtzw+'" class="wenzi01" target="_blank">中文简体</a>');
+</script>
+<input name="input" type="text" class="text01" id="sw" onKeyDown="KeyDown();" />
+<input type="button" value="搜索" class="text02" onclick="searchsearch()" />
+<a class="text02" href="http://mail.locpg.hk/" target="_blank">电子邮件系统</a>
+<a href="#" id="rwk_btn_ss" class="ydb" data-reveal-id="myModal">手机版</a>
+</div>
+</div>
+</div>
+<div class="big_banner">
+<div class="banner"> </div>
+</div>
+<div class="nav">
+<ul id="topnav">
+<li><a href="http://www.locpg.hk/index.htm" target="_blank">首页</a></li>
+<li> <a class="a1" href="http://www.locpg.hk/zjzlb/index.htm" target="_blank"> 走进中联办</a> <span><a href="http://www.locpg.hk/zjzlb/2014-01/04/c_125957081.htm" target="_blank">中联办简介</a> | <a href="http://www.locpg.hk/zjzlb/2014-01/04/c_125957082.htm" target="_blank">主要职能</a> | <a href="http://www.locpg.hk/zjzlb/zygy.htm" target="_blank">主要官员</a> | <a href="http://www.locpg.hk/zjzlb/2014-01/04/c_125957083.htm" target="_blank">内设机构</a> | <a href="http://www.locpg.hk/zjzlb/2014-01/04/c_125957084.htm" target="_blank">网站标识说明</a> | <a href="http://www.locpg.hk/zjzlb/2014-01/04/c_125957086.htm" target="_blank">联系我们</a> </span></li>
+<li><a class="a1">资讯中心</a> <span> <a href="http://www.locpg.hk/zxzx/xzdt.htm" target="_blank">最新动态</a> | <a href="http://www.locpg.hk/zxzx/zyzc.htm" target="_blank">中央支持</a> | <a href="http://www.locpg.hk/zxzx/wbdt.htm" target="_blank">我办动态</a> | <a href="http://www.locpg.hk/zxzx/ldjl.htm" target="_blank">两地交流</a> | <a href="http://www.locpg.hk/zxzx/qnxszy.htm" target="_blank">青年学生之友</a> | <a href="http://www.locpg.hk/zxzx/xgzx.htm" target="_blank">香港在线</a> | <a href="http://www.locpg.hk/zxzx/stsw.htm" target="_blank">涉台事务</a> | <a href="http://www.locpg.hk/zxzx/mtyl.htm" target="_blank">媒体言论</a> | <a href="http://www.locpg.hk/zxzx/zt.htm" target="_blank">专题</a> </span></li>
+<li><a class="a1">服务指南</a> <span> <a href="http://www.locpg.hk/fwzn/zggq.htm" target="_blank">中国国情</a> | <a href="http://www.locpg.hk/fwzn/xggk.htm" target="_blank">香港概况</a> | <a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/index.htm" target="_blank">香港居民赴内地</a> | <a href="http://www.locpg.hk/fwzn/fwxx/ndjmfxg/index.htm" target="_blank">内地居民赴香港</a></span></li>
+<li><a class="a1" href="http://www.locpg.hk/flfg/index.htm" target="_blank">法律法规</a><span> <a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301.htm" target="_blank">中华人民共和国宪法</a> |  <a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320.htm" target="_blank">香港基本法（中文版）</a> | <a href="http://www.fmprc.gov.cn/eng/wjb/zzjg/tyfls/tyfl/2626/t15466.htm" target="_blank">香港基本法（英文版）</a> | <a href="http://www.locpg.hk/flfg/jbfxgwj.htm" target="_blank">基本法相关文件</a> | <a href="http://www.locpg.hk/flfg/qgrdcwhsfjjd.htm" target="_blank">全国人大常委会释法及决定</a> | <a href="http://www.locpg.hk/flfg/index.htm#00" target="_blank">法律法规查询</a> | <a href="http://www.locpg.hk/flfg/dtxx.htm" target="_blank">动态信息</a></span></li>
+<li><a class="a1" href="http://www.locpg.hk/tp/index.htm" target="_blank">图片</a><span> <a href="http://www.locpg.hk/tp/tpmore.htm" target="_blank">首页大图</a> | <a href="http://www.locpg.hk/tp/azgaxg/index.htm" target="_blank">爱祖国·爱香港</a></span></li>
+<li><a href="http://www.locpg.hk/sp/index.htm" target="_blank">视频</a></li>
+<li style="border-right:none"><a href="http://www.locpg.hk/wszl/index.htm" target="_blank">网上展览</a></li>
+</ul>
+</div>
+<form action="http://www.locpg.hk/search" method="GET" id="zlb" target="_blank">
+<input type="hidden" name="channelid" value="250016" />
+<input type="hidden" name="searchword" id="searchword" />
+</form>
+<script> 
+/*时间*/
+ 
+function calendar_index(){var enabled = 0;var today = new Date();var day;var date;var centry="";if(today.getDay()==0) day="星期日";if(today.getDay()==1) day="星期一";if(today.getDay()==2) day="星期二";if(today.getDay()==3) day="星期三";if(today.getDay()==4) day="星期四";if(today.getDay()==5) day="星期五";if(today.getDay()==6) day="星期六";if(today.getFullYear()<2000) centry = "19";date1=centry+(today.getFullYear())+"年"+(today.getMonth()+1)+"月"+today.getDate()+"日  ";date2=""+day;$("#date").html(date1+date2);var CalendarData=new Array(100);var madd=new Array(12);var tgString="甲乙丙丁戊己庚辛壬癸";var dzString="子丑寅卯辰巳午未申酉戌亥";var numString="一二三四五六七八九十";var monString="正二三四五六七八九十冬腊";var weekString="日一二三四五六";var sx="鼠牛虎兔龙蛇马羊猴鸡狗猪";var cYear,cMonth,cDay,TheDate;CalendarData = new Array(0xA4B,0x5164B,0x6A5,0x6D4,0x415B5,0x2B6,0x957,0x2092F,0x497,0x60C96,0xD4A,0xEA5,0x50DA9,0x5AD,0x2B6,0x3126E, 0x92E,0x7192D,0xC95,0xD4A,0x61B4A,0xB55,0x56A,0x4155B, 0x25D,0x92D,0x2192B,0xA95,0x71695,0x6CA,0xB55,0x50AB5,0x4DA,0xA5B,0x30A57,0x52B,0x8152A,0xE95,0x6AA,0x615AA,0xAB5,0x4B6,0x414AE,0xA57,0x526,0x31D26,0xD95,0x70B55,0x56A,0x96D,0x5095D,0x4AD,0xA4D,0x41A4D,0xD25,0x81AA5, 0xB54,0xB6A,0x612DA,0x95B,0x49B,0x41497,0xA4B,0xA164B, 0x6A5,0x6D4,0x615B4,0xAB6,0x957,0x5092F,0x497,0x64B, 0x30D4A,0xEA5,0x80D65,0x5AC,0xAB6,0x5126D,0x92E,0xC96,0x41A95,0xD4A,0xDA5,0x20B55,0x56A,0x7155B,0x25D,0x92D,0x5192B,0xA95,0xB4A,0x416AA,0xAD5,0x90AB5,0x4BA,0xA5B, 0x60A57,0x52B,0xA93,0x40E95);madd[0]=0;madd[1]=31;madd[2]=59;madd[3]=90;madd[4]=120;madd[5]=151;madd[6]=181;madd[7]=212;madd[8]=243;madd[9]=273;madd[10]=304;madd[11]=334; function GetBit(m,n) {  return (m>>n)&1; };function e2c(){ TheDate= (arguments.length!=3) ? new Date() : new Date(arguments[0],arguments[1],arguments[2]); var total,m,n,k;var isEnd=false;var tmp=TheDate.getFullYear();total=(tmp-1921)*365+Math.floor((tmp-1921)/4)+madd[TheDate.getMonth()]+TheDate.getDate()-38;if (TheDate.getYear()%4==0&&TheDate.getMonth()>1) { total++;}for(m=0;;m++){k=(CalendarData[m]<0xfff)?11:12;for(n=k;n>=0;n--){if(total<=29+GetBit(CalendarData[m],n)){isEnd=true; break;}total=total-29-GetBit(CalendarData[m],n);}if(isEnd) break;}cYear=1921 + m; cMonth=k-n+1; cDay=total;if(k==12) {if(cMonth==Math.floor(CalendarData[m]/0x10000)+1) { cMonth=1-cMonth; }if(cMonth>Math.floor(CalendarData[m]/0x10000)+1){ cMonth--; } }};function GetcDateString(){ var tmp="";tmp+=tgString.charAt((cYear-4)%10); tmp+=dzString.charAt((cYear-4)%12);tmp+="年 "; if(cMonth<1) { tmp+="(闰)"; tmp+=monString.charAt(-cMonth-1); } else {tmp+=monString.charAt(cMonth-1);}tmp+="月";tmp+=(cDay<11)?"初":((cDay<20)?"十":((cDay<30)?"廿":"三十")); if (cDay%10!=0||cDay==10) { tmp+=numString.charAt((cDay-1)%10); }return tmp;};function GetLunarDay(solarYear,solarMonth,solarDay){ if (solarYear<1921 || solarYear>2020){return "";} else {solarMonth = (parseInt(solarMonth)>0) ? (solarMonth-1) : 11;e2c(solarYear,solarMonth,solarDay); return GetcDateString();}};var D=new Date();var yy=D.getFullYear();var mm=D.getMonth()+1;var dd=D.getDate();var ww=D.getDay();var ss=parseInt(D.getTime() / 1000); $("#todate").html(GetLunarDay(yy,mm,dd));};
+ 
+ 
+ 
+calendar_index();
+ 
+</script>
+<div id="container">
+<div class="webpage">
+<div class="news">
+<div class="news_left">
+<div class="fourcePic fourcePic1">
+<div class="num"><a class="cur">1</a><a>2</a><a>3</a><a>4</a><a>5</a></div>
+<ul>
+<li style="display: block;">
+<a href="http://www.locpg.hk/jsdt/2015-10/27/c_128362811.htm"><img src="titlepic/111695/1116950232_1445913485096_title0h.jpg" width="550" height="300" alt="仇鸿率香港工商界代表团出席中蒙博览会" /></a>        
+<p class="bg"></p>
+<p class="tit"><a href="http://www.locpg.hk/jsdt/2015-10/27/c_128362811.htm" target="_blank">仇鸿率香港工商界代表团出席中蒙博览会</a> </p>
+</li>
+<li style="display: none;">
+<a href="http://www.locpg.hk/jsdt/2015-10/22/c_128347588.htm"><img src="titlepic/111691/1116910935_1445508502807_title0h.jpg" width="550" height="300" alt="林武主礼中国香港海口联谊会成立暨首届会董就职典礼" /> </a>          
+<p class="bg"></p>
+<p class="tit"><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128347588.htm" target="_blank">林武主礼中国香港海口联谊会成立暨首届会董就职典礼</a> </p>
+</li>
+<li style="display: none;">
+<a href="http://www.locpg.hk/jsdt/2015-10/22/c_128347562.htm"><img src="titlepic/111691/1116910679_1445508510031_title0h.jpg" width="550" height="300" alt="仇鸿出席香港新活力青年智库第一届理事会就职典礼" /> </a>          
+<p class="bg"></p>
+<p class="tit"><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128347562.htm" target="_blank">仇鸿出席香港新活力青年智库第一届理事会就职典礼</a> </p>
+</li>
+<li style="display: none;">
+<a href="http://www.locpg.hk/jsdt/2015-10/20/c_128339290.htm"><img src="titlepic/111688/1116884290_1445336879497_title0h.jpg" width="550" height="300" alt="杨健出席《紫荆》杂志创刊25周年庆典" /> </a>          
+<p class="bg"></p>
+<p class="tit"><a href="http://www.locpg.hk/jsdt/2015-10/20/c_128339290.htm" target="_blank">杨健出席《紫荆》杂志创刊25周年庆典</a> </p>
+</li>
+<li style="display: none;">
+<a href="http://www.locpg.hk/zt/xgszkct/index.htm"><img src="titlepic/111681/1116813126_1444787554316_title0h.JPG" width="550" height="300" alt="记香港社团领袖考察深圳创新科技产业活动" /> </a>          
+<p class="bg"></p>
+<p class="tit"><a href="http://www.locpg.hk/zt/xgszkct/index.htm" target="_blank">记香港社团领袖考察深圳创新科技产业活动</a> </p>
+</li>
+</ul>
+</div>
+</div>
+<!-- 分割线 -->
+<div class="news_right">
+<div class="toutiao">
+<div class="news_tit"><a href="http://www.locpg.hk/zt/xgszkct/index.htm" target="_blank">携手谱写新的“双城记”<br />记香港社团领袖考察深圳创新科技产业活动</a></div>
+<div class="news_con"><a href="http://www.locpg.hk/zt/xgszkct/index.htm">10月12日，中央政府驻港联络办主任张晓明、副主任林武率香港28个社团的近50名社团领袖专程赴深圳考察创新科技产业，参观了比亚迪、华为等企业，探讨深港两地在创新科技产业中的合作共赢与共同发展问题。</a></div>
+</div>
+<div class="fenge"></div>
+<div class="news_con1">
+<ul>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/27/c_128362811.htm" target="_blank">仇鸿率香港工商界代表团出席中蒙博览会</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/26/c_128359945.htm">香港舆论高度评价习近平主席访英</a></li>
+<li><a href="http://www.locpg.hk/xgzx/2015-10/26/c_128359943.htm">香港各界高度评价习近平访英:开创中英关系"黄金时代"</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128347588.htm">林武主礼中国香港海口联谊会成立暨首届会董就职典礼</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128347562.htm">仇鸿出席香港新活力青年智库第一届理事会就职典礼</a></li>
+</ul>
+</div>
+<div class="more_n"><a href="http://www.locpg.hk/yw.htm">更多>></a></div>
+</div>
+<div class="clear"></div>
+</div>
+<!-- 分割线 -->
+<div id="zlb">
+<div class="box_zygh">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/zxzx/zyzc.htm">更多>></a></span>
+<h2>中央支持</h2>
+</div>
+<div class="box_con">
+<div class="box_con_zygh">
+<a href="http://www.locpg.hk/jsdt/2015-10/09/c_128301113.htm"><img src="titlepic/12830/128301113_1444384012418_title0h.jpg" width="280" height="130" alt="张德江会见香港纪律部队文化交流团" /></a> 
+<div class="clear"></div>
+<div class="zygh_tit"><a href="http://www.locpg.hk/jsdt/2015-10/09/c_128301113.htm">张德江会见香港纪律部队文化交流团</a></div>
+</div>
+<ul>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/06/c_128292491.htm" target="_blank">孙春兰与香港部分爱国爱港人士座谈</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-09/16/c_128235236.htm">孙春兰会见香港各界妇女联合协进会访京团</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-08/24/c_128160807.htm" target="_blank">证监会：内地证券经营机构对港澳进一步开放</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-08/10/c_128111373.htm">李源潮会见香港青年创新创业交流团</a></li>
+</ul>
+</div>
+</div>
+<!-- 分割线 -->
+<div class="zu">
+<div class="box">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/zxzx/wbdt.htm">更多>></a></span>
+<span class="link" style="margin-right:20px;"><a href="http://www.locpg.hk/zxzx/bldjh/index.htm">办领导讲话</a></span>
+<h2>我办动态</h2>
+</div>
+<div class="box_con">
+<div class="box_con_top">
+<a href="http://www.locpg.hk/zt/xgszkct/index.htm"><img src="titlepic/111681/1116813130_1444786921359_title0h.JPG" width="120" height="90" alt="记香港社团领袖考察深圳创新科技产业活动" /></a>
+<div class="top_right">
+<h3><a href="http://www.locpg.hk/zt/xgszkct/index.htm" target="_blank">记香港社团领袖考察深圳创新科技产业活动</a></h3>
+<p>10月12日，张晓明、林武率团赴深圳考察创新科技产业。</p>
+</div>
+</div>
+<ul>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/27/c_128362811.htm" target="_blank">仇鸿率香港工商界代表团出席中蒙博览会</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128347588.htm" target="_blank">林武主礼中国香港海口联谊会成立典礼</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128347562.htm" target="_blank">仇鸿出席香港新活力青年智库理事会就职典礼</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/20/c_128339290.htm">杨健出席《紫荆》杂志创刊25周年庆典</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/13/c_128313676.htm">仇鸿出席甬港联谊会成立35周年庆祝大会</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/07/c_128293590.htm">杨健出席香港体育界庆祝国庆66周年联欢宴会</a></li>
+</ul>
+</div>
+</div>
+<div class="box_right">
+<!-- 分割线 -->
+<div class="shipin">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/sp/index.htm">更多>></a></span>
+<h2>视频</h2>
+</div>
+<a href="http://www.locpg.hk/2015-10/27/c_128364092.htm"><img class="bofang" src="http://www.locpg.hk/static/imgs/bofang.png" /></a><a href="http://www.locpg.hk/2015-10/27/c_128364092.htm"><img src="titlepic/111695/1116956871_1445939928882_title0h.jpg" width="280" height="140" alt="香港各界纪念抗战胜利暨台湾光复70周年大会" /></a>
+<p class="bg_shipin"></p>
+<p class="tit_shipin"><a href="http://www.locpg.hk/2015-10/27/c_128364092.htm" target="_blank">香港各界纪念抗战胜利暨台湾光复70周年大会</a></p>
+</div>
+<!-- 分割线 -->
+<div class="zhuanti">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/zxzx/zt.htm">更多>></a></span>
+<h2>专题</h2>
+</div>
+<a href="http://www.locpg.hk/zt/xgszkct/index.htm"><img src="titlepic/111681/1116817338_1444808340824_title0h.jpg" width="130" height="80" alt="香港社团领袖考察深圳创新科技产业" /></a><a href="http://www.locpg.hk/zt/kzsl70/index.htm"><img src="titlepic/111640/1116408874_1441015571976_title0h.jpg" width="130" height="80" alt="纪念抗战胜利70周年专题" /></a>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="ldjl">
+<div class="zu_ldjl">
+<div class="box1">
+<div class="box1_top">
+<div class="box_tit">
+<span class="link"><a href="http://www.locpg.hk/zxzx/jmwl.htm">经贸往来</a> | <a href="http://www.locpg.hk/zxzx/kjjy.htm">教育科技</a> | <a href="http://www.locpg.hk/zxzx/shwh.htm">社会文化</a></span>
+<h2><a href="http://www.locpg.hk/zxzx/ldjl.htm">两地交流</a></h2>
+</div>
+<div class="box_con">
+<div class="box_con_top">
+<a href="http://www.locpg.hk/jsdt/2015-08/04/c_128091478.htm"><img src="titlepic/111613/1116139096_1439779239344_title0h.jpg" width="120" height="90" alt="中华海外联谊会香港理事赴四川甘孜州考察" /></a>
+<div class="top_right">
+<h3><a href="http://www.locpg.hk/jsdt/2015-08/04/c_128091478.htm" target="_blank">中华海外联谊会香港理事赴四川甘孜州考察</a></h3>
+<p>7月27日至31日，30余名香港理事赴四川甘孜州考察。</p>
+</div>
+</div>
+<ul>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/28/c_128367679.htm">香港金发局:两地跨境合作为ETF行业带来商机</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/26/c_128358385.htm">内蒙古—香港经贸合作洽谈会举行</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128346416.htm">陕粤港澳经济合作活动周在港开幕</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128346442.htm">内地免试招收港生院校增至84所</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/16/c_128325697.htm" target="_blank">特区政府与环保部签署协议加强环评工作合作</a></li>
+</ul>
+</div>
+</div>
+<div class="xgzx">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/zxzx/xgzx.htm">更多>></a></span>
+<h2>香港在线</h2>
+</div>
+<ul>
+<li><a href="http://www.locpg.hk/xgzx/2015-10/26/c_128359943.htm">香港各界高度评价习近平主席访英</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/23/c_128351558.htm">香港举办美酒佳肴巡礼　规模为历届之冠</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128346377.htm">香港特区政府举行仪式纪念二战捐躯人士</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128346403.htm">香港“中国电影展2015”开幕</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/15/c_128322093.htm">走进香港首个电子街市</a></li>
+</ul>
+</div>
+</div>
+<div class="box_table">
+<div class="tab">
+<div class="tab_title">
+<ul>
+<li class="active"><a href="http://www.locpg.hk/zxzx/qnxszy.htm">青年学生之友</a></li>
+<li><a href="http://www.locpg.hk/zxzx/stsw.htm">涉台事务</a></li>
+</ul>
+</div>
+<div class="tab_box">
+<div class="tab_box_content" style="display:block;">
+<div>
+<div class="box_con">
+<div class="box_con_top">
+<a href="http://www.locpg.hk/jsdt/2015-10/23/c_128351768.htm"><img src="titlepic/111692/1116923454_1445592853314_title0h.jpg" width="120" height="90" alt="香港圣约翰救伤队在京举办迈向100周年庆祝活动" /></a>
+<h3><a href="http://www.locpg.hk/jsdt/2015-10/23/c_128351768.htm" target="_blank">香港圣约翰救伤队在京举办迈向100周年庆祝活动</a></h3>
+<p>17日晚，香港圣约翰救伤队举行迈向100周年庆典启动仪式。</p>
+</div>
+<ul>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/27/c_128363213.htm" target="_blank">香港青少年开展纪念东江供水五十周年活动</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128347561.htm" target="_blank">香港17家青少年团体举行联合大会操</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/23/c_128351591.htm" target="_blank">三个港青内地打造互联网美妆平台</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-09/22/c_128254984.htm">实习改变观念 香港女生盼北上内地发展</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-09/14/c_128226962.htm" target="_blank">北上实习受香港大学生欢迎 提供发展新机遇</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="tab_box_content">
+<div>
+<div class="box_con">
+<div class="box_con_top">
+<a href="http://www.locpg.hk/jsdt/2015-10/05/c_128291350.htm"><img src="titlepic/111674/1116747939_1444207450777_title0h.jpg" width="120" height="90" alt="香港各界举行纪念抗战胜利暨台湾光复70周年大会" /></a>
+<h3><a href="http://www.locpg.hk/jsdt/2015-10/05/c_128291350.htm" target="_blank">香港各界举行纪念抗战胜利暨台湾光复70周年大会</a></h3>
+<p>这是香港50多家民间团体联合举办的盛大纪念活动。</p>
+</div>
+<ul>
+<li><a href="http://www.locpg.hk/jsdt/2015-07/30/c_128076754.htm" target="_blank">两岸四地青年南京“相聚国旗下”</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-07/22/c_128047354.htm">两岸四地青年分享“创客”心得</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-07/17/c_128031556.htm">两岸学者关注“一带一路”</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-04/15/c_127692763.htm">杨建平出席“两岸四地中医中药发展论坛”</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-01/14/c_127385824.htm">第13届香港国际授权展举行 海峡两岸同台</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xgzx">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/zxzx/mtyl.htm">更多>></a></span>
+<h2>媒体言论</h2>
+</div>
+<ul>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/26/c_128359945.htm">香港舆论高度评价习近平主席访英</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/13/c_128313733.htm">香港商报：港深创新科技应拍往上</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/13/c_128313711.htm">大公报：港深比翼飞 共谱“双城记”</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-10/13/c_128313710.htm">文汇报：深圳模式启示 香港须弃政争重创新</a></li>
+<li><a href="http://www.locpg.hk/jsdt/2015-09/17/c_128238002.htm">人民日报：港府“适度有为”势在必行</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="box_flfg">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/flfg/index.htm">更多>></a></span>
+<span class="link" style="margin-right:20px;"><a href="http://www.locpg.hk/flfg/dtxx.htm">动态信息</a></span>
+<h2>法律法规</h2>
+</div>
+<div class="tab1">
+<div class="tab_title1">
+<ul>
+<li class="active"><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301.htm">中华人民共和国宪法</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320.htm">香港基本法(中文版)</a></li>
+</ul>
+</div>
+<div class="tab_box">
+<div class="tab_box_content" style="display:block;">
+<div class="box_con1">
+<ul>
+<li><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301.htm">序　　言</a></li>
+<li><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_2.htm">第一章　总 纲</a></li>
+<li><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_3.htm">第二章　公民的基本权利和义务</a></li>
+<li><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_4.htm">第三章　国家机构</a></li>
+<li class="jie"><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_4.htm">第一节 全国人民代表大会</a></li>
+<li class="jie"><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_5.htm">第二节 中华人民共和国主席</a></li>
+<li class="jie"><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_6.htm">第三节 国务院</a></li>
+<li class="jie"><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_7.htm">第四节 中央军事委员会</a></li>
+<li class="jie"><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_8.htm">第五节 地方各级人民代表大会和地方各级人民政府</a></li>
+<li class="jie"><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_9.htm">第六节 民族自治地方的自治机关</a></li>
+<li class="jie"><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_10.htm">第七节 人民法院和人民检察院</a></li>
+<li><a href="http://www.locpg.hk/jsdt/1994-06/02/c_125956301_11.htm">第四章　国旗、国歌、国徽、首都</a></li>
+</ul>
+</div>
+</div>
+<div class="tab_box_content">
+<div class="box_con2">
+<ul>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_2.htm">序　　言</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_3.htm">第一章　总　　则</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_4.htm">第二章　中央和香港特别行政区的关系</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_5.htm">第三章　居民的基本权利和义务</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_6.htm">第四章　政治体制</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_12.htm">第五章　经　　济</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_16.htm">第六章　教育、科学、文化、体育、宗教、<br /> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;劳工和社会服务</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_17.htm">第七章　对外事务</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_18.htm">第八章　本法的解释和修改</a></li>
+<li><a href="http://www.locpg.hk/flfg/1990-04/05/c_125956320_19.htm">第九章　附　　则</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="box_con1">
+<div class="box_con_tit1"><a href="http://www.fmprc.gov.cn/eng/wjb/zzjg/tyfls/tyfl/2626/t15466.htm">香港基本法(英文版)</a></div>
+</div>
+<div class="box_con_tit2"><img src="http://www.locpg.hk/static/imgs/icon_flfg.png" />法律法规查询</div>
+<a href="http://www.locpg.hk/flfg/index.htm#00"><img src="http://www.locpg.hk/static/imgs/flfg1.png" /></a><a href="http://www.locpg.hk/flfg/index.htm#00"><img src="http://www.locpg.hk/static/imgs/flfg2.png" /></a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="azg">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/tp/azgaxg/index.htm">更多>></a></span>
+<h2>爱祖国·爱香港</h2>
+</div>
+<!-- 代码开始 -->
+<div class="azg_box">
+<div class="picbox">
+<ul class="piclist mainlist">
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-10/22/c_128346458.htm"><img src="titlepic/12834/128346458_1445484326128_title0h.jpg" width="302" height="200" alt="黄金与货币高峰论坛在香港举行" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-10/22/c_128346458.htm">黄金与货币高峰论坛在香港举行</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-10/19/c_128335098.htm"><img src="titlepic/111687/1116870666_1445245534734_title0h.jpg" width="302" height="200" alt="2500人竞渡香港维多利亚港" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-10/19/c_128335098.htm" target="_blank">2500人竞渡香港维多利亚港</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-10/15/c_128322093.htm"><img src="titlepic/111683/1116834896_1444893820003_title0h.jpg" width="302" height="200" alt="走进香港首个电子街市" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-10/15/c_128322093.htm" target="_blank">走进香港首个电子街市</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-09/23/c_128259023.htm"><img src="titlepic/111665/1116651489_1442976085489_title0h.jpg" width="302" height="200" alt="从国家发展战略定位香港未来 大咖们怎么看？" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-09/23/c_128259023.htm" target="_blank">从国家发展战略定位香港未来 大咖们怎么看？</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-08/31/c_128183735.htm"><img src="titlepic/111642/1116422675_1440987697640_title0h.jpg" width="302" height="200" alt="香港举行巡游活动纪念抗战胜利70周年" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-08/31/c_128183735.htm" target="_blank">香港举行巡游活动纪念抗战胜利70周年</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-08/11/c_128115939.htm"><img src="titlepic/111624/1116246029_1439453311119_title0h.jpg" width="302" height="200" alt="香港举行&ldquo;历史不能忘记,嘉庚精神永存&rdquo;图片展" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-08/11/c_128115939.htm" target="_blank">香港举行“历史不能忘记,嘉庚精神永存”图片展</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-07/01/c_128043371.htm"><img src="titlepic/12804/128043371_1437472507545_title0h.jpg" width="302" height="200" alt="香港举行升旗仪式庆祝回归祖国18周年" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-07/01/c_128043371.htm">香港举行升旗仪式庆祝回归祖国18周年</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-04/24/c_127729199.htm"><img src="titlepic/111507/1115078795_1435565008642_title0h.jpg" width="302" height="200" alt="香港举办明信片展 从老明信片看中国" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-04/24/c_127729199.htm" target="_blank">香港举办明信片展 从老明信片看中国</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-05/04/c_127763881.htm"><img src="titlepic/12776/127763881_1435562878274_title0h.jpg" width="302" height="200" alt="香港举行&ldquo;五四&rdquo;青年节升旗礼" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-05/04/c_127763881.htm">香港举行“五四”青年节升旗礼</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-04/08/c_127668146.htm"><img src="titlepic/111490/1114902640_title0h.jpg" width="302" height="200" alt="驻港部队用实际行动赢得认同" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-04/08/c_127668146.htm" target="_blank">驻港部队用实际行动赢得认同</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-04/08/c_127668092.htm"><img src="titlepic/111490/1114902442_1435563715750_title0h.jpg" width="302" height="200" alt="８０００多人参加香港清明祭祖大典" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-04/08/c_127668092.htm" target="_blank">８０００多人参加香港清明祭祖大典</a></p>
+</li>
+<li>
+<a href="http://www.locpg.hk/jsdt/2015-04/08/c_127668042.htm"><img src="titlepic/111490/1114902362_title0h.jpg" width="302" height="200" alt="香港推广基本法读物萌萌哒" /></a>			                
+<p class="bg1"></p>
+<p class="tit1"><a href="http://www.locpg.hk/jsdt/2015-04/08/c_127668042.htm" target="_blank">香港推广基本法读物萌萌哒</a></p>
+</li>
+</ul>
+<ul class="piclist swaplist"></ul>
+</div>
+<div class="og_prev"></div>
+<div class="og_next"></div>
+</div>
+<!-- 代码结束 -->
+</div>
+<div class="clear"></div>
+<div id="fwzn">
+<div class="zggq">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/fwzn/zggq.htm">更多>></a></span>
+<h2>中国国情</h2>
+</div>
+<div class="zggq_con">
+<ul>
+<li class="icon1"><a href="http://www.locpg.hk/fwzn/zggq.htm#c1">基本情况</a></li>
+<li class="icon2"><a href="http://www.locpg.hk/fwzn/zggq.htm#c2">国家政治</a></li>
+<li class="icon3"><a href="http://www.locpg.hk/fwzn/zggq.htm#c3">自然地理</a></li>
+<li class="icon4"><a href="http://www.locpg.hk/fwzn/zggq.htm#c4">法律制度</a></li>
+<li class="icon5"><a href="http://www.locpg.hk/fwzn/zggq.htm#c5">经济发展</a></li>
+<li class="icon6"><a href="http://www.locpg.hk/fwzn/zggq.htm#c6">一国两制</a></li>
+<li class="icon7"><a href="http://www.locpg.hk/fwzn/zggq.htm#c7">宗教概况</a></li>
+<li class="icon8"><a href="http://www.locpg.hk/fwzn/zggq.htm#c8">历史概况</a></li>
+</ul>
+</div>
+</div>
+<div class="zggq">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/fwzn/xggk.htm">更多>></a></span>
+<h2>香港概况</h2>
+</div>
+<div class="zggq_con">
+<ul>
+<li class="icon9"><a href="http://www.locpg.hk/xggk/2014-01/04/c_125956093.htm">自然概况</a></li>
+<li class="icon10"><a href="http://www.locpg.hk/xggk/2014-01/04/c_125956149.htm">历史简况</a></li>
+<li class="icon12"><a href="http://www.locpg.hk/xggk/2014-01/04/c_125956120.htm">经济概况</a></li>
+<li class="icon13"><a href="http://www.locpg.hk/xggk/2014-01/04/c_125956103.htm">政制架构</a></li>
+<li class="icon14"><a href="http://www.locpg.hk/xggk/2014-01/04/c_125956154.htm">社会文化</a></li>
+<li class="icon11"><a href="http://www.locpg.hk/fwzn/xggk.htm#c3">政府网页</a></li>
+<li class="icon15"><a href="http://www.locpg.hk/fwzn/xggk.htm#c7">旅游景点</a></li>
+<li class="icon16"><a href="http://www.locpg.hk/fwzn/xggk.htm#c7">交通地图</a></li>
+</ul>
+</div>
+</div>
+<div class="zggq1">
+<div class="box_tit">
+<h2>服务信息</h2>
+</div>
+<div class="zggq_con">
+<div class="fuwu1">
+<div class="fuwu_tit1">
+<div class="tit_l"><img src="http://www.locpg.hk/static/imgs/line1.png" /></div>
+<div class="tit_m"><a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/index.htm">香港居民赴内地</a></div>
+<div class="tit_r"><img src="http://www.locpg.hk/static/imgs/line2.png" /></div>
+</div>
+<div class="clear"></div>
+<div class="fuwu_con1">
+<a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/wldj.htm">往来、定居</a> <a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/ys.htm">内地营商</a> <a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/jx.htm">内地就学</a> <a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/jy.htm">内地就业</a> <a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/ly.htm"> 内地旅游</a> <a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/cf.htm">内地采访</a> <a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/qybz.htm">权益保障</a><span class="fuwu_con1t"><a href="http://www.locpg.hk/fwzn/fwxx/xgjmfnd/xgzndgfjg.htm">香港驻内地官方机构</a></span>
+</div>
+</div>
+<div class="fuwu2">
+<div class="fuwu_tit2">
+<div class="tit_l"><img src="http://www.locpg.hk/static/imgs/line1.png" /></div>
+<div class="tit_m"><a href="http://www.locpg.hk/fwzn/fwxx/ndjmfxg/index.htm">内地居民赴香港</a></div>
+<div class="tit_r"><img src="http://www.locpg.hk/static/imgs/line2.png" /></div>
+</div>
+<div class="clear"></div>
+<div class="fuwu_con2">
+<a href="http://www.locpg.hk/fwzn/fwxx/ndjmfxg/wldj.htm">往来、定居</a>  <a href="http://www.locpg.hk/fwzn/fwxx/ndjmfxg/tz.htm">赴港投资</a> <a href="http://www.locpg.hk/fwzn/fwxx/ndjmfxg/jx.htm">赴港就学</a> <a href="http://www.locpg.hk/fwzn/fwxx/ndjmfxg/jy.htm"> 赴港就业</a> <a href="http://www.locpg.hk/fwzn/fwxx/ndjmfxg/ly.htm">赴港旅游</a> <a href="http://www.locpg.hk/fwzn/fwxx/ndjmfxg/qybz.htm">权益保障</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="wszl">
+<div class="box_tit">
+<span class="more"><a href="http://www.locpg.hk/wszl/index.htm">更多>></a></span>
+<h2>网上展览</h2>
+</div>
+<a href="http://fms.news.cn/swf/kzslg2015/index.html"><img src="titlepic/111614/1116142656_1438677066421_title0h.jpg" width="960" height="134" alt="抗战全景史料馆" /></a>
+</div>
+<div id="wsdh">
+<div class="box_tit">
+<h2>网址导航</h2>
+</div>
+<div class="right_top15">
+<ul style="list-style-type: none;">
+<li>
+<select onchange="if(this.value!=&quot;&quot;){window.open(this.value);this.selectedIndex=0;}else{this.selectedIndex=0;}" class="select" name="select1">
+<option selected="" value="">中央及部委网站&nbsp;&nbsp;&nbsp;</option>
+<option value="http://www.gov.cn/">中国政府网</option>
+<option value="http://www.ccdi.gov.cn/ ">中纪委网站</option>
+<option value="http://www.zytzb.org.cn/ ">中央统战部</option>
+<option value="http://www.zlb.gov.cn/ ">中央政府驻澳门联络办</option>
+<option value="http://www.scio.gov.cn/">国新办</option>
+<option value="http://www.hmo.gov.cn/">港澳办</option>
+<option value="http://www.mfa.gov.cn/">外交部</option>
+<option value="http://www.mod.gov.cn/">国防部</option>
+<option value="http://www.ndrc.gov.cn/">发展改革委员会</option>
+<option value="http://www.moe.gov.cn/">教育部</option>
+<option value="http://www.most.gov.cn/">科技部</option>
+<option value="http://www.miit.gov.cn/">工业和信息化部</option>
+<option value="http://www.seac.gov.cn/">国家民委</option>
+<option value="http://www.mps.gov.cn/">公安部</option>
+<option value="http://www.mos.gov.cn/">监察部</option>
+<option value="http://www.mca.gov.cn/">民政部</option>
+<option value="http://www.moj.gov.cn/">司法部</option>
+<option value="http://www.mof.gov.cn/">财政部</option>
+<option value="http://www.mohrss.gov.cn/">人力资源和社会保障部</option>
+<option value="http://www.mlr.gov.cn/">国土资源部</option>
+<option value="http://www.mep.gov.cn/">环境保护部</option>
+<option value="http://www.mohurd.gov.cn/">住房和城乡建设部</option>
+<option value="http://www.moc.gov.cn/">交通运输部</option>
+<option value="http://www.mwr.gov.cn/">水利部</option>
+<option value="http://www.moa.gov.cn/">农业部</option>
+<option value="http://www.mofcom.gov.cn/">商务部</option>
+<option value="http://www.mcprc.gov.cn/">文化部</option>
+<option value="http://www.gov.cn////content_2357718.htm">卫生和计划生育委员会</option>
+<option value="http://www.pbc.gov.cn/">人民银行</option>
+<option value="http://www.audit.gov.cn/">审计署</option>
+<option value="http://www.sasac.gov.cn/">国资委</option>
+<option value="http://www.customs.gov.cn/">海关总署</option>
+<option value="http://www.chinatax.gov.cn/">税务总局</option>
+<option value="http://www.saic.gov.cn/">工商总局</option>
+<option value="http://www.aqsiq.gov.cn/">质检总局</option>
+<option value="http://www.gov.cn////content_2358823.htm">新闻出版广电总局</option>
+<option value="http://www.sport.gov.cn/">体育总局</option>
+<option value="http://www.chinasafety.gov.cn/">安全监管总局</option>
+<option value="http://www.sda.gov.cn/">食品药品监督管理总局</option>
+<option value="http://www.stats.gov.cn/">统计局</option>
+<option value="http://www.forestry.gov.cn/">林业局</option>
+<option value="http://www.sipo.gov.cn/">知识产权局</option>
+<option value="http://www.cnta.gov.cn/">旅游局</option>
+<option value="http://www.sara.gov.cn/">宗教局</option>
+<option value="http://www.counsellor.gov.cn/">参事室</option>
+<option value="http://www.ggj.gov.cn/">国管局</option>
+<option value="http://www.nbcp.gov.cn/">国家预防腐败局</option>
+<option value="http://www.gqb.gov.cn/">侨办</option>
+<option value="http://www.chinalaw.gov.cn/">法制办</option>
+<option value="http://www.xinhuanet.com/">新华社</option>
+<option value="http://www.cas.cn/">中科院</option>
+<option value="http://www.cssn.cn/">社科院</option>
+<option value="http://www.cae.cn/">工程院</option>
+<option value="http://www.drc.gov.cn/">发展研究中心</option>
+<option value="http://www.nsa.gov.cn/">行政学院</option>
+<option value="http://www.cea.gov.cn/">地震局</option>
+<option value="http://www.cma.gov.cn/">气象局</option>
+<option value="http://www.cbrc.gov.cn/">银监会</option>
+<option value="http://www.csrc.gov.cn/">证监会</option>
+<option value="http://www.circ.gov.cn/">保监会</option>
+<option value="http://www.ssf.gov.cn/">社保基金会</option>
+<option value="http://www.nsfc.gov.cn/">自然科学基金会</option>
+<option value="http://www.gwytb.gov.cn/">台办</option>
+<option value="http://www.scio.gov.cn/">新闻办</option>
+<option value="http://www.saac.gov.cn/">档案局</option>
+<option value="http://www.gjxfj.gov.cn/">信访局</option>
+<option value="http://www.chinagrain.gov.cn/">粮食局</option>
+<option value="http://www.nea.gov.cn/">能源局</option>
+<option value="http://www.tobacco.gov.cn/">烟草局</option>
+<option value="http://www.safea.gov.cn/">外专局</option>
+<option value="http://www.scs.gov.cn/">公务员局</option>
+<option value="http://www.soa.gov.cn/">海洋局</option>
+<option value="http://www.sbsm.gov.cn/">测绘地信局</option>
+<option value="http://www.caac.gov.cn/">民航局</option>
+<option value="http://www.post.gov.cn/">邮政局</option>
+<option value="http://www.sach.gov.cn/">文物局</option>
+<option value="http://www.satcm.gov.cn/">中医药局</option>
+<option value="http://www.safe.gov.cn/">外汇局</option>
+<option value="http://www.chinacoal-safety.gov.cn/">煤矿安监局</option>
+<option value="http://www.oscca.gov.cn/">密码局</option>
+<option value="http://www.cnsa.gov.cn/">航天局</option>
+<option value="http://www.caea.gov.cn/">原子能机构</option>
+<option value="http://www.china-language.gov.cn/">国家语委</option>
+<option value="http://www.cpad.gov.cn/">国务院扶贫办</option>
+<option value="http://www.3g.gov.cn/">国务院三峡办</option>
+<option value="http://www.nsbd.gov.cn/">南水北调办</option>
+</select>
+</li>
+<li>
+<select onchange="if(this.value!=&quot;&quot;){window.open(this.value);this.selectedIndex=0;}else{this.selectedIndex=0;}" class="select" name="select2">
+<option selected="" value="">地方政府网站&nbsp;&nbsp;&nbsp;</option>
+<option value="http://www.beijing.gov.cn/">北京</option>
+<option value="http://www.tj.gov.cn/">天津</option>
+<option value="http://www.hebei.gov.cn/">河北</option>
+<option value="http://www.shanxigov.cn/">山西</option>
+<option value="http://www.nmg.gov.cn/">内蒙古</option>
+<option value="http://www.ln.gov.cn">辽宁</option>
+<option value="http://www.jl.gov.cn">吉林</option>
+<option value="http://www.hlj.gov.cn">黑龙江</option>
+<option value="http://www.shanghai.gov.cn/">上海</option>
+<option value="http://www.jiangsu.gov.cn/">江苏</option>
+<option value="http://www.zhejiang.gov.cn">浙江</option>
+<option value="http://www.ah.gov.cn/">安徽</option>
+<option value="http://www.fujian.gov.cn">福建</option>
+<option value="http://www.jiangxi.gov.cn">江西</option>
+<option value="http://www.shandong.gov.cn/">山东</option>
+<option value="http://www.henan.gov.cn/">河南</option>
+<option value="http://www.hubei.gov.cn/">湖北</option>
+<option value="http://www.hunan.gov.cn/">湖南</option>
+<option value="http://www.gd.gov.cn/">广东</option>
+<option value="http://www.gxzf.gov.cn/">广西</option>
+<option value="http://www.hainan.gov.cn/">海南</option>
+<option value="http://www.cq.gov.cn/">重庆</option>
+<option value="http://www.sc.gov.cn">四川</option>
+<option value="http://www.gzgov.gov.cn/">贵州</option>
+<option value="http://www.yn.gov.cn/">云南</option>
+<option value="http://www.xizang.gov.cn/">西藏</option>
+<option value="http://www.shaanxi.gov.cn/">陕西</option>
+<option value="http://www.gansu.gov.cn/">甘肃</option>
+<option value="http://www.qh.gov.cn/">青海</option>
+<option value="http://www.nx.gov.cn/">宁夏</option>
+<option value="http://www.xinjiang.gov.cn/">新疆</option>
+<option value="http://www.gov.hk/">香港</option>
+<option value="http://www.gov.mo/">澳门</option>
+<option>台湾</option>
+<option value="http://www.xjbt.gov.cn/">新疆生产建设兵团</option>
+</select>
+</li>
+<li>
+<select onchange="if(this.value!=&quot;&quot;){window.open(this.value);this.selectedIndex=0;}else{this.selectedIndex=0;}" class="select" name="select5">
+<option selected="" value="">新闻媒体网站&nbsp;&nbsp;&nbsp;</option>
+<option value="http://www.xinhuanet.com//">新华社</option>
+<option value="http://www.people.com.cn/">人民日报</option>
+<option value="http://www.cctv.com/">中央电视台</option>
+<option value="http://www.chinanews.com/">中国新闻社</option>
+<option value="http://www.cyol.net/">中国青年报</option>
+<option value="http://www.gmw.cn/">光明日报</option>
+<option value="http://www.ce.cn/">经济日报</option>
+<option value="http://www.chinadaily.com.cn/gb/worldrep/index.html">中国日报</option>
+<option value="http://gb.cri.cn/">中国国际广播电台</option>
+<option value="http://www.takungpao.com/">大公报</option>
+<option value="http://www.wenweipo.com/">文汇报</option>
+<option value="http://www.hkcd.com.hk/">香港商报</option>
+<option value="http://www.zijing.org/">紫荆杂志</option>
+</select>
+</li>
+<li>
+<select onchange="if(this.value!=&quot;&quot;){window.open(this.value);this.selectedIndex=0;}else{this.selectedIndex=0;}" class="select" name="select6">
+<option selected="" value="">相关机构团体网站&nbsp;&nbsp;&nbsp;</option>
+<option value="http://www.fmcoprc.gov.hk/chn/">外交部驻港特派员公署</option>
+<option value="http://hk.mofcom.gov.cn/">香港中联办经济部贸易处</option>
+<option value="http://www.acftu.net/">中华全国总工会</option>
+<option value="http://www.ccyl.org.cn/"> 中国共青团</option>
+<option value="http://www.women.org.cn/"> 全国妇联</option>
+<option value="http://www.cast.org.cn/"> 中国科协</option>
+<option value="http://www.chinaql.org/"> 中国侨联</option>
+<option value="http://www.tailian.org.cn/"> 全国台联</option>
+<option value="http://www.acyf.org.cn/"> 全国青联</option>
+<option value="http://www.acfic.org.cn"> 全国工商联</option>
+<option value="http://hkmac.sysu.edu.cn/">中大港澳珠江三角洲研究中心</option>
+<option value="http://www.sass.org.cn/ga/zxjj.jsp">上海社科院港澳研究中心</option>
+<option value="http://www.chinalaw.gov.cn/">中国政府法制信息网</option>
+<option value="http://law.chinalawinfo.com/newlaw2002/chl/index.asp?jd=1">北大法律信息网</option>
+</select>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<iframe width="100%" height="100" frameborder="0" vspace="0" marginwidth="0" marginheight="0" hspace="0" src="static/htm/footer.html"></iframe>
+<div id="myModal" class="reveal-modal">
+<div class="title">请扫描访问手机版网站：</div>
+<div class="content2" style="text-align:center;"><img src="http://www.zlb.gov.cn/static/images/zlb_m.png" /></div>
+<span class="close-reveal-modal">×</span> 
+</div>
+<div class="reveal-modal-bg"></div>
+<div style="display:none"><div id="fwl">010020030440000000000000011200000000000000</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020030440000000000000011200000000000000")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020030440000000000000011200000000000000" border="0" /></noscript></div>   </body>
+</html>

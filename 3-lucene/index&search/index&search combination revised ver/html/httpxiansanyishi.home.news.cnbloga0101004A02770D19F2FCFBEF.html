@@ -1,0 +1,740 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<title>“拿国产手机无脸坐飞机”告诉我们什么？ - 新华博客 - News Blog	</title>
+<meta name="Author" content="闲散一石,4850295">
+<meta name="Keywords" content="闲散一石,闲散一石,博客,新华博客,Blog,Blogger,网络日志,新华网博客,News BLOG">
+<meta name="Description" content="闲散一石 闲散一石 新华网博客">
+<meta name="Robots" content="index,follow">
+<script>
+	//设置TLD，避免不必要的跨域问题
+	if(location.href.indexOf("home.news.cn") != -1) {
+		document.domain = "home.news.cn";
+	}
+	//
+	var param = location.search;
+	if(param.indexOf("?") != -1) {
+		if(param.indexOf("bid") == -1)  //通过域名访问
+		{
+			param = param + "&bid=" + "4850295";
+		}
+	}
+	else {
+		param = param + "?bid=" + "4850295";
+	}
+</script>
+<script language="javascript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/lib/jquery-1.7.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/lib/util_common.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/lib/calendar.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/dialog/dialog.js"></script>
+<script language="javascript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/lib/xParser.js"></script>
+<script language="javascript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/lib/prototype.js"></script>
+<script language="javascript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/lib/iUtil.js"></script>
+<script language="javascript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/page/right.js"></script>
+<script language="javascript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/page/head.js"></script>
+<script src="http://misc.home.news.cn/js/app/blog_v1/page/home_blogger.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript" src="http://misc.home.news.cn/js/app/blog_v1/page/home_urlmap.js"></script>
+<script language="javascript" type="text/javascript" src="http://misc.home.news.cn/js/lib/validator/TRSBase.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/lib/validator/CTRSString.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/lib/validator/CTRSValidator.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/lib/validator/CBaseValidator.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/lib/validator/CDateValidator.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/lib/validator/CFloatValidator.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/lib/validator/CStringValidator.js"></script>
+<script type="text/javascript" src="http://www.xinhuanet.com/weibo/follow/callback.js"></script>
+<script type="text/javascript">
+	function callback(id){
+		MI.CallBack.init(this, function(data) {
+		if (data.result == 200) {
+			UI.getScript("http://t.home.news.cn/followmore.action?typeId=3&checkdel="+id+"&rd="+Math.random());
+		} else if (data.result == 0) {
+			//alert(data.msg);
+			alert("关注成功");
+		}
+		}, function(data) {
+		if (data.result == 201) {
+			//隐藏登录框
+			MI.dialog.hide();
+			//alert(data.msg);
+			alert("登陆失败");
+		} else if (data.result == 1) {
+			if(data.msg=="noRegister"){
+				alert('您还没有开通新华微博，现在就去开通吗？');
+				var win=window.open('','_blank');
+				win.location.href="http://t.home.news.cn/index.jsp";
+			}else if(data.msg=="userNotExist"){
+				alert('您关注用户还未开通新华微博，通知TA一下吧？');
+				var win=window.open('','_blank');
+				win.location.href="http://my.home.news.cn/qm/control/quickMsgFormView.do?stype=1&content="+encodeURIComponent("我已经开通新华微博了，你也来吧！")+"http://t.home.news.cn/index.jsp &userName="+id;
+			}else{
+				alert("关注失败");
+			}
+		}
+		});
+	}
+	function follow(id){
+		callback(id);
+		if(id!=''){
+			UI.getScript("http://t.home.news.cn/followmore.action?typeId=3&checkdel="+id+"&rd="+Math.random());
+		}
+	}
+</script>
+<!-- 暂时禁用搜索词标红功能
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/search/searchWordHighLight.js"></script>
+-->
+<script language="JavaScript" type="text/javascript" >
+	//xmlPaths['homepageArticleList'] = '';
+	//xmlPaths['categoryList'] = ''; //顶部的目录列表
+	xmlPaths['lastCategorys'] = 'latestArticleCategoryList.do?bid=4850295';
+	xmlPaths['lastBulletins'] = 'bulletinList.do?bid=4850295'; //最新公告
+	xmlPaths['lastLinks'] = 'linkList.do?bid=4850295'; //友情链接列表
+	xmlPaths['lastArticles'] = 'latestArticleList.do?bid=4850295'; //更新文章列表
+	xmlPaths['lastComments'] = 'latestCommentList.do?bid=4850295'; //最新评论列表
+	xmlPaths['lastMessages'] = 'latestMessageList.do?userName=xiansanyishi'; //最新留言列表
+//	xmlPaths['lastSerialArticles'] = 'latestSerialArticleList.do?bid=4850295'; //文章连载
+	xmlPaths['recentArticles'] = 'public/rankxml/recent_article.xml';
+	xmlPaths['rvl'] = '/blog/recentVisitorsAction.do'; //最新访客
+</script>
+<style type="text/css" media="all">
+<!--
+@import url("http://misc.home.news.cn/blog/skins/zh/26/css/console.css");
+@import url("http://misc.home.news.cn/blog/skins/zh/26/css/struc_blog.css");
+@import url("http://misc.home.news.cn/blog/skins/zh/26/css/struc_content.css");
+@import url("http://misc.home.news.cn/blog/skins/zh/26/css/style_blog.css");
+/* 打印部分的样式 */
+@media print {
+	BODY {font-size:8pt;}
+	#matrix #right {
+		display: none;
+	}
+	#building {
+		display: none;
+	}
+	#header {
+		display: none;
+	}
+} 
+#copyright {
+	clear: both;
+	padding: 32px 0px 0px;
+	text-align: center;
+}
+#copytext {
+	FONT-SIZE: 12px; 
+	LINE-HEIGHT: 120%; 
+	padding: 8px 0px 6px;
+	TEXT-DECORATION: none;
+	border-top: 1px solid #999;
+	background: #fff;
+	color: #666; 
+}
+-->
+</style>
+</head>
+<body>
+<div id="container">
+	<!-- 头部开始 -->
+	<div id="header">
+		<div id="function" style="position:relative;">
+			<div id="xinhuaLogo"><a href="http://www.xinhuanet.com/" target="_blank"><img id="l1" width="80" height="64" src="http://misc.home.news.cn/blog/skins/zh/26/images/blank.gif" border="0" /></a></div>
+			<div id="blogLogo"><a href="http://blog.home.news.cn/" target="_blank"><img id="l1" width="60" height="30" src="http://misc.home.news.cn/blog/skins/zh/26/images/blank.gif" border="0" /></a></div>
+
+			<h1>| <a href="http://my.xuan.news.cn" target="_blank" class="color_white">我的首页</a></h1>
+			<div id="menubutton"><a href="http://xiansanyishi.home.news.cn/blog/home.do"><img id="l1" width="80" height="40" src="http://misc.home.news.cn/blog/skins/zh/26/images/blank.gif" border="0" /></a><a href="javascript://" onclick="getUrl('./articleListByCategory.do?bid=4850295&cid=0');return false;"><img id="l2" width="80" height="40" src="http://misc.home.news.cn/blog/skins/zh/26/images/blank.gif" border="0" /></a><a href="http://xiansanyishi.home.news.cn/photo/home.do"><img id="l3" width="80" height="40" src="http://misc.home.news.cn/blog/skins/zh/26/images/blank.gif" border="0" /></a><a href="http://g.home.news.cn" target="_blank"><img id="l4" width="80" height="40" src="http://misc.home.news.cn/blog/skins/zh/26/images/blank.gif" border="0" /></a></div>  
+			<div style="position:absolute;left:120px;top:2px;font-size:12px;color:#666;"><FJTIGNOREURL><a href="http://big5.home.news.cn/gate/big5/xiansanyishi.home.news.cn/blog/" style="font-size:12px;color:#666;font-weight:300;">繁体</a></fjtignoreurl>&nbsp;&nbsp;<fjtignoreurl><a href="http://xiansanyishi.home.news.cn/blog" style="font-size:12px;color:#666;font-weight:300;">简体</a></FJTIGNOREURL></div>
+		</div>
+	</div>
+	<div id="building">
+		<div id="mainVisual">
+		
+		
+			
+		
+			<div id="visual" style="position:relative;" style="background:url(http://misc.home.news.cn/public/images/original/00/40/58/8B/8B.jpg);">
+			
+				<div id="title">
+					<h1><span>闲散一石</span></h1>
+				</div>
+			</div>
+		
+		
+		<div id="art_cata">
+			<h1 style="width:317px;text-align:left;padding-left:18px;"><a href="http://blog.home.news.cn/channel/" title="看看大家的观点" class="color_white" target="_blank">博客广场</a><a href="http://photo.home.news.cn/channel/" class="color_white" style="margin-left:8px;" target="_blank">拍客广场</a><a href="http://view.home.news.cn/channel/all/1.html" title="评论广场" style="margin-left:8px;" class="color_white" target="_blank">评论广场</a><a href="http://bookmark.home.news.cn/channel/" title="收客广场" style="margin-left:8px;" class="color_white" target="_blank">收客广场</a></h1>
+			<h2 style="width:458px;text-align:right;"><span id="type_list"><a onclick="getUrl('./articleListByCategory.do?bid=4850295&amp;cid=0');return false;" href="javascript://" class="color_white">文章</a> | <a href="http://xiansanyishi.home.news.cn/video/home.do" class="color_white">播客</a> | <a href="http://xiansanyishi.home.news.cn/photo/home.do" class="color_white">相册</a> | <a href="http://g.home.news.cn"  target="_blank" class="color_white">圈子</a> | <a href="http://xiansanyishi.home.news.cn/bookmark/" class="color_white">收藏</a> | <a href="http://my.home.news.cn/vdisk/control/home.do"  target="_blank" class="color_white">云盘</a> | <a href="http://f.home.news.cn/xiansanyishi"  target="_blank" class="color_white">好友</a> | <a href="javascript://" onclick="getUrl('./messageList.do?userName=xiansanyishi','leave_msg');return false;" class="color_white">留言</a> | <a onclick="addLink('5254030');return false;" href="javascript://" class="color_white">加入链接</a> | <a class="color_white" target="_blank" href="http://my.home.news.cn/bookmarkRightClick_v1.html">加入收藏</a> | <!-- <a href="javascript://" class="color_white" title="http://xiansanyishi.home.news.cn/blog" onclick="setCopy('http://xiansanyishi.home.news.cn/blog');$errorMsg('　恭喜，博客地址已经复制到剪切板！','',3,'系统提示信息' );">复制地址</a>--></span></h2>
+		</div>
+		</div>
+	</div>
+	<!-- 头部结束 -->
+	<div id="matrix">
+		<!-- left matrix begin -->
+		<div id="left">
+			<!--  <div style="font-size:14px;color:#333;background:#fff;border:1px solid #c0c0c0;padding: 12px 0px;"><br/>正在加载页面内容，请稍候...<br/><br/></div>  -->
+			
+			
+				
+
+<link href="http://www.xinhuanet.com/static/css_20120118.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	table{table-layout:fixed;}
+</style>
+
+
+<div id="doc_content" class="main_cell common_cell contentClass4Search">
+	<h1>
+		<span style="white-space: nowrap; "><font style="font-size:12px;font-weight:300;">
+				
+				【原创】
+			</font>“拿国产手机无脸坐飞机”告诉我们什么？
+		</span>
+		<div class="btn_arr2_up" id="ba" onclick="displayMode('ct','ba','btn_arr2_down','btn_arr2_up')"></div>
+	</h1>
+	<div id="ct">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td id="articleContent" class="ct content" style="overflow:auto;word-warp:break-word;word-break: break-all;">
+					<!--  内容加载中，请稍候...  -->
+					<p style="text-align:center"><span style="font-family:宋体;color:blue;font-size:18px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:18px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:18px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:18px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px"><span style="font-family:宋体;color:blue;font-size:24px">“拿国产手机无脸坐飞机”告诉我们什么？</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><br /></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="font-family:楷体, 楷体_gb2312, simkai;color:red;font-size:18px">闲散一石<br /></span></span><span style="font-family:宋体;color:blue;font-size:18px"></span></p><p style="text-align:left"><span style="font-family:宋体;color:blue;font-size:18px"> &nbsp; &nbsp;一个视频显示：一男一女激烈争吵，穿着光鲜的女子冲着男子撒泼：“你还是人吗！”“手机当然摔坏了！”“你赔，你赔得起吗！”“我国外刚买的手机！刚买的玫瑰金！”在发现男子用的是国产手机后，便开始嘲讽男子，说“你拿国产手机有什么脸来坐什么飞机”、“你去坐火车好了，来什么VIP室啊！”男子态度很好，问女子手机价值多少，可以考虑赔钱。女子狮子大开口，让男子赔5万元。女子又称，“我告诉你这手机是我美国买的，路费、人工费不要算啊？”男子向女子道歉后，女子更直呼，“所以说我拿把刀把你杀了再跟你道歉就有用了是吗？”最后，在女子抢夺男子的国产机并摔在地上之后，事件才得以解决。</span></p><p style="text-align:left"><span style="font-family:宋体;color:blue;font-size:18px"> &nbsp; &nbsp;对于这样的女子，她的丑陋并不在于穿着光艳而言词粗鲁，因为穿着与行为举止之间本来没有关系。一个人的行为受大脑指挥，不被穿着所左右。她的丑陋也不在于不能原谅男子的过失，面对态度良心的男子依然不讲道理。她的丑陋也不在于大闹机场，扰乱公共场所秩序。她的丑陋在于讽刺男子拿着国产手机没有资格坐飞机，没有资格到VIP室。见过崇洋媚外的，没有见过这么崇洋媚外的，只是买了一个外国手机，就极力贬低同胞，显然她已经把自己当成外国人了。明明是中国女子，却数典忘祖到了这个程度，实在是一个悲哀，更是引人忧虑。</span></p><p style="text-align:left"><span style="font-family:宋体;color:blue;font-size:18px"> &nbsp; &nbsp;之所以要议论这事，是因为这样的奇葩女子并不是个别。在这个社会中，这样的人并不在少数，并且在各行各业、各个层次都存在。言必称国外，这成了这些人的条件反射性思维。实际上其中的绝大多数人并没有到过国外，也不并了解国外，不过是拿来一些名词概念玩玩而已，就以为高人一等，妄自菲薄起自己的祖国来了。中国为何出现这么一批人，还不得而知，但很是值得深思。这些人的存在，将会给中国的未来带去不小的危险。现在是和平时期，这些人掀不起什么风波，如果到了特殊时期，还就得另说了。不用说这些人故意使坏，即使凭着他们的思想观念、人生取向和行为习惯，就足以给国家造成巨大损害。</span></p><p style="text-align:left"><span style="font-family:宋体;color:blue;font-size:18px"> &nbsp; &nbsp;在这一点上，中国还真得向日本国民借鉴一下。这几年中日关系处于冰冻状态，尽管安倍政权倒行逆施，大翻历史之案，极力复辟军国主义，在日本国内也有不同声音，但日本国民在对外方面却没有太多的杂音。不得不承认，日本国民具有较好的向心力。你看，曾经在中国大赚特赚的日本大企业，这几年纷纷从中国撤资，选择与日本政府站在一起。而我们的同胞，在自己的国庆节期间却一窝蜂式涌到日本扫货，而掌握舆论导向的媒体却在问国人谁不高兴了，而不问哪个国家的人高兴了。两相对比是何等的强烈！国庆节期间到日本扫货的国人与讽刺“拿国产手机有什么脸来坐什么飞机”的女子属于同一人群。</span></p><p style="text-align:left"><span style="font-family:宋体;color:blue;font-size:18px"> &nbsp; &nbsp;尽管买什么东西是个人自由，他人无权干涉。但是，一个人买谁的商品、从哪里买商品则体现了一个人的价值取向和个人情感，有时候还真与爱国不爱国有联系。这就反映出一个国家的国民素质。买国外的商品是正常行为，但在崇洋媚外的盲目思维支配下，一律将外国商品说成好，而又一律菲薄国产商品，就很不正常了。如果借此机会对自己的国家、对自己的同胞发泄不满就更加不正常了。在和平时期对自己的同胞都怒目相对，到了特殊时期又能和善以对、一致对外吗？难说。</span></p><p style="text-align:left"><span style="font-family:宋体;color:blue;font-size:18px"> &nbsp; &nbsp;其实，买卖也是与爱国不爱国联系在一起的。这不是说商品具有爱国属性，而是在购买商品方面体现了一个人的情感。在许多国家都出现过抵制某国商品的游行示威或是运动，就是明显证明。有些国人缺乏对自己祖国的感情，盲目媚外，往往还振振有词，找出许多理由出来，以极尽贬低国产商品为能事，只能更加证明他们确实对自己的祖国没有感情。据说，韩国人就购买本国的汽车产品，并不是因为当初和现在的韩国汽车比美国、德国等外国品牌好，而是出于支持国产商品的朴素感情。俄罗斯也同样如此。新中国成立时的国家领导人以戴国产手表、使用国产商品为荣，现在的国家领导人成为中国高铁走出去的推销员，同样是如此。日本炒作“钓鱼岛国有化”之后，许多国人弃购日本品牌汽车，也是出于情感方面的考虑。人是感情动物，一言一行都与情感相关，把购买商品行为与爱国情感完全隔离开来，显然是掩耳盗铃的行为，更加说明自己的情感偏向。</span></p><p style="text-align:left"><span style="font-family:宋体;color:blue;font-size:18px"> &nbsp; &nbsp;一个物欲女子讽刺国人“你拿国产手机有什么脸来坐什么飞机”、“你去坐火车好了，来什么VIP室啊！”没有什么，如果一群人这么讽刺国人，如果一部分国人如此思维，那就极为可怕了。一个民族屹立于世界民族之林，源于自信自爱自尊，否则只能被别的民族所同化。一个人可以没有民族自信心，但一个民族不能没有自信心，也不能默认缺乏民族自信心的行为。这才是此位奇葩女子告诉我们的。中国要走向富强，需要所有同胞在对自己的祖国具有强烈的热爱之情基础上努力奋斗，经济上强大不是强大，心理上的强大才是真正的强大。</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:20px 0px 0px 36px;">
+					<div style="font-size:13px;">系统分类:&nbsp;<a href="http://blog.home.news.cn/channel/?catId=39" target="_blank"  style="color:#666;">社会</a>&nbsp;&nbsp;个人分类:&nbsp;<a href="javascript:getUrl('./articleListByCategory.do?bid=4850295&amp;cid=0');"  style="color:#666;">默认</a></div>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding:6px 0px 0px 36px;">
+					<div style="color:#999;font-size:13px;">·本文只代表博友个人观点。本文版权归作者和<A href="http://www.xinhuanet.com" target=_blank style="color:#666;">新华网</A>共同拥有，转载请注明作者及出处。</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="gongneng" style="padding:40px 0px 0px 40px;line-height:1.6em;font-size:13px;color:#222;text-align:left;">
+						
+							<div style="display:block;float:left;width:240px;overflow:hidden;text-overflow:ellipsis;word-break:keep-all;white-space:nowrap;">上一篇：<a onfocus="this.blur();" class="color_black" href="http://xiansanyishi.home.news.cn/blog/a/0101004A02770D19E638FFAF.html">连一个市场都管不好，还要旅游局干什么？</a></div>
+						 
+						
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="dot_line"></div>
+					<iframe src="http://sike.news.cn/hot/sikeqz/index.html" scrolling="no" height="90" frameborder="0" vspale="0" noresize="" marginheight="0" framespacing="0" marginwidth="0" name="search" border="0" style="height:125px;width:100%;margin-left:10px"></iframe>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" border="0" cellpadding="0" cellspacing="0"
+						class="gongneng">
+						<tr>
+							<td width="55%" >
+							 &nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript://" onclick="showCmtList('doc_sphere', 'comment_content');" class="color_black">评论</a>(1)
+								| <a href="articleRead.do?bid=4850295&aid=219804412"
+									target="_blank" class="color_black">阅读</a>(1370) 
+								| <a href="javascript://" onclick="addArticleRecommend(219804412);" class="color_black">推荐</a>(0) 
+
+								| <a href="javascript:window.print();" class="color_black">打印</a>
+								| <a href="javascript://" onclick="addReport(13, 219804412);" class="color_black">举报</a>
+								
+							</td>
+							<td width="80" class="color_black" style="margin-top:3px">
+								<font color="#999999">分享到：</font>
+								<a href="javascript:;" onclick="share2()" class="hei12" title="分享到新华微博" >
+									<IMG src="http://misc.home.news.cn/forum/images/2011/wb_share.gif" width="16" height="16" hspace="2" border="0" align="absmiddle" />
+								</a>
+							</td>
+							<td width="25" class="bai12" style="margin-top:4px">
+								<a href="javascript:window.open('http://v.t.qq.com/share/share.php?url='+encodeURIComponent(document.location)+'&amp;appkey=appkey&amp;site=http://www.xinhuanet.com/&amp;pic='+encodeURI('')+'&amp;title='+encodeURI(document.title),'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' ); void 0;" title="分享到腾讯微博">
+									<img src="http://www.xinhuanet.com/xilan/20110720/qqwb.png" alt="分享到腾讯微博" width="16" height="16" hspace="2" border="0" align="absmiddle" />
+								</a>
+							</td>
+							<td width="17" class="bai12" style="margin-top:4px">
+								<a href="/blog/articleOpe.do?action=shareToWeixin&id=219804412&title=“拿国产手机无脸坐飞机”告诉我们什么？&username=xiansanyishi" target="_blank" title="分享到微信"><img alt="分享到微信" src="http://tmisc.home.news.cn/forum/weixin.png" width="16" height="16" hspace="2" border="0" align="absmiddle"></a>
+							</td>
+							<td  width="30%" >
+                               &nbsp;&nbsp;&nbsp;&nbsp;2015-10-27 10:56
+							</td>
+
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td height="22"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<script>
+
+	<!-- new TextParser("content_html.txt", "articleContent"); -->
+</script>
+<div style="display:none;"><a href="content_html.txt">“拿国产手机无脸坐飞机”告诉我们什么？</a></div>
+<div id="doc_quote" class="main_cell common_cell" style="height:420px">
+<iframe name="doc_frame" frameborder="0" scrolling="no" id="doc_frame" onload="changeStyle()" src="http://blog.home.news.cn/2014/iframe_qzy.htm" style="width:100%;height:100%"></iframe> 
+</div>
+<div id="doc_quote" class="main_cell common_cell">
+	<h1>
+		<span>引用此文</span>
+		<div class="btn_arr2_up" id="bc" onclick="displayMode('quote','bc','btn_arr2_down','btn_arr2_up')"></div>
+	</h1>
+	<div id="quote">
+		<p style="text-indent:0px;">
+			你可以使用这个链接引用该篇文章
+			<br />
+			<a
+				href="http://xiansanyishi.home.news.cn/blog/a/0101004A02770D19F2FCFBEF.html"
+				class="color03">http://xiansanyishi.home.news.cn/blog/a/0101004A02770D19F2FCFBEF.html</a>&nbsp;
+			<a href="javascript://" class="color01"
+				onclick="if(clipboardData.setData('text','http://xiansanyishi.home.news.cn/blog/a/0101004A02770D19F2FCFBEF.html'))alert('地址已经复制到了剪切板');">复制链接</a>
+		</p>
+	</div>
+</div>
+
+<div id="doc_sphere" style="margin: 11px 0px 0px;display:none;" class="main_cell common_cell">
+	<a id="sphere" href="#sphere"></a>
+	<a name="sphere"></a>
+	<h1>
+		<span>此文已经进入以下圈子</span>
+		<div class="btn_arr2_up" id="bf" onclick="displayMode('sph','bf','btn_arr2_down','btn_arr2_up')">
+		</div>
+	</h1>
+	<div id="sph"></div>
+</div>
+
+<div id="comment_content">
+<div id="doc_comment" class="main_cell common_cell">
+	<a id="comment" href="#comment"></a><a name="comment"></a>
+	<h1>
+		<span>此文评论</span>
+		<div class="btn_arr2_up" id="bb" onclick="displayMode('cmt','bb','btn_arr2_down','btn_arr2_up')"></div>
+	</h1>
+	<div id="cmt"></div>
+</div>
+<script>
+	getCommentList('articleCommentList.do?aid=219804412&pageSize=10');
+</script> 
+
+<div id="doc_pcomment" class="main_cell common_cell">
+	<h1>
+		<span>发表评论</span>
+		<div class="btn_arr2_up" id="bd" onclick="displayMode('pcomment','bd','btn_arr2_down','btn_arr2_up')">
+		</div>
+	</h1>
+	<div id="pcomment">
+		<form name="frmComment" id="frmComment" method="post"
+			action="../commentAdd.do">
+			<input name="aid" type="hidden" value="219804412" />
+			<input name="bid" type="hidden" value="4850295" />
+			<input name="isAnon" id="isAnon" type="hidden" value="0" />
+			<table width="540" border="0" cellpadding="0" cellspacing="2">
+				
+					
+					
+						<tr align="left">
+							<td height="36" valign="bottom">
+								用户名：
+								<br />
+								<input name="senderName" id="userName" type="text"
+									class="box_comment_name" pattern="string" elname="用户名"
+									onfocus="JavaScript:this.value=''" not_null=1
+									value="匿名" />
+							</td>
+							<td valign="bottom">
+								密码：
+								<br />
+								<input name="password" id="password" type="password"
+									class="box_comment_name" pattern="string" elname="密码"
+									onfocus="JavaScript:this.value=''" not_null=1
+									value="anonymous" />
+							</td>
+							<td width="80">&nbsp;
+								
+							</td>
+						</tr>
+<!-- 						<tr align="left"> -->
+<!-- 							<td valign="bottom" colspan="2"> -->
+<!-- 								个人主页： -->
+<!-- 								<br /> -->
+<!-- 								<input type="text" name="senderHome" id="senderHome" -->
+<!-- 									style="width:200px;" maxlength="200" class="box_comment_name" -->
+<!-- 									style="width:100px;" pattern="string" elname="个人主页" -->
+<!-- 									max_len='200' /> -->
+<!-- 							</td> -->
+<!-- 							<td width="80">&nbsp; -->
+								
+<!-- 							</td> -->
+<!-- 						</tr> -->
+					
+				
+				<tr>
+					<td align="left" colspan="3">
+						评论内容：
+						<br />
+						<textarea name="content" id="content" class="box_comment"
+							pattern="string" elname="评论内容" max_len="2000" not_null=1
+							value="评论内容"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td height="36" align="left">
+						验证码：
+						<input type="text" style="width:100px;" name="randomCode"
+							id="randomCode" maxlength="4" class="box_comment_name"
+							pattern="string" elname="验证码" not_null=1 min_len='4' is_num=1 />
+						<span id="codeSpan"><img src="./azcode.code" id="codeImg" align="absmiddle"	width="67" height="25"></span>
+					</td>
+					<td align="left">&nbsp;
+						
+					</td>
+					<td width="80">&nbsp;
+						
+					</td>
+				</tr>
+				<tr>
+					<td height="49" align="left" colspan="3">
+						
+							<input type="button" class="btn_comment_submit" value="署名评论"
+									onclick="$('isAnon').value=1;submitForm('frmComment');" />
+							
+								<input type="button" class="btn_comment_submit" value="匿名评论"
+									onclick="$('isAnon').value=0;if(!$('userName').value) $('userName').value = 'anonymous';$('password').value='anonymous';submitForm('frmComment');" />
+							
+						<input type="reset" class="btn_comment_reset" value="重新输入" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+<script>
+	//if($("codeSpan").innerHTML) {
+	//	$("codeSpan").innerHTML = '<img src="./azcode.code" id="codeImg" align="absmiddle"	width="67" height="25">';
+	//}
+	window.onload=function(){
+		 var s_tableI = document.getElementById("articleContent");
+		        var s_tableImg = s_tableI.getElementsByTagName('img');
+		    for(var i=0,j=s_tableImg.length;i<j;i++){
+		            if(s_tableImg[i].width > 490){
+		            	s_tableImg[i].width = 490;
+		        };
+		    };
+	}
+	function changeStyle(){
+		$("#doc_frame").contents().find(".page").css("border","0");
+	}
+	function publickOk(res) {
+		var obj = res.split("&");
+
+		if(obj[0] == "1") {
+			$("frmComment").reset();
+			$errorMsg('<div style="padding:5px 10px;">' + obj[1] + '</div>',"",3,'选择' );
+		} else if(obj[0] == "-1"){
+			$alert('<div style="padding:5px 10px;">' + obj[1] + '</div>');
+		} else {
+			$alert('<div style="padding:5px 10px;">抱歉，评论发表失败!</div>');
+		}
+		$("codeImg").src = './azcode.code?codeId=' + getRand();
+	}
+
+	function getRand() {
+		return parseInt(100*Math.random());
+	}
+</script>
+
+<script type="text/javascript">
+var _w = 109 , _h = 16;
+var cUrl=document.location.href;
+var regexp1 = /http:\/\/.*\/c_([0-9]+).htm/g;
+var id = cUrl.replace(regexp1,'$1');
+var regexp2 = /(.+\/)(\w+\.\w+)(?:\?.+)?/g;
+var tempstr;
+var pic1="";
+var arEls = document.getElementsByTagName("img");
+for( var i=0;i<arEls.length;i++ ){
+       tempstr=arEls[i].src.replace(regexp2, '$2');  
+       if(tempstr.indexOf(id)>=0)
+       pic1+=arEls[i].src+",";
+}
+var param = {
+  url:'' || location.href,/**分享url的路径(可选,默认为所在页面的href)*/
+  type:'6',
+  appkey:'', /**您申请的应用appkey,显示分享来源(可选)4dd7a69ed7de049c2f45c8d6a335e75b*/
+  title:''|| document.title, /**分享的文字内容(可选，默认为所在页面的title)*/
+  pic:pic1, /**分享图片的路径(可选)*/
+  rnd:new Date().valueOf()
+}
+var temp = [];
+for( var p in param ){
+  temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )  
+}
+(function(){
+var t='<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://www.news.cn/weibo/share.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>';
+//document.getElementById("xhwbShareArea").innerHTML=t;
+//document.getElementById("xhwbShareArea1").innerHTML=t;
+})()
+function share2() {
+window.open("http://t.home.news.cn/share.jsp?"
+	+ temp.join('&'), "_blank", "width=615,height=505");
+}
+</script>
+<script type="text/javascript" src="http://da.xuan.news.cn/js/config/global-cfg.js"></script>
+<script type="text/javascript" charset="utf-8"> 
+window._xh_st_global_obj.location="-";
+
+//定义配置 说明 其中 * 为必须填写 或动态生成 
+window._xh_st_global_obj.cfg_1={
+        ck:"",  //稿件关键词       *      
+        et:"xiansanyishi",  //门户作者         *
+        cb:"219804412",//文章ID   *
+        wt:"2", //页面类型  1概览 2细览 3帧（嵌帧页）   *            
+        at:"blog",// 应用类型 *    
+        pt:"1", // 发布类型（1文本 2图片 3视频 4音频 5flash） *    
+        ce:"1", // 稿件类型 1静态 2动态    *
+        ct:"",  // 稿件时间 （炫+新闻）    * 
+        th:"",  //体裁（新闻报道 新闻追踪）    
+        st:"1",  //站点ID （新华网 政府网）    
+        ni:"1",  //节点ID    
+        cf:"detail",  //分类ID（默认index）    
+        xzn:"kan",  //操作事件 看kan  评ping   转zhuan    赞zan
+
+    //门户扩展  此处为门户定制扩展   （暂时不需要了）
+    ext:function(){}
+
+};  
+
+//此处引用的js为提交参数，访问服务器的相关内容       
+</script>     
+<script type="text/javascript" src="http://da.xuan.news.cn/js/fetch/st-main.js?st-cfg=config/community-config&st-v=combine-st/combine-st" id="st-main"></script> 
+</div>
+
+
+			
+			
+			
+		</div>
+		<!-- left matrix end -->
+		<div id="right">
+		<!-- 右边栏开始 -->
+			<div id="mf">
+				<a href="http://my.home.news.cn/blog/control/home.do?articleid=1"><img src="http://misc.home.news.cn/blog/skins/zh/26/images/new_ar.gif" width="95" height="33" border="0" /></a>
+				<a href="http://my.home.news.cn/blog/control/home.do"><img src="http://misc.home.news.cn/blog/skins/zh/26/images/control.gif" width="95" height="33" border="0" /></a>
+			</div>
+
+			<div id="login">
+<form name="searchFrm" id="searchFrm" action="http://xiansanyishi.home.news.cn/search/articleSearch.do" target="_blank" method="get">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr align="left" valign="top">
+						<td height="30">
+						
+						
+							<a href="./_login.do"><img src="http://misc.home.news.cn/blog/skins/zh/26/images/sigin.gif" width="40" height="23" border="0"></a>
+						
+						
+						
+						</td>
+						<td>
+							<a href="http://my.home.news.cn/profile/passport.do"><img src="http://misc.home.news.cn/blog/skins/zh/26/images/login.gif" width="40" height="23" border="0"></a>
+						</td>
+<!-- 						<td> -->
+
+<!-- 						</td> -->
+<!-- 						<td> -->
+
+<!-- 						</td> -->
+						<td align="center">
+							<a href="http://my.xuan.news.cn" target="_blank"><img src="http://tmisc.home.news.cn/newspace/images/xuan_boke.png" width="71" height="24" border="0"></a>
+						</td>
+					</tr>
+					<tr align="left" valign="middle">
+						<td height="30" colspan="3">
+							<input type="text" name="sw" id="sw" class="box_search" />
+							<input type="text" style="display:none;"/>
+							<input type="image" name="imageField2" align="absmiddle" style="cursor: pointer;" src="http://misc.home.news.cn/blog/skins/zh/37/images/searchbutton.gif" width="37" height="23" border="0" />
+						</td>
+					</tr>
+				</table>
+</form>
+			</div>
+
+			<div id="personal" class="cell">
+				<h1>
+					<span>个人信息</span>
+					<div class="btn_arr1_up" id="b1" onclick="displayMode('per_con','b1','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<div id="per_con" class="cell_con">
+					<h2>
+						<a href="http://xiansanyishi.home.news.cn/profile/userCard.do" target="_blank" style="display:block;">
+							<div style="position:absolute;display:block;width:120px;height:143px;cursor:pointer;z-index:10;overflow:hidden;background:transparent url(http://misc.home.news.cn/blog/images/defaultImage/gr2.gif) left top no-repeat;"></div>
+							<img id='prev_icon' style="display:block;border:0px;" width="120" height="143" src='http://tpic.home.news.cn/userIcon/l/xiansanyishi'>
+						</a>
+					</h2>
+					
+					<span style="font-weight:600;font-size:12px;" title="离线"><a href="http://xiansanyishi.home.news.cn/profile/userCard.do" target="_blank" class="lemu12l" ><img src="http://misc.home.news.cn/blog/images/offline.jpg" border=0 align=absmiddle  style="border:0px;"/>&nbsp;闲散一石</a></span>
+					<br><br><a href="http://my.home.news.cn/qm/control/quickMsgFormView.do?stype=1&userName=xiansanyishi" target="_blank"    class="lemu12l">发消息</a>&nbsp;&nbsp;&nbsp;<a href="http://xiansanyishi.home.news.cn"  target="_blank"  class="lemu12l" >添加好友</a>&nbsp;&nbsp;&nbsp;
+				<a href="http://xiansanyishi.home.news.cn"  target="_blank" class="lemu12l">收听TA</a>
+				</div>
+			</div>
+
+			<div id="bbs" class="cell">
+				<h1>
+					<span>公告板</span>
+					<div class="btn_arr1_up" id="b2" onclick="displayMode('bbs_list','b2','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<div id="bbs_list" class="cell_con">
+					<div style="text-align: left;padding-left:10px;">暂无公告</div>
+				</div>
+			</div>
+
+			
+
+			<div id="category" class="cell">
+				<h1>
+					<span>我的分类</span>
+					<div class="btn_arr1_up" id="b11" onclick="displayMode('category_list','b11','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<ul id="category_list">
+					<li><a href="javascript:void(0);">暂无分类</a></li>
+				</ul>
+			</div>
+
+<!-- 			<div id="installment" class="cell">
+				<h1>
+					<span>我的文章连载</span>
+					<div class="btn_arr1_up" id="b10" onclick="displayMode('art_list','b10','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<ul id="art_list">
+					<li><a href="javascript:void(0);">暂无连载</a></li>
+				</ul>
+			</div> -->
+
+			<div id="update" class="cell">
+				<h1>
+					<span>最新文章</span>
+					<div class="btn_arr1_up" id="b6" onclick="displayMode('update_list','b6','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<ul id="update_list">
+					<li><a href="javascript:void(0);">暂无更新文章</a></li>
+				</ul>
+			</div>
+
+			<div id="critique" class="cell">
+				<h1>
+					<span>最新评论</span>
+					<div class="btn_arr1_up" id="b7" onclick="displayMode('critique_list','b7','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<ul id="critique_list">
+					<li><a href="javascript:void(0);">暂无评论</a></li>
+				</ul>
+			</div>
+
+			<div id="leav_msg" class="cell">
+				<h1>
+					<span>最新留言</span>
+					<div class="btn_arr1_up" id="b8" onclick="displayMode('msg_list','b8','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<div>
+					<ul id="msg_list">
+						<li><a href="javascript:void(0);">暂无留言</a></li>
+					</ul>
+					<h2>
+						<a href="javascript:getUrl('./messageList.do?userName=xiansanyishi','leave_msg');"><img src="http://misc.home.news.cn/blog/skins/zh/26/images/liuyan.gif" width="70" height="23" border="0"></a>
+					</h2>
+				</div>
+			</div>
+
+			<div id="calendar" class="cell">
+				<h1>
+					<span>日历检索</span>
+					<div class="btn_arr1_up" id="b4" onclick="displayMode('selectBox','b4','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<div id="selectBox" style="text-align:center;background:url(http://misc.home.news.cn/blog/skins/zh/26/images/calendar.gif) 3px top no-repeat;">
+				</div>
+				<input id=theDate type=hidden value='2015-10-28' onclick="callCalendar('theDate','','1')">
+			</div>
+
+			<div id="fellow" class="cell">
+				<h1>
+					<span>友情链接</span>
+					<div class="btn_arr1_up" id="b3" onclick="displayMode('fellow_list','b3','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<ul id="fellow_list">
+					<li><a href="javascript:void(0);">暂无友情链接</a></li>
+				</ul>
+			</div>
+
+			<div id="update" class="cell">
+				<h1>
+					<span>博客广场最新文章</span>
+					<div class="btn_arr1_up" id="b21" onclick="displayMode('recentArticles','b21','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<ul id="recentArticles">
+					<li><a href="javascript:void(0);">暂无最新文章</a></li>
+				</ul>
+			</div>
+
+			<div id="update" class="cell">
+				<h1>
+					<span>最新访客</span>
+					<div class="btn_arr1_up" id="b22" onclick="displayMode('rvl','b22','btn_arr1_down','btn_arr1_up')"></div>
+				</h1>
+				<ul id="rvl">
+					<li><a href="javascript:void(0);">暂无最新访客</a></li>
+				</ul>
+			</div>
+
+			<div id="status" class="cell" style="padding: 10px;	word-warp:break-word;word-break: break-all;" align="left">
+				访问统计:9798804<br />
+				文章个数:1650<br />
+				评论个数:5548<br />
+				
+				博客地址:<a href="http://xiansanyishi.home.news.cn/blog" style="color:#fff;">http://xiansanyishi.home.news.cn/blog</a>
+				<div style="margin-top:6px;">
+					<a title="Link to the RSS 2.0 feed." target="_blank" href="./rss.do?bid=4850295&type=RSS20"><img border="0" src="http://misc.home.news.cn/blog/images/rss/rss20_logo.gif" /></a><br/>
+					<a title="Link to the Atom 1.0 feed." target="_blank" href="./rss.do?bid=4850295&type=ATOM"><img border="0" src="http://misc.home.news.cn/blog/images/rss/atom10_logo.gif" /></a><br/>
+					<a title="Link to the Baidu news XML." target="_blank" href="./rss.do?bid=4850295&type=Baidu"> <img border="0" src="http://misc.home.news.cn/blog/images/rss/baiduXml_logo.gif" /></a>
+				</div>
+			</div>
+
+			<script>
+				callCalendar('theDate','','4850295');	
+			</script>
+
+		<!-- 右边栏结束 -->
+		</div>
+	</div>
+</div>
+<!-- Copyright begin -->
+<div id="copyright">
+<div id="copytext">
+	Copyright <font color="#FF0000">XINHUANET</font>.com　All Rights Reserved. 　制作单位：新华网<br>
+	<a href="http://www.xinhuanet.com/copyright.htm" target="_blank" style="font-size:12px">版权所有</a> 新华网
+</div>
+</div>
+<!-- Copyright end -->
+<div style="display:none;">
+	<a href="./messageList.do?userName=xiansanyishi">留言页面</a>
+	<a href="../photo/home.do">相册列表</a>
+	<a href="./articleListByCategory.do?bid=4850295">日志列表</a>
+	<a href="./articleList.do?bid=4850295">博文列表</a>
+</div>
+<script>
+	right_on_load();
+	main_on_load();
+	//runDaubLogic(); //暂时禁用搜索词标红功能
+</script>
+<script language="JavaScript" type="text/javascript" src="http://misc.home.news.cn/js/app/portal_v1/portal_view_visit.js"></script>
+
+
+<!-- 010040030030000000000000012100000219804412 -->
+<div style="display:none"><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020040423003000000000012100002198044120");</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020040423003000000000012100002198044120" border="0" /></noscript></div>
+
+</body>
+</html>

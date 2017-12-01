@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上海留学－－首页</title>
+<link href="/hongbull.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.8.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+                        $(function(){
+                        $(":input").focus(function(){
+                            if($(this).val() ==this.defaultValue){  
+                            $(this).val("");           
+                                } 
+                        }).blur(function(){
+                        if ($(this).val() == '') {
+                        $(this).val(this.defaultValue);
+                                 }
+                        });
+                                        })
+                    
+-->
+
+</script>
+</head>
+
+<body>
+<div id="site">
+	<!--Top Bar 开始-->
+      <div id="top_bar">
+<form name=search_js1 method=post action='/e/search/index.php' > 
+<input name="show" type="hidden" value="title,smalltext,newstext,writer">
+   	  <div id="top_bar_Search">
+      	<div id="top_bar_Search_input"><input name="keyboard" id="sh1" class="top_Search_input" type="text" value="Search" />
+        </div>
+        <div id="top_bar_Search_BT">
+        <input name="" onclick="su();" type="button" class="top_Search_BT" style="cursor:hand"/>
+        </div>
+</form>
+<script>
+function su(){
+var key =$.trim(document.getElementById("sh1").value);
+
+if(key!='' && key!='Search'){
+document.search_js1.submit();
+}else{
+alert('Please enter the keywords!');
+}
+}
+</script>
+   	  </div>
+      <div id="top_Item_app"><a href="http://en.study-shanghai.org/appsh/" class="Font_14_Green">App</a></div>
+      <div id="top_Item_English"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Item_中文"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Logo"><img src="/images/logo.png" />
+      </div>
+    </div>
+    <!--Top Bar 结束-->
+    
+    <!--Banner 开始-->
+    <div id="Banner">
+		<div id="Banner_pic"><img src="/images/Banner3.png" /></div>
+  </div>
+  <script>
+  var Banner_count=3;
+  var Banner_Max =4;
+  var Banner_list = new Array("images/Banner1.png","images/Banner2.png","images/Banner3.png","images/Banner4.png"); 
+
+	$(document).ready(function(){
+ 		$("#Banner_left").click(function(){
+			
+    		if( Banner_count>1 ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count--;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+		
+ 		$("#Banner_right").click(function(){
+			
+    		if( Banner_count<Banner_Max ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count++;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+	});
+
+
+  </script>
+  <!--Banner 结束-->
+  
+  <!--Menu 开始-->
+  <div id="nav" class="nav">
+  <ul class="first">
+<li class="a"><a class="fir" href="/"><span><img src="/images/Menu_Icon_home_on.png" style="margin-right:5px;"/>Home</span></a>
+    <li class="b"><a class="fir" href="/sis/"><span>Study in Shanghai</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+       <ul class="second" style="display: none;">
+          <li><a href="/sis/ws/2014-02-21/26.html"><span>Why Shanghai</span></a></li>
+          <li><a href="/sis/universities/"><span>Universities</span></a></li>
+          <li><a href="/sis/courses/"><span>Courses</span></a></li>
+          <li><a href="/sis/tutors/"><span>Faculty</span></a></li>
+          <li><a href="/e/action/ListInfo/?classid=19&oper=1"><span>Student Stories</span></a></li>
+        </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+    <li class="c"><a class="fir" href="/ag/"><span>Application Guide</span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ag/lr/"><span>Regulations</span></a></li>
+          <li><a href="/ag/visa/"><span>FAQs</span></a></li>
+          <li><a href="http://www.study-shanghai.org/Scholarship_en.asp"><span>Scholarships</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_3_en"><span>Applying Online</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_STA_en"><span>Status Check</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="d"><a class="fir" href="/ds/"><span>Discover Shanghai </span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ds/cl/"><span>Cultural Life</span></a></li>
+          <li><a href="/ds/museums/"><span>Museums</span></a></li>
+          <li><a href="/ds/living/"><span>Living</span></a></li>
+          <li><a href="/ds/sights/"><span>Sights</span></a></li>
+          <li><a href="/ds/itineraries/"><span>Itineraries</span></a></li> 
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="e"><a class="fir" href="/nc/news/"><span>News Center </span>  </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/nc/news/"><span>News</span></a></li>
+          <li><a href="/nc/Specials/"><span>Specials</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+    <li class="f cur"><a  class="fir" href="/lc/"><span>Learn Chinese</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+<li class="g"><a class="fir" href="/is/"><span>International Schools</span></a>
+            <ul class="second" style="display: none;">
+              <li>
+                <a href="/is/is"><span>International School</span></a>
+              </li>
+              <li>
+                <a href="/is/id"><span>International Division of Local School</span></a>
+              </li>
+              <li>
+                <a href="/is/asc"><span>After School Class</span></a>
+              </li>
+            </ul>
+          </li>
+  </ul>  
+</div><div class="cb"></div>
+  <!--Menu 结束-->
+  <div id="NavBar">
+  <a href="/index.html">Home</a>&nbsp;>&nbsp;<a href="/lc/">Learn Chinese</a>&nbsp;>&nbsp;<a href="/lc/lm/">Mandarin</a></div>
+  
+  <!--Content 开始-->
+  <div id="Content">
+ 	<div id="Content_left_News">
+    	<div class="left_menu">
+        	<UL>
+            	<li class="cur"><a href="/lc/lm/" class="Font_20_fff"><span>Mandarin</span></a></li>
+                <li ><a href="/lc/ls/" class="Font_20_fff"><span>Shanghai Dialect</span></a></li>
+                <li ><a href="/lc/hsk/" class="Font_20_fff"><span>HSK</span></a></li>                
+            </UL>
+    	</div>
+    	<div id="News_left_AD">
+    	  <div id="News_left_AD_top">
+    	    <div id="News_left_AD_img"><img src="/images/Left_AD1_icon.jpg" width="39" height="41" /></div>
+    	    <div id="News_left_AD_title"><a href="http://studyinshanghai.cndy.org/e/action/ListInfo/?classid=19&oper=1" class="Font_20_D56D00">Student Stories </a></div>
+  	    </div>
+    	  <a href="http://studyinshanghai.cndy.org/e/action/ListInfo/?classid=19&oper=1"><img src="/images/Left_AD1.jpg" width="218" height="212" /></a> </div>
+ 	</div>
+    <div id="Content_right_News">
+	<div id="Learn_Items">
+   	  
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2015-08-19/1564.html"><img src="/d/file/lc/lm/2015-08-19/27829f58c1690d517b672f0e13a45c21.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2015-08-19/1564.html">Better Chinese 3</a> 
+            <p>卡丁车 kǎ dīng chē</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2015-08-11/1549.html"><img src="/d/file/lc/lm/2015-08-11/b890743230974144b9b9c2a4c2906adc.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2015-08-11/1549.html">Better Chinese 2</a> 
+            <p>肉 ròu</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2015-07-29/1531.html"><img src="/d/file/lc/lm/2015-07-29/46298264cd89618dd72c0341293004a8.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2015-07-29/1531.html">Better Chinese 1</a> 
+            <p>热炒 rè chǎo</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1239.html"><img src="/d/file/lc/lm/2014-12-10/bc0f56f3be224a0110250616d0321e65.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1239.html">A bite of China 21</a> 
+            <p>爆炒见手青 bào chǎo jiàn shǒu qīng</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1238.html"><img src="/d/file/lc/lm/2014-12-10/9691b5d4a23508ff056f11d6f9985d27.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1238.html">A bite of China 20</a> 
+            <p>酸木瓜煮鱼 suān mù guā zhǔ yú<br />
+</p>
+        </div>
+      </div>
+          
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1237.html"><img src="/d/file/lc/lm/2014-12-10/19ecf3b93b3ea8daa7fa5390ac10f528.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1237.html">A bite of China 19</a> 
+            <p>麻辣鸡 má là jī</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1236.html"><img src="/d/file/lc/lm/2014-12-10/df26f5efdfdb1fd2fe375e63a26340a1.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1236.html">A bite of China 18</a> 
+            <p>豌杂面 wān zá miàn <br />
+</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1235.html"><img src="/d/file/lc/lm/2014-12-10/2bdc84c8ae68ad24e187103d7c59895a.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1235.html">A bite of China 17</a> 
+            <p>锅盔 guō kuī</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1234.html"><img src="/d/file/lc/lm/2014-12-10/99f738f39960a046703c2ddc60d2adcb.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1234.html">A bite of China 16</a> 
+            <p>生煎包 shēng jiān bāo</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1233.html"><img src="/d/file/lc/lm/2014-12-10/b1d779372ebaa8587f5dc09e3ddee414.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1233.html">A bite of China 15</a> 
+            <p>冰皮月饼 bīng pí yuè bǐng</p>
+        </div>
+      </div>
+          
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1232.html"><img src="/d/file/lc/lm/2014-12-10/72875f02a353ae315546744860c2843a.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1232.html">A bite of China 14</a> 
+            <p>时蔬彩虹蛋糕 cǎi hóng dàn gāo</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1231.html"><img src="/d/file/lc/lm/2014-12-10/e48bd5491334e63ecd59361d3dcd1241.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1231.html">A bite of China 13</a> 
+            <p>干子烧肉 gàn zǐ shāo ròu</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1230.html"><img src="/d/file/lc/lm/2014-12-10/281aff21ad3625df55179d8770fe3d73.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1230.html">A bite of China 12</a> 
+            <p>蒿子粑粑 hāo zǐ pá pá</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1229.html"><img src="/d/file/lc/lm/2014-12-10/d1efe0b334109f4266b06c24ad7e870c.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1229.html">A bite of China 11</a> 
+            <p>剁椒蒸鱼头 duò jiāo zhēng yú tóu <br />
+</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1228.html"><img src="/d/file/lc/lm/2014-12-10/9d1fe65b5d11466ecf43ace714bca3bf.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1228.html">A bite of China 10</a> 
+            <p>咸鸭蛋 xián yā dàn<br />
+</p>
+        </div>
+      </div>
+          
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1227.html"><img src="/d/file/lc/lm/2014-12-10/ab41dfa378034fb9881edeb46ec92759.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1227.html">A bite of China 9</a> 
+            <p>虾饺 xiā jiǎo <br />
+Steamed shrimp dumpling<br />
+</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1226.html"><img src="/d/file/lc/lm/2014-12-10/e65e5cb943868a29045dde3cf8783010.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1226.html">A bite of China 8</a> 
+            <p>榴莲酥 liú lián sū<br />
+</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-12-10/1225.html"><img src="/d/file/lc/lm/2014-12-10/2eee1ebfcf2fa320425acbed4bc5f713.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-12-10/1225.html">A bite of China 7</a> 
+            <p>干蒸烧卖 shāo mài<br />
+</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-11-13/1177.html"><img src="/d/file/lc/lm/2014-11-13/b196f9bc53edd9af98aa550355df9e09.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-11-13/1177.html">A bite of China 6</a> 
+            <p>肠粉 cháng fěn</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-11-13/1176.html"><img src="/d/file/lc/lm/2014-11-13/86d5b778a94eb5291946c760829d4e6e.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-11-13/1176.html">A bite of China 5</a> 
+            <p>艇仔粥 tǐng zǎi zhōu</p>
+        </div>
+      </div>
+          
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-11-13/1175.html"><img src="/d/file/lc/lm/2014-11-13/77636ef3ab019a80d1db1e806eccd70f.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-11-13/1175.html">A bite of China 4</a> 
+            <p>热干面 rè gān miàn</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-11-13/1174.html"><img src="/d/file/lc/lm/2014-11-13/c19dd2860b78b8f863733848f461ea81.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-11-13/1174.html">A bite of China 3</a> 
+            <p>三鲜豆皮 sān xiān dòu pí</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-11-13/1173.html"><img src="/d/file/lc/lm/2014-11-13/81cacfd4dc41e38761fd42266bbc2ade.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-11-13/1173.html">A bite of China 2</a> 
+            <p>面窝 miàn wō</p>
+        </div>
+      </div>
+            <div class="Learn_pic_Box">
+      	<div class="Learn_pic_left"> <a href="/lc/lm/2014-11-13/1172.html"><img src="/d/file/lc/lm/2014-11-13/68837034811a2cdcc3399f39f274ff2e.jpg" width="104" height="82"></a>
+        </div>
+        <div class="Learn_content_right">
+        	<a href="/lc/lm/2014-11-13/1172.html">A bite of China 1</a> 
+            <p>煎饼果子 jiān bǐng guǒ zǐ</p>
+        </div>
+      </div>
+            <!--list.var5-->
+          
+      </div>
+		<div id="jogger_box">
+         <div class="jogger">
+                         <a title="Total record">&nbsp;<b>89</b> </a>&nbsp;&nbsp;&nbsp;<span class='current'>1</span>&nbsp;<a href="/lc/lm/index_2.html">2</a>&nbsp;<a href="/lc/lm/index_3.html">3</a>&nbsp;<a href="/lc/lm/index_4.html">4</a>&nbsp;<a href="/lc/lm/index_2.html">></a>
+                    </div>   
+      </div>  
+      
+      <div class="Learn_Bottom_menu">
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="http://studyinshanghai.cndy.org/sis/ss/"><img src="/images/Learn_Icon1.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="http://studyinshanghai.cndy.org/sis/ss/">Student Stories</a></div>
+        </div>
+
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="http://studyinshanghai.cndy.org/lc/"><img src="/images/Learn_Icon2.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="http://studyinshanghai.cndy.org/lc/">Learn Chinese</a></div>
+        </div>
+        
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="#"><img src="/images/Learn_Icon3.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right2">
+          <a href="#">APP</a></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--Content 结束-->
+    <div id="bottom_bar">
+  	<div id="bottom_left"></div>
+    <div id="bottom_content">
+    	<div id="bottom_content1">
+        	<ul>
+            <li><a href="http://en.study-shanghai.org/sitemap/2014-03-13/442.html" class="Font_12_fff">Sitemap</a></li>
+            <li><a href="http://en.study-shanghai.org/tou/2014-04-07/655.html" class="Font_12_fff">Terms of Use</a></li>
+            <li><a href="http://en.study-shanghai.org/cu/2014-04-07/656.html" class="Font_12_fff">Contact Us</a></li>
+            <li><a href="http://en.study-shanghai.org/lk/2014-03-13/441.html" class="Font_12_fff">Links</a></li>
+            </ul>
+        </div>
+        <div class="cb"></div>
+        <span>Copyright © 2014 Shanghai Municipal Education Commission. All rights reserved.</span>
+    </div>    
+    <div id="bottom_right"></div>
+  </div>
+<div style="dispaly:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1252937499'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D1252937499%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<script type="text/javascript" src="/js/nav.js"></script>
+  
+</div> 
+</body>
+</html>

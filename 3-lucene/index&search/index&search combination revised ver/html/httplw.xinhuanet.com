@@ -1,0 +1,1 @@
+<html><head><meta http-equiv='Content-Type' content='text/html; charset=gbk'><title>新华社瞭望周刊社|Xinhua News Agentcy Outlook Weekly|</title><meta http-equiv='refresh' content='1;URL=\htm\201010index.htm'></head><body><p align=center>欢迎光临新华社瞭望周刊网站，正在转向最新一期……<br>Welcome to Outlook Weekly Website,please waiting for loadding...</p></body></html>

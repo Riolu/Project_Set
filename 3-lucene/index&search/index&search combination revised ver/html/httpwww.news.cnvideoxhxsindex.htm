@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="publishid" content="1173476.0.100.0"/>
+    <meta name="description" content=" " />
+<TITLE>新华炫视-新华网</TITLE>
+<BASE target="_blank" />
+<SCRIPT src="http://www.xinhuanet.com/static/jq.js" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript"> 
+function datugundong(){ 
+var jqpfoc=jQuery("#focus_pic"); 
+jQuery(document).ready(function(){ 
+var bigpic_boxobj=jqpfoc.find("div.bigpic_box"); 
+var jqnrbt=jqpfoc.find("ul.btPhoto"); 
+var len=bigpic_boxobj.find("div.fpic").length; 
+var kongzhi=''; 
+for(i=0;i<len;i++)kongzhi+='<li class="bt02"></li>'; 
+$("ul.btPhoto").append(kongzhi); 
+var nmyTime; 
+var nsig=0; 
+jqnrbt.find("li:first").addClass("current"); 
+jqnrbt.find("li").each(function(i){  
+jQuery(this).mouseover(function(){ 
+bigpic_boxobj.find("div.fpic").eq(i).fadeIn("slow").siblings().hide(); 
+jQuery(this).addClass("current").siblings().removeClass("current"); 
+nsig=i; 
+})}); 
+jqnrbt.find("li:first").mouseover(); 
+nmyTime=setInterval(function(){nsig++;if(nsig>=len){bigpic_boxobj.find("div.fpic").eq(0).fadeIn("slow").siblings().hide(); 
+jqnrbt.find("li").eq(0).addClass("current").siblings().removeClass("current");nsig=0;} 
+else{bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide();jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current")}},5000); 
+jqpfoc.mouseenter(function(){clearInterval(nmyTime)}); 
+jqpfoc.mouseleave(function(){nmyTime=setInterval(function(){nsig++;if(nsig>=len){bigpic_boxobj.find("div.fpic").eq(0).fadeIn("slow").siblings().hide(); 
+jqnrbt.find("li").eq(0).addClass("current").siblings().removeClass("current");nsig=0;}else{bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide();jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current")}},5000);}); 
+jQuery("#l_btn01").mouseover(function(){jQuery("#l_btn01").addClass("current01")}); 
+jQuery("#l_btn01").mouseout(function(){jQuery("#l_btn01").removeClass("current01")}); 
+jQuery("#r_btn01").mouseover(function(){jQuery("#r_btn01").addClass("current02")}); 
+jQuery("#r_btn01").mouseout(function(){jQuery("#r_btn01").removeClass("current02")}); 
+jQuery("#l_btn01").click(function(){nsig--; 
+if(nsig<0){nsig=len-1; 
+bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide(); 
+jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current"); 
+} 
+else{bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide(); 
+jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current"); 
+}}); 
+jQuery("#r_btn01").click(function(){ 
+nsig++; 
+if(nsig>len-1){ 
+nsig=0; 
+bigpic_boxobj.find("div.fpic").eq(0).fadeIn("slow").siblings().hide(); 
+jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current"); 
+} 
+else{ 
+bigpic_boxobj.find("div.fpic").eq(nsig).fadeIn("slow").siblings().hide(); 
+jqnrbt.find("li").eq(nsig).addClass("current").siblings().removeClass("current"); 
+}}); 
+}) 
+}$(function(){ 
+datugundong(); 
+}) 
+</SCRIPT>
+<STYLE type="text/css">
+/*通用样式*/ 
+html,body, 
+div,p,hr,pre, 
+h1,h2,h3,h4,h5,h6, 
+table,tr,td,th,tfoot,tbody,thead, 
+ul,dl,li{margin:0;padding:0;border:0;outline:none;list-style:none;font-weight: normal;} 
+body{ font-size:14px; background:url(http://www.xinhuanet.com/video/xhxs/images/20140827banner_xhxs.jpg) no-repeat 50% 0;  font-family:"微软雅黑"} 
+img{border:none}
+.box1{ border-top-width: 0px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: #e5e5e5; border-right-color: #e5e5e5; border-bottom-color: #e5e5e5; border-left-color: #e5e5e5; } 
+.box2{ border: 1px solid #cccccc; } 
+*html { _background-image:url(about:blank); _background-attachment:fixed; }
+.whbg{ width:1001px; text-align:center; margin:0 auto; background-color:#FFFFFF}
+.mauto{ margin:0 auto;}
+a:link {
+color: #333333;
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+color: #333333;
+}
+a:hover {
+text-decoration: none;
+color: #003399;
+}
+a:active {
+text-decoration: none;
+}
+#daohang{ height: 30px; margin:0 auto; background:url(http://www.xinhuanet.com/video/xhwsp/images/topbg.jpg) no-repeat center top}
+#main{ width:980px; margin:0px auto;}
+.banner{  height:180px   }
+#daohang .dh { font-family: "宋体"; font-size: 13px; font-weight: normal; color: #FFFFFF; text-decoration: none; line-height: 30px; }
+#daohang .dh a:link {line-height: 150%;	color: #FFFFFF;	text-decoration: none;}
+#daohang .dh a:visited {line-height: 150%;	color: #FFFFFF;	text-decoration: none;}
+#daohang .dh a:hover {	color: #FFFF95;	text-decoration: underline;}
+.hei13 {font-family: "宋体";	font-size: 13px;	font-weight: normal;	color: #333333;	text-decoration: none;	line-height: 22px;	text-align: left;}
+.hei13 a {font-family: "宋体";	font-size: 13px;	font-weight: normal;	color: #333333;	text-decoration: none;	line-height: 22px;}
+.count { width:980px; margin:0px auto; background:#fff; overflow:hidden ; border:6px solid #FFFFFF}
+.shipin { height:295px; margin-bottom:10px}
+/*滚动效果样式*/ 
+.focusPic { margin-bottom:20px; position: relative; height:295px; overflow:hidden;} 
+.fpic { position: relative; width:522px; height:295px; display:none; } 
+.f_bg { background:#000; height:40px; width:560px; position:absolute; left:0; bottom:0; z-index:10; display:block; opacity:0.6; filter:alpha(opacity=60); } 
+.fpic img { } 
+.l_btn { background:url(http://www.xinhuanet.com/home/new/images/sports_m_02_1.png) 0 0; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.xinhuanet.com/home/new/images/sports_m_02_1.png', sizingMethod='crop'); 
+height:35px; width:35px; position:absolute; left:6px; top:110px; z-index:1000; cursor:pointer; } 
+.r_btn { background:url(http://www.xinhuanet.com/home/new/images/sports_m_03_1.png) 0 0; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.xinhuanet.com/home/new/images/sports_m_03_1.png', sizingMethod='crop'); 
+height:35px; width:35px; position:absolute; right:6px; top:110px; z-index:1000; cursor:pointer; } 
+.fpic h3 { font-size: 12px; line-height: 20px; position:absolute; left:0px; bottom:7px; z-index:100; left:10px; font-weight:normal; } 
+.fpic h3 em { padding-right:8px; } 
+.fpic h3 em a { font:16px/30px "宋体"; } 
+.fpic h3 span { font:16px/30px "宋体"; } 
+.fpic h3 a { color:#fff; font-size:14px; } 
+.focusPic .btPhoto { width: 100px; height: 22px; margin:0 0 0 10px; position: absolute; bottom:5px; right: 5px; z-index: 10; } 
+.btPhoto .bt02 { background: url(http://www.xinhuanet.com/home/new/images/bg_datudian.gif) no-repeat -16px 0; width: 9px; height: 9px; margin: 3px; display: inline; float: left; cursor: pointer; } 
+.btPhoto .current { background: url(http://www.xinhuanet.com/home/new/images/bg_datudian.gif) no-repeat; } 
+.btPhoto .bt01, .btPhoto .bt09 { width: 23px; height: 19px; margin: 0 5px; float: left; } 
+.btPhoto .bt01 img, .btPhoto .bt09 img { cursor: pointer; border: none; } 
+#bigpic { width:560px; height:295px; overflow:hidden; float:left } 
+.topright { float:right; width:385px; border-left:1px solid #ddd; height:295px; padding-left:15px}
+.topright h2 { font-size:18px; font-weight:600; line-height:30px; font-family:"微软雅黑"; height:30px; overflow:hidden; padding-left:25px}
+.topright h2 a { color:#0066CC}
+.topright h3 { font-size:16px; font-weight:400; line-height:35px; font-family:"微软雅黑"; background: url(http://www.xinhuanet.com/video/xhwsp/images/iconsp.png) no-repeat 0px 12px; padding-left:25px; height:35px; overflow:hidden}
+.topright p { color:#666666; line-height:22px; text-indent:2em; height:66px; overflow:hidden}
+.line { border-top:1px dashed #ccc; height:1px; margin:15px 0px}
+.ad { margin-bottom:10px; padding-top:10px}
+.wqjm { width:650px; float:left;}
+.wqjm .title { height:42px; line-height:40px; border-bottom:1px solid #ccc; padding-top:8px}
+.wqjm .title h2 { float:left; width:200px}
+.wqjm .title span { float:right}
+.wqlist { padding:0px}
+.wqlist li { border-bottom:1px dashed #ccc; padding-bottom:20px; padding-top:20px; overflow:hidden}
+.wqlist li.noborder { border:0px}
+.wqlist li .pic { float:left; width:140px; margin-right:15px}
+.wqlist .text { float:left; width:495px}
+.wqlist .text h2 { font-family:"微软雅黑"; font-size:16px; font-weight:400; line-height:35px}
+.wqlist .text p { color:#666666; line-height:22px}
+.wqlist .date { font-size:12px;  text-align:right}
+.mainright { float:right; width:300px}
+.jmjs .title { height:42px; line-height:40px; padding-top:8px; color:#666; font-family:"微软雅黑"; font-size:18px; font-weight:400}
+.jmsj { padding:10px; line-height:24px; font-family:"微软雅黑"; font-size:14px; color:#666666}
+.jmsj p { text-indent:2em}
+.jmsj p a { color:#CC0000}
+.jmjs li {background: url(http://www.xinhuanet.com/video/xhwsp/images/iconsp.png) no-repeat 0px 7px; padding-left:25px; line-height:26px;height:26px; font-family:"微软雅黑"; font-size:14px; color:#666666; overflow:hidden }
+#foot { background:#379be9; border-top:4px solid #205a87; height:80px; clear:both; margin-top: 20px;}
+.copyright { width:980px; margin:0px auto; text-align:center; line-height:76px}
+.copyright p { font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#fff}
+.copyright p a { color:#fff}
+.more{ float:right}
+</STYLE>
+</HEAD>
+<BODY background="">
+<DIV id="all">
+<DIV id="daohang">
+<DIV align="center"><SPAN class="dh"><A href="http://www.xinhuanet.com/" target="_blank">新华网首页</A> | <A href="http://www.news.cn/jsyw.htm" target="_blank">新闻中心</A> | <A href="http://www.xinhuanet.com/politics/" target="_blank">时政</A> | <A href="http://www.xinhuanet.com/world/" target="_blank">国际</A> | <A href="http://www.xinhuanet.com/fortune/" target="_blank">财经</A> | <A href="http://www.xinhuanet.com/mil/" target="_blank">军事</A> | <A href="http://www.xinhuanet.com/legal/" target="_blank">法治</A> | <A href="http://www.xinhuanet.com/comments/" target="_blank">网评</A> | <A href="http://www.xinhuanet.com/sports/" target="_blank">体育</A> | <A href="http://www.xinhuanet.com/ent/" target="_blank">文娱</A> | <A href="http://www.xinhuanet.com/newmedia/" target="_blank">传媒</A> | <A href="http://www.xinhuanet.com/tech/" target="_blank">科技</A> | <A href="http://www.xinhuanet.com/edu/" target="_blank">教育</A> | <A href="http://www.xinhuanet.com/school/" target="_blank">校园</A> | <A href="http://www.xinhuanet.com/auto/" target="_blank">汽车</A> | <A href="http://www.xinhuanet.com/house/" target="_blank">房产</A></SPAN></DIV>
+</DIV>
+<DIV id="main">
+<DIV class="banner">
+<DIV id="main1"></DIV>
+</DIV>
+<DIV class="count">
+<DIV class="shipin">
+<DIV id="bigpic">
+<DIV class="focusPic" id="focus_pic">
+<DIV class="l_btn" id="l_btn01"></DIV>
+<DIV class="r_btn" id="r_btn01"></DIV>
+<DIV class="bigpic_box">
+<DIV id="main2">
+<div class="fpic" style="display: block;">
+<a href="http://news.xinhuanet.com/video/2015-02/21/c_127506352.htm"><img src="../titlepic/111448/1114484760_title0h.jpg" width="560" height="295" alt="文明出境游 做&ldquo;中国好游客&rdquo;" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-02/21/c_127506352.htm" target="_blank">文明出境游 做“中国好游客”</a></h3>
+<span class="f_bg"></span> 
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://news.xinhuanet.com/video/2015-01/30/c_127370271.htm"><img src="../titlepic/111448/1114484780_title0h.jpg" width="560" height="295" alt="北京地铁票的前世今生" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-01/30/c_127370271.htm" target="_blank">北京地铁票的前世今生</a></h3>
+<span class="f_bg"></span> 
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://news.xinhuanet.com/video/2015-01/29/c_127383801.htm"><img src="../titlepic/111448/1114484772_title0h.jpg" width="560" height="295" alt="边玩手机边陪孩子 你&quot;冷暴力&quot;了吗?" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-01/29/c_127383801.htm" target="_blank">边玩手机边陪孩子 你"冷暴力"了吗?</a></h3>
+<span class="f_bg"></span> 
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://news.xinhuanet.com/video/2015-02/02/c_127386710.htm"><img src="../titlepic/111448/1114484770_title0h.jpg" width="560" height="295" alt="2015年多&ldquo;一秒钟&rdquo; 你怎么过？" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-02/02/c_127386710.htm" target="_blank">2015年多“一秒钟” 你怎么过？</a></h3>
+<span class="f_bg"></span> 
+</div>
+<div style="display: none;" class="fpic">
+<a href="http://news.xinhuanet.com/video/2015-02/10/c_127478763.htm"><img src="../titlepic/111448/1114484765_title0h.jpg" width="560" height="295" alt="穿戴高科技不是问题" /></a> 
+<h3><a href="http://news.xinhuanet.com/video/2015-02/10/c_127478763.htm" target="_blank">穿戴高科技不是问题</a></h3>
+<span class="f_bg"></span> 
+</div>
+</DIV>
+</DIV>
+<UL class="btPhoto"></UL>
+</DIV>
+</DIV>
+<DIV class="topright">
+<DIV class="newsbox">
+<DIV id="main3">
+<h2><a href="http://news.xinhuanet.com/video/2014-10/21/c_127119166.htm">雾霾当前 你必须知道PM2.5的真相</a></h2>
+</DIV>
+<DIV id="main4">
+<h3><a href="http://news.xinhuanet.com/video/2014-10/23/c_127128552.htm" target="_blank">冷知识：该啥时候开始穿秋裤？ </a></h3>
+<p>有种思念叫“望穿秋水”，有种寒冷叫“忘穿秋裤”。瑟瑟秋风来,冻得扛不住。 随着秋天逐渐往深秋迈进,“到底什么时候穿秋裤”成了小伙伴们讨论的热门话题。</p>
+</DIV>
+</DIV>
+<DIV class="line"></DIV>
+<DIV class="newsbox">
+<DIV id="main5">
+<h2><a href="http://news.xinhuanet.com/video/2014-10/27/c_127138752.htm" target="_blank">一周娱乐·整容被黑感情难 女神背后也辛酸 </a></h2>
+</DIV>
+<DIV id="main6">
+<h3><a href="http://news.xinhuanet.com/video/2014-10/24/c_127135254.htm" target="_blank">智能手表大比拼 到底哪家强？ </a></h3>
+<p>Apple Watch 改变大家对于智能表的看法？美貌与智慧并称的 Moto 360 才是赢家？在沉寂一年后，苹果终于发布了智能手表，加入“抢手腕”争夺大赛。</p>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<!--<DIV class=ad>
+<DIV id=main7><A href="http://www.xinhuanet.com/video/xhwsp/index.htm" target=_blank><IMG height=100 src="http://www.xinhuanet.com/video/static/t1184782/123456789.jpg" width=980></A></DIV></DIV>-->
+<DIV class="wqjm">
+<DIV class="title">
+<H2>
+<DIV id="main8">往期节目</DIV>
+</H2>
+<div class="more"><a href="http://www.xinhuanet.com/video/xhxs/wqjm.htm">更多>></a></div>
+</DIV>
+<DIV class="wqlist">
+<DIV id="main9">
+<ul>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/28/c_128363908.htm"><img src="../titlepic/12836/128363908_1445935155492_title0h.jpg" width="140" height="100" alt="【新华炫视】舒缓小妙招 拯救上班族疲惫双眼" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/28/c_128363908.htm">【新华炫视】舒缓小妙招 拯救上班族疲惫双眼</a></h2>
+<p>秋冬空气干燥，长时间面对电脑的上班族们，双眼实在太容易疲劳。如何能够缓解眼部又干又疼的症状呢。小编亲身尝试手把手教。有木有怀念上学时代课间的眼保健操呢。那比上课还长的几分钟里，从眼皮到眼珠子都得到了舒缓呢，在工位上每天做一到两次眼保健操，帮助缓解眼部神经紧张，休息一下再战斗哦。</p>
+<p class="date">2015-10-28</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/27/c_128359727.htm"><img src="../titlepic/12835/128359727_1445848496436_title0h.jpg" width="140" height="100" alt="【新华炫视】《她很漂亮》大火 那个短发女生她真的很漂亮" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/27/c_128359727.htm">【新华炫视】《她很漂亮》大火 那个短发女生她真的很漂亮</a></h2>
+<p>现在的韩剧，一般都是看到开头就能猜到结尾的老套剧情。无论中间有多少挫折，出现多少个程咬金，男主女主都会小手一牵，相亲相爱。在这个看脸的时代，能让小编热追韩剧的理由只有一个，那就是颜值。</p>
+<p class="date">2015-10-27</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/26/c_128351777.htm"><img src="../titlepic/12835/128351777_1445592723987_title0h.jpg" width="140" height="100" alt="【新华炫视】签证时效不约束 美滋滋地畅游英伦" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/26/c_128351777.htm">【新华炫视】签证时效不约束 美滋滋地畅游英伦</a></h2>
+<p>英国首相卡梅伦21日宣布，自2016年1月起，来自中国的游客将享受有效期为2年的全新访客签证。英国还将计划为中国访客推出一个全新的10年期多次入境签证。听到这个消息，小编简直要欢呼啦。去英国旅游、学习等等不用担心签证时间太短、安排太紧啦。</p>
+<p class="date">2015-10-26</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/23/c_128347440.htm"><img src="../titlepic/12834/128347440_1445502453313_title0h.jpg" width="140" height="100" alt="【新华炫视】一周娱乐指南・和夏洛一起回到1997" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/23/c_128347440.htm">【新华炫视】一周娱乐指南・和夏洛一起回到1997</a></h2>
+<p>《夏洛特烦恼》带着我们一起穿越回了1997年。那会的北京不堵车，天空还很蓝，那会的小虎队还年少，朴树许巍还没有出道，小编还是个熊孩子。回顾97年，娱乐圈发生的事可不少。</p>
+<p class="date">2015-10-23</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/21/c_128339183.htm"><img src="../titlepic/12833/128339183_1445331305399_title0h.jpg" width="140" height="100" alt="【新华炫视】古人文明用语 你晓得几个？" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/21/c_128339183.htm">【新华炫视】古人文明用语 你晓得几个？</a></h2>
+<p>亲、宝儿、欧尼，现在很多人都比较喜欢用这种亲昵的字眼，来称呼对方，已便缩小距离感。虽然现在现在交流、说活都是白话文，但是古人的智慧永远不可小视，寥寥几字，总能表达出更有深度的含义。那么，咱们的古人在日常生活中都喜欢用那些词汇与对方交流呢？</p>
+<p class="date">2015-10-21</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/20/c_128334987.htm"><img src="../titlepic/12833/128334987_1445243020898_title0h.jpg" width="140" height="100" alt="【新华炫视】小王子电影版来袭 长大的你莫忘初心" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/20/c_128334987.htm">【新华炫视】小王子电影版来袭 长大的你莫忘初心</a></h2>
+<p>《小王子》这部风靡全球的小说真的被搬上了大荧幕。童年那些文字里的幻想成为奇观展现在电影里。我们总是不吝啬自己的观影时间去消费“成长主题”的电影，特别是像《小王子》这样陪伴众多读者的典型形象，再见他、热爱他、怀念他，他告诉你，长大的你莫忘初心。</p>
+<p class="date">2015-10-20</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/19/c_128326700.htm"><img src="../titlepic/12832/128326700_1444984905921_title0h.jpg" width="140" height="100" alt="【新华炫视】雾霾关进戒指 你会收藏吗" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/19/c_128326700.htm">【新华炫视】雾霾关进戒指 你会收藏吗</a></h2>
+<p>荷兰的发明家发起了一项名为“雾霾自由塔”的众筹，这项具有公益意义的项目，将会把雾霾变废为“宝”。据说雾霾戒指今年年底将会面市，将会在世界各地的商场出售。拯救北京雾霾天空，你加入吗？</p>
+<p class="date">2015-10-19</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/16/c_128322407.htm"><img src="../titlepic/12832/128322407_1444896680059_title0h.jpg" width="140" height="100" alt="【新华炫视】一周娱乐指南・美妆super嫣 李爸直呼：闹得这个事不小" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/16/c_128322407.htm">【新华炫视】一周娱乐指南・美妆super嫣 李爸直呼：闹得这个事不小</a></h2>
+<p>除了tfboys，现在的小女生最流行的就是美妆教程了。前不久，小学生化妆世锦赛刚落下帷幕，虽然最后也没选出来冠亚军，可是却把久不露真容的李嫣吸引了出来，大方分享自己的美妆心得。</p>
+<p class="date">2015-10-16</p>
+</div>
+</li>
+<li>
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/15/c_128318101.htm"><img src="../titlepic/12831/128318101_1444811746165_title0h.jpg" width="140" height="100" alt="【新华炫视】想要&ldquo;公主婚礼&rdquo; 向上海迪士尼看齐" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/15/c_128318101.htm">【新华炫视】想要“公主婚礼” 向上海迪士尼看齐</a></h2>
+<p>明年，上海迪士尼就要开业了，不同于其他国家和地区的迪士尼城堡，上海这家可以承办公主主题婚礼哦。即使你的另一半不想做王子，也必须要他陪你公主一次。毕竟一辈子当这么一次身临其境的公主，要求一点都不公分呀。</p>
+<p class="date">2015-10-15</p>
+</div>
+</li>
+<li class="noborder">
+<div class="pic"><a href="http://news.xinhuanet.com/video/2015-10/14/c_128314048.htm"><img src="../titlepic/12831/128314048_1444726982742_title0h.jpg" width="140" height="100" alt="【新华炫视】机器人智能手机 现实版傻妞将出世" /></a></div>
+<div class="text">
+<h2><a href="http://news.xinhuanet.com/video/2015-10/14/c_128314048.htm">【新华炫视】机器人智能手机 现实版傻妞将出世</a></h2>
+<p>还记得在《魔幻手机》里，一句我爱你，就可开启一个能接收电话、短信，还能保护主人的美女机器人手机：傻妞吗？ 小编看过此剧以后，一直幻想自己能有一部如此全能的手机。在这个科技超级超级发达的时代，这不小编的梦想变成了现实，智能手机将出世啦。</p>
+<p class="date">2015-10-14</p>
+</div>
+</li>
+</ul>
+<div class="more"><a href="http://www.xinhuanet.com/video/xhxs/wqjm.htm">更多>></a></div>
+</DIV>
+</DIV>
+</DIV>
+<DIV class="mainright">
+<DIV class="jmjs">
+<DIV class="title">
+<DIV id="main10">新华炫闻</DIV>
+</DIV>
+<DIV class="con">
+<DIV id="main11"><IMG height="135" src="http://www.xinhuanet.com/video/static/t1184782/123.png" width="300" /></DIV>
+<DIV class="jmsj">
+<P>
+<DIV id="main12">新华炫闻是新华网打造的一款面向4G的多媒体集成交互客户端，为用户传播及时、权威、全面的新闻资讯。新华炫闻以全新的新闻理念，打造属于年轻人的新闻客户端。如果您想要看到“新华炫视”更多的精彩内容，快来下载炫闻客户端吧。</DIV>
+<P></P>
+</DIV>
+</DIV>
+</DIV>
+<DIV class="jmjs">
+<DIV class="title">
+<DIV id="main13">热播推荐</DIV>
+</DIV>
+<DIV class="con">
+<DIV id="main14">
+<ul>
+<li><a href="http://news.xinhuanet.com/video/2015-01/30/c_127185900.htm">网上订餐的喜与忧</a></li>
+<li><a href="http://news.xinhuanet.com/video/2014-08/25/c_126915045.htm">新华炫数据：“手机依赖症”你有木有？</a></li>
+<li><a href="http://news.xinhuanet.com/video/2014-08/25/c_126913499.htm">一周娱乐・小鲜肉变阶下囚 明星纷纷湿身</a></li>
+<li><a href="http://news.xinhuanet.com/video/2014-08/21/c_126901737.htm">一周娱乐指南・高虎吸毒罗宾离世</a></li>
+<li><a href="http://news.xinhuanet.com/video/2014-08/21/c_126901720.htm">房祖名柯震东吸毒被抓 网友神补刀玩坏俩人</a></li>
+<li><a href="http://news.xinhuanet.com/video/2014-08/12/c_126858076.htm">男子吃粪水臭豆腐器官衰竭 你还敢吃吗?</a></li>
+<li><a href="http://news.xinhuanet.com/video/2014-08/08/c_126844170.htm">新华炫数据：《小苹果》为什么如此洗脑？</a></li>
+<li><a href="http://news.xinhuanet.com/video/2014-08/07/c_126844171.htm">逗比微博欢乐阵地·明星打架网友欢乐围观</a></li>
+<li><a href="http://news.xinhuanet.com/video/2014-08/07/c_126839733.htm">谢耳朵涨工资 《生活大爆炸》再拍三季</a></li>
+<li><a href="http://news.xinhuanet.com/video/2014-08/05/c_126830818.htm">摆肉大叔横空出世 斗艺争夺理货大妈盘口</a></li>
+</ul>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV id="foot">
+<DIV class="copyright">
+<P>Copyright © 2000 - 2014 XINHUANET.com　All Rights Reserved. 　制作单位：新华网 版权所有 <A href="http://www.news.cn/" target="_blank">新华网</A> | <A href="http://www.xinhuanet.com/aboutus.htm" target="_blank">关于我们</A> | <A href="http://news.xinhuanet.com/way.htm" target="_blank">联系我们</A> | <A href="http://www.xinhuanet.com/linktous.htm" target="_blank">我要链接</A> | <A href="http://www.xinhuanet.com/xinhua_copyright.htm" target="_blank">版权声明</A> </P>
+</DIV>
+</DIV>
+</DIV>
+<div style="display:none"><div id="fwl">010020050550000000000000011200000000000000</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020050550000000000000011200000000000000")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020050550000000000000011200000000000000" border="0" /></noscript></div>   </BODY>
+</HTML>

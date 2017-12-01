@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta content="width=device-width,user-scalable=no" name="viewport"> 
+<meta name="”format-detection”" content="”telephone=no”">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<title>在北京停车有多难？</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css"/>
+<script type="text/javascript" src="js/echarts-all.js"></script>
+</head>
+
+<body>
+<div id="fullpage">
+	<div class="page section">
+		<div class="contain" id="fm">
+			<div class="til"><img src="images/1-1.png"></div>
+			<div class="content"><p>摇号拼人品、停车靠运气、堵车练心态……但这些都难以抵挡北京机动车数量的不断走高。这一现状除了带来交通拥堵和环境污染，最为突出的就数停车的老大难问题了，每个有车族每天都不得不去面对它。目前，在北京买辆车有多难？北京登记注册停车位数量与机动车保有量之间的缺口是否逐年缓解？停车的成本又是多少？</p></div>
+			<div class="cloud one"><img src="images/1-2.png"></div>
+			<div class="cloud two"><img src="images/1-2.png"></div>
+			<div class="something"><img src="images/1-3.png"></div>
+			<div class="city"><img src="images/1-5.png"></div>
+			<div class="car"><img src="images/1.gif"></div>
+		</div>
+	</div>
+	<div class="page section page1">
+		<div class="contain">
+		    <div class="container">
+				<p class="til">摇号买车有多难？......</p>
+		        <ul class="cols">
+		            <li class="col1">
+		                <div>
+		                    <p class="redbg cont">摇号申请人数<span id="pepolenum">1404026</span></p>
+		                </div>
+		                <div class="pepoleborder">
+		                	<div class="pepole">
+			                    <!-- <img src="pepole.png"> -->
+			                </div>
+		                </div>
+		                <div id="timebar" class="timebar">
+		                    <ul>
+		                        <li>
+		                            <a class="actived" href="javascript:;"></a>
+		                            <div class="timetext"><p>2013<br>第一期</p></div>
+		                        </li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                        <li><a href="javascript:;"></a></li>
+		                    </ul>
+		                </div>
+		                <div class="devider"></div>
+		            </li>
+		            <li class="col2">
+		                <div>
+		                    <p class="redbg cont1">中签率<span id="rate">81:1</span></p>
+		                </div>
+		                <div class="zhuanpan">
+		                    <img src="images/zhuanpan.gif" alt="">	
+		                </div>
+		                <div class="devider"></div>
+		            </li>
+		            <li class="col3">
+		                <div>
+		                    <p class="redbg cont2">中签人数<span id="carsnum">18653</span></p>
+		                </div>
+		                <div id="shuoming" style="position:absolute;bottom:-60px;right:-10px">
+		                	<p style="padding-left:24px;background:url(images/star.png) center left no-repeat;width:155px;font-size:16px;">中签人数不包含放弃购车指标的人数</p>
+		                </div>
+		                <div class="cars">
+		                    <img src="images/cars.png" alt=""></div>
+		                <div class="devider"> </div>
+		            </li>
+		        </ul>
+		        <div class="page1_txt">
+		        	<p>在朋友圈中炫富，也许不足以让人嫉妒，但在朋友圈中“炫摇号”的话，你的小伙伴们肯定会“羡慕嫉妒恨”！近年来，北京有意愿购车的人数逐年增加，摇号购车的大军越来越壮大，导致中签购车变得越发困难。</p>
+		        	<p>根据北京市小客车指标调控管理办公室的数据显示，2013年每月举行一次摇号，当年1月便已经有140万人申请摇号购车；2014年初改为每两个月摇号一次，截止最近一期（2015年8月）时，申请摇号人数便增加到了247万人，这相当于每139个人当中摇出一个车牌。摇号政策实行后，购车的难度正不断增加……</p>
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	<div class="page section page2">
+		<div class="contain">
+			<div class="til">车位缺口在增加还是减小？</div>
+			<div id="chart" style="height:300px;width:1000px;"></div>
+			<script type="text/javascript">
+			
+			    var mychart = echarts.init(document.getElementById('chart'));
+
+			    var option = {
+			        title: {
+			            text: '停车位',
+			            subtext: ''
+			        },
+			        tooltip: {
+			            trigger: 'axis',
+			        },
+			        // tooltip: {
+			        //     formatter: function(d) {
+			        //         // body...
+			        //         // console.log(d);
+			        //         return d[0] + d.name + "," + d.value + "万";
+			        //     }
+			        // },
+			        legend: {
+			            data: ['私家车保有量', '车位数', '车位缺口']
+			        },
+			        xAxis: [{
+			            type: 'category',
+
+			            data: ["2013年", "2014年", "2015年（预测）", "2016年（预测）", "2017年（预测）"]
+			        }],
+			        yAxis: [{
+			            type: 'value',
+			            name: '车辆&车位',
+			            axisLabel: {
+			                formatter: '{value} 万'
+			            }
+			        },
+			        {
+			            type : 'value',
+			            name : '车位缺口',
+			            axisLabel : {
+			                formatter: '{value} 万'
+			            },
+			            scale: true,
+			            boundaryGap: [0,1]
+			        }],
+			        series: [{
+			            name: '私家车保有量',
+			            type: 'bar',
+			            data: [
+							426.5, 437.2, 447.8, 455.7, 463.6
+
+			            ]
+			        }, {
+			            name: '车位数',
+			            type: 'bar',
+			            data: [156.6, 175.8, 187.9, 198.5, 209.2]
+			        }, {
+			            name: '车位缺口',
+			            type: 'line',
+			             yAxisIndex: 1,
+			            data: [269.9, 261.4, 259.9, 257.2, 254.4]
+			        }]
+			    };
+
+			    mychart.setOption(option).setTheme('macarons');//主题可改变
+
+			</script>
+			<div class="page2_txt">
+				<p>北京市曾经历汽车保有量高速增长的时期，那时相对紧缺的停车位与日益庞大的私家车数量之间便存在着巨大的缺口。</p>
+				<p>自2011年起，北京市实行小汽车指标摇号政策，私家车增长逐渐放缓，而另一方面北京也在逐渐加大停车位建设的步伐。2013年私家车保有量为426.5万辆，注册登记的停车位数量约为157万个，停车位缺口约270万，车位并不能满足停车需求。</p>
+				<p>按照北京市小客车指标计划，预测2017年私家车保有量为463.6万辆。根据北京市交通委运输管理局发布的过去十年停车位数量，推算出到2017年，北京市注册登记的停车位数量约为209万个。</p>
+				<p><b>通过以上预测可看出，私家车保有量增长将持续放缓，而停车位建设不断加快，停车位与私家车数量这二者间的缺口在逐步减小。</b></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="page section page3">
+		<div class="contain">
+			<div class="til" style="text-align:left;padding-bottom:0px">小区停车有多难？</div>
+			<div class="page2_txt" style="text-align:left">
+				<p>相信有车的小伙伴们都遇见过这样一个问题，回家晚了就没有车位了，只能开车在小区附近转圈圈找车位。居住区车辆的停放问题算是车主们最头疼的问题了。通过各区户数以及各区备案停车位的数据比较，从中可看出两者之间的比例。朝阳居住区的备案停车位最多，平均3户一个车位；顺义居住区的备案停车位最少，高达14户一个车位。各区的居住区车位尚不能满足停车需求。（本项统计依据北京市交通委发布的各区居住区的备案停车位计算，可能与实际停车位数量有所出入。）</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="page section page4">
+		<div class="contain">
+			<div class="fr">
+				<div class="til" style="padding-left:12px;padding-bottom:10px">出行停车，花费多少钱？</div>
+				<img src="images/map_txt.png">
+			</div>
+			<div class="time" id="threeDistrict_con" style="display: none;font-size: 16px;font-weight: 400;padding:20px;color:#555;overflow:hidden">
+				<div style="font-size: 20px;text-align: center;padding-bottom: 10px"><p>三类地区<span style="font-size:14px;">（指五环路以外区域）</span></p></div>
+				<div class="fl" style="width:250px;padding-right:15px;border-right:1px #ddd dashed;">
+					<p style="text-align:center;color:#fff;background:#f39700;width:100%;padding:5px auto;border-radius:15px;margin-bottom:10px;font-size:18px;">白天（7:00-21:00）</p>
+			        <p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">首小时内0.5元/15分钟</p>
+			        <p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">首小时外0.75元/15分钟</p>
+			        <p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">路外露天0.5元/15分钟</p>
+			        <p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">非露天：0.5元/15分钟</p>
+				</div>
+		        <div class="fr" style="width:250px;padding-left:15px;">
+			        <p style="text-align:center;color:#fff;background:#f39700;width:100%;padding:5px auto;border-radius:15px;margin-bottom:10px;font-size:18px;">夜间（21:00-次日7:00）</p>
+			        <p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">露天1元/两小时</p>
+			        <p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">非露天2.5元/半小时</p>
+		        </div>
+		    </div>
+		    <div class="time" id="twoDistrict_con" style="display: none;font-size: 16px;font-weight: 400;padding:20px;color:#555;overflow:hidden">
+				<div style="font-size: 20px;text-align: center;padding-bottom: 10px"><p>二类地区<span style="font-size:14px;">（指五环路【含】以内除一类地区以外的其他区域）</span></p></div>
+		    	<div class="fl" style="width:250px;padding-right:15px;border-right:1px #ddd dashed;">
+		    		<p style="text-align:center;color:#fff;background:#f39700;width:100%;padding:5px auto;border-radius:15px;margin-bottom:10px;font-size:18px;">白天（7:00-21:00）</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">首小时内1.5元/15分钟</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">首小时外2.25元/15分钟</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">路外露天1.25元/15分钟</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">非露天：不高于1.25元/15分钟</p>
+		    	</div>
+		    	<div class="fr" style="width:250px;padding-left:15px;">
+		    		<p style="text-align:center;color:#fff;background:#f39700;width:100%;padding:5px auto;border-radius:15px;margin-bottom:10px;font-size:18px;">夜间（21:00-次日7:00）</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">露天1元/两小时</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">非露天2.5元/半小时</p>
+		    	</div>
+		    </div>
+		    <div class="time" id="oneDistrict_con" style="display: none;font-size: 16px;font-weight: 400;padding:20px;color:#555;overflow:hidden">
+				<div style="font-size: 20px;text-align: center;padding-bottom: 10px"><p>一类地区<span style="font-size:14px;">（指三环路【含】以内区域及4个重点区域）</span></p></div>
+		        <div class="fl" style="width:250px;padding-right:15px;border-right:1px #ddd dashed;">	
+		        	<p style="text-align:center;color:#fff;background:#f39700;width:100%;padding:5px auto;border-radius:15px;margin-bottom:10px;font-size:18px;">白天（7:00-21:00）</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto"> 首小时内2.5元/15分钟</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">首小时外3.75元/15分钟</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">路外露天2元/15分钟</p>
+		        	<p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">非露天：不高于1.5元/15分钟</p>
+		        </div>
+		    	<div class="fr" style="width:250px;padding-left:15px;">
+			    	<p style="text-align:center;color:#fff;background:#f39700;width:100%;padding:5px auto;border-radius:15px;margin-bottom:10px;font-size:18px;">夜间（21:00-次日7:00）</p>
+			        <p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">露天1元/两小时</p>
+			        <p style="padding-left:10px;background:url(images/dian.png) center left no-repeat;background-size:5px auto">非露天2.5元/半小时</p>
+		    	</div>
+		    </div>
+		    <div class="p4">
+		        <div class="threeDistrict">
+		            <a class="fancybox-effects-b" href="#threeDistrict_con"><img src="images/three.png"/></a>
+		            <div class="twoDistrict">
+		                <a class="fancybox-effects-b" href="#twoDistrict_con"><img src="images/two.png"/></a>
+		                <div class="oneDistrict">
+		                    <a class="fancybox-effects-b" href="#oneDistrict_con"><img src="images/one.png"/></a>
+		                    <ul>
+		                        <li id="zgcxq"><a class="fancybox-effects-a fancybox.iframe" href="zhongguancun.html"><img src="images/zgcxq.png"></a></li>
+		                        <li id="zyswq"><a class="fancybox-effects-a fancybox.iframe" href="CBD.html"><img src="images/zyswq.png"></a></li>
+		                        <li id="ysdq"><a class="fancybox-effects-a fancybox.iframe" href="yansha.html"><img src="images/ysdq.png"></a></li>
+		                        <li id="cwsyq"><a class="fancybox-effects-a fancybox.iframe" href="cuiwei.html"><img src="images/cwsyq.png"></a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+			<div id="data_ly" style="font-size:13px;padding-left:10px;float:right;width:400px;color:#555;line-height:25px">
+				<p>数据来源：北京市统计局、北京市交通委运输管理局</p>
+				<p>注1：以上内容不包含新能源车在内。</p>
+				<p>注2：收费标准仅供非居住区的公共停车场临时停放参考。</p>
+				<p>文案：孙丽颖 王履冰 杨艾艾 制作：张桢 彭雨荷 赵祎鑫 姜闽</p>
+			</div>
+		</div>
+	    <div class="footer">
+	    	<!-- <p>文案：杨艾艾 孙丽颖 王履冰 制作：彭雨荷 赵祎鑫 姜敏</p> -->
+			<p>新华网数据新闻部出品</p>
+			<p>Copyright  2000 - 2015 XINHUANET.com</p>
+	    </div>
+	</div>
+
+</div>
+
+
+
+<div id="prev"><img src="images/prevArrow.png"></div>
+<div id="next"><img src="images/nextArrow.png"></div>
+<div id="prev2"><img src="images/prevArrow.png"></div>
+<div id="next2"><img src="images/nextArrow.png"></div>
+
+
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/d3.v3.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.fancybox').fancybox();
+        $(".fancybox-effects-a").fancybox({
+            helpers: {
+                title : {
+                    type : 'outside'
+                },
+                overlay : {
+                    speedOut : 0,
+                    width : 700,
+                    closeClick:false
+                }
+            },
+            closeClick:false,
+        });
+        $(".fancybox-effects-b").fancybox({
+            helpers: {
+                title : {
+                    type : 'outside'
+                },
+                overlay : {
+                    speedOut : 0,
+                    closeClick:false
+                }
+            },
+            width:500,
+            closeClick:false,
+        });
+    });
+</script>
+<script type="text/javascript">
+		$('#fullpage').fullpage({
+            anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+            afterRender: function(){
+                $.fn.fullpage.setAllowScrolling(false);
+            },
+			afterLoad: function(anchorLink, index){
+	            var loadedSection = $(this);
+
+	            //using index
+	            
+
+	            if(index == 2){
+	            	$('#prev').css('display','none');
+	            	$('#next').css('display','none');
+	            	$('#prev2').css('display','block');
+	            	$('#next2').css('display','block');
+	            }else if(index ==1){
+	            	$('#prev').css('display','none');
+	            	$('#next').css('display','block');
+	            	$('#prev2').css('display','none');
+	            	$('#next2').css('display','none');
+	            }else if(index == 5){
+	            	$('#next').css('display','none');
+	            }else{
+	            	$('#prev').css('display','block');
+	            	$('#next').css('display','block');
+	            	$('#prev2').css('display','none');
+	            	$('#next2').css('display','none');
+	            };
+	        }
+        });
+
+
+
+            $(document).on('click', '#prev', function(){
+            	// alert(11);
+			  $.fn.fullpage.moveSectionUp();
+			});
+            
+            $(document).on('click', '#next', function(){
+            	console.log();
+            	// console.log(1);
+			  $.fn.fullpage.moveSectionDown();
+			});
+			$(document).on('click', '#prev2', function(){
+            	// alert(11);
+			  $.fn.fullpage.moveTo(1);
+			});
+            
+            $(document).on('click', '#next2', function(){
+            	// console.log();
+            	// console.log(1);
+			  $.fn.fullpage.moveTo(3);
+			});
+
+</script>
+<script>
+var width  = 1000;
+var height = 600;
+
+
+var svg = d3.select(".page3 .contain").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(0,0)")
+        .style("position","absolute");
+
+
+var projection = d3.geo.mercator()
+        .center([117.9, 39.98])
+        .scale(70000)
+        .translate([width/2, height/2]);
+
+var path = d3.geo.path()
+        .projection(projection);
+
+
+var color = d3.scale.category20();
+
+//添加一个提示框1
+var tooltip = d3.select("body .page3 .contain")
+        .append("div")
+        .append("p")
+        .attr("class","tooltip")
+        .style("opacity",1.0)
+        .style("left", "50%")
+        .style("top", "0%")
+		tooltip.html("<p class='p1'>西城区" + "</p><p class='p2'>10.6" + "</p><p class='p3'>9.7"  + "</p>")
+
+
+//缩放
+var zoom = d3.behavior.zoom()
+        .scaleExtent([1, 5])
+        .on("zoom", zoomed);
+
+function zoomed() {
+    svg.attr("transform",
+            "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
+
+
+d3.json("beijing2.json", function(error, root) {
+
+    /*if (error)
+        return console.error(error);
+//        console.log(root.features);*/
+
+    svg.selectAll("path")
+            .data(root.features)
+            .enter()
+            .append("path")
+            .attr("stroke","#fff")
+            .attr("box-shadow","#888")
+            .attr("stroke-width",1.5)
+            .attr("fill", function(d,i){
+                return color(i);
+            })
+            .attr("d", path )
+            .style("box-shodow", "1px 2px 2px #888")
+            .on("mouseenter",function(d,i){
+				d3.selectAll("path")
+						.attr("fill",function(d,i){
+							return color(i)=="#ffb35b"?"#fcebc3":color(i);
+						});
+//				d3.select(i == 3)
+//						.style("color","#e3e3e3");
+//				console.log(i);
+//				console.log(i);
+                if(p3_data[i].name == "平谷区" || p3_data[i].name == "怀柔区" || p3_data[i].name == "延庆县" || p3_data[i].name == "密云县"){
+                    return true;
+                }else{
+                    d3.select(this)
+                            .attr("fill","#ffb35b");
+                    tooltip.html("<p class='p1'>" +p3_data[i].name + "</p><p class='p2'>" + p3_data[i].huCw2013 + "</p><p class='p3'>" + p3_data[i].huCw2014 + "</p>")
+                            .style("left", "50%")
+                            .style("top", "0%")
+                            .style("opacity",1.0);
+                }
+            })
+            .call(zoom);
+});
+
+</script>
+
+<div style="display:none"><div id="fwl">010020050640000000000000011200000000000000</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020050640000000000000011200000000000000")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020050640000000000000011200000000000000" border="0" /></noscript></div>
+<div style="display:none"><div id="fwl">010020050630000000000000011200000000000000</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010020050630000000000000011200000000000000")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020050630000000000000011200000000000000" border="0" /></noscript></div>
+</body>
+</html>

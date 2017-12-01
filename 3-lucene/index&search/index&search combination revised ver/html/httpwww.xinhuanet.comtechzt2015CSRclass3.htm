@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="publishid" content="1197319.0.100.0"/>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+<title>企业社会责任 我们在行动 — 新华网</title>
+<meta name="keywords" content="企业社会责任峰会 我们在行动 &mdash;&mdash; 新华网" />
+<meta name="description" content=" " />
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="http://www.xinhuanet.com/tech/20150820CSRclass/css/pc.css">
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://www.xinhuanet.com/tech/20150820CSRclass/css/pc.css" media="screen and (min-width: 768px)" />
+<link rel="stylesheet" type="text/css" href="http://www.xinhuanet.com/tech/20150820CSRclass/css/mobile.css" media="screen and (min-width:0px) and (max-width: 767px)" />
+<style type="text/css">
+.banner{ background: url(img/bg3.jpg) no-repeat center top;}
+.top-bar {height: 30px;text-align: center; color:#CFF; width: 100%;position: absolute; left:0px; top:0px; z-index: 1000;top: 0;left: 0; overflow: hidden; }
+.top-bar a { color: #fff; }
+.top-bar-bg {height: 30px;text-align: center; width: 100%;position: absolute; left:0px; top:0px; z-index: 500; top: 0;left: 0; overflow: hidden; background:#030; filter:alpha(opacity=40); opacity:0.4; }
+</style>
+<base target="_blank" href="" />
+<script type="text/javascript">
+function CheckForm(){
+    var org=document.getElementById("org");
+    var name =document.getElementById("name");
+    var sex=document.getElementById("sex");
+    var birthday=document.getElementById("birthday");
+    var phone=document.getElementById("phone");
+    var email=document.getElementById("email");
+    var zy=document.getElementById("zy");
+    var lj=document.getElementById("lj");
+    var identityCard=document.getElementById("identityCard");
+    var content=document.getElementById("content");
+
+    if(org.value==""){
+        alert("对不起，学校名称不能为空");
+        org.focus();
+        return false;
+    }
+    if(name.value==""){
+        alert("对不起，姓名不能为空");
+        name.focus();
+        return false;
+    }
+    if(sex.value==""){
+        alert("对不起，性别不能为空");
+        sex.focus();
+        return false;
+    }
+    if(sex.value!="男" && sex.value!="女"){
+        alert("对不起，性别输入错误");
+        document.getElementById("sex").focus();
+        return false;
+
+    }
+    if(birthday.value==""){
+        alert("对不起，出生年月不能为空");
+        birthday.focus();
+        return false;
+    }
+    if(phone.value==""){
+        alert("对不起，手机不能为空");
+        phone.focus();
+        return false;
+    }
+    if(email.value==""){
+        alert("对不起，电子邮箱不能为空");
+        email.focus();
+        return false;
+    }
+    if(!isEmail(email.value)){
+        email.focus();
+        return false;
+    }
+
+    if(zy.value==""){
+        alert("对不起，所学专业不能为空");
+        zy.focus();
+        return false;
+    }
+    if(lj.value==""){
+        alert("对不起，年级不能为空");
+        lj.focus();
+        return false;
+    }
+
+    if(identityCard.value==""){
+        alert("对不起，身份证号不能为空");
+        identityCard.focus();
+        return false;
+    }
+    
+     var area={11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",21:"辽宁",22:"吉林",23:"黑龙江",31:"上海",32:"江苏",33:"浙江",34:"安徽",35:"福建",36:"江西",37:"山东",41:"河南",42:"湖北",43:"湖南",44:"广东",45:"广西",46:"海南",50:"重庆",51:"四川",52:"贵州",53:"云南",54:"西藏",61:"陕西",62:"甘肃",63:"青海",64:"宁夏",65:"xinjiang",71:"台湾",81:"香港",82:"澳门"};
+    String.prototype.trim=function(){return this.replace(/(^\s*)|(\s*$)/g, "");}
+
+    if(identityCard.value!=""){
+        var idcardlen = identityCard.value.replace(/[^\x00-\xff]/g, "**").length;
+        if(idcardlen==15 || idcardlen==18)
+        {
+            var idcard_cr=check_idcard(identityCard.value,area);
+            if(idcard_cr!=1){
+                alert(idcard_cr);
+                identityCard.focus();
+                return false;
+            }
+        }else{
+            alert("身份证号输入错误");
+            identityCard.focus();
+            return false;
+        }
+    }
+
+    if(content.value==""||content.value=="更多图文资料请发送至CSR@news.cn"){
+        alert("对不起，请填写自我推荐");
+        content.focus();
+        return false;
+    }
+    var contentlen = content.value.replace(/[^\x00-\xff]/g, "**").length;
+    if (contentlen>200){
+        alert("对不起，自我推荐已超过100汉字");
+        content.focus();
+        return false;
+    }
+
+    //学校名称-专业-年级-参加团体-担任职务  vocation
+    var vocation = org.value+"#"+zy.value+"#"+lj.value+"#"+document.getElementById("tt").value+"#"+document.getElementById("job").value;
+    //性别-出生年月 useraddress
+    var useraddress = sex.value+"#"+birthday.value;
+    var title = "大学生企业社会责任中国行调研员征集";
+    $.ajax({
+          type: 'GET',
+          url: "http://forum.home.news.cn/invitation/applyJsonp.do",
+          dataType:"jsonp",
+          jsonp:"callback",
+          data: {parentId:137581496,title:encodeURIComponent(title),content:encodeURIComponent(content.value),username:encodeURIComponent(name.value),usertel:encodeURIComponent(phone.value),useraddress:encodeURIComponent(useraddress),vocation:encodeURIComponent(vocation),postCode:encodeURIComponent(email.value),authorID:encodeURIComponent(identityCard.value)},
+          success: function(msg){
+            alert("提交成功，感谢您的关注！");
+            org.value = "";
+            name.value = "";
+            sex.value = "";
+            birthday.value = "";
+            phone.value = "";
+            email.value = "@";
+            zy.value = "";
+            lj.value = "";
+            document.getElementById("tt").value = "";
+            document.getElementById("job").value = "";
+            identityCard.value = "";
+            content.value = "更多图文资料请发送至CSR@news.cn";
+            
+          },
+          error:function(msg){alert("提交失败")},
+          
+        });
+
+
+
+    return true;
+
+}
+
+function isEmail(strEmail){
+    if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)!=-1){
+        return true;
+    }else {
+        alert("对不起,您的邮箱地址有误,请修改");
+    }
+}
+
+//验证身份证号方法 
+function check_idcard(idcard,area){ 
+var Errors=new Array("1","身份证号码位数不对!","身份证号码出生日期超出范围或含有非法字符!","身份证号码校验错误!","身份证地区非法!"); 
+
+var idcard,Y,JYM; 
+var S,M; 
+var idcard_array = new Array(); 
+idcard_array = idcard.split(""); 
+if(area[parseInt(idcard.substr(0,2))]==null) return Errors[4]; 
+switch(idcard.length){ 
+case 15: 
+if ((parseInt(idcard.substr(6,2))+1900) % 4 == 0 || ((parseInt(idcard.substr(6,2))+1900) % 100 == 0 && (parseInt(idcard.substr(6,2))+1900) % 4 == 0 )){ 
+ereg = /^[1-9][0-9]{5}[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}$/;//测试出生日期的合法性 
+} 
+else{ 
+ereg = /^[1-9][0-9]{5}[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|1[0-9]|2[0-8]))[0-9]{3}$/;//测试出生日期的合法性 
+} 
+if(ereg.test(idcard)) 
+return Errors[0]; 
+else 
+return Errors[2]; 
+break; 
+case 18: 
+if( parseInt(idcard.substr(6,4)) % 4 == 0 || ( parseInt(idcard.substr(6,4)) % 100 == 0 && parseInt(idcard.substr(6,4))%4 == 0 )){ 
+ereg = /^[1-9][0-9]{5}19[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}[0-9Xx]$/;//闰年出生日期的合法性正则表达式 
+} 
+else{ 
+ereg = /^[1-9][0-9]{5}19[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|1[0-9]|2[0-8]))[0-9]{3}[0-9Xx]$/;//平年出生日期的合法性正则表达式 
+} 
+if(true){ 
+S = (parseInt(idcard_array[0]) + parseInt(idcard_array[10])) * 7 + (parseInt(idcard_array[1]) + parseInt(idcard_array[11])) * 9 + (parseInt(idcard_array[2]) + parseInt(idcard_array[12])) * 10 + (parseInt(idcard_array[3]) + parseInt(idcard_array[13])) * 5 + (parseInt(idcard_array[4]) + parseInt(idcard_array[14])) * 8 + (parseInt(idcard_array[5]) + parseInt(idcard_array[15])) * 4 + (parseInt(idcard_array[6]) + parseInt(idcard_array[16])) * 2 + parseInt(idcard_array[7]) * 1 + parseInt(idcard_array[8]) * 6 + parseInt(idcard_array[9]) * 3 ; 
+Y = S % 11; 
+M = "F"; 
+JYM = "10X98765432"; 
+M = JYM.substr(Y,1); 
+if(M == idcard_array[17].toUpperCase()) 
+return Errors[0]; 
+else 
+return Errors[3]; 
+} 
+else 
+return Errors[2]; 
+break; 
+default: 
+return Errors[1]; 
+break; 
+} 
+} 
+</script> 
+</head>
+<body>
+<div class="top-bar domPC">
+<ul class="menu row">
+<li class="item dib"><a href="http://www.xinhuanet.com/"><em class="home-site-link">新华网首页</em></a></li>
+<li class="item dib"><a href="http://www.xinhuanet.com/newscenter/">新闻</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/politics/">时政</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/legal/">法治</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/local/">地方</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/comments/">评论</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/world/">国际</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/gangao/">港澳</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/tw/">台湾</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/video/">视频</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/photo/">图片</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/zhibo/">直播</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/fortune/">财经</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/tech/">科技</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/finance/">金融</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/auto/">汽车</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/energy/">能源</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/city/">城市</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/food/">食品</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/health/">健康</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/sports/">体育</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/fashion/">时尚</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/culture/">文化</a>|</li>
+<li class="item dib"><a href="http://www.xinhuanet.com/travel/">旅游</a></li>
+</ul>
+</div>
+<div class="top-bar-bg domPC"></div>
+<div class="banner3">
+<div class="nav2 domPC">
+<ul>
+<li><a href="index.htm">首页</a></li>
+<li><a href="2.htm">CSR优秀案例大赏</a></li>
+<li><a href="3.htm">社会责任中国行</a></li>
+<li><a href="4.htm">CSR区域研讨会</a></li>
+<li><a href="5.htm">社会责任公益盛典</a></li>
+<li><a href="6.htm">奖项申报</a></li>
+<li class="end"><a href="http://www.news.cn/jiaju/2014ggfw/index.htm">我要合作</a></li>
+</ul>
+</div>
+<!--移动端导航栏-->
+<div class="nav domMobile">
+<a href="javascript:" class="begin">开始</a>
+<div class="navCon">
+<p><a style="margin-left:200px" target="_blank" href="index.htm">首页</a><a target="_blank" href="2.htm">CSR优秀案例大赏</a><a target="_blank" href="4.htm">CSR区域研讨会</a><a target="_blank" href="5.htm">社会责任公益盛典</a><a target="_blank" href="6.htm">奖项申报</a><a style="margin-left:150px" target="_blank" href="7.htm">我要合作</a></p>
+</div>
+</div>
+<div class="nav3 domPC">
+<ul>
+<li>
+<a href="2.htm">
+<h4>我要申报</h4>
+CSR优秀案例大赏
+</a>
+</li>
+<li>
+<a href="3.htm">
+<h4>我要报名</h4>
+大学生CSR中国行
+</a>
+</li>
+<li>
+<a href="4.htm">
+<h4>我要申办</h4>
+CSR区域研讨会
+</a>
+</li>
+<li>
+<a href="5.htm">
+<h4>我要参会</h4>
+社会责任公益盛典
+</a>
+</li>
+<li>
+<a href="6.htm">
+<h4>我要申报</h4>
+社会责任公益盛典奖项
+</a>
+</li>
+</ul>
+</div>
+<div class="nav3-bg domPC"></div>
+<div class="section3">
+<h4>大学生企业社会责任中国行调研员征集</h4>
+<p class="p">新华网大学生企业社会责任中国行调研员启动招募啦!
+<p class="p">只要提交报名资料，你就有机会成为新华网大学生企业社会责任观察员的一员；
+你可以跟随新华网走进全国知名企业，对企业的社会责任建设进行监督；
+你还可以获得新华网大学生企业社会责任观察员荣誉证书，以及到新华网的实习机会。
+</p>
+<p class="p">还在等什么，赶紧行动吧！ </p>
+<p class="p domPC">组委会联系：010-88050835 / 88050635  &nbsp;&nbsp;  邮箱：csr@news.cn</p>
+<form method="post" target="_blank" id="form23" name="form23">
+<input type="hidden" name="ItemId" id="ItemId" value="xhwsection3-zgx" />
+<p class="box">学校名称<input class="input1" type="text" name="org" id="org" maxlength="100" value="" /></p>
+<p class="box">姓名<input class="input1" type="text" name="name" id="name" maxlength="100" value="" /></p>
+<p class="box">性别<input class="input1" type="text" name="sex" id="sex" maxlength="4" value="" /></p>
+<p class="box">出生年月<input class="input1" type="text" name="birthday" maxlength="100" id="birthday" value="" /></p>
+<p class="box">手机<input class="input1" type="text" name="phone" id="phone" maxlength="20" value="" /></p>
+<p class="box">电子邮箱<input class="input1" name="email" id="email" onBlur="isEmail(this.value)" type="text" value="" maxlength="50" /></p>
+<p class="box">所学专业<input class="input1" type="text" name="zy" id="zy" maxlength="40" value="" /></p>
+<p class="box">年级<input class="input1" type="text" name="lj" id="lj" maxlength="20" value="" /></p>
+<p class="box">在校参加何种团体<input class="input2" type="text" name="tt" id="tt" maxlength="100" value="" /></p>
+<p class="box">担任何种职务<input class="input3" type="text" name="job" id="job" maxlength="100" value="" /></p>
+<p class="box">身份证号码<input class="input3" type="text" name="identityCard" id="identityCard" maxlength="18" value="" /></p>
+<p class="box">用100个字推荐自己<textarea class="input_box" rows="8" cols="80" name="content" id="content">更多图文资料请发送至CSR@news.cn</textarea>
+<input type="button" id="buttontj" value="提    交" onClick="CheckForm();" class="btn" />
+</form>
+</div>
+<h6 class="h6">组委会联系电话：010-88050835 / 88050635 &nbsp;&nbsp;&nbsp;&nbsp;邮箱：csr@news.cn<br />
+本活动最终解释权归新华网所有
+</h6>
+</div>
+<script type="text/javascript" src="http://www.xinhuanet.com/tech/20150820CSRclass/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="http://www.xinhuanet.com/tech/20150820CSRclass/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://www.xinhuanet.com/tech/20150820CSRclass/js/yyd.js"></script>
+<div style="display:none"><div id="fwl">010030090950000000000000011200000000000000</div><script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010030090950000000000000011200000000000000")</script><noscript><img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010030090950000000000000011200000000000000" border="0" /></noscript></div>   </body>
+</html>

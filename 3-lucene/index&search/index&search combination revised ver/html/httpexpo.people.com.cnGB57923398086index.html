@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta content="all" name="robots" />
+<title>2015中国农民歌会--节会频道--人民网</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="398086" />
+<link href="/img/MAIN/2015/08/115749/page.css" type="text/css" rel="stylesheet" media="all" />
+<script src="/img/MAIN/2015/08/115749/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="/img/MAIN/2015/08/115749/js/main.js" type="text/javascript"></script>
+<script type="text/javascript" src="/img/2011people/swfobject.js"></script>
+<script src="/img/MAIN/2014/06/114601/js/jcarousellite.js" type="text/javascript"></script>
+<script language="JavaScript">
+$(document).ready(function(){
+	$(".jCarouselLite").jCarouselLite({
+    btnNext: ".next01",
+    btnPrev: ".prev01",
+	speed: 1000,
+	auto: null,
+	visible:1
+    });
+});
+</script>
+<!--[if lte IE 6]>
+<script src="/img/2013lh/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('div,ul,img,li,input,a,td,em,h1,h2,h3,h4,h5,h6,em,i,p,span');
+</script>
+<![endif]-->
+<script type="text/javascript">
+ function setCookie1(objName)
+ {
+     var bn='95953';
+    document.cookie= objName+"="+bn;
+ }
+ function setCookie(objName)
+ {
+     var exdate=new Date();
+     var t=exdate.getTime();
+     exdate.setTime(exdate.getTime()+24000);//投票间隔时间，可改
+     var bn=exdate.getTime()+24000;
+    document.cookie= objName+"="+bn+";expires="+exdate.toGMTString();
+ }
+ function getCookie(objName)
+{
+  var arrStr = document.cookie.split("; ");
+   for(var i = 0;i < arrStr.length;i ++)
+   {
+     var temp = arrStr[i].split("=");
+     if(temp[0] == objName) 
+     return unescape(temp[1]);}
+}     
+ $(document).ready(function(){
+$.getJSON("http://gp.people.com.cn/yangshuo/20120224button/json.php?type=327&callback=?",function(data){//每一个投票对应一个type的值
+		  for(var i = 0; i < data.length; i++)
+             {				 
+                 $("#"+data[i].vid).html(data[i].bnum);
+             }
+    });  
+    $("img.button1").click(function(){
+        var voteId = $(this).attr("voteId");
+		if(getCookie("bt"+voteId) == null||getCookie("bt"+voteId) =='95953'){
+        setCookie1("bt"+voteId);
+	var a = parseInt($("#"+voteId).text()) ,b = 1;	
+	 var num= a + b;	 
+	 //$("#"+voteId).text(num);
+	var t=getCookie("bt"+voteId);
+	$.ajax({
+	  type:"get", 
+	  url: "http://littlepoll.people.com.cn/2012ys/20120224button/tp.php?id=" + voteId+"&t="+t+"&type=327",//每一个投票对应一个type的值
+	  dataType:"jsonp",    
+	  cache: false,
+	  success:function(data){
+				if(data.b==1)
+				{alert("投票成功，感谢您的支持！");
+				$("#"+voteId).text(num);
+				}
+				else if(data.b==7)
+				{alert("一个IP一天只能投10票");
+				}
+				else if(data.b==9)
+				{alert("投票已结束！");}
+			  }
+	});	
+ setCookie("bt"+voteId);
+}
+else
+{alert('您太快了，请休息一下！！');}
+        });
+   });
+</script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+    <div class="w980"><span><a href="http://www.people.com.cn" target="_blank"><img src="/img/MAIN/2015/08/115749/images/logo.jpg" alt="人民网首页" /></a></span><em></em></div>
+</div>
+<!--p1-->
+<div class="wybg">
+<div class="w980 bza clearfix"><span>编者按：</span><p>由文化部、农业部、安徽省人民政府联合主办，人民网、安徽省音乐家协会承办的第五届中国农民歌会“我最喜爱的十首乡村歌曲”推选活动。活动将从改革开放以来经典乡村题材音乐作品中，遴选出部分优秀乡村歌曲供群众、专家推选。这些歌曲响彻乡村田园，传唱祖国大地，为推动农村改革发展，激励农民蓬勃向上产生了深刻影响。</p><div style="clear:both;"><span>投票原则：</span>每天每个网友在“我最喜爱的十首乡村歌曲”30首乡村歌曲中最多推选出最喜爱的10首歌进行投票，每首歌曲不能多次投票。（排名不分先后）</div></div>
+<div class="p1_content mt30 clearfix">
+  <div class="p1_left fl">
+    <div class="img_a">
+            <ol class="jCarouselLite">
+        <ul><li><img src="/NMediaFile/2015/0813/MAIN201508131346175204407509086.jpg" width="540" height="310" border="0" alt="专家推选会"/><div></div><span>专家推选会</span></li>
+</ul>
+</ol>
+<div class="prev prev01"></div>
+      <div class="next next01"></div>
+        </div>
+  </div>
+  <div class="p1_right fr">
+    <h2><a href='/n/2015/0813/c398086-27457342.html' target=_blank>“我最喜爱的十首乡村歌曲”推选活动简介</a></h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;为认真贯彻习近平总书记在全国文艺座谈会上的讲话精神，展示当代中国农民昂扬向上的精神风貌，唱响农村改革发展之歌、文明进步之歌、幸福希望之歌，进一步弘扬中国梦的时代主题。<a href='/n/2015/0813/c398086-27457342.html' target=_blank>详细</a></p>
+<h2><a href='/n/2015/0813/c398086-27457367.html' target=_blank>第五届中国农民歌会今秋十月再唱响</a></h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;2008年的“在希望的田野上”，2009年的“小康大道”，2010年的“幸福之歌”，2011年的“希望的田野”，中国农民歌会连续4年在滁州成功举办。<a href='/n/2015/0813/c398086-27457367.html' target=_blank>详细</a></p>
+<h2><a href='/n/2015/0811/c57922-27445066.html' target=_blank>"我最喜爱的十首乡村歌曲"工作会议在京召开</a></h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;2015年8月9日下午，“第五届中国农民歌会-我最喜爱的十首乡村歌曲”推选工作会议在人民网会议室隆重召开。<a href='/n/2015/0811/c57922-27445066.html' target=_blank>详细</a></p>
+
+  </div>
+</div>
+<!--p2-->
+<div class="p2_content mt30 clearfix">
+<h1><img src="/img/MAIN/2015/08/115749/images/bt01.jpg" /></h1><ul><li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451568.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621348601737721720.jpg" width="150" height="100" border="0"/></a>在希望的田野上
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31959" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=在希望的田野上&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/28.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451215.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621312110239187050.jpg" width="150" height="100" border="0"/></a>大地飞歌
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31932" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=大地飞歌&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/1.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451219.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621313455219775572.jpg" width="150" height="100" border="0"/></a>大江南
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31933" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=大江南&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/2.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451223.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621314593229228899.jpg" width="150" height="100" border="0"/></a>父老乡亲
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31934" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=父老乡亲&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/3.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451225.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621315820764545365.jpg" width="150" height="100" border="0"/></a>故乡情
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31935" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=故乡情&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/4.mp3" wmode="transparent" quality="high"></embed></div></li>
+</ul>
+<ul><li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451234.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621317237986519909.jpg" width="150" height="100" border="0"/></a>过河
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31936" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=过河&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/5.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451238.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621318496637213813.jpg" width="150" height="100" border="0"/></a>好日子
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31937" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=好日子&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/6.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451258.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621321827696441947.jpg" width="150" height="100" border="0"/></a>呼伦贝尔大草原
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31938" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=呼伦贝尔大草原&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/8.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451518.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621323172144744150.jpg" width="150" height="100" border="0"/></a>黄土高坡
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31939" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=黄土高坡&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/9.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451521.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621324578139205323.jpg" width="150" height="100" border="0"/></a>篱笆墙的影子
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31940" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=篱笆墙的影子&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/10.mp3" wmode="transparent" quality="high"></embed></div></li>
+</ul>
+<ul><li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451523.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621325823023253282.jpg" width="150" height="100" border="0"/></a>芦花
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31941" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=芦花&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/11.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451526.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621327236826791182.jpg" width="150" height="100" border="0"/></a>梦里水乡
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31942" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=梦里水乡&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/12.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451532.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621328605619568993.jpg" width="150" height="100" border="0"/></a>那就是我
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31943" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=那就是我&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/13.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451533.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621329980467400247.jpg" width="150" height="100" border="0"/></a>青藏高原
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31945" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=青藏高原&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/14.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451534.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621331252421580569.jpg" width="150" height="100" border="0"/></a>山不转水转
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31946" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=山不转水转&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/15.mp3" wmode="transparent" quality="high"></embed></div></li>
+</ul>
+<ul><li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451536.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621332627081566367.jpg" width="150" height="100" border="0"/></a>山路十八弯
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31947" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=山路十八弯&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/16.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451538.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621333830040295022.jpg" width="150" height="100" border="0"/></a>套马杆
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31948" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=套马杆&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/17.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451540.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621335195905636022.jpg" width="150" height="100" border="0"/></a>天堂
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31949" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=天堂&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/18.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451541.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621336647141348297.jpg" width="150" height="100" border="0"/></a>弯弯的月亮
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31950" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=弯弯的月亮&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/19.mp3" wmode="transparent" quality="high"></embed></div></li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451545.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621337935811890923.jpg" width="150" height="100" border="0"/></a>我爱你，塞北的雪
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31951" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=我爱你，塞北的雪&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/20.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+</ul>
+<ul><li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451546.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621339306880784254.jpg" width="150" height="100" border="0"/></a>我热恋的故乡
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31952" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=我热恋的故乡&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/21.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451549.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621340648307087905.jpg" width="150" height="100" border="0"/></a>乡恋
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31953" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=乡恋&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/22.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451555.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621341915330919648.jpg" width="150" height="100" border="0"/></a>小背篓
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31954" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=小背篓&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/23.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451551.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621343254397385145.jpg" width="150" height="100" border="0"/></a>小草
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31955" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=小草&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/24.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451552.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621344609179615852.jpg" width="150" height="100" border="0"/></a>小芳
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31956" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=小芳&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/25.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+</ul>
+<ul><li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451563.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621345988526380798.jpg" width="150" height="100" border="0"/></a>月亮走 我也走
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31957" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=月亮走 我也走&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/26.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451565.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621347161902871081.jpg" width="150" height="100" border="0"/></a>在那桃花盛开的地方
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31958" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=在那桃花盛开的地方&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/27.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451247.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621320457469870201.jpg" width="150" height="100" border="0"/></a>荷塘月色
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31987" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=荷塘月色&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/7.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451571.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621349917363756813.jpg" width="150" height="100" border="0"/></a>在中国大地上
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31960" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=在中国大地上&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/29.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+<li><a href="http://expo.people.com.cn/n/2015/0812/c398086-27451573.html" target=_blank><img src="/NMediaFile/2015/0811/MAIN201508111621351336916813514.jpg" width="150" height="100" border="0"/></a>最美的还是我们新疆
+                <div class="n1"><span><img src="/img/MAIN/2015/07/115707/images/icon2.gif" style="cursor:pointer;" class="button1" voteid="31961" alt="" /></span><em></em></div>
+                <div class="n2"><embed type="application/x-shockwave-flash" src="/img/MAIN/2015/07/115707/mp3.swf" style="width:160px; height:24px;" flashvars="son=playerID=1&amp;bg=E5E5E5&amp;text=366DAF&amp;leftbg=d4d4d4&amp;lefticon=333333&amp;volslider=666666&amp;voltrack=FFFFFF&amp;rightbg=c1c1c1&amp;rightbghover=999999&amp;righticon=333333&amp;righticonhover=FFFFFF&amp;track=FFFFFF&amp;loader=009900&amp;border=CCCCCC&amp;tracker=DDDDDD&amp;skip=666666&amp;titles=最美的还是我们新疆&amp;loop=no&amp;autostart=no&amp;soundFile=/img/MAIN/2015/08/115749/mp3/30.mp3" wmode="transparent" quality="high"></embed></div>
+</li>
+</ul>
+</div>
+</div>
+<!--copyright-->
+<div id="copyright">
+<style type="text/css">
+#copyright{width:980px; margin:0px auto; font-size:12px; text-align:center; padding:20px 0; line-height:180%; clear:both;}
+</style>
+<div id="copyright">人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br />
+Copyright &copy; 1997-2015 by www.people.com.cn. all rights reserved</div>
+</div>
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>

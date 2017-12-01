@@ -1,0 +1,1504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta content="all" name="robots" />
+<title>十分感动--人民电视--人民网</title>
+<meta name="keywords" content="广东台风文昌北京地铁水上派出所枪迷奶奶阿森纳" />
+<meta name="description" content="“乐观看待生活，用感动传递正能量”。人民网“十分感动”栏目从微博、论坛里发现线索，讲述草根人物的感动故事，从微小处见真情，于平凡中见伟大，汇聚一点一滴的正能量，温暖我们每个人。欢迎各位网友和我们一起“十分感动”，也欢迎您向我们提供线索。" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="347314" />
+
+<!-- 调用样式表 -->
+<link rel="stylesheet" type="text/css" href="/img/MAIN/2014/04/114389/chosen.css">
+<link rel="stylesheet"  href="/img/MAIN/2014/04/114389/page.css" type="text/css" media="all"  />
+<script src="http://www.people.com.cn/img/2011people/jquery-1.4.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+ function setCookie1(objName)
+ {		
+	 var bn='95953';
+	document.cookie= objName+"="+bn;		 
+ } 
+ function setCookie(objName)
+ {
+	 var exdate=new Date();
+	 var t=exdate.getTime();
+	 exdate.setTime(exdate.getTime()+6000);//投票间隔时间，可改
+	 var bn=exdate.getTime()+6000;
+	document.cookie= objName+"="+bn+";expires="+exdate.toGMTString(); 
+	 
+ }
+ function getCookie(objName)
+{
+  var arrStr = document.cookie.split("; ");   
+
+   for(var i = 0;i < arrStr.length;i ++)
+   {    
+     var temp = arrStr[i].split("=");    
+	 if(temp[0] == objName) 
+	 return unescape(temp[1]);   } 
+ }     
+ $(document).ready(function(){	 
+
+ 	function sortVote(data) {
+ 		data.sort(function(a, b) {
+ 			return b.bnum -a.bnum;
+ 		});
+ 		var htmlStr = '';
+ 		var parentUl;
+ 		$(data).each(function(index, obj) {
+ 			if($("#"+obj.vid).length > 0) {
+ 				var $liElem = $("#"+obj.vid).parents('li');
+ 				parentUl = $("#"+obj.vid).parents('ul');
+ 				htmlStr += $liElem[0].outerHTML;
+ 			}
+ 		});
+ 		parentUl.html('').html(htmlStr);
+bindVoteBtn();
+ 	}
+bindVoteBtn();
+ 	function bindVoteBtn() {
+		$("img.button1").live('click', function(){
+			var voteId = $(this).attr("voteId") ;
+			
+		    if(getCookie("bt"+voteId) == null||getCookie("bt"+voteId) =='95953'){
+		        setCookie1("bt"+voteId);
+				var a = parseInt($("#"+voteId).text()) ,b = 1;	
+				 var num= a + b;	 
+				 $("#"+voteId).text(num);
+				var t=getCookie("bt"+voteId);
+				$.ajax({
+				  type:"get", 
+				  url: "http://littlepoll.people.com.cn/yxl/13tp/tp.php?id=" + voteId+"&t="+t+"&type=214",//每一个投票对应一个type的值
+				  voteId : voteId,
+				  dataType:"json",
+				  data:"jsonCallback=?",     
+				  cache: false,
+				  success:alert('投票成功，感谢您的支持！')
+				  
+				});
+				
+			 setCookie("bt"+voteId);
+			} else {
+				alert('您太快了，请休息一下！！');
+			}
+		});
+	}
+
+   });  
+  </script>
+
+</head>
+
+<body>
+	<div class="top01">
+	<div class="w980 clearfix"><em><a href="http://www.people.com.cn/" target="_blank"><img src="/img/MAIN/2014/04/114389/images/logo.jpg" width="80" height="36"></a></em><i></i></div></div>
+	<div class="theme">
+		<div class="w980">
+        	<!--<a href="http://www.people.com.cn/adv/longliqilmgm0701.html" target="_blank" style="position:absolute;top:30px;right:160px;"><img src="/img/MAIN/2014/04/114389/images/longliqi.png"  /></a>-->
+			<img src="/img/MAIN/2014/04/114389/images/titu.jpg" width="980"/>
+			<div class="search-box clearfix">
+				
+				
+				<div class="search fl">
+					<form action="http://search.people.com.cn/rmw/GB/rmwsearch/gj_search_pd.jsp" name="searchForm" method="post" onsubmit="if(getParameter_DJ('ALL') == false) return false;" target="_blank">
+						<input type="hidden" name="XMLLIST">
+            				<input class="people_input" name="names" id="names" value="请输入检索内容" onfocus="this.value='';" onblur="if(!value){value=defaultValue;}" type="text" >
+            				<input type="image" src="/img/MAIN/2014/04/114389/images/search-btn.png" name="" value="站内检索" class="people_button_sub">
+            		</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- theme end -->
+    <div class="w980 mt10">
+    
+        <!--AdForward Begin:-->
+        <script type='text/javascript' src='http://pmm.people.com.cn/main/s?user=people|shifengandong|tonglan01&db=people&border=0&local=yes&js=ie' charset='gbk'></script><!--AdForward End-->
+    </div>
+	<div class="p1 w980 clearfix">
+		<div class="fl">
+			<img src="/img/MAIN/2014/04/114389/images/p1-title.jpg" width="80" height="110" />
+			<ul><li><a href='http://tv.people.com.cn/GB/347314/398943/index.html'>我来自西藏</a></li><li><a href='http://tv.people.com.cn/n/2015/0713/c347314-27296868.html'>“收红包”的好医生</a></li><li><a href='http://tv.people.com.cn/n/2015/0714/c347314-27300715.html'>再见幼儿园 6岁萌娃的毕业季</a></li><li><a href='http://tv.people.com.cn/n/2015/0616/c347314-27160519.html'>北京深山里的铁路信号工</a></li><li><a href='http://tv.people.com.cn/n/2015/0601/c347314-27083697.html'>孩子，让我拉住你的手</a></li><li><a href='http://tv.people.com.cn/n/2015/0525/c347314-27049226.html'>拒绝低保的“小爸爸”与帅儿子</a></li><li><a href='http://tv.people.com.cn/n/2015/0505/c347314-26951396.html'>中国MMA格斗的玫瑰拳王</a></li><li><a href='http://tv.people.com.cn/n/2015/0511/c347314-26978383.html'>80后独腿小伙驾车陪母亲游全国</a></li><li><a href='http://tv.people.com.cn/n/2015/0604/c347314-27102145.html'>一元一首歌 女孩卖唱救妈妈</a></li></ul>
+		</div>
+		<div class="fr">
+			<img src="/img/MAIN/2014/04/114389/images/fenxiang.jpg" width="309" height="110" usemap="#Map" border="0" />
+            <map name="Map" id="Map">
+             
+              <area shape="rect" coords="16,12,91,48" href="http://t.people.com.cn/peopletv" target="_blank"/>
+              <area shape="rect" coords="117,13,209,49" href="http://weibo.com/p/1002062057327125/home?from=page_100206&mod=TAB#place" target="_blank"/>
+              <area shape="rect" coords="229,9,287,48" href="http://t.qq.com/PEOPLE_PTV" target="_blank"/>
+            </map>
+		</div>
+	</div>
+	<!-- p1 end  -->
+	<div class="p2 w1070">
+
+			<img src="/img/MAIN/2014/04/114389/images/btn-prev.jpg" class="prev" />
+			<img src="/img/MAIN/2014/04/114389/images/btn-next.jpg" class="next" />
+		<div class="content-wrap"><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/1010/c347314-27682372.html">轮椅女孩的坎坷求学路</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/1010/c347314-27682372.html"><img src="/NMediaFile/2015/1027/MAIN201510271023588080360780412.jpg">
+		
+				<p>　　王芮以优异的成绩考入了中国农业大学，成为了农大百年历史上第一个坐轮椅的学生。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/1020/c347314-27717699.html">在太空绘制中国轨迹</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/1020/c347314-27717699.html"><img src="/NMediaFile/2015/1022/MAIN201510221340439482972543469.jpg">
+		
+				<p>　　中国西安卫星测控中心，有一位著名的“牧星人”李sir。他在太空绘制出美丽的星迹。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/1020/c347314-27719276.html">盲人用双手点亮人生</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/1020/c347314-27719276.html"><img src="/NMediaFile/2015/1020/MAIN201510201513466167450304361.jpg">
+				<p>　　记者走进广州某按摩医院，用镜头记录下了这群盲人按摩。 
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/1016/c347314-27707216.html">只为他人的重生</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/1016/c347314-27707216.html"><img src="/NMediaFile/2015/1016/MAIN201510161603501943691247018.jpg">
+				<p>　　中国医学科学院整形医院，手术给众多患者带来了外形及心灵的改变。 
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0917/c347314-27596453.html">清华藏族学子的归乡情</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0917/c347314-27596453.html"><img src="/NMediaFile/2015/0917/MAIN201509171451008291484545117.jpg">
+				<p>　　次旺多杰， 来自西藏日喀则。清华大学法律专业，毕业后回拉萨支教一年。
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0915/c347314-27587490.html">大地舞者的香巴拉</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0915/c347314-27587490.html"><img src="/NMediaFile/2015/0915/MAIN201509151428262815253490873.jpg">
+		
+				<p>　　我梦想有一日是要回到故土的，过着那种田园的生活，砍柴放牧。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0908/c347314-27555587.html">我有两个妈妈</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0908/c347314-27555587.html"><img src="/NMediaFile/2015/0910/MAIN201509100853219987748478670.jpg">
+				<p>　　我有两个妈妈，一个是疼我的解放军妈妈，一个是生我的藏族妈妈。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0908/c347314-27554751.html">四合院里的藏语班</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0908/c347314-27554751.html"><img src="/NMediaFile/2015/0908/MAIN201509080930130577784298556.jpg">
+				<p>　　     康琼卓玛，半藏半汉的特殊身份，她希望做沟通汉藏文化的桥梁。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0907/c347314-27549792.html">北漂藏族的勇敢重生</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0907/c347314-27549792.html"><img src="/NMediaFile/2015/0907/MAIN201509070900334894523196032.jpg">
+		
+				<p>其美央金，西藏昌都人，现在在北京经营一家名叫“巴扎童嘎”的藏餐吧。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0826/c347314-27517277.html">25岁的他拥有12架无人机</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0826/c347314-27517277.html"><img src="/NMediaFile/2015/0826/MAIN201508261112512596742630051.jpg">
+		
+				<p>2011年作为发明人的杨启帆和他的团队成功研制了“可变速飞行工程作业无人机系统”</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0820/c347314-27489694.html">“天生”的心外科医生</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0820/c347314-27489694.html"><img src="/NMediaFile/2015/0820/MAIN201508201323349820543361709.jpg">
+				<p>心脏手术是不可修复的重建性手术，而心外科医生一定要有过硬的技术。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0813/c347314-27458892.html">世界上最勇敢的逆行</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0813/c347314-27458892.html"><img src="/NMediaFile/2015/0817/MAIN201508170851525117218746535.jpg">
+				<p>他们总是教别人往外跑，自己却要向里冲。他们就是消防员，是随时出征的战士。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0810/c347314-27435409.html">清华创客“三剑客”</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0810/c347314-27435409.html"><img src="/NMediaFile/2015/0810/MAIN201508100901574981183929224.jpg">
+		
+				<p>            
+  在清华大学有一群喜欢创造的人，他们相信：动手造万物，人人皆创客。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0727/c347314-27365070.html">危险的呼吸科医生</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0727/c347314-27365070.html"><img src="/NMediaFile/2015/0729/MAIN201507291122307121460623970.jpg">
+				<p>北医三院的呼吸科，他们守护呼吸疾病患者的健康，挽救许多患者的生命，得到患者的信赖。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0720/c347314-27330252.html">急诊医护的辛酸委屈</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0720/c347314-27330252.html"><img src="/NMediaFile/2015/0721/MAIN201507211002284491975192340.jpg">
+				<p>急诊是医院中重症病人最集中、病种最多的科室，面对病人的不理解，他们往往默默付出。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0713/c347314-27296868.html">“收红包”的好医生</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0713/c347314-27296868.html"><img src="/NMediaFile/2015/0715/MAIN201507150946564655282475587.jpg">
+				<p>北大第一医院有一个“荣誉本”，上面记录了医生返还的病人红包。周福德主任是交的最多的人。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0714/c347314-27300715.html">六岁萌娃的毕业季</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0714/c347314-27300715.html"><img src="/NMediaFile/2015/0714/MAIN201507141003400643649228216.jpg">
+		
+				<p>            
+ 又是一年毕业季，当高考、中考话题被热烈讨论时，有群孩子也将面临人生第一次幼儿园毕业典礼</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0706/c347314-27259158.html">苦命娘照顾脑瘫养女11年</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0706/c347314-27259158.html"><img src="/NMediaFile/2015/0706/MAIN201507060940061839629396244.jpg">
+		
+				<p>            
+ 有位母亲康建英，11年来省吃俭用、四处奔波，为的就是让患有脑瘫的养女能过上正常人的生活。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0702/c347314-27242400.html">请你拉紧孩子的手</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0702/c347314-27242400.html"><img src="/NMediaFile/2015/0702/MAIN201507020913220176461603812.jpg">
+		
+				<p>            
+近期，关于“拐卖儿童判死刑”的话题讨论热烈，其实类似的惨痛故事就在我们身边真实上演。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0629/c347314-27221444.html">守望回家路的铁路人</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0629/c347314-27221444.html"><img src="/NMediaFile/2015/0629/MAIN201506291021197981387301547.jpg">
+				<p>　　   北京西电务段斜河涧信号工区七名年轻职工的故事。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0625/c347314-27204589.html">七旬老爸和他513名孩子</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0625/c347314-27204589.html"><img src="/NMediaFile/2015/0629/MAIN201506290820460646858872268.jpg">
+				<p>　　从1979年帮助第一个孩子开始，30多年来，王万林一直对那些遇到困难的孩子们施以援手。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0616/c347314-27160519.html">深山里的铁路信号工</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0616/c347314-27160519.html"><img src="/NMediaFile/2015/0616/MAIN201506160945455334436476955.jpg">
+				<p>　　   北京西电务段斜河涧信号工区七名年轻职工的故事。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0609/c347314-27124260.html">用镜头讲述的“警察故事”</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0609/c347314-27124260.html"><img src="/NMediaFile/2015/0609/MAIN201506090853099517438331082.jpg">
+				<p>　　他是事故处理的岗位标兵，他又是摄影爱好者，用镜头记录下他们自己的故事。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0604/c347314-27102145.html">童星卖唱救母</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0604/c347314-27102145.html"><img src="/NMediaFile/2015/0604/MAIN201506040923328854207697158.jpg">
+				<p>　　同学眼中星光熠熠的小童星张晗为给患癌母亲治病，在公园一元一首歌卖唱筹钱。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0601/c347314-27083697.html">拉住重症孩子的手</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0601/c347314-27083697.html"><img src="/NMediaFile/2015/0601/MAIN201506010959294609673926017.jpg">
+		
+				<p>            
+　　 北京儿童医院重症监护室24小时不间断工作，为的是守护这些幼小的生命。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0528/c347314-27067935.html">双面"的姐"的美丽人生</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0528/c347314-27067935.html"><img src="/NMediaFile/2015/0528/MAIN201505280929101087303760865.jpg">
+				<p>　  王秋芬是一名女出租车司机，她始终以乐观的心态迎接生活中的每一次挑战。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0525/c347314-27049226.html">“小爸爸”与帅儿子</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0525/c347314-27049226.html"><img src="/NMediaFile/2015/0525/MAIN201505250913325926837605258.jpg">
+		
+				<p>            
+　　张伟是重度残疾人，却用自己的一技之长撑起了整个家。全家人相濡以沫，互相支持。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0521/c347314-27032595.html">拒做富二代的创业青年</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0521/c347314-27032595.html"><img src="/NMediaFile/2015/0521/MAIN201505210925237603302458519.jpg">
+		
+				<p>            
+　　85后茶商后代吴奎放弃了舒适的富二代生活，而是选择自己创业，用互联网思维卖茶。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0518/c347314-27014903.html">微笑"的哥"合影万人</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0518/c347314-27014903.html"><img src="/NMediaFile/2015/0518/MAIN201505180931250346985711456.jpg">
+				<p>　  沈阳出租车司机在5年内与2万多名乘客留下微笑合影，被称为“微笑使者”。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0513/c347314-26991531.html">风雨五十载 一世梨园情</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0513/c347314-26991531.html"><img src="/NMediaFile/2015/0513/MAIN201505130939018002932037385.jpg">
+		
+				<p>            
+　　陈炳楠夫妇携手走过50多年风风雨雨，对于“家”这个字，他们有着更深的理解。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0511/c347314-26978383.html">独腿小伙自驾车陪母游全国</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0511/c347314-26978383.html"><img src="/NMediaFile/2015/0511/MAIN201505110846495286316204672.jpg">
+				<p>　　邱义松带着母亲开始自驾游中国走过了中国22个省份，是什么力量支持着他们？</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0505/c347314-26951396.html">中国MMA格斗女拳王</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0505/c347314-26951396.html"><img src="/NMediaFile/2015/0506/MAIN201505060849352165573954441.jpg">
+				<p>　  唐金，中国女子综合格斗第一人,被网友称为刚且柔的擂台玫瑰。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0504/c347314-26941866.html">北漂漫画家的“招财猫”  </a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0504/c347314-26941866.html"><img src="/NMediaFile/2015/0504/MAIN201505040914190820965396665.jpg">
+		
+				<p>            
+  十足猫控兼宅男的漫画家张少杰与一只叫皮揣子的小猫喜怒哀乐。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0427/c347314-26908052.html">重庆女生的浪漫创业</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0427/c347314-26908052.html"><img src="/NMediaFile/2015/0427/MAIN201504270908203994652436360.jpg">
+				<p>　　这间小小的驿站，是侯姝媛用青春点亮的梦想，也帮助她用自己的梦想激活了更多人的青春。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0417/c347314-26861647.html">盼智障女儿叫声妈</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0417/c347314-26861647.html"><img src="/NMediaFile/2015/0421/MAIN201504210918198618637005366.jpg">
+				<p>　年仅4岁的女儿王薇被诊断为智力缺陷，从此，她们的人生轨迹被改写了。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0420/c347314-26870705.html">用青春守护折翼天使  </a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0420/c347314-26870705.html"><img src="/NMediaFile/2015/0420/MAIN201504200850345564861246581.jpg">
+		
+				<p>      王渭仙用青春守护25名智障儿童，在她眼里这群孩子们是折翼天使。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0414/c347314-26840159.html">农村少女的深圳梦</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0414/c347314-26840159.html"><img src="/NMediaFile/2015/0414/MAIN201504141022594677405781095.jpg">
+				<p>　深圳市大浪时尚城的服装厂女工叶招娣，一人背井离乡去深圳打拼，她的梦想是成为一个城市人。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0410/c347314-26827136.html">七旬阿婆守护星星的孩子  </a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0410/c347314-26827136.html"><img src="/NMediaFile/2015/0413/MAIN201504130854432864841901792.jpg">
+		
+				<p>      年逾古稀的胡惠月守护着一群“星星的孩子”，她是孩子们心中最亲的阿婆。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0401/c347314-26784363.html">当深圳遇“巴黎”</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0401/c347314-26784363.html"><img src="/NMediaFile/2015/0407/MAIN201504070927339600858463228.jpg">
+				<p>法国人艾力克爱上了一位中国姑娘，并随她来到深圳生活，在福田区经营了一家法国餐厅。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0402/c347314-26789336.html">花键天才背母求学记</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0402/c347314-26789336.html"><img src="/NMediaFile/2015/0402/MAIN201504021426546429901343972.jpg">
+				<p>邱炳强12岁进入中国毽球训练中心，获奖无数。17岁父亲因舌癌去世后，他选择“带母求学”。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0401/c347314-26782135.html">城市弃儿的庇护所</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0401/c347314-26782135.html"><img src="/NMediaFile/2015/0401/MAIN201504010935341666874328936.jpg">
+				<p>常梦用爱心援助了许多残障孩子，她让这个小院子的孩子们有了大梦想。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0303/c177969-26624925.html">希望工程公益短片</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0303/c177969-26624925.html"><img src="/NMediaFile/2015/0303/MAIN201503031006213891301490912.jpg">
+				<p>26年前的夏天，冯雪芳来到麻子街小学读书，从家到学校要走一条很远很远的山路。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0302/c177969-26622092.html">母亲水窖公益短片</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0302/c177969-26622092.html"><img src="/NMediaFile/2015/0302/MAIN201503021647045499609981383.jpg">
+				<p>窑沟村是全国闻名的干旱地区，在母亲水窖建成前，一口老井，便是一户村民生存的水源</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0217/c347314-26580521.html">打工妹的归乡情</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0217/c347314-26580521.html"><img src="/NMediaFile/2015/0228/MAIN201502281519145372839999313.jpg">
+				<p>在深圳打工的叶招娣，一到年关归心似箭想与家人团聚，尽管留恋家乡，但依旧梦想成为城市人。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0215/c347314-26571909.html">我们永远在一起  </a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0215/c347314-26571909.html"><img src="/NMediaFile/2015/0216/MAIN201502160910280393237778145.jpg">
+		
+				<p>      52岁的许科突发头痛，昏迷不醒。一家人决定北上求医，在医院度过这个特殊的春节。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0210/c347314-26537629.html">开往回家的列车</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0210/c347314-26537629.html"><img src="/NMediaFile/2015/0210/MAIN201502100904024707784817723.jpg">
+				<p>这是一段特殊的旅程，在每一趟春运的列车上，每个人都有一段回家的故事。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0130/c347314-26480820.html">86个孤儿爱着的暖心妈妈</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0130/c347314-26480820.html"><img src="/NMediaFile/2015/0204/MAIN201502040837064507542180849.jpg">
+				<p>助学中心的主任王英，为了这86孤儿，没日没夜地在这里辛苦操劳，是他们最美的妈妈。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0129/c347314-26474452.html">韩妈妈和她的“坏”孩子们</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0129/c347314-26474452.html"><img src="/NMediaFile/2015/0202/MAIN201502020828573934296818464.jpg">
+				<p>韩雅琴收留的刑释解教人员最大的超过80岁,最小的只有13岁,但都管她叫“韩妈妈”。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0127/c347314-26455740.html">七旬老翁收留五百流浪儿</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0127/c347314-26455740.html"><img src="/NMediaFile/2015/0127/MAIN201501270925136929246851309.jpg">
+				<p>杭州普通居民王万林已经70岁高龄，多年来他收留过的流浪儿童多达500名。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0123/c347314-26440433.html">胡同里的盲人电影院</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0123/c347314-26440433.html"><img src="/NMediaFile/2015/0126/MAIN201501260911508269850685359.jpg">
+				<p>北京胡同里的一家电影院十年来坚持为盲人用特殊的方式播放电影。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0119/c347314-26406723.html">用音乐改变留守儿童生活</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0119/c347314-26406723.html"><img src="/NMediaFile/2015/0119/MAIN201501190921267930379357465.jpg">
+				<p>一位老人，十年往返在北京与马兰村之间，用自己的生命和爱让革命老区飘起了孩子们的歌声。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0113/c347314-26378261.html">杭图十年不拒乞丐  </a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0113/c347314-26378261.html"><img src="/NMediaFile/2015/0114/MAIN201501140852367699125955604.jpg">
+		
+				<p>      杭图有一批特殊的读者，他们在外人眼中是乞丐、流浪汉，在杭图他们得到了一样温暖的待遇。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0113/c347314-26373033.html">的哥抢救八旬倒地老人</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0113/c347314-26373033.html"><img src="/NMediaFile/2015/0113/MAIN201501130851368664046351479.jpg">
+				<p>哈尔滨热心的哥薛守平自发组建了一只共产党员志愿者车队，用爱心传递着正能量。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0108/c347314-26351860.html">孩子们的第一个圣诞礼物</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0108/c347314-26351860.html"><img src="/NMediaFile/2015/0109/MAIN201501090918366426035982397.jpg">
+				<p>一群圣诞老人意外出现在浙江海盐的一个打工子弟小学，为孩子们带去第一份圣诞礼物。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2015/0106/c347314-26331791.html">阿姨地铁捡瓜皮奖励万元</a></h2>
+				<a href="http://tv.people.com.cn/n/2015/0106/c347314-26331791.html"><img src="/NMediaFile/2015/0106/MAIN201501060924081707722743231.jpg">
+		
+				<p>      阿里公益“天天正能量”项目意图通过奖励好人好事，来向社会传播正能量。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1229/c347314-26290805.html">七旬老人欧亚自驾历险记</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1229/c347314-26290805.html"><img src="/NMediaFile/2014/1229/MAIN201412290933142102473788397.jpg">
+				<p>一位75岁的老人，自驾行驶四万六千多公里，游历三十四个欧亚国家，不分昼夜与车相守待133天。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1224/c347314-26264902.html">90后贫苦少年变身技术金领</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1224/c347314-26264902.html"><img src="/NMediaFile/2014/1224/MAIN201412240857234452930266400.jpg">
+		
+				<p>      90后贫苦少年高永庆通过自己的不懈努力成功逆袭为技术蓝领。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1223/c347314-26257664.html">最美丽的“光头”新娘</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1223/c347314-26257664.html"><img src="/NMediaFile/2014/1223/MAIN201412230943444163147574666.gif">
+				<p>25岁的河南女孩范会香身患绝症，山东男友于海宁不离不弃，上演浪漫“鲁豫恋”。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1216/c347314-26219412.html">一个蓝领工人的华丽变身</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1216/c347314-26219412.html"><img src="/NMediaFile/2014/1223/MAIN201412230950585932396666409.jpg">
+		
+				<p>      二十年时光流转，从维修工到三星高级培训技师，戈宏杰的个人经历印证了技术成就人生。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1216/c347314-26214474.html">从不收红包的神经外科医生</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1216/c347314-26214474.html"><img src="/NMediaFile/2014/1216/MAIN201412161350512589794143959.jpg">
+		
+				<p>          航空总医院神经外科中心的陈国强教授坚持给患者提供最好的咨询和治疗，坚决不收红包。
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1212/c347314-26193965.html">谁让席慕蓉流泪</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1212/c347314-26193965.html"><img src="/NMediaFile/2014/1216/MAIN201412161329154384175905358.jpg">
+		
+				<p>         席慕蓉邀请好友德德玛演唱了一曲《父亲的草原母亲的河》，并跟随她的旋律轻声哼唱。
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1211/c347314-26187145.html">用真情演绎草原阿妈</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1211/c347314-26187145.html"><img src="/NMediaFile/2014/1211/MAIN201412110917107507226432807.jpg">
+		
+				<p>    蒙古族长调歌手天亮，出生于科尔沁大草原，从小就酷爱音乐的她有着天籁般的嗓音。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1204/c347314-26144773.html">感动奥巴马的蒙古小伙</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1204/c347314-26144773.html"><img src="/NMediaFile/2014/1204/MAIN201412041018520423325585293.jpg">
+		
+				<p>          呼斯楞的歌声粗犷苍凉静谧悠长，低回处如涓涓细流，高亢时如江河怒涛，感动了许多人。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1202/c347314-26134970.html">用生命咏叹草原的老王子</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1202/c347314-26134970.html"><img src="/NMediaFile/2014/1203/MAIN201412030826384280516925342.jpg">
+				<p>克明写了很多的词，他希望很多人唱着他写的歌，懂得爱，懂得感恩。那就是最大的幸福。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841210946753719371.gif" />
+					<h3><b>编导:柳静</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1124/c347314-26082723.html">雕花马鞍上的灵魂歌者</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1124/c347314-26082723.html"><img src="/NMediaFile/2014/1126/MAIN201411260901582793385411543.jpg">
+				<p>在那顺四十年的歌唱生涯中，有很多脍炙人口的歌曲，很多都直达灵魂深处。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1125/c347314-26086868.html">   为周总理唱过歌的“金花”</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1125/c347314-26086868.html"><img src="/NMediaFile/2014/1125/MAIN201411251629254840068989582.jpg">
+				<p>蒙古族女高音歌唱家金花，她一生都在唱歌，被誉为鄂尔多斯短调民歌的传承人。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1115/c347314-26029537.html" target="_blank">转动笔尖 谱曲草原</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1115/c347314-26029537.html"><img src="/NMediaFile/2014/1124/MAIN201411240916367713137649705.jpg">
+				<p> 我是阿古拉泰,我是草原音乐忠实的追随者。希望通过今后的努力来为草原音乐做一点贡献。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"/><em id="18901">90</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18901" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841210946753719371.gif" />
+					<h3><b>编导:柳静</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1114/c347314-26025960.html">草原上的音乐骄子</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1114/c347314-26025960.html"><img src="/NMediaFile/2014/1118/MAIN201411180929356946158189498.jpg">
+				<p>音乐是我们蒙古人的一个灵魂，我用音乐、声音表达我的心，这就是我们的生活。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1113/c347314-26013806.html">社区里的免费理发师 </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1113/c347314-26013806.html"><img src="/NMediaFile/2014/1113/MAIN201411131354582153133876341.jpg">
+		
+				<p>             　　北京市朝阳区东湖街道办事处与理发店每月的第一个工作日，上门为老人免费理发。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1106/c347314-25987271.html">消失的天才战地记者方大曾</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1106/c347314-25987271.html"><img src="/NMediaFile/2014/1106/MAIN201411061433006389752962875.jpg">
+		
+				<p>他在25岁的时候突然失踪，他被喻为中国的“罗伯特卡帕”，他就是方大曾。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1102/c347314-25956276.html">开豪车的洗车仔</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1102/c347314-25956276.html"><img src="/NMediaFile/2014/1103/MAIN201411030922558790048957957.jpg">
+		
+				<p>刘大玮的野心很大，他要改变洗车模式，将洗车变成一种O2O行为。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1028/c347314-25919987.html" target="_blank">漂亮宝宝患罕见病无法治愈</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1028/c347314-25919987.html"><img src="/NMediaFile/2014/1030/MAIN201410300928251498055005605.jpg">
+				<p>糖糖体内缺少一种酶，不能正常代谢蛋白质，严重甚至导致休克或死亡，只能喝特殊奶粉。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"/><em id="18901">90</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18901" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1027/c347314-25911647.html">让石头“说话”的人</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1027/c347314-25911647.html"><img src="/NMediaFile/2014/1027/MAIN201410270912232917782583180.jpg">
+		
+				<p>古生物学家周忠和院士说，古生物学家就像侦探，从冰冷的石头里能看到整个世界。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1021/c347314-25873811.html" target="_blank">蜗居小夫妻的大梦想</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1021/c347314-25873811.html"><img src="/NMediaFile/2014/1021/MAIN201410210817555786625557738.jpg">
+				<p>本来是好友一起旅行，当看到山区孩子们，他们决定陪着孩子走出大山，实现梦想。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"/><em id="18901">90</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18901" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1020/c347314-25865656.html">一场与古生物的恋爱</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1020/c347314-25865656.html"><img src="/NMediaFile/2014/1021/MAIN201410210832522455202673541.jpg">
+		
+				<p>说古生物学家最忠实的恋人是石头一点都不为过。茫茫戈壁，风餐露宿，每天与化石为伴。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1014/c347314-25833590.html" target="_blank">美丽姐妹花的暖心之旅</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1014/c347314-25833590.html"><img src="/NMediaFile/2014/1014/MAIN201410141652275329920484250.jpg">
+				<p>本来是好友一起旅行，当看到山区孩子们，他们决定陪着孩子走出大山，实现梦想。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"/><em id="18098">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18098" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1014/c347314-25829088.html">医院里的盲人钢琴师 </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1014/c347314-25829088.html"><img src="/NMediaFile/2014/1014/MAIN201410140958357203268906877.jpg">
+		
+				<p>             　　中国首位盲人钢琴调音师陈燕携导盲犬珍妮作为航空总医院首位钢琴志愿者登台演出。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1009/c347314-25794685.html">守护乡村女童的健康卫士</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1009/c347314-25794685.html"><img src="/NMediaFile/2014/1010/MAIN201410100856125106168636066.jpg">
+		
+				<p>张钰哲带领的民间公益性社会组织，成为了照亮贫困山区留守儿童健康生活的灯塔。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841210946753719371.gif" />
+					<h3><b>编导:柳静</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1002/c347314-25772658.html">聋哑人支撑起的咖啡店</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1002/c347314-25772658.html"><img src="/NMediaFile/2014/1010/MAIN201410100841188109265495554.jpg">
+				<p>这是一个员工以公益志愿者、残障人士为主，帮助残疾人就业，并传播公益文化的特殊咖啡店。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841210946753719371.gif" />
+					<h3><b>编导:柳静</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/1001/c347314-25770252.html">用话剧表演让孩子重拾笑颜</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/1001/c347314-25770252.html"><img src="/NMediaFile/2014/1008/MAIN201410081023169479563536376.jpg">
+				<p>现在的青年人物质丰富却精神匮乏，希望能借助话剧的力量，让年轻人从排演话剧中获得快乐。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18087" class="button1"><em id="18087">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18087" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0924/c347314-25727375.html">“超级丹”教手语 </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0924/c347314-25727375.html"><img src="/NMediaFile/2014/0924/MAIN201409241740091464073420246.jpg">
+		
+				<p> 秦坤是是社区公益组“欢行公益”的发起人。他用自己的力量让手语成为这两类人互相交流的桥梁。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0922/c347314-25709890.html">用拍卖完成孩子的心愿</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0922/c347314-25709890.html"><img src="/NMediaFile/2014/0922/MAIN201409221724052896155513080.jpg">
+		
+				<p>丁岩发起了“拍卖愿望”公益项目，用拍卖所得资金来实现特殊群体的心愿。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0915/c347314-25663767.html" target="_blank">独守大山36年教师的孩子梦</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0915/c347314-25663767.html"><img src="/NMediaFile/2014/0916/MAIN201409160903364791882598429.jpg">
+				<p>只有1.5米的身高，体重不足百斤，左腿残疾，连走路也难得平衡的老师在大山深处教书育人。</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"/><em id="18019">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18019" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0522/MAIN201405221655373321390985226.gif" />
+					<h3><b>编导:崔辰光</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0915/c347314-25661764.html" target="_blank">用针灸医好总统的中国医生</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0915/c347314-25661764.html"><img src="/NMediaFile/2014/0915/MAIN201409151035540016926500663.jpg">
+				<p>“这个医生与众不同。”这是许多接受过三亚市中医院针灸科主任萨仁治疗的患者对她共同的评价。 </p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"/><em id="18018">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18018" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0909/c347314-25625479.html">12年西藏支教之路 </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0909/c347314-25625479.html"><img src="/NMediaFile/2014/1014/MAIN201410141623032394727100100.jpg">
+		
+				<p>            河北保定学院支教老师们在西藏支教12年，他们有怎样的艰辛？有什么样的动人故事？
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841210946753719371.gif" />
+					<h3><b>编导:柳静</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0904/c347314-25605752.html">现代人应该如何过中秋节？</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0904/c347314-25605752.html"><img src="/NMediaFile/2014/0905/MAIN201409051418455813718658658.jpg">
+				<p>大部分人离开城市，到郊区去赏月，自己带一些冷食，干粮冷食，带一点桂花酒，月饼和水果。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18069" class="button1"><em id="18069">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18069" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0901/c347314-25575956.html">你冰的是一瞬 我冷的是一生 </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0901/c347314-25575956.html"><img src="/NMediaFile/2014/0901/MAIN201409010907371969644189481.jpg">
+		
+				<p>             　　以冰桶浇头体验渐冻人感觉的公益活动受到了很多名人的追捧。其实，渐冻人就在我们身边。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841210946753719371.gif" />
+					<h3><b>编导:柳静</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0825/c347314-25530855.html">世界屋脊上的荒野求生</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0825/c347314-25530855.html"><img src="/NMediaFile/2014/0827/MAIN201408271120199523379512847.jpg">
+				<p>张金树是多吉院士众多学生中，为数不多放弃内地的优越工作，留在西藏的地质人。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18069" class="button1"><em id="18069">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18069" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0825/c347314-25530284.html">生命禁地没有了继承者 </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0825/c347314-25530284.html"><img src="/NMediaFile/2014/0825/MAIN201408250941112301907952973.jpg">
+		
+				<p>             　　多年来西藏的地质勘探者们取得了累累硕果。这个团队的灵魂，便是中国工程院院士多吉。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0818/c347314-25486250.html">高温下的送水工</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0818/c347314-25486250.html"><img src="/NMediaFile/2014/0819/MAIN201408190909193416223993773.jpg">
+		
+				<p>铁路送水工是一个平时不为大家所知的工种，这个工作看似简单，却与列车上每一位乘客的用水息息相关。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0818/c347314-25482953.html">高温下带6斤水站岗 </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0818/c347314-25482953.html"><img src="/NMediaFile/2014/0818/MAIN201408181038413240308617399.jpg">
+		
+				<p>             随着夏季的到来，那些在烈日下执勤的交警，依然暴晒在烈日之下。正是这份坚持，让更多人收获了幸福。
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0812/c347314-25447676.html">儿子的遗愿如此美丽 </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0812/c347314-25447676.html"><img src="/NMediaFile/2014/0812/MAIN201408121123437398956971232.jpg">
+		
+				<p>        十几年前，易解放痛失爱子。为实现儿子“植树造绿”的愿望，于2003年创建了“绿色生命”组织，开始植树造林的事业
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841210946753719371.gif" />
+					<h3><b>编导:柳静</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0811/c347314-25439919.html">2014谁令你心动？</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0811/c347314-25439919.html"><img src="/NMediaFile/2014/0811/MAIN201408110944091313924668182.jpg">
+				<p>2014年的夏天已经过去了，在这段日子里，一些平凡的人却用自己的话语和行动温暖着我们，谁令你心动？快来参加“十分感动”年中片选活动吧。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18069" class="button1"><em id="18069">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18069" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0805/c347314-25408962.html">云南不哭 我们在一起</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0805/c347314-25408962.html"><img src="/NMediaFile/2014/0806/MAIN201408061035552522197359964.jpg">
+		
+				<p>截止8月5日，云南鲁甸“8·03”地震死亡人数上升到410人。天灾突至，牵动人心。云南加油，鲁甸不哭，我们在一起
+。
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0804/c347314-25394615.html">我不是“逆子” </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0804/c347314-25394615.html"><img src="/NMediaFile/2014/0804/MAIN201408040903234180556256454.jpg">
+		
+				<p>      90后刘思翀一年前辞去了安逸的国企工作，创办了一所舞蹈培训学校。一年内从一个学生发展到3间教室200多名学生，一直叫他逆子的父亲也肯定了他。
+
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841210946753719371.gif" />
+					<h3><b>编导:柳静</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0801/c347314-25381898.html">解放军87年的辉煌军史</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0801/c347314-25381898.html"><img src="/NMediaFile/2014/0801/MAIN201408010930268945485326310.jpg">
+				<p>中国人民解放军一路走过了87年的光辉历程，他们是保卫人民的利剑，是长城上的守卫，是洪水中的坚石，守护共和国的坚盾。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18024" class="button1"><em id="18024">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18024" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0728/c347314-25357388.html">从“卖村贼”到“好芬女” </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0728/c347314-25357388.html"><img src="/NMediaFile/2014/0729/MAIN201407290948049417642361700.jpg">
+		
+				<p>      社区干部陆翠芬，几年前“城中村”改造项目初期，被村民骂为“卖村贼”，经过多年的不懈努力，成为村民心中的“好芬女”。
+
+。
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18068" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18052" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841103661143714492.gif" />
+					<h3><b>编导:唐婕</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0725/c347314-25342440.html">一无所有的老所长</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0725/c347314-25342440.html"><img src="/NMediaFile/2014/0728/MAIN201407281346368775775341334.jpg">
+		
+				<p> 对拥有42年警龄的何万松而言，韶关市三江50多公里长的水域就是他的“战场”，每年都会发生上百起水上救生和打捞浮尸的警情。
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18063" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0523/MAIN201405230841210946753719371.gif" />
+					<h3><b>编导:柳静</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0722/c347314-25320945.html">台风过后 海南仍在苦苦战斗</a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0722/c347314-25320945.html"><img src="/NMediaFile/2014/0723/MAIN201407230858452332566023646.jpg">
+				<p>海南省军区共出动官兵和民兵预备役人员4500余人，武警海南省总队出动1500余名官兵，以及冲锋舟、车辆等设备紧急投入抢险工作。
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png"voteId="18024" class="button1"><em id="18024">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18024" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div><div class="p2-box">
+				<div class="title"><img src="/NMediaFile/2014/0716/MAIN201407161103591121365566285.gif" />
+					<h3><b>编导:高媛</b></h3>
+				</div>
+				<h2><a href="http://tv.people.com.cn/n/2014/0721/c347314-25305528.html">“铁汉”民警勇斗毒贩 </a></h2>
+				<a href="http://tv.people.com.cn/n/2014/0721/c347314-25305528.html"><img src="/NMediaFile/2014/0721/MAIN201407210937069002683467810.jpg">
+		
+				<p>     成都民警刘军在与毒贩斗争的过程中，被挂车门拖出十几米，导致他盆骨粉碎，身负重伤，但刘军说他绝不后悔。
+
+</p>
+				<div class="line"></div>
+				<div class="clearfix bottom">
+					<div class="fl"><img src="/img/MAIN/2014/04/114389/images/icon1.png" voteId="18022" class="button1"><em id="18022">58</em>赞</div>
+					<div class="fr"><img src="/img/MAIN/2014/04/114389/images/icon2.png" voteId="18058" class="button1"><a href="#" target="_blank"><img src="/img/MAIN/2014/04/114389/images/icon3.png"></a><img class="shareIcon" src="/img/MAIN/2014/04/114389/images/icon4.png"><div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到人民微博" class="bshare-peoplemb" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div></div></div>
+			</div></div>
+		<div class="w980">
+		  <div class="w980">
+		    <div class="box-wrap clearfix"></div>
+            <div class="p2-bottom-control"><a href="http://tv.people.com.cn/GB/347314/348554/index.html" target="_blank" class="more">查看更多</a></div>
+	      </div>
+		</div>
+	</div>
+	<!-- p2 end -->
+    
+    <div class="w980 mt10">
+    
+        
+<!--AdForward Begin:-->
+<script type='text/javascript' src='http://pmm.people.com.cn/main/s?user=people|shifengandong|tonglan02&db=people&border=0&local=yes&js=ie' charset='gbk'></script><!--AdForward End-->
+    </div>
+	<div class="p3 w1070">
+		<h2><img src="/img/MAIN/2014/04/114389/images/p3-title.jpg"/></h2>
+			<img src="/img/MAIN/2014/04/114389/images/btn-prev.jpg" class="prev" />
+			<img src="/img/MAIN/2014/04/114389/images/btn-next.jpg" class="next" />
+		<div class="p3-box-wrap clearfix">
+			<div class="p3-box-container"><div class="p3-box"><div class="time"></div>
+					<div class="intro clearfix">
+						<img src="/NMediaFile/2014/0523/MAIN201405231648165287855347907.jpg" width="84" height="84" />
+						<p><b>孙晓东：</b>东北汉子孙晓东在遭遇父亲患上精神分裂症，母亲妹妹罹患癌症，双胞胎女儿被诊断为脑瘫，妻子离家出走等一连串的打击后，独自一人带女儿来京治病，12年如一日的照顾着生活不能自理的女儿。
+
+</p>
+					</div>
+					<div class="tel"><span>联系电话：</span>13521202446</div>
+					<div class="contact"><span>其他联系信息：</span>淘宝店名：父爱弥坚
+网址：http://famj.taobao.com
+新浪微博地址：@父爱弥坚</div></div><div class="p3-box"><div class="time"></div>
+					<div class="intro clearfix">
+						<img src="/NMediaFile/2014/0523/MAIN201405231655206282167022420.jpg" width="84" height="84" />
+						<p><b>梦云：</b>2008年，还在大学二年级时，梦云就在大连报名登记加入了中国造血干细胞捐献者资料库，成为一名光荣志愿者。她要自己的造血干细胞当做最珍贵的礼物送给陌生的孩子。</p>
+					</div>
+					<div class="tel"><span>联系电话：</span>010-63811157</div>
+					<div class="contact"><span>其他联系信息：</span>中国造血干细胞捐献者资料库北京管理中心网址：www.bjmdp.org.cn
+北京市红十字会
+通讯地址：北京市宣武区太平街19号（陶然亭公园内）
+</div></div><div class="p3-box"><div class="time"></div>
+					<div class="intro clearfix">
+						<img src="/NMediaFile/2014/0523/MAIN201405231653043267466171456.jpg" width="84" height="84" />
+						<p><b>腾飞：</b>在北京，有一群“北京青年”，每个周末，他们带着白手套、别着蓝色LOGO胸针，戴着志愿者服务牌，奔走在大街小巷或地铁里“清粘”，最多一次清理了200多公斤小广告。</p>
+					</div>
+					<div class="tel"><span>官方网址：</span>http://www.bjtale.com/</div>
+					<div class="contact"><span>其他联系信息：</span>北京往事公益志愿者（北往公益）组建于2012年11月20日，现有志愿者635人，团体志愿者4家，参与人数达到2400余人次。</div></div></div></div></div>
+	<!-- p3 end -->
+	
+	<div class="p4 mt30 w980 clearfix">
+		<div class="fl">
+			<h2><span><a href="javascript:void(0);">周</a>/<a href="javascript:void(0);">月</a>/<a href="javascript:void(0);">总</a></span>感动TOP10</h2>
+			<ul class="clearfix ranklist mt20"><li>
+<span>1</span><p><a href="http://tv.people.com.cn/n/2014/0509/c347314-24998161.html">美女医生的困惑</a></p></li><li>
+<span>2</span><p><a href="http://tv.people.com.cn/n/2014/0522/c347314-25050617.html">一辈子的乡村医生</a></p></li><li>
+<span>3</span><p><a href="http://tv.people.com.cn/n/2014/0515/c347314-25021898.html">新警察故事：同桌的你</a></p></li><li>
+<span>4</span><p><a href="http://tv.people.com.cn/n/2014/0414/c347314-24890587.html">送给陌生人最珍贵的礼物</a></p></li><li>
+
+<span>5</span><p><a href="http://tv.people.com.cn/n/2014/0401/c347314-24791198.html">探秘ICU:如何创造生命奇迹</a></p></li><li>
+
+<span>6</span><p><a href="http://tv.people.com.cn/n/2014/0428/c347314-24951032.html">爷爷奶奶的金婚照</a></p></li><li>
+<span>7</span><p><a href="http://tv.people.com.cn/n/2014/0212/c347314-24336949.html">家乡的味道</a></p></li><li>
+<span>8</span><p><a href="http://tv.people.com.cn/n/2014/0409/c347314-24856857.html">父亲开网店为脑瘫双胞胎女儿治病</a></p></li><li>
+<span>9</span><p><a href="http://tv.people.com.cn/n/2014/0126/c347314-24234801.html">24岁长沙妹纸为爱回家</a></p></li><li>
+<span>10</span><p><a href="http://tv.people.com.cn/n/2014/0129/c347314-24260317.html">你也被催婚了吗？</a></p></li></ul>
+            <!--<ul class="clearfix ranklist mt20"><li><span>1</span><p><a href="/n/2015/1020/c347314-27717699.html">超越时空&nbsp;心星相应</a></p></li><li><span>2</span><p><a href="/n/2015/1016/c347314-27707216.html">只为他人的重生</a></p></li><li><span>3</span><p><a href="/n/2015/1020/c347314-27719276.html">盲人按摩师用双手描绘光明未来</a></p></li><li><span>4</span><p><a href="/n/2015/0930/c363018-27653240.html" title="《一说到底》第161期：习近平访美 关键时期的关键访问">《一说到底》第161期：习近平访美&nbsp;关…</a></p></li><li><span>5</span><p><a href="/n/2015/1019/c61600-27712858.html" title="王林案办案民警涉嫌违法犯罪案：相关案件已由公安部直接办理">王林案办案民警涉嫌违法犯罪案：相关案件…</a></p></li><li><span>6</span><p><a href="/n/2015/1007/c216321-27668047.html" title="视频：老专家讲屠呦呦和青蒿素的&quot;海南往事&quot;">视频：老专家讲屠呦呦和青蒿素的&quot;海南往…</a></p></li><li><span>7</span><p><a href="/n/2015/1016/c61600-27707078.html">四名省部级干部同时被双开</a></p></li><li><span>8</span><p><a href="/n/2015/1008/c397376-27670753.html">抗日老兵曹杰：一个人的反扫荡</a></p></li><li><span>9</span><p><a href="/n/2015/1019/c239891-27716120.html" title="习主席访英之际 十五位英国主流精英谈中国梦">习主席访英之际&nbsp;十五位英国主流精英谈中…</a></p></li><li><span>10</span><p><a href="/n/2015/1015/c61600-27701546.html" title="权威发布：2015年第三季度 住宅地价整体运行呈温和上行趋势">权威发布：2015年第三季度&nbsp;住宅地价…</a></p></li></ul>
+            <ul class="clearfix ranklist mt20" style="display:none;"><li><span>1</span><p><a href="/n/2015/1020/c347314-27717699.html">超越时空&nbsp;心星相应</a></p></li><li><span>2</span><p><a href="/n/2015/1016/c347314-27707216.html">只为他人的重生</a></p></li><li><span>3</span><p><a href="/n/2015/1020/c347314-27719276.html">盲人按摩师用双手描绘光明未来</a></p></li><li><span>4</span><p><a href="/n/2015/1010/c347314-27682372.html">轮椅女孩的坎坷求学路</a></p></li></ul>
+            <ul class="clearfix ranklist mt20" style="display:none;"><li><span>1</span><p><a href="/n/2015/1020/c347314-27717699.html">超越时空&nbsp;心星相应</a></p></li><li><span>2</span><p><a href="/n/2015/1016/c347314-27707216.html">只为他人的重生</a></p></li><li><span>3</span><p><a href="/n/2015/1020/c347314-27719276.html">盲人按摩师用双手描绘光明未来</a></p></li><li><span>4</span><p><a href="/n/2015/1010/c347314-27682372.html">轮椅女孩的坎坷求学路</a></p></li></ul>-->
+	  </div>
+		<div class="fr">
+			<h2><img src="/img/MAIN/2014/04/114389/images/p4-right-title.jpg" /></h2><p><b>活动简介：</b>每一天我们身边都有点滴感动在上演，有温暖的笑容，有感动的泪水。我们需要您，发现线索，并且联系我们，让我们一起去记录、去见证这些感人的瞬间。 &nbsp; &nbsp; &nbsp;</p><p>请在我们的官方微博上@我们或者私信我们，感谢您提供的线索
+</p><div class="btn-group">
+				<a href="http://weibo.com/ptv2010?topnav=1&wvr=5&topsug=1"><img src="/img/MAIN/2014/04/114389/images/weibo-btn.jpg" /></a>&nbsp;&nbsp;<a href="http://t.qq.com/PEOPLE_PTV"><img src="/img/MAIN/2014/04/114389/images/weixin-btn.jpg" /></a>
+			</div>
+		</div>
+	</div>
+	<!-- p4 end -->
+	<div class="p5 w980 mt20">
+		<div class="p5-wrap clearfix">
+			<div class="fl"><p><b>总策划</b>&nbsp;&nbsp;唐维红&nbsp;&nbsp;&nbsp;<b>策划</b>&nbsp;&nbsp;雷　阳&nbsp;&nbsp;崔辰光&nbsp;&nbsp;&nbsp;<b>监制</b>&nbsp;&nbsp;游海滨<p><b>编导</b>&nbsp;&nbsp;崔辰光&nbsp;&nbsp;柳&nbsp;&nbsp;静&nbsp;&nbsp;唐&nbsp;&nbsp;婕&nbsp;&nbsp;&nbsp;<b>摄像</b>&nbsp;&nbsp;高媛&nbsp;崔辰光<p>
+<b>配音</b>&nbsp;&nbsp;郑紫豪&nbsp;&nbsp;&nbsp;欣雨&nbsp;&nbsp;&nbsp;
+<b>页面模板</b>&nbsp;李树亮&nbsp;&nbsp;&nbsp;&nbsp;<b>页面设计</b>&nbsp;刘茆涵
+</p></div>
+            <div class="fr"><p><b>栏目介绍：</b>“乐观看待生活，用感动传递正能量”。人民网“十分感动”栏目从微博、论坛里发现线索，讲述草根人物的感动故事，从微小处见真情，于平凡中见伟大，汇聚正能量，温暖我们每个人。</p></div>
+		</div>
+	</div>
+	<!-- copyright -->
+	<div class="copyright"><style type="text/css">
+#copyright{width:980px; margin:0px auto; font-size:12px; text-align:center; padding:20px 0; line-height:180%; clear:both;}
+</style>
+<div id="copyright">人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br />
+Copyright &copy; 1997-2015 by www.people.com.cn. all rights reserved</div></div>
+	<script type="text/javascript" src="/img/MAIN/2014/04/114389/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/img/MAIN/2014/04/114389/js/chosen.jquery.js"></script>
+	<script src="http://people.com.cn/css/search.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+	<script type="text/javascript" src="/img/MAIN/2014/04/114389/js/main.js"></script>
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>
+

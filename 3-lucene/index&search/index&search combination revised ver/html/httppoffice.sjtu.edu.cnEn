@@ -1,0 +1,206 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        xiaozhangbangongshi</title>
+    <link href="css/english.css" rel="stylesheet" type="text/css" />
+    <link href="js/nivo-slider/themes/default/default.css" rel="stylesheet" />
+    <link href="js/nivo-slider/nivo-slider.css" rel="stylesheet" />
+    <style type="text/css">
+        #slider
+        {
+            width: 960px;
+            height: 450px;
+        }
+
+        .theme-default
+        {
+            position: relative;
+        }
+
+            .theme-default .nivo-controlNav
+            {
+                bottom: 0;
+                padding: 0;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                z-index: 10;
+            }
+    </style>
+</head>
+<body>
+    <form name="form1" method="post" action="default.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTMyNjcyODEzMw9kFgJmD2QWBgIBDxYCHgtfIUl0ZW1Db3VudAIBFgJmD2QWAmYPFQIgdXBsb2FkZmlsZXMvMTAxMDI4MTEyOTMyMTA4MC5qcGevAjxwPldlbGNvbWUgdG8gU2hhbmdoYWkgSmlhbyBUb25nIFVuaXZlcnNpdHkuIEVzdGFibGlzaGVkIGluIDE4OTYgYXMgTmFuIFlhbmcgQ29sbGVnZSwgU2hhbmdoYWkgSmlhbyBUb25nIFVuaXZlcnNpdHkgaXMgb25lIG9mIHRoZSBmaXJzdCBuYXRpb25hbCBpbnN0aXR1dGlvbnMgb2YgaGlnaGVyIGxlYXJuaW5nIGluIENoaW5hLiBXaXRoIGEgaGlzdG9yeSBvZiBtb3JlIHRoYW4gYSBjZW50dXJ5LCBpdCBoYXMgZ3Jvd24gd2l0aCBhbmQgc2hhcmVkIHdlYWwgYW5kIHdvZSB3aXRoIHRoZSBjb3VudHJ5LiBTSlRVLCBhcyBpdCBpcy4uLmQCAg8WAh8AAgEWAmYPZBYCZg8VAiB1cGxvYWRmaWxlcy8xMDA3MzEwMjM4ODI5NDgwLmpwZ8wDPHA+VGFraW5nIGRhaWx5IHJvdXRpbmVzIGNvb3JkaW5hdGlvbiBmb3IgdGhlIHVuaXZlcnNpdHkgbGVhZGVycyBhcyBpdHMgcHJpbWFyeSBtaXNzaW9uLCB0aGUgb2ZmaWNlIG9mIHRoZSBwcmVzaWRlbnQgaXMgYSBjb21wcmVoZW5zaXZlIGFkbWluaXN0cmF0aXZlIGRlcGFydG1lbnQgdGhhdCBwcm92aWRlcyBzZXJ2aWNlIGZvciB0aGUgbGVhZGVycyBhbmQgb3RoZXIgYWRtaW5pc3RyYXRpdmUgZGl2aXNpb25zIGF0IHRoZSB1bml2ZXJzaXR5LiBUaGUgb2ZmaWNlIG9mIHRoZSBwcmVzaWRlbnQgcGxheXMgYW4gaW1wb3J0YW50IHJvbGUgaW4gdGhlIHVuaXZlcnNpdFRoZSBvZmZpY2Ugb2YgdGhlIHByZXNpZGVudCBwbGF5cyBhbiBpbXBvcnRhbnQgcm9sZSBpbiB0aGUgdW5pdmVyc2l0VGhlIG9mZmljZSBvZiB0aGUgcHJlc2lkZW50IHBsYXlzIGFuIGltcG9ydGFudCB1bml2ZXJzaXR5IGxpZmUuIC4uPC9wPmQCAw8WAh8AAgcWDmYPZBYCZg8VBV5TaGFuZ2hhaeKAlE90dGF3YSBVbml0ZWQgTWVkaWNhbCBDb2xsZWdlIEhlbGQg4oCcV2hpdGUgQ29hdCBDZXJlbW9ueeKAnSBDYWxsIHRvIHRoZSBQcm9mZXNzaW9uATgDMjk0ATg+U2hhbmdoYWnigJRPdHRhd2EgVW5pdGVkIE1lZGljYWwgQ29sbGVnZSBIZWxkIOKAnFdoaXRlIENvYXQuLi5kAgEPZBYCZg8VBTRSaWNlIFVuaXZlcnNpdHkgUHJlc2lkZW50IERhdmlkIExlZWJyb24gVmlzaXRlZCBTSlRVATgDMjkyATg0UmljZSBVbml2ZXJzaXR5IFByZXNpZGVudCBEYXZpZCBMZWVicm9uIFZpc2l0ZWQgU0pUVWQCAg9kFgJmDxUFMFNKVFUgUHJlc2lkZW50IFpoYW5nIEppZSBXb24gRWR3YXJkIFRlbGxlciBBd2FyZAE4AzI5MAE4MFNKVFUgUHJlc2lkZW50IFpoYW5nIEppZSBXb24gRWR3YXJkIFRlbGxlciBBd2FyZGQCAw9kFgJmDxUFPFNKVFUgSGVsZCBTdW1taXQgb24gMjAxNSBJbnRlcm5hdGlvbmFsIEltYWdlICYgQ29tbXVuaWNhdGlvbgE4AzI4NQE4OlNKVFUgSGVsZCBTdW1taXQgb24gMjAxNSBJbnRlcm5hdGlvbmFsIEltYWdlICYgQ29tbXVuaWMuLi5kAgQPZBYCZg8VBTwxOXRoIFNKVFUgVk9TIEV2ZW5pbmcgUGFydHkgUmV2ZWFscyBTdG9yaWVzIG9mIHRoZSBHcmFkdWF0ZXMBOAMyODEBODoxOXRoIFNKVFUgVk9TIEV2ZW5pbmcgUGFydHkgUmV2ZWFscyBTdG9yaWVzIG9mIHRoZSBHcmFkLi4uZAIFD2QWAmYPFQU5U0pUVSAyMDE1IFVuZGVyZ3JhZHVhdGVzIEdyYWR1YXRpb24gQ2VyZW1vbnkgR3JhbmRseSBIZWxkATgDMjc3ATg6U0pUVSAyMDE1IFVuZGVyZ3JhZHVhdGVzIEdyYWR1YXRpb24gQ2VyZW1vbnkgR3JhbmRseSBIZS4uLmQCBg9kFgJmDxUFW0EgQ29vcGVyYXRpb24gQWdyZWVtZW50IFNpZ25lZCBieSBTSlRVLCBHaGVudCBVbml2ZXJzaXR5IGFuZCBDYXRob2xpYyB1bml2ZXJzaXR5IG9mIExvdXZhaW4BOAMyNzQBODpBIENvb3BlcmF0aW9uIEFncmVlbWVudCBTaWduZWQgYnkgU0pUVSwgR2hlbnQgVW5pdmVyc2l0Li4uZGTErrQQX+Un/Ui4P8NTtKp+gS9Rcw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1A8A0CA9" />
+</div>
+        <div id="wrap">
+            
+  <div class="logo"><img src="images/top.gif" /></div>
+  <div class="nav"><a href="Default.aspx">Home</a>
+     <a href='title.aspx?info_lb=73&flag=73'>Principal Home</a> <a href='pictrue.aspx?info_lb=4&flag=4'>About President</a> <a href='content.aspx?info_lb=3&flag=3'>About the Office</a> <a href='title.aspx?info_lb=8&flag=8'>News</a> <a href='content.aspx?info_lb=11&flag=11'>Contact US</a> 
+	<a href="../">Chinese</a></div>
+            <div class="content">
+                <div class="flash">
+                    <div class="slider-wrapper theme-default">
+                        <div id="slider" class="nivoSlider">
+                            <a href="javascript:;"><img src="../uploadfiles/15102201122019720.jpg"/></a><a href="javascript:;"><img src="../uploadfiles/15101003421711330.jpg"/></a><a href="javascript:;"><img src="../uploadfiles/15092908321361510.jpg"/></a><a href="javascript:;"><img src="../uploadfiles/15092208032363260.jpg"/></a><a href="javascript:;"><img src="../uploadfiles/15092208021974800.jpg"/></a><a href="javascript:;"><img src="../uploadfiles/15091301572099830.jpg"/></a><a href="javascript:;"><img src="../uploadfiles/15082204341908480.jpg"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome" style="width: 962px; height: 258px; display: none;">
+            </div>
+            <div class="clear">
+            </div>
+            <div class="offic" style="margin-bottom: 2px;">
+                <div class="title">
+                    <img src="images/t1-new.gif" border="0" usemap="#Map4" />
+                    <map name="Map4" id="Map4">
+                        <area shape="rect" coords="244,12,279,21" href="content.aspx?info_lb=54&flag=54" />
+                    </map>
+                </div>
+                <div class="box" style="height: 95px; overflow: hidden; margin-bottom: 5px;">
+                    
+                            <img class="pic" src="../uploadfiles/1010281129321080.jpg" width="65"
+                                height="73" />
+                            <p>Welcome to Shanghai Jiao Tong University. Established in 1896 as Nan Yang College, Shanghai Jiao Tong University is one of the first national institutions of higher learning in China. With a history of more than a century, it has grown with and shared weal and woe with the country. SJTU, as it is...
+                        
+                </div>
+                <div class="title">
+                    <img src="images/t2.gif" border="0" usemap="#Map3" />
+                    <map name="Map3" id="Map3">
+                        <area shape="rect" coords="244,12,279,21" href="content.aspx?info_lb=56&flag=56" />
+                    </map>
+                </div>
+                <div class="box" style="height: 95px; overflow: hidden; margin-bottom: 3px;">
+                    
+                            <img class="pic" src="../uploadfiles/1007310238829480.jpg" width="65"
+                                height="73" />
+                            <p>Taking daily routines coordination for the university leaders as its primary mission, the office of the president is a comprehensive administrative department that provides service for the leaders and other administrative divisions at the university. The office of the president plays an important role in the universitThe office of the president plays an important role in the universitThe office of the president plays an important university life. ..</p>
+                        
+                </div>
+            </div>
+
+            <div class="news">
+                <div class="title">
+                    <img src="images/t3.gif" border="0" usemap="#Map" />
+                    <map name="Map" id="Map">
+                        <area shape="rect" coords="356,12,391,21" href="title.aspx?info_lb=8&flag=8" />
+                    </map>
+                </div>
+                <div class="box" style="height: 240px;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        
+                                <tr>
+                                    <td width="3%">
+                                        <!--img src="images/tb.jpg" width="5" height="5" /-->
+                                    </td>
+                                    <td width="97%">
+                                        <a target='_blank' title='Shanghai—Ottawa United Medical College Held “White Coat Ceremony” Call to the Profession' href="show.aspx?info_lb=8&info_id=294&flag=8">
+                                            Shanghai—Ottawa United Medical College Held “White Coat...</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="3%">
+                                        <!--img src="images/tb.jpg" width="5" height="5" /-->
+                                    </td>
+                                    <td width="97%">
+                                        <a target='_blank' title='Rice University President David Leebron Visited SJTU' href="show.aspx?info_lb=8&info_id=292&flag=8">
+                                            Rice University President David Leebron Visited SJTU</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="3%">
+                                        <!--img src="images/tb.jpg" width="5" height="5" /-->
+                                    </td>
+                                    <td width="97%">
+                                        <a target='_blank' title='SJTU President Zhang Jie Won Edward Teller Award' href="show.aspx?info_lb=8&info_id=290&flag=8">
+                                            SJTU President Zhang Jie Won Edward Teller Award</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="3%">
+                                        <!--img src="images/tb.jpg" width="5" height="5" /-->
+                                    </td>
+                                    <td width="97%">
+                                        <a target='_blank' title='SJTU Held Summit on 2015 International Image & Communication' href="show.aspx?info_lb=8&info_id=285&flag=8">
+                                            SJTU Held Summit on 2015 International Image & Communic...</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="3%">
+                                        <!--img src="images/tb.jpg" width="5" height="5" /-->
+                                    </td>
+                                    <td width="97%">
+                                        <a target='_blank' title='19th SJTU VOS Evening Party Reveals Stories of the Graduates' href="show.aspx?info_lb=8&info_id=281&flag=8">
+                                            19th SJTU VOS Evening Party Reveals Stories of the Grad...</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="3%">
+                                        <!--img src="images/tb.jpg" width="5" height="5" /-->
+                                    </td>
+                                    <td width="97%">
+                                        <a target='_blank' title='SJTU 2015 Undergraduates Graduation Ceremony Grandly Held' href="show.aspx?info_lb=8&info_id=277&flag=8">
+                                            SJTU 2015 Undergraduates Graduation Ceremony Grandly He...</a>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td width="3%">
+                                        <!--img src="images/tb.jpg" width="5" height="5" /-->
+                                    </td>
+                                    <td width="97%">
+                                        <a target='_blank' title='A Cooperation Agreement Signed by SJTU, Ghent University and Catholic university of Louvain' href="show.aspx?info_lb=8&info_id=274&flag=8">
+                                            A Cooperation Agreement Signed by SJTU, Ghent Universit...</a>
+                                    </td>
+                                </tr>
+                            
+                    </table>
+                </div>
+            </div>
+            <div class="access">
+                <div class="title">
+                    <img src="images/t4.gif" border="0" usemap="#Map2" />
+                    <map name="Map2" id="Map2">
+                        <area shape="rect" coords="205,12,241,21" href="news.aspx?info_lb=57&flag=57" />
+                    </map>
+                </div>
+                <div class="box" style="height: 240px;">
+                    <h3>Administrative Organization</h3><p><a href='http://en.sjtu.edu.cn/' target='_blank'>&rArr;&nbsp;Shanghai Jiao Tong University</a></p><p><a href='http://www.cnmooc.org/home/index.mooc' target='_blank'>&rArr;&nbsp;CNMOOC</a></p><p><a href='http://icae.sjtu.edu.cn/' target='_blank'>&rArr;&nbsp;Division of International Cooperation and Exchange</a></p><p><a href='http://en.sjtu.edu.cn/gateways-for-students/' target='_blank'>&rArr;&nbsp;Gateways for Students</a></p><h3>School of SJTU</h3><p><a href='http://english.shsmu.edu.cn/' target='_blank'>&rArr;&nbsp;School of Medicine</a></p><p><a href='http://www.acem.sjtu.edu.cn/en/' target='_blank'>&rArr;&nbsp;Antai College of Economics & Management</a></p><p><a href='http://www.ceibs.edu/index_en.shtml' target='_blank'>&rArr;&nbsp;CEIBS</a></p><p><a href='http://law.sjtu.edu.cn/En/' target='_blank'>&rArr;&nbsp;KoGuan Law School</a></p>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        
+  <div class="foot"><p align="center">Copyright &copy; 2010 President Office of&nbsp;Shanghai Jiao Tong University<br />
+<span>Address: </span>800 Dongchuan RD. Minhang District, Shanghai, China 200240, 沪ICP备020861</p>
+
+
+
+
+</div>
+    </form>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/nivo-slider/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#slider').nivoSlider();
+        });
+    </script>
+</body>
+</html>

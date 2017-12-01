@@ -1,0 +1,305 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页 -- 上海交通大学信息安全工程学院</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="Favicon.ico" rel="shortcut icon" />
+<link href="Favicon.ico" rel="bookmark" />
+</head>
+
+<body>
+<div class="Wrap">
+	<div class="Logo">
+		<h1><a href="index.asp" title="上海交通大学信息安全工程学院"></a></h1>
+	</div>
+	<div class="w280 fr pt10">
+		<p class="lh300 tr"><a href="index.asp">中文版</a> | <a href="English.asp">English</a></p>
+    <form name="zhanneisousuo"  method="post" id="zhanneisousuo">
+       <script type="text/javascript">
+function getproname()
+{
+	
+	var proname=document.getElementById("textarea").value;
+	
+	if (proname=="站内搜索" || proname=="")
+	{
+		alert("请输入关键字！");
+		zhanneisousuo.textarea.focus();
+		return false;
+	}
+	window.open("Search.asp?proname="+  escape(proname));
+
+}
+
+</script>
+		<input  name="textarea"  id="textarea" type="text" onfocus="if(this.value=='站内搜索')value='';" onblur="if(this.value=='')value='站内搜索';" onkeydown="if (event.keyCode==13) {}" value="站内搜索" class="SearchInput"/>
+		<button class="SearchBtn" onclick="return getproname()">搜索</button>
+        </form>
+		<div class="cb"></div>
+	</div>
+	<div class="cb"></div><script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+	var timeout         = 500;
+	var closetimer		= 0;
+	var ddmenuitem      = 0;
+	
+	function jsddm_open()
+	{	jsddm_canceltimer();
+		jsddm_close();
+		ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+	
+	function jsddm_close()
+	{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+	
+	function jsddm_timer()
+	{	closetimer = window.setTimeout(jsddm_close, timeout);}
+	
+	function jsddm_canceltimer()
+	{	if(closetimer)
+		{	window.clearTimeout(closetimer);
+			closetimer = null;}}
+	
+	$(document).ready(function()
+	{	$('#jsddm > li').bind('mouseover', jsddm_open);
+		$('#jsddm > li').bind('mouseout',  jsddm_timer);});
+	
+	document.onclick = jsddm_close;
+</script>
+
+<ul id="jsddm">
+		<li><a href="index.asp">首页</a></li>
+		<li>
+			<a href="About.asp">学院概况</a>
+			<ul>
+				<li><a href="About.asp">学院简介</a></li>
+				<li><a href="Leader.asp">学院领导</a></li>
+				<li><a href="Administrative.asp">联系我们</a></li>
+			</ul>
+		</li>
+		<li>
+            
+			<a href="Research.asp?id=65">科学研究</a>
+             
+			<ul>
+				<li><a href="ResearchBase.asp">科研概况</a></li>
+            
+					<li><a href="Research.asp?id=65">科研方向</a></li>
+					 
+			</ul>
+		</li>
+		<li>
+         
+			<a href="People.asp?id=244">师资队伍</a>
+             
+            <ul>
+            
+				 
+					<li><a href="People.asp?id=244">教授</a></li>
+					 
+					<li><a href="People.asp?id=246">研究员</a></li>
+					 
+					<li><a href="People.asp?id=248">副教授</a></li>
+					 
+					<li><a href="People.asp?id=250">副研究员</a></li>
+					 
+					<li><a href="People.asp?id=252">高工</a></li>
+					 
+			</ul>
+		</li>
+		<li>
+			<a href="Undergraduate.asp?y=1">人才培养</a>
+			<ul>
+				<li><a href="Undergraduate.asp?y=1">本科生</a></li>
+				<li><a href="Graduate.asp?y=5">研究生</a></li>
+				<li><a href="PhD.asp">博士生</a></li>
+			</ul>
+		</li>
+		<li>
+         
+			<a href="Base.asp?id=141" class="Last">基地建设</a>
+			<ul style="margin-left:-170px;">
+            
+				 
+					<li><a href="Base.asp?id=141" style="width:330px;">信息内容分析技术国家工程实验室</a></li>
+					 
+					<li><a href="Base.asp?id=139" style="width:330px;">教育部网络信息安全管理监控与服务工程研究中心</a></li>
+					 
+					<li><a href="Base.asp?id=137" style="width:330px;">上海市信息安全综合管理技术研究重点实验室</a></li>
+					 
+					<li><a href="Base.asp?id=135" style="width:330px;">巴黎电信（TPT）和上海交通大学安全与信任联合研究实验室</a></li>
+					 
+			</ul>
+		</li>
+	</ul>
+	<div class="cb"></div>
+	<iframe width="960" height="430" scrolling="no" frameborder="0" src="slider/index.asp" allowtransparency="true"></iframe>
+	<div class="cb"></div>
+	<div class="w600 fl">
+		<div class="Frame">
+				<div class="Title">学院新闻</div>
+				<div class="FrameMore"><a href="News.asp?n=3">更多学院新闻</a></div>
+				<div class="IndexNews">
+					<ul>
+						 
+					<li><span>
+                    2015-8-18
+                    </span><a href="NewsDetail.asp?id=401&n=3">2015智慧城市、工业控制系统及通信安全国际会议（SSIC2015）取得圆满成功</a></li>
+					 
+					<li><span>
+                    2014-11-4
+                    </span><a href="NewsDetail.asp?id=356&n=3">全国大学生信息安全技术专题邀请赛交大学子再获佳绩</a></li>
+					 
+					<li><span>
+                    2014-10-29
+                    </span><a href="NewsDetail.asp?id=353&n=3">第八届中国信息安全学科专业建设与人才培养研讨会举行[图]</a></li>
+					 
+					<li><span>
+                    2014-10-27
+                    </span><a href="NewsDetail.asp?id=351&n=3">万靓隽同学荣获“纪念改革开放三十周年”校级</a></li>
+					 
+					</ul>
+				</div>
+			</div>
+		<div class="Frame mt20">
+			<div class="Title">通知通告</div>
+			<div class="FrameMore"><a href="News.asp?n=1">更多通知通告</a></div>
+			<div class="IndexNews">
+				<ul>
+                
+					<li><span>
+                    2015-3-9
+                    </span><a href="NewsDetail.asp?id=392&n=1">上海市信息安全综合管理技术研究重点实验室---2015年度开放课题申请指南</a></li>
+					 
+					<li><span>
+                    2014-10-27
+                    </span><a href="NewsDetail.asp?id=335&n=1">关于实施《关于将本市大学生纳入本市城镇居民基本医疗保险的通知》若干问题</a></li>
+					 
+					<li><span>
+                    2014-10-27
+                    </span><a href="NewsDetail.asp?id=333&n=1">本市大学生纳入本市城镇居民基本_医疗保险的通知</a></li>
+					 
+					<li><span>
+                    2014-10-20
+                    </span><a href="NewsDetail.asp?id=329&n=1">关于同意蒋兴浩、邱卫东同志为信息安全工程学院院长助理</a></li>
+					 
+       
+	     
+				</ul>
+			</div>
+		</div>
+		<div class="Frame mt20">
+			<div class="Title">学术动态</div>
+			<div class="FrameMore"><a href="News.asp?n=2">更多学术动态</a></div>
+			<div class="IndexNews">
+				<ul>
+					 
+					<li><span>
+                    2015-3-31
+                    </span><a href="NewsDetail.asp?id=397&n=2">International Conference on Security of Smart cities, Industrial Control System and Communications</a></li>
+					 
+					<li><span>
+                    2015-3-23
+                    </span><a href="NewsDetail.asp?id=395&n=2">美国新泽西理工大学Yun-Qing Shi（施云庆）教授来我院学术访问</a></li>
+					 
+					<li><span>
+                    2014-12-19
+                    </span><a href="NewsDetail.asp?id=377&n=2">我院吴炜捷赴加拿大多伦多市参加INFOCOM'14并做报告</a></li>
+					 
+					<li><span>
+                    2014-12-19
+                    </span><a href="NewsDetail.asp?id=375&n=2">加拿大McMaster大学计算及软件系郑蓉副教授访问我院</a></li>
+					 
+				</ul>
+			</div>
+		</div>		
+	</div>
+	<!--<div class="IndexRight">
+		<div class="p10 red f14 fb">人才培养</div>
+		<ul>
+         
+			<li>
+				<a href="">
+					<img src="upload/201481815372047.png" />
+					<p class="fb">本科生</p>
+					<p>专业名称：计算机应用技术</p>
+					<p>专业代码： 081203</p>
+				</a>
+			</li>
+			 
+			<li>
+				<a href="">
+					<img src="upload/20148181537845.png" />
+					<p class="fb">教育培训</p>
+					<p>专业名称：计算机应用技术</p>
+					<p>专业代码： 081203</p>
+				</a>
+			</li>
+			 
+			<li>
+				<a href="">
+					<img src="upload/201481815365226.png" />
+					<p class="fb">在职工程硕士</p>
+					<p>专业名称：计算机应用技术</p>
+					<p>专业代码： 081203</p>
+				</a>
+			</li>
+			 
+			<li>
+				<a href="">
+					<img src="upload/201481815363721.png" />
+					<p class="fb">全日制工程硕士</p>
+					<p>专业名称：计算机应用技术</p>
+					<p>专业代码： 081203</p>
+				</a>
+			</li>
+			 
+			<li>
+				<a href="">
+					<img src="upload/201481815355252.png" />
+					<p class="fb">研究生培养计划</p>
+					<p>专业名称：计算机应用技术</p>
+					<p>专业代码： 081203</p>
+				</a>
+			</li>
+			 
+         
+					
+		</ul>
+	</div>-->
+	<div class="w340 fr">
+		<div class="IndexRight">
+			<div class="p10 red f14 fb">学院简介</div>
+			<div class="IndexRightFrame">
+				<p>上海交通大学信息安全工程学院，创建于2000年10月，是由国家教育部、科技部、上海市人民政府共同发起的国内首家信息安全专业人才培养基地，培养包括 本科生、研究生、博士生不同学历层次的高级信息安全专业人才，不仅是科技部和国务院学位办共同建设的首批信息安全专业硕博联读试点单位，而且是国家863 产业化（东部）基地信息安全高级专业人才培养基地...</p>
+			</div>
+			<div class="lh300 tr pr10"><a href="About.asp" class="red">了解更多</a></div>
+		</div>
+		<div class="IndexRight">
+			<div class="p10 red f14 fb">合作伙伴</div>
+			<div class="p5"> <!--<a href="http://www.sjtu.edu.cn/" target="_blank"><img src="image/6.jpg" class="fl pl5" /></a>
+					<a href="http://www.seiee.sjtu.edu.cn/" target="_blank"><img src="image/7.jpg" class="fr pr5" /></a>
+				<div class="cb"></div>-->
+				<a href="http://www.pengyue.com.cn/" target="_blank"><img src="image/8.jpg" class="fl pl5" /></a>
+				<a href="http://www.zmemb.com/" target="_blank"><img src="image/9.jpg" class="fr pr5" /></a>
+				<a href="http://www.now315.com/" target="_blank"><img src="image/6.jpg" class="fl pl5" /></a>
+				<div class="cb"></div>
+			</div>
+		</div>
+	</div>
+	<div class="cb"></div>
+</div>
+<div class="Bottom">
+	<div class="Wrap">
+		<h2></h2>
+		<div class="tr pt30">
+			<p>Copyright &copy; 2014上海交通大学信息安全工程学院    沪ICP备05052060号</p>
+			<p>地址：上海市张江高科技园区张衡路429号    邮编：201203</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<a href="http://webscan.360.cn/index/checkwebsite/url/infosec.sjtu.edu.cn" name="06acd67e3827153959f15ccfd76073c2" >360网站安全检测平台</a>

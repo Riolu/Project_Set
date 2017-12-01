@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Study in Shanghai</title>
+<link href="/hongbull.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.8.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+                        $(function(){
+                        $(":input").focus(function(){
+                            if($(this).val() ==this.defaultValue){  
+                            $(this).val("");           
+                                } 
+                        }).blur(function(){
+                        if ($(this).val() == '') {
+                        $(this).val(this.defaultValue);
+                                 }
+                        });
+                                        })
+                    
+-->
+
+</script>
+</head>
+
+<body>
+<div id="site">
+	<!--Top Bar 开始-->
+      <div id="top_bar">
+<form name=search_js1 method=post action='/e/search/index.php' > 
+<input name="show" type="hidden" value="title,smalltext,newstext,writer">
+   	  <div id="top_bar_Search">
+      	<div id="top_bar_Search_input"><input name="keyboard" id="sh1" class="top_Search_input" type="text" value="Search" />
+        </div>
+        <div id="top_bar_Search_BT">
+        <input name="" onclick="su();" type="button" class="top_Search_BT" style="cursor:hand"/>
+        </div>
+</form>
+<script>
+function su(){
+var key =$.trim(document.getElementById("sh1").value);
+
+if(key!='' && key!='Search'){
+document.search_js1.submit();
+}else{
+alert('Please enter the keywords!');
+}
+}
+</script>
+   	  </div>
+      <div id="top_Item_app"><a href="http://en.study-shanghai.org/appsh/" class="Font_14_Green">App</a></div>
+      <div id="top_Item_English"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Item_中文"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Logo"><img src="/images/logo.png" />
+      </div>
+    </div>
+    <!--Top Bar 结束-->
+    
+    <!--Banner 开始-->
+    <div id="Banner">
+		<div id="Banner_pic"><img src="/d/file/p/2014-03-13/bf2e4ea007adf36dedea4d5fb2e8b0ee.png" /></div>
+  </div>
+  <script>
+  var Banner_count=3;
+  var Banner_Max =4;
+  var Banner_list = new Array("images/Banner1.png","images/Banner2.png","images/Banner3.png","images/Banner4.png"); 
+
+	$(document).ready(function(){
+ 		$("#Banner_left").click(function(){
+			
+    		if( Banner_count>1 ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count--;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+		
+ 		$("#Banner_right").click(function(){
+			
+    		if( Banner_count<Banner_Max ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count++;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+	});
+
+
+  </script>
+  <!--Banner 结束--> <!--Menu 开始-->
+  <div id="nav" class="nav">
+  <ul class="first">
+<li class="a"><a class="fir" href="/"><span><img src="/images/Menu_Icon_home_on.png" style="margin-right:5px;"/>Home</span></a>
+    <li class="b"><a class="fir" href="/sis/"><span>Study in Shanghai</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+       <ul class="second" style="display: none;">
+          <li><a href="/sis/ws/2014-02-21/26.html"><span>Why Shanghai</span></a></li>
+          <li><a href="/sis/universities/"><span>Universities</span></a></li>
+          <li><a href="/sis/courses/"><span>Courses</span></a></li>
+          <li><a href="/sis/tutors/"><span>Faculty</span></a></li>
+          <li><a href="/e/action/ListInfo/?classid=19&oper=1"><span>Student Stories</span></a></li>
+        </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+    <li class="c"><a class="fir" href="/ag/"><span>Application Guide</span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ag/lr/"><span>Regulations</span></a></li>
+          <li><a href="/ag/visa/"><span>FAQs</span></a></li>
+          <li><a href="http://www.study-shanghai.org/Scholarship_en.asp"><span>Scholarships</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_3_en"><span>Applying Online</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_STA_en"><span>Status Check</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="d cur"><a class="fir" href="/ds/"><span>Discover Shanghai </span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="e"><a class="fir" href="/nc/news/"><span>News Center </span>  </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/nc/news/"><span>News</span></a></li>
+          <li><a href="/nc/Specials/"><span>Specials</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+    <li class="f"><a  class="fir" href="/lc/"><span>Learn Chinese</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/lc/lm/"><span>Mandarin</span></a></li>
+          <li><a href="/lc/ls/"><span>Shanghai Dialect</span></a></li>
+          <li><a href="/lc/hsk/"><span>HSK</span></a></li>
+        </ul>  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+<li class="g"><a class="fir" href="/is/"><span>International Schools</span></a>
+            <ul class="second" style="display: none;">
+              <li>
+                <a href="/is/is"><span>International School</span></a>
+              </li>
+              <li>
+                <a href="/is/id"><span>International Division of Local School</span></a>
+              </li>
+              <li>
+                <a href="/is/asc"><span>After School Class</span></a>
+              </li>
+            </ul>
+          </li>
+  </ul>  
+</div><div class="cb"></div>
+  <!--Menu 结束-->
+  <div id="NavBar">
+  <a href="/index.html">Home</a>&nbsp;>&nbsp;<a href="/ds/">Discover Shanghai</a>&nbsp;>&nbsp;<a href="/ds/museums/">Museums</a>
+</div>
+  <div class="cb"></div>
+  <!--Content 开始-->
+  <div id="Content">
+ 	<div id="Content_left_News">
+    	<div class="left_menu">
+        	<UL>
+            	<li  ><a href="/ds/cl/" class="Font_20_fff"><span>Cultural Life</span></a></li>
+                <li  class="cur"><a href="/ds/museums/" class="Font_20_fff"><span>Museums</span></a></li>
+                <li  ><a href="/ds/living/" class="Font_20_fff"><span>Living </span></a></li> 
+                <li  ><a href="/ds/sights/" class="Font_20_fff"><span>Sights </span></a></li>    
+                <li  ><a href="/ds/itineraries/" class="Font_20_fff"><span>Itineraries</span></a></li>            
+            </UL>
+</div>
+
+    </div>
+    <div id="Content_right_News">
+    <div id="AppGuide_Title">
+    	<div id="AppGuide_Title_pic">
+        	<img src="/images/Icon_Discover.jpg" />
+        </div>
+      <div id="AppGuide_Title_word">
+        	<p>Museums</p>
+
+            <span>Shanghai’s museums can be a window to the city, the country, or the world and are a wonderful way to approach the city and China, with their cultural, relics, historical photos, and historical scenes that can tell you as much as an entire story. 
+
+            <br />
+            <br />
+          The museums give you a panoramic view of Shanghai’s past, present and even its future and, if you’re enthusiastic about everything from the arts to kung fu, they can fill your needs.</span>
+        </div>
+    </div>
+    <div class="cb"></div>
+    <div id="DiscoverSH_box">
+    	 
+         
+    	 <!--list-->
+
+<div id="DiscoverSH_item"><div id="DiscoverSH_left1"><div id="DiscoverSH_left1_top1"><a href='/ds/museums/2015-10-09/1604.html'><img src='/d/file/ds/museums/2015-10-09/269a44f1582adb0ef8ec732006b8d1c9.jpg' width="255px"/></a></div><div id="Museum_left1_top2"><a  href='/ds/museums/2015-10-09/1604.html'><img src="/images/DiscoverSH_arrow.png" /></a></div><div class="cb"></div><div id="Museum_left1_bottom"><h1>China Maritime Museum</h1><p>It houses cultural relics collection and exhibitions and carries out academic research and social education.&nbsp;&nbsp;<a href='/ds/museums/2015-10-09/1604.html'>Read More</a></p></div></div><div id="DiscoverSH_right1"><a href='/ds/museums/2015-10-09/1604.html'><img src='/d/file/ds/museums/2015-10-09/9ed06ba4d7a41eb78fdb4b4bad77f905.jpg' width="459" height="274" /></a></div></div> <div class="cb"></div>
+<div id="DiscoverSH_item">
+        <div id="DiscoverSH_right1"><img src="/d/file/p/2014-03-13/e9652d47f8d2b491dfc8f83495ee8f34.jpg" width="459" height="274"></a>
+          </div>
+          <div id="DiscoverSH_left1">
+        	<div id="Museum_left2_top">
+            <h1>Museums</h1>
+            <p>The museums give you a panoramic view of Shanghai’s past, present and even its future.</p>
+			</div>                
+    <div id="DiscoverSH_left2_bottom"><img src="/images/museum2.jpg"></a></div>
+
+        	</div>
+        </div>
+
+
+<div id="DiscoverSH_item"><div id="DiscoverSH_left1"><div id="DiscoverSH_left1_top1"><a href='/ds/museums/2015-09-23/1595.html'><img src='/d/file/ds/museums/2015-09-23/43017b349e47dc35c95e924b1d32e640.jpg' width="255px"/></a></div><div id="Museum_left1_top2"><a  href='/ds/museums/2015-09-23/1595.html'><img src="/images/DiscoverSH_arrow.png" /></a></div><div class="cb"></div><div id="Museum_left1_bottom"><h1>Songze Historical Relics Museum</h1><p>It provides a rare glimpse of Neolithic life in the region.&nbsp;&nbsp;<a href='/ds/museums/2015-09-23/1595.html'>Read More</a></p></div></div><div id="DiscoverSH_right1"><a href='/ds/museums/2015-09-23/1595.html'><img src='/d/file/ds/museums/2015-09-23/f0a35fbab5c62f953112e32580479bf0.jpg' width="459" height="274" /></a></div></div> <div class="cb"></div>
+<div id="DiscoverSH_item"><div id="DiscoverSH_left1"><div id="DiscoverSH_left1_top1"><a href='/ds/museums/2015-09-07/1582.html'><img src='/d/file/ds/museums/2015-09-07/687fabac3d7197676dccafb9ae2d868d.jpg' width="255px"/></a></div><div id="Museum_left1_top2"><a  href='/ds/museums/2015-09-07/1582.html'><img src="/images/DiscoverSH_arrow.png" /></a></div><div class="cb"></div><div id="Museum_left1_bottom"><h1>Shanghai Museum of Old Camera Manufacturing</h1><p>The museum, opened in June 2012, is a hidden pearl that lies within the concrete jungle of Shanghai.&nbsp;&nbsp;<a href='/ds/museums/2015-09-07/1582.html'>Read More</a></p></div></div><div id="DiscoverSH_right1"><a href='/ds/museums/2015-09-07/1582.html'><img src='/d/file/ds/museums/2015-09-07/7197a19d0dd3bca3f4c83118fc5834ff.jpg' width="459" height="274" /></a></div></div> <div class="cb"></div>
+<!--list.var4-->
+
+
+         <!--list-->
+
+    </div>
+             
+     <div id="jogger_box">
+         <div class="jogger">
+                        <a title="Total record">&nbsp;<b>37</b> </a>&nbsp;&nbsp;&nbsp;<span class='current'>1</span>&nbsp;<a href="/ds/museums/index_2.html">2</a>&nbsp;<a href="/ds/museums/index_3.html">3</a>&nbsp;<a href="/ds/museums/index_4.html">4</a>&nbsp;<a href="/ds/museums/index_5.html">5</a>&nbsp;<a href="/ds/museums/index_6.html">6</a>&nbsp;<a href="/ds/museums/index_7.html">7</a>&nbsp;<a href="/ds/museums/index_8.html">8</a>&nbsp;<a href="/ds/museums/index_9.html">9</a>&nbsp;<a href="/ds/museums/index_10.html">10</a>&nbsp;<a href="/ds/museums/index_11.html">11</a>&nbsp;<a href="/ds/museums/index_12.html">12</a>&nbsp;<a href="/ds/museums/index_2.html">></a>
+                    </div>   
+      </div> 
+     <!--底部按钮 开始-->
+      <div class="Learn_Bottom_menu">
+      <div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="/e/action/ListInfo/?classid=19&oper=1"><img src="/images/Learn_Icon1.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="/e/action/ListInfo/?classid=19&oper=1">Student Stories</a></div>
+        </div>
+
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="/lc/"><img src="/images/Learn_Icon2.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="/lc/">Learn Chinese</a></div>
+        </div>
+        
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="/app/2014-04-09/707.html"><img src="/images/Learn_Icon3.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right2">
+          <a href="/app/2014-04-09/707.html">APP</a></div>
+        </div>
+
+    </div>
+    <!--底部按钮 结束-->
+
+    </div>
+  </div>
+  <!--Content 结束-->
+    <div id="bottom_bar">
+  	<div id="bottom_left"></div>
+    <div id="bottom_content">
+    	<div id="bottom_content1">
+        	<ul>
+            <li><a href="http://en.study-shanghai.org/sitemap/2014-03-13/442.html" class="Font_12_fff">Sitemap</a></li>
+            <li><a href="http://en.study-shanghai.org/tou/2014-04-07/655.html" class="Font_12_fff">Terms of Use</a></li>
+            <li><a href="http://en.study-shanghai.org/cu/2014-04-07/656.html" class="Font_12_fff">Contact Us</a></li>
+            <li><a href="http://en.study-shanghai.org/lk/2014-03-13/441.html" class="Font_12_fff">Links</a></li>
+            </ul>
+        </div>
+        <div class="cb"></div>
+        <span>Copyright © 2014 Shanghai Municipal Education Commission. All rights reserved.</span>
+    </div>    
+    <div id="bottom_right"></div>
+  </div>
+<div style="dispaly:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1252937499'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D1252937499%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<script type="text/javascript" src="/js/nav.js"></script>
+</div> 
+</body>
+</html>

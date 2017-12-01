@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上海留学</title>
+<link href="master.css" rel="stylesheet" type="text/css" />
+<link href="layout.css" rel="stylesheet" type="text/css" />
+
+<script src="/js/jquery-1.8.3.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div class="top">
+<div class="top01"><img src="image/logo.png" /></div>
+<div class="top02"><a href="http://en.study-shanghai.org/">Home</a> <a href="http://www.study-shanghai.org/index.asp">中文</a> </div>
+
+<form name="search_js1" method="post" action="/e/search/index.php"> 
+<input name="show" type="hidden" value="title,smalltext,newstext,writer">
+   	  <div id="top_bar_Search">
+      	<div id="top_bar_Search_input"><input name="keyboard" id="sh1" class="top_Search_input" type="text" value="Search">
+        </div>
+        <div id="top_bar_Search_BT">
+        <input name="" onclick="su();" type="button" class="top_Search_BT" style="cursor:hand" value="">
+        </div>
+
+<script>
+function su(){
+var key =$.trim(document.getElementById("sh1").value);
+
+if(key!='' && key!='Search'){
+document.search_js1.submit();
+}else{
+alert('Please enter the keywords!');
+}
+}
+</script>
+   	  </div></form>
+</div>
+
+
+
+
+<div class="main">
+<div class="main01"></div>
+<div class="main02">
+<div class="main02-a01">Study-in-Shanghai App</div>
+<div class="main02-a02">Designed for students who are studying abroad in Shanghai and for those interested in studying there</div>
+
+
+
+<div class="b01"><div class="b01-img">
+<a href="https://play.google.com/store/apps/details?id=com.study.shanghai"><img src="image/b01.png" /></a>
+</div>
+<div class="b01-img02">
+<img src="image/01.gif" /><span>Scan the QR code
+to download</span>
+</div>
+</div>
+
+<div class="b01"><div class="b01-img">
+<a href="https://itunes.apple.com/cn/app/study-in-shanghai/id857434262?mt=8"><img src="image/b02.png" /></a>
+</div>
+<div class="b01-img02">
+<img src="image/02.gif" /><span>Scan the QR code
+to download from
+App Store</span>
+</div>
+</div>
+<div class="bottom">Copyright @ 2013 Shanghai Municipal Education Commission. All rights reserved.</div>
+
+
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>

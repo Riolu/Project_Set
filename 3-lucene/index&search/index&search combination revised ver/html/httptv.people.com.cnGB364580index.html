@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta content="all" name="robots" />
+<title>直击现场--人民电视--人民网</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="364580" />
+<link href="/img/MAIN/2014/09/114872/page.css" type="text/css" rel="stylesheet" media="all" />
+<script src="/img/MAIN/2013/05/113217/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="/img/2011ptv2/showPeopleVideoPlayerMulti.js" type="text/javascript"></script>
+<script type="text/javascript">
+var aa=document.getElementById("demo_video").getElementsByTagName("li");
+function lionclick(n){	 
+	for(var i=0;i<aa.length;i++){	  
+	  	if(i==n){
+			aa.item(i).className="one";
+		}else{
+			aa.item(i).className="";
+		}		
+	}
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.p1_2 li').mouseover(function(){
+		$('.p1_2 li').attr('class','');
+		
+		$(this).attr('class','active');
+	});
+})
+</script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="w980 clear"><span><a href="http://www.people.com.cn" target="_blank"><img src="/img/MAIN/2014/09/114872/images/logo.jpg" alt="人民网首页" /></a></span><em></em></div>
+</div>
+<!--top-->
+<div class="w980 top clearfix">
+  	<div class="top_left fl">
+    	<div class="top1"><img src="/img/MAIN/2014/09/114872/images/top1.jpg" alt="" /></div>
+        <h1></h1>
+  	</div>
+    <div class="top_right fr">
+        <div class="top3">
+            <!-- Baidu Button BEGIN -->
+            <script src="/img/MAIN/2014/09/114872/js/bdscode.js" charset="utf-8" type="text/javascript"></script>
+            <!-- Baidu Button END -->
+        </div>
+    </div>
+</div>
+<!--p1-->
+<div class="w980 p1_content clearfix" id="demo_video">
+	<div class="p1_1">
+    	<div class="tv">
+			<div id="pvpShowDiv">
+			<script type="text/javascript" src="http://c.wrating.com/v2_pre.js"></script>
+			<script type="text/javascript">
+			showPlayer({id:"%2Fpvservice%2Fxml%2F2015%2F10%2F13%2F588cd3b7-9465-4811-b1bd-1b99f12a693f.xml%3Fadtags%3D",name:"player_1",showid:"pvpShowDiv",skin:true,width:697,height:438});
+//播放完毕后播放器会自动调用本函数
+var currenLiIndex = 0;
+$(document).ready(function(){
+$('#tv_list li a').bind('click', function(){
+	currenLiIndex = $(this).parents('li').index();
+});
+})
+function rmw_videoPlayOver() {
+	try{
+	var children = $('#tv_list').find('li');
+	currenLiIndex = (currenLiIndex+1)%children.length;
+	children.eq(currenLiIndex).find('a').eq(0).trigger('click');
+	} catch(e){}
+	//alert("准备播放下一个");
+	//如果id被url编码了，需要先解码，如果没有就不需要decodeURIComponent
+	//changePlayerVideo(url,_objName);
+}
+            </script>
+			</div>
+		</div>
+    </div>
+  	<div class="p1_2">
+    	<ul id="tv_list" class="videolist">
+            <li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/13/588cd3b7-9465-4811-b1bd-1b99f12a693f.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/13/LOCALVIDEO20151013231205F9368563069.jpg" width="120" height="80" alt="" />国航在巴基斯坦举行中巴新航线推介会</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/13/f1768c16-1d82-4dbc-8c42-03dd2c770616.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/13/LOCALVIDEO20151013203146F4364929702.jpg" width="120" height="80" alt="" />中国语言文化研习室在越南挂牌</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/13/32f80535-05bc-4670-8d4d-5b6418223cef.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/14/LOCALVIDEO20151014142209F7465733980.jpg" width="120" height="80" alt="" />问题晒在阳光下 陕西商南县长被问政</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/9/e6369b3b-ded8-4705-874f-a2c00dff3f78.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/09/LOCALVIDEO20151009191404F6740996836.jpg" width="120" height="80" alt="" />拉美经济下滑制约贫民窟改造</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/9/ad3fb11d-bd6a-4a4f-bc20-e25b79f8de03.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/09/LOCALVIDEO20151009211222F4889849400.jpg" width="120" height="80" alt="" />人民日报记者走进塔吉克斯坦最大水泥厂</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/10/8e8ac209-3fb3-4934-8053-6e375d3f6832.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/10/LOCALVIDEO20151010204451F1858714645.jpg" width="120" height="80" alt="" />2015年国际货币基金组织和世界银行秋季年会于利马举行</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/10/9c19167e-2620-4531-8cd3-31c9700306d2.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/10/LOCALVIDEO20151010220258F1629825701.jpg" width="120" height="80" alt="" />二十国集团财长和央行行长会在秘鲁利马举行</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/10/0a171da4-ab05-41ec-8a0f-958ea4f40953.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/11/LOCALVIDEO20151011184809F2796205618.jpg" width="120" height="80" alt="" />“人民歌唱家”贠恩凤</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/7/531d490a-e22e-444d-a781-df4d1c032c60.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/07/LOCALVIDEO20151007191817F6498157062.jpg" width="120" height="80" alt="" />陶虹：可以不成功，不可以不精彩</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/30/0d49ab20-708c-4a82-8836-d6aa20d5c535.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/30/LOCALVIDEO20150930203956F0971751027.jpg" width="120" height="80" alt="" />中国驻越南使馆祭奠中国烈士</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/1/51559899-e444-4b61-9dcc-718736434f53.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/01/LOCALVIDEO20151001184710F6193922996.jpg" width="120" height="80" alt="" />首届巴西孔子学院联席会议在里约举行</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/1/93f58905-a826-4571-911e-a027b0e0cdcb.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/01/LOCALVIDEO20151001190607F9409788432.jpg" width="120" height="80" alt="" />巴西举办首届中国电影展</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/2/64066861-5cbd-483c-b6e0-2faca942bdf8.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/02/LOCALVIDEO20151002210252F9884107489.jpg" width="120" height="80" alt="" />北京影视剧非洲展播季在南非启动</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/10/7/8635230f-d639-48a1-b9e3-5801750c5363.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201510/07/LOCALVIDEO20151007202138F2489659392.jpg" width="120" height="80" alt="" />第二届中非部长级卫生合作发展会议在南非开普敦召开</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/29/0f9047be-9e3b-4bd8-be4a-ff7fcba21dae.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/29/LOCALVIDEO20150929111019F0103394604.jpg" width="120" height="80" alt="" />滁州反腐启示录</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/29/96055c77-7011-424e-a0a1-74100c396ba2.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/29/LOCALVIDEO20150929052552F3270633058.jpg" width="120" height="80" alt="" />习近平首次在联合国讲台发表讲话</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/24/c1c3d830-80c8-4980-9475-fe3acfed5779.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/24/LOCALVIDEO20150924115025F1609233240.jpg" width="120" height="80" alt="" />中国福州·美国塔科马市友好城市交流成果展举行</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/24/24bf41f3-9661-4b37-abdf-4d6c62846327.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/24/LOCALVIDEO20150924141632F8445069719.jpg" width="120" height="80" alt="" />中美第一夫人将做客熊猫馆 人民日报记者实地“探营”</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/24/7d92661f-157e-48a8-9921-377be01f2a30.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/24/LOCALVIDEO20150924150802F4052361253.jpg" width="120" height="80" alt="" />中西合璧的广式月饼</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/25/bde60151-671b-4ff2-b943-07fd69e2e0b8.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/25/LOCALVIDEO20150925163530F0716147031.jpg" width="120" height="80" alt="" />墨西哥瓦哈卡：“一块木头”引来百万游客</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/25/0c9dfc58-ad3d-4388-9963-b5ef31651303.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/25/LOCALVIDEO20150925215446F1406088600.jpg" width="120" height="80" alt="" />哈萨克斯坦举行“孔子学院日”庆祝活动</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/26/ca085ced-1f95-4c2c-a3e3-43702657bfab.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/26/LOCALVIDEO20150926213043F9958481172.jpg" width="120" height="80" alt="" />全球妇女峰会目标：未来15年实现男女平等</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/27/b5786596-8574-4343-8c20-0c4b14c2f150.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/27/LOCALVIDEO20150927195401F8036388138.jpg" width="120" height="80" alt="" />人民映像：马头琴</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/27/5e4053c6-25c8-455a-b50e-d60a5acda516.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/27/LOCALVIDEO20150927231218F8882346621.jpg" width="120" height="80" alt="" />联合国副秘书长吴红波：习近平主席演讲最受欢迎</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/23/186a4029-e139-4420-98f0-1a6aa5516bbf.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/23/LOCALVIDEO20150923221829F7663447984.jpg" width="120" height="80" alt="" />对话价值观之传统节日篇</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/22/df76c2b9-85ce-4491-a45a-73f52c805b26.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/22/LOCALVIDEO20150922222105F9010122987.jpg" width="120" height="80" alt="" />西雅图喜迎中国贵宾</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/20/ac3fcf7f-8b7f-47f6-8b5d-5e83dd49b57e.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/20/LOCALVIDEO20150920190531F4876339222.jpg" width="120" height="80" alt="" />郝景香：荒山绿化新愚公</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/20/371d71cd-9ca9-4b6b-b396-d397e29ef54b.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/20/LOCALVIDEO20150920202103F8937484224.jpg" width="120" height="80" alt="" />30年后，墨城不再惧怕地震</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/20/5cc76486-b12c-496a-84c6-5934bac313ce.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/20/LOCALVIDEO20150920212637F9857422502.jpg" width="120" height="80" alt="" />第二届中日韩名记者对话会在京举行</a>
+</li><li class="active">
+<a href="javascript:" onclick="changePlayerVideo('/pvservice/xml/2015/9/22/3c41e70a-fe51-499a-9a28-eddec4e54e97.xml?adtags=','player_1')"><img src="/NMediaFile/videotemp/201509/22/LOCALVIDEO20150922160945F6976753620.jpg" width="120" height="80" alt="" />人民网华盛顿国会山前街采：美国民众谈习近平访美及中美关系</a>
+</li>
+        </ul>
+    </div>
+</div>
+<!--p2-->
+<div class="p2_content clearfix" >
+  	<div class="p2_left fl">
+		<div class="p2_1"><h2>现场报道</h2><span><a href="http://tv.people.com.cn/GB/364580/389927/389988/index.html" target="_blank">&gt;&gt;观看更多新闻</a></span></div>
+  	  	<ul class="p2_2"><li>
+<a href="/n/2015/1027/c364580-27745901.html" target=_blank><img src="/NMediaFile/videotemp/201510/27/LOCALVIDEO20151027154339F7224136208.jpg" width="150" height="100" alt="寻找最美乡村：滨河新村 物足人美"/></a>
+<b><a href='/n/2015/1027/c364580-27745901.html' target="_blank">寻找最美乡村：滨河新村 物足人美</a></b>
+<p>　　<a href='/n/2015/1027/c364580-27745901.html' >[详情]</a></p>
+</li>
+<li>
+<a href="/n/2015/1025/c364580-27737375.html" target=_blank><img src="/NMediaFile/videotemp/201510/25/LOCALVIDEO20151025232422F3536097323.jpg" width="150" height="100" alt="非洲中产阶级2040年将超过2.2亿"/></a>
+<b><a href='/n/2015/1025/c364580-27737375.html' target="_blank">非洲中产阶级2040年将超过2.2亿</a></b>
+<p>　　许多跨国公司将非洲新兴的中产阶级作为目标人群。但是对于非洲中产阶级的概念仍较为模糊和宽泛。目前非洲有约1.5亿中产阶级，到2040年这一数字将上升至2.24亿，他们在大型零售业、通信业、银行业、教育、房地产等有较强的市场潜力。(人民日报记者 李志伟）<a href='/n/2015/1025/c364580-27737375.html' >[详情]</a></p>
+</li>
+<li>
+<a href="/n/2015/1024/c364580-27736051.html" target=_blank><img src="/NMediaFile/videotemp/201510/25/LOCALVIDEO20151025220623F9519222392.jpg" width="150" height="100" alt="嘎藏加措：唐卡，是绘画更是文化"/></a>
+<b><a href='/n/2015/1024/c364580-27736051.html' target="_blank">嘎藏加措：唐卡，是绘画更是文化</a></b>
+<p>　　“热贡”，是青海省黄南藏族自治州同仁县地区的民间称谓。2009年，以唐卡为核心的热贡艺术入选《联合国教科文组织非物质文化遗产名录》。今年34岁的嘎藏加措，是当地一名唐卡画师。他的唐卡作品，色彩分明，人物栩栩如生。(人民日报记者 王锦涛)<a href='/n/2015/1024/c364580-27736051.html' >[详情]</a></p>
+</li>
+<li>
+<a href="/n/2015/1023/c364580-27733979.html" target=_blank><img src="/NMediaFile/videotemp/201510/23/LOCALVIDEO20151023164740F5538515238.jpg" width="150" height="100" alt="梅道亮：水土养我一生 我护水土一世"/></a>
+<b><a href='/n/2015/1023/c364580-27733979.html' target="_blank">梅道亮：水土养我一生 我护水土一世</a></b>
+<p>　　<a href='/n/2015/1023/c364580-27733979.html' >[详情]</a></p>
+</li>
+<li>
+<a href="/n/2015/1022/c364580-27730061.html" target=_blank><img src="/NMediaFile/videotemp/201510/22/LOCALVIDEO20151022220049F6892612815.jpg" width="150" height="100" alt="美丽乡村：鹤聚乌蒙大山包"/></a>
+<b><a href='/n/2015/1022/c364580-27730061.html' target="_blank">美丽乡村：鹤聚乌蒙大山包</a></b>
+<p>　　<a href='/n/2015/1022/c364580-27730061.html' >[详情]</a></p>
+</li>
+<li>
+<a href="/n/2015/1021/c364580-27725506.html" target=_blank><img src="/NMediaFile/videotemp/201510/21/LOCALVIDEO20151021231430F9910813127.jpg" width="150" height="100" alt="英国帝国理工学院中国留学生冒雨迎接习主席来访"/></a>
+<b><a href='/n/2015/1021/c364580-27725506.html' target="_blank">英国帝国理工学院中国留学生冒雨迎接习主席来访</a></b>
+<p>　　当地时间10月21日，习近平主席和夫人彭丽媛到访英国帝国理工学院。得知这一消息的广大在英中国留学生非常激动，热切期盼能够见到习近平主席和夫人彭丽媛。（人民日报记者 李应齐）<a href='/n/2015/1021/c364580-27725506.html' >[详情]</a></p>
+</li>
+</ul>
+<div class="page_n"><a class="common_current_page">1</a>&nbsp;<a href='index2.html'  >2</a>&nbsp;<a href='index3.html'  >3</a>&nbsp;<a href='index4.html'  >4</a>&nbsp;<a href='index5.html'  >5</a>&nbsp;<a href='index6.html'  >6</a>&nbsp;<a href='index2.html'  >下一页</a></div><!--all page--><!--PageNo=34-->
+
+    </div>
+    <div class="p2_right fr">
+    	<div class="p2_3"><h3>人民日报微博</h3></div>
+      	<div class="p2_4"><iframe id="zhongban"  width="280" height="480"  frameborder="0" scrolling="no" src="http://t.people.com.cn/openLiveShow.action?ptopic=&stopic=&width=280&height=480&nickNames=%C8%CB%C3%F1%C8%D5%B1%A8&roll=0&interval=3000&appkey=9450803942&input=1&vip=2&moderated=1&title=1"></iframe><script src="http://www.people.com.cn/js/zhongban.js" language="javascript" type="text/javascript"></script></div>
+      	<div class="p2_3 p2_3b"><h3>人民日报电子版</h3></div>
+        <div class="p2_5"><a href="http://paper.people.com.cn/rmrb/html/2015-09/27/nw.D110000renmrb_20150927_4-02.htm" target="_blank"><img src="/NMediaFile/2015/0928/MAIN201509280913386730170038676.jpg" width="248" height="352" alt="人民日报 2015年9月28日 星期一"/></a>
+</div>
+    </div>
+</div>
+<!--浮动二维码-->
+<div id="fixedImage"><img src="/NMediaFile/2014/1017/MAIN201410170937047153225993277.jpg" width="84" height="86" alt="手机扫描二维码观看"/><br />手机扫描二维码观看
+</div>
+<!--copyright-->
+<div id="copyright">
+	人&nbsp;民&nbsp;网&nbsp;<a href="http://www.people.com.cn/GB/1018/22259/6138836.html" target="_blank">版&nbsp;权&nbsp;所&nbsp;有</a>,&nbsp;未&nbsp;经&nbsp;书&nbsp;面&nbsp;授&nbsp;权&nbsp;禁&nbsp;止&nbsp;使&nbsp;用<br />Copyright &copy; 1997-2015 by www.people.com.cn all rights reserved
+</div>
+<script type="text/javascript">
+<!--
+var wrap = document.getElementById('fixedImage');
+function resize(){
+		   if(document.documentElement.clientWidth < 1200) {
+				   wrap.style.display="none";
+				   return;
+		   }
+wrap.style.display="block";
+	var left =document.documentElement.scrollLeft+ (document.documentElement.clientWidth -980)/2 - 152;
+	if (left < 0) {
+		left = 0;
+	}
+	wrap.style.right= left + 'px';
+}
+window.onresize = resize;
+resize();
+-->
+</script>
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>

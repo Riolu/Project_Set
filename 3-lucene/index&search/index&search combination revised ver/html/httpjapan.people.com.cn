@@ -1,0 +1,1643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta content="all" name="robots" />
+<meta name="description" content="人民网日本频道（http://japan.people.com.cn/）是中国国内最早创建的、专门以日本和中日关系为报道对象的新闻网站。人民网日本频道全面提供日本政治、经济、社会、科教、文化、旅游及中日关系方面的重要资讯，致力于成为中国国内发布日本信息的权威专业网站。" />
+<meta name="keywords" content="人民网日本频道,日本频道,日本,日本经济,日本时政,日本社会,日本生活,日本旅游,日本观光,日本科技,日本文化,日本娱乐,日本明星、日本自由行 日本食品 日本旅游攻略 日本美容产品 日本购物攻略 日本风景 日本料理 和食 日本清酒 日本铁道 日本漫画 日本动漫 日本电影 日剧 日本电视剧 " />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="35421" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>日本频道--人民网</title>
+<!-- style -->
+<link rel="stylesheet"  href="/img/2013ribenpd/page.css" type="text/css" media="all"  />
+<script src="/img/2013ribenpd/flash/swfobject.js" language="javascript" type="text/javascript" ></script>
+
+<script type="text/javascript" src="/img/2011people/jquery-1.4.3.min.js"></script>
+<script src="/img/2013ribenpd/jcarousellite_1.0.1.min.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+/* ==== slider nameSpace ==== */
+var slider = function() {
+	/* ==== private methods ==== */
+	function getElementsByClass(object, tag, className) {
+		var o = object.getElementsByTagName(tag);
+		for ( var i = 0, n = o.length, ret = []; i < n; i++) {
+			if (o[i].className == className) ret.push(o[i]);
+		}
+		if (ret.length == 1) ret = ret[0];
+		return ret;
+	}
+	function setOpacity (obj,o) {
+		if (obj.filters) obj.filters.alpha.opacity = Math.round(o);
+		else obj.style.opacity = o / 100;
+	}
+	/* ==== Slider Constructor ==== */
+	function Slider(oCont, speed, iW, iH, oP) {
+		this.slides = [];
+		this.over   = false;
+		this.S      = this.S0 = speed;
+		this.iW     = iW;
+		this.iH     = iH;
+		this.oP     = oP;
+		this.oc     = document.getElementById(oCont);
+		this.frm    = getElementsByClass(this.oc, 'div', 'slide');
+		this.NF     = this.frm.length;
+		this.resize();
+		for (var i = 0; i < this.NF; i++) {
+			this.slides[i] = new Slide(this, i);
+		}
+		this.oc.parent = this;
+		this.view      = this.slides[0];
+		this.Z         = this.mx;
+		/* ==== on mouse out event ==== */
+		this.oc.onmouseout = function () {
+			this.parent.mouseout();
+			return false;
+		}
+	}
+	Slider.prototype = {
+		/* ==== animation loop ==== */
+		run : function () {
+			this.Z += this.over ? (this.mn - this.Z) * .5 : (this.mx - this.Z) * .5;
+			this.view.calc();
+			var i = this.NF;
+			while (i--) this.slides[i].move();
+		},
+		/* ==== resize  ==== */
+		resize : function () {
+			this.wh = this.oc.clientWidth;
+			this.ht = this.oc.clientHeight;
+			this.wr = this.wh * this.iW;
+			this.r  = this.ht / this.wr;
+			this.mx = this.wh / this.NF;
+			this.mn = (this.wh * (1 - this.iW)) / (this.NF - 1);
+		},
+		/* ==== rest  ==== */
+		mouseout : function () {
+			this.over      = false;
+			setOpacity(this.view.img, this.oP);
+		}
+	}
+	/* ==== Slide Constructor ==== */
+	Slide = function (parent, N) {
+		this.parent = parent;
+		this.N      = N;
+		this.x0     = this.x1 = N * parent.mx;
+		this.v      = 0;
+		this.loaded = false;
+		this.cpt    = 0;
+		this.start  = new Date();
+		this.obj    = parent.frm[N];
+		this.txt    = getElementsByClass(this.obj, 'div', 'text');
+		this.img    = getElementsByClass(this.obj, 'img', 'diapo');
+		this.bkg    = document.createElement('div');
+		this.bkg.className = 'backgroundText';
+		this.obj.insertBefore(this.bkg, this.txt);
+		if (N == 0) this.obj.style.borderLeft = 'none';
+		this.obj.style.left = Math.floor(this.x0) + 'px';
+		setOpacity(this.img, parent.oP);
+		/* ==== mouse events ==== */
+		this.obj.parent = this;
+		this.obj.onmouseover = function() {
+			this.parent.over();
+			return false;
+		}
+	}
+	Slide.prototype = {
+		/* ==== target positions ==== */
+		calc : function() {
+			var that = this.parent;
+			// left slides
+			for (var i = 0; i <= this.N; i++) {
+				that.slides[i].x1 = i * that.Z;
+			}
+			// right slides
+			for (var i = this.N + 1; i < that.NF; i++) {
+				that.slides[i].x1 = that.wh - (that.NF - i) * that.Z;
+			}
+		},
+		/* ==== HTML animation : move slides ==== */
+		move : function() {
+			var that = this.parent;
+			var s = (this.x1 - this.x0) / that.S;
+			/* ==== lateral slide ==== */
+			if (this.N && Math.abs(s) > .5) {
+				this.obj.style.left = Math.floor(this.x0 += s) + 'px';
+			}
+			/* ==== vertical text ==== */
+			var v = (this.N < that.NF - 1) ? that.slides[this.N + 1].x0 - this.x0 : that.wh - this.x0;
+			if (Math.abs(v - this.v) > .5) {
+				this.bkg.style.top = this.txt.style.top = Math.floor(2 + that.ht - (v - that.Z) * that.iH * that.r) + 'px';
+				this.v = v;
+				this.cpt++;
+			} else {
+				if (!this.pro) {
+					/* ==== adjust speed ==== */
+					this.pro = true;
+					var tps = new Date() - this.start;
+					if(this.cpt > 1) {
+						that.S = Math.max(2, (28 / (tps / this.cpt)) * that.S0);
+					}
+				}
+			}
+			if (!this.loaded) {
+				if (this.img.complete) {
+					this.img.style.visibility = 'visible';
+					this.loaded = true;
+				}
+			}
+		},
+		/* ==== light ==== */
+		over : function () {
+			this.parent.resize();
+			this.parent.over = true;
+			setOpacity(this.parent.view.img, this.parent.oP);
+			this.parent.view = this;
+			this.start = new Date();
+			this.cpt = 0;
+			this.pro = false;
+			this.calc();
+			setOpacity(this.img, 100);
+		}
+	}
+	/* ==== public method - script initialization ==== */
+	return {
+		init : function() {
+			// create instances of sliders here
+			// parameters : HTMLcontainer name, speed (2 fast - 20 slow), Horizontal ratio, vertical text ratio, opacity
+			this.s1 = new Slider("slider", 12, 1.84/3, 1/3.2, 100);
+			setInterval("slider.s1.run();", 16);
+		}
+	}
+}();
+</script>
+<script src="/img/2013ribenpd/jdt3.js" type="text/javascript" language="javascript"></script>
+<!--检索-->
+<script src="/css/search_goso.js"></script>
+<script src="/css/searchforeign.js"></script>
+<script>
+$(function(){
+	var index = 0;
+	var timer;
+	var len = $("#pic_list1 li").length;
+	
+	for(i=0;i<len;i++)
+	{
+		$("#num_list1").html($("#num_list1").html()+"<li>"+"</li>");
+	}
+	
+	$("#num_list1 li").click(function(){
+		index = $("#num_list1 li").index(this);
+		showPic(index);
+	}).eq(0).click();
+	
+	$("#box1").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			showPic(index);
+			index++;
+			if(index==len){index=0;}
+		},3000)
+	}).trigger("mouseleave");
+	
+	function showPic(index){
+		$("#num_list1 li").removeClass("active").eq(index).addClass("active");
+		$("#pic_list1 li").eq(index).stop(true,true).fadeIn(600).siblings("li").fadeOut(600);
+	};
+});
+</script>
+<script>
+function swapAon(n){
+	for(var i=1;i<=9;i++){
+		var dd=document.getElementById("a1_"+i);
+		var cc=document.getElementById("a2_"+i);
+		if(i==n){
+			dd.className="one";
+			cc.style.display="block";
+		}else{
+			dd.className="";
+			cc.style.display="none";
+		}
+	}
+}
+</script>
+<script>
+function swapBon(n){
+	for(var i=1;i<=5;i++){
+		var dd=document.getElementById("b1_"+i);
+		var cc=document.getElementById("b2_"+i);
+		if(i==n){
+			dd.className="one";
+			cc.style.display="block";
+		}else{
+			dd.className="";
+			cc.style.display="none";
+		}
+	}
+}
+</script>
+<script>
+function swapCon(n){
+	for(var i=1;i<=2;i++){
+		var dd=document.getElementById("c1_"+i);
+		var cc=document.getElementById("c2_"+i);
+		if(i==n){
+			dd.className="one";
+			cc.style.display="block";
+		}else{
+			dd.className="";
+			cc.style.display="none";
+		}
+	}
+}
+</script>
+
+
+
+<script>
+function swapDon(n){
+	for(var i=1;i<=3;i++){
+		var dd=document.getElementById("d1_"+i);
+		var cc=document.getElementById("d2_"+i);
+		if(i==n){
+			dd.className="one";
+			cc.style.display="block";
+		}else{
+			dd.className="";
+			cc.style.display="none";
+		}
+	}
+}
+</script>
+<script>
+function swapEon(n){
+	for(var i=1;i<=3;i++){
+		var dd=document.getElementById("e1_"+i);
+		var cc=document.getElementById("e2_"+i);
+		if(i==n){
+			dd.className="one";
+			cc.style.display="block";
+		}else{
+			dd.className="";
+			cc.style.display="none";
+		}
+	}
+}
+</script>
+<script>
+function swapFon(n){
+	for(var i=1;i<=3;i++){
+		var dd=document.getElementById("f1_"+i);
+		var cc=document.getElementById("f2_"+i);
+		if(i==n){
+			dd.className="one";
+			cc.style.display="block";
+		}else{
+			dd.className="";
+			cc.style.display="none";
+		}
+	}
+}
+</script>
+<script>
+function swapGon(n){
+	for(var i=1;i<=4;i++){
+		var dd=document.getElementById("g1_"+i);
+		var cc=document.getElementById("g2_"+i);
+		if(i==n){
+			dd.className="one";
+			cc.style.display="block";
+		}else{
+			dd.className="";
+			cc.style.display="none";
+		}
+	}
+}
+</script>
+<script>
+function swapHon(n){
+	for(var i=1;i<=2;i++){
+		var dd=document.getElementById("h1_"+i);
+		var cc=document.getElementById("h2_"+i);
+		if(i==n){
+			dd.className="one";
+			cc.style.display="block";
+		}else{
+			dd.className="";
+			cc.style.display="none";
+		}
+	}
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".jCarouselLite4").jCarouselLite({
+	speed: 1000,
+	auto: 2000,
+	visible:1,
+	vertical:true
+    });
+	$("#right_center ul li").each(function(i) {
+        $(this).bind("click",function(){
+			var a_href = $(this).find("a").attr("href");
+			$("#right_center ul li").find("a").css({color:"#333333",fontWeight:"normal"});
+			if(a_href == "#1"){
+				$(this).find("a").css({color:"#3b5fbf",fontWeight:"bold"})
+			}
+			if(a_href == "#2"){
+				$(this).find("a").css({color:"#e60736",fontWeight:"bold"})
+			}
+			if(a_href == "#3"){
+				$(this).find("a").css({color:"#dc0e73",fontWeight:"bold"})
+			}
+			if(a_href == "#4"){
+				$(this).find("a").css({color:"#39b4c4",fontWeight:"bold"})
+			}
+			if(a_href == "#5"){
+				$(this).find("a").css({color:"#8d9e12",fontWeight:"bold"})
+			}
+			if(a_href == "#6"){
+				$(this).find("a").css({color:"#6a5fe2",fontWeight:"bold"})
+			}
+			if(a_href == "#7"){
+				$(this).find("a").css({color:"#dd812c",fontWeight:"bold"})
+			}
+			});
+    });
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+   var left_b = document.body.clientWidth/2+550;
+   $(".fudong").css({position:"fixed",left:left_b});
+   $("#img_3d_list ul li").eq(0).addClass("f3");
+  $("#img_3d_list ul li").eq(1).addClass("f2");
+  $("#img_3d_list ul li").eq(2).addClass("f1");
+  $("#img_3d_list ul li").eq(3).addClass("f4");
+  $("#img_3d_list ul li").eq(4).addClass("f5");
+  //$("#img_3d_list ul li").find("a").removeAttr("href");
+  //$("#img_3d_list ul li").eq(2).find("a").attr("href");
+  var sAll = $("#img_3d_list ul li").length;
+  var arrayObj = new Array()
+  $("#img_3d_list ul li").each(function(){
+       var oSrc = $(this).html();
+       arrayObj. push(oSrc);
+  })
+  
+  $("img.fl").bind("click",function(){
+    var oPrevsrc = arrayObj.shift();
+	arrayObj. push(oPrevsrc);
+	$("#img_3d_list ul li").each(function(i){
+       $(this).html(arrayObj[i]); 
+  })
+  });
+    $("img.fr").bind("click",function(){
+    var oPrevsrc = arrayObj.pop();
+	arrayObj.unshift(oPrevsrc);
+	$("#img_3d_list ul li").each(function(i){
+      $(this).html(arrayObj[i]); 
+  })
+  });
+  $("#img_3d_list1 ul li").eq(0).addClass("f3");
+  $("#img_3d_list1 ul li").eq(1).addClass("f2");
+  $("#img_3d_list1 ul li").eq(2).addClass("f1");
+  $("#img_3d_list1 ul li").eq(3).addClass("f4");
+  $("#img_3d_list1 ul li").eq(4).addClass("f5");
+  //$("#img_3d_list ul li").find("a").removeAttr("href");
+  //$("#img_3d_list ul li").eq(2).find("a").attr("href");
+  var sAll1 = $("#img_3d_list1 ul li").length;
+  var arrayObj1 = new Array()
+  $("#img_3d_list1 ul li").each(function(){
+       var oSrc1 = $(this).html();
+       arrayObj1. push(oSrc1);
+  })
+  
+  $("#img_3d_list1 img.fl").bind("click",function(){
+    var oPrevsrc1 = arrayObj1.shift();
+	arrayObj1. push(oPrevsrc1);
+	$("#img_3d_list1 ul li").each(function(i){
+       $(this).html(arrayObj1[i]); 
+  })
+  });
+    $("#img_3d_list1 img.fr").bind("click",function(){
+    var oPrevsrc1 = arrayObj1.pop();
+	arrayObj1.unshift(oPrevsrc1);
+	$("#img_3d_list1 ul li").each(function(i){
+      $(this).html(arrayObj1[i]); 
+  })
+  });
+});
+</script>
+<!-- 兼容 -->
+<!--[if IE 6]>
+<style type="text/css">
+.p1_center ul li{ line-height:26px; padding:0 0 0 15px}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+   $(".fudong").css({position:"absolute",left:"auto",right:"-30px"});
+});
+</script>
+<![endif]-->
+
+<!--[if !IE]><!-->
+<style type="text/css">
+.p1_center ul li{ line-height:26px; padding:0 0 0 15px;}
+.p9_content ul li .pic_07 span{ top:406px;}
+.p9_content ul li .pic_01 span{ top:385px;}
+#pic_list1 li div{position:absolute;z-index:1; width:180px; margin-left:507px; padding-right:45px}
+.p7_2 h2 {margin-top:10px}
+</style>
+<!--<![endif]-->
+<!--检索-->
+<script src="/css/search_goso.js"></script>
+<script src="/css/searchforeign.js"></script>
+</head>
+
+<body>
+
+<!--右侧浮动导航-->
+<div class="jp_right">
+<div class="fudong">
+  <div class="right_center" id="right_center" style="display:block;">
+  <h2>日本频道</h2>
+  <ul>   <li><a href="#2">时政</a></li>  
+    <li><a href="#1">财经</a></li>
+    <li><a href="#7">社会</a></li>
+<li><a href="#4">旅游</a></li>
+    <li><a href="#5">文化</a></li>
+    <li><a href="#6">数码</a></li>
+    <li><a href="#3">娱乐</a></li>
+    <li><a href="http://japan.people.com.cn/GB/368223/index.html" target="_blank">深度</a></li></ul>
+  <h3><a onclick="window.scroll(0,0);this.blur()" href="javascript:void(0);"><img src="/img/2013ribenpd/images/pic5.gif" width="9" height="5" />TOP</a></h3>
+  </div>
+</div>
+</div>
+<!--右侧浮动导航 end-->
+<!--top_nav-->
+<div class="w980 top_nav">
+<div class="left"><a href="http://www.people.com.cn/">人民网</a> | <a href="http://j.people.com.cn/">人民网日文版</a></div>
+<div class="right"><a href="http://j.people.com.cn/94475/7050433.html">人民网中日文手机报</a> | <a href="/n/2013/0830/c368232-22752505.html">人民网日本株式会社合作启事</a></div>
+</div>
+<!--top_nav end-->
+<!--两栏广告-->
+<div class="w980 o_h gg2" style="margin-bottom:7px;">
+  <div class="fl"><a href="http://deepjapan.people.com.cn/" target="_blank"><img src="/NMediaFile/2015/0630/MAIN201506300914568558574045027.jpg" width="730" height="80" border="0" alt=""/></a>
+</div>
+  <div class="fr"><a href="http://j.people.com.cn/" target="_blank"><img src="/NMediaFile/2013/1121/MAIN201311211357271591967515876.jpg" width="230" height="80" border="0"/></a>
+</div>
+</div>
+  
+<!--两栏广告 end-->
+<!--nav-->
+<div class="nav_content navb_content w980 clear">
+  <!--nav_01-->
+  <div class="nav_01 nav_01b clear">
+  <a href="#"><img src="/img/2013ribenpd/images/logo1b.jpg" alt="" class="logo1b" /></a>
+  <a href="#"><img src="/img/2013ribenpd/images/logo2b.jpg" alt="" class="logo2b" /></a>
+    <ul>
+      <li><a href="http://japan.people.com.cn/GB/368223/index.html">深度解读</a><br /><a href="http://japan.people.com.cn/GB/35462/370815/index.html">在日华企</a></li>
+<li><a href="/GB/35462/index.html">专题策划</a><br /><a href="http://japan.people.com.cn/GB/35462/371631/index.html">日本7日谈</a></li>
+<li><a href="http://japan.people.com.cn/GB/368549/390307/index.html"><font color=#E800E8>日本自由行</font></a><br /><a href="http://japan.people.com.cn/96960/index.html">在日中国人</a></li>
+    </ul>
+   <form action="http://search.people.com.cn/people/japan/search.do" name="SearchForm" method="post">
+		
+		<input type="hidden" name="pageNum" value="1" />
+		<input type="hidden" name="siteName" value="japan" />
+    <div><input name="keyword" type="text" class="one" />
+    <input type="image" src="/img/2013ribenpd/images/ss.jpg" style="border:none;float:left;"/>
+<a href="http://weibo.com/jpnofpeople" target="_blank"><b>官方微博</b></a></div>
+    </form>
+  </div>
+  <!--nav_01 end-->
+  <!--nav_02-->
+  <div class="nav_02 clear">
+  <a href="/GB/index.html">首页</a> | <a 
+
+href="/GB/368232/index.html" target="_blank">滚动</a> | <a 
+
+href="/GB/35469/index.html" target="_blank">时政</a> | <a 
+
+href="/GB/35463/index.html" target="_blank">财经</a> | <a 
+
+href="/GB/35467/index.html" target="_blank">社会</a> | <a 
+
+href="/GB/35465/index.html" target="_blank">文化</a> | <a 
+
+href="/GB/368549/index.html" target="_blank">旅游</a> | <a 
+
+href="/GB/35468/index.html" target="_blank">娱乐</a> | <a 
+
+href="/GB/35466/index.html" target="_blank">数码</a> |  <a 
+
+href="/GB/368567/index.html" target="_blank">图库</a> |  <a
+
+href="/GB/35563/index.html" target="_blank">回顾</a> |
+  </div>
+  <!--nav_02 end-->
+  <!--nav_03-->
+  <div class="nav_03 clear">
+  <strong>推荐</strong><div class="jCarouselLite4"><ul><li>·<a href='/n/2015/0812/c368549-27451547.html' target="_blank">【日本旅游】北京出发日本自由行线路</a></li>
+<li>·<a href='/n/2015/0814/c368549-27462977.html' target="_blank">【日本旅游】上海出发日本自由行钜惠线路</a></li>
+</ul>
+</div> 
+  </div>
+  <!--nav_03 end-->
+</div>
+<!--nav end-->
+<!--p1-->
+<div class="p1_content">
+  <div class="p1_left">
+  <!--热点新闻 -->
+    <div class="p1_01 h302">
+    <h2><img src="/img/2013ribenpd/images/p1_l_tit1.jpg" width="271" height="24" alt="热点新闻"/></h2>
+    <h3><span><a href='/n/2015/1026/c35467-27741265.html' target="_blank">福岛核事故和癌症风险到底多大关系</a>
+</span></h3>
+    <ul class="list_12"><li><a href='/n/2015/1026/c35467-27741145.html' target="_blank">福岛核电站数百米阻水墙完工</a></li>
+<li><a href='/n/2015/1026/c35467-27741148.html' target="_blank">近四成福岛核事故救援人员遭超量核辐射</a></li>
+</ul>
+    <h3><span><a href='/n/2015/1026/c35463-27740125.html' target="_blank">日本某高价营养品为何只卖外国游客</a>
+</span></h3>
+    <ul class="list_12"><li><a href='/n/2015/1026/c35463-27740611.html' target="_blank">日产将在美国召回约4.7万辆高端轿车</a></li>
+<li><a href='/n/2015/1025/c35463-27737035.html' target="_blank">中日经济存互补性 未来合作空间巨大</a></li>
+</ul>
+    <h3><span><a href='/n/2015/1027/c35468-27746269.html' target="_blank">最不希望哪位日本男星结婚？</a>
+</span></h3>
+    <ul class="list_12 mt5 pl_10"><li><a href='/n/2015/1027/c35468-27744986.html' target="_blank">滨崎步怎么了？过往推文全删引粉丝困惑</a></li>
+<li><a href='/n/2015/1027/c35468-27744991.html' target="_blank">陆毅一家日本拍写真 白裙墨镜秋日清新风</a></li>
+<li><a href='/n/2015/1027/c35468-27745153.html' target="_blank">《我的青春期》入围东京电影节 导演郝杰…</a></li>
+</ul>
+    </div>
+  <!--热点新闻 end-->  
+  <!--精彩专题 -->
+    <a href="http://japan.people.com.cn/GB/35462/index.html" target="_blank"><h2 class="mt15"><img src="/img/2013ribenpd/images/p1_l_tit2.jpg" width="271" height="19" alt="精彩专题" /></h2></a>
+    <div class="p1_02 mt8">
+      <!--左栏切换标题-->
+      <div class="fl">
+        <ul>
+         <li class="one" style="cursor:pointer;" id="a1_1" onmouseover="swapAon(1)">精品推荐</li>
+          <li style="cursor:pointer;" id="a1_2" onmouseover="swapAon(2)">时政</li>
+          <li style="cursor:pointer;" id="a1_3" onmouseover="swapAon(3)">财经</li>
+          <li style="cursor:pointer;" id="a1_4" onmouseover="swapAon(4)">娱乐</li>
+          <li style="cursor:pointer;" id="a1_5" onmouseover="swapAon(5)">旅游</li>
+          <li style="cursor:pointer;" id="a1_6" onmouseover="swapAon(6)">数码</li>
+          <li style="cursor:pointer;" id="a1_7" onmouseover="swapAon(7)">文化</li>
+          <li style="cursor:pointer;" id="a1_8" onmouseover="swapAon(8)">社会</li>
+        </ul>
+      </div>
+      <!--左栏切换标题 end-->
+      <!--右栏切换内容-->
+      <div class="fr">
+      <!--精品推荐-->
+        <div id="a2_1" style="display:block;">
+        <div class="pic1"><a href="http://visitjapan-photocontest.people.com.cn/GB/index.html" target="_blank"><img src="/NMediaFile/2015/0710/MAIN201507100957372274589420640.jpg" width="214" height="135" border="0"/></a><span></span>
+        </div>
+        <ul class="list_12 ">
+<li><a href="http://deepjapan.people.com.cn/GB/396812/index.html">上海出发日本自由行线路</a> </li><li><a href="http://japan.people.com.cn/n/2015/1013/c368549-27693015.html">2015/16雪季日本长野滑雪线路</a> </li><li><a href="http://deepjapan.people.com.cn/GB/396217/index.html">全国出发北海道自由行超值线路</a> </li></ul>
+        </div>
+      <!--精品推荐 end-->
+      <!--时事-->
+        <div id="a2_2" style="display:none;">
+       <div class="pic1"><a href="http://japan.people.com.cn/GB/35469/35473/index.html" target="_blank"><img src="/NMediaFile/2015/0701/MAIN201507010944401992011568469.jpg" width="214" height="135" border="0"/></a><span><a href="http://japan.people.com.cn/GB/35469/35473/index.html" target="_blank">中日关系资讯一览</a></span>
+        </div>
+        <ul class="list_12 ">
+<li><a href='/n/2015/1012/c368223-27688847.html' target="_blank">【策划】南京大屠杀申遗成功…</a></li>
+<li><a href='/n/2015/0716/c35469-27315023.html' target="_blank">【策划】详解日本新安保法案</a></li>
+<li><a href='/n/2015/0814/c35469-27464693.html' target="_blank">盘点近20年来在8月15日…</a></li>
+</ul>
+        </div>
+      <!--时事 end-->
+      <!--财经-->
+        <div id="a2_3" style="display:none;">
+       <div class="pic1"><a href="http://japan.people.com.cn/n/2015/0428/c35463-26915940.html" target="_blank"><img src="/NMediaFile/2015/0701/MAIN201507010943244433470447841.jpg" width="214" height="135" border="0"/></a><span><a href="http://japan.people.com.cn/n/2015/0428/c35463-26915940.html" target="_blank">本田Concept D何时见？</a></span>
+        </div>
+        <ul class="list_12 ">
+<li><a href='/n/2015/0923/c35463-27624202.html' target="_blank">思域，本田家族中最古老车型风…</a></li>
+<li><a href='/n/2015/0429/c35463-26923753.html' target="_blank">【盘点】近年来进军日本的中国…</a></li>
+<li><a href=http://japan.people.com.cn/GB/35462/386697/index.html target=_blank>【专题】雷克萨斯震撼来袭</a></li></ul>
+        </div>
+      <!--财经 end-->
+      <!--娱乐-->
+        <div id="a2_4" style="display:none;">
+        <div class="pic1"><a href="http://japan.people.com.cn/GB/35462/391834/index.html" target="_blank"><img src="/NMediaFile/2015/0227/MAIN201502271717015954171446017.jpg" width="214" height="135" border="0"/></a><span><a href="http://japan.people.com.cn/GB/35462/391834/index.html" target="_blank">2014日剧回顾</a></span>
+        </div>
+        <ul class="list_12 ">
+<li><a href='/n/2015/0924/c35468-27627795.html' target="_blank">【策划】值得一看的23部秋季…</a></li>
+<li><a href='/n/2015/0928/c35468-27642192.html' target="_blank">【秋季动画导视】人气续作PK…</a></li>
+<li><a href='/n/2015/0616/c35468-27160393.html' target="_blank">【策划】2015夏季日剧大盘点</a></li>
+</ul>
+        </div>
+      <!--娱乐 end-->
+      <!--旅游-->
+        <div id="a2_5" style="display:none;">
+       <div class="pic1"><a href="http://japan.people.com.cn/GB/367935/396226/index.html" target="_blank"><img src="/NMediaFile/2015/0701/MAIN201507010920064326319127531.jpg" width="214" height="135" border="0"/></a><span><a href="http://japan.people.com.cn/GB/367935/396226/index.html" target="_blank">日本潜水俱乐部</a></span>
+        </div>
+        <ul class="list_12 ">
+<li><a href="http://japan.people.com.cn/n/2015/1013/c368549-27693015.html">2015/16雪季日本长野滑雪线路</a> </li><li><a href="http://deepjapan.people.com.cn/GB/396216/index.html">申请日本3年多次签证线路</a> </li><li><a href="http://deepjapan.people.com.cn/GB/396331/index.html">旅游线路：21天环游日本</a> </li></ul>
+        </div>
+      <!--旅游 end-->
+      <!--数码-->
+        <div id="a2_6" style="display:none;">
+       <div class="pic1"><a href="http://japan.people.com.cn/n/2015/0625/c35463-27206433.html" target="_blank"><img src="/NMediaFile/2015/0701/MAIN201507010925265751058898472.jpg" width="214" height="135" border="0"/></a><span><a href="http://japan.people.com.cn/n/2015/0625/c35463-27206433.html" target="_blank">Pepper机器人身世</a></span>
+        </div>
+        <ul class="list_12 ">
+<li><a href='/n/2015/1008/c35466-27670026.html' target="_blank">诺奖花絮：说说物理学奖那些事儿</a></li>
+<li><a href='/n/2015/1010/c35466-27680443.html' target="_blank">日本要建机器人农场</a></li>
+<li><a href='/n/2015/1015/c35466-27700563.html' target="_blank">未来支付方式：刷手掌！ 日本…</a></li>
+</ul>
+        </div>
+      <!--数码 end-->
+      <!--文化-->
+        <div id="a2_7" style="display:none;">
+       <div class="pic1"><a href="http://japan.people.com.cn/GB/35462/392640/399396/index.html" target="_blank"><img src="/NMediaFile/2015/1019/MAIN201510191633241316011794640.jpg" width="214" height="135" border="0"/></a><span></span>
+        </div>
+        <ul class="list_12 ">
+<li><a href='/n/2015/0707/c35465-27264282.html' target="_blank">【日本节日】银河鹊桥话七夕</a></li>
+<li><a href='/n/2015/0909/c35465-27561435.html' target="_blank">【九月九】日本的重阳节</a></li>
+<li><a href='/n/2015/0922/c35465-27616743.html' target="_blank">中秋明月夜，日本国民如何过？</a></li>
+</ul>
+        </div>
+      <!--文化 end-->
+      <!--社会-->
+        <div id="a2_8" style="display:none;">
+       <div class="pic1"><a href="http://japan.people.com.cn/GB/35462/391520/index.html" target="_blank"><img src="/NMediaFile/2015/0227/MAIN201502271723207393099312196.jpg" width="214" height="135" border="0"/></a><span><a href="http://japan.people.com.cn/GB/35462/391520/index.html" target="_blank">2014日本这一年</a></span>
+        </div>
+        <ul class="list_12 ">
+<li><a href='/n/2015/1014/c368549-27697492.html' target="_blank">日本美容潮流·大阪美容院风向…</a></li>
+<li><a href='/n/2015/0709/c35467-27275890.html' target="_blank">【双语】令女生心跳加速的小动…</a></li>
+<li><a href='/n/2015/0706/c35467-27261028.html' target="_blank">【策划】详解日本“明治工业革…</a></li>
+</ul>
+        </div>
+      <!--社会 end-->
+      <!--推荐-->
+        <div id="a2_9" style="display:none;">
+        <div class="pic1"><a href="http://japan.people.com.cn/35463/8279867.html" target="_blank"><img src="/NMediaFile/2013/0822/MAIN201308221601312319720850911.jpg" width="214" height="135" border="0"/></a><span><a href="http://japan.people.com.cn/35463/8279867.html" target="_blank">温婉的和服能否跳起豪放的非洲之舞？</a></span>
+        </div>
+        <ul class="list_12 ">
+</ul>
+        </div>
+      <!--推荐 end-->
+      </div>
+      <!--右栏切换内容 end-->
+    </div>
+  <!--精彩专题 end-->
+  
+  <!--热点排行 -->
+    <div class="p1_03 mt20">
+    <h2><img src="/img/2013ribenpd/images/p1_l_tit3.jpg" width="271" height="19" alt="热点排行" /></h2>
+    <!--切换标题-->
+    <ol class="mt8"><li class="one" style="cursor:pointer;" id="b1_1" onmouseover="swapBon(1)">财经</li>
+      <li style="cursor:pointer;" id="b1_2" onmouseover="swapBon(2)">时政</li>
+      <li style="cursor:pointer;" id="b1_3" onmouseover="swapBon(3)">娱乐</li>
+      <li style="cursor:pointer;" id="b1_4" onmouseover="swapBon(4)">旅游</li>
+      <li style="cursor:pointer;" id="b1_5" onmouseover="swapBon(5)">社会</li></ol>
+    <!--切换标题 end-->
+    <!--切换内容-->
+    <ul class=" paihang" id="b2_1" style="display:block;">
+      <li><!--1--><a href="/n/2015/1027/c35463-27744907.html" title="秋元康加盟手机游戏开发公司 明年推出“AKB48”游戏" target="_blank">秋元康加盟手机游戏开发公司&nbsp;明年推…</a></li><li><!--2--><a href="/n/2015/1026/c35463-27739394.html" title="东京车展61周年设盛大名车游行 本田老总亲自驾驶S660" target="_blank">东京车展61周年设盛大名车游行&nbsp;本…</a></li><li><!--3--><a href="/n/2015/1027/c35463-27745000.html" title="雷克萨斯神秘概念车预告图发布 将亮相东京车展" target="_blank">雷克萨斯神秘概念车预告图发布&nbsp;将亮…</a></li><li><!--4--><a href="/n/2015/1026/c35463-27740125.html" target="_blank">日本某高价营养品为何只卖外国游客？</a></li><li><!--5--><a href="/n/2015/1025/c35463-27737035.html" target="_blank">中日经济存互补性&nbsp;未来合作空间巨大</a></li><li><!--6--><a href="/n/2015/1027/c35463-27745838.html" title="日本14家企业联合开发多语种语音翻译技术" target="_blank">日本14家企业联合开发多语种语音翻…</a></li><li><!--7--><a href="/n/2015/1025/c35463-27737038.html" target="_blank">专家：应抓紧中日经贸关系未来三大机遇</a></li><li><!--8--><a href="/n/2015/1027/c35463-27746278.html" target="_blank">本田汽车世界产量三季连增刷新最高纪录</a></li>
+    </ul>
+    
+    <ul class=" paihang" id="b2_2" style="display:none;">
+      <li><!--1--><a href="/n/2015/1027/c35469-27745306.html" target="_blank">安倍访中亚巧遇阿富汗地震&nbsp;淡定看吊灯</a></li><li><!--2--><a href="/n/2015/1027/c35469-27745167.html" title="日本要求大幅削减其负担的驻日美军支出 美方反对" target="_blank">日本要求大幅削减其负担的驻日美军支…</a></li><li><!--3--><a href="/n/2015/1026/c35469-27740135.html" target="_blank">傅莹：为中日关系打开一片天空</a></li><li><!--4--><a href="/n/2015/1026/c35469-27738228.html" target="_blank">访问哈萨克斯坦&nbsp;安倍有哪些心思？</a></li><li><!--5--><a href="/n/2015/1025/c35469-27736774.html" title="安倍访问土库曼斯坦 两国拟开展基建项目合作" target="_blank">安倍访问土库曼斯坦&nbsp;两国拟开展基建…</a></li><li><!--6--><a href="/n/2015/1028/c35469-27748021.html" title="中日韩首脑会日本不投入 东京迟迟不予公布" target="_blank">中日韩首脑会日本不投入&nbsp;东京迟迟不…</a></li><li><!--7--><a href="/n/2015/1026/c35469-27741778.html" title="日本7日谈：对话是为了减少猜忌与增加共识" target="_blank">日本7日谈：对话是为了减少猜忌与增…</a></li><li><!--8--><a href="/n/2015/1027/c35469-27743554.html" target="_blank">中日韩领导人会议中断3年后将重启</a></li>
+    </ul>
+    
+    <ul class=" paihang" id="b2_3" style="display:none;">
+      <li><!--1--><a href="/n/2015/1020/c35468-27718950.html" title="石原里美主演月九剧《朝五晚九》举办万圣节变装派对" target="_blank">石原里美主演月九剧《朝五晚九》举办…</a></li><li><!--2--><a href="/n/2015/1022/c35468-27727449.html" title="《琅琊榜》在韩播出 盘点日韩引进的中国电视剧" target="_blank">《琅琊榜》在韩播出&nbsp;盘点日韩引进的…</a></li><li><!--3--><a href="/n/2015/1022/c35468-27728383.html" title="面对山本耕史疯狂追求 堀北真希：真心很讨厌！" target="_blank">面对山本耕史疯狂追求&nbsp;堀北真希：真…</a></li><li><!--4--><a href="/n/2015/1020/c35468-27719744.html" target="_blank">【策划】东京国际电影节四大看点</a></li><li><!--5--><a href="/n/2015/1023/c35468-27732697.html" title="AKB48推出10周年精选专辑 “史上最强”的集大成作品" target="_blank">AKB48推出10周年精选专辑&nbsp;“…</a></li><li><!--6--><a href="/n/2015/1019/c35468-27712789.html" title="大河惨败 井上真央难以摆脱“低收女”烙印" target="_blank">大河惨败&nbsp;井上真央难以摆脱“低收女…</a></li><li><!--7--><a href="/n/2015/1023/c35468-27733677.html" title="苏有朋携导演处女作《左耳》亮相东京国际电影节 " target="_blank">苏有朋携导演处女作《左耳》亮相东京…</a></li><li><!--8--><a href="/n/2015/1022/c35468-27729565.html" title="东京国际电影节开幕 AKB48岛崎遥香身穿羽毛装亮相" target="_blank">东京国际电影节开幕&nbsp;AKB48岛崎…</a></li>
+    </ul>
+    
+    <ul class=" paihang" id="b2_4" style="display:none;">
+      <li><!--1--><a href="/n/2015/1021/c35467-27721855.html" target="_blank">从中国游客疯狂日本扫货看设计的魅力</a></li><li><!--2--><a href="/n/2015/1019/c368549-27713070.html" title="为什么千万不要去日本北海道？给你12个理由够不够" target="_blank">为什么千万不要去日本北海道？给你1…</a></li><li><!--3--><a href="/n/2015/1019/c368549-27714490.html" title="疲惫女性必去！5个超赞治愈红叶风景胜地" target="_blank">疲惫女性必去！5个超赞治愈红叶风景…</a></li><li><!--4--><a href="/n/2015/1020/c368549-27717413.html" target="_blank">日本旅游如何避免麻烦缠身？</a></li><li><!--5--><a href="/n/2015/1021/c368549-27724303.html" target="_blank">冬季日本旅游，怎能错过这些冬景？</a></li><li><!--6--><a href="http://visitjapan-photocontest.people.com.cn/n/2015/1022/c397750-27728024.html" target="_blank">【高清】环游日本摄影大赛优秀图集赏析</a></li><li><!--7--><a href="/n/2015/1021/c368549-27723131.html" title="日本将在东京开设面向外国游客的高级胶囊旅馆" target="_blank">日本将在东京开设面向外国游客的高级…</a></li><li><!--8--><a href="/n/2015/1023/c368549-27733557.html" title="日本旅游：在横滨山手的洋楼里雕刻咖啡时光" target="_blank">日本旅游：在横滨山手的洋楼里雕刻咖…</a></li>
+    </ul>
+    
+    <ul class=" paihang" id="b2_5" style="display:none;">
+      <li><!--1--><a href="/n/2015/1026/c35467-27741788.html" title="日本69岁老妇遭牛郎诈骗 损失约一亿日元" target="_blank">日本69岁老妇遭牛郎诈骗&nbsp;损失约一…</a></li><li><!--2--><a href="/n/2015/1028/c35467-27748672.html" target="_blank">日本女性：嫁给日本和尚是怎样一种体验</a></li><li><!--3--><a href="/n/2015/1026/c35467-27741021.html" title="北京日本学研究中心成立三十周年国际学术研讨会召开" target="_blank">北京日本学研究中心成立三十周年国际…</a></li><li><!--4--><a href="/n/2015/1026/c35467-27739649.html" title="日本川崎市举行“万圣节”游行 2000余人盛装参加" target="_blank">日本川崎市举行“万圣节”游行&nbsp;20…</a></li><li><!--5--><a href="/n/2015/1025/c35467-27736884.html" target="_blank">第十一届北京-东京论坛闭幕</a></li><li><!--6--><a href="/n/2015/1027/c35467-27745883.html" title="日本男子20年吃遍5600种泡面 出书成专家" target="_blank">日本男子20年吃遍5600种泡面&nbsp;…</a></li><li><!--7--><a href="/n/2015/1027/c35467-27744968.html" title="南京民间人士日本讨石 抚摸被掠&quot;麒麟石&quot;差点落泪" target="_blank">南京民间人士日本讨石&nbsp;抚摸被掠&quot;麒…</a></li><li><!--8--><a href="/n/2015/1026/c35467-27740148.html" target="_blank">图解：中国人和日本人如何看待对方？</a></li>
+    </ul>
+    <!--切换内容 end-->
+    </div>
+  <!--热点排行 end-->
+  </div>
+  <div class="p1_center">
+    <!--焦点图-->
+<div id="box">
+    <ul><li><a href="http://japan.people.com.cn/n/2015/1028/c368549-27749022.html" target="_blank"><img src="/NMediaFile/2015/1028/MAIN201510281218543810539267803.jpg" width="440" height="258" alt="" alt="【交流】河北省在东京举办旅游推介会 "/></a><p><a href="http://japan.people.com.cn/n/2015/1028/c368549-27749022.html" target="_blank"><b>【交流】</b>河北省在东京举办旅游推介会 </a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/1028/c35463-27748284.html" target="_blank"><img src="/NMediaFile/2015/1028/MAIN201510281218032079848616344.jpg" width="440" height="258" alt="" alt="【型车】川崎东京车展首秀Ninja ZX-10R ABS"/></a><p><a href="http://japan.people.com.cn/n/2015/1028/c35463-27748284.html" target="_blank"><b>【型车】</b>川崎东京车展首秀Ninja ZX-10R ABS</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/1027/c368549-27745077.html" target="_blank"><img src="/NMediaFile/2015/1027/MAIN201510271541408528865527981.jpg" width="440" height="258" alt="" alt="【漫游】在横滨山手触摸异国情调与慢时光"/></a><p><a href="http://japan.people.com.cn/n/2015/1027/c368549-27745077.html" target="_blank"><b>【漫游】</b>在横滨山手触摸异国情调与慢时光</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/1027/c35468-27745153.html" target="_blank"><img src="/NMediaFile/2015/1027/MAIN201510271227038074059679010.jpg" width="440" height="258" alt="" alt="【电影】《我的青春期》入围东京电影节"/></a><p><a href="http://japan.people.com.cn/n/2015/1027/c35468-27745153.html" target="_blank"><b>【电影】</b>《我的青春期》入围东京电影节</a></p></li>
+<li><a href="http://visitjapan-photocontest.people.com.cn/n/2015/1022/c397750-27728024.html" target="_blank"><img src="/NMediaFile/2015/1027/MAIN201510271228562166762987992.jpg" width="440" height="258" alt="" alt="【作品】游日中国人镜头下的日本景象"/></a><p><a href="http://visitjapan-photocontest.people.com.cn/n/2015/1022/c397750-27728024.html" target="_blank"><b>【作品】</b>游日中国人镜头下的日本景象</a></p></li>
+</ul>
+</div>   
+ <!--焦点图 end-->
+    <!--今日热点-->
+    <h2 class="mt15"><img src="/img/2013ribenpd/images/p1_c_tit1.jpg" width="271" height="19" alt="今日热点" /></h2>
+    <h3><a href='/n/2015/1028/c368549-27749022.html' target="_blank">河北省旅游局在日本东京举办旅游推介会 <img src="/img/2013ribenpd/images/pic2.gif" width="15" height="12" /></a>
+</h3>
+    <ul class=" list_14 clear" ><li><a href='/n/2015/1028/c35467-27749867.html' target="_blank">外媒：日本社会仍有300万“贱民”遭受歧视</a></li>
+<li><a href='/n/2015/1028/c35467-27749835.html' target="_blank">日本去年校园霸凌事件约18万件 小学逾12万件创新高</a></li>
+<li><a href='/n/2015/1028/c35467-27749844.html' target="_blank">日本山口组前要员受威胁自杀 曾打算转会<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+<li><a href='/n/2015/1028/c35467-27748672.html' target="_blank">日本女性：嫁给日本和尚是怎样一种体验<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+</ul>
+    <h3><a href='/n/2015/1028/c35463-27748284.html' target="_blank">东京车展日系摩托车：川崎Ninja ZX-10R ABS 等3款新摩托车首秀</a>
+</h3>
+    <ul class="list_14 clear"><li><a href='/n/2015/1028/c35463-27749855.html' target="_blank">东京车展将拉开帷幕 自动驾驶技术唱主角<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+<li><a href='/n/2015/1028/c35463-27749860.html' target="_blank">中日韩外汇储备占世界47% 三国自贸区对亚洲意义…</a></li>
+<li><a href='/n/2015/1028/c35463-27748586.html' target="_blank">调查 | 日本某高价营养品为何只卖游客?<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+<li><a href='/n/2015/1028/c35463-27747921.html' target="_blank">日本批准声音和动作注册商标 接逾千件申请</a></li>
+</ul>
+    <h3><a href='/n/2015/1028/c35469-27749839.html' target="_blank">中日韩首脑会谈，日本在犹豫什么？</a>
+</h3>
+    <ul class="list_14 clear"><li><a href='/n/2015/1028/c35469-27749848.html' target="_blank">日韩时隔三年将重启首脑会谈 慰安妇问题成焦点<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+<li><a href='/n/2015/1028/c35469-27748021.html' target="_blank">中日韩首脑会日本不投入 东京迟迟不予公布</a></li>
+<li><a href='/n/2015/1028/c35469-27748040.html' target="_blank">日拟“关切”英对华接近 防中国在G7打入“楔子”</a></li>
+<li><a href='/n/2015/1027/c35469-27746231.html' target="_blank">日本高官将罕见访问关岛 力推驻日美军基地搬迁<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+</ul>
+    <h3><a href='/n/2015/1028/c35465-27749677.html' target="_blank">日剧《朝5晚9》中“帅和尚”山下智久的古风慰问文</a>
+</h3>
+    <ul class="list_14 clear"><li><a href='/n/2015/1028/c35468-27749883.html' target="_blank">《我的青春期》曝东京主竞赛海报 包贝尔孙怡玩转东京<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+<li><a href='/n/2015/1027/c35468-27746269.html' target="_blank">竹野内丰、斋藤工…最不希望哪位日本男星结婚？<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+<li><a href='/n/2015/1027/c35468-27744661.html' target="_blank">有村架纯赴港宣传《垫底辣妹》 鼓励考生<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+<li><a href='/n/2015/1027/c35468-27745514.html' target="_blank">凯蒂猫与指原莉乃·横山由依等共同演唱《万圣节之夜》<img src="/img/2013ribenpd/images/pic2.gif" border="0" alt="" /></a></li>
+</ul>
+    <!--今日热点 end-->
+  </div>
+  <div class="p1_right">
+    <div class="h301 bor1 o_h">
+      <h2 class="rdht"><a href="/GB/368583/index.html" target="_blank" style="display:inline-block;width:180px;height:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></h2>
+      <!--切换内容-->
+      <!--东京速递-->
+      <ul class="list_12"><li><a href='/n/2015/1028/c368549-27749805.html' target="_blank">日本旅游：三重县的“山寨”景点…</a></li>
+<li><a href='/n/2015/1028/c35463-27749753.html' target="_blank">2015东京车展启幕 日系阵营…</a></li>
+<li><a href='/n/2015/1028/c368549-27749022.html' target="_blank">河北省旅游局在日本东京举办旅游…</a></li>
+<li><a href='/n/2015/1028/c35463-27748284.html' target="_blank">东京车展日系摩托车：川崎Nin…</a></li>
+<li><a href='/n/2015/1027/c35468-27746269.html' target="_blank">竹野内丰、斋藤工…最不希望哪位…</a></li>
+<li><a href='/n/2015/1027/c35463-27746254.html' target="_blank">丰田推出方便老年乘客的新型出租…</a></li>
+<li><a href='/n/2015/1027/c35467-27746244.html' target="_blank">哪些日文名字最受欢迎？“福山雅…</a></li>
+<li><a href='/n/2015/1027/c35467-27745948.html' target="_blank">日本政府拟加强支持力度 促进企…</a></li>
+<li><a href='/n/2015/1027/c35463-27745838.html' target="_blank">日本14家企业联合开发多语种语…</a></li>
+<li><a href='/n/2015/1027/c35468-27745514.html' target="_blank">凯蒂猫与指原莉乃·横山由依等共…</a></li>
+<li><a href='/n/2015/1027/c35467-27745500.html' target="_blank">东京迪士尼内一名男性清洁工死亡…</a></li>
+<li><a href='/n/2015/1027/c35469-27745167.html' target="_blank">日本要求大幅削减其负担的驻日美…</a></li>
+
+</ul>
+    </div>
+    <!--热话题 end-->
+    <!--切换标题-->
+    <h2 class="mt15">
+      <span class="one" style="cursor:pointer;" id="c1_1" onmouseover="swapCon(1)"><a href="/GB/368223/index.html">深度解读</a></span>
+      <span style="cursor:pointer;" id="c1_2" onmouseover="swapCon(2)"><a href="http://japan.people.com.cn/GB/35462/371631/index.html">日本7日谈</a></span>
+    </h2>
+    <!--切换标题 end-->
+    <!--今日热点-->
+      <ul class="list_12" id="c2_1" style="display:block;">
+       <li><a href='/n/2015/1023/c35465-27732547.html' target="_blank">日本文化巡礼：霜降</a></li>
+<li><a href='/n/2015/1020/c35468-27719744.html' target="_blank">【策划】东京国际电影节四大看点</a></li>
+<li><a href='/n/2015/1013/c35467-27693282.html' target="_blank">【策划】详解《日本核材料问题研究…</a></li>
+<li><a href='/n/2015/1012/c368223-27688847.html' target="_blank">【策划】南京大屠杀申遗成功 触动…</a></li>
+<li><a href='/n/2015/1012/c368549-27687053.html' target="_blank">【旅游】宫崎县，九州南端的治愈系…</a></li>
+
+      </ul>
+      <!--今日热点end-->
+      <!--日本7日谈-->
+      <ul class="list_12" id="c2_2"  style="display:none">
+        <li><a href='/n/2015/1010/c35469-27683080.html' target="_blank">【庞中鹏】安倍改组内阁难言多大功效</a></li>
+<li><a href='/n/2015/0920/c35469-27609093.html' target="_blank">【庞中鹏】安倍强推安保法案——罪…</a></li>
+<li><a href='/n/2015/0911/c35469-27571849.html' target="_blank">【庞中鹏】自民党总裁连任后的安倍…</a></li>
+<li><a href='/n/2015/0903/c35469-27543290.html' target="_blank">【庞中鹏】日本应当思考“战争与和…</a></li>
+<li><a href='/n/2015/0815/c35469-27466797.html' target="_blank">【庞中鹏】“安倍谈话”到底在“谈…</a></li>
+
+      </ul>
+    <!--日本7日谈 end-->
+      <!--切换内容 end-->
+    <a href="http://japan.people.com.cn/GB/368783/index.html" target="_blank"><img src="/img/2013ribenpd/images/title.jpg" style="margin-top:0px;" alt="" /></a>
+<ul class="list_12"><li><a href='/n/2015/1028/c35465-27749677.html' target="_blank">日剧《朝5晚9》中的古风慰问文</a></li>
+<li><a href='/n/2015/1026/c35465-27739871.html' target="_blank">盘点日语里有关秋天的趣味谚语</a></li>
+<li><a href='/n/2015/1021/c374112-27723239.html' target="_blank">【用日语读唐诗】九月九日忆山东…</a></li>
+</ul>
+    <div class="pic_list">
+    <a href="http://spfjc.people.com.cn/" target="_blank"><img src="/NMediaFile/2015/0128/MAIN201501281410329705004552705.jpg" width="230" height="60" border="0"/></a>
+<a href="http://cjkeizai.j.people.com.cn/" target="_blank"><img src="/NMediaFile/2013/0822/MAIN201308220830585458895406194.jpg" width="230" height="60" border="0"/></a>
+<a href="http://japan.people.com.cn/GB/35462/369790/index.html" target="_blank"><img src="/NMediaFile/2013/1101/MAIN201311011504352638846670016.jpg" width="230" height="60" border="0"/></a>
+<a href="http://tv.people.com.cn/GB/205002/371481/index.html" target="_blank"><img src="/NMediaFile/2013/1121/MAIN201311211738150906451671807.jpg" width="230" height="60" border="0" alt="时尚东瀛"/></a>
+<a href="http://japan.people.com.cn/GB/35462/392640/397261/index.html" target="_blank"><img src="/NMediaFile/2015/0715/MAIN201507151125128362161819598.jpg" width="230" height="60" border="0"/></a>
+
+     </div>
+  </div>
+</div>
+<!--p1 end-->
+<!--通栏广告-->
+
+<!--通栏广告 end-->
+<!--p2-->
+<div class="p2_content mt33">
+<a name="2"></a>
+  <h2 class="tit2"><img src="/img/2013ribenpd/images/p2_tit.gif" alt="时政" /><em>
+
+<a href="http://japan.people.com.cn/GB/35469/35472/index.html">最新政局
+</a><a href="http://japan.people.com.cn/GB/35469/35473/index.html">中日关系
+</a><a href=" http://japan.people.com.cn/GB/35469/35474/index.html ">外交动向
+</a><a href="http://japan.people.com.cn/GB/35469/35476/index.html">军情瞭望
+</a>
+
+<a href="/GB/35469/index.html">时政新闻一览</a></em></h2>
+  <!--p2_bg-->
+  <div class="p2_bg o_h clear">
+    <div class="p2_left">
+      <!--p2_01-->
+      <div class="p2_01 o_h mt10 clear">
+         <div class="fl">
+           <h2 class="tit3"><a href="#"><span>人物</span></a></h2>
+            <ul class="renwu mt5"><li><a href='/n/2015/1010/c35469-27682834.html' target="_blank"><b>普京</b>年内访日一波三折 两国仍存分歧</a></li>
+<li><a href='/n/2015/1010/c35469-27680355.html' target="_blank"><b>华春莹</b>:日本核材料问题并非无解</a></li>
+<li><a href='/n/2015/1009/c35469-27678659.html' target="_blank"><b>岸田文雄</b>：争取普京年内访日的方针未变</a></li>
+<li><a href='/n/2015/1008/c35469-27672262.html' target="_blank"><b>安倍晋三</b>称将继续推动宪法修改</a></li>
+<li><a href='/n/2015/1008/c35469-27670198.html' target="_blank"><b>安倍</b>改组内阁瞄准参院选举 加紧实施安保法</a></li>
+<li><a href='/n/2015/1007/c35469-27668630.html' target="_blank"><b>安倍</b>内阁进行人事调整 19人阁僚名当公布</a></li>
+<li><a href='/n/2015/1005/c35469-27663938.html' target="_blank"><b>安倍</b>新口号引发二战联想</a></li>
+<li><a href='/n/2015/0915/c35469-27586619.html' target="_blank"><b>小泉</b>前首相痛批安倍政权重启核电</a></li>
+<li><a href='/n/2015/0916/c35469-27592106.html' target="_blank"><b>普京</b>将派特使出访日本 或为其年内访日铺路</a></li>
+<li><a href='/n/2015/0916/c35469-27592175.html' target="_blank"><b>安倍</b>出镜一碗水端不平</a></li>
+</ul>
+         </div>
+         <div class="fr">
+           <h2 class="tit3"><span><a href="/GB/35469/index.html">要闻</a></span></h2>
+           <ul class="list_14 mt5"><li><a href='/n/2015/1028/c35469-27749848.html' target="_blank">日韩时隔三年将重启首脑会谈 慰安妇问题成焦点</a></li>
+<li><a href='/n/2015/1028/c35469-27749839.html' target="_blank">中日韩首脑会谈，日本在犹豫什么？</a></li>
+<li><a href='/n/2015/1028/c35469-27749833.html' target="_blank">国台办回应蔡英文访日:坚决反对"台独"分裂活动</a></li>
+<li><a href='/n/2015/1028/c35469-27748040.html' target="_blank">日拟“关切”英对华接近 防中国在G7打入“楔…</a></li>
+<li><a href='/n/2015/1028/c35469-27748021.html' target="_blank">中日韩首脑会日本不投入 东京迟迟不予公布</a></li>
+<li><a href='/n/2015/1027/c35469-27746231.html' target="_blank">日本高官将罕见访问关岛 力推驻日美军基地搬迁</a></li>
+<li><a href='/n/2015/1027/c35469-27746228.html' target="_blank">安倍夫人考察吉尔吉斯斯坦“一村一品”直营店</a></li>
+<li><a href='/n/2015/1027/c35467-27745879.html' target="_blank">无视民意 日本政府将绕过地方强推美军基地搬迁</a></li>
+
+</ul>
+         </div>
+      </div>
+      <!--p2_01 end-->
+      <!--p2_02-->
+      <div class="p2_02 clear mt10">
+        <div class="fl"> 
+          <h2><img src="/img/2013ribenpd/images/p2_tit2.gif" width="166" height="32" alt="图片故事" /></h2>
+          <p><b>日本民众反对安保法案 与警察起冲突</b><br>  9月15日下午和晚间，大量反对安保法案的日本民众在国会议事堂前举行抗议示威活动。抗议民众一度与现场警察发生小规模冲突，数名抗议者被警察强制带走。与此同时，大量警察聚集在抗议活动现场，用铁栅栏将抗议民众限制在国会议事堂前马路的人行道上...</p>
+        </div>
+        <div class="fr">
+          <!--图片故事 图组-->
+            <ul class="pic_list_1">
+              <li class="a_1"><a href="http://japan.people.com.cn/n/2015/0916/c35467-27590126.html" target="_blank"><img src="/NMediaFile/2015/0916/MAIN201509161653197986218965596.jpg" width="240" height="244" border="0" alt="日本民众反对安保法案 与警察起冲突"/><span>日本民众反对安保法案 与警察起冲突</span></li></a>
+
+              <li class="a_2">
+                <p>桥下彻重提日本“大阪都构想”</p><a href="http://japan.people.com.cn/n/2015/0916/c35469-27594200.html" target="_blank"><img src="/NMediaFile/2015/0916/MAIN201509161654234362116379213.jpg" width="130" height="166" border="0" alt="桥下彻重提日本“大阪都构想”"/><span>桥下彻重提日本“大阪都构想”</span></li></a>
+
+              <li class="a_3">
+                  <div class="one"><a href="http://japan.people.com.cn/n/2015/0914/c35469-27582355.html" target="_blank"><img src="/NMediaFile/2015/0916/MAIN201509161655400331186930196.jpg" width="190" height="157" border="0" alt="日本拟生产第二代舰对空拦截导弹"/><span>日本拟生产第二代舰对空拦截导弹</span></div></a>
+
+                  <div class="two"><a href="http://japan.people.com.cn/n/2015/0916/c35469-27592175.html" target="_blank"><img src="/NMediaFile/2015/0916/MAIN201509161656488957933073034.jpg" width="190" height="85" border="0" alt="安倍出镜一碗水端不平"/><span>安倍出镜一碗水端不平</span></div></a>
+
+              </li>
+            </ul>
+          <!--图片故事 图组 end-->
+        </div>
+      </div>
+      <!--p2_02 end-->
+    </div>  
+    <div class="p2_right">
+     <div style="background:#fff; height:10px;"></div>
+      <h2 class="tit4"><span><a href="/GB/35469/35478/index.html">中国之声</a></span></h2>
+           <ul class="list_12 mt5"><li><a href='/n/2015/1014/c35469-27695769.html' target="_blank">外交部:日本威胁停止支援教科文…</a></li>
+<li><a href='/n/2015/1013/c35469-27690773.html' target="_blank">外交部：将认真考虑研究教科文组…</a></li>
+<li><a href='/n/2015/1012/c35469-27686713.html' target="_blank">外交部：中方将充分发挥《南京大…</a></li>
+
+</ul>
+       <h2 class="tit4 mt20"><span><a href="/GB/35548/index.html">中日之间</a></span></h2>
+           <ul class="list_12 mt5"><li><a href='/n/2015/1026/c35467-27741021.html' target="_blank">北京日本学研究中心成立三十周年…</a></li>
+<li><a href='/n/2015/1024/c35467-27735794.html' target="_blank">日本东京都市民交流团抵京访问　…</a></li>
+<li><a href='/n/2015/1024/c35467-27735547.html' target="_blank">福田康夫：日本历史上败于自傲 …</a></li>
+<li><a href='/n/2015/1024/c35467-27735205.html' target="_blank">第十一届北京-东京论坛在北京开幕</a></li>
+<li><a href='/n/2015/1023/c35467-27733729.html' target="_blank">华人书法大师教日本小学生写毛笔字</a></li>
+<li><a href='/n/2015/1023/c35468-27732452.html' target="_blank">第28届东京电影节开幕 郝杰新…</a></li>
+<li><a href='/n/2015/1023/c35467-27731112.html' target="_blank">民调显示：中日民众对两国关系总…</a></li>
+<li><a href='/n/2015/1023/c35468-27730916.html' target="_blank">第28届东京国际电影节开幕 《…</a></li>
+<li><a href='/n/2015/1022/c35467-27729126.html' target="_blank">现实与映像的交错：中日学者研讨…</a></li>
+<li><a href='/n/2015/1022/c35469-27726753.html' target="_blank">李源潮会见日本自民党新生代国会…</a></li>
+
+</ul>
+    </div>
+  </div>
+  <!--p2_bg end-->
+</div>
+<!--p2 end-->
+<!--p3 财经-->
+<div class="p3_content mt15">
+  <a name="1"></a>
+  <h2 class="tit2"><img src="/img/2013ribenpd/images/p3_tit.gif" alt="财经报道" /><em><a href="http://japan.people.com.cn/GB/35462/370815/index.html">在日中资企业</a><a href="http://japan.people.com.cn/GB/35463/35483/index.html">中日经贸</a><a href="http://japan.people.com.cn/GB/35463/35485/index.html">中日企业</a><a href="http://japan.people.com.cn/GB/35463/369978/index.html">区域经济</a><a href="/GB/35463/index.html">财经新闻一览</a>
+</em></h2>
+    <div class="p3_left">
+      <!--p2_01-->
+      <div class="p3_01 o_h mt10 clear">
+         <div class="fl">
+           <h2 class="tit5 mt10"><span><a href="/GB/35463/index.html">资讯</a></span><em><a href=""><img src="/img/2013ribenpd/images/tit5_em.gif" width="6" height="29" /></a></em></h2>
+           <ul class="list_14 mt10"><li><a href='/n/2015/1028/c35463-27749860.html' target="_blank">中日韩外汇储备占世界47% 三国自贸区对亚洲…</a></li>
+<li><a href='/n/2015/1028/c35463-27749855.html' target="_blank">东京车展将拉开帷幕 自动驾驶技术唱主角</a></li>
+<li><a href='/n/2015/1028/c35463-27749852.html' target="_blank">安倍结束中亚蒙古之行 投大笔援助谋求中亚能源</a></li>
+<li><a href='/n/2015/1028/c35463-27749831.html' target="_blank">日本整体经济状态缓慢复苏 部分领域仍表现疲软</a></li>
+<li><a href='/n/2015/1028/c35463-27749830.html' target="_blank">日媒关注新兴市场2015年资本流动逆转为净流出</a></li>
+<li><a href='/n/2015/1028/c35463-27749753.html' target="_blank">2015东京车展启幕 日系阵营主打跑车与环保…</a></li>
+<li><a href='/n/2015/1028/c35463-27748586.html' target="_blank">调查 | 日本某高价营养品为何只卖游客?</a></li>
+<li><a href='/n/2015/1028/c35463-27748284.html' target="_blank">东京车展日系摩托车：川崎Ninja ZX-1…</a></li>
+<li><a href='/n/2015/1028/c35463-27748069.html' target="_blank">日政府启动TPP对策汇总作业 力求避免被批“…</a></li>
+<li><a href='/n/2015/1028/c35463-27747921.html' target="_blank">日本批准声音和动作注册商标 接逾千件申请</a></li>
+
+</ul>
+         </div>
+         <div class="fr">
+           <h2 class="tit6 mt10">
+             <span class="one" style="cursor:pointer;" id="d1_1" onmouseover="swapDon(1)">倾情策划</span>
+
+           </h2>
+           <ul class="list_12 bg_n" style="display:block;" id="d2_1">
+             <li><a href='/n/2015/0923/c35463-27624202.html' target="_blank">思域，本田家族中最古老车型风行43年</a></li>
+<li><a href='/n/2015/0925/c35466-27635587.html' target="_blank">【策划】iPhone6s首发 亚洲…</a></li>
+<li><a href='/n/2015/0625/c35463-27206433.html' target="_blank">【日本机器人】Pepper要成为家…</a></li>
+
+           </ul>
+           <ul class="list_12 bg_n" style="display:none;" id="d2_2">
+             <li><a href='/n/2013/0822/c35469-22658995.html' target="_blank">日民主党今推“重生方案” 党内举措不断</a></li>
+<li><a href='/n/2013/0822/c35469-22659035.html' target="_blank">日防相拟月底举行日美防长会谈</a></li>
+<li><a href='/n/2013/0822/c35469-22659041.html' target="_blank">借国际会议召开之际与韩方沟通</a></li>
+
+           </ul>
+           <ul class="list_12 bg_n" style="display:none;" id="d2_3">
+              <li><a href='/n/2013/0826/c35463-22712925.html' target="_blank">日本文化产业靠海外授权盈利 </a></li>
+<li><a href='/n/2013/0827/c35463-22713014.html' target="_blank">7月日本餐饮收入增加0.1%   </a></li>
+<li><a href='/n/2013/0827/c35463-22713089.html' target="_blank">日本三菱重工将首次在伊拉克设立办事处</a></li>
+
+           </ul>
+           <h2 class="tit6">
+             <span class="one" style="cursor:pointer;" id="e1_1" onmouseover="swapEon(1)">独家关注</span>
+           </h2>
+           <ul class="list_12 bg_n" style="display:block;" id="e2_1">
+              <li><a href='/n/2015/1012/c35463-27685916.html' target="_blank">中医药出口额持续增长 香港日本美国…</a></li>
+<li><a href='/n/2015/0923/c35463-27624202.html' target="_blank">思域，本田家族中最古老车型风行43年</a></li>
+<li><a href='/n/2015/0925/c35466-27635587.html' target="_blank">【策划】iPhone6s首发 亚洲…</a></li>
+
+           </ul>
+           <ul class="list_12 bg_n" style="display:none;" id="e2_2">
+              
+           </ul>
+           <ul class="list_12 bg_n" style="display:none;" id="e2_3">
+              <li><a href='/n/2013/0826/c35469-22697839.html' target="_blank">日本拟首次向非洲7国派遣武官</a></li>
+<li><a href='/n/2013/0826/c35469-22697859.html' target="_blank">安倍访问中东四国  强调吉布提战略重要性</a></li>
+<li><a href='/n/2013/0826/c35469-22698373.html' target="_blank">中方重申在钓鱼岛问题上原则立场</a></li>
+
+           </ul>
+           
+           <h2 class="tit6">
+             <span class="one" style="cursor:pointer;" id="f1_1" onmouseover="swapFon(1)">区域经贸</span>
+           </h2>
+           
+           <ul class="list_12 bg_n" style="display:block;" id="f2_1">
+              <li><a href='/n/2015/0825/c35463-27514795.html' target="_blank">【日本茶】三重县：伊势茶的故乡 日…</a></li>
+<li><a href='/n/2015/0824/c35463-27507479.html' target="_blank">去日本不流行带马桶盖了 流行带一个…</a></li>
+<li><a href='/n/2015/0825/c35463-27512970.html' target="_blank">中国齐合天地收购日本伊藤忠旗下子公司</a></li>
+
+           </ul>
+           <ul class="list_12 bg_n" style="display:none;" id="f2_2">
+              <li><a href='/n/2015/0924/c35463-27628389.html' target="_blank">水果王国·长野县：秋天时令水果·苹果</a></li>
+<li><a href='/n/2015/0902/c35463-27541923.html' target="_blank">【物产·日本茶】静冈县：日本产茶大县</a></li>
+<li><a href='/n/2015/1010/c368549-27681447.html' target="_blank">日本旅游·日本特产：宫崎县手漉和纸</a></li>
+
+           </ul>
+           <ul class="list_12 bg_n" style="display:none;" id="f2_3">
+              <li><a href='/n/2013/0827/c35463-22712905.html' target="_blank">日本政府向日本业界团体介绍TPP谈判经过</a></li>
+<li><a href='/n/2013/0826/c35463-22699103.html' target="_blank">日本三井物产欲扩大在智利经营范围和投资</a></li>
+<li><a href='/n/2013/0826/c35463-22699115.html' target="_blank">日本消费者厅称日本有多种化妆品致“白斑”</a></li>
+
+           </ul>
+         </div>
+      </div>
+      <!--p2_01 end-->
+      <!--p2_02-->
+      <div class="p3_02 clear mt10">
+        <div class="fl">
+          <h3><a href="http://japan.people.com.cn/GB/35463/35483/index.html">+经贸往来</a></h3><span><a href="http://japan.people.com.cn/GB/368549/399265/index.html" target="_blank"><img src="/NMediaFile/2015/1010/MAIN201510101406176056108964727.jpg" width="210" height="132" border="0" alt="旅日途中的海购豪情"/></a><a href="http://japan.people.com.cn/GB/368549/399265/index.html" target="_blank">旅日途中的海购豪情</a></span>
+
+        </div>
+        <div class="fl m_l37">
+          <h3><a href="http://japan.people.com.cn/GB/35463/369085/index.html">+型车魅影</a></h3><span><a href="http://japan.people.com.cn/GB/35463/390569/index.html" target="_blank"><img src="/NMediaFile/2015/0827/MAIN201508271108242742963655390.jpg" width="210" height="132" border="0" alt="【坐骑】日系摩托车阵营"/></a><a href="http://japan.people.com.cn/GB/35463/390569/index.html" target="_blank"><b>【坐骑】</b>日系摩托车阵营</a></span>
+
+        </div>
+        <div class="fl m_l37">
+          <h3><a href="http://japan.people.com.cn/GB/35463/35484/index.html">+产业动态</a></h3><span><a href="http://japan.people.com.cn/n/2015/0625/c35463-27206433.html" target="_blank"><img src="/NMediaFile/2015/0701/MAIN201507010830103511992570176.jpg" width="210" height="132" border="0" alt="【产业】日本机器人Pepper身世"/></a><a href="http://japan.people.com.cn/n/2015/0625/c35463-27206433.html" target="_blank"><b>【产业】</b>日本机器人Pepper身世</a></span>
+
+        </div>
+      </div>
+      <!--p2_02 end-->
+    </div>  
+    <div class="p3_right">
+      <div class="p3_04 mt10">
+      <h2 class="tit4"><span><a href="#">产业报道</a></span></h2>
+           <ul class="list_12 mt5 list_lm clear"><li><b><a href="http://japan.people.com.cn/GB/35463/391783/index.html" target="_blank">[农业]</a></b><a href="http://japan.people.com.cn/GB/35463/391783/index.html" target="_blank">中日农业合作·日本农业资讯</a></li><li><b><a href="http://japan.people.com.cn/GB/35463/35483/index.html" target="_blank">[经贸]</a></b><a href="http://japan.people.com.cn/GB/35463/35483/index.html" target="_blank">生意经·中日经贸动向</a></li><li><b><a href="http://japan.people.com.cn/GB/35463/388404/index.html" target="_blank">[产品]</a></b><a href="http://japan.people.com.cn/GB/35463/388404/index.html" target="_blank">海淘日本产品最新资讯</a></li><li><b><a href=http://japan.people.com.cn/GB/35463/391182/index.html" target="_blank">[食品]</a></b><a href="http://japan.people.com.cn/GB/35463/391182/index.html" target="_blank">安全·安心的食品资讯一览</a></li><li><b><a href="http://japan.people.com.cn/GB/35463/369085/index.html" target="_blank">[汽车]</a></b><a href="http://japan.people.com.cn/GB/35463/369085/index.html" target="_blank">日系汽车新车·经营动向</a></li><li><b><a href="http://japan.people.com.cn/GB/35463/395257/index.html" target="_blank">[房产]</a></b><a href="http://japan.people.com.cn/GB/35463/395257/index.html" target="_blank">投资好帮手·日本房产资讯</a></li><li><b><a href="/GB/35463/index.html" target="_blank">[医疗]</a></b><a href="http://japan.people.com.cn/GB/35463/391179/index.html" target="_blank">健康生活·日本医疗资讯</a></li><li><b><a href="/GB/35463/index.html" target="_blank">[家电]</a></b><a href="http://japan.people.com.cn/GB/35463/391178/index.html" target="_blank">好帮手·中日家电产业动向</a></li><li><b><a href="/GB/35463/index.html" target="_blank">[消费]</a></b><a href="http://japan.people.com.cn/GB/35463/391782/index.html" target="_blank">颜值控·日本美容产业</a></li><li><b><a href="/GB/35463/index.html" target="_blank">[机器人]</a></b><a href="http://japan.people.com.cn/GB/35463/391212/index.html" target="_blank">科技趋势·中日机器人产业</a></li></ul>
+       </div>
+      <div class="p3_03 mt10">
+        <p>100日元<span id="hl_c1"></span>人民币</p>
+         <ol>
+           <li>
+           <input type="hidden" id="hl_c" value="" /><input value="" id="hl_input" type="text" class="in1 fl" /><div class="box"><div class="box2"><select name = "D1" class="in2" id="in2"><option value="jpa">JPA日元</option><option value="renminbi">人民币</option></select><b>兑换为</b></div></div>
+</li>
+           <li><select name = "D1" class="in2 in3" id="in3"><option value="renminbi">人民币</option><option value="jpa">JPA日元</option></select>
+           <img src="/img/2013ribenpd/images/zhuanhuan.gif" id="hl_jisuan" width="42" height="15" />
+           <div class="data_jie"></div>
+           </li>
+         </ol>        
+       </div>
+             <script type="text/javascript">
+            $.getScript("http://gp.people.com.cn/huilv.js", function(){
+             h4_c = hl/10;
+			 $("#hl_c").val(h4_c);
+             });
+			 $(document).ready(function(){
+                nub = $("#hl_input").val();
+			    nub_1 = $("#hl_c").val();
+				var nub_c1 = 100/nub_1;
+				var str = Math.round(nub_c1*1000)/1000;
+				$("#hl_c1").text(str);
+            });
+			$("#hl_jisuan").bind("click",function(){
+				var oJie_style = $("#hl_jisuan").offset();
+				 var nub = $("#hl_input").val();
+			     var nub_1 = $("#hl_c").val();
+				 var select_c = $("#in2 option:selected").text();
+				 var select_c1 = $("#in3 option:selected").text();
+				 function set_vale(){
+					 $(".data_jie").css({display:"none"})
+					 $(".data_jie").html();
+				 }
+				 if(nub == ""){
+				   alert("请填写数值!");
+				 //}else if(select_c == "JPA日元"||select_c1 == "JPA日元"){
+//					$(".data_jie").css({display:"block",top:oJie_style.top+20,left:oJie_style.left-135});
+//					$(".data_jie").text("日元兑换日元无意义"); 
+//					setTimeout(set_vale,5000);
+//				 }else if(select_c == "人民币"||select_c1 == "人民币"){
+//					$(".data_jie").css({display:"block",top:oJie_style.top+20,left:oJie_style.left-135});
+//					$(".data_jie").text("人民币兑换人民币无意义"); 
+//					setTimeout(set_vale,5000);
+				 }else if(select_c == "JPA日元"||select_c1 == "人民币"){
+					 //取到数值后的计算
+					 var nub_c = nub/nub_1;
+					 var str1 = Math.round(nub_c*1000)/1000;
+					 $(".data_jie").css({display:"block",top:oJie_style.top+20,left:oJie_style.left-135});
+					$(".data_jie").html("<em>"+nub+"</em>日元<br />兑换<strong>"+str1+"</strong>人民币");
+					setTimeout(set_vale,5000);
+				}else if(select_c == "人民币"||select_c1 == "JPA日元"){
+				     //取到数值后的计算
+					 var nub_c = nub*nub_1;
+					 var str1 = Math.round(nub_c*1000)/1000;
+					 $(".data_jie").css({display:"block",top:oJie_style.top+20,left:oJie_style.left-135});
+					$(".data_jie").html("<em>"+nub+"</em>人民币<br />兑换<strong>"+str1+"</strong>日元");
+					setTimeout(set_vale,5000);
+				}
+			})
+      </script>
+       <div class="p3_05">010-65363681<br />
+         liuge@people.cn</div>
+    </div>
+
+</div>
+<!--p3 财经 end-->
+<!--p4 社会-->
+<div class="p4_content mt15">
+<a name="7"></a>
+  <h2 class="tit2"><img src="/img/2013ribenpd/images/p4_tit.gif" alt="社会" />
+
+<em><a href="/GB/35467/index.html">一览</a></em>
+
+<em><a href="/GB/35467/369294/index.html">福岛核危机</a></em>
+
+<em><a href="/GB/35467/370033/index.html">健康情感</a></em>
+
+<em><a href="/GB/35467/369322/index.html">美容美体</a></em>
+
+<em><a href="/GB/35467/369325/index.html">以史为鉴</a></em>
+
+<em><a href="/GB/35467/369293/index.html">体育·奥运</a></em>
+
+
+<em><a href="/GB/35467/35497/index.html">社会交流</a></em>
+
+
+<em><a href="/GB/35467/35496/index.html">扶桑万象</a></em>
+</h2>
+     <div class="p4_left">
+      <!--p4_01-->
+      <div class="p4_01 o_h mt10 clear">
+         <div class="fl">
+         <h4><em><a href="http://j.people.com.cn/94473/208889/310016/index.html">日文版</a>|<a href="http://japan.people.com.cn/GB/35462/386691/index.html">中文版</a></em></h4><div class="mt10"><a href="http://japan.people.com.cn/GB/35462/386691/index.html" target="_blank"><img src="/NMediaFile/2014/1226/MAIN201412261920380766775762436.jpg" width="270" height="110" border="0"/></a></div>
+         <ul class="list_12 bg_n mt5 mb10">
+</ul>
+          <!--切换标题-->
+           <h2 class="tit5">
+           <span class="one" style="cursor:pointer;" id="h1_1" onmouseover="swapHon(1)"><a href="/GB/35462/369791/index.html" target="_blank">人物访谈</a></span>
+           <span style="cursor:pointer;" id="h1_2" onmouseover="swapHon(2)"><a href="http://japan.people.com.cn/99101/index.html" target="_blank">在华志愿者</a></span>
+           <em><a href=""><img src="/img/2013ribenpd/images/tit5_em2.gif" width="6" height="29" /></a></em>
+           </h2>
+           <!--切换标题 end-->
+           <!--切换内容1-->
+           <ul class="list_12 bg_n" style="display:block;" id="h2_1">
+              <li><a href="http://japan.people.com.cn/n/2014/0225/c35467-24460522.html">【方军】常年自费采访亲历抗战的最后一批人</a></li><li><a href="http://japan.people.com.cn/n/2014/0213/c35467-24352572.html">【董凡】推动中日影视文化交流</a></li><li><a href="http://japan.people.com.cn/n/2014/0130/c35465-24267968.html">【彤华】从设计师到画家的留日归国者</a></li><li><a href="http://japan.people.com.cn/n/2013/1209/c35467-23791051.html">【赵海成】日本《留学生新闻》创立者</a></li>
+           </ul>
+           <!--切换内容1 end-->
+           <!--切换内容2-->
+           <ul class="list_12 bg_n" style="display:none" id="h2_2">
+              <li><b><a href="http://japan.people.com.cn/35463/index.html" target="_blank"></a></b><a href="http://japan.people.com.cn/n/2015/0413/c35467-26837143.html" target="_blank">浦井智司--活跃在内蒙古的日语教师</a></li><li><b><a href="http://japan.people.com.cn/35463/index.html" target="_blank"></a></b><a href="http://japan.people.com.cn/n/2013/1129/c35467-23700262.html" target="_blank">杉岛夏子--心心相连的日语教育</a></li><li><b><a href="http://japan.people.com.cn/35463/index.html" target="_blank"></a></b><a href="http://japan.people.com.cn/n/2013/0917/c35467-22945721.html" target="_blank">佐藤俊之--在内蒙古当理疗师的日本志愿者</a></li><li><b><a href="http://japan.people.com.cn/35463/index.html" target="_blank"></a></b><a href="http://japan.people.com.cn/95917/8340089.html" target="_blank">森英昌--日本志愿者担任棒球教练</a></li>
+           </ul>
+           <!--切换内容2 end-->
+         </div>
+         <div class="fr">
+         <h2 class="tit5">
+           <span><a href="/GB/35467/index.html">日本那些事儿</a></span>
+           <em><a href=""><img src="/img/2013ribenpd/images/tit5_em2.gif" width="6" height="29" /></a></em>
+           </h2>
+           <ul class="list_14 mt5"><li><a href='/n/2015/1028/c35467-27749867.html' target="_blank">外媒：日本社会仍有300万“贱民”遭受歧视</a></li>
+<li><a href='/n/2015/1028/c35467-27749844.html' target="_blank">日本山口组前要员受威胁自杀 曾打算转会</a></li>
+<li><a href='/n/2015/1028/c35467-27749835.html' target="_blank">日本去年校园霸凌事件约18万件 小学逾12万件创新高</a></li>
+<li><a href='/n/2015/1028/c35467-27748672.html' target="_blank">日本女性：嫁给日本和尚是怎样一种体验</a></li>
+<li><a href='/n/2015/1028/c35467-27748609.html' target="_blank">四成福岛核事故善后者遭过量辐射</a></li>
+<li><a href='/n/2015/1028/c35467-27748558.html' target="_blank">日本金箔冰激凌走红 一支售价近50元</a></li>
+<li><a href='/n/2015/1028/c35467-27747936.html' target="_blank">中日民间联手索要古石遭拒 市民：古石在日本存在是耻辱</a></li>
+<li><a href='/n/2015/1027/c35467-27746294.html' target="_blank">日本东京街头举行名车游行 为东京车展预热</a></li>
+<li><a href='/n/2015/1027/c35467-27746288.html' target="_blank">日本应届大学生内定率与去年基本持平</a></li>
+<li><a href='/n/2015/1027/c35467-27746276.html' target="_blank">日本举行第二次专家讨论会研究手机降费</a></li>
+
+</ul>
+         </div>
+      </div>
+      <!--p4_01 end-->
+      <!--p4_02 图文组轮播-->
+      <!--box1-->
+      <div id="box1" class="mt10">
+         <ul id="pic_list1">
+           <li><a href="http://japan.people.com.cn/n/2015/0713/c35467-27293832-8.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161712570790508713295.jpg" width="490" height="250" border="0" alt="日本时尚 &#13;         日本时尚·东方韵味日本不仅拥有优衣库这样的大众品牌，也有和田惠美三宅一生这些驰名世界的设计师。本栏目向您介绍最新的日本时尚，从走红的街头时尚到殿堂级的服装·配饰·箱包等最新潮品....."/></a><div><h3><i><a href=http://japan.people.com.cn/GB/35467/383401/index1.html target=_blank>日本时尚</a></i></h3> 
+         <b>日本时尚·东方韵味</b>日本不仅拥有优衣库这样的大众品牌，也有和田惠美三宅一生这些驰名世界的设计师。本栏目向您介绍最新的日本时尚，从走红的街头时尚到殿堂级的服装·配饰·箱包等最新潮品.....</div>
+           </li>
+<li><a href="http://japan.people.com.cn/n/2015/0518/c35467-27014911-3.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161713246719746909936.jpg" width="490" height="250" border="0" alt="日本美容 &#13;         日本美容·我为己容日本拥有众多知名化妆品牌的同时，他们对于美的观察与总结不亚于美容硬件。本栏目汇集了我国媒体对日本化妆术·日本美容知识的介绍，锁定这里，这里将成为你美丽之梦的起点....."/></a><div><h3><i><a href=http://japan.people.com.cn/GB/35467/369322/index.html target=_blank>日本美容</a></i></h3> 
+         <b>日本美容·我为己容</b>日本拥有众多知名化妆品牌的同时，他们对于美的观察与总结不亚于美容硬件。本栏目汇集了我国媒体对日本化妆术·日本美容知识的介绍，锁定这里，这里将成为你美丽之梦的起点.....</div>
+           </li>
+<li><a href="http://japan.people.com.cn/n/2015/0310/c35467-26670317.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161713486473300213931.jpg" width="490" height="250" border="0" alt="养生有道&#13;         日本健康·长寿秘诀日本是长寿国度，人们都在争相探询他们健康长寿的奥秘。如何能保持一辈子的身心健康？恐怕要从生活点滴做起。本栏目的资讯或许能为你开辟一条通向健康之路的密道，让我们从这里找到健康生活的源泉吧....."/></a><div><h3><i><a href=http://japan.people.com.cn/GB/35467/384265/index.html target=_blank>养生有道</a></i></h3>
+         <b>日本健康·长寿秘诀</b>日本是长寿国度，人们都在争相探询他们健康长寿的奥秘。如何能保持一辈子的身心健康？恐怕要从生活点滴做起。本栏目的资讯或许能为你开辟一条通向健康之路的密道，让我们从这里找到健康生活的源泉吧.....</div>
+           </li>
+<li><a href="http://japan.people.com.cn/n/2015/0715/c35467-27306215-2.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161714102773496179957.jpg" width="490" height="250" border="0" alt="日本创意&#13;         创意无限·点亮生活本栏目介绍日本式的创意，既有让人血脉膨胀的惊喜发现，也囊括了堪称狗血的另类创意。不管正能量还是负影响，有创意的生活总归是好的。这里，为你打开一扇了解日本创意·日式灵感的大门....."/></a><div><h3><i><a href=http://japan.people.com.cn/GB/35467/385306/index.html target=_blank>日本创意</a></i></h3>
+         <b>创意无限·点亮生活</b>本栏目介绍日本式的创意，既有让人血脉膨胀的惊喜发现，也囊括了堪称狗血的另类创意。不管正能量还是负影响，有创意的生活总归是好的。这里，为你打开一扇了解日本创意·日式灵感的大门.....</div>
+           </li>
+
+         </ul>
+         <ul id="num_list1"></ul>
+      </div>
+      <!--box1 end-->     
+      <!--p4_02 图文组轮播 end-->
+    </div>  
+    <div class="p3_right">
+      <div class="p4_03 mt10">
+      <h2 class="tit4"><span><a href="/GB/35467/369080/index.html">他山之石</a></span></h2>
+           <ul class="tw1"><li><a href="http://japan.people.com.cn/n/2015/0709/c35467-27277897.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161636587675845101461.jpg" width="75" height="75" border="0" alt="另类考试日本一医院招聘考试形式奇葩，用一粒米做寿司，折超小纸鹤……"/><b>另类考试</b>日本一医院招聘考试形式奇葩，用一粒米做寿司，折超小纸鹤……</a></li></a>
+<li><a href="http://japan.people.com.cn/n/2015/0528/c35467-27067771.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161636585798941680897.jpg" width="75" height="75" border="0" alt="“无死角”幼儿园幼儿园内部与外部地面没有墙的隔阂，室内也只用木块分隔出每个教室的空间&#13;……"/><b>“无死角”幼儿园</b>幼儿园内部与外部地面没有墙的隔阂，室内也只用木块分隔出每个教室的空间
+……</a></li></a>
+<li><a href="http://japan.people.com.cn/n/2015/0527/c35467-27065096.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161636583555796446671.jpg" width="75" height="75" border="0" alt="地下自行车场使用者只需按下一个按钮，电梯门打开后放入自行车，只需八秒&#13;……"/><b>地下自行车场</b>使用者只需按下一个按钮，电梯门打开后放入自行车，只需八秒
+……</a></li></a>
+</ul>
+      </div>
+      <div class="p4_04 mt20">
+        <ul><li><span><a href="/GB/35467/369322/index.html">美容</a></span><a href="http://japan.people.com.cn/n/2015/0715/c35467-27309841.html">五招成就气质美人</a></li><li><span><a href="/GB/35467/370033/index.html">情感</a></span><a href="http://japan.people.com.cn/n/2015/0624/c35467-27198132.html">与“怪人”交往10大好处
+</a></li><li><span><a href="/GB/35467/370033/index.html">健康</a></span><a href="http://japan.people.com.cn/n/2014/0425/c35467-24943464.html">越吃越美丽的5种猪肉料理</a></li><li><span><a href="/GB/35467/369325/index.html">历史</a></span><a href="http://japan.people.com.cn/n/2015/0716/c35467-27314618.html">日本遗孤：我们有两个家</a></li><li><span><a href="/GB/35467/35496/index.html">世相</a></span><a href="http://japan.people.com.cn/n/2015/0711/c35467-27288014.html">日本老奶奶偶像团体巡演场场爆满</a></li><li><span><a href="http://japan.people.com.cn/n/2015/0711/c35467-27288014.html">体育</a></span><a href="http://japan.people.com.cn/n/2015/0706/c35467-27259464.html">女足世界杯日本队无缘两连冠</a></li></ul>
+</div>
+      
+    </div>
+
+</div>
+<!--p4 社会 end-->
+<!--p7 旅游 -->
+<div class="p7_content mt15">
+<a name="4"></a>
+<h2 class="tit2"><img src="/img/2013ribenpd/images/p7_tit.gif" alt="旅游" /><em><a href="http://japan.people.com.cn/GB/368549/369980/index.html">美食</a><a href="http://japan.people.com.cn/GB/368549/369984/index.html">美景</a><a href="http://japan.people.com.cn/GB/368549/394258/index.html"><font color=red>热卖线路</font></a><a href="http://japan.people.com.cn/GB/368549/369986/index.html">政策</a><a href="/GB/368549/index.html">旅游新闻一览</a></em></h2>
+     <div class="p7_left">
+       
+       
+       <!--旅游 滚动图片-->
+<script language="JavaScript">
+$(document).ready(function(){
+	$(".jCarouselLite2").jCarouselLite({
+    btnNext: ".prev2",
+    btnPrev: ".next2",
+	speed: 1000,
+	auto: 2000,	
+	visible:3
+    });
+	});
+</script>
+<div class="p7_1">
+         <img src="/img/2013ribenpd/images/p7_1_left.gif" width="13" height="26"  class="prev2 b_left2 fl" />
+      <div class="jCarouselLite2">
+	  <ul>
+	      <li><h2><span><a href="http://japan.people.com.cn/GB/368549/369983/index.html" target="_blank">+攻略</a></span><a href="http://japan.people.com.cn/n/2015/1016/c368549-27707144-4.html" target="_blank"><img src="/NMediaFile/2015/1023/MAIN201510231611013595775341253.jpeg" width="210" height="130" border="0" alt="摄影·岩手县美景"/></h2>摄影·岩手县美景</li></a>
+<li><h2><span><a href="http://japan.people.com.cn/GB/368549/369985/index.html" target="_blank">+见闻</a></span><a href="http://japan.people.com.cn/n/2015/1023/c368549-27733653.html" target="_blank"><img src="/NMediaFile/2015/1023/MAIN201510231611315112592933291.jpg" width="210" height="130" border="0" alt="小鱼过上万圣节"/></h2>小鱼过上万圣节</li></a>
+<li><h2><span><a href="http://japan.people.com.cn/GB/368549/369982/index.html" target="_blank">+血拼</a></span><a href="http://japan.people.com.cn/n/2015/1009/c368549-27675795-2.html" target="_blank"><img src="/NMediaFile/2015/1023/MAIN201510231612091261667347673.JPG" width="210" height="130" border="0" alt="宫崎木制饭盒"/></h2><b><font color=#FF0080>宫崎木制饭盒</font></b></li></a>
+<li><h2><span><a href="http://japan.people.com.cn/GB/368549/369984/index.html" target="_blank">+视域</a></span><a href="http://japan.people.com.cn/n/2015/0824/c368549-27507339.html" target="_blank"><img src="/NMediaFile/2015/0910/MAIN201509101700357648860978986.jpg" width="210" height="130" border="0" alt="日本东北极致雪景"/></h2>日本东北极致雪景</li></a>
+<li><h2><span><a href="http://japan.people.com.cn/GB/368549/369984/index.html" target="_blank">+景点</a></span><a href="http://japan.people.com.cn/n/2015/1023/c368549-27732668.html" target="_blank"><img src="/NMediaFile/2015/1023/MAIN201510231613003266141202826.jpg" width="210" height="130" border="0" alt="“工厂萌”游工厂夜景"/></h2>“工厂萌”游工厂夜景</li></a>
+<li><h2><span><a href="http://japan.people.com.cn/GB/368549/369980/index.html" target="_blank">+美食</a></span><a href="http://japan.people.com.cn/n/2015/0925/c368549-27633296-2.html" target="_blank"><img src="/NMediaFile/2015/1023/MAIN201510231614053626176742046.jpg" width="210" height="130" border="0" alt="宫崎县牛肉"/></h2>宫崎县牛肉</li></a>
+<li><h2><span><a href="http://japan.people.com.cn/GB/368549/369986/index.html" target="_blank">+政策</a></span><a href="http://japan.people.com.cn/GB/368549/369986/index.html" target="_blank"><img src="/NMediaFile/2015/0910/MAIN201509101703509454276141493.jpg" width="210" height="130" border="0" alt="日本旅游政策资讯"/></h2>日本旅游政策资讯</li></a>
+
+        </ul>
+         </div>
+         <img src="/img/2013ribenpd/images/p7_1_right.gif" width="13" height="26"  class="next2 b_right2 fr"/>
+       
+       </div>
+       
+
+<!--旅游 滚动图片 end-->
+       
+       <div class="p7_2 clear mt20 o_h">
+         <h2><span>路线攻略</span><i class="grey"><a href="/n/2013/0823/c35464-22676335.html
+">交通攻略</a>/<a href="http://japan.people.com.cn/95919/8300071.html">食宿攻略</a>/<a href="http://japan.people.com.cn/95919/8368362.html">景点攻略</a></i></h2><div class="fl tw1"><a href="http://japan.people.com.cn/n/2015/0811/c368549-27443380.html" target="_blank"><img src="/NMediaFile/2015/0827/MAIN201508271126453172937156461.jpg" width="182" height="137" border="0" alt="日本国民心灵故乡如何要用一句话来概括三重，“这里是日本国民心灵故乡—伊势神宫的所在地，也是伊贺流忍者的发祥地”最能概括三重县的精神文化内涵。三重县几乎位于日本版图的中央，它拥有丰富的旅游资源，既有红叶包裹的山地、适宜登山与滑雪的山岭，也有绵延千里的风光明媚的里亚式海岸。"/><b>日本国民心灵故乡</b>如何要用一句话来概括三重，“这里是日本国民心灵故乡—伊势神宫的所在地，也是伊贺流忍者的发祥地”最能概括三重县的精神文化内涵。三重县几乎位于日本版图的中央，它拥有丰富的旅游资源，既有红叶包裹的山地、适宜登山与滑雪的山岭，也有绵延千里的风光明媚的里亚式海岸。</a></div></a>
+<div class="fl tw1"><a href="http://japan.people.com.cn/n/2015/0618/c368549-27175304.html" target="_blank"><img src="/NMediaFile/2015/0701/MAIN201507011024579256959938519.jpg" width="182" height="137" border="0" alt="游在福冈·购在福冈·吃在福冈地处九州北段的福冈县拥有人口 500万以上，系九州地区人口最多的县。自古，这里就是“亚洲的大门口”，外国文化进入日本腹地的第一道关口。为此，福冈文化里面更显包容与宽厚的特质，外国旅客旅居于此，更能感受到友好、舒心的旅途体验。"/><b>游在福冈·购在福冈·吃在福冈</b>地处九州北段的福冈县拥有人口 500万以上，系九州地区人口最多的县。自古，这里就是“亚洲的大门口”，外国文化进入日本腹地的第一道关口。为此，福冈文化里面更显包容与宽厚的特质，外国旅客旅居于此，更能感受到友好、舒心的旅途体验。</a></div></a>
+
+        
+       </div>
+       <div class="p7_2 clear o_h  ">
+         <h2><span>美食美客</span><i class="grey"><a href="http://japan.people.com.cn/35468/7979124.html">食器盛宴</a>/<a href="http://japan.people.com.cn/35467/8243021.html">美食漫谈</a>/<a href="http://japan.people.com.cn/95919/8191545.html">怀石料理</a></i></h2><div class="fl tw1"><a href="http://deepjapan.people.com.cn/n/2015/0710/c367935-27286143.html" target="_blank"><img src="/NMediaFile/2015/0710/MAIN201507101632315701482829102.jpg" width="182" height="137" border="0" alt="盘点日本的寿司名店去日本旅游，谁都想有一次光临令人难忘的美食经历吧？！面对众多的寿司店，如何选择？人生地不熟的游客在短时间内恐怕很难掌握到美食店过去的口碑之类的信息。还好，我们今天就跟随日本网友的推荐，盘点下日本各地堪称寿司之最的寿司店。"/><b>盘点日本的寿司名店</b>去日本旅游，谁都想有一次光临令人难忘的美食经历吧？！面对众多的寿司店，如何选择？人生地不熟的游客在短时间内恐怕很难掌握到美食店过去的口碑之类的信息。还好，我们今天就跟随日本网友的推荐，盘点下日本各地堪称寿司之最的寿司店。</a></div></a>
+<div class="fl tw1"><a href="http://japan.people.com.cn/n/2015/1023/c368549-27733557.html" target="_blank"><img src="/NMediaFile/2015/1023/MAIN201510231629529013634214617.jpg" width="182" height="137" border="0" alt="横滨山手咖啡时光作为东西文化的交融之地，建议各位漫游横滨的山手，细细品读这里的文化、历史、建筑。去这里的咖啡馆坐一坐，为漫游打开思绪，也为旅途带来治愈的片刻。小编整理出了7出充满异国情调的咖啡馆，希望能治愈诸君的横滨之旅..."/><b>横滨山手咖啡时光</b>作为东西文化的交融之地，建议各位漫游横滨的山手，细细品读这里的文化、历史、建筑。去这里的咖啡馆坐一坐，为漫游打开思绪，也为旅途带来治愈的片刻。小编整理出了7出充满异国情调的咖啡馆，希望能治愈诸君的横滨之旅...</a></div></a>
+
+        
+       </div>
+  </div>
+     <div class="p7_right">
+       <div class="p7_r1">
+         <h2 class="tit4"><span>
+         <h3><a href="/GB/368549/index.html">游乐资讯</a></h3></span></h2>
+         <ul class="list_12 mt5 mb10 clear"><li><a href='/n/2015/1028/c368549-27749805.html' target="_blank">日本旅游：三重县的“山寨”景点…</a></li>
+<li><a href='/n/2015/1028/c368549-27749022.html' target="_blank">河北省旅游局在日本东京举办旅游…</a></li>
+<li><a href='/n/2015/1027/c368549-27745868.html' target="_blank">武汉开通直达日本东京国际航线</a></li>
+<li><a href='/n/2015/1027/c368549-27745077.html' target="_blank">日本旅游：在横滨山手触摸异国情…</a></li>
+<li><a href='/n/2015/1027/c368549-27744976.html' target="_blank">中国游客日本消费创新高 201…</a></li>
+<li><a href='/n/2015/1027/c368549-27744647.html' target="_blank">任性改良加重口味 日本人与汉堡…</a></li>
+<li><a href='/n/2015/1026/c368549-27741779.html' target="_blank">日本迎来百亿“黄金周”</a></li>
+<li><a href='/n/2015/1026/c368549-27740790.html' target="_blank">日本旅游美食发现：三重县的天轮烧</a></li>
+
+</ul>
+       </div>
+       <div class="p7_r2 mt15">
+         <h3><span>日本风物</span></h3>
+         <div id="slider"><div class="slide"><a href="http://japan.people.com.cn/GB/368549/395061/index.html" target="_blank"><img src="/NMediaFile/2015/0902/MAIN201509020751320099678984956.jpg" width="134" height="168" class="diapo" alt="日本滑雪俱乐部　"/></a><div class="text"><a href="http://japan.people.com.cn/GB/368549/395061/index.html" target="_blank">日本滑雪俱乐部　</a></div></div>
+<div class="slide"><a href="http://japan.people.com.cn/GB/367935/396226/index.html" target="_blank"><img src="/NMediaFile/2015/0902/MAIN201509020831487930483392242.jpg" width="134" height="168" class="diapo" alt="日本潜水俱乐部"/></a><div class="text"><a href="http://japan.people.com.cn/GB/367935/396226/index.html" target="_blank">日本潜水俱乐部</a></div></div>
+<div class="slide"><a href="http://japan.people.com.cn/n/2014/0514/c368549-25017141.html" target="_blank"><img src="/NMediaFile/2014/1230/MAIN201412301537456392891972473.jpg" width="134" height="168" class="diapo" alt="寻找最美的日本民宿"/></a><div class="text"><a href="http://japan.people.com.cn/n/2014/0514/c368549-25017141.html" target="_blank">寻找最美的日本民宿</a></div></div>
+</div>
+       </div>
+       <div class="p7_r3  mt5">
+         <b><a href='/n/2015/0211/c368549-26545151.html' target="_blank">去岩手和山形感受滑雪豪情与樱花烂漫</a></b><p class="grey">    同处日本东北的岩手县与山形县都是日本的滑雪重镇。位于山形县山形市藏王温泉的“山形藏王温泉滑雪场”与位于岩手县八幡平市的安比高原滑雪场，都是日本东北地区最具人气的滑雪胜地，两地并称为日本东北滑雪基地的“双雄”。<br>
+<b>出发日：</b>藏王温泉滑雪场2月至4月每天出发；安比高原滑雪场2至3月每周三出发<br>
+<b>价格：藏王9000/人；安比8500/人</b><br>
+<b>报名热线：</b>010-65363681<br>
+<b>垂询微信：</b>japanfit</p>
+
+       </div>
+     </div>
+</div>
+<!--p7 旅游 end-->
+<!--p5 文化 -->
+<div class="p5_content mt15">
+<a name="5"></a>
+<h2 class="tit2"><img src="/img/2013ribenpd/images/p5_tit.gif" alt="文化" /><em><a href="/GB/35465/index.html">文化新闻一览</a></em>
+
+<em><a href="/GB/35465/369292/index.html">评论·人物</a></em>
+
+<em><a href="/GB/35465/35490/index.html">中日留学</a></em>
+
+<em><a href="/GB/35465/369291/index.html">历史文化</a></em>
+
+<em><a href="/GB/35465/369289/index.html">城市文化</a></em>
+
+<em><a href="/GB/35465/369286/index.html">文艺出版</a></em>
+
+<em><a href="http://japan.people.com.cn/GB/35465/35489/index.html">国民教育</a></em>
+
+<em><a href="/GB/35465/370057/index.html">文化交流</a></em>
+
+
+</h2>
+     <div class="p5_left">
+       <div class="fl mt10">
+          <h2 class="tit5">
+           <span><a href="#">语言加油站</a></span><em><a href=""><img src="/img/2013ribenpd/images/tit5_em3.gif" width="6" height="29" /></a></em>
+           </h2><div><a href="http://japan.people.com.cn/GB/368783/index.html" target="_blank"><img src="/NMediaFile/2013/0829/MAIN201308291921162025996528608.jpg" width="270" height="63" border="0"/></a></div>
+         <ul class="list_12 bg_n mt10 mb10 ">
+<li><a href='/n/2015/0611/c374117-27139391.html' target="_blank">中央文献重要术语日文译文发布</a></li>
+<li><a href='/n/2015/0612/c374115-27146150.html' target="_blank">【用日语读唐诗】杨万里——晓出净慈寺…</a></li>
+<li><a href='/n/2015/0612/c35468-27146314.html' target="_blank">【看日剧 学日语】之《Mother …</a></li>
+<li><a href='/n/2015/0618/c374112-27176631.html' target="_blank">【毕业季】日本名人送给毕业生的青春寄语</a></li>
+</ul>
+         <h2 class="tit5">
+           <span>双语新闻</span><em><a href=""><img src="/img/2013ribenpd/images/tit5_em3.gif" width="6" height="29" /></a></em>
+           </h2>
+         <ul class="list_12 bg_n"><li><a href='/n/2014/1224/c374120-26267081.html' target="_blank">【日语语法】“知る”和“分かる…</a></li>
+<li><a href='/n/2014/1219/c374120-26240134.html' target="_blank">日语拟声拟态词分类记忆【は、ひ…</a></li>
+<li><a href='/n/2014/1219/c374120-26239895.html' target="_blank">【日语语法】“しか”和“だけ”…</a></li>
+<li><a href='/n/2014/1212/c374120-26196395.html' target="_blank">日语拟声拟态词分类记忆【に、の…</a></li>
+<li><a href='/n/2014/1212/c374120-26198250.html' target="_blank">2014年12月新日语能力考试…</a></li>
+<li><a href='/n/2014/1212/c374120-26198405.html' target="_blank">2014年12月新日语能力考试…</a></li>
+<li><a href='/n/2014/1204/c374120-26147046.html' target="_blank">临时抱佛脚——日语能力考N1、…</a></li>
+<li><a href='/n/2014/1208/c374120-26169886.html' target="_blank">模棱两可的日语词汇 说者有心听…</a></li>
+<li><a href='/n/2014/1128/c374120-26112831.html' target="_blank">日语能力考错题集：N1常见考点…</a></li>
+<li><a href='/n/2014/1128/c374120-26113325.html' target="_blank">日语拟声拟态词分类记忆【た、と…</a></li>
+</ul>
+       </div>
+       <div class="fr mt10">
+        <a href="http://japan.people.com.cn/GB/35462/392640/399396/index.html" ><img src="/NMediaFile/2015/1012/MAIN201510121320475837724906952.jpg"  alt="中华文化进日本"/></a>
+<a href="http://japan.people.com.cn/GB/35462/390558/index.html" ><img src="/NMediaFile/2014/1120/MAIN201411201132041173693041364.jpg"  alt="未标题-1"/></a>
+
+        <!--flash 日本大学生-->
+        <script language="JavaScript">
+$(document).ready(function(){
+	$(".jCarouselLite").jCarouselLite({
+    btnNext: ".prev",
+    btnPrev: ".next",
+	speed: 1000,
+	auto: 2000,	
+	visible:3
+    });
+	});
+</script>
+        <div class="mt10 p5_pic">
+         <div class="img_3d" id="img_3d_list1">
+   <img src="/img/2013ribenpd/images/left_b.jpg" width="18" height="30" class="fl" style="width:18px;height:30px;" alt="" border="0" />
+   <ul><li><a href="http://japan.people.com.cn/n/2014/0122/c35465-24191703.html" target="_blank"><img src="/NMediaFile/2014/0122/MAIN201401221551440263459838580.jpg" width="150" height="200" alt="" alt="日本私立大学学费上涨"/></a><p><a href="http://japan.people.com.cn/n/2014/0122/c35465-24191703.html" target="_blank">日本私立大学学费上涨</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2014/0107/c35465-24047749.html" target="_blank"><img src="/NMediaFile/2014/0107/MAIN201401071758349033135062319.jpg" width="150" height="200" alt="" alt="日本人气资格证有哪些？"/></a><p><a href="http://japan.people.com.cn/n/2014/0107/c35465-24047749.html" target="_blank">日本人气资格证有哪些？</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2014/0418/c35465-24914752.html" target="_blank"><img src="/NMediaFile/2014/0423/MAIN201404231538487651840800083.jpg" width="150" height="200" alt="" alt="庆应大学经济系全英语授课"/></a><p><a href="http://japan.people.com.cn/n/2014/0418/c35465-24914752.html" target="_blank">庆应大学经济系全英语授课</a></p></li>
+<li><a href="/n/2014/0121/c35465-24178278.html" target="_blank"><img src="/NMediaFile/2014/0121/MAIN201401211725281474668943625.jpg" width="150" height="200" alt="" alt="日本“高考”英语试卷什么样？"/></a><p><a href="/n/2014/0121/c35465-24178278.html" target="_blank"><b>日本“高考”英语试卷什么样？</b></a></p></li>
+<li><a href="/n/2013/1225/c35465-23942088.html" target="_blank"><img src="/NMediaFile/2013/1227/MAIN201312271639024079956047708.jpg" width="150" height="200" alt="" alt="大阪大学新学科"/></a><p><a href="/n/2013/1225/c35465-23942088.html" target="_blank"><font color=#000000><b>大阪大学新学科</b></font></a></p></li>
+</ul>
+   <img src="/img/2013ribenpd/images/right_b.jpg" width="18" height="30" class="fr" style="width:18px;height:30px;" alt="" border="0" />
+</div>
+        </div>
+        <!--flash 日本大学生 end-->
+       </div>
+     </div>
+
+  <div class="p5_right mt20">
+  <div class="p5_r1" >
+  <h2 class="tit4"><span><a href="/GB/35465/index.html">文化·文艺</a></span></h2>
+           <ul class="list_12 mt5 clear"><li><a href='/n/2015/1028/c35465-27749677.html' target="_blank">日剧《朝5晚9》中“帅和尚…</a></li>
+<li><a href='/n/2015/1027/c35465-27746289.html' target="_blank">中日韩环境教育研讨会在冈山…</a></li>
+<li><a href='/n/2015/1027/c35465-27745859.html' target="_blank">台湾抗日志士李友邦事迹图片…</a></li>
+<li><a href='/n/2015/1027/c35465-27745315.html' target="_blank">才华堪比梅长苏！日本古代那…</a></li>
+<li><a href='/n/2015/1026/c35465-27740616.html' target="_blank">享受动漫盛宴 体验和风文化…</a></li>
+<li><a href='/n/2015/1026/c35465-27739871.html' target="_blank">盘点日语里有关秋天的趣味谚语</a></li>
+<li><a href='/n/2015/1026/c35465-27738899.html' target="_blank">50余国留学生汇聚北大第十…</a></li>
+<li><a href='/n/2015/1026/c35465-27738204.html' target="_blank">“孙中山、宋庆龄与日本”图…</a></li>
+<li><a href='/n/2015/1023/c35465-27732547.html' target="_blank">日本文化巡礼：霜降</a></li>
+<li><a href='/n/2015/1022/c374117-27728529.html' target="_blank">【中日双语】《小王子》经典…</a></li>
+
+</ul>
+       <h2 class="tit4 mt20"><span><a href="http://japan.people.com.cn/GB/35465/35490/index.html">教育&留学资讯</a></span></h2>
+           <ul class="list_12 mt5 clear"><li><a href='/n/2015/0907/c35465-27552459.html' target="_blank">日本留学，学习语言的两种渠道</a></li>
+<li><a href='/n/2015/0818/c35467-27479865.html' target="_blank">2014年在日本就职海外留学生…</a></li>
+<li><a href='/n/2015/0824/c35465-27507233.html' target="_blank">日本拟撤销国立大学中部分文科类…</a></li>
+<li><a href='/n/2015/0826/c35465-27519761.html' target="_blank">日本拟将“日式教育”作为产业向…</a></li>
+<li><a href='/n/2015/0819/c35465-27486610.html' target="_blank">东京理科大学明年起将实行博士课…</a></li>
+<li><a href='/n/2015/0821/c35465-27497561.html' target="_blank">日本总务省建议向海外派遣教师 …</a></li>
+</ul>
+           </div>
+  </div>
+</div>
+<!--p5 文化 end-->
+<!--p6 数码 科技 -->
+<div class="p6_content mt15">
+<a name="6"></a>
+<h2 class="tit2"><img src="/img/2013ribenpd/images/p6_tit.gif" alt="数码 科技" /><em><a href="/GB/35466/index.html">数码科技新闻一览</a></em><em><a href="/GB/35466/370074/index.html">科研成果</a></em><em><a href="/GB/35466/370073/index.html">技术前沿</a></em><em><a href="/GB/35466/35492/index.html">数码产品</a></em></h2>
+     <div class="p6_left">
+       <h4><span><a href="http://japan.people.com.cn/35465/index.html" target="_blank">日本控</a></span></h4>
+       <div class="fl">
+        <div class="p6_1"><a href="http://japan.people.com.cn/n/2015/0416/c35466-26852722.html" target="_blank"><img src="/NMediaFile/2015/0417/MAIN201504171659421146865578257.jpg" width="270" height="175" border="0" alt="松下推出45克可穿戴相机"/>松下推出45克可穿戴相机</div></a>
+
+        <div class="p6_2 mt10">
+          <h3><span><a href="http://japan.people.com.cn/n/2015/0625/c35463-27206433.html">日本机器人Pepper</a></span></h3><div class="content"><a href="http://japan.people.com.cn/n/2015/0625/c35463-27206433.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161737011400215778289.jpg" width="230" height="230" border="0" alt="日本机器人Pepper"/></a></div>
+
+          </div>
+       </div>
+       <div class="fr">
+         <h5><a href='/n/2015/0907/c35466-27552491.html' target="_blank">日本佳能开发出2.5亿像素的相机用图像传感器</a>
+</h5>
+           <ul class="list_12b"><li><a href='/n/2015/0907/c35466-27551643.html' target="_blank">日本新型空调可感知人体感受</a></li>
+<li><a href='/n/2015/0824/c35466-27504979.html' target="_blank">日本研究太关注长相或与厌食症有关</a></li>
+<li><a href='/n/2015/0825/c35467-27511257.html' target="_blank">日本无人货运飞船抵达国际空间站</a></li>
+<li><a href='/n/2015/0825/c35466-27511286.html' target="_blank">日本电磁波观测技术将用于探索木星</a></li>
+</ul>
+           <div>
+          <div class="p6_3">
+            <div class="left">
+               <h3><span><a href="#">创意新品</a></span></h3><div class="content"><a href="http://japan.people.com.cn/n/2015/0716/c35466-27314284.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161726536022982295243.jpg" width="165" height="200" border="0" alt="智能隐形眼镜　　日本一家知名隐形眼镜厂商将于今年秋季发售一款监测用隐形眼镜。该产品可以检测眼球扩张情况，并将获得的数据通过无线传输到记录装置。"/><b>智能隐形眼镜</b>　　日本一家知名隐形眼镜厂商将于今年秋季发售一款监测用隐形眼镜。该产品可以检测眼球扩张情况，并将获得的数据通过无线传输到记录装置。</a></div></a>
+
+            </div>
+             <div class="right">
+               <h3><span><a href="#">玩转秋叶原</a></span></h3><div class="content"><a href="http://japan.people.com.cn/n/2015/0623/c35466-27194070.html" target="_blank"><img src="/NMediaFile/2015/0716/MAIN201507161725120094196858523.jpg" width="165" height="200" border="0" alt="索尼将发售新款PS4　　索尼新款PS4“CUH - 1200系列”日前对外发布，与现在的CUH-1100相比，重量由2.8Kg减轻到了2.5Kg，可以节电8%。"/><b>索尼将发售新款PS4</b>　　索尼新款PS4“CUH - 1200系列”日前对外发布，与现在的CUH-1100相比，重量由2.8Kg减轻到了2.5Kg，可以节电8%。</a></div></a>
+
+             </div>
+          </div>
+          
+          </div>
+       </div>
+     </div>
+     <div class="p6_right">
+       <div class="p6_r1 ">
+         <h2 class="tit4"><span><a href="#">最新成果</a></span></h2>
+          <dl class="tw1"><dt>日本磁悬浮列车时速590公里</dt>
+            <dd><a href="http://japan.people.com.cn/n/2015/0417/c35466-26859146.html" target="_blank"><img src="/NMediaFile/2015/0417/MAIN201504171712456364826495759.jpg" width="100" height="83" border="0" alt="日本磁悬浮列车在试验线上创造了载人行驶时速590公里的世界纪录。"/>日本磁悬浮列车在试验线上创造了载人行驶时速590公里的世界纪录。</dd></a>
+<dt>日本现宇航员机器人</dt>
+            <dd><a href="http://japan.people.com.cn/n/2015/0329/c35466-26766228.html" target="_blank"><img src="/NMediaFile/2015/0417/MAIN201504171712454911224776679.jpg" width="100" height="83" border="0" alt="世界首个机器人宇航员创造了吉尼斯世界纪录。"/>世界首个机器人宇航员创造了吉尼斯世界纪录。</dd></a>
+<dt>日本开发3D打印新材料</dt>
+            <dd><a href="http://japan.people.com.cn/n/2015/0410/c35466-26827230.html" target="_blank"><img src="/NMediaFile/2015/0417/MAIN201504171712453375681458346.jpg" width="100" height="83" border="0" alt="日本开发出3D打印新材料，柔软易涂饰触感逼真。&#13;"/>日本开发出3D打印新材料，柔软易涂饰触感逼真。
+</dd></a>
+<dt>日本“植物工厂”热潮</dt>
+            <dd><a href="http://www.chinese.peopledaily.jp/n/2014/1008/c35466-25786411.html" target="_blank"><img src="/NMediaFile/2014/1013/MAIN201410131514576305565689033.jpg" width="100" height="83" border="0" alt="日本国内的植物工厂目前已经迎来了第3次投建热潮。"/>日本国内的植物工厂目前已经迎来了第3次投建热潮。</dd></a>
+</dl>
+       </div>
+     </div>
+</div>
+<!--p6 数码 科技 end-->
+<!--p8 娱乐 -->
+<div class="p8_content mt15">
+<a name="3"></a>
+<h2 class="tit2"><img src="/img/2013ribenpd/images/p8_tit.gif" alt="娱乐" /><em><a href="/GB/35468/index.html">娱乐新闻一览</a></em>
+
+<em><a href="/GB/35468/368858/index.html">modelpress</a> 
+</em>
+
+<em><a href="/GB/35468/35502/index.html">演出综艺</a>
+</em>
+
+<em><a href="/GB/35468/35499/index.html">动漫资讯</a>
+</em>
+<em><a href="/GB/35468/35500/index.html">影视播报</a>
+</em>
+
+<em><a href="/GB/35468/35501/index.html">星闻星讯</a>
+</em></h2>
+
+</em>
+     <div class="p8_left">
+       <div class="fl mt10">
+         <h3><a href="http://japan.people.com.cn/GB/35468/35501/index.html">星闻星讯</a></h3>
+         <ul class="list_12  "><li><a href='/n/2015/1027/c35468-27746269.html' target="_blank">竹野内丰、斋藤工…最不希望哪位日本男星…</a></li>
+<li><a href='/n/2015/1027/c35468-27745514.html' target="_blank">凯蒂猫与指原莉乃·横山由依等共同演唱《…</a></li>
+<li><a href='/n/2015/1027/c35468-27744661.html' target="_blank">有村架纯赴港宣传《垫底辣妹》 鼓励考生</a></li>
+<li><a href='/n/2015/1027/c35468-27743538.html' target="_blank">中川大志《监狱学园》未播先火 受海外热捧</a></li>
+<li><a href='/n/2015/1026/c35468-27740629.html' target="_blank">看看都有谁中枪！日本“伪帅哥”名人排行榜</a></li>
+<li><a href='/n/2015/1026/c35468-27740501.html' target="_blank">福山雅治、山本耕史……哪位男星的婚讯最…</a></li>
+
+</ul>
+         <h3 class="mt5">-热播剧集-</h3><div><a href="http://japan.people.com.cn/n/2015/0824/c35468-27507773.html" target="_blank"><img src="/NMediaFile/2015/0827/MAIN201508271507543794920283552.jpg" width="270" height="48" border="0" alt="QQ截图20150827150052_副本副本"/></a></div>
+<div><a href="http://japan.people.com.cn/GB/35468/35500/390641/index.html" target="_blank"><img src="/NMediaFile/2014/1205/MAIN201412051004100901677721415.jpg" width="270" height="48" border="0"/></a></div>
+
+         
+         
+       </div>
+       <div class="fr mt15">
+      <img src="/img/2013ribenpd/images/mingxing.jpg" alt="" border="0" />
+        <div class="img_3d" id="img_3d_list">
+   <img src="/img/2013ribenpd/images/left_b.jpg" width="18" height="30" class="fl" alt="" border="0" />
+   <ul><li><a href="http://www.chinese.peopledaily.jp/n/2014/0928/c35468-25753062.html" target="_blank"><img src="/NMediaFile/2014/0928/MAIN201409281635011882567518630.jpg" width="150" height="200" alt="" alt="《花子与安妮》完结"/></a><p><a href="http://www.chinese.peopledaily.jp/n/2014/0928/c35468-25753062.html" target="_blank">《花子与安妮》完结</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/0209/c35468-26533486.html" target="_blank"><img src="/NMediaFile/2015/0209/MAIN201502091730243204491362227.jpg" width="150" height="200" alt="" alt="龟梨和也、深田恭子爱情剧开播"/></a><p><a href="http://japan.people.com.cn/n/2015/0209/c35468-26533486.html" target="_blank">龟梨和也、深田恭子爱情剧开播</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/0826/c35468-27518675.html" target="_blank"><img src="/NMediaFile/2015/0827/MAIN201508271453419988669849487.jpg" width="150" height="200" alt="" alt="北川景子密会被拍"/></a><p><a href="http://japan.people.com.cn/n/2015/0826/c35468-27518675.html" target="_blank">北川景子密会被拍</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/0403/c35468-26795591.html" target="_blank"><img src="/NMediaFile/2015/0406/MAIN201504061014423757918410131.jpg" width="150" height="200" alt="" alt="大岛优子拍摄糖果广告"/></a><p><a href="http://japan.people.com.cn/n/2015/0403/c35468-26795591.html" target="_blank">大岛优子拍摄糖果广告</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/0316/c35468-26698599.html" target="_blank"><img src="/NMediaFile/2015/0317/MAIN201503171026305366082204165.jpg" width="150" height="200" alt="" alt="最受女性憧憬艺人"/></a><p><a href="http://japan.people.com.cn/n/2015/0316/c35468-26698599.html" target="_blank">最受女性憧憬艺人</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/0306/c35468-26646578.html" target="_blank"><img src="/NMediaFile/2015/0306/MAIN201503061627008747150319464.jpg" width="150" height="200" alt="" alt="新垣结衣红衣黑裙"/></a><p><a href="http://japan.people.com.cn/n/2015/0306/c35468-26646578.html" target="_blank">新垣结衣红衣黑裙</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/0204/c35468-26507623.html" target="_blank"><img src="/NMediaFile/2015/0204/MAIN201502041712255097445678836.jpg" width="150" height="200" alt="" alt="成宫宽贵从《相棒》毕业"/></a><p><a href="http://japan.people.com.cn/n/2015/0204/c35468-26507623.html" target="_blank">成宫宽贵从《相棒》毕业</a></p></li>
+<li><a href="http://japan.people.com.cn/n/2015/0130/c35468-26480600.html" target="_blank"><img src="/NMediaFile/2015/0130/MAIN201501301707165507166457880.jpg" width="150" height="200" alt="" alt="绫野刚主演《新宿天鹅》"/></a><p><a href="http://japan.people.com.cn/n/2015/0130/c35468-26480600.html" target="_blank">绫野刚主演《新宿天鹅》</a></p></li>
+</ul>
+   <img src="/img/2013ribenpd/images/right_b.jpg" width="18" height="30" class="fr" alt="" border="0" />
+</div>
+       </div>
+  </div>
+     <div class="p8_right">
+     <div class="p8_r1 mt20">
+         <h2 class="tit4"><span><a href="http://japan.people.com.cn/GB/35468/35499/index.html">动漫资讯</a></span></h2>
+         <ul class="list_12 mt5 mb10 clear"><li><a href='/n/2015/1026/c35468-27741718.html' target="_blank">日本63部知名漫画将以正版电子…</a></li>
+<li><a href='/n/2015/1020/c35468-27718803.html' target="_blank">《柯南》曝终极预告 工藤新一银…</a></li>
+<li><a href='/n/2015/1008/c35468-27670301.html' target="_blank">安西教练第一！理想的漫画人物上…</a></li>
+<li><a href='/n/2015/0921/c35468-27613706.html' target="_blank">第19部柯南电影《名侦探柯南：…</a></li>
+<li><a href='/n/2015/0920/c35468-27609082.html' target="_blank">吉卜力工作室将获釜山电影节“年…</a></li>
+
+</ul>
+       <h2 class="tit4"><span><a href=" 
+http://japan.people.com.cn/GB/35468/35500/index.html ">影视播报</a></span></h2>
+         <ul class="list_12 mt5 mb10 clear"><li><a href='/n/2015/1028/c35465-27749677.html' target="_blank">日剧《朝5晚9》中“帅和尚”山…</a></li>
+<li><a href='/n/2015/1026/c35468-27740620.html' target="_blank">阿部宽《下町火箭》发力 第二集…</a></li>
+<li><a href='/n/2015/1026/c35468-27738626.html' target="_blank">钟情J家！日本人喜爱的杰尼斯艺…</a></li>
+<li><a href='/n/2015/1023/c35468-27732445.html' target="_blank">小田切让主演《点心之家》首集收…</a></li>
+<li><a href='/n/2015/1023/c35468-27732442.html' target="_blank">向井理主演《遗产争族》首集收视…</a></li>
+
+</ul>
+       </div>
+     </div>
+</div>
+<!--p8 娱乐 end-->
+<!--p9 明星写真-->
+<div class="p9_content">
+  <ul>
+    <li class="w133">
+      <a href=""><img src="/img/2013ribenpd/images/p9_1.gif" width="133" height="132" /></a>
+        <div class="pic_01"><a href="http://japan.people.com.cn/n/2015/0617/c35468-27170142.html" target="_blank"><img src="/NMediaFile/2015/0623/MAIN201506231449409107468752054.jpg" width="133" height="281" border="0" alt="木村文乃挑战刑警扮相"/><span>木村文乃挑战刑警扮相</span></div></a>
+
+    </li>
+    <li class="w260">
+      <div class="pic_02"><a href="http://japan.people.com.cn/n/2015/0827/c35468-27524088.html" target="_blank"><img src="/NMediaFile/2015/0827/MAIN201508271447545049706925627.jpg" width="260" height="454" border="0" alt="日本娱乐圈的“费洛蒙女子”"/><span>日本娱乐圈的“费洛蒙女子”</span></div></a>
+
+    </li>
+    <li class="w413">
+      <div class="pic_03"><a href="http://japan.people.com.cn/n/2015/0826/c368232-27520834.html" target="_blank"><img src="/NMediaFile/2015/0827/MAIN201508271452273519555026590.jpg" width="413" height="205" border="0" alt="NGT48在新泻首次亮相"/><span>NGT48在新泻首次亮相</span></div></a>
+
+      <div class="pic_04"><a href="http://japan.people.com.cn/n/2015/0623/c35468-27191469.html" target="_blank"><img src="/NMediaFile/2015/0813/MAIN201508131338445468234053582.jpg" width="194" height="217" border="0" alt="童星出道的日本女演员"/><span>童星出道的日本女演员</span></div></a>
+
+      <div class="pic_05"><a href="http://japan.people.com.cn/n/2015/0826/c35468-27520337.html" target="_blank"><img src="/NMediaFile/2015/0827/MAIN201508271450528537545311978.jpg" width="217" height="220" border="0" alt="桥本环奈Cos路飞"/><span>桥本环奈Cos路飞</span></div></a>
+
+    </li>
+    <li class="w170">
+      <div class="pic_06"><a href="http://japan.people.com.cn/n/2015/0826/c35468-27520749.html" target="_blank"><img src="/NMediaFile/2015/0827/MAIN201508271449287289438964964.jpg" width="170" height="304" border="0" alt="HKT48指原莉乃出演日剧《恋仲》？"/><span>HKT48指原莉乃出演日剧《恋仲》？</span></div></a>
+
+      <div class="pic_07"><a href="http://japan.people.com.cn/n/2015/0619/c35468-27180437.html" target="_blank"><img src="/NMediaFile/2015/0623/MAIN201506231448232485563796561.jpg" width="170" height="131" border="0" alt="北川景子新剧公开最新海报"/><span>北川景子新剧公开最新海报</span></div></a>
+
+    </li>
+  </ul>
+</div> 
+<!--p9 明星写真 end-->
+<!--p10-->
+<div class="p10_content">
+  <h2>
+    <span class="one" style="cursor:pointer;" id="g1_1" onmouseover="swapGon(1)">日本百科</span>
+    <span style="cursor:pointer;" id="g1_2" onmouseover="swapGon(2)">中日交流机构</span>
+    <span style="cursor:pointer;" id="g1_3" onmouseover="swapGon(3)">友情链接</span>
+
+  </h2>
+  <div id="g2_1" style="display:block">
+    <a href="/n/2013/0904/c35421-22806194.html" target="_red">概况</a></font>
+<a href="/n/2013/0904/c35421-22808312.html" target="_red">简史</a></font>
+<a href="/n/2013/0904/c35421-22808319.html" target="_red">经济</a></font>
+<a href="/n/2013/0904/c35421-22808320.html" target="_red">外交</a></font>
+<a href="/n/2013/0904/c35421-22808322.html" target="_red">军事</a></font>
+<a href="/n/2013/0904/c35421-22808348.html" target="_red">自然地理</a></font>
+<a href="/n/2013/0904/c35421-22808355.html" target="_red">宪法及政治</a></font>
+<a href="/n/2013/0904/c35421-22808365.html" target="_red">教育与文化</a></font>
+<a href="/n/2013/0904/c35421-22808368.html" target="_red">风俗习惯</a></font>
+<a href="/n/2013/0904/c35421-22808403.html" target="_red">历史名人</a></font>
+<a href="/n/2013/0904/c35421-22808408.html" target="_red">行政区划</a></font>
+<a href="/n/2013/0904/c35421-22808444.html" target="_red">新闻出版</a></font>
+<a href="/n/2013/0904/c35421-22808453.html" target="_red">主要节日</a></font>
+<a href="/n/2013/0904/c35421-22808476.html" target="_red">风景名胜</a></font>
+<a href="/n/2013/0905/c35421-22816142.html" target="_red">二战后的日本首相</a></font>
+  </div>
+  <div id="g2_2" style="display:none">
+    <a href="http://www.china-embassy.or.jp/chn/" target="_red">中国驻日本大使馆</a></font>
+<a href="http://www.cn.emb-japan.go.jp/" target="_red">日本驻华大使馆</a></font>
+<a href="http://osaka.china-consulate.org/chn/" target="_red">中国驻大阪总领事馆 </a></font>
+<a href="http://www.chn-consulate-fukuoka.or.jp/chn/" target="_red">中国驻福冈总领事馆</a></font>
+<a href="http://www.chn-consulate-sapporo.or.jp/chn/" target="_red">中国驻札幌总领事馆</a></font>
+<a href="http://nagasaki.china-consulate.org/chn/" target="_red">中国驻长崎总领事馆</a></font><br>
+<a href="http://niigata.china-consulate.org/chn/" target="_red">中国驻新潟总领事馆</a></font>
+<a href="http://nagoya.china-consulate.org/chn/" target="_red">中国驻名古屋总领事馆</a></font>
+<a href="http://www.shanghai.cn.emb-japan.go.jp/cn/index_cn.htm" target="_red">日本驻上海总领事馆</a></font>
+<a href="http://www.guangzhou.cn.emb-japan.go.jp/cgjp_cn/" target="_red">日本驻广州总领事馆</a></font>
+<a href="http://www.chongqing.cn.emb-japan.go.jp/index_c.htm" target="_red">日本驻重庆总领事馆</a></font>
+<a href="http://www.shenyang.cn.emb-japan.go.jp/cn/" target="_red">日本驻沈阳总领事馆</a></font>
+
+  </div>
+  <div id="g2_3" style="display:none">
+    <a href="http://j.people.com.cn/" target="_red">人民网日文版</a></font> 
+<a href="http://japan.xinhuanet.com/" target="_red">新华网日本频道</a></font> 
+<a href="http://www.recordjapan.net/" target="_red">RecordJapan记录日本</a></font> 
+<a href="http://www.keguanjp.com/" target="_red">客观日本</a></font>
+<a href="http://www.cccnews.com.cn/" target="_red">中国动漫产业网</a></font> 
+<a href="http://www.517japan.com/" target="_red">日本通</a></font> 
+<a href="http://australia.people.com.cn/" target="_red">人民网澳洲频道</a></font> 
+<a href="http://jp.hjenglish.com/" target="_red">沪江日语</a></font>
+<a href="http://www.dlzrwh.com/" target="_red">大连中日文化交流协会</a></font> 
+<a href="http://www.ccdp.gov.cn/" target="_red">浙江长兴经济开发区</a></font>
+  </div>
+  <div id="g2_4" style="display:none">
+    
+  </div>
+</div>
+<!--p10 end-->
+
+<!--copyright-->
+<div class="copyright"><style type="text/css">
+#copyright{width:980px; margin:0px auto; font-size:12px; text-align:center; padding:20px 0; line-height:180%; clear:both;}
+</style>
+<div id="copyright">人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br />
+Copyright &copy; 1997-2015 by www.people.com.cn. all rights reserved</div></div>
+<script type="text/javascript">
+/* ==== start script ==== */
+slider.init();
+</script>
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>

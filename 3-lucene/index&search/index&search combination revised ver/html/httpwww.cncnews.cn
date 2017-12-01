@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta name="baidu_union_verify" content="559ee74141b5f217d82557d3b4063198">
+<title>新华网络电视</title>
+<base target="_blank" />
+<!--seo begin-->
+<meta name="keywords" content="新华网络电视,新华社,新华通讯社,新华社发布,CNC,新闻中心,新闻,时政,财经,体育,文娱,纪录片,直播">
+<meta name="description" content="新华网络电视是新华社CNC旗下的跨平台网络新媒体，以全球视角及时、准确、权威的报道国内外时政、经济、文化等领域的重要新闻资讯。">  
+<!--seo end-->
+
+<link type="text/css" href="http://news.cncnews.cn/2015-05-11/upload/index0511.css?ver=20150511" rel="stylesheet"/>
+<link type="text/css" href="http://img1.cncnews.cn/201309/css/menu_hash.css?ver=20131212_1" rel="stylesheet" />
+<link rel="stylesheet" href="http://img2.cncnews.cn/201305/css/jquery-ui.css" />
+<script language="JavaScript" src="http://img3.cncnews.cn/201305/js/jquery-1.7.1.js"></script>
+<script language="JavaScript" src="http://img4.cncnews.cn/201305/js/jquery-ui.js"></script> 
+<script type="text/javascript" src="http://img5.cncnews.cn/201309/js/index.js"></script>
+<script type="text/javascript" src="http://img6.cncnews.cn/201309/js/menu.js"></script>
+<script type="text/javascript" src="http://img7.cncnews.cn/201309/js/jquery.masonry.min.js"></script> 
+<script type="text/javascript" src="http://img8.cncnews.cn/201309/js/lrtk.js"></script>
+
+<script>
+var __id='124020568';
+var __titles='新华网络电视';
+var __urls='http://www.cncnews.cn/index.html';
+var __type='5';
+var __channelid='182';
+var __channelname='新华社网络电视';
+var __priority='90';
+var __category='124020568';
+</script>
+
+<script>
+document.domain="cncnews.cn";
+var time;
+function show(obj){
+var shareid= $(obj).attr("shareid");
+ $("#"+shareid).slideDown();
+clearTimeout(time);
+}
+function hide(obj){
+ var shareid= $(obj).attr("shareid");
+ time=setTimeout(function(){intervalRun(shareid)},1000);
+}
+function intervalRun(shareid){
+$('#'+shareid).slideUp("slow");
+}
+function load(){
+    $('.list').masonry({
+        itemSelector:'.list li',
+        columnWidth:0
+    });
+   
+var height=$(".xin_c_right").height();
+var index_xin_y=$(".index_xin_y").height();
+var top=$("#xin_c_jac").offset().top;
+var offst=$(".xin_c_right").offset().top;
+var offtop=$(".index_xin_y").offset().top;
+var tmp=$(".xin_c_jzai ul").height();
+if(screen.height<1024||document.documentElement.clientHeight<500){offst=220;}
+window.onscroll = function(){
+	var t = document.documentElement.scrollTop || window.pageYOffset ; 
+
+    //菜单
+	var $menu=$("#xin_c_jac");
+	if( t +$(".xin_c_jdt").offset().top>=top) {
+        $menu.removeClass('xin_c_jac').addClass('xin_c_jac_run');
+    }else{
+		$menu.addClass('xin_c_jac').removeClass('xin_c_jac_run');
+	}
+	
+	//右侧
+	if(t-index_xin_y> offtop+ $(".xin_y_soso").height()){
+		$("#index_xin_y").addClass('xin_y_xinxi_run');
+		$("#index_xin_y").css('left',$(".index_xin_y").offset().left);
+	}else{
+		$("#index_xin_y").removeClass('xin_y_xinxi_run');
+	}    
+	
+	//中间
+	if(t-height+offst>0){
+		$("#xin_c_right").addClass('xin_c_right_run');
+	}else{
+		$("#xin_c_right").removeClass('xin_c_right_run');
+	}
+}
+
+}
+function getnews(obj,page,flag){
+
+	$(".xin_c_yaowen p a").each(function(){
+		$(this).removeClass("djt").removeClass("djt_m");
+		if($(this).attr('id')==obj){
+            if($(this).html().length>2){			
+                $(this).addClass("djt_m");
+            }else{
+				$(this).addClass("djt");
+            }
+		}
+	});
+	setCookie('channel',obj);
+         if(obj==1){flag=false;obj=$("a[name='last']").html();}
+	if (flag == 'hidden') {// 处理+号下拉列表的
+        flag = true;
+        if ($("#" + obj).html().length > 2) {
+            $("a[name='last']").html($("#" + obj).html()).addClass("djt_m");
+        } else {
+            $("a[name='last']").html($("#" + obj).html()).addClass("djt");
+        }
+		$("#dropmenu li a").each(function() {
+			$(this).css('display', 'block');
+			if ($(this).attr('id') == obj) {
+				$(this).css("display", "none");
+			}
+		});
+        $("a[name='last']").attr("id", obj);
+    }
+	
+	if(flag){//栏目搜索新闻
+		setCookie('type',1);
+		document.domain = "cncnews.cn";
+		if(page ==1){
+			$.getScript("http://www.cncnews.cn/static/"+obj+".js?time="+new Date().getTime(),function(){
+				showHtml(obj,data,page,flag);
+			});
+		}else{
+			var newpage = eval(page)+1;
+			$.getScript("http://data.cncnews.cn/cnc/news_list.jsp?column_id="+obj+"&pageno="+newpage+"&pagesize=15&type=1&time="+new Date().getTime(),function(){
+
+				showHtml(obj,data,page,flag);
+
+			});
+		}
+	}else{//关键词搜索
+		setCookie('type',2);
+		if (obj.length > 2) {
+			$("a[name='last']").html(obj).addClass("djt_m").attr("id","1");
+		}else{
+			$("a[name='last']").html(obj).addClass("djt").attr("id","1");
+		}
+		$("#dropmenu li a").each(function() {
+			$(this).css('display', 'block');
+		});
+		
+		$.getScript("http://data.cncnews.cn/cnc/news_list.jsp?column_id="+obj+"&pageno="+page+"&pagesize=30&type=2&time="+new Date().getTime(),function(){
+			showHtml(obj,data,page,flag);
+		});
+	}
+	
+	
+}
+
+function setCookie(name, value) { 
+    var argv = setCookie.arguments; 
+    var argc = setCookie.arguments.length; 
+    var expires = (argc > 2) ? argv[2] : null; 
+    if(expires!=null) { 
+        var LargeExpDate = new Date (); 
+        LargeExpDate.setTime(LargeExpDate.getTime() + (expires*1000*3600*24));         
+    } 
+    document.cookie = name + "=" + escape (value)+((expires == null) ? "" : ("; expires=" +LargeExpDate.toGMTString())); 
+}
+
+function showHtml(obj,data,page,flag){
+	var html="";
+	if(page>1){
+		html=$(".xin_c_jzai ul").html();
+	}
+	
+	data=data.body.news_set;	
+	if(data!=''){
+		for(var i=0;i<data.length;i++){
+			var news=data[i];
+            var newsurl = news.url;
+            var reg =  /(\d{9})\.html/ig;                     
+		    if(news.image_set.image_url!=''){
+				
+                if(!reg.test(newsurl)){
+					html+="<li><b class='bh_img'><a href='"+news.url+"'><img src='"+news.image_set.image_url+"' alt='"+news.title+"'  />";
+html+="</a></b><span><small><a href='"+news.url+"' >"+news.title+"</a></small>";
+
+
+                    html +="<strong><a href='"+news.url+"'><img src='http://img.cncnews.cn/201309/img/xin_016.jpg' width='35' height='18'alt='"+news.title+"' /></a></strong>";
+				}else{
+					html+="<li><b class='bh_img'><a href='"+news.url+"'><img src='"+news.image_set.image_url+"' alt='"+news.title+"'  />";
+if(news.subtype ==4){
+		html+="<font class='bh-play'></font>";
+}
+html+="</a></b><span style='width:355px'><small><a href='"+news.url+"'>"+news.title+"</a></small>";
+				}
+
+				html+="</span><font>"+news.abstract +"</font>";
+			}else{
+				html+="<li><span><small><a href='"+news.url+"' style='width:400px;'>"+news.title+"</a></small>";
+                    if(!reg.test(news.url)){
+                        html+="<strong><a href='#'><img src='http://img.cncnews.cn/201309/img/xin_016.jpg' width='35' height='18' /></a></strong>";
+                    }
+
+				html+="</span><font style='width:450px;' >"+news.abstract +"</font>";
+			}
+		
+			var arr=new Array()
+			arr=news.keyword.split(" ");
+            var shareid = 'sub_'+i;
+			html+="<big><div id='menu'><dl id='nav'  ><dd class='mainlevel' id='mainlevel_01' ><a href='#' target='_self' ><img src='http://img.cncnews.cn/201309/img/xin_017.jpg' width='18' height='17' onmouseover='show(this)' onmouseout='hide(this)' shareid='"+shareid+"' /></a><dl id='sub_"+i+"'  onmouseover='show(this)' onmouseout='hide(this)' shareid='"+shareid+"' ><dd><font>分享到：</font>";
+                    
+            html+="<a href='javascript:void(0)' target='_self' onclick='nshare(1,this);' npic='"+news.image_set.image_url+"' ntitle='"+news.title+"' nurl='"+news.url+"'  ><img src='http://img.cncnews.cn/2013-10-18/124024274.jpg' /></a>";
+			html+="<a href='javascript:void(0)' target='_self' onclick='nshare(2,this);' npic='"+news.image_set.image_url+"' ntitle='"+news.title+"' nurl='"+news.url+"' ><img src='http://img.cncnews.cn/2013-10-18/124024357.jpg'   /></a>";
+			html+="<a href='javascript:void(0)' target='_self' onclick='nshare(3,this);' npic='"+news.image_set.image_url+"' ntitle='"+news.title+"' nurl='"+news.url+"' ><img src='http://img.cncnews.cn/2013-10-18/124024358.gif'  /></a>";
+			html+="</dd></dl></dd></dl></div>";
+			for(var j=0;j<arr.length;j++){
+				html+="<a href='javascript:void(0)' onclick='javascript:getnews($(this).html(),1,false);' target='_self'>"+arr[j]+"</a>";
+			}
+			html+="</big>";
+		
+			html+="</li>";
+		}
+$(".xin_c_jzgd p a img").unbind('click'); //解除绑定
+		$(".xin_c_jzgd p a img").click(function() {
+			getnews(obj,++page,flag);
+			 $(".xin_c_jzgd p a img").unbind('click'); //解除绑定
+			}); 
+		$(".xin_c_jzgd").show();
+	}else{
+		$(".xin_c_jzgd").hide();
+	}
+	$(".xin_c_jzai ul").html(html);
+
+}
+
+$(function() {
+var index=0;
+	var text=getCookie('channel');
+	if(text!=null){
+		if(getCookie('type')==2){
+			if (text.length > 2) {
+				$("a[name='last']").html(text).addClass("djt_m");
+			}else{
+				$("a[name='last']").html(text).addClass("djt");
+			}
+			getnews(text,1,false);
+		}else{
+			$(".xin_c_yaowen p a").each(function(){
+				if($(this).attr("id")==text){
+					index++;
+				}
+			});
+			if(index==0){
+				if ($("#"+text).html().length > 2) {
+					$("a[name='last']").html($("#"+text).html()).addClass("djt_m");
+				}else{
+					$("a[name='last']").html($("#"+text).html()).addClass("djt");
+				}
+				$("a[name='last']").attr("id",text);
+				getnews(text,1,'hidden');
+			}else{
+				getnews(text,1,true);
+			}
+		}
+	}else{		
+		getnews($(".djt").attr("id"),1,true);
+	}
+function getCookie(name){
+ var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ if(arr=document.cookie.match(reg))
+  return unescape(arr[2]);
+ else
+  return null;
+} 
+ 
+	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+	var len = $("#focus ul li").length; //获取焦点图个数
+	var index = 0;
+	var picTimer;
+	
+	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	for(var i=0; i < len; i++) {
+		btn += "<span></span>";
+	}
+	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+	$("#focus").append(btn);
+	$("#focus .btnBg").css("opacity",0.5);
+
+	//为小按钮添加鼠标滑入事件，以显示相应的内容
+	$("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+		index = $("#focus .btn span").index(this);
+		showPics(index);
+	}).eq(0).trigger("mouseenter");
+
+	//上一页、下一页按钮透明度处理
+	$("#focus .preNext").css("opacity",0.2).hover(function() {
+		$(this).stop(true,false).animate({"opacity":"0.5"},300);
+	},function() {
+		$(this).stop(true,false).animate({"opacity":"0.2"},300);
+	});
+
+	//上一页按钮
+	$("#focus .pre").click(function() {
+		index -= 1;
+		if(index == -1) {index = len - 1;}
+		showPics(index);
+	});
+
+	//下一页按钮
+	$("#focus .next").click(function() {
+		index += 1;
+		if(index == len) {index = 0;}
+		showPics(index);
+	});
+
+	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+	$("#focus ul").css("width",sWidth * (len));
+	
+	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+	$("#focus").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			showPics(index);
+			index++;
+			if(index == len) {index = 0;}
+		},7000); //此4000代表自动播放的间隔，单位：毫秒
+	}).trigger("mouseleave");
+	
+	//显示图片函数，根据接收的index值显示相应的内容
+	function showPics(index) { //普通切换
+		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+		//$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+	}
+});
+function nshare(type,obj){
+	var url ="";
+	var title ="";
+	var pic  ="";
+	var openurl ="";
+	var source ="新华网络电视";
+    if(type ==1){
+		url = $(obj).attr("nurl");
+		title = $(obj).attr("ntitle");
+		pic = $(obj).attr("npic");
+		openurl = "http://service.weibo.com/share/share.php?url="+url+"&pic="+pic+"&title="+title+"&source="+source+"&sourceUrl=http://www.cncnews.cn&content=utf8&appkey=203126453&ralateUid=1797507374";
+		window.open(openurl);
+	}if(type ==2){
+		url = $(obj).attr("nurl");
+		title = $(obj).attr("ntitle");
+		pic = $(obj).attr("npic");
+		openurl="http://share.v.t.qq.com/index.php?c=share&a=index&url="+url+"&title="+title+"&pic="+pic;
+		window.open(openurl);
+	}else if(type ==3){
+		url = $(obj).attr("nurl");
+		title = $(obj).attr("ntitle");
+		pic = $(obj).attr("npic");
+		openurl="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+url+"&title="+title+"&pic="+pic;
+		window.open(openurl);
+	}
+}
+
+
+</script>
+
+
+<!--[if IE 6]>
+ <style type="text/css">
+     body{overflow:hidden;position:relative}
+	 /* IE6浏览器的特有方法 */
+	/* 修正IE6振动bug */
+	 * html,* html body{background-image:url(about:blank);background-attachment:fixed;}
+	* html .index_xin,* html .xin_c_xwww,* html .xin_zding,* html .xin_y_soso{position:absolute;left:expression(eval(document.documentElement.scrollLeft));
+	top:expression(eval(document.documentElement.scrollTop))} 
+	</style>
+ <![endif]--></head>
+ 
+<body onload="load()">
+ 
+<!--顶部开始-->
+<div class="index_xin">
+<div class="index_xin_xhs">
+<h1>International&nbsp;　     <a href="http://en.cncnews.cn/">English</a>&nbsp;  |  &nbsp;<a href="http://sp.cncnews.cn/">Espa&ntilde;ol</a> |  &nbsp;<a href="http://fr.cncnews.cn/">Fran&ccedil;ais</a></h1>
+<p>
+<a id="dingzhi" class="cnc_dibu" target="_self" href="#" onclick="dingzhi()" >我的定制</a> 
+<a id="loginname" href="javascript:void(0);" onclick="javascript:login();" target="_self">登录</a><a id="logout" href="javascript:void(0);" onclick="javascript:reg();" target="_self">注册
+<a href="javascript:void(0);" onclick="addfavorite()" target="_self">收藏</a>
+<a href="javascript:void(0);" onclick="SetHome(this,window.location)" target="_self">设为首页</a>
+</p>
+
+<h2><script language=JavaScript>
+<!--
+var enabled = 0; today = new Date();
+var day; var date;
+if(today.getDay()==0) day = " 星期日"
+if(today.getDay()==1) day = " 星期一"
+if(today.getDay()==2) day = " 星期二"
+if(today.getDay()==3) day = " 星期三"
+if(today.getDay()==4) day = " 星期四"
+if(today.getDay()==5) day = " 星期五"
+if(today.getDay()==6) day = " 星期六"
+document.fgColor = "000000";
+date = "" + today.getFullYear() + "年" + (today.getMonth() + 1 ) + "月" + today.getDate() + "日" + day +"";
+document.write(date);
+// -->
+</script></h2>
+</div>
+
+</div>
+<script>
+function dingzhi(){
+   if(islogin){ 
+      $("#dingzhi").attr("href","http://me.cncnews.cn/me").attr("target","_blank");
+   }else{
+       login();
+   }
+}
+
+function addfavorite(){
+   if (document.all){
+      window.external.addFavorite('http://www.cncnews.cn','收藏夹');
+   }else if (window.sidebar){
+      window.sidebar.addPanel('新华网络电视', 'http://www.cncnews.cn', "");
+   }
+}
+function SetHome(obj,vrl){
+        try{
+                obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+                if(window.netscape) {
+                        try {
+                                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                        }
+                        catch (e) {
+                                alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                        }
+                        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                        prefs.setCharPref('browser.startup.homepage',vrl);
+                 }
+        }
+}
+</script>
+
+<!--顶部结束-->
+ <!--正文-->
+<div class="index_xin_quan">
+<div class="index_xin_zong">
+<!--左-->
+<div class="index_xin_z">
+<div class="xin_zding">
+<p><a href="http://www.cncnews.cn/index.html" target=_self><img src="http://img.cncnews.cn/2013-11-11/124027286.gif" width=145 height=91></a></p>
+<div class=xin_lb>
+<ul>
+<li class=lb_a><a href="http://www.cncnews.cn/index.html" target=_self>首页</a></li>
+
+<li class="lb_a lb_b"><a href="http://news.cncnews.cn/index.html" target=_self>新闻</a></li>
+
+<li class="lb_a lb_c"><a href="http://finance.cncnews.cn/index.html" target=_self>财经</a></li>
+
+<li class="lb_a lb_fc"><a href="http://home.cncnews.cn/" target=_self>房产</a></li>
+
+<li class="lb_a lb_jk"><a href="http://health.cncnews.cn/" target=_self>健康</a></li>
+
+<li class="lb_a lb_d"><a href="http://ent.cncnews.cn/index.html" target=_self>文化</a></li>
+
+<li class="lb_a lb_e"><a href="http://sports.cncnews.cn/index.html" target=_self>体育</a></li>
+
+<li class="lb_a lb_f"><a href="http://photo.cncnews.cn/index.html" target=_self>图片</a></li>
+
+<li class="lb_a lb_g"><a href="http://documentary.cncnews.cn/index.html" target=_self>纪录片</a></li>
+
+<li class="lb_a lb_i"><a href="http://live.cncnews.cn/index.html" target=_self>中文台</a></li>
+
+<li class="lb_a lb_j"><a href="http://live.cncnews.cn/?t=1" target=_self>CNCWORLD</a></li>
+
+<li class="lb_a lb_cx"><a href="http://big.cncnews.cn/" target=_self>舆情监测</a></li>
+</ul>
+</div>
+<div class="xin_txw" onmousedown="javascript:audioplay();"  style="cursor:pointer">
+<img src="http://img1.cncnews.cn/2014-01-02/124046569.gif?11" />
+</div>
+
+
+
+
+
+<script>
+
+var popupflag = true;
+function audioplay(){
+
+if(popupflag){
+window.open('http://audio.cncnews.cn/jplayer/player.htm', 'newwindow', 'height=110, width=510, top=0,left=0, toolbar=no, menubar=no, scrollbars=no,resizable=no,location=no, status=no');
+//popupflag = false;
+}
+
+}
+</script>
+</div>
+</div>
+
+<div class=head-ad>
+<div class=ad-wrap>
+<p><a href="http://app.cncnews.cn/" target=_blank><img border=0 src="http://img3.cncnews.cn/2015-08-03/124294546.gif" width=890 height=70></a></p></div></div>
+
+<!--中-->
+<div class="index_xin_c">
+<div class="xin_c_tfxw">
+<div class="xin_c_xwww">
+<div align="center">
+  <SCRIPT type=text/javascript>
+				<!--
+				var rollText_k=5; //菜单总数
+				var rollText_i=1; //菜单默认值
+				//setFocus1(0);
+				rollText_tt=setInterval("rollText(1)",8000);
+				function rollText(a){
+					clearInterval(rollText_tt);
+					rollText_tt=setInterval("rollText(1)",8000);
+					rollText_i+=a;
+					if (rollText_i>rollText_k){rollText_i=1;}
+					if (rollText_i==0){rollText_i=rollText_k;}
+					//alert(i)
+					 for (var j=1; j<=rollText_k; j++){
+						$("#rollTextMenu"+j).css("display","none");
+					 }
+					 $("#rollTextMenu"+rollText_i).css("display","block");
+				 
+				} 
+				//-->
+</SCRIPT>
+  <TABLE height="29" border="0" cellspacing="0" class=rollboder>
+    <TBODY>
+      <TR>
+        <TD height="22" class=rollleft>
+<DIV class=rollTextMenus>
+
+		
+			<div id='rollTextMenu1' style='display: block;width: 100%' class='roll_zt roll_zt_m'><p style='float: left'><strong>　快讯： <a href='http://www.cncnews.cn/2015-10-28/124329844.html' target='_blank'>丹麦一架F16战斗机坠毁　飞行员弹射逃生</a></strong></p><p style='float: right;margin-top:4px;'><a title='上一条' href='javascript:void(0)' onclick='javascript:rollText(-1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024668.gif' alt='上一条' border='0' height='11' width='11'></a><a title='下一条' href='javascript:void(0)' onclick='javascript:rollText(1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024669.gif' alt='下一条' border='0' height='11' width='11'></a></p> </div><div id='rollTextMenu2' style='display: none;width: 100%' class='roll_zt roll_zt_m'><p style='float: left'><strong>　快讯： <a href='http://www.cncnews.cn/2015-10-28/124329837.html' target='_blank'>乌克兰问题三方联络小组达成释放20名俘虏协议</a></strong></p><p style='float: right;margin-top:4px;'><a title='上一条' href='javascript:void(0)' onclick='javascript:rollText(-1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024668.gif' alt='上一条' border='0' height='11' width='11'></a><a title='下一条' href='javascript:void(0)' onclick='javascript:rollText(1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024669.gif' alt='下一条' border='0' height='11' width='11'></a></p> </div><div id='rollTextMenu3' style='display: none;width: 100%' class='roll_zt roll_zt_m'><p style='float: left'><strong>　快讯： <a href='http://www.cncnews.cn/2015-10-28/124329836.html' target='_blank'>俄罗斯外长同美国和伊朗外长通电话讨论叙利亚问题</a></strong></p><p style='float: right;margin-top:4px;'><a title='上一条' href='javascript:void(0)' onclick='javascript:rollText(-1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024668.gif' alt='上一条' border='0' height='11' width='11'></a><a title='下一条' href='javascript:void(0)' onclick='javascript:rollText(1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024669.gif' alt='下一条' border='0' height='11' width='11'></a></p> </div><div id='rollTextMenu4' style='display: none;width: 100%' class='roll_zt roll_zt_m'><p style='float: left'><strong>　快讯： <a href='http://www.cncnews.cn/2015-10-28/124329825.html' target='_blank'>两名巴勒斯坦人在希伯伦被以军打死</a></strong></p><p style='float: right;margin-top:4px;'><a title='上一条' href='javascript:void(0)' onclick='javascript:rollText(-1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024668.gif' alt='上一条' border='0' height='11' width='11'></a><a title='下一条' href='javascript:void(0)' onclick='javascript:rollText(1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024669.gif' alt='下一条' border='0' height='11' width='11'></a></p> </div><div id='rollTextMenu5' style='display: none;width: 100%' class='roll_zt roll_zt_m'><p style='float: left'><strong>　快讯： <a href='http://www.cncnews.cn/2015-10-28/124329819.html' target='_blank'>葡萄牙组成新一届政府</a></strong></p><p style='float: right;margin-top:4px;'><a title='上一条' href='javascript:void(0)' onclick='javascript:rollText(-1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024668.gif' alt='上一条' border='0' height='11' width='11'></a><a title='下一条' href='javascript:void(0)' onclick='javascript:rollText(1);' target='_self'><img src='http://img.cncnews.cn/2013-10-22/124024669.gif' alt='下一条' border='0' height='11' width='11'></a></p> </div>
+
+
+</DIV>
+</TD>
+       
+             </TR>
+    </TBODY>
+  </TABLE>
+ 
+</div>
+
+</div>
+</div>
+<!--焦点图-->
+<div class="xin_c_jdt">
+<div class=wrapper>
+<div id=focus>
+<ul>
+<li><a href="http://news.cncnews.cn/2015-10-28/124329877.html" target=_blank><img src="http://img3.cncnews.cn/2015-10-28/124329881.jpg" width=655 height=267><em class=play-60></em></a><i></i> 
+<p><b><a href="http://news.cncnews.cn/2015-10-28/124329877.html">欧美歌手说唱“十三五” 神曲在国外火了</a></b><span>神秘的“复兴路上工作室”新推出一个短片，短片的主角就是这四个欧美年轻人，他们唱出了眼下中国最热的“十三五”话题。</span></p></li>
+
+<li><a href="http://news.cncnews.cn/2015-10-28/124329964.html" target=_blank><img src="http://img9.cncnews.cn/2015-10-28/124329971.jpg" width=655 height=267><em class=play-60></em></a><i></i> 
+<p><b><a href="http://news.cncnews.cn/2015-10-28/124329964.html">中央全会可能对“十三五”规划提出啥建议？</a></b><span>到2020年，我们要全面建成小康社会，“十三五”时期是决定性阶段。那么，这次中央全会可能会对这一举足轻重的五年规划提出哪些建议呢？</span></p></li>
+
+<li><a href="http://news.cncnews.cn/2015-10-28/124329954.html" target=_blank><img src="http://img4.cncnews.cn/2015-10-28/124329960.jpg" width=655 height=267><em class=play-60></em></a><i></i> 
+<p><b><a href="http://news.cncnews.cn/2015-10-28/124329954.html">阿富汗地震 偏远省份灾情十分严重</a></b><span>报道说，震源位于阿富汗东北部巴达赫尚省，相邻的库纳尔和努里斯坦省灾情也较为严重。由于一些偏远地区尚难取得联系，遇难人数将会进一步上升。</span></p></li>
+
+<li><a href="http://news.cncnews.cn/2015-10-28/124329983.html" target=_blank><img src="http://img4.cncnews.cn/2015-10-28/124329996.jpg" width=655 height=267><em class=play-60></em></a><i></i> 
+<p><b><a href="http://news.cncnews.cn/2015-10-28/124329983.html">叙利亚空中战场　俄进美退？</a></b><span>美国主导的打击“伊斯兰国”国际联盟连续三天没在叙利亚展开任何军事行动。与此同时，俄罗斯在叙利亚战场则捷报频传，在最近三天出动上百架次战机，空袭接近300个极端组织目标。</span></p></li>
+</li>
+</ul>
+</div></div></span></b>
+</div>
+<!--新闻列表-->
+<div class="index_xin_jjiao">
+<div class="xin_c_left">
+<div class=xin_c_left_ks>
+<h1><b><a href="http://news.cncnews.cn/2015-10-28/124329912.html">新华国际时评：美国南海炫耀武力不负责任</a></b><span><a href="http://search.cncnews.cn/search">更多</a></span></h1>
+<h2><a href="http://news.cncnews.cn/2015-10-28/124329912.html">美军将派遣军舰进入中国南海岛礁12海里，国际舆论哗然。美国人不远万里来南海炫耀武力、兴风作浪，成为西太平洋的麻烦制造者，让国际社会侧目，也引起了中国人民的愤慨。南海本无事，美国来搞事。南海的和平稳定来之不易，是中国和相关各方努力的结果。美国派军舰“巡航”无疑是搅局，让平静、和平的南海变得波涛汹涌。中国外交部长王毅表示，如果属实，我们奉劝美方三思而后行，不要轻举妄动，不要无事生非。</a></h2>
+<div class="xin_c_left_ph bh-addimg">
+<ul>
+<li><a href="http://news.cncnews.cn/2015-10-28/124329888.html">王毅：奉劝美方不要无事生非</a></li>
+
+<li><a href="http://news.cncnews.cn/2015-10-28/124329894.html">外交部副部长召见美驻华大使:抗议美舰进南沙</a></li>
+
+<li><a href="http://news.cncnews.cn/2015-10-28/124329899.html">外交部回应美军舰巡航南海：已监视跟踪和警告</a></li>
+
+<li><a href="http://news.cncnews.cn/2015-10-28/124329905.html">美宣称24小时内派军舰巡航南海岛礁</a></li>
+</ul>
+
+<p class=small-img><a href="http://news.cncnews.cn/2015-10-28/124329909.html"><img alt="" src="http://img6.cncnews.cn/2015-10-28/124329919.jpg" width=80 height=80><font size=+0></font></a><span><a href="http://news.cncnews.cn/2015-10-28/124329909.html">美军欲派宙斯盾舰南海“巡航”？</a></span></p>
+<p class=small-img><a href="http://news.cncnews.cn/2015-10-28/124329882.html"><img src="http://img9.cncnews.cn/2015-10-28/124329920.jpg" width=80 height=80><font size=+0></font></a><span><a href="http://news.cncnews.cn/2015-10-28/124329882.html">国防部:中国军队维护国家主权安全意志坚定不移</a></span></p></div></div>
+<div class="xin_c_jac">
+<div id="xin_c_jac">
+<div class=xin_c_yaowen>
+<p><a id=124021540 onclick="getnews(this.id,1,true)" class=djt href="javascript:void(0);" target=_self>热点</a> <a id=124020734 onclick="getnews(this.id,1,true)" href="javascript:void(0);" target=_self>国际</a> <a id=124020733 onclick="getnews(this.id,1,true)" href="javascript:void(0);" target=_self>中国</a> <a id=124020579 onclick="getnews(this.id,1,true)"  href="javascript:void(0);" target=_self>财经</a> <a id=124022366 onclick="getnews(this.id,1,true)" href="javascript:void(0);" onclick="getnews(this.id,1,true)"  target=_self>新华视点</a> <a id=124093987 href="javascript:void(0);" name=last onclick="getnews(this.id,1,true)" target=_self>15秒</a> </p>
+<h3>
+<ul class=menu>
+<li><img src="http://img.cncnews.cn/201309/img/xin_016.gif" width="20px" height="20px"> 
+<div>
+<span></span>
+<dl class="menu_bk" id=dropmenu>
+<ul>
+<li><a id=124020580 href="javascript:void(0);" onclick="getnews(this.id,1,'hidden')" target=_self>国际经济</a></li>
+
+<li><a id=124020582 href="javascript:void(0);" onclick="getnews(this.id,1,'hidden')" target=_self>金融市场</a></li>
+
+<li><a id=124021076 href="javascript:void(0);" onclick="getnews(this.id,1,'hidden')" target=_self>欧洲新闻</a></li>
+
+<li><a id=124021077 href="javascript:void(0);" onclick="getnews(this.id,1,'hidden')" target=_self>美洲新闻</a></li>
+
+<li><a id=124020724 href="javascript:void(0);" onclick="getnews(this.id,1,'hidden')" target=_self>体坛动态</a></li>
+
+<li><a id=124020578 href="javascript:void(0);"  onclick="getnews(this.id,1,'hidden')" target=_self>文娱</a></li>
+
+<li><a id=124020823 href="javascript:void(0);" onclick="getnews(this.id,1,'hidden')" target=_self>纪录片</a></li>
+
+
+
+<li><a id=124093987 href="javascript:void(0);" style="display: none" onclick="getnews(this.id,1,'hidden')" name=hidden target=_self>15秒</a></li>
+</ul>
+</dl>
+</div></li>
+</ul>
+</h3></div>
+</div>
+</div>
+<div class=xin_c_jzai>
+<ul></ul>
+
+<div class=xin_c_jzgd>
+<p><a href="javascript:void()" target="_self"><img src="http://img.cncnews.cn/201309/img/xin_018.jpg" width=82 height=15></a></p></div>
+<div></div></div>
+<ul></ul>
+
+</div>
+<!--中间右侧-->
+<div class="xin_c_right">
+<div id="xin_c_right">
+ 
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330195.html"><img src="http://img9.cncnews.cn/2015-10-28/124330207.jpg" width=145 height=200><i></i> 
+<p><span>本次演习来自粤港澳三地的海事、救助、部队、海警、公安、卫生以及港航等单位共计派出船舶32艘、飞机4架、人员600余人，是近年来珠江口水域规模最大的“海陆空三位一体”搜救演习。</span></p><font size=+0></font><big>粤港澳举行首次大规模海上立体联合搜救演习</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330016.html"><img src="http://img0.cncnews.cn/2015-10-28/124330021.jpg" width=145 height=200><i></i> 
+<p><span>晚秋时节，随着黄河水位回落，位于山西吉县和陕西宜川交界的壶口瀑布落差加大，飞溅起来的水雾在阳光的照射下，形成“彩虹通天”美景，令众多游人流连忘返。</span></p><font size=+0></font><big>黄河壶口瀑布“彩虹通天”</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330215.html"><img src="http://img6.cncnews.cn/2015-10-28/124330226.jpg" width=145 height=200><i></i> 
+<p><span>号称土著人“奥运会”的首届世界土著人运动会10月23日至11月1日在巴西中部小城帕尔马斯进行，全世界的土著人齐聚这里，揭开了神秘面纱，展现源于他们生活的体育运动。</span></p><font size=+0></font><big>妙趣横生的首届世界土著人运动会</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330046.html"><img src="http://img.cncnews.cn/2015-10-28/124330051.jpg" width=145 height=200><i></i> 
+<p><span>第70届联合国大会27日以压倒性多数通过决议，再次敦促美国立即结束对古巴长达半个多世纪的经济、贸易和金融封锁。这是联大连续24年通过此类决议。</span></p><font size=+0></font><big>联大再次通过决议要求美国解除对古巴封锁</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330089.html"><img src="http://img8.cncnews.cn/2015-10-28/124330096.jpg" width=145 height=200><i></i> 
+<p><span>巴勒斯坦卫生部27日晚证实，两名巴勒斯坦人当天在约旦河西岸城市希伯伦附近被以色列军方打死。</span></p><font size=+0></font><big>两名巴勒斯坦人被以军打死</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330028.html"><img src="http://img0.cncnews.cn/2015-10-28/124330032.jpg" width=145 height=200><i></i> 
+<p><span>27日凌晨，上海市公安局集中警力，在全市范围内开展社会治安整治突击行动，对主要通行道口、公共娱乐场所等地进行清查。</span></p><font size=+0></font><big>上海警方开展零点治安行动</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330107.html"><img src="http://img5.cncnews.cn/2015-10-28/124330111.jpg" width=145 height=200><i></i> 
+<p><span>10月27日，中国中兴通讯在加拿大多伦多召开新闻发布会，宣布将与当地运营商罗杰斯公司合作，于11月6日正式向加拿大消费者提供智能手机“AXON天机”。</span></p><font size=+0></font><big>中兴通讯在加拿大发布新型智能手机</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330056.html"><img src="http://img8.cncnews.cn/2015-10-28/124330063.jpg" width=145 height=200><i></i> 
+<p><span>10月27日，在巴西里约热内卢，一名学员在“圣诞老人”学校上课。这所“圣诞老人”学校于1993年成立，学员们在这里学习如何向人们祝贺节日。</span></p><font size=+0></font><big>“圣诞老人”学校</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330137.html"><img src="http://img2.cncnews.cn/2015-10-28/124330152.jpg" width=145 height=200><i></i> 
+<p><span>10月27日晚，为期两天的第五届中国钢管舞锦标赛决赛在天津举办。本次比赛旨在为中国钢管舞运动选拔人才，最终的获胜者将代表中国参加世界钢管舞锦标赛赛事。</span></p><font size=+0></font><big>天津：钢管舞者诠释“力与美”</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330000.html"><img src="http://img.cncnews.cn/2015-10-28/124330009.jpg" width=145 height=200><i></i> 
+<p><span>10月27日，在苏格兰格拉斯哥进行的第46届世界体操锦标赛女子团体决赛中，美国女队以181.338分的成绩获得冠军。</span></p><font size=+0></font><big>体操——美国女队获得世锦赛团体冠军</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330034.html"><img src="http://img8.cncnews.cn/2015-10-28/124330045.jpg" width=145 height=200><i></i> 
+<p><span>10月27日，美国总统奥巴马在白宫接见了在今夏获得2015年女足世界杯冠军的美国女子足球队，称球队的胜利鼓舞了整个国家，并接受球队赠送的球衣。 </span></p><font size=+0></font><big>奥巴马接见美国女足国家队球员</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330067.html"><img src="http://img.cncnews.cn/2015-10-28/124330075.jpg" width=145 height=200><i></i> 
+<p><span>这是10月27日在奥地利西部的格纳登瓦尔德拍摄的秋日密林。</span></p><font size=+0></font><big>秋日 秋色</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330115.html"><img src="http://img1.cncnews.cn/2015-10-28/124330128.jpg" width=145 height=200><i></i> 
+<p><span>金秋时节，山东省沂源县漫山遍野的柿子红了，红红的柿子扮美了金秋田野。</span></p><font size=+0></font><big>山东沂源：柿乡金秋美</big></a></div></div>
+
+
+
+
+
+
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330230.html"><img src="http://img6.cncnews.cn/2015-10-28/124330238.jpg" width=145 height=200><i></i> 
+<p><span>10月27日，由香港贸易发展局主办的香港国际秋季灯饰展一连4天在香港会议展览中心举行，该展览一直是亚洲灯饰业界的瞩目盛事，今年已踏入第17届。</span></p><font size=+0></font><big>香港国际秋季灯饰展开幕 规模历届之冠</big></a></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330153.html"><img src="http://img0.cncnews.cn/2015-10-28/124330166.jpg" width=145 height=200><i></i> 
+<p><span>10月27日，中国云南省艺术团在河内大剧院举行演出，庆祝中越建交65周年。</span></p><font size=+0></font><big>中国云南省艺术团在河内表演</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330179.html"><img src="http://img4.cncnews.cn/2015-10-28/124330186.jpg" width=145 height=200><i></i> 
+<p><span>10月27日，“真维斯杯品牌2016春夏服饰潮流汇演”在北京举行。</span></p><font size=+0></font><big>真维斯杯品牌2016春夏服饰潮流汇演</big></a></div></div>
+<div class=tpxw_tp>
+<div class=wrapam><a href="http://photo.cncnews.cn/2015-10-28/124330170.html"><img src="http://img5.cncnews.cn/2015-10-28/124330178.jpg" width=145 height=200><i></i> 
+<p><span>10月27日，“AOLISHA·魏新坤婚纱礼服发布会”在北京举行。</span></p><font size=+0></font><big>AOLISHA·魏新坤婚纱礼服发布会</big></a></div></div>
+
+
+
+
+
+<!--ul>
+</ul--></span></span>
+<div></div>
+</div>
+</div>
+</div>
+</div>
+<!--右-->
+<div class="index_xin_y">
+<div class="xin_y_inpt">
+<form action="http://search.cncnews.cn/search" id="ifm" method="get">
+<div class="xin_y_soso"><input type="text" name="q" value="十八届五中全会 阿富汗地震 轰炸IS "  onfocus="($(this).val(''))" onblur="if($(this).val() == ''){$(this).val('新闻搜索...')}" class="inputproq1"  />
+<input name="" class="button" type="submit" value=""/>
+</div>
+</form>
+<script>
+$(function(){
+$("#ifm").submit(function(e){
+ if($("#q").val()=='新闻搜索...'){
+$("#q").val(''); 
+ }});
+});
+</script>
+</div>
+<div id="index_xin_y">	
+<!--广告-->
+<div class=xin_y_ggao>
+<embed quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="310" height="268" src="http://news.cncnews.cn/2015-07-22/upload/health_ad_20150722.swf"></embed>
+</div>
+<!--名记记者-->
+<div class=xin_y_jizhe>
+<h1><b><a href="http://news.cncnews.cn/reporter/">深度调查</a></b><span><a href="http://news.cncnews.cn/reporter/">更多</a></span></h1>
+<ol>
+<li>
+<p><b><a href="http://news.cncnews.cn/2015-10-27/124329476.html">如何看待进口下滑？</a></b><span><a href="http://news.cncnews.cn/2015-10-27/124329476.html">是什么因素影响进口数据走低？如何看待当前进口下滑形势？是否意味着内需不振？</a></span></p><font size=+0><a href="http://news.cncnews.cn/2015-10-27/124329476.html"><img src="http://img1.cncnews.cn/2015-10-27/124329565.jpg" width=80 height=80></a></font></li>
+
+<li>
+<p><b><a href="http://news.cncnews.cn/2015-10-27/124329482.html">“不合理低价团”谁买单？</a></b><span><a href="http://news.cncnews.cn/2015-10-27/124329482.html">国家旅游局提示，游客参与“不合理低价游”也将受到处理，但这将如何界定呢？</a></span></p><font size=+0><a href="http://news.cncnews.cn/2015-10-27/124329482.html"><img src="http://img3.cncnews.cn/2015-10-27/124329566.jpg" width=80 height=80></a></font></li>
+
+<li>
+<p><b><a href="http://news.cncnews.cn/2015-10-27/124329493.html">荒唐的“创纪录”何时休？</a></b><span><a href="http://news.cncnews.cn/2015-10-27/124329493.html">4吨炒饭如何处置？荒唐的活动背后，推手是谁？这样花钱出力搞浪费的“创纪录”有何意义？</a></span></p><font size=+0><a href="http://news.cncnews.cn/2015-10-27/124329493.html"><img src="http://img0.cncnews.cn/2015-10-27/124329567.jpg" width=80 height=80></a></font></li>
+
+<li>
+<p><b><a href="http://news.cncnews.cn/2015-10-26/124329061.html">新能源汽车行业新的增长点</a></b><span><a href="http://news.cncnews.cn/2015-10-26/124329061.html">汽车业，今年尤其不好过。市场不景气，销量滑坡，价格一降再降，正经历一场寒冬。</a></span></p><font size=+0><a href="http://news.cncnews.cn/2015-10-26/124329061.html"><img src="http://img4.cncnews.cn/2015-10-26/124329062.jpg" width=80 height=80></a></font></li>
+</ol></div>
+<div class="xin_y_jizhe xin_y_hot">
+<h1><b><a href="http://www.cncnews.cn/"><font color=#000000>特别节目</font></a></b><span><a href="http://sports.cncnews.cn/2014/7094/124105594/"> </a></span></h1>
+<div class=bh-con>
+<div class=bh-overf>
+<dl>
+<dt><a href="http://news.cncnews.cn/2015-10-25/124328761.html" target=_blank><img src="http://img2.cncnews.cn/2015-10-26/124328935.jpg" width=135 height=75></a></dt>
+<dd><a href="http://news.cncnews.cn/2015-10-25/124328761.html" target=_blank>新华视点：瓶装燃气为何屡酿祸端</a></dd></dl>
+<dl>
+<dt><a href="http://ent.cncnews.cn/2015-10-25/124328754.html" target=_blank><img alt="" src="http://img0.cncnews.cn/2015-10-26/124328929.jpg" width=135 height=75></a></dt>
+<dd><a href="http://ent.cncnews.cn/2015-10-25/124328754.html" target=_blank>人文天下：藏西秘境 天上阿里</a></dd></dl></div></div></div>
+<!--创意视频-->
+<div class="xin_y_jizhe xin_y_spin">
+<h1><b><a href="http://live.cncnews.cn/creative/">创意视频</a></b><span><a href="http://live.cncnews.cn/creative/">更多</a></span></h1>
+<div class=xin_tp_lb>
+<ul class=list>
+<li><a href="http://live.cncnews.cn/2015-10-15/124323749.html"><img alt="" src="http://img6.cncnews.cn/2015-10-15/124323846.jpg" width=135 height=106><i></i><b>14台苹果演绎爱情故事</b><em class=play-30></em></a></li>
+
+<li><a href="http://live.cncnews.cn/2015-10-15/124323755.html"><img alt="" src="http://img8.cncnews.cn/2015-10-15/124323851.jpg" width=135 height=109><i></i><b>一只喵星人的感人告白</b><em class=play-30></em></a></li>
+
+<li><a href="http://live.cncnews.cn/2015-10-15/124323764.html"><img alt="" src="http://img8.cncnews.cn/2015-10-15/124323855.jpg" width=135 height=181><i></i><b>脑洞大开的巨型emoji键盘</b><em class=play-30></em></a></li>
+
+<li><a href="http://15s.cncnews.cn/2015-10-15/124323771.html"><img alt="" src="http://img3.cncnews.cn/2015-10-15/124323885.jpg" width=135 height=126><i></i><b>超酷！3D打印跑鞋亮相</b><em class=play-30></em></a></li>
+
+<li><a href="http://15s.cncnews.cn/2015-10-14/124323225.html"><img alt="" src="http://img2.cncnews.cn/2015-10-15/124323902.jpg" width=135 height=100><i></i><b>配音演员装扮成角色</b><em class=play-30></em></a></li>
+
+<li><a href="http://live.cncnews.cn/2015-10-15/124323837.html"><img alt="" src="http://img9.cncnews.cn/2015-10-15/124323888.jpg" width=135 height=152><i></i><b>“颠倒汽车”反过来也能开</b><em class=play-30></em></a></li>
+
+<li><a href="http://live.cncnews.cn/2015-10-15/124323739.html"><img alt="" src="http://img.cncnews.cn/2015-10-15/124323895.jpg" width=135 height=106><i></i><b>情侣的N种奇葩睡姿</b><em class=play-30></em></a></li>
+</ul>
+</div></div>
+
+<!--排行榜-->
+<div class="main_right_hg"><div id="Tab1"><div class="Menubox"><ul><li id="two1" onmouseover="setTab('two',1,2)" class="hover" >每日排行</li><li id="two2" onmouseover="setTab('two',2,2)"  >本周排行</li></ul></div><div class="Contentbox"><div id="con_two_1" > <ul> <li class=""><a href="http://finance.cncnews.cn/2015-10-22/124327105.html">马建堂：中国宏观调控注重创新体系和大数据</a></li><li class=""><a href="http://news.cncnews.cn/2015-10-16/124323939.html">从“十二五”到“十三五”：世界怎么看</a></li><li class=""><a href="http://ent.cncnews.cn/2015-02-16/124224342.html">林鹏：从谋女郎到龙女郎</a></li><li><a href="http://news.cncnews.cn/2015-10-12/124322124.html">十一长假盘点：出境游创新高 移动端预定暴增</a></li><li><a href="http://news.cncnews.cn/2015-07-21/124287884.html">“优衣库不雅视频”真相公布</a></li><li><a href="http://news.cncnews.cn/2015-10-25/124328534.html">阿里云大会 露脸视频通话app受瞩目</a></li><li><a href="http://news.cncnews.cn/2015-10-26/124328914.html">近八成“海归”薪酬低于万元</a></li><li><a href="http://news.cncnews.cn/2015-10-26/124328853.html">中亚五国行 安倍有哪些心思？</a></li><li><a href="http://news.cncnews.cn/2015-10-26/124329003.html">10秒！看极客如何破解无人机控制权</a></li><li style="BORDER-BOTTOM-STYLE: none"><a href="http://news.cncnews.cn/2015-10-26/124328953.html">沈腾：用更多好作品提升观众审美</a></li></ul> </div> <div id="con_two_2" style="display:none"><ul> <li class=""><a href="http://news.cncnews.cn/2015-10-19/124324950.html">中英合作大学师生期待共筑教育新未来</a></li><li class=""><a href="http://ent.cncnews.cn/2015-02-16/124224342.html">林鹏：从谋女郎到龙女郎</a></li><li class=""><a href="http://finance.cncnews.cn/2015-10-22/124327105.html">马建堂：中国宏观调控注重创新体系和大数据</a></li><li><a href="http://news.cncnews.cn/2015-10-15/124323551.html">外交部就习近平对英国事访问举行媒体吹风会</a></li><li><a href="http://ent.cncnews.cn/2015-10-10/124321616.html">无可替代：李荣浩-喜剧之王MV花絮</a></li><li><a href="http://news.cncnews.cn/2015-07-21/124287884.html">“优衣库不雅视频”真相公布</a></li><li><a href="http://news.cncnews.cn/2015-10-19/124325300.html">奥巴马下令开始采取措施解除对伊朗制裁</a></li><li><a href="http://news.cncnews.cn/2015-10-22/124327109.html">揭中央最严党纪5大亮点：“通奸”字眼将被废止</a></li><li><a href="http://news.cncnews.cn/2015-10-21/124326355.html">桂林举行国际山水文化旅游节艺术巡游活动</a></li><li style="BORDER-BOTTOM-STYLE: none"><a href="http://news.cncnews.cn/2015-10-20/124325527.html">国家主席习近平抵达英国伦敦希思罗机场</a></li></ul> </div> </div> </div> </div> 
+
+<!--记录-->
+<div class=xin_y_jilu>
+<div class=focus>
+<ul class="rslides f426x240">
+<li><a href="http://documentary.cncnews.cn/2014-01-20/124054375.html" target=_blank><img alt=纪录台湾 src="http://img6.cncnews.cn/2014-01-20/124054390.jpg"><em class=play-60></em></a><i></i> 
+<p><b>纪录片</b><a href="http://documentary.cncnews.cn/index.html">更多</a></p></li>
+
+<li><a href="http://documentary.cncnews.cn/2014-01-02/124046476.html" target=_blank><img alt=【红旗渠传奇】第一集　山 src="http://img0.cncnews.cn/2014-01-03/124047201.jpg"><em class=play-60></em></a><i></i> 
+<p><b>纪录片</b><a href="http://documentary.cncnews.cn/index.html">更多</a></p></li>
+
+<li><a href="http://news.cncnews.cn/2013-12-12/124038439.html" target=_blank><img alt=朱清时 src="http://img6.cncnews.cn/2013-12-13/124038830.jpg"><em class=play-60></em></a><i></i> 
+<p><b>纪录片</b><a href="http://documentary.cncnews.cn/index.html">更多</a></p></li>
+
+<li><a href="http://documentary.cncnews.cn/2013-10-17/124023843.html" target=_blank><img alt=黄帝 src="http://img.cncnews.cn/2013-10-23/124024754.jpg"><em class=play-60></em></a><i></i> 
+<p><b>纪录片</b><a href="http://documentary.cncnews.cn/index.html">更多</a></p></li>
+
+<li><a href="http://documentary.cncnews.cn/2015-10-23/124328142.html" target=_blank><img alt=那根撬动影视技术革新的车载摇臂 src="http://img4.cncnews.cn/2015-10-23/124328165.jpg"><em class=play-60></em></a><i></i> 
+<p><b>纪录片</b><a href="http://documentary.cncnews.cn/index.html">更多</a></p></li>
+</ul>
+</div></div>
+
+<div class="xin_y_jizhe xin_y_hot">
+<h1><b><a href="http://live.cncnews.cn/creative/">热点专题</a></b><span><a href="http://live.cncnews.cn/creative/">更多</a></span></h1>
+<div class=bh-con>
+<div class=bh-overf>
+<dl>
+<dt><a href="http://news.cncnews.cn/2015/xijinpingfangying-/" target=_blank><img src="http://img1.cncnews.cn/2015-10-26/124328962.jpg" width=135 height=75></a></dt>
+<dd><a href="http://news.cncnews.cn/2015/xijinpingfangying-/" target=_blank>习近平访问英国</a></dd></dl>
+<dl>
+<dt><a href="http://news.cncnews.cn/2015/kangzhanshengli-lest/" target=_blank><img src="http://img.cncnews.cn/2015-10-13/124322569.jpg" width=135 height=75></a></dt>
+<dd><a href="http://news.cncnews.cn/2015/kangzhanshengli-lest/" target=_blank>抗战胜利70周年</a></dd></dl></div>
+<ul>
+<li><a href="http://news.cncnews.cn/2015/eluosiyuebing-lest/" target=_blank>俄罗斯红场阅兵</a></li>
+
+<li><a href="http://sports.cncnews.cn/2013/brazil2014/" target=_blank>2014巴西世界杯</a></li>
+
+<li><a href="http://news.cncnews.cn/2014/mahanghangbanshilian/" target=_blank>搜寻马航370航班</a></li>
+
+<li><a href="http://news.cncnews.cn/2014/lianghui/" target=_blank>2014年全国两会特别报道</a></li>
+
+<li><a href="http://news.cncnews.cn/2013/changesanhao/" target=_blank>嫦娥三号探月之旅</a></li>
+
+<li><a href="http://news.cncnews.cn/2014/chunjie/" target=_blank>马年春节特别策划</a></li>
+
+<li><a href="http://news.cncnews.cn/2013/nelsonmandela/" target=_blank>南非前总统曼德拉逝世</a></li>
+
+<li><a href="http://news.cncnews.cn/2013/18szqh/" target=_blank>中国共产党十八届三中全会</a></li>
+</ul>
+</div></div>
+
+<!--精选栏目-->
+<div class=xin_y_lanmu>
+<h1>CNC精选栏目</h1>
+<ul>
+<li><a href="http://news.cncnews.cn/xhsd/">[新华视点]</a></li>
+
+<li><a href="http://news.cncnews.cn/history/">[中国网事]</a></li>
+
+<li><a href="http://ent.cncnews.cn/humanistic/">[人文天下]</a></li>
+
+<li><a href="http://news.cncnews.cn/global/">[环球精选]</a></li>
+
+<li><a href="http://ent.cncnews.cn/2015/feidieshuo/index.html">[飞碟说]</a></li>
+
+<li><a href="http://finance.cncnews.cn/global/">[环球财经]</a></li>
+
+<li><a href="http://documentary.cncnews.cn/2015/zhenxiang/index.html">[真相]</a></li>
+
+<li><a href="http://news.cncnews.cn/huanjing/">[环境]</a></li>
+
+<li><a href="http://news.cncnews.cn/gaigeshidairenwu/">[改革时代人物]</a></li>
+
+<li><a href="http://sports.cncnews.cn/xushititan/">[徐式体谈]</a></li>
+
+<li><a href="http://news.cncnews.cn/todayinhistory/">[历史上的今天]</a></li>
+
+<li><a href="http://news.cncnews.cn/2014/xinli/">[欣励观察]</a></li>
+</ul>
+</div>
+<!--读者来信-->
+<div class="xin_y_laixin">
+<h1>读者来信</h1>
+<p>如果您对本站有任何建议，或对某个话题想发表看法请发邮件至：<a href="mailto:cnc@cncnews.cn">cnc@cncnews.cn</a>  </p>
+</div>
+<!--关联媒体-->
+<div class=xin_y_laixin>
+<h1>关联媒体</h1>
+<h3><a href="http://www.news.cn/">新华网</a>  <a href="http://www.chinaso.com/">中国搜索</a>  <a href="http://www.people.com.cn/">人民网</a> <a href="http://www.china.com.cn/">中国网</a></h3>
+<h3><a href="http://news.163.com/" target=_blank>网易新闻</a>  <a href="http://news.sohu.com/" target=_blank>搜狐新闻</a>  <a href="http://tv.hexun.com/" target=_blank>和讯视频</a></h3>
+<h3><a href="http://v.ifeng.com/" target=_blank>凤凰视频</a> <a href="http://art.ifeng.com/" target=_blank>凤凰艺术</a>  <a href="http://v.duba.com/" target=_blank>金山影视</a> <a href="http://www.comon.cn/" target=_blank>光芒网</a></h3>
+</div>
+<!--网站信息-->
+<div class="xin_y_laixin xin_y_xinxi">
+<h1>网站信息</h1>
+<h3><a href="http://www.cncnews.cn/about/">关于我们</a> <a href="http://www.cncnews.cn/contact/">联系我们</a> <a href="http://www.cncnews.cn/law/">法律条款 </a><a href="http://203.192.6.89/xhs/">新华通讯社</a> <a href="http://www.xinhuacnc.com/">CNC公司网站</a> <a href="http://www.cncnews.cn/privacy/">隐私政策</a> <a href="http://www.cncnews.cn/link/">友情链接</a> </h3></div>
+<br>
+<script type="text/javascript">
+    /*最终页右上广告*/
+    var cpro_id = "u1924442";
+</script>
+
+
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+<!--飘窗 b-->
+
+ <style>
+
+#weixin {
+    bottom: 15px;
+    display: none;
+    left: 50%;
+    margin-left: 575px;
+    position: fixed;
+    text-align: left;
+    width: 110px;
+    z-index: 1;
+} 
+ </style>
+ 
+<div style=" display:block;" id="weixin">
+<img width="110" height="122" border="0" usemap="#Map" class="shrinkToFit decoded" src="http://img9.cncnews.cn/2014-10-29/124186650.gif">
+    <map name="Map" id="Map">
+      <area class="close" href="javascript:;" coords="93,110,109,130" shape="rect" target="_self">
+      <area shape="rect" coords="1,2,116,109" href="http://app.cncnews.cn/" target="_blank">
+  </map></div>
+<script type="text/javascript">
+function goTopEx(){
+    var obj=document.getElementById("weixin");
+    function getScrollTop(){
+        return (document.documentElement.scrollTop+document.body.scrollTop);
+    }
+    function setScrollTop(value){
+        if(document.documentElement && document.documentElement.scrollTop){document.documentElement.scrollTop=value;}
+        else if(document.body){document.body.scrollTop=value;}
+
+    }
+
+}
+$('#weixin area.close ').on('click',function(){
+    $('#weixin').hide();
+  });
+</script>
+    <!--飘窗 e-->
+</div>
+</div>
+<!--右结束-->
+</div>
+</div>
+
+<!--尾-->
+<div class="xin_c_footer">
+<div class="c_footer">
+<h2><a href="#"><img src="http://img.cncnews.cn/201309/img/cnn_011.jpg" width="191" height="36" /></a></h2>
+<p>本网站所刊登的各种视频，均为新华社版权所有，未经协议授权，禁止下载使用。<br />
+Copyright @ 2009-2015 XHTV WEB ,All Rights Reserved.  京备案ICP 09086651</p>
+</div>
+
+
+</div>
+<div style="display:none">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8041953f655759499c9e2431f04c61e6' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+
+<script>
+var islogin = false;
+var userId = 0;
+function getCookie(name){
+ var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ if(arr=document.cookie.match(reg))
+  return unescape(arr[2]);
+ else
+  return null;
+} 
+function delCookie(objName) {
+   var date = new Date();
+   date.setTime(date.getTime() - 10000);
+   document.cookie = objName + "=a;path=/;domain=cncnews.cn; expires=" + date.toGMTString();
+}
+
+ $(function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      height: 400,
+      width: 500,
+      modal: true
+    });
+  function isloging(username){
+	var url = "http://login.cncnews.cn/user/islogin.cc?login_name="+username+"&callback=showData";
+	$.getScript(url);
+  }
+
+	var shortname ="";
+    var username = getCookie("uid");
+    if(username !='' && username != null ){
+	 	   isloging(username);
+    }
+	
+	var key=request('key'); 
+    var time=request('time');
+	var reg=request('type');
+	if(key!=""&&time!=""){
+		var url="";
+		if(reg!=""){
+		 url = "http://login.cncnews.cn/user/validate.cc?key="+key+"&time="+time ; 
+		}else{
+		 url = "http://login.cncnews.cn/user/validatemail.cc?key="+key+"&time="+time ; 
+		}
+		$("#cframe").attr("src",url);
+		if($( "#dialog" ).css("display")=='none'||$( "#overlay" ).css("display")=='none'){
+			$( "#dialog" ).css("display","block");
+			$( "#overlay" ).css("display","block")
+		}  
+		$( "#dialog" ).dialog( "open" );
+		return false;
+	}
+  });
+	
+	function request(paras){ 
+		var url = location.href;  
+		var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");  
+		var paraObj = {}  
+		for (i=0; j=paraString[i]; i++){  
+			paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);  
+		}  
+		var returnValue = paraObj[paras.toLowerCase()];  
+		if(typeof(returnValue)=="undefined"){  
+			return "";  
+		}else{  
+			return returnValue;  
+		}  
+	} 
+  
+
+  function showData(data){
+	if(data.msg =="success"){
+           islogin = true;
+	  if(data.username.length >22){
+		shortname = data.username.substring(0,22);
+		$("#loginname").html(shortname);
+	 }else{
+		$("#loginname").html("您好,"+data.username);
+	 }
+	  $("#loginname").attr("onclick","").attr("title",data.username);
+	  $("#logout").html("退出");
+	  $("#logout").removeAttr("onclick");
+	  $("#logout").click(function(){
+logout();
+             })
+	  var validateinfo = getCookie("validateinfo");
+	  if(validateinfo == data.username){
+		delCookie("validateinfo");
+		filldata(validateinfo);      
+	  }
+           userId = data.userid;
+	} 
+ }
+  function logout(){
+		delCookie("uname");
+		delCookie("uid");
+		window.location.reload();
+  }
+  function filldata(username){
+	var url = "http://login.cncnews.cn/user/tofilldata.cc?userName="+username ; 
+	$("#cframe").attr("src",url);
+	if($( "#dialog" ).css("display")=='none'||$( "#overlay" ).css("display")=='none'){
+		$( "#dialog" ).css("display","block");
+		$( "#overlay" ).css("display","block")
+	}  
+	$( "#dialog" ).dialog( "open" );
+	return false;
+ }
+ function login(){
+  $("#cframe").attr("src","http://login.cncnews.cn/user/weblogin.cc");
+  if($( "#dialog" ).css("display")=='none'||$( "#overlay" ).css("display")=='none'){
+    $( "#dialog" ).css("display","block");
+    $( "#overlay" ).css("display","block")
+   }  
+  $( "#dialog" ).dialog( "open" );
+  return false;
+ }
+ function reg(){
+  $("#cframe").attr("src","http://login.cncnews.cn/user/reg.cc");
+  if($( "#dialog" ).css("display")=='none'||$( "#overlay" ).css("display")=='none'){
+    $( "#dialog" ).css("display","block");
+    $( "#overlay" ).css("display","block")
+   }  
+  $( "#dialog" ).dialog( "open" );
+  return false;
+ }
+
+ </script>
+<div id="dialog" title="">
+<iframe id="cframe" src="" width="100%" height="98%" scrolling="no" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe></div>   
+
+ 
+ 
+<div id="gotopbtn">&nbsp;</div>
+<script type="text/javascript"> 
+backTop=function (btnId){
+	var btn=document.getElementById(btnId);
+	var d=document.documentElement;
+	window.onscroll=set;
+	btn.onclick=function (){
+		btn.style.display="none";
+		window.onscroll=null;
+		this.timer=setInterval(function(){
+			d.scrollTop-=Math.ceil(d.scrollTop*1);
+			if(d.scrollTop==0) clearInterval(btn.timer,window.onscroll=set);
+		},10);
+	};
+	function set(){btn.style.display=d.scrollTop?'block':"none"}
+};
+backTop('gotopbtn');
+</script>
+<script type="text/javascript" src="http://img.cncnews.cn/201309/js/logview.js?ver=20140423"></script>
+<script type="text/javascript" src="http://img.cncnews.cn/201309/js/logview_new.js?v=20140707"></script>
+
+<div style="display:none"><a href="http://www.kanshaa.com">看啥啊网站</a></div>
+</body>
+</html>
+
+

@@ -1,0 +1,1277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta content="all" name="robots" />
+<meta name="description" content="人民网韩国频道是中国大陆地区首家全面推介韩国的专业网站。" />
+<meta name="keywords" content="首尔,朝鲜半岛,朝鲜,韩流,韩剧,韩国" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="F_205126" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<title>人民网韩国频道-韩国频道</title>
+<link href="/img/2012koreacn/page.css" type="text/css" rel="stylesheet" media="all" />
+<script type="text/javascript" src="/img/2012koreacn/jquery-1.4.2.min.js"></script>
+<script src="/img/2012koreacn/js/effect.js" language="javascript" type="text/javascript"></script>
+<script src="/img/2012koreacn/js/swfobject.js" language="javascript" type="text/javascript"></script>
+<script src="/css/searchforeign.js" language="JavaScript"></script>
+<style>
+.dlk{width:600px;height:500px; position:absolute; background:#fff; display:none;padding-top:20px;}
+.close{ display:block; position:absolute;top:0;right:0;font-size:14px;font-weight:bold; cursor:pointer;}
+</style>
+<script language="javascript" type="text/javascript">
+<!--
+function pucker_a(name,no,hiddenclassname,showclassname) {
+    //name:命名前缀
+    //no:当前鼠标所处对象的序号
+    //showclassname:展开状态样式名
+    //hiddenclassname:折叠状态样式名
+    for (var i=1 ;i<=3 ;i++ )
+    {
+        document.getElementById(name+i).className=hiddenclassname;
+    }
+    	document.getElementById(name+no).className=showclassname;
+}
+
+function pucker_b(a,b,c,d) {
+    //name:命名前缀
+    //no:当前鼠标所处对象的序号
+    //showclassname:展开状态样式名
+    //hiddenclassname:折叠状态样式名
+    for (var i=1;i<=2;i++)
+    {
+        document.getElementById(a+i).className=c;
+    }
+    	document.getElementById(a+b).className=d;
+}
+-->
+</script>
+<script type="text/javascript">
+/* ==== slider nameSpace ==== */
+var slider = function() {
+	/* ==== private methods ==== */
+	function getElementsByClass(object, tag, className) {
+		var o = object.getElementsByTagName(tag);
+		for ( var i = 0, n = o.length, ret = []; i < n; i++) {
+			if (o[i].className == className) ret.push(o[i]);
+		}
+		if (ret.length == 1) ret = ret[0];
+		return ret;
+	}
+	function setOpacity (obj,o) {
+		if (obj.filters) obj.filters.alpha.opacity = Math.round(o);
+		else obj.style.opacity = o / 100;
+	}
+	/* ==== Slider Constructor ==== */
+	function Slider(oCont, speed, iW, iH, oP) {
+		this.slides = [];
+		this.over   = false;
+		this.S      = this.S0 = speed;
+		this.iW     = iW;
+		this.iH     = iH;
+		this.oP     = oP;
+		this.oc     = document.getElementById(oCont);
+		this.frm    = getElementsByClass(this.oc, 'div', 'slide');
+		this.NF     = this.frm.length;
+		this.resize();
+		for (var i = 0; i < this.NF; i++) {
+			this.slides[i] = new Slide(this, i);
+		}
+		this.oc.parent = this;
+		this.view      = this.slides[0];
+		this.Z         = this.mx;
+		/* ==== on mouse out event ==== */
+		this.oc.onmouseout = function () {
+			this.parent.mouseout();
+			return false;
+		}
+	}
+	Slider.prototype = {
+		/* ==== animation loop ==== */
+		run : function () {
+			this.Z += this.over ? (this.mn - this.Z) * .5 : (this.mx - this.Z) * .5;
+			this.view.calc();
+			var i = this.NF;
+			while (i--) this.slides[i].move();
+		},
+		/* ==== resize  ==== */
+		resize : function () {
+			this.wh = this.oc.clientWidth;
+			this.ht = this.oc.clientHeight;
+			this.wr = this.wh * this.iW;
+			this.r  = this.ht / this.wr;
+			this.mx = this.wh / this.NF;
+			this.mn = (this.wh * (1 - this.iW)) / (this.NF - 1);
+		},
+		/* ==== rest  ==== */
+		mouseout : function () {
+			this.over      = false;
+			setOpacity(this.view.img, this.oP);
+		}
+	}
+	/* ==== Slide Constructor ==== */
+	Slide = function (parent, N) {
+		this.parent = parent;
+		this.N      = N;
+		this.x0     = this.x1 = N * parent.mx;
+		this.v      = 0;
+		this.loaded = false;
+		this.cpt    = 0;
+		this.start  = new Date();
+		this.obj    = parent.frm[N];
+		this.txt    = getElementsByClass(this.obj, 'div', 'text');
+		this.img    = getElementsByClass(this.obj, 'img', 'diapo');
+		this.bkg    = document.createElement('div');
+		this.bkg.className = 'backgroundText';
+		this.obj.insertBefore(this.bkg, this.txt);
+		if (N == 0) this.obj.style.borderLeft = 'none';
+		this.obj.style.left = Math.floor(this.x0) + 'px';
+		setOpacity(this.img, parent.oP);
+		/* ==== mouse events ==== */
+		this.obj.parent = this;
+		this.obj.onmouseover = function() {
+			this.parent.over();
+			return false;
+		}
+	}
+	Slide.prototype = {
+		/* ==== target positions ==== */
+		calc : function() {
+			var that = this.parent;
+			// left slides
+			for (var i = 0; i <= this.N; i++) {
+				that.slides[i].x1 = i * that.Z;
+			}
+			// right slides
+			for (var i = this.N + 1; i < that.NF; i++) {
+				that.slides[i].x1 = that.wh - (that.NF - i) * that.Z;
+			}
+		},
+		/* ==== HTML animation : move slides ==== */
+		move : function() {
+			var that = this.parent;
+			var s = (this.x1 - this.x0) / that.S;
+			/* ==== lateral slide ==== */
+			if (this.N && Math.abs(s) > .5) {
+				this.obj.style.left = Math.floor(this.x0 += s) + 'px';
+			}
+			/* ==== vertical text ==== */
+			var v = (this.N < that.NF - 1) ? that.slides[this.N + 1].x0 - this.x0 : that.wh - this.x0;
+			if (Math.abs(v - this.v) > .5) {
+				this.bkg.style.top = this.txt.style.top = Math.floor(2 + that.ht - (v - that.Z) * that.iH * that.r) + 'px';
+				this.v = v;
+				this.cpt++;
+			} else {
+				if (!this.pro) {
+					/* ==== adjust speed ==== */
+					this.pro = true;
+					var tps = new Date() - this.start;
+					if(this.cpt > 1) {
+						that.S = Math.max(2, (28 / (tps / this.cpt)) * that.S0);
+					}
+				}
+			}
+			if (!this.loaded) {
+				if (this.img.complete) {
+					this.img.style.visibility = 'visible';
+					this.loaded = true;
+				}
+			}
+		},
+		/* ==== light ==== */
+		over : function () {
+			this.parent.resize();
+			this.parent.over = true;
+			setOpacity(this.parent.view.img, this.parent.oP);
+			this.parent.view = this;
+			this.start = new Date();
+			this.cpt = 0;
+			this.pro = false;
+			this.calc();
+			setOpacity(this.img, 100);
+		}
+	}
+	/* ==== public method - script initialization ==== */
+	return {
+		init : function() {
+			// create instances of sliders here
+			// parameters : HTMLcontainer name, speed (2 fast - 20 slow), Horizontal ratio, vertical text ratio, opacity
+			this.s1 = new Slider("slider", 12, 1/1.745, 1/3.2, 100);
+			setInterval("slider.s1.run();", 16);
+		}
+	}
+}();
+
+</script>
+<script type="text/javascript">
+<!--
+var timeout         = 500;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+	// get new layer and show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+}
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+// close layer when click-out
+document.onclick = mclose; 
+// -->
+</script>
+<script type="text/javascript">
+var xmlObj;
+function GetXML(){
+    if (window.ActiveXObject){ 
+        xmlObj = new ActiveXObject("Microsoft.XMLDOM"); 
+    } else if (document.implementation && document.implementation.createDocument) { 
+        xmlObj = document.implementation.createDocument("","",null); 
+    } 
+    xmlObj.async=false; 
+    xmlObj.load("/rss/2008/top.xml")
+    GetReady();
+}
+var City = function(qyname,name,url,number){
+    this.qyname = qyname;
+	this.name = name;
+	this.url=url;
+    this.number = number;	
+    this.toString = show;
+}
+function show(){
+return "<td width=\"100\"><div style=\"overflow:hidden;height:25px;width:100px;\">"+this.qyname+"</div></td><td width=\"64\"><a href=\""+this.url+"\" target=\"_blank\">"+this.name+"</a></td><td width=\"55\">"+this.number;
+}
+function GetReady(){
+    var cityArray = new Array;
+    var cityList = xmlObj.documentElement.getElementsByTagName("school");
+    var count = cityList.length;
+    for (var i=0;i<count;i++){
+		var qyname = cityList[i].getAttribute("qyname");
+        var name = cityList[i].getAttribute("name"); 
+		var url = cityList[i].getAttribute("url");  
+		var number = parseInt(cityList[i].getAttribute("number"));
+        cityArray[i] = new City(qyname,name,url,number);
+    }
+    //这里进行排序，升序为修改sObj.number-tObj.number
+    cityArray.sort(function(tObj,sObj){return sObj.number-tObj.number});
+    //程序结束，这里只是打印出来显示
+    var str="";
+	var l=0;
+    str+="<ul>";
+    for (var j=0;j<10;j++){
+	l=j+1;
+        str+="<li><span>"+l+"</span>"+"&nbsp;&nbsp;<strong>"+cityArray[j].toString()+"</strong></li>";                
+    }
+	str+="</ul>";
+    document.getElementById("text").innerHTML=str;    
+}
+</script>
+<script type="text/javascript">
+var xmlObj1;
+var NumArray = new Array();
+function GetXML1(){
+    if (window.ActiveXObject){ 
+        xmlObj1 = new ActiveXObject("Microsoft.XMLDOM"); 
+    } else if (document.implementation && document.implementation.createDocument) { 
+        xmlObj1 = document.implementation.createDocument("","",null); 
+    } 
+    xmlObj1.async=false; 
+    xmlObj1.load("http://kr.people.com.cn/rss/gupiao.xml")
+    GetRead1y1();
+}
+function GetRead1y1(){
+var cityList = xmlObj1.documentElement.getElementsByTagName("athlete");
+var count = cityList.length;
+    for (var i=0;i<count;i++){
+		var number = parseInt(cityList[i].getAttribute("totalNum"));
+        NumArray.push(number);  
+		 
+    }
+}
+GetXML1(GetRead1y1);
+</script>
+<script type="text/javascript">
+function startMove(obj,json,endFn){
+	clearInterval(obj.timer);
+	obj.timer = setInterval(function(){
+	var bBtn = true;
+	for(var attr in json){
+		var iCur = 0;
+		if(attr == 'opacity'){
+			if(Math.round(parseFloat(getStyle(obj,attr))*100)==0){
+				iCur = Math.round(parseFloat(getStyle(obj,attr))*100);
+			}
+			else{
+				iCur = Math.round(parseFloat(getStyle(obj,attr))*100) || 100;
+			}	
+		}
+		else{
+			iCur = parseInt(getStyle(obj,attr)) || 0;
+		}
+	
+		var iSpeed = (json[attr] - iCur)/8;
+		iSpeed = iSpeed >0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+		if(iCur!=json[attr]){
+			bBtn = false;
+		}
+		if(attr == 'opacity'){
+			obj.style.filter = 'alpha(opacity=' +(iCur + iSpeed)+ ')';
+			obj.style.opacity = (iCur + iSpeed)/100;
+		}
+		else{
+			obj.style[attr] = iCur + iSpeed + 'px';
+		}
+	}
+			
+	if(bBtn){
+		clearInterval(obj.timer);
+		if(endFn){
+			endFn.call(obj);
+		}
+	}
+	},30);
+	}
+	function getStyle(obj,attr){
+	if(obj.currentStyle){
+		return obj.currentStyle[attr];
+	}
+	else{
+		return getComputedStyle(obj,false)[attr];
+	}
+}
+function ad_Img(obj){
+	var oBox = document.getElementById(obj);
+	this.aPicli = oBox.getElementsByTagName("ul")[0].getElementsByTagName("li");
+	this.len = this.aPicli.length;
+	this.iNow = 0;
+	var _this=this;
+	var i = 0;
+	var timer = null;
+	var arr = [];
+		
+	_this.autoPlay();
+	timer=window.setInterval(function(){
+		_this.autoPlay()
+	},5000)
+}
+
+ad_Img.prototype.autoPlay=function(){
+	this.iNow++;
+	if(this.iNow>=this.len){
+		this.iNow=0
+		}
+	this.tab(this.iNow);
+}
+
+ad_Img.prototype.tab=function(number){
+for(i=0;i<this.aPicli.length;i++){
+		startMove(this.aPicli[i],{opacity:0},function(){
+			this.style.display="none";
+		});						
+	}
+	this.aPicli[number].style.display="block";
+	startMove(this.aPicli[number],{opacity:100});
+}
+</script>
+ <script type="text/javascript">
+window.onload=function(){
+	new ad_Img("dd_5");
+}
+$("#ad_5").show();
+</script>
+</head>
+<body>
+
+<!--header-->
+<div class="header"><p><span>2015年10月28日&nbsp;&nbsp;星期三&nbsp;&nbsp;天气（北京<b id="tianqi_high_bj" style="font-weight:normal;"></b>/<b id="tianqi_low_bj" style="font-weight:normal;"></b> ℃&nbsp;|&nbsp;首尔<b id="tianqi_high_se" style="font-weight:normal;"></b>/<b id="tianqi_low_se" style="font-weight:normal;"></b> ℃）</span><em><a href="http://www.people.com.cn/" target="_blank">中文</a>|<a href="http://english.peopledaily.com.cn/" target="_blank">English</a>|<a href="http://french.peopledaily.com.cn/" target="_blank">French</a>|<a href="http://russian.people.com.cn/" target="_blank">Russian</a>|<a href="http://spanish.peopledaily.com.cn/" target="_blank">Spanish</a>|<a href="http://j.people.com.cn/" target="_blank">Japanese</a>|<a href="http://arabic.people.com.cn/" target="_blank">Arabic</a>|<a href="http://kr.people.com.cn/" target="_blank">Korean</a></em></p></div>
+<!--ad-->
+<div class="w980 ad0815 clear"><a href="http://korea.people.com.cn/205163/311932/index.html" target=_blank><img src="/NMediaFile/2015/0824/FOREIGN201508240958290333778441464.jpg" width="980" height="200"/></a>
+</div>
+<!--nav-->
+<div class="w980 navbox clear">
+	<div class="search clear">
+		<span><marquee direction="left" scrolldelay="150" height="25" width="628" onmouseover=this.stop() onmouseout=this.start() truespeed><a href='/n/2015/1028/c205179-8968133.html' target=_blank>金泰熙力挺周元新片 雪莉出席试映会甜美可爱【组图】</a>
+<a href='/n/2015/1028/c205179-8968103.html' target=_blank>陈伟霆搭档韩星Jessica北京拍戏 动作亲昵造型惹眼【组图】</a>
+<a href='/n/2015/1028/c205175-8968062.html' target=_blank>EXO朴信惠rain齐助阵公益活动 Jessica牵手妹妹郑秀晶现身【组图】</a>
+<a href='/n/2015/1028/c205175-8967970.html' target=_blank>《她很漂亮》崔始源演技爆发 变身表情帝超搞笑【组图】</a>
+<a href='/n/2015/1028/c205175-8967938.html' target=_blank>李敏镐清晨现身机场飞广州 有说有笑心情好【组图】</a>
+<a href='/n/2015/1028/c205175-8967880.html' target=_blank>秀智写真嘟嘴卖萌 尽显甜美可爱【组图】</a>
+<a href='/n/2015/1028/c205175-8967683.html' target=_blank>李妍熙素颜出镜 透露无暇美肌保养秘诀【组图】</a>
+<a href='/n/2015/1027/c205175-8967566.html' target=_blank>崔智友混搭风现身机场 频露微笑心情好【组图】</a>
+<a href='/n/2015/1027/c205180-8967519.html' target=_blank>李英爱有新头衔！出任联合国教科文组织特别大使（图）</a>
+<a href='/n/2015/1027/c205179-8967470.html' target=_blank>《她很漂亮》黄静茵花絮照 第十二集浪漫爱情戏来袭（图）</a>
+<a href='/n/2015/1027/c205176-8967460.html' target=_blank>少女时代现身机场飞上海 泰妍白裙装扮清纯范【组图】</a>
+<a href='/n/2015/1027/c205180-8967442.html' target=_blank>刘亦菲被曝曾赴韩国整容 出道13年对比照大盘点【组图】</a>
+<a href='/n/2015/1027/c205180-8967436.html' target=_blank>f(x)宋茜晒练习室自拍 紧身牛仔裤展示完美身材（图）</a>
+<a href='/n/2015/1027/c205176-8967416.html' target=_blank>秋瓷炫写真公开 毛衣白裙温柔可人【组图】</a>
+<a href='/n/2015/1027/c205179-8967414.html' target=_blank>宋仲基宋慧乔被赞“史上最高颜值CP” 《太阳的后裔》明年中韩同播【组图】</a>
+<a href='/n/2015/1027/c205176-8967393.html' target=_blank>CNBlue全员现身机场 郑容和红帽搭卫衣休闲范【组图】</a>
+<a href='/n/2015/1027/c205175-8967371.html' target=_blank>A pink孙娜恩写真公开 高冷成熟范【组图】</a>
+<a href='/n/2015/1027/c205176-8967206.html' target=_blank>Sistar多顺写真性感诱惑 分享管理身材秘诀【组图】</a>
+<a href='/n/2015/1027/c205175-8967195.html' target=_blank>《朝鲜魔术师》曝人物版海报 俞承豪高雅拉携手新戏【组图】</a>
+<a href='/n/2015/1027/c205179-8967168.html' target=_blank>EXO成员XIUMIN与金素恩穿情侣装现身 宣传新剧《爱上挑战》【组图】</a>
+
+</marquee></span>
+  		<div><form action="http://search.people.com.cn/rmw/GB/ckorea/languagesearch.jsp" name="MLSearch" method="post" onsubmit="if(getParameter_DJ()==false) return false;" target="_blank"><input type="text" name="names" Id="names"  class="one"/><input type="hidden" name="language" value="1"/><input type="hidden" name="sitename" value="ckorea"/><input type="hidden" name="XMLLIST"/><img src="/img/2012koreacn/images/icon1.gif" alt="" /></form></div>
+    </div>
+	<div class="nav clear">
+    	<div class="nav_left"><img src="/img/2012koreacn/images/logo.jpg" alt="" /></div>
+        <div class="nav_right">
+        <ul id="sddm">
+          	
+<li><a href="http://korea.people.com.cn/" target="_blank">首页</a></li>
+<li><a href="http://korea.people.com.cn/205155/index.html" target="_blank" onmouseover="mopen('m1')" onmouseout="mclosetime()">新闻</a>
+    <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href="http://korea.people.com.cn/205155/205164/index.html" target="_blank">滚动</a>|<a href="http://korea.people.com.cn/205155/205165/index.html" target="_blank">时政</a>|<a href="http://korea.people.com.cn/205155/205166/index.html" target="_blank">经济</a>|<a href="http://korea.people.com.cn/205155/205167/index.html" target="_blank">社会</a>|<a href="http://korea.people.com.cn/205155/205168/index.html" target="_blank">体育</a>|<a href="http://korea.people.com.cn/205155/205170/index.html" target="_blank">评论</a>|<a href="http://korea.people.com.cn/205155/205551/index.html" target="_blank">文教科技</a>|<a href="http://korea.people.com.cn/205155/205552/index.html" target="_blank">军事</a></div>
+</li>
+<li><a href="http://korea.people.com.cn/205156/index.html" target="_blank" onmouseover="mopen('m2')" onmouseout="mclosetime()">视频</a>
+    <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href="http://korea.people.com.cn/205156/205171/index.html">新闻</a>|<a href="http://korea.people.com.cn/205156/205262/index.html">韩国头条速递</a>|<a href="http://korea.people.com.cn/205156/205172/index.html">独家呈现</a></div>
+</li>
+<li><a href="http://korea.people.com.cn/205157/index.html" target="_blank" onmouseover="mopen('m3')" onmouseout="mclosetime()">图片</a>
+    <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href="http://korea.people.com.cn/205157/205174/index.html">新闻</a>|<a href="http://korea.people.com.cn/205157/205175/index.html">娱乐</a>|<a href="http://korea.people.com.cn/205157/205257/index.html">旅游</a>|<a href="http://korea.people.com.cn/205157/205176/index.html">时尚</a>|<a href="http://korea.people.com.cn/205157/205753/index.html">购物</a></div>
+</li>
+<li><a href="http://korea.people.com.cn/205158/index.html" target="_blank" onmouseover="mopen('m4')" onmouseout="mclosetime()">娱乐</a>
+    <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href="http://korea.people.com.cn/205158/205180/index.html">新闻</a>|<a href="http://korea.people.com.cn/205158/205179/index.html">影视</a>|<a href="http://korea.people.com.cn/205158/205178/index.html">音乐</a>|<a href="http://korea.people.com.cn/205158/205177/index.html">演出</a>|<a href="http://korea.people.com.cn/205158/205570/index.html">明星档案</a></div>
+</li>
+<li><a href="http://korea.people.com.cn/205159/index.html" target="_blank" onmouseover="mopen('m5')" onmouseout="mclosetime()">旅游</a>
+    <div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href="http://korea.people.com.cn/205159/205187/index.html">旅游新闻</a>|<a href="http://korea.people.com.cn/205159/205182/index.html">购</a>|<a href="http://korea.people.com.cn/205159/206559/index.html">游</a>|<a href="http://korea.people.com.cn/205159/205186/index.html">食</a>|<a href="http://korea.people.com.cn/205159/205255/index.html">行</a>|<a href="http://korea.people.com.cn/205159/205183/index.html">住</a>|<a href="http://korea.people.com.cn/205159/205181/index.html">领事服务</a></div>
+</li>
+<li><a href="http://korea.people.com.cn/205160/index.html" target="_blank" onmouseover="mopen('m6')" onmouseout="mclosetime()">地方</a>
+    <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href="http://korea.people.com.cn/205160/205190/index.html">各地概况</a>|<a href="http://korea.people.com.cn/205160/205671/index.html">活动庆典</a>|<a href="http://korea.people.com.cn/205160/206080/index.html">地方新闻</a></div>
+</li>
+<li><a href="http://korea.people.com.cn/205161/index.html" target="_blank" onmouseover="mopen('m7')" onmouseout="mclosetime()">留学</a>
+    <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href=" http://korea.people.com.cn/205161/205193/index.html ">名校介绍</a>|<a href=" http://korea.people.com.cn/205161/205191/index.html ">留学提示</a>|<a href=" http://korea.people.com.cn/205161/205553/index.html ">留学动态</a></div>
+</li>
+<li><a href="http://korea.people.com.cn/205162/index.html" target="_blank" onmouseover="mopen('m8')" onmouseout="mclosetime()">企业</a>
+<div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()"><a href="http://korea.people.com.cn/205162/205789/index.html">企业介绍</a>|<a href="http://korea.people.com.cn/205162/205196/index.html">企业动态</a>|<a href="http://korea.people.com.cn/205162/205194/index.html">企业合作</a>|<a href=" http://korea.people.com.cn/205162/207825/index.html">韩品速递</a>|<a 
+
+href="http://korea.people.com.cn/205162/208507/index.html">韩系车讯</a>
+</div></li>
+
+<li><a href="http://korea.people.com.cn/205163/index.html" target="_blank">专题</a></li>
+
+
+
+       	</ul>
+        </div>
+    </div>
+</div>
+<!--p1-->
+<div class="w980 p1_content oh clear">
+	<div class="p1_left fl">
+    	<div class="flash_1 clear">
+        	<div id="flash-jdt-hot"></div>
+			<script type="text/javascript">
+			function popup() {
+	document.getElementById("dlk").style.display="block";
+	var TOP=window.screen.height/2-350;
+	var Left=window.screen.width/2-300;
+	 	document.getElementById("dlk").style.top=TOP;
+		document.getElementById("dlk").style.left=Left;
+
+ document.getElementById("t1_close").onclick=function(){
+	document.getElementById("dlk").style.display="none";
+ }
+}
+            //  pic size: 280x251
+            var pic_arr = new Array(); 
+			var link_arr = new Array(); 
+			var title_arr = new Array();
+            
+           pic_arr.push("/NMediaFile/2015/1028/FOREIGN201510281025119922965425242.jpg"); link_arr.push("http://korea.people.com.cn/n/2015/1028/c205199-8967919.html"); title_arr.push("“2015中韩经营大奖”颁奖典礼举行");
+
+pic_arr.push("/NMediaFile/2015/1027/FOREIGN201510271626355338265760256.jpg"); link_arr.push("http://korea.people.com.cn/n/2015/1027/c311868-8967536.html"); title_arr.push("安重根义举106周年纪念日活动举行");
+
+pic_arr.push("/NMediaFile/2015/1027/FOREIGN201510271419363918606006854.jpg"); 
+link_arr.push("http://korea.people.com.cn/n/2015/1027/c205174-8967465.html"); title_arr.push("首尔地区迎来秋雨 枫叶美景秋意更浓");
+
+pic_arr.push("/NMediaFile/2015/1028/FOREIGN201510281117305558960851502.jpg"); link_arr.push("http://korea.people.com.cn/n/2015/1028/c207971-8967976.html"); title_arr.push("韩国“美女博士”街头卖炒饭");
+
+pic_arr.push("/NMediaFile/2015/0209/FOREIGN201502091046082743775028815.jpg"); link_arr.push ("http://www.weibo.com/lottedfs"); title_arr.push("乐天免税店35周年庆大礼");
+
+pic_arr.push("/NMediaFile/2015/0805/FOREIGN201508051734032935428932325.jpg"); link_arr.push ("http://www.kgcchina.com/"); title_arr.push("");
+            
+            var p = pic_arr.join("|");
+			var l = link_arr.join("|");
+			var title = title_arr.join("|");
+
+			var wwvars = {pic:p, url:l, title:title};
+			swfobject.embedSWF("/img/2012koreacn/jdt-hot.swf?"+Math.random(), "flash-jdt-hot", "280", "226", "9.0.0", "",wwvars,{wmode:"transparent"},false);
+            </script>
+            <div class="dlk" id="dlk">
+                <img src="/img/2012koreacn/images/ad-popup.jpg"/>
+            	<a class="close" id="t1_close">关闭</a>
+            </div>
+        </div>
+        <div class="clear" id="dd_6">
+			<ul><li><a href="http://gfez.go.kr/menu.es?mid=a30801000000" target=_blank><img src="/NMediaFile/2015/1007/FOREIGN201510071309364455708181132.jpg" width="280" height="70" alt=""/></a></li>
+<li><a href="http://ebooki.co.kr/ebook/ecatalog.php?Dir=&start=&catimage=" target=_blank><img src="/NMediaFile/2015/0611/FOREIGN201506111330253144499134210.jpg" width="280" height="70"/></a></li>
+</ul>
+		</div>
+        <div class="flash_1 clear">
+        	<div id="flash-cloud-tag"></div>
+			<script type="text/javascript">
+			<!--
+			var urlArr= new Array();
+			var keyArr= new Array();//---------begin1----
+urlArr.push("http://www.people.com.cn");
+keyArr.push("关键字1");
+//---------end1----
+
+//---------begin2----
+urlArr.push("http://www.people.com.cn");
+keyArr.push("关键字2");
+//---------end2----
+
+//---------begin3----
+urlArr.push("http://www.people.com.cn");
+keyArr.push("关键字3");
+//---------end3----var k_u = urlArr.join("|");
+			var k_k = keyArr.join("|");
+			
+			var flashvars = {   
+						mykeys: k_k,
+						myurls: k_u,
+						dcolor:defaultcolor,
+						ocolor:overcolor,
+						btncolor:mybtncolor
+			};
+			
+			swfobject.embedSWF("/img/2012koreacn/cloud-tag.swf?r="+Math.random(), "flash-cloud-tag", "280", "150", "9.0.0", "",flashvars,{wmode:'transparent'},false);
+			-->
+			</script>
+		</div>
+        
+  	</div>
+    <div class="p1_center fl">
+    	<h1><a href='/n/2015/1028/c312128-8967981.html' target="_blank">中日韩首脑会晤为何值得期待 </a></h1>
+		  <p>    中日韩领导人将于本月底至下月初在韩国首尔举行双边及多边会晤，三国的专家及媒体对这次会晤普遍持期待与欢迎态度。<a href='http://korea.people.com.cn/n/2015/1028/c312128-8967981.html' target='_blank'><font color='#0080ff'> 更多</font></a></p>
+<h1><a href='/n/2015/1028/c205165-8967996.html' target="_blank">朴槿惠施政演说56次谈经济 在野党提反对意见</a></h1>
+		  <p>    韩国总统朴槿惠在国会发表施政演说，提及最多的单词就是经济。针对朴槿惠的演说内容，韩国政坛反应不一。<a href='http://korea.people.com.cn/n/2015/1028/c205165-8967996.html' target='_blank'><font color='#0080ff'> 更多</font></a></p>
+
+        <ul class="list_14 clear"><li><a href='/n/2015/1028/c206524-8968024.html' target=_blank>朴槿惠：落实东北亚和平合作构想有助推动区域和平</a></li>
+<li><a href='/n/2015/1028/c208274-8968002.html' target=_blank>韩国要求朝韩离散团聚常态化呼声高涨</a></li>
+<li><a href='/n/2015/1028/c205166-8968048.html' target=_blank>韩对明年度预算案进行审核 规模达386万亿韩元</a></li>
+<li><a href='/n/2015/1028/c206524-8968041.html' target=_blank>朴槿惠推进韩国型战机开发 力争在原期限内完成<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1028/c205552-8967989.html' target=_blank>韩军方将增加2万名新兵入伍人数 加强体检标准<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1028/c207969-8967807.html' target=_blank>“慰安妇”问题争执不下 日韩首脑会“尚未敲定”</a></li>
+<li><a href='/n/2015/1028/c205166-8968038.html' target=_blank>中日韩外汇储备占世界47% 三国自贸区对亚洲意义重大</a></li>
+<li><a href='/n/2015/1028/c205552-8967957.html' target=_blank>韩称已基本掌握开发韩国型战机所需三项核心技术</a></li>
+</ul>
+  	</div>
+    <div class="p1_right fr">
+    	<h3 class="p1_5 clear"><span>独家呈现</span><a href="http://korea.people.com.cn/205156/205172/index.html" target="_blank">MORE</a></h3>
+        <ul class="p1_2 clear"><li><a href="http://korea.people.com.cn/n/2015/1016/c205172-8963138.html" target=_blank><img src="/NMediaFile/2015/1016/FOREIGN201510161758022821044547259.jpg" width="122" height="75"/></a><img src=" /mediafile/201302/01/F201302011328372137514915.gif" width="16" height="9" border="0"><a href='http://korea.people.com.cn/n/2015/1016/c205172-8963138.html' target='_blank'><b>独家呈现</b></a></span><br><a href='http://korea.people.com.cn/n/2015/1016/c205172-8963138.html' target='_blank'>韩国釜山市市长：打造智慧釜山</a></li>
+<li><a href="http://korea.people.com.cn/n/2015/1016/c205172-8963133.html" target=_blank><img src="/NMediaFile/2015/1016/FOREIGN201510161751554771006799613.jpg" width="122" height="75"/></a><img src=" /mediafile/201302/01/F201302011328372137514915.gif" width="16" height="9" border="0"><a href='http://korea.people.com.cn/n/2015/1016/c205172-8963133.html' target='_blank'><b>独家呈现</b></a></span><br><a href='http://korea.people.com.cn/n/2015/1016/c205172-8963133.html' target='_blank'>韩国益山市市长：建设亚洲最大的食品产业集群基地</a></li>
+</ul>
+        
+        <div class="clear" id="dd_5">
+                     <ul><li><a href="http://www.gb.go.kr/chi/main.jsp" target="_blank"><img src="/NMediaFile/2014/0605/FOREIGN201406050905519826300341368.jpg" width="280" height="70" border="0"/></a></li>
+</ul>
+</div>
+        <div id="rollAD1" style="width:280px;height:66px;position:relative;overflow:hidden;">
+		<div id="rollText1">
+        <ul class="p1_4 clear"><li><a href="http://krcn.kr/ebook1/index.html#p=1" target=_blank><img src="/NMediaFile/2014/1020/FOREIGN201410201253343586604351704.jpg" width="280" height="70"/></a></li>
+</ul>
+        </div>
+    	</div>
+    	<script language="javascript" type="text/javascript">
+		var textDiv1 = document.getElementById("rollText1");
+		var textList1 = textDiv1.getElementsByTagName("li");
+		if(textList1.length > 2){
+		var textDat1 = textDiv1.innerHTML;
+		 //var textUp2 = textDat.substr(0,br);
+		textDiv1.innerHTML = textDat1+textDat1;
+	 	textDiv1.style.cssText = "position:absolute; top:0";
+ 		var textDatH1 = textDiv1.offsetHeight;
+		setTimeout(MaxRoll1,5000);
+		}
+		var minTime1,maxTime1,divTop1,newTop1=0;
+		function MinRoll1(){
+		newTop1++;
+		if(newTop1<=divTop1+66){
+			textDiv1.style.top = "-" + newTop1 + "px";
+			}else{
+				clearInterval(minTime1);
+			  	maxTime1 = setTimeout(MaxRoll1,5000);
+			}
+		}
+		function MaxRoll1(){
+			divTop1 = Math.abs(parseInt(textDiv1.style.top));
+			if(divTop1>=0  &&  divTop1<textDatH1-66){
+				minTime1 = setInterval(MinRoll1,1);
+				}else{
+				  textDiv1.style.top = 0;divTop1 = 0;newTop1=0;MaxRoll1();
+				}
+			}
+		</script>
+    </div>
+</div>
+<!--ad-->
+<div class="w980 mt10 oh clear" >
+	<div class="ad_left fl"><a href="http://www.wenjuan.com/s/n2INna/" target=_blank><img src="/NMediaFile/2015/0831/FOREIGN201508311654342234862557300.jpg" width="680" height="60"/></a>
+</div>
+    <div class="ad_right fr">
+    	<div id="flash-jdt-ads"></div>
+		<script type="text/javascript">
+        var pic_arr = new Array(); 
+        var link_arr = new Array(); 
+        
+        pic_arr.push("/NMediaFile/2015/0716/FOREIGN201507160951144878973214212.jpg ");
+link_arr.push("http://chn.gwd.go.kr/gw/chn");
+
+pic_arr.push("/NMediaFile/2015/0716/FOREIGN201507160951145788587026094.jpg ");
+link_arr.push("http://chn.gwd.go.kr/gw/chn");
+
+pic_arr.push("/NMediaFile/2015/0716/FOREIGN201507160951146696207094196.jpg ");
+link_arr.push("http://chn.gwd.go.kr/gw/chn");
+
+pic_arr.push("/NMediaFile/2015/0716/FOREIGN201507160951147373906980088.jpg ");
+link_arr.push("http://chn.gwd.go.kr/gw/chn");
+
+pic_arr.push("/NMediaFile/2015/0130/FOREIGN201501301337350689079377440.jpg ");
+link_arr.push("http://chn.gwd.go.kr/gw/chn");
+
+pic_arr.push("/NMediaFile/2015/0716/FOREIGN201507160951143482533165750.jpg ");
+link_arr.push("http://chn.gwd.go.kr/gw/chn");
+        
+        var p = pic_arr.join("|");
+        var l = link_arr.join("|");
+        var wwvars = {pic:p, url:l};
+        swfobject.embedSWF("/img/2012koreacn/jdt-ad.swf?"+Math.random(), "flash-jdt-ads", "280", "60", "9.0.0", "",wwvars,{wmode:"transparent"},false);
+        </script>
+    </div>
+</div>
+<!--p2-->
+<div class="w980 mt10 oh clear">
+	<div class="p2_left fl">
+    	<h3 class="p2_1 clear"><span>焦点视频</span><a href="http://korea.people.com.cn/205156/" target="_blank">更多</a></h3>
+        <p class="p2_2 clear"><a href="http://korea.people.com.cn/n/2015/1023/c205171-8966164.html" target=_blank><img src="/NMediaFile/2015/1023/FOREIGN201510231647033984663413762.jpg" width="130" height="100"/></a><b><a href="http://korea.people.com.cn/n/2015/1023/c205171-8966164.html" target="_blank">韩朝离散家属团聚 泪洒会场</a></b>
+</p>
+   	  	<div class="p2_3 clear">
+        	<h3><span>股市</span><b id="gupiao_stocktime" style="font-weight:normal;"></b></h3>
+        	<ul>
+            	<li><span id="gupiao_sh"></span><b id="gupiao_sh_sz" style="font-weight:normal;"></b>&nbsp;&nbsp;<img id="gupiao_sh_img" src="/img/2012koreacn/images/icon4.gif" alt="" />&nbsp;&nbsp;<strong id="gupiao_sh_percent"></strong></li>
+          		<li><span id="gupiao_sz"></span><b id="gupiao_sz_sz" style="font-weight:normal;"></b>&nbsp;&nbsp;<img id="gupiao_sz_img" src="/img/2012koreacn/images/icon5.gif" alt="" />&nbsp;&nbsp;<strong id="gupiao_sz_percent"></strong></li>
+            </ul>
+        	<h3><span>汇率</span></h3>
+        	<table width="278" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><img id="yingbang_img" src="/img/2012koreacn/images/yingguo.jpg" alt="" /><span id="yingbang"></span> <b id="yingbang_value" style="font-weight:normal"></b></td>
+                <td><img id="gangbi_img" src="/img/2012koreacn/images/xianggang.jpg" alt="" /><span id="gangbi"></span> <b id="gangbi_value" style="font-weight:normal"></b></td>
+                <td><img id="meiyuan_img" src="/img/2012koreacn/images/meiguo.gif" alt="" /><span id="meiyuan"></span> <b id="meiyuan_value" style="font-weight:normal"></b></td></tr>
+              <tr>
+                <td><img id="riyuan_img" src="/img/2012koreacn/images/riben.jpg" alt="" /><span id="riyuan"></span> <b id="riyuan_value" style="font-weight:normal"></b></td>
+                <td><img id="ouyuan_img" src="/img/2012koreacn/images/oumeng.jpg" alt="" /><span id="ouyuan"></span> <b id="ouyuan_value" style="font-weight:normal"></b></td>
+                <td><img id="hanyuan_img" src="/img/2012koreacn/images/hanguo.jpg" alt="" /><span id="hanyuan"></span> <b id="hanyuan_value" style="font-weight:normal"></b></td>
+              </tr>
+        	</table>
+		</div>
+        <div class="p2_4 clear">
+        	<div>
+            	<div id="flash-jdt-ads2"></div>
+				<script type="text/javascript">
+                var pic_arr = new Array(); 
+                var link_arr = new Array(); 
+                
+                pic_arr.push("/mediafile/201402/20/F201402201013193689223073.jpg");
+link_arr.push("http://guide.gyeongju.go.kr/deploy/chs/");
+
+pic_arr.push("/mediafile/201402/20/F201402201013193689223073.jpg");
+link_arr.push("http://guide.gyeongju.go.kr/deploy/chs/");
+                
+                var p = pic_arr.join("|");
+                var l = link_arr.join("|");
+                var wwvars = {pic:p, url:l};
+                swfobject.embedSWF("/img/2012koreacn/jdt-ad.swf?"+Math.random(), "flash-jdt-ads2", "300", "80", "9.0.0", "",wwvars,{wmode:"transparent"},false);
+                </script>
+            </div>
+            <div><a href="http://korea.people.com.cn/205163/311822/index.html" target=_blank><img src="/NMediaFile/2015/1014/FOREIGN201510141548237732042259602.jpg" width="300" height="80"/></a></div>
+
+            
+        </div>
+  	</div>
+    <div class="p2_center fl">
+    	<h3 class="p2_1 p2_5 clear"><span>推荐专题</span><a href="http://korea.people.com.cn/205163/index.html" target="_blank">更多</a></h3>
+        <div class="p2_6">
+            <div id="slider"><div class="slide"><a href="http://korea.people.com.cn/205159/310129/index.html" target=_blank><img src="/NMediaFile/2015/0604/FOREIGN201506041707088179858380840.jpg" width="200" height="140" class="diapo" alt="最韩流旅游"/></a><div class="text">最韩流旅游</div></div>
+<div class="slide"><a href="http://korea.people.com.cn/205160/206080/index.html " target=_blank><img src="/mediafile/201309/12/F201309121603369016194420.jpg" width="200" height="140" class="diapo" alt="地方新闻"/></a><div class="text">地方新闻</div></div>
+<div class="slide"><a href="http://korea.people.com.cn/205160/205671/index.html" target=_blank><img src="/mediafile/201205/31/F201205311342375622615326.jpg" width="200" height="140" class="diapo" alt="活动庆典"/></a><div class="text">活动庆典</div></div>
+<div class="slide"><a href="http://korea.people.com.cn/205163/311814/index.html" target=_blank><img src="/NMediaFile/2015/0715/FOREIGN201507151009163624302213775.jpg" width="200" height="140" class="diapo" alt=" 旅游天国江原道"/></a><div class="text"> 旅游天国江原道</div></div>
+</div>
+        </div>
+        <h3 class="p2_1 p2_5 clear"><span>滚动新闻</span><a href="http://korea.people.com.cn/205155/205164/index.html" target="_blank">更多</a></h3>
+<div id=demoa style="overflow:hidden; width:360px;margin:0 auto; height:300px;">
+    		<div id=demob>
+        	<div align="left" style="font-size:14px;">·<a href='/n/2015/1028/c205165-8968138.html' target=_blank>朴槿惠和执政党支持率双双下降 或因国定教科书</a><br />
+·<a href='/n/2015/1028/c205179-8968133.html' target=_blank>金泰熙力挺周元新片 雪莉出席试映会甜美可爱【…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a><br />
+·<a href='/n/2015/1028/c312137-8968119.html' target=_blank>【资料】中日韩合作</a><br />
+·<a href='/n/2015/1028/c205179-8968103.html' target=_blank>陈伟霆搭档韩星Jessica北京拍戏 动作亲…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a><br />
+·<a href='/n/2015/1028/c205199-8968100.html' target=_blank>专访:"韩流""汉风"交相辉映 中韩文化交流…</a><br />
+·<a href='/n/2015/1028/c205196-8968074.html' target=_blank>紧随苹果脚步 Samsung Pay用户超百万<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a><br />
+·<a href='/n/2015/1028/c205175-8968062.html' target=_blank>EXO朴信惠rain齐助阵公益活动 Jess…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a><br />
+·<a href='/n/2015/1028/c205166-8968048.html' target=_blank>韩对明年度预算案进行审核 规模达386万亿韩元</a><br />
+·<a href='/n/2015/1028/c208274-8968044.html' target=_blank>韩朝离散家属团聚活动结束 双方正式展开民间交流<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a><br />
+·<a href='/n/2015/1028/c206524-8968041.html' target=_blank>朴槿惠推进韩国型战机开发 力争在原期限内完成<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a><br />
+·<a href='/n/2015/1028/c205166-8968038.html' target=_blank>中日韩外汇储备占世界47% 三国自贸区对亚洲…</a><br />
+·<a href='/n/2015/1028/c207825-8968033.html' target=_blank>三星可折叠手机曝光 代号Project Va…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a><br />
+·<a href='/n/2015/1028/c206524-8968024.html' target=_blank>朴槿惠：落实东北亚和平合作构想有助推动区域和平</a><br />
+·<a href='/n/2015/1028/c310488-8968016.html' target=_blank>《英雄联盟》冠军战上演韩国内战：SKT与KO…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a><br />
+·<a href='/n/2015/1028/c209592-8968012.html' target=_blank>韩“世越”号纪录片推迟上映 因家属伤口未愈合</a><br />
+
+</div>
+    	</div>
+    	<div id=democ></div>
+		</div>
+<script language="javascript">
+var speed=60;
+var democ=document.getElementById("democ");
+var demob=document.getElementById("demob");
+var demoa=document.getElementById("demoa");
+democ.innerHTML=demob.innerHTML;
+function Marquee(){
+    if(democ.offsetTop-demoa.scrollTop<=0){
+        demoa.scrollTop-=demob.offsetHeight;
+    }
+    else{
+        demoa.scrollTop++;
+    }
+}
+var MyMar=setInterval(Marquee,speed);
+demoa.onmouseover=function() {clearInterval(MyMar)};
+demoa.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+</script>
+      	
+    </div>
+    <div class="p2_right fr">
+    	
+        <!--hide start-->
+        <div >
+    	<h3 class="p2_9 clear"><strong>总统动态</strong><a href="http://korea.people.com.cn/205163/206524/index.html" target="_blank">更多</a></h3>
+        <div class="show clear" onmouseover="pucker_a('box',1,'hidden','show')" id="box1">
+        	<a href="http://korea.people.com.cn/n/2015/1022/c205165-8965660.html" target=_blank><img src="/NMediaFile/2015/1023/FOREIGN201510230944021819157714708.jpg" width="130" height="100"/></a>朴槿惠同朝野领导层会晤 商讨经济及民生问题
+
+        </div>
+        <div class="hidden clear" onmouseover="pucker_a('box',2,'hidden','show')" id="box2">
+        	<a href="http://korea.people.com.cn/n/2015/1022/c205199-8965410.html" target=_blank><img src="/NMediaFile/2015/1023/FOREIGN201510230944551610820634189.jpg" width="130" height="100"/></a>朴槿惠在总统府偶遇中国游客 用汉语打招呼
+
+        </div>
+        <div class="hidden clear" onmouseover="pucker_a('box',3,'hidden','show')" id="box3">
+        	<a href="http://korea.people.com.cn/n/2015/1019/c311877-8963677.html" target=_blank><img src="/NMediaFile/2015/1023/FOREIGN201510230946504075913945033.jpg" width="130" height="100"/></a>奥巴马会晤朴槿惠 称乐见中韩建立稳固关系
+
+        </div>
+        
+        
+        
+        </div>
+        <!--hide end-->
+        
+         <!--hide2 start-->
+        <div >
+        <h3 class="p2_9a p2_10 mt10 clear"><strong id="aa_1" style="cursor:pointer;" onmouseover="swapAon(1)" class="one">朝鲜日报</strong><strong id="aa_2" onmouseover="swapAon(2)" style="cursor:pointer;">中央日报</strong><strong id="aa_3" onmouseover="swapAon(3)" style="cursor:pointer;">东亚日报</strong></h3>
+      	<ul class="p2_11 oh clear" id="ab_1" style="display:block;"><li><a href="http://cnnews.chosun.com/client/news/viw.asp?cate=C01&mcate=M1001&nNewsNumb=20151042256&nidx=42257" target='_blank'>首尔将建立韩中两国少女雕像
+</a></li><li><a href="http://cnnews.chosun.com/client/news/viw.asp?cate=C01&mcate=M1003&nNewsNumb=20151042246&nidx=42247" target='_blank'>韩日首脑会谈阵痛后或于11月举行
+</a></li><li><a href="http://cnnews.chosun.com/client/news/viw.asp?cate=C01&mcate=M1004&nNewsNumb=20151042250&nidx=42251" target='_blank'>SamsungPay上市仅2个月 用户已达100万
+</a></li><li><a href="http://cnnews.chosun.com/client/news/viw.asp?cate=C01&mcate=M1001&nNewsNumb=20151042265&nidx=42266" target='_blank'>阅读报纸的高中生更易进入好大学找到好工作
+</a></li><li><a href="http://cnnews.chosun.com/client/news/viw.asp?cate=C01&mcate=M1003&nNewsNumb=20151042261&nidx=42262" target='_blank'>安倍李克强为何分别下榻威斯汀朝鲜·新罗酒店
+</a></li></ul>
+        <ul class="p2_11 oh clear" id="ab_2" style="display:none;"><li><a href="http://chinese.joins.com/gb/article.do?method=detail&art_id=142687&category=001001" target='_blank'>为克服出口减少，韩中FTA急需年内生效</a></li><li><a href="http://chinese.joins.com/gb/article.do?method=detail&art_id=142721&category=002001" target='_blank'>韩朝应以离散家属团聚为契机改善双边关系</a></li><li><a href="http://chinese.joins.com/gb/article.do?method=detail&art_id=142723&category=001001" target='_blank'>乐天将为支援青年创业筹集1000亿韩元基金</a></li><li><a href="http://chinese.joins.com/gb/article.do?method=detail&art_id=142683&category=002001" target='_blank'>韩朝离散家属第二轮团聚结束，亲人挥泪告别</a></li><li><a href="http://chinese.joins.com/gb/article.do?method=detail&art_id=142715&category=002001" target='_blank'>韩国会保留韩国型战机预算表决 十年后能否完成前景黯淡</a></li></ul>
+        <ul class="p2_11 oh clear" id="ab_3" style="display:none;"><li><a href="http://chinese.donga.com/gb/srv/service.php3?biid=2015102701248" target='_blank'>辨别银杏树雌雄的技术在中国获专利</a></li><li><a href="http://chinese.donga.com/gb/srv/service.php3?biid=2015102367238" target='_blank'>纽约大都会队时隔15年再次进入世界大赛</a></li><li><a href="http://chinese.donga.com/gb/srv/service.php3?biid=2015102366158" target='_blank'>安平大君和玄镇健的故居遗迹以34亿韩元出售</a></li><li><a href="http://chinese.donga.com/gb/srv/service.php3?biid=2015102703008" target='_blank'>美国总统选举会出现希拉里和特朗普的对决吗？</a></li><li><a href="http://chinese.donga.com/gb/srv/service.php3?biid=2015102702988" target='_blank'>不及格的第19届国会议员将在明年选举中受到审判</a></li></ul>
+        </div>
+        <!--hide2 end-->        
+        <h3 class="p2_9 clear"><strong>亚洲经济</strong></h3>
+        
+        
+        <ul class="p2_11 oh clear"><li><a href="http://china.ajunews.com/view/20151027110531628" target='_blank'>首尔公寓交易价格涨幅破四 创九年峰值 
+</a></li><li><a href="http://china.ajunews.com/view/20151027111313652" target='_blank'>非法整形中介横行 整治法案至今未获国会批准</a></li><li><a href="http://china.ajunews.com/view/20151027110059613" target='_blank'>韩免税店价格优势不再 高汇率及盈利方式成主因 
+</a></li><li><a href="http://china.ajunews.com/view/20151027102222471" target='_blank'>韩消费者信心指数连续四个月回升 走出MERS阴影</a></li><li><a href="http://china.ajunews.com/view/20151027140036856" target='_blank'>日本称不知韩国政府提议双边首脑会谈 或因介意慰安妇及中韩关系 
+</a></li></ul>
+        
+        
+        
+        
+        
+    </div>
+</div>
+<!--p4-->
+<div class="w980 mt10 clear" style="display:none;">
+	<div class="p4line oh clear"></div>
+    <div class="p4_1 clear"><img src="/img/2012koreacn/images/b0410.jpg" alt="" width="878" height="555" border="0" usemap="#Map" /><map name="Map" id="Map">
+        <area shape="rect" coords="1,6,446,202" href="" target="_blank" alt="" />
+        <area shape="rect" coords="5,201,265,393" href="" target="_blank" alt="" />
+        <area shape="rect" coords="6,392,449,551" href="" target="_blank" alt="" />
+        <area shape="rect" coords="457,35,872,262" href="" target="_blank" alt="" />
+        <area shape="rect" coords="451,272,875,518" href="" target="_blank" alt="" />
+        <area shape="rect" coords="500,3,595,30" href="" target="_blank" alt="" />
+        <area shape="rect" coords="612,3,721,31" href="" target="_blank" alt="" />
+        <area shape="rect" coords="743,2,817,32" href="" target="_blank" alt="" />
+        <area shape="rect" coords="549,520,631,551" href="" target="_blank" alt="" />
+        <area shape="rect" coords="644,520,716,552" href="" target="_blank" alt="" />
+        <area shape="rect" coords="729,521,774,553" href="" target="_blank" alt="" />
+        <area shape="rect" coords="789,520,860,552" href="" target="_blank" alt="" />
+      </map>
+  </div>
+</div>
+<!--p5-->
+<div class="w980 p5_content mt10 clearfix" style="display:block;">
+	<div class="p4line oh clear"></div>
+    <div class="p5_left fl">
+		<div class="p5_1">
+			<h3><strong>企业动态</strong><a href="http://korea.people.com.cn/205162/205196/index.html" target="_blank">更多&gt;&gt;</a></h3>
+            <ol><li><a href="http://korea.people.com.cn/n/2015/1028/c205196-8968074.html" target=_blank><img src="/NMediaFile/2015/1028/FOREIGN201510281411016953946627079.jpg" width="130" height="90"/></a><b>紧随苹果脚步 Samsung Pay用户超百万</b><a href="http://korea.people.com.cn/n/2015/1028/c205196-8968074.html" target="_blank"><font color='#0080ff'>[详细]</font></a></li>
+</ol>
+            <ul class="list_12 clear"><li><a href='/n/2015/1028/c205551-8967987.html' target=_blank>韩版"光棍节"将来袭 商家摩拳擦掌搞促销<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1027/c205196-8967524.html' target=_blank>三星LG超高清电视面板全球市场份额超六成</a></li>
+<li><a href='/n/2015/1027/c310097-8967434.html' target=_blank>2015年科技企业员工价值:苹果居首 三星…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+</ul>
+		</div>
+        <div class="p5_1 p5_2">
+			<h3><strong>韩品速递</strong><a href="http://korea.people.com.cn/205162/207825/index.html" target="_blank">更多&gt;&gt;</a></h3>
+            <ol><li><a href="http://korea.people.com.cn/n/2015/1028/c207825-8968033.html" target=_blank><img src="/NMediaFile/2015/1028/FOREIGN201510281358481264462219753.jpg" width="130" height="90"/></a><b>三星可折叠手机曝光 代号Project Valley</b><a href="http://korea.people.com.cn/n/2015/1028/c207825-8968033.html"><font color='#0080ff'>[详细]</font></a></li>
+</ol>
+            <ul class="list_12 clear"><li><a href='/n/2015/1027/c310488-8967441.html' target=_blank>一周韩游排行榜：LOL连续170周登顶<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1027/c207825-8967411.html' target=_blank>设计耳目一新！LG V10手机发布现场图赏<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c207825-8966891.html' target=_blank>奢华尽显 复古情怀 三星万元翻盖手机G91…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+</ul>
+		</div>
+        <div class="p5_1">
+			<h3><strong>中韩交流</strong><a href="http://korea.people.com.cn/205163/205199/index.html" target="_blank">更多&gt;&gt;</a></h3>
+            <ol><li><a href="http://korea.people.com.cn/n/2015/1027/c205199-8967625.html" target=_blank><img src="/NMediaFile/2015/1028/FOREIGN201510281415498029867384811.jpg" width="130" height="90"/></a><b>《习近平谈治国理政》韩文版获韩国读者关注</b><a href="http://korea.people.com.cn/n/2015/1027/c205199-8967625.html"><font color='#0080ff'>[详细]</font></a></li>
+</ol>
+            <ul class="list_12 clear"><li><a href='/n/2015/1028/c205199-8968100.html' target=_blank>"韩流""汉风"交相辉映 中韩文化交流全面…</a></li>
+<li><a href='/n/2015/1027/c205187-8967448.html' target=_blank>中国游客韩国游路线:江南整容江北购物<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205199-8966792.html' target=_blank>张宝文率团访问文莱和韩国</a></li>
+</ul>
+		</div>
+        <div class="p5_1 p5_2">
+			<h3><strong>时尚韩国</strong><a href="http://korea.people.com.cn/205157/205176/index.html" target="_blank">更多&gt;&gt;</a></h3>
+            <ol><li><a href="http://korea.people.com.cn/n/2015/1027/c205175-8967371.html" target=_blank><img src="/NMediaFile/2015/1027/FOREIGN201510271012183841602029960.jpg" width="130" height="90"/></a><b>A pink孙娜恩写真公开 高冷成熟范</b><a href="http://korea.people.com.cn/n/2015/1027/c205175-8967371.html"><font color='#0080ff'>[详细]</font></a></li>
+</ol>
+            <ul class="list_12 clear"><li><a href='/n/2015/1023/c205176-8965792.html' target=_blank>池昌旭西服写真 英俊帅气尽显型男魅力<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1023/c205176-8966070.html' target=_blank>朴信惠巴黎拍时尚写真 性感迷人散发成熟魅力<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1022/c205175-8965190.html' target=_blank>李妍熙变身秋日女神拍写真 清秀魅力尽显<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+</ul>
+		</div>
+    </div>
+    <div class="p5_right fr">
+    	<h3 class="p5_4 clear"><strong>独家策划</strong></h3>
+<ol class="p5_3 oh clear"><li><a href="http://korea.people.com.cn/205157/209519/index.html" target=_blank><img src="/NMediaFile/2015/1026/FOREIGN201510261657111012725902687.jpg" width="230" height="130" alt="IU红格裙装显清纯 学院风着装活力十足【组图】"/></a></li>
+</ol>
+        
+        <div class="line230 oh clear"></div><h3 class="p2_9 p2_10 p5_10 clear"><strong id="da_1" style="cursor:pointer;" onmouseover="swapDon(1)" class="one">星闻排行</strong><strong id="da_2" onmouseover="swapDon(2)" style="cursor:pointer;">要闻排行</strong></h3>
+        <div id="db_1" style="display:block;">
+<ul class="list_12 p5_6 clear"><li><a href='/n/2015/1026/c205178-8966886.html' target=_blank>f(x)四人合体梦幻来袭<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205176-8966644.html' target=_blank>4minute泫雅服写真冬…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205175-8966716.html' target=_blank>允儿演绎秋季穿搭<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205175-8966735.html' target=_blank>EXO现身机场飞上海<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205175-8966832.html' target=_blank>宋茜黑色英伦范装扮现身<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205175-8966911.html' target=_blank>韩国跑男齐现身<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205175-8966932.html' target=_blank>Jessica梳麻花辫变身…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205180-8967007.html' target=_blank>U-kiss原成员东浩公布…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205178-8967010.html' target=_blank>2015乐天免税店家族演唱会<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1026/c205175-8967039.html' target=_blank>IU红格裙装显清纯<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+</ul>
+        </div>
+        <div id="db_2" style="display:none;">
+<ul class="list_12 p5_6 clear"><li><a href='/n/2015/1027/c205807-8967451.html' target=_blank>韩本科应届毕业生月薪1.6…</a></li>
+<li><a href='/n/2015/1027/c311707-8967325.html' target=_blank>韩国再现MERS死亡病例</a></li>
+<li><a href='/n/2015/1027/c205174-8967465.html' target=_blank>首尔迎秋雨 枫叶美景秋意更浓<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1027/c205187-8967448.html' target=_blank>中国游客韩国游路线:江南整…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1027/c311868-8967536.html' target=_blank>安重根义举106周年纪念日…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1027/c205174-8967363.html' target=_blank>韩女博士教士兵跳芭蕾减压<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1027/c312128-8967378.html' target=_blank>李克强访韩并出席中日韩领导…</a></li>
+<li><a href='/n/2015/1027/c205165-8967401.html' target=_blank>朴槿惠发表施政演说<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+<li><a href='/n/2015/1027/c207969-8967464.html' target=_blank>韩驻日大使促日本回应慰安妇…</a></li>
+<li><a href='/n/2015/1026/c205199-8966838.html' target=_blank>揭秘《琅琊榜》入韩之路 市…<img src="/img/2012russianpd/images/iconvideo.gif" alt="" /></a></li>
+</ul>
+        </div>
+    </div>
+</div>
+<!--p6-->
+<div class="w980 p5_content mt10 clearfix" style="display:block;">
+	<div class="p4line oh clear"></div>
+    <div class="p5_left p6_left fl">
+    	<div class="p5_1">
+        	<h3><strong>韩国那些事</strong><a href="http://korea.people.com.cn/205163/205200/205807/index.html" target="_blank">更多&gt;&gt;</a></h3>
+            <ol><li><a href="http://korea.people.com.cn/n/2015/1028/c205807-8967924.html" target=_blank><img src="/NMediaFile/2015/1028/FOREIGN201510281046252795199901172.jpg" width="130" height="90"/></a><a href='http://korea.people.com.cn/n/2015/1028/c205807-8967924.html'><b>韩媒：高中生看报纸成绩好 单科分数比不看报者高6至8分</b></a></li>
+</ol>
+            <ul class="list_12 clear"><li><a href='/n/2015/1027/c205807-8967451.html' target=_blank>韩媒：韩国本科应届毕业生月薪为1.6万元起</a></li>
+<li><a href='/n/2015/1023/c205807-8966104.html' target=_blank>解密：韩国企业的入职考试都考什么？</a></li>
+<li><a href='/n/2015/1023/c205551-8965983.html' target=_blank>韩国高考在即“聪明汤”热销 整容院推“高考…</a></li>
+<li><a href='/n/2015/1023/c205807-8966023.html' target=_blank>统计：94万外国人在韩就业 平均月薪1.1…</a></li>
+<li><a href='/n/2015/1022/c205807-8965174.html' target=_blank>韩政府插足影视界制定标准 电影大卖时编剧可…</a></li>
+<li><a href='/n/2015/1022/c205167-8965450.html' target=_blank>重雾霾袭韩国 民众抢购口罩空气净化器</a></li>
+<li><a href='/n/2015/1020/c205807-8964550.html' target=_blank>韩国特有考试文化 考试零食一起来</a></li>
+<li><a href='/n/2015/1019/c205807-8963847.html' target=_blank>韩国发布第三轮老龄化社会对策 聚焦婚姻生育</a></li>
+</ul>
+        </div>
+        <div class="p5_1 p5_2">
+        	<h3><strong>韩国万象</strong>　　　　　　　　　　　　　　　　　<a href="http://korea.people.com.cn/205163/207971/index.html" target="_blank">更多&gt;&gt;</a></h3>
+
+            <div class="p5_7 clear">
+				<div id="wwdiv"></div>
+				<script type="text/javascript">
+				<!--
+                var pic_arr = new Array(); 
+                var link_arr = new Array(); 
+                var text_arr = new Array();pic_arr.push("/NMediaFile/2015/0923/FOREIGN201509231533374287937095690.jpg");link_arr.push("http://korea.people.com.cn/n/2015/0923/c207971-8954144.html");text_arr.push("动物上阵卖萌大集合"); 
+
+pic_arr.push("/NMediaFile/2015/0901/FOREIGN201509011631386316134973301.jpg");link_arr.push("http://korea.people.com.cn/n/2015/0831/c207971-8943900.html");text_arr.push("韩国“亲吻”咖啡杯盖受追捧"); 
+
+pic_arr.push("/NMediaFile/2015/0819/FOREIGN201508191532451057182700149.jpg");link_arr.push("http://korea.people.com.cn/n/2015/0818/c205174-8937790.html");text_arr.push("韩国现厕所主题咖啡厅");
+
+pic_arr.push("/NMediaFile/2015/0819/FOREIGN201508191532505159834835607.jpg");link_arr.push("http://korea.people.com.cn/n/2015/0811/c207971-8934192.html");text_arr.push("韩国流行“爱心刘海”"); 
+
+pic_arr.push("/NMediaFile/2015/0807/FOREIGN201508071126501806627699689.jpg");link_arr.push("http://korea.people.com.cn/n/2015/0807/c207971-8932871.html");text_arr.push("宠物整容也疯狂 开双眼皮除皱"); 
+
+pic_arr.push("/NMediaFile/2015/0514/FOREIGN201505140939210253076133764.jpg");link_arr.push("http://korea.people.com.cn/n/2015/0514/c207971-8892157.html");text_arr.push("管理员模仿动物搞笑蹿红网络"); var p = pic_arr.join("|");
+                var l = link_arr.join("|");
+                var t = text_arr.join("|");
+                
+                var picW = 300;
+                var picH = 210;
+                var textColor = "#ffffff";
+                var wwvars = {pic: p,url: l, infor: t, picW:picW, picH:picH, color:textColor};
+                swfobject.embedSWF("/img/2012koreacn/main.swf?"+Math.random(), "wwdiv", picW, picH, "9.0.0", "",wwvars,{wmode:"window"},false);
+				-->
+                </script>
+          	</div>
+            <p class="p5_8 oh clear"><a href="http://korea.people.com.cn/n/2015/0915/c205174-8949989.html" target=_blank><img src="/NMediaFile/2015/0923/FOREIGN201509231537094673500064616.jpg" width="83" height="67" alt="世界上最矮的猫"/></a>
+<a href="http://korea.people.com.cn/n/2015/0817/c207971-8937418.html" target=_blank><img src="/NMediaFile/2015/0819/FOREIGN201508191537560741222282463.jpg" width="83" height="67" alt="韩国整容潮“爱美及宠” 松狮染色变“熊猫”"/></a>
+<a href="http://korea.people.com.cn/n/2015/0603/c205174-8901491.html" target=_blank><img src="/NMediaFile/2015/0603/FOREIGN201506030943191291964146558.jpg" width="83" height="67" alt="超萌“草泥兔”耳大如鸟翼迅速走红网络"/></a>
+</p>
+        </div>
+    </div>
+    <div class="p5_right fr">
+    	<h3 class="p5_4 clear"><strong>热点专题</strong><a href="http://korea.people.com.cn/205163/index.html" target="_blank">更多&gt;&gt;</a></h3>
+        <p class="p5_9 clear"><a href="http://korea.people.com.cn/205163/311867/index.html" target=_blank><img src="/NMediaFile/2015/0906/FOREIGN201509061641555315166544658.png" width="205" height="60"/></a>
+<a href="http://korea.people.com.cn/205163/311832/index.html" target=_blank><img src="/NMediaFile/2015/0811/FOREIGN201508111038073090930103667.jpg" width="205" height="60"/></a>
+<img src="/NMediaFile/2014/1105/FOREIGN201411051414332936096556718.jpg" width="205" height="60"/>
+<a href="http://korea.people.com.cn/205163/208744/index.html" target=_blank><img src="/mediafile/201311/05/F201311051339311969324442.jpg" width="205" height="60" alt="记者视角：韩国医疗。整形"/></a>
+</p>
+    </div>
+</div>
+<!--p3-->
+<div class="w980 p3_content clear">
+	<h3 class="p3_1 clear"><span><a id="ba_1" style="cursor:pointer;" onmouseover="swapBon(1)" class="one">娱乐速递</a></span><span><a class="two" id="ba_2" style="cursor:pointer;" onmouseover="swapBon(2)">韩流音乐</a></span><span><a id="ba_3" style="cursor:pointer;" onmouseover="swapBon(3)" class="two">韩国影视</a></span></h3>
+    <div class="p3_2 oh clear" id="bb_1" style="display:block;">
+    	<span><a href="http://korea.people.com.cn/n/2015/1028/c205175-8967938.html" target=_blank><img src="/NMediaFile/2015/1028/FOREIGN201510281054181762343983753.jpg" width="322" height="229" alt="李敏镐清晨现身机场飞广州 有说有笑心情好【组图】"/></a></span>
+
+        <ul><li><a href="http://korea.people.com.cn/n/2015/1028/c205175-8967970.html" target=_blank><img src="/NMediaFile/2015/1028/FOREIGN201510281056423612501511844.jpg" width="142" height="191" alt="崔始源变身表情帝"/></a><b><a href="http://korea.people.com.cn/n/2015/1028/c205175-8967970.html" target=_blank>崔始源变身表情帝</a></b></li>
+<li><a href="http://korea.people.com.cn/n/2015/1027/c205180-8967442.html" target=_blank><img src="/NMediaFile/2015/1027/FOREIGN201510271124113301204183670.jpg" width="142" height="191" alt="刘亦菲被曝曾赴韩整容"/></a><b><a href="http://korea.people.com.cn/n/2015/1027/c205180-8967442.html" target=_blank>刘亦菲被曝曾赴韩整容</a></b></li>
+<li><a href="http://korea.people.com.cn/n/2015/1027/c205180-8967436.html" target=_blank><img src="/NMediaFile/2015/1027/FOREIGN201510271123215547553874784.jpg" width="142" height="191" alt="宋茜晒练习室自拍"/></a><b><a href="http://korea.people.com.cn/n/2015/1027/c205180-8967436.html" target=_blank>宋茜晒练习室自拍</a></b></li>
+<li><a href="http://korea.people.com.cn/n/2015/1027/c205176-8967206.html" target=_blank><img src="/NMediaFile/2015/1027/FOREIGN201510271021466571378579032.jpg" width="142" height="191" alt="多顺性感公开写真"/></a><b><a href="http://korea.people.com.cn/n/2015/1027/c205176-8967206.html" target=_blank>多顺性感公开写真</a></b></li>
+</ul>
+  	</div>
+    <div class="p3_2 oh clear" id="bb_2" style="display:none;">
+    	<span><a href="http://korea.people.com.cn/n/2015/1028/c205175-8967880.html" target=_blank><img src="/NMediaFile/2015/1028/FOREIGN201510281054571007967140980.jpg" width="322" height="229" alt="秀智写真嘟嘴卖萌 尽显甜美可爱【组图】"/></a></span>
+
+        <ul><li><a href="http://korea.people.com.cn/n/2015/1026/c205178-8966886.html" target=_blank><img src="/NMediaFile/2015/1027/FOREIGN201510271023110693377781796.jpg" width="142" height="191" alt="f(x)四人合体梦幻来袭"/></a><b><a href="http://korea.people.com.cn/n/2015/1026/c205178-8966886.html" target=_blank>f(x)四人合体梦幻来袭</a></b></li>
+<li><a href="http://korea.people.com.cn/n/2015/1026/c205175-8966716-3.html" target=_blank><img src="/NMediaFile/2015/1027/FOREIGN201510271026433101626763414.jpg" width="142" height="191" alt="允儿演绎秋季穿搭"/></a><b><a href="http://korea.people.com.cn/n/2015/1026/c205175-8966716-3.html" target=_blank>允儿演绎秋季穿搭</a></b></li>
+<li><a href="http://korea.people.com.cn/n/2015/1026/c205178-8967010.html" target=_blank><img src="/NMediaFile/2015/1026/FOREIGN201510261722088820927447808.jpg" width="142" height="191" alt="2015乐天家族演唱会"/></a><b><a href="http://korea.people.com.cn/n/2015/1026/c205178-8967010.html" target=_blank>2015乐天家族演唱会</a></b></li>
+<li><a href="http://korea.people.com.cn/n/2015/1026/c205175-8966735.html" target=_blank><img src="/NMediaFile/2015/1026/FOREIGN201510261537425503497279913.jpg" width="142" height="191" alt="EXO现身机场飞上海"/></a><b><a href="http://korea.people.com.cn/n/2015/1026/c205175-8966735.html" target=_blank>EXO现身机场飞上海</a></b></li>
+</ul>
+  	</div>
+    <div class="p3_2 oh clear" id="bb_3" style="display:none;">
+    	<span><a href="http://korea.people.com.cn/n/2015/1028/c205175-8967683.html" target=_blank><img src="/NMediaFile/2015/1028/FOREIGN201510281055092958125330884.jpg" width="322" height="229" alt="李妍熙素颜出镜 透露无暇美肌保养秘诀【组图】"/></a></span>
+
+        <ul><li><a href="http://korea.people.com.cn/n/2015/1027/c205175-8967195.html" target=_blank><img src="/NMediaFile/2015/1027/FOREIGN201510271017584263579521892.jpg" width="142" height="191" alt="&quot;朝鲜魔术师&quot;人物海报 "/></a><b><a href="http://korea.people.com.cn/n/2015/1027/c205175-8967195.html" target=_blank>"朝鲜魔术师"人物海报 </a></b></li>
+<li><a href="http://korea.people.com.cn/n/2015/1027/c205176-8967416.html" target=_blank><img src="/NMediaFile/2015/1027/FOREIGN201510271025099474451912330.jpg" width="142" height="191" alt="秋瓷炫写真温柔可人"/></a><b><a href="http://korea.people.com.cn/n/2015/1027/c205176-8967416.html" target=_blank>秋瓷炫写真温柔可人</a></b></li>
+<li><a href="http://korea.people.com.cn/n/2015/1026/c205175-8966911.html" target=_blank><img src="/NMediaFile/2015/1026/FOREIGN201510261533306562860521786.jpg" width="142" height="191" alt="韩跑男齐现身北京"/></a><b><a href="http://korea.people.com.cn/n/2015/1026/c205175-8966911.html" target=_blank>韩跑男齐现身北京</a></b></li>
+<li><a href="http://korea.people.com.cn/n/2015/1026/c205176-8966952.html" target=_blank><img src="/NMediaFile/2015/1026/FOREIGN201510261526048734817350911.jpg" width="142" height="191" alt="韩智敏写真秀性感身材"/></a><b><a href="http://korea.people.com.cn/n/2015/1026/c205176-8966952.html" target=_blank>韩智敏写真秀性感身材</a></b></li>
+</ul>
+  	</div>
+</div>
+<!--link-->
+<div class="w980 link mt10 oh clear" style="display:none;">
+	<h3>友情链接</h3>
+    <div class="link_1 clear">
+    	<div id="colee_left" style="overflow:hidden;width:99%">
+		<table cellpadding="0" cellspacing="0" border="0">
+		<tr>
+        	<td id="colee_left1" valign="top" align="center">
+				<table cellpadding="0" cellspacing="0" border="0">
+					<tr align="center"><td><a href="http://kr.mofcom.gov.cn/" target=_blank><img src="/mediafile/201309/17/F201309170858301767630119.jpg" width="161" height="53"/></a></td>
+<td><a href="http://chn.mofat.go.kr/worldlanguage/asia/chn/main/index.jsp" target=_blank><img src="/mediafile/201206/01/F201206010954251197816183.gif" width="161" height="53"/></a></td>
+<td><a href="http://china.ajnews.co.kr/index.jsp" target=_blank><img src="/mediafile/201207/10/F201207101514521532610101.jpg" width="161" height="53"/></a></td>
+<td><a href="http://china.korean-culture.org" target=_blank><img src="/mediafile/201206/01/F201206010954261067022523.gif" width="161" height="53"/></a></td>
+<td><a href="http://www.korea.net/main" target=_blank><img src="/mediafile/201206/01/F201206010954262998127920.jpg" width="161" height="53"/></a></td>
+<td><a href="http://www.china-korea.org/" target=_blank><img src="/mediafile/201206/01/F201206010954263194417723.jpg" width="161" height="53"/></a></td>
+<td><a href="http://usa.people.com.cn/" target=_blank><img src="/mediafile/201306/06/F201306061417332792030587.jpg" width="161" height="53" alt="美国频道"/></a></td>
+<td><a href="http://uk.people.com.cn/" target=_blank><img src="/mediafile/201306/06/F201306061417311105941311.jpg" width="161" height="53" alt="英国频道"/></a></td>
+<td><a href="http://australia.people.com.cn/" target=_blank><img src="/mediafile/201308/13/F201308131529422339016863.jpg" width="161" height="53"/></a></td>
+<td><a href="http://korean.china.org.cn/" target=_blank><img src="/mediafile/201206/01/F201206010954262541013732.jpg" width="161" height="53"/></a></td>
+</tr>
+				</table>
+			</td>
+			<td id="colee_left2" valign="top"></td>
+		</tr>
+		</table>
+        </div>
+		<script language="javascript" type="text/javascript">
+		<!--
+		var speed=30//速度数值越大速度越慢
+		var colee_left2=document.getElementById("colee_left2");
+		var colee_left1=document.getElementById("colee_left1");
+		var colee_left=document.getElementById("colee_left");
+		colee_left2.innerHTML=colee_left1.innerHTML
+		function Marquee3(){
+		if(colee_left2.offsetWidth-colee_left.scrollLeft<=0)//offsetWidth 是对象的可见宽度
+		colee_left.scrollLeft-=colee_left1.offsetWidth//scrollWidth 是对象的实际内容的宽，不包边线宽度
+		else{
+		colee_left.scrollLeft=colee_left.scrollLeft+1;
+		}
+		}
+		var MyMar3=setInterval(Marquee3,speed)
+		colee_left.onmouseover=function() {clearInterval(MyMar3)}
+		colee_left.onmouseout=function() {MyMar3=setInterval(Marquee3,speed)}
+		-->
+		</script>
+    </div>
+</div>
+<!--copyright-->
+<div id="copyright">
+<a href="http://www.people.com.cn/GB/50142/104580/index.html" target="_blank">人民日报社概况</a>&nbsp;|&nbsp;<a href="http://www.people.com.cn/GB/50142/50458/index.html" target="_blank">关于人民网</a>&nbsp;|&nbsp;<a href="http://korea.people.com.cn/7884961.html" target="_blank">人民网韩国频道简介</a>&nbsp;|&nbsp;<a href="http://korea.people.com.cn/7884954.html" target="_blank">人民网韩国公司简介</a>&nbsp;|<a href="http://korea.people.com.cn/7903835.html" target="_blank">&nbsp;联系我们&nbsp;</a>|&nbsp;<a href="http://www.people.com.cn/n/2013/1227/c373005-23961344.html" target="_blank">网站声明</a><br>
+人 民 网 <a href="http://www.people.com.cn/GB/1018/22259/6138836.html" target="_blank">版 权 所 有</a> ，未 经 书 面 授 权 禁 止 使 用<br />
+  Copyright &copy; 1997-2015 www.people.com.cn. all rights reserved
+</div>
+
+<!--right-->
+<div class="rb_right">
+	<div class="right_center" id="right_center">
+		<div class="back_top_bg"><a onclick="window.scroll(0,0);this.blur()" href="javascript:void(0);"></a></div>
+		<div class="nav_top2">
+            <div class="weix"><img src="/NMediaFile/2015/0819/FOREIGN201508191618526698204249404.jpg" width="71" height="72" alt="微信公众账号"/></div>
+<div class="weitxt">微信公众账号</div>
+<div class="weix"><img src="/NMediaFile/2015/0819/FOREIGN201508191619037167928968102.jpg" width="71" height="72" alt="微博官方账号"/></div>
+<div class="weitxt">微博官方账号</div>
+
+   	  	</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+slider.init();
+</script>
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+
+<script language="javascript">
+
+
+//获取并解析天气xml文件
+
+$(function(){
+
+		var data_tianqi = new Array( );
+	
+		$.get('/rss/tianqi.xml',function(data){
+			//查找所有的forecast节点
+			$(data).find('forecast').each(function(i){
+				var theday=$(this).attr('date');
+				var t = theday.split(' ');
+				theday = t[0];
+				var today = new Date( );
+					if( theday == today.getDate() )
+					{
+
+						data_tianqi.push( $(this).attr( "low" ) );
+				
+						data_tianqi.push( $(this).attr( "high" ) );
+				
+					}
+
+			});
+			
+			
+			//显示天气
+			if( data_tianqi.length >= 4 )
+			
+			{
+			
+				document.getElementById("tianqi_high_bj").innerHTML = data_tianqi[1];
+			
+				document.getElementById("tianqi_low_bj").innerHTML = data_tianqi[0];
+			
+				document.getElementById("tianqi_high_se").innerHTML = data_tianqi[3];
+			
+				document.getElementById("tianqi_low_se").innerHTML = data_tianqi[2];
+			
+			}
+			
+		});
+	});
+
+
+
+
+
+//获取并解析汇率xml文件
+
+$(function(){
+
+		var data_huilv = new Array( );
+
+		$.get('/rss/huilv.xml',function(data){
+				//查找所有的tr节点
+				$(data).find('tr').each(function(i){
+					$(this).find('td').each(function(n){
+					data_huilv.push($(this).text());
+				});
+			});
+
+			//显示汇率
+			
+			if( data_huilv.length >= 12 )
+			
+			{
+			
+				document.getElementById("yingbang").innerHTML = data_huilv[0];
+				document.getElementById("yingbang_value").innerHTML = data_huilv[1];
+				document.getElementById("gangbi").innerHTML = data_huilv[2];
+				document.getElementById("gangbi_value").innerHTML = data_huilv[3];
+				document.getElementById("meiyuan").innerHTML = data_huilv[4];
+				document.getElementById("meiyuan_value").innerHTML = data_huilv[5];
+				document.getElementById("riyuan").innerHTML = data_huilv[6];
+				document.getElementById("riyuan_value").innerHTML = data_huilv[7];
+				document.getElementById("ouyuan").innerHTML = data_huilv[8];
+				document.getElementById("ouyuan_value").innerHTML = data_huilv[9];
+				document.getElementById("hanyuan").innerHTML = data_huilv[10];
+				document.getElementById("hanyuan_value").innerHTML = data_huilv[11];
+			
+				var arr_mon = Array( '欧元', '美元', '英镑', '港币', '日元', '韩元' );
+				var arr_img = Array( 'oumeng.jpg', 'meiguo.gif', 'yingguo.jpg', 'xianggang.jpg', 'riben.jpg', 'hanguo.jpg' );
+				
+				document.getElementById("yingbang_img").src = '/img/2012koreacn/images/' + arr_img[arrpos(arr_mon,data_huilv[0])];
+				document.getElementById("gangbi_img").src = '/img/2012koreacn/images/' + arr_img[arrpos(arr_mon,data_huilv[2])];
+				document.getElementById("meiyuan_img").src = '/img/2012koreacn/images/' + arr_img[arrpos(arr_mon,data_huilv[4])];
+				document.getElementById("riyuan_img").src = '/img/2012koreacn/images/' + arr_img[arrpos(arr_mon,data_huilv[6])];
+				document.getElementById("ouyuan_img").src = '/img/2012koreacn/images/' + arr_img[arrpos(arr_mon,data_huilv[8])];
+				document.getElementById("hanyuan_img").src = '/img/2012koreacn/images/' + arr_img[arrpos(arr_mon,data_huilv[10])];
+			}
+
+		});
+	});
+
+
+function arrpos(arr, val){
+	for(var i=0; i<arr.length; i++){
+		if(arr[i] == val)
+			return i;
+	}
+	return -1;
+}
+
+
+
+//获取并解析股票xml文件
+
+$(function(){
+
+		var data_gupiao = new Array( );
+
+		$.get('/rss/gupiao.xml',function(data){
+			
+			var data_stocktime;
+			//查找所有的tr节点
+			$(data).find('stocktime').each(function(i){
+				data_stocktime = $(this).text();
+				data_stocktime = data_stocktime.substring( 5, 16 );
+			});
+			$(data).find('sh').each(function(i){
+				data_gupiao.push( $(this).children('stockname').text() );
+				data_gupiao.push( $(this).children('stocksz').text() );
+				data_gupiao.push( $(this).children('updown').text() );
+				data_gupiao.push( $(this).children('percent').text() );
+			});
+			$(data).find('sz').each(function(i){
+				data_gupiao.push( $(this).children('stockname').text() );
+				data_gupiao.push( $(this).children('stocksz').text() );
+				data_gupiao.push( $(this).children('updown').text() );
+				data_gupiao.push( $(this).children('percent').text() );
+			});
+			
+			//显示股票数据
+
+			document.getElementById("gupiao_stocktime").innerHTML = data_stocktime;
+			
+			document.getElementById("gupiao_sh").innerHTML = data_gupiao[0];
+			
+			document.getElementById("gupiao_sh_sz").innerHTML = data_gupiao[1];
+			//alert(data_gupiao[3]);
+			if( data_gupiao[2] > 0 )
+			{
+				document.getElementById("gupiao_sh_percent").innerHTML = data_gupiao[3];
+				document.getElementById("gupiao_sh_img").src = "http://korea.people.com.cn/img/2012koreacn/images/icon5.gif";
+			}
+			else
+			
+			{
+			
+				document.getElementById("gupiao_sh_percent").innerHTML = data_gupiao[3];
+			
+				document.getElementById("gupiao_sh_img").src = "http://korea.people.com.cn/img/2012koreacn/images/icon4.gif";
+			
+			}
+			
+			document.getElementById("gupiao_sz").innerHTML = data_gupiao[4];
+			
+			document.getElementById("gupiao_sz_sz").innerHTML = data_gupiao[5];
+			
+			if( data_gupiao[6] > 0 )
+			{
+				document.getElementById("gupiao_sz_percent").innerHTML = data_gupiao[7];
+				document.getElementById("gupiao_sz_img").src = "http://korea.people.com.cn/img/2012koreacn/images/icon5.gif";
+			}
+			else
+			
+			{
+			
+				document.getElementById("gupiao_sz_percent").innerHTML = data_gupiao[7];
+			
+				document.getElementById("gupiao_sz_img").src = "http://korea.people.com.cn/img/2012koreacn/images/icon4.gif";
+			
+			}
+
+		});
+		
+	});
+
+
+</script>
+<!--BAIDU_YUNTU_START-->
+<script id="bdyt-loader"></script>
+<script>
+var loader_script = document.getElementById('bdyt-loader');
+loader_script.src="http://static.yuntu.baidu.com/loader.js?t=" + Math.ceil(new Date()/3600000);
+loader_script.setAttribute("site_id","9369028636811180155");
+</script>
+<!--BAIDU_YUNTU_END-->
+
+</body>
+</html>

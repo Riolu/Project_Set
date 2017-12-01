@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head runat="server"><title>上海交通大学能源信息化平台</title> <meta http-equiv="content-type" content="text/html; charset=utf-8" /><link type="text/css" href="/styles/cssstys/chartstyle.css" rel="Stylesheet" /><link type="text/css" href="/styles/cssstys/webskin1.css" rel="Stylesheet" /><script type="text/javascript" src="/scripts/jquery.js"></script><script type="text/javascript" src="/scripts/jquery.cookie.js"></script><script type="text/javascript" src="/scripts/jquery.easydrag.js"></script><script type="text/javascript" src="/scripts/jquery.jMarquee.js"></script><script type="text/javascript" src="/scripts/jquery.jScroll.js"></script><script type="text/javascript" src="/scripts/Highcharts/highcharts.js"></script><script type="text/javascript" src="/scripts/Highcharts/modules/exporting.js"></script><script type="text/javascript" src="/scripts/loncol.flash.js"></script><script type="text/javascript" src="/scripts/loncol.business.js"></script></head><body><div id="Header"><div class="weblogo"><script language="javascript" type="text/javascript"> writeflashhtml("_swf=/images/flash/jdeimlogo.swf", "_width=250", "_height=50", "_wmode=transparent");</script></div> <div class="weblink"><form id="srcform" action="/pages/Search.aspx" method="post"><table><tr><td align="right">     <label for="TxtKeyword">         站内搜索</label>     <input type="text" id="TxtKeyword" name="TxtKeyword" class="txtsrc" size="10" /></td><td>     <input type="submit" id="BtnSrc" name="BtnSrc" class="btnsrc" value="" /></td></tr></table> </form></div><div id="menu"><ul><li><a href="/Default.aspx" class="select">首页</a></li><li><a href="/Pages/Article.aspx?lm=0101&pg=0" target="_self" >机构设置</a></li><ul><li><a href="/Pages/Article.aspx?lm=010101&pg=0" target="_self">管理网络</a></li><li><a href="/Pages/Article.aspx?lm=010102&pg=0" target="_self">中心概况</a></li><li><a href="/Pages/Article.aspx?lm=010103&pg=0" target="_self">部门设置</a></li><li><a href="/Pages/Article.aspx?lm=010104&pg=0" target="_self">联系我们</a></li></ul><li><a href="/Pages/Article.aspx?lm=0102&pg=0" target="_self" >新闻公告</a></li><ul><li><a href="/Pages/Article.aspx?lm=010201&pg=0" target="_self">新闻动态</a></li><li><a href="/Pages/Article.aspx?lm=010202&pg=0" target="_self">通知公告</a></li></ul><li><a href="/Pages/Article.aspx?lm=0103&pg=0" target="_self" >政策制度</a></li><ul><li><a href="/Pages/Article.aspx?lm=010301&pg=0" target="_self">水电改革</a></li><li><a href="/Pages/Article.aspx?lm=010302&pg=0" target="_self">法律法规</a></li><li><a href="/Pages/Article.aspx?lm=010303&pg=0" target="_self">校内规章</a></li><li><a href="/Pages/Article.aspx?lm=010304&pg=0" target="_self">各类导则</a></li></ul><li><a href="/Pages/Article.aspx?lm=0104&pg=0" target="_self" >节能规划</a></li><ul><li><a href="/Pages/Article.aspx?lm=010401&pg=0" target="_self">研究分析</a></li><li><a href="/Pages/Article.aspx?lm=010402&pg=0" target="_self">运行监查</a></li><li><a href="/Pages/Article.aspx?lm=010403&pg=0" target="_self">考核评估</a></li><li><a href="/Pages/Article.aspx?lm=010404&pg=0" target="_self">节能改造</a></li></ul><li><a href="/Pages/Article.aspx?lm=0105&pg=0" target="_self" >绿色大学</a></li><ul><li><a href="/Pages/Article.aspx?lm=010501&pg=0" target="_self">绿色校园</a></li><li><a href="/Pages/Article.aspx?lm=010502&pg=0" target="_self">绿色教育</a></li><li><a href="/Pages/Article.aspx?lm=010503&pg=0" target="_self">绿色科研</a></li><li><a href="/Pages/Article.aspx?lm=010505&pg=0" target="_self">低碳生活</a></li></ul><li><a href="/Pages/Article.aspx?lm=0106&pg=0" target="_self" >公示监督</a></li><ul><li><a href="/Pages/Article.aspx?lm=010601&pg=0" target="_self">能源指标</a></li><li><a href="/Pages/Article.aspx?lm=010602&pg=0" target="_self">能源审计</a></li><li><a href="/Pages/Article.aspx?lm=010603&pg=0" target="_self">能源公示</a></li><li><a href="/Pages/Article.aspx?lm=010604&pg=0" target="_self">节能监督队</a></li></ul><li><a href="/Pages/Article.aspx?lm=0107&pg=0" target="_self" >办事指南</a></li><ul><li><a href="/Pages/Article.aspx?lm=010701&pg=0" target="_self">新生报到</a></li><li><a href="/Pages/Article.aspx?lm=010702&pg=0" target="_self">离校手续</a></li><li><a href="/Pages/Article.aspx?lm=010703&pg=0" target="_self">更换宿舍</a></li><li><a href="/Pages/Article.aspx?lm=010704&pg=0" target="_self">施工申请</a></li><li><a href="/Pages/Article.aspx?lm=010705&pg=0" target="_self">报修流程</a></li><li><a href="/Pages/Article.aspx?lm=010706&pg=0" target="_self">服务网点</a></li><li><a href="/Pages/Article.aspx?lm=010707&pg=0" target="_self">下载中心</a></li><li><a href="/Pages/Article.aspx?lm=010708&pg=0" target="_blank">功能问答</a></li><li><a href="/Pages/Article.aspx?lm=010709&pg=0" target="_blank">短期宿舍申请</a></li></ul><li><a href="/WebGbook/GuestBookList.aspx" target="_self" >网上办事</a></li><li><a href="/WebExam/ExamList.aspx" target="_self" >问卷调查</a></li></ul></div></div><div id="Mainer" class="back1"><div class="webrow w960"><div class="webcol w240"><div class="userblock"><h2><a>2015年10月28日 星期三</a></h2><div id="UserInfo" class="body"><table width="210"><tr><td><a class="sys1" href="/LogWeb.aspx?sys=1">校园统一身份认证 进入</a></td></tr></table><form name="logForm1" method="post" action="/WebUser/UserLogin.aspx" target="_blank"><table width="210"><tr><th>注册用户登录</th></tr><tr><td>
+                                        用户：
+                                    </td><td><input name="logUser" style="width:100px;" TabIndex="1"></td></tr><tr><td>
+                                        密码：
+                                </td><td><input name="logPass" type="password" style="width:100px;" TabIndex="2"></td></tr><tr><td colspan="2"><input id="submit1" name="submit1" type="submit" class="btnsys1" TabIndex="3" value="  "><a class="btnsys2" href="http://202.120.1.10/Page/PdmlMain.aspx" target="_blank"></a></td></tr><tr><td></td><td>
+                                        [ <a class="userb" href="/WebUser/Register.aspx">注册</a> | <a class="userb" href="/WebUser/GetPassword.aspx">找回密码</a> ]
+                                    </td></tr></table></form></div><script type="text/javascript">
+                $('.userb').click(function(){ $('#UserInfo').load(this.href);return false;});
+            </script></div></div><div class="webcol w720"><table width="720" height="220" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+    <tr>
+        <td width="720">
+            <script src="/scripts/swfobject_source.js" type="text/javascript"></script>
+            <div id="dplayer2" style="padding-right: 0px; padding-left: 0px; background: #fff;
+                padding-bottom: 0px; margin: 0px auto; width: 710px; padding-top: 0px; height: 210px">
+            </div>
+            <script language="javascript" type="text/javascript">
+                var titles = '校园环境优美|崇尚低碳生活|热爱探索科技|共创绿色生活';
+                var imgs = 'Images/pictures/pic01.png|Images/pictures/pic02.png|Images/pictures/pic03.png|Images/pictures/pic04.png';
+                var urls = '#|#|#|#';
+                var pw = 710;
+                var ph = 210;
+                var sizes = 14;
+                var Times = 4000;
+                var umcolor = 0xFFFFFF;
+                var btnbg = 0x8c1616;
+                var txtcolor = 0xFFFFFF;
+                var txtoutcolor = 0x000000;
+                var flash = new SWFObject('Images/flash/switchphoto.swf', 'mymovie', pw, ph, '7', '');
+                flash.addParam('allowFullScreen', 'true');
+                flash.addParam('allowScriptAccess', 'always');
+                flash.addParam('quality', 'high');
+                flash.addParam('wmode', 'Transparent');
+                flash.addVariable('pw', pw);
+                flash.addVariable('ph', ph);
+                flash.addVariable('sizes', sizes);
+                flash.addVariable('umcolor', umcolor);
+                flash.addVariable('btnbg', btnbg);
+                flash.addVariable('txtcolor', txtcolor);
+                flash.addVariable('txtoutcolor', txtoutcolor);
+                flash.addVariable('urls', urls);
+                flash.addVariable('Times', Times);
+                flash.addVariable('titles', titles);
+                flash.addVariable('imgs', imgs);
+                flash.write('dplayer2');
+            </script>
+        </td>
+    </tr>
+</table>
+</div></div><div class="webrow w960"><div class="webcol w240"><div class="listchart1"><h2><a class="more" href="/WebEnergy/WebStat.aspx">
+                    more
+                </a><a class="title">能源统计</a></h2><div class="body"><div id="chart1" style="width:230px; height:200px;margin: 0 auto"></div><script type="text/javascript">
+                    var chart;
+                    $(document).ready(function () {
+                    var colors =  ['#e61e26', '#8ebc00', '#25a0da', '#eb7a2a', '#16aba9', '#d8e404', '#309b46','#ff1e55','#99bc33','#44a0ee'], 
+                    categories = [],
+                    name = '能源统计',
+                    data = [];
+
+                    chart = new Highcharts.Chart({
+                    chart: {
+                    renderTo: 'chart1',
+                    backgroundColor: '#eaf7ff',
+                    type: 'bar'
+                    },
+                    title: {
+                    text: null
+                    },
+                    xAxis: {
+                    categories: categories
+                    },
+                    yAxis: {
+                    title: {
+                    text: null
+                    },
+                    showFirstLabel:false,
+                    showLastLabel:false
+                    },
+                    tooltip: {
+                    formatter: function () {
+                    var point = this.point,
+                    s = this.x + ':' + this.y + '万元';
+                    return s;
+                    }
+                    },
+                    credits: {
+                    enabled: false
+                    },
+                    legend: {
+                    enabled: false
+                    },
+                    series: [{
+                    data: data,
+                    name: name,
+                    style:{fontSize: '8px'},
+                    color: 'black'
+                    }],
+                    exporting: {
+                    enabled: false
+                    }
+                    });
+                    });
+                </script></div></div><div class="liststat"><h2></h2><div class="body"><p>浏览次数：<span class="data">01643719</span>人次
+                </p><p>登录次数：<span class="data">00011182</span>人次</p></div></div></div><div class="webcol w480"><div class="webcol w480"><div class="listtop3"><h2><a class="more" href="/Pages/Article.aspx?lm=0102&amp;pg=0">more</a><a class="title">新闻通告</a></h2><ul><li><span class="box_r">2015-09-24</span><a href="/Pages/Detail.aspx?id=286" target="_blank" title="停  水  通  知(9.24)">停  水  通  知(9.24)</a></li><li><span class="box_r">2015-09-23</span><a href="/Pages/Detail.aspx?id=285" target="_blank" title="关于水电管理中心办公地点调整的通知">关于水电管理中心办公地点调整的通知</a></li><li><span class="box_r">2015-07-30</span><a href="/Pages/Detail.aspx?id=284" target="_blank" title="关于科学合理使用空调推进节能减排的通知（夏季）">关于科学合理使用空调推进节能减排的通知（夏季）</a></li><li><span class="box_r">2015-06-25</span><a href="/Pages/Detail.aspx?id=283" target="_blank" title="关于恢复闵行、徐汇学生公寓水电信息化平台数据服务的通知">关于恢复闵行、徐汇学生公寓水电信息化平台数据服务的通知</a></li><li><span class="box_r">2015-06-17</span><a href="/Pages/Detail.aspx?id=282" target="_blank" title="关于闵行、徐汇学生公寓水电信息化平台服务暂停的紧急通知">关于闵行、徐汇学生公寓水电信息化平台服务暂停的紧急通知</a></li><li><span class="box_r">2015-06-04</span><a href="/Pages/Detail.aspx?id=281" target="_blank" title="节约用水倡议书">节约用水倡议书</a></li></ul></div></div><div class="webcol w480"><div class="listtop3"><h2><a class="more" href="/Pages/Article.aspx?lm=0103&amp;pg=0">more</a><a class="title">政策制度</a></h2><ul><li><span class="box_r">2012-06-29</span><a href="/Pages/Detail.aspx?id=9" target="_blank" title="上海交通大学水电收费管理办法">上海交通大学水电收费管理办法<img src="/images/skin01/up1.gif"></a></li><li><span class="box_r">2012-06-29</span><a href="/Pages/Detail.aspx?id=8" target="_blank" title="上海交通大学水电管理暂行条例">上海交通大学水电管理暂行条例<img src="/images/skin01/up1.gif"></a></li><li><span class="box_r">2013-09-11</span><a href="/Pages/Detail.aspx?id=235" target="_blank" title="【转】高等学校校园设施节能运行管理办法">【转】高等学校校园设施节能运行管理办法</a></li><li><span class="box_r">2013-03-27</span><a href="/Pages/Detail.aspx?id=201" target="_blank" title="教育部关于勤俭节约办教育建设节约型校园的通知（教发【2013】4号）">教育部关于勤俭节约办教育建设节约型校园的通知（教发【201...</a></li><li><span class="box_r">2012-10-30</span><a href="/Pages/Detail.aspx?id=175" target="_blank" title="国家机关办公建筑和大型公共建筑能源审计导则（建科【2007】249号）">国家机关办公建筑和大型公共建筑能源审计导则（建科【2007...</a></li><li><span class="box_r">2012-10-30</span><a href="/Pages/Detail.aspx?id=174" target="_blank" title="大型公共建筑能耗监测系统工程技术规范（DGJ08-2068-2009）">大型公共建筑能耗监测系统工程技术规范（DGJ08-2068...</a></li><li><span class="box_r">2012-10-30</span><a href="/Pages/Detail.aspx?id=172" target="_blank" title="市教委关于印发《上海高校和直属中等学校“十二五”能源消费总量控制及节能降耗目标分解方案》的通知（沪教委后【2012】5号）">市教委关于印发《上海高校和直属中等学校“十二五”能源消费总...</a></li><li><span class="box_r">2012-10-30</span><a href="/Pages/Detail.aspx?id=171" target="_blank" title="上海市教育信息化“十二五”发展规划（沪教委科【2012】1号）">上海市教育信息化“十二五”发展规划（沪教委科【2012】1...</a></li></ul></div></div></div><div class="webcol w240"><div class="listtqyb">
+<div class="body">
+<iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=&c=CHXX0116&l=zh-CHS&p=CMA&a=0&u=C&s=6&m=0&x=0&d=2&fc=&bgc=&bc=&ti=1&in=1&li=2&ct=iframe" 
+frameborder="0" scrolling="no" width="200" height="120" allowTransparency="true"></iframe></div></div><div class="listqfmd">
+            <h2>
+                <a class="title">
+      欠费名单
+     </a>
+    </h2>
+    <div class="body">
+      <div class="scrollup">
+            <MARQUEE onmouseover="this.stop()" onmouseout="this.start()" scrollAmount="1" scrollDelay="60" direction="up" width="220" height="60">
+              <div id="ownfeeblock"></div>          
+            </MARQUEE>        
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("#ownfeeblock").load("/WebEnergy/WebOwningFee.aspx");
+})
+</script><div class="listjnts"><h2><a class="title">节能小贴士</a></h2><div class="body"><div id="EnergyTip"><ul><li>以节能灯代替白炽灯，可节省高达70%至80%的电力。</li><li>以T8或T5的节能光管代替普通的T12或T10光管，可节省10%至30%的电力。</li><li>以电子镇流器代替电感式镇流器，能节省20%至30%的电力。</li><li>    在合适的地点安装照明区域控制器，以便在不使用某些区域时可关闭其照明设备。</li><li>在使用率低的区域(例如会议室)，安装在场传感器，自动控制照明的开关。</li></ul></div></div><script type="text/javascript">
+                function AutoScroll(obj) {
+                $(obj).find("ul:first").animate({
+                marginTop: "-150px"
+                }, 1000, function () {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+                });
+                }
+                $(document).ready(function () {
+                setInterval('AutoScroll("#EnergyTip")', 5000)
+                });
+            </script></div></div></div></div><div id="Footer"><p><a href="/Pages/WebMap.aspx" class="first">网站地图</a><a href="/Pages/Article.aspx?lm=010104">联系我们</a><a href="/FriendLink.aspx">友情链接</a></p><p> 版权所有 上海交通大学 &copy; 2011 All Rights Reserved 备案号：<a href="#" class="none">沪交ICP备20101067</a></p></div></body></html>

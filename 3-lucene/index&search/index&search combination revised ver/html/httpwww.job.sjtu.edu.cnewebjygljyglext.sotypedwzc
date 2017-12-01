@@ -1,0 +1,834 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>上海交通大学-单位注册</title>
+<link rel="stylesheet" href="/eweb/jygl/css/sjtucss.css" type="text/css"/>
+<script type="text/javascript"	src="/eweb/dwr/engine.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/util.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/interface/codeLoad.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/interface/supload.js"></script>
+<script type="text/javascript"	src="/eweb/js/jqueryui1.10/external/jquery/jquery.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/interface/jygldwr.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="/eweb/wfc/js/wfc.js"></script>
+<script language="JavaScript" type="text/javascript" src="/eweb/jygl/js/jygl.js"></script>
+<script language="JavaScript" type="text/javascript" src="/eweb/wfc/js/My97DatePicker/WdatePicker.js"></script>
+<script language="JavaScript" type="text/javascript">
+
+var zzjgdmTL='0000000000';
+
+function checkSubmit(frmName) {
+    var temp;
+
+    var frmRef = document.getElementById(frmName);
+    if (frmRef == null) {
+        alert("FORM对象引用错误");
+        return false;
+    }
+    var email = document.getElementById("zpbmemail").value;
+    if(email==null||email.trim().length==0){
+    	alert("请填写登录邮箱!");
+    	document.getElementById("zpbmemail").focus();
+    	return false;
+    }
+	if(!isEmail(email)){
+	  alert("登录邮箱邮箱格式错误"); 
+	  document.getElementById("zpbmemail").focus();
+	  return false;
+	}
+	var pwd = document.getElementById("pwd").value;
+	if(pwd==null||pwd.trim().length==0){
+    	alert("请填写登录密码!");
+    	document.getElementById("pwd").focus();
+    	return false;
+    }
+	if(pwd.length<6){
+		alert("密码至少是6位字母开头的字母数字组合!");
+		document.getElementById("pwd").focus();
+		return false;
+	}
+	if(!isAbcNum(pwd)){
+		alert("密码至少是6位字母开头的字母数字组合!");
+		document.getElementById("pwd").focus();
+		return false;
+	}
+	var pwdAgain = document.getElementById("pwdAgain").value;
+	if(pwdAgain==null||pwdAgain.trim().length==0){
+    	alert("请填写登录密码确认!");
+    	document.getElementById("pwdAgain").focus();
+    	return false;
+    }
+	if(pwdAgain!=pwd){
+		alert("前后两次填写的密码不一致！");
+		document.getElementById("pwdAgain").value = "";
+		document.getElementById("pwdAgain").focus();
+		return false;
+	}
+    var ids = "dwmc,zzjgdm,zzjgdmzyxq,szsf,xzyj,hyyj,jjlx,lxrmc,lxrsj";
+	var values = "单位名称,组织机构代码,组织机构代码证有效期,所在省份,单位性质,单位行业,单位经济类型,联系人名称,联系人手机";
+	if(!checkInputItem(frmName, ids, values)){
+	  return false;
+	}
+	if(!isValidateZzjgdm(document.getElementById("zzjgdm").value)){
+	  alert("组织机构代码填写有误，请正确填写！");
+	  document.getElementById("zzjgdm").focus();
+	  return false;
+	}
+    submitForm(frmRef);
+}
+function submitForm(frmRef){
+	var dwmc = document.getElementById("dwmc").value;
+	var zzjgdm = document.getElementById("zzjgdm").value;
+	var dwid = "R92ZS3dFNJm9zkLbM7t5Hq";
+	var zpbmemail = document.getElementById("zpbmemail").value;
+	jygldwr.isValidateDwxx(dwid,dwmc,zzjgdm,zpbmemail,'dwxxZc',{callback:function(dataFromServer){
+ 		if(dataFromServer.dwmcResult=='dwuserfalse'){
+ 			alert("单位库已存在单位信息，请点击检查单位是否注册!");
+ 		}else if(dataFromServer.dwmcResult=='dwusertrue'){
+ 			alert("单位库已存在单位信息，请点击检查单位是否注册!");
+ 		}else if(dataFromServer.zzjgdmResult=='zzjgdmfalse'){
+ 			alert("组织机构代码重复!");
+ 		}else if(dataFromServer.zpbmemailResult=='dwzhfalse'){
+		    alert("单位登录帐号重复，请使用其它登录帐号注册！");
+		}else if(zzjgdm!=zzjgdmTL&&dataFromServer.zzjgdmfjResult=='zzjgdmfjfalse'){
+		    alert("还未上传组织机构代码扫描件，请上传！");
+		}else{//如果单位名称和组织机构代码验证通过
+ 			frmRef.submit();
+ 		}
+	}	
+	});
+}
+function checkDwmc(){
+	var dwmcObj = document.getElementById("dwmc");
+	var dwid = "R92ZS3dFNJm9zkLbM7t5Hq";
+	var tsxxTr = document.getElementById("tsxxTR");
+	var tsxxTd = document.getElementById("tsxxTD");
+	if('' != dwmcObj.value){
+		jygldwr.isValidateDwxx(dwid,dwmcObj.value,'','','xzDwxx',{callback:function(dataFromServer){
+	 		if(dataFromServer.dwmcResult=='dwusertrue'){
+	 			tsxxTr.style.display ='';
+	 			tsxxTd.innerHTML = "系统中已存在重复的单位名称，请点击以下链接找回用户名或密码 ：&nbsp;&nbsp;&nbsp;&nbsp;"+
+	 								'<a style="color:red;font-size:16px;font-weight: bold;"  href="javascript:void(0);" onclick="wjyhmmm();">找帐号或密码</a>';
+	 		}else if(dataFromServer.dwmcResult=='dwuserfalse'){
+	 			tsxxTr.style.display ='';
+	 			tsxxTd.innerHTML = "系统中已存在重复的单位名称，请点击以下链接完善单位信息 ：&nbsp;&nbsp;&nbsp;&nbsp;"+
+	 			'<a style="color:red;font-size:16px;font-weight: bold;"  href="javascript:void(0);"  onclick="wsdwxx();">完善单位信息</a>';
+	 		}else{
+	 			tsxxTr.style.display = '';
+	 			tsxxTd.innerHTML = '可注册';
+	 		}
+		}	
+		});
+	}else{
+		alert('请输入单位名称！');
+		dwmcObj.focus();
+	}
+	
+}
+function wsdwxx(){
+	var wfcFrm = document.getElementById('wfcFrm');
+	wfcFrm.action = '/eweb/jygl/jyglext.so?type=wsdwxx';
+	wfcFrm.submit();
+}
+
+function wjyhmmm(){
+	var wfcFrm = document.getElementById('wfcFrm');
+	wfcFrm.action = '/eweb/jygl/jyglext.so?type=yrdwWjmm';
+	wfcFrm.submit();
+}
+
+function changeYZXS(){
+	if(document.getElementById('zzjgdm').value==zzjgdmTL){
+		document.getElementById('zzjgdmzsmjYZXS').innerHTML="";
+	}else{
+		document.getElementById('zzjgdmzsmjYZXS').innerHTML="*";
+	}
+}
+</script>
+</head>
+
+<body>
+ 
+
+
+
+
+
+
+
+
+<style>
+/*系统入口*/
+.sys_entrance_warp {
+	width:100%;
+	height:165px;
+	background-color:#000;
+	opacity: 0.50;
+	filter: alpha(opacity=50);
+	-moz-opacity:0.5;
+	position:fixed;
+	top:78px;
+	z-index:999;
+	text-align: center;}
+.sys_entrance_content {
+	height:165px;
+	width:930px;
+	position:fixed;
+	top:78px;
+	left:50%;
+	margin-left:-465px;
+	z-index:9999;
+	}
+.sys_1 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 0;}
+.sys_1 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#da6c15;
+	color:#fff;
+	text-align:center;}
+.sys_1 a:hover {
+	background-color:#df820b;}
+.sys_2 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_2 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#278419;
+	color:#fff;
+	text-align:center;}
+.sys_2 a:hover {
+	background-color:#1f9a0c;}
+.sys_3 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_3 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#581596;
+	color:#fff;
+	text-align:center;}
+.sys_3 a:hover {
+	background-color:#6e09af;}
+.sys_4 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_4 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#1583c2;
+	color:#fff;
+	text-align:center;}
+.sys_4 a:hover {
+	background-color:#159ad2;}
+.sys_5 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_5 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#1834a1;
+	color:#fff;
+	text-align:center;}
+.sys_5 a:hover {
+	background-color:#1c46b6;}
+.sys_6 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_6 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#c60203;
+	color:#fff;
+	text-align:center;}
+.sys_6 a:hover {
+	background-color:#de1012;}
+</style>
+<script>
+function showSystem(flag){
+	var div_header = document.getElementById("system_Id");
+	var div_systemSjtu = document.getElementById("systemSjtu");
+	if(flag==0){
+		if(div_header!=null){
+			div_header.style.display="none";
+		}
+		if(div_systemSjtu!=null){
+			div_systemSjtu.style.display="none";
+		}
+	}else{
+		if(div_header!=null){
+			div_header.style.display="block";
+		}
+		if(div_systemSjtu!=null){
+			div_systemSjtu.style.display="block";
+		}
+	}
+}
+</script>
+ <!--系统入口-->
+
+    <!--系统入口 END -->
+ <div class="head" onmouseover="javascript:showSystem(1)" onmouseout="javascript:showSystem(0)">
+  <div class="main">
+   <div class="logo">
+       <img src="/eweb/jygl/css/sjtuimgs/logo-zpfw.png" />
+   </div>
+   
+  </div>
+   <div style="width:100%;top: 100px;display: none;" id="system_Id" >
+     <div class="sys_entrance_warp" ></div>
+	   <ul class="sys_entrance_content">
+         <li class="sys_1">
+	       <a href="/index.htm" target="_self">
+       	   <img src="/eweb/jygl/css/sjtuimgs/sys6.png" style="margin-top:20px;" />
+       	   <p>就业网首页</p>
+       	   </a>
+	     </li>
+	     <li class="sys_2">
+		   <a href="/support/index.htm" target="_self">
+		     <img src="/eweb/jygl/css/sjtuimgs/sys2.png" style="margin-top:20px;" />
+		     <p>教师支持</p>
+		   </a>
+		</li>
+        <li class="sys_3">
+	      <a href="/eweb/jygl/jygl.so"  target="_self" >
+            <img src="/eweb/jygl/css/sjtuimgs/sys3.png" style="margin-top:20px;" />
+            <p>就业管理</p>
+          </a>
+          </li>
+         <li class="sys_4">
+            <a href="/eweb/jygl/zpfw.so" target="_self" >
+        	 <img src="/eweb/jygl/css/sjtuimgs/sys4.png"  style="margin-top:17px;" />
+        	 <p>招聘服务</p>
+        	</a>
+         </li>
+	     <li class="sys_5"><a target="_blank" href="/sjcj/"><img src="/eweb/jygl/css/sjtuimgs/sys5.png" style="margin-top:26px;" /><p>生涯数据</p></a></li>
+         <li class="sys_6">
+       	   <a href="/career/index.htm" target="_self">
+		      <img src="/eweb/jygl/css/sjtuimgs/sys1.png" style="margin-top:20px;" />
+		      <p>生涯伴随</p>
+	       </a>
+       	</li>
+       	</ul>
+    </div>
+ </div>
+ <div class="nav">
+  <div class="main">
+   <ul>
+   
+     
+    	 
+    	     <li><a href="/eweb/jygl/zpfw.so">招聘首页</a></li>
+    	     <li><a href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW">招聘热点</a></li>
+    	     <li><a href="/eweb/jygl/zpfw.so?type=zpxx">招聘信息</a></li>
+    	     <li><a href="/eweb/jygl/zpfw.so?type=xjh">招聘宣讲会</a></li>
+	 	     <li><a href="/eweb/jygl/zpfw.so?type=zph">招聘双选会</a></li>
+    		 <li><a href="/eweb/jygl/zpfw.so?type=dwfw">单位招聘指南</a></li>
+     	 
+     
+  </ul>
+  <div class="clear"></div>
+  </div>
+ </div>
+
+ <!-- 导航图 -->
+ 
+ <div class="banner2">
+     <div class="main">
+     	<a href="javascript:void(0);" onclick="javascript:window.open('http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?modcode=jygl_zphxxck&subsyscode=zpfw&type=viewZphxx&id=SK5fTEnzVvmyG1SL2Wn3HH')"><img src="/eweb/jygl/cms/imgs/JiSMAHNv1ry5F9n3b1iGZ3.jpg" /></a>
+     </div>
+ </div>
+
+<div class="content">
+  <div class="main">
+	<div class="z_content">
+		 <form id="wfcFrm" class="formMain" method="post" action="/eweb/jygl/jyglext.so?type=dwzcPost">
+		 	<input type="hidden" name="xxid" id="xxid" value="sjtu10248"/>
+		 	<input type="hidden" name="dwid" id="dwid" value="R92ZS3dFNJm9zkLbM7t5Hq"/>
+		 	
+		  <div class="bd_one">
+	    	<div class="bd_title"><span>单位基本信息</span></div>
+		    <table id="tab2" width="983" border="0" class="bd_tab">
+		        <tr id="tsxxTR" style="text-align:left;display:none" >
+		        	<td colspan="2" class="td_border_four" id="tsxxTD" style="text-align:center;"></td>
+		        </tr>
+		        <tr>
+		            <td  style="width:331px;padding-right:5px;text-align:center;" class="td_bg td_border_one"><font color="red">*</font>单位名称<font color="red">(全称，以注册法人名称为准)</font></td>
+		            <td  style="padding-left:5px;width:652px;text-align:left;" class="td_border_two">
+		                <input name="dwmc" type="text" id="dwmc" style="width:350px;" value=""/>
+		            	&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="checkDwmc();" href="javascript:void(0);" style="color: blue;">检查单位是否注册</a>
+		            	
+		            </td>
+		        </tr>
+		        <tr>
+		            <td  style="padding-right:5px;text-align:center;" class="td_bg td_border_three"><font color="red">*</font>组织机构代码</td>
+		            <td   style="padding-left:5px;text-align:left;" class="td_border_four">
+		                <input name="zzjgdm" type="text" id="zzjgdm" onchange="changeYZXS()" style="width:175px;" value=""/>
+		            	有效期至
+		            	<input readonly="readonly" name="zzjgdmzyxq" type="text" id="zzjgdmzyxq" style="width:100px;" value=""/>
+		            	<img onclick="WdatePicker({el:'zzjgdmzyxq',dateFmt:'yyyy-MM-dd'})"  
+					    src="/eweb/wfc/image/calendar.gif" 
+						align="middle" 
+						style="border: 0px; width: 16; height: 16; cursor: hand"/>
+		            </td>
+		        </tr>
+		        <tr>
+		        	<td  style="padding-right:5px;text-align:center;" class="td_bg td_border_three"><font color="red">*</font>所在区域省市</td>
+		            <td  style="padding-left:5px;text-align:left;" class="td_border_four">
+		                <select name="szsf" id="szsf" style="width:90px;" onchange="loadS();">
+		                    <option value="">--请选择--</option>
+		                </select>
+		                <select name="szs" id="szs" style="width:90px;" onchange="loadQx();">
+		                    <option value="">--请选择--</option>
+		                </select>
+		                <select name="szx" id="szx" style="width:90px;">
+		                    <option value="">--请选择--</option>
+		                </select>
+		            </td>
+		        </tr>
+		        <tr>
+		            <td  style="padding-right:5px;text-align:center;" class="td_bg td_border_three">
+		            	<font color="red">*</font>单位性质</td>
+		            <td  style="padding-left:5px;text-align:left;" class="td_border_four">
+		                <select name="xzyj" id="xzyj" style="width:185px;">
+		                    <option value="">--请选择--</option>
+		                </select>
+		            </td>
+		        </tr>
+		        <tr>
+		            <td  style="padding-right:5px;text-align:center;" class="td_bg td_border_three">
+		            <font color="red">*</font>单位行业</td>
+		            <td  style="padding-left:5px;text-align:left;" class="td_border_four">
+		                <select name="hyyj" id="hyyj" style="width:185px;" onchange="loadHyej();">
+		                    <option value="">--请选择--</option>
+		                </select>
+		                <select name="hyej" id="hyej" style="width:180px;">
+		                    <option value="">--请选择--</option>
+		                </select>
+		            </td>
+		        </tr>
+		        <tr>
+		            <td  style="padding-right:5px;text-align:center;" class="td_bg td_border_three"><font color="red">*</font>经济类型</td>
+		            <td  style="padding-left:5px;text-align:left;" class="td_border_four">
+		                <select name="jjlx" id="jjlx" style="width:370px;">
+		                	<option value="">--请选择--</option>
+		                </select>
+		            </td>
+		        </tr>
+				 <tr>
+		            <td  style="padding-right:5px;text-align:center;" class="td_bg td_border_three"><font id="zzjgdmzsmjYZXS"  color="red">*</font>组织机构代码证扫描件</td>
+		            <td  style="padding-left:5px;text-align:left;" class="td_border_four">
+		            	<div id="flashPlay">
+		            	
+
+
+<link href="/eweb/wfc/swfupload/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/eweb/wfc/swfupload/swfupload.js"></script>
+<script type="text/javascript" src="/eweb/wfc/swfupload/swfupload.queue.js"></script>
+<script type="text/javascript" src="/eweb/wfc/swfupload/fileprogress.js"></script>
+<script type="text/javascript" src="/eweb/wfc/swfupload/handlers.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/interface/supload.js"></script>
+<script type="text/javascript">
+	function uploadCompleteR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj(file) {
+		try {
+			if (this.getStats().files_queued == 0) {				
+				supload.getAttachFileList('R92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj','zzjgdmzsmj','true',{callback:function (dataFromServer) {	
+					DWRUtil.setValue("thumbnailsR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj", dataFromServer);
+					if(window.parent!=null && window.parent.dynaIframeHight!=null){//如果有dynaIframeHight的方法 则调用该方法 
+						window.parent.dynaIframeHight(window.parent.document.getElementById("content"));
+					}//设置报表条件页面
+				}});
+			} else {	
+				this.startUpload();
+			}
+		} catch (ex) {
+			this.debug(ex);
+		}
+	}
+	
+	function uploadProgressR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj(file, bytesLoaded, bytesTotal) {
+	
+		try {
+			var percent = Math.ceil((bytesLoaded / bytesTotal) * 100);
+	
+			var progress = new FileProgress(file, this.customSettings.progressTarget);
+			progress.setProgress(percent);
+			progress.setStatus("Uploading...");
+			if(window.parent!=null && window.parent.dynaIframeHight!=null){//如果有dynaIframeHight的方法 则调用该方法 
+				window.parent.dynaIframeHight(window.parent.document.getElementById("content"));
+			}//设置报表条件页面
+		} catch (ex) {
+			this.debug(ex);
+		}
+	}
+	var swfuR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj;	
+	function initswfuR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj() {
+		swfuR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj = new SWFUpload({
+			// Backend Settings
+			upload_url: "/eweb/servlet/resupload;jsessionid=F933D89D7A78F7F1471F00F4A390D769.tomcat108",	// Relative to the SWF file or absolute
+			post_params: {"refid": "R92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj","reftype": "zzjgdmzsmj"},
+	
+			// File Upload Settings
+			file_size_limit : "20 MB",	// 4MB
+			file_types : "*.jpg;*.png;*.gif;*.JPG;*.PNG;*.GIF;",
+			file_types_description : "选择文件",
+			file_upload_limit : "0",
+	
+			// Event Handler Settings - these functions as defined in Handlers.js
+			//  The handlers are not part of SWFUpload but are part of my website and control how
+			//  my website reacts to the SWFUpload events.
+			file_queue_error_handler : fileQueueError,
+			file_dialog_complete_handler : fileDialogComplete,
+			upload_progress_handler : uploadProgress,
+			upload_error_handler : uploadError,
+			upload_success_handler : uploadSuccess,
+			upload_complete_handler : uploadCompleteR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj,
+	
+			// Button Settings
+			button_image_url : "/eweb/swfupload/file.png",	// Relative to the SWF file
+			button_placeholder_id : "spanButtonPlaceholderR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj",
+			button_width: 180,
+			button_height: 18,
+			button_text : '<span class="button">选择附件 <span class="buttonSmall">(20 MB Max)</span></span>',
+			button_text_style : '.button { font-family: Helvetica, Arial, sans-serif; font-size: 12pt; } .buttonSmall { font-size: 10pt; }',
+			button_text_top_padding: 0,
+			button_text_left_padding: 18,
+			button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+			button_cursor: SWFUpload.CURSOR.HAND,
+			
+			// Flash Settings
+			flash_url : "/eweb/wfc/swfupload/swfupload.swf",
+			swfupload_element_id : "flashUIR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj",		
+			degraded_element_id : "degradedUIR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj",
+					
+			custom_settings : {
+				upload_target : "divFileProgressContainerR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj",
+				progressTarget : "divFileProgressContainerR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj"
+			},
+			
+			// Debug Settings
+			debug: false
+		});		
+
+		supload.getAttachFileList('R92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj','zzjgdmzsmj','true',{callback:function (dataFromServer) {
+			DWRUtil.setValue("thumbnailsR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj", dataFromServer);
+			if(window.parent!=null && window.parent.dynaIframeHight!=null){//如果有dynaIframeHight的方法 则调用该方法 
+				window.parent.dynaIframeHight(window.parent.document.getElementById("content"));
+			}//设置报表条件页面
+		}});
+	}
+	
+	
+	function deleteAttachFileR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj(id){
+		supload.deleteAttachFile(id,{callback:function (dataFromServer) {
+			supload.getAttachFileList('R92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj','zzjgdmzsmj','true',{callback:function (dataFromServer) {
+				DWRUtil.setValue("thumbnailsR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj", dataFromServer);
+				if(window.parent!=null && window.parent.dynaIframeHight!=null){//如果有dynaIframeHight的方法 则调用该方法 
+					window.parent.dynaIframeHight(window.parent.document.getElementById("content"));
+				}//设置报表条件页面
+			}});		
+		}});
+	}
+	
+	function initswfupload(){
+	
+	
+		initswfuR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj();
+	
+	}
+	addLoadEvent(initswfupload);
+</script>
+
+<table>
+	<tr>
+		<td><div style="display: inline; padding: 2px;">
+					<span id="spanButtonPlaceholderR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj"></span>
+				</div>
+				<div id="divFileProgressContainerR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj" style="height: 20px;"></div>					
+        </td>
+        <td valign="top"><div id="thumbnailsR92ZS3dFNJm9zkLbM7t5Hqzzjgdmzsmj"  valign="top"></div></td>
+    </tr>
+</table>
+						</div>
+						<span id="flashSpan" style="color:red;"></span>
+		            </td>
+		        </tr>
+		    </table>
+		 </div>
+		<div class="bd_one">
+	    	<div class="bd_title"><span>登录帐号信息</span></div>
+		    <table id="tab1" width="983" border="0" class="bd_tab">
+		        <tr>
+		            <td style="width:331px;padding-right:5px;text-align:center;" class="td_bg td_border_one"><font color="red">*</font>登录邮箱<font color="red">(招聘部门邮箱)</font></td>
+		            <td style="padding-left:5px;width:652px;text-align:left;" class="td_border_two">
+		                <input name="zpbmemail" type="text" id="zpbmemail" style="width:350px;"/>
+		                
+		            </td>
+		        </tr>
+		        <tr>
+		            <td  style="padding-right:5px;text-align:center;" class="td_bg td_border_three"><font color="red">*</font>密码</td>
+		            <td  style="padding-left:5px;text-align:left;" class="td_border_four">
+		                <input name="pwd" type="password" id="pwd" style="width:350px;" />
+		            </td>
+		        </tr>
+		        <tr>
+		            <td  style="padding-right:5px;text-align:center;" class="td_bg td_border_three"><font color="red">*</font>密码确认</td>
+		            <td  style="padding-left:5px;text-align:left;" class="td_border_four">
+		                <input name="pwdAgain" type="password" id="pwdAgain" style="width:350px;"/>
+		            </td>
+		        </tr>
+		    </table>
+		  </div>		 
+	    	<div class="bd_title"><span>单位联系人</span></div>
+		    <table id="tab3" width="983" border="0" class="bd_tab">
+		        <tr>
+		            <td  style="width:331px;padding-right:5px;text-align:center;" class="td_bg td_border_one"><font color="red">*</font>联系人姓名</td>
+		            <td   style="padding-left:5px;width:652px;text-align:left;" class="td_border_two">
+		                <input name="lxrmc" id="lxrmc" type="text" style="width: 185px" value=""/>
+		            </td>
+				 </tr>
+				 <tr>
+		            <td  style="padding-right:5px;text-align:center;" class="td_bg td_border_three"><font color="red">*</font>联系人手机</td>
+		            <td   style="padding-left:5px;text-align:left;" class="td_border_four">
+		                <input name="lxrsj" id="lxrsj" type="text" style="width: 171px" value=""/>
+		            </td>
+				 </tr>
+		    </table>
+		    <div class="xgxzButton" >
+			    <span style="margin-left:375px;">
+			    <input class='inputButton' name='zc' id='zc' type='button' onclick="checkSubmit('wfcFrm')"  value='注册' />
+			    &nbsp;
+			    <input class='inputButton' name='back' type='button'   id='back' onclick='window.close();' value='关闭'/>
+				</span>
+				<br/>
+				<span style="margin-left:380px;">
+				   &nbsp;&nbsp;已注册完成单位可直接 &nbsp;&nbsp;
+				   <a style="font-family:宋体; COLOR: #686868;font-size: 15;" href="/eweb/jygl/zpfw.so?type=dwfw">登录</a>
+				</span>
+			</div>
+		</form>
+
+<script language="JavaScript" type="text/javascript">
+	var frmRef = document.getElementById("wfcFrm");
+	var xxidvalue = document.getElementById('xxid').value;
+	function loadCodeItems1() {//加载一级编码
+		var bmbhStr = "JYGL_SF,JYGL_DWJJLX,JYGL_DWXZ1,JYGL_DWHY1";
+		var bmbhidStr = "szsf,jjlx,xzyj,hyyj";
+		var bmbhvalueStr = ",,,";
+		loadCodeItems(xxidvalue,bmbhStr,bmbhidStr,bmbhvalueStr,loadCodeItems2);  
+	}
+	function loadCodeItems2(){//加载二级编码
+		loadHyej();
+		loadS();
+	}
+	function loadHyej(){
+		loadSubCodeItem(xxidvalue,'JYGL_DWHY2',document.getElementById('hyyj').value,'hyej','');//前缀关系
+		//loadSubCodeSsmxbh(xxidvalue,'JYGL_DWHY2','JYGL_DWHY1',document.getElementById('hyyj').value,'hyej','');//上下级关系
+	}
+	function loadS(){
+		loadSubCodeItem(xxidvalue,'JYGL_S',document.getElementById('szsf').value,'szs','',loadQx);//前缀关系
+	}
+	function loadQx(){
+		loadSubCodeItem(xxidvalue,'JYGL_QX',document.getElementById('szs').value,'szx','');//前缀关系
+	}
+	function flashChecker() {
+		var hasFlash = 0; //是否安装了flash 
+		var flashVersion = 0; //flash版本 
+		if (document.all) {
+			var swf = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+			if (swf) {
+				hasFlash = 1;
+				VSwf = swf.GetVariable("$version");
+				flashVersion = parseInt(VSwf.split(" ")[1].split(",")[0]);
+			}
+		} else {
+			if (navigator.plugins && navigator.plugins.length > 0) {
+				var swf = navigator.plugins["Shockwave Flash"];
+				if (swf) {
+					hasFlash = 1;
+					var words = swf.description.split(" ");
+					for ( var i = 0; i < words.length; ++i) {
+						if (isNaN(parseInt(words[i])))
+							continue;
+						flashVersion = parseInt(words[i]);
+					}
+				}
+			}
+		}
+		if (hasFlash){
+			document.getElementById('flashPlay').style.display = "";
+			document.getElementById('flashSpan').innerHTML = "";
+		}else{
+			document.getElementById('flashPlay').style.display = "none";
+			document.getElementById('flashSpan').innerHTML = "你没有安装浏览器Flash插件,"+
+				'<a style="color:red;font-weight: bold;"  href="http://get.adobe.com/cn/flashplayer/" target="_blank">点击下载最新版本的 Flash Player!</a>';
+		}
+	}
+    function loadDefault(){
+    	changeYZXS();
+    	loadCodeItems1();      
+		//setSelectDefault(document.getElementById('sname'),'');//下来列表用这种方式置默认值
+		flashChecker();
+    }
+    addLoadEvent(loadDefault);
+</script>
+    </div>
+  </div>
+ </div>
+  
+
+
+
+
+
+ <div class="links">
+  <div class="links_t">
+   <div class="main">友情链接</div>
+  </div>
+  <div class="links_main">
+	   <ul>
+		    
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.12zyw.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/S1SyX7R19VSP5SHCsetAHr.png" title="中国研究生网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.hzrc.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/Hx32kFBg2u2cUUYrPU5oPy.png" title="杭州人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.haorc.com/zdyj/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/NyiEDEa7y4ywWThkt5RV7U.png" title="西安市人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://zhaopin.shanghai-air.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/Kk7k4KsF9UJ74AH8gbcX2A.png" title="上航网上招聘"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.hr.com.cn/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/7Coot2NjWCcHAzxdHXMayb.png" title="中国人力资源网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.job100.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/URjsLXSz9sKFNSKbeFvn5H.png" title="中才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.xmrc.com.cn/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/TWhtc5ESbX7UT64dGCRvYe.png" title="厦门人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.szrc.cn/szrc/default.html" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/4KuUAoGn19xZZkkwGeMZkr.png" title="苏州人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li >
+		    	<a href="http://xds.gcdr.gov.cn" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/JYgWxkVyGxWJnGFckWv4ZR.png" title="四川优秀大学生选调网"/>
+		    	</a>
+		    </li>
+	   		
+	   </ul>
+   <div class="clear"></div>
+  </div>
+ </div>
+ <div class="foot">
+  <div class="foot_o">
+   <div class="main">
+   <ul>
+    <li class="lxfs">
+	 <div class="lxfs_t"><a href="#">联系方式</a></div>
+	 <div class="lxfs_o">
+  	 <p>邮编：200240</p>
+     <p>地址：上海市闵行区东川路800号交通大学铁生馆</p> 
+     <p>电话总机：86-21-54745721、54745904、54747570、 54743091、54745994</p>
+	 </div>
+	</li>
+	<li class="yrdw">
+	 <div class="yrdw_t"><a href="#">用人单位服务</a></div>
+	 <div class="yrdw_o">
+	  <p>电话分机：881、882、883</p>
+      <p>邮箱：career@sjtu.edu.cn</p> 
+      <p>地址：铁生馆201室</p>
+      <p>&nbsp;&nbsp;</p>
+	 </div>
+	</li>
+	<li class="xsjy">
+	 <div class="xsjy_t"><a href="#">学生就业事务</a></div>
+	 <div class="xsjy_o">
+	  <p>电话：86-21-54745751</p>
+      <p>传真：86-21-54744803</p> 
+      <p>邮箱：em.scc@sjtu.org</p>
+	  <p>地址：学服200号(闵行校区) 浩然103室(徐汇校区)</p>
+	 </div>
+	</li>
+	<li class="xssy">
+	 <div class="xssy_t"><a href="#">学生生涯服务</a></div>
+	 <div class="xsjy_o">
+	  <p>电话分机：771</p>
+      <p>传真：86-21-54744803</p> 
+      <p>邮箱：career@sjtu.org</p>
+	  <p>地址：铁生馆207室</p>
+	 </div>
+	</li>
+   </ul><div class="clear"></div>
+   </div>
+  </div>
+  <div class="foot_t">
+   <div class="foot_main">
+   <ul>
+    <li class="d_logo"> <img src="/eweb/jygl/css/sjtuimgs/logo2.png" /></li>
+	<li class="d_copyright"> 
+		<span style=" font-size:14px; color:#FFFFFF;">学生就业服务和职业发展中心</span> <span style="font-size:12px;">版权所有2014</span>
+   		<span style=" font-size:14px; color:#FFFFFF;">（建议使用IE7以上浏览器）</span>
+   	</li>
+   </ul><div  class="clear"></div>
+ </div>
+  </div>
+ </div>
+</body>
+</html>

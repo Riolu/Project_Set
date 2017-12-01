@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上海交大迎新网-首页</title>
+<meta content="上海交大迎新网" name="keywords" />
+<meta content="上海交大迎新网" name="description" />
+<base href="http://welcome.sjtu.edu.cn/jdyx/news/" />
+<link href="imgs/style.css" rel="stylesheet" type="text/css" />
+<link href="images/slideshow.css" rel="stylesheet" />
+<script language="JavaScript" src="data/config.js"></script>
+<script language="JavaScript" src="images/js/jquery.min.js"></script>
+<script language="JavaScript" src="images/js/common.js"></script>
+<script language="JavaScript" src="images/js/validator.js"></script>
+<script language="javascript">
+$(document).ready(function(){
+$("#login_area").html("loading...");
+$.get('../ajax_login.php',function(data){
+$("#login_area").html(data);
+});
+});
+ function logout(){
+     $.get('../ajax_login.php?action=logout',function(){
+window.location.reload();
+   });
+}
+</script> 
+</head>
+<body>
+<!--页头部分-->
+<div id="Header">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td background="imgs/headbg.gif" style="display:none;">&nbsp;</td>
+      <td width="1000" valign="top"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="366"><img src="imgs/logo.gif" width="366" height="85" /></td>
+<td width="124"><a href="http://welcome.sjtu.edu.cn" target="_blank"><img src="imgs/menu1.gif" width="124" height="85" border="0" /></a></td>
+<td width="124"><a href="http://welcome.sjtu.edu.cn/jdyx/news/notice/" target="_blank"><img src="imgs/menu2.gif" width="124" height="85" border="0" /></a></td>
+<td width="124"><a href="http://welcome.sjtu.edu.cn/jdyx/news/freshman/" target="_blank"><img src="imgs/menu3.gif" width="124" height="85" border="0" /></a></td>
+<td width="124"><a href="http://www.sjtu.edu.cn/left/wbjd.htm" target="_blank"><img src="imgs/menu4.gif" width="124" height="85" border="0" /></a></td>
+<td width="124"><a href="http://www.sjtu.edu.cn/zdh/jdgk.htm" target="_blank"><img src="imgs/menu5.gif" width="124" height="85" border="0" /></a></td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width=671>
+               <!-- slideshow -->
+    <div id="yc-mod-slider" style="border:0px solid red;width:671px;margin:0px auto;">
+        <div class="wrapper">
+            <div id="slideshow" class="box_skitter fn-clear">
+                <ul>
+                    <li><img alt="" class="cubeRandom" src="images/sheadpic1.jpg" /></li>
+                    <li><img alt="" class="cubeRandom" src="images/sheadpic2.jpg" /></li>
+                    <li><img alt="" class="cubeRandom" src="images/sheadpic3.jpg" /></li>
+                    <li><img alt="" class="cubeRandom" src="images/sheadpic4.jpg" /></li>
+                    <li><img alt="" class="cubeRandom" src="images/sheadpic5.jpg" /></li>
+                    <li><img alt="" class="cubeRandom" src="images/sheadpic6.jpg" /></li>
+                </ul>
+            </div>
+            <script type="text/javascript" src="images/slideshow.js"></script>
+        </div>
+    </div>
+
+               <!-- slideshow end -->
+                </td>
+                <td><img src="imgs/headpic.gif" width="329" height="168" /></td>
+              </tr>
+          </table></td>
+        </tr>
+      </table></td>
+      <td style="display:none;">&nbsp;</td>
+    </tr>
+  </table>
+</div>
+  <!--头部结束--><div id="PageBody">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="57" valign="top" class="mainleft">&nbsp;</td>
+      <td width="398" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!-- add 2012 -->
+      <tr style="display:none;">
+          <td align="right"><img src="imgs/item1-1.gif" width="154" height="36" /></td>
+        </tr>
+        <tr style="display:none;">
+          <td><table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+
+                <tr>
+                  <td ><img src="imgs/photo.png" width="100" height="139" /></td>
+                  <td class="letter">点击上面的more或内容, 详情链接到原先的内容页...内容取6行.<br />
+                  张杰教授于1988年在中国科学院物理研究所获博士学位。1989年至1998年期间在英国牛津大学等国际著名教学、科研机构工作。1999年1月起任中国科学院物理研究所研究员、光物理重点实验室主任、副所...</td>
+                </tr>
+
+              </table>            </td>
+        </tr>
+        <tr style="display:none;">
+          <td height="20"><hr width="80%"  color="#cc0000" style="size:1px"/></td>
+        </tr>
+
+<!-- add 2012 end -->
+
+        <tr>
+          <td align="right"><a href="http://welcome.sjtu.edu.cn/jdyx/news/notice/" target="_blank"><img src="imgs/item1.gif" width="144" height="36" border=0 /></a></td>
+        </tr>
+        <tr>
+          <td>
+<!-- 首页通告 -->
+<table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td class="newstit"><a href="show.php?contentid=93" target="_blank">财务计划处开启微信缴费服务...</a></td>
+<tr>
+<tr>
+<td class="newsdate" align=right>2015-09-02</td>
+</tr>
+<tr >
+<td class="newscont"></td>
+</tr>
+<tr>
+<td align="right" ><a href="show.php?contentid=93" target="_blank"><img src="imgs/detail.gif" width="50" height="20" border="0" /></a></td>
+</tr>
+</table>
+<table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td class="newstit"><a href="show.php?contentid=92" target="_blank">2015年上海交通大学交流交换留学生报到...</a></td>
+<tr>
+<tr>
+<td class="newsdate" align=right>2015-08-31</td>
+</tr>
+<tr >
+<td class="newscont"></td>
+</tr>
+<tr>
+<td align="right" ><a href="show.php?contentid=92" target="_blank"><img src="imgs/detail.gif" width="50" height="20" border="0" /></a></td>
+</tr>
+</table>
+<table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td class="newstit"><a href="show.php?contentid=91" target="_blank">2015年上海交通大学徐汇校区留学生报到...</a></td>
+<tr>
+<tr>
+<td class="newsdate" align=right>2015-08-31</td>
+</tr>
+<tr >
+<td class="newscont"></td>
+</tr>
+<tr>
+<td align="right" ><a href="show.php?contentid=91" target="_blank"><img src="imgs/detail.gif" width="50" height="20" border="0" /></a></td>
+</tr>
+</table>
+<table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td class="newstit"><a href="show.php?contentid=90" target="_blank">2015年上海交通大学闵行校区留学生报到...</a></td>
+<tr>
+<tr>
+<td class="newsdate" align=right>2015-08-31</td>
+</tr>
+<tr >
+<td class="newscont"></td>
+</tr>
+<tr>
+<td align="right" ><a href="show.php?contentid=90" target="_blank"><img src="imgs/detail.gif" width="50" height="20" border="0" /></a></td>
+</tr>
+</table>
+<table width="88%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td class="newstit"><a href="show.php?contentid=89" target="_blank">2015级研究生报到须知</a></td>
+<tr>
+<tr>
+<td class="newsdate" align=right>2015-07-16</td>
+</tr>
+<tr >
+<td class="newscont"></td>
+</tr>
+<tr>
+<td align="right" ><a href="show.php?contentid=89" target="_blank"><img src="imgs/detail.gif" width="50" height="20" border="0" /></a></td>
+</tr>
+</table>
+<!-- 首页通告 end -->
+         </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+      <td width="268" valign="top" bgcolor="#efe7de"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="28" align="right" bgcolor="#d6a26b"><img src="imgs/item2.gif" width="115" height="28" /></td>
+        </tr>
+        <tr>
+          <td height="168" background="imgs/navibg.gif">
+          <!-- 新生导航链接 -->
+ 	 <div class="qm1"> <ul class="qmu"><li class="qmli"><div class="qmtxt1"><a href="http://ourhome.sjtu.edu.cn" target="_blank">住在交大</a></div></li>
+<li class="qmli"><div class="qmtxt2"><a href="http://welcome.sjtu.edu.cn/jdyx/news/freshman/register/" target="_blank">报到须知</a></div></li>
+<li class="qmli"><div class="qmtxt3"><a href="http://welcome.sjtu.edu.cn/jdyx/news/freshman/route/" target="_blank">交通路线</a></div></li>
+ </ul></div><div class="qm2"> <ul class="qmu"><li class="qmli"><div class="qmtxt4"><a href="http://welcome.sjtu.edu.cn/jdyx/news/freshman/help/" target="_blank">帮困助学</a></div></li>
+<li class="qmli"><div class="qmtxt5"><a href="http://3dcampus.sjtu.edu.cn" target="_blank">虚拟校园</a></div></li>
+<li class="qmli"><div class="qmtxt6"><a href="http://survey.jwc.sjtu.edu.cn/index.php?sid=66855" target="_blank">新生调研</a></div></li>
+ </ul></div>            
+          <!-- 新生导航链接 -->          
+          </td>
+        </tr>
+        <tr>
+          <td height="28" align="right" bgcolor="#d6a26b"><img src="imgs/item3.gif" width="115" height="28" /></td>
+        </tr>
+        <tr>
+          <td height="310" ><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><iframe width="100%" height="300" class="share_self"  frameborder="0" scrolling="no" src="http://v.t.sina.com.cn/widget/widget_blog.php?uid=2006230917&width=0&height=300&ptype=0&speed=0&skin=8&isTitle=1&noborder=1&isWeibo=1&verifier=efc8c820"></iframe>
+<!-- 只要修改uid即可 -->
+        </td>
+            </tr>
+          </table></td>
+        </tr>
+      </table></td>
+      <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><img src="imgs/item4.gif" width="253" height="53" /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <form name="form1" method="post" action="http://welcome.sjtu.edu.cn/jdyx/memeber/login.php?action=checkandlogin" >
+                    <table width="100%" border="0" cellspacing="5" cellpadding="5" height="124px">
+                    <tr>
+                      <td align="right">用户名:</td>
+                      <td><label>
+                        <input name="uname" id="uname" type="text" class="input"  />
+                      </label></td>
+                    </tr>
+                    <tr>
+                      <td align="right">密&nbsp;&nbsp;&nbsp;码: </td>
+                      <td><label>
+                        <input name="upwd" type="password" class="input" id="upwd" />
+                      </label></td>
+                    </tr>
+                    <tr>
+                      <td height="38" colspan="2" align="center"><table width="80%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td><input type="submit" class="confirm" value=" " /></td>
+                            <td><input type="reset" class="cancel" value=" " /></td>
+                            <td><a href="http://welcome.sjtu.edu.cn/jdyx/news/announce/?announceid=1" target="_blank">登录说明</a></td>
+                          </tr>
+                      </table></td>
+                    </tr>
+                  </table></form></td>
+                </tr>
+                <tr>
+                  <td><img src="imgs/login-line.gif" width="253" height="10"  /></td>
+                </tr>
+              </table></td>
+              <td width="24" valign="top">
+             	<table width=24 cellpadding=0 cellspacing=0 height=209 border=0 style="background:url(imgs/login-item.gif) no-repeat;">
+              	<tr height=33><td height=33></td></tr>
+<!-- 学生分类导航 -->
+        <tr height=49><td height=49><a href="http://www.gs.sjtu.edu.cn/"><img src="imgs/login-item-1.gif" border=0 /></a></td></tr>
+<tr height=49><td height=49><a href="http://jwc.sjtu.edu.cn"><img src="imgs/login-item-2.gif" border=0 /></a></td></tr>
+<tr height=49><td height=49><a href="http://www.sie.sjtu.edu.cn"><img src="imgs/login-item-3.gif" border=0 /></a></td></tr>
+<!-- 学生分类导航 end -->
+              	<tr height=29><td height=29></td></tr>              	              	              	              	
+              	</table>
+              </td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td><img src="imgs/item5.gif" width="277" height="35" /></td>
+        </tr>
+        <tr>
+          <td ><div class="list" style="height:230px;">
+            <ul>
+             <!-- 快速通道 -->
+<li><a href="http://www.sjtu.edu.cn" target="_blank">交大主页</a></li>
+<li><a href="http://jwc.sjtu.edu.cn" target="_blank">教务处</a></li>
+<li><a href="http://www.lib.sjtu.edu.cn" target="_blank">图书馆</a></li>
+<li><a href="http://net.sjtu.edu.cn" target="_blank">网络信息中心</a></li>
+<li><a href="http://ecard.sjtu.edu.cn" target="_blank">校园卡中心</a></li>
+<li><a href="http://www.sie.sjtu.edu.cn" target="_blank">国际教育学院</a></li>
+<li><a href="http://www.gs.sjtu.edu.cn/" target="_blank">研究生院</a></li>
+<li><a href="http://sac.sjtu.edu.cn/" target="_blank">学指委</a></li>
+<li><a href="http://ourhome.sjtu.edu.cn/" target="_blank">家园网</a></li>
+<li><a href="http://houqin.sjtu.edu.cn" target="_blank">后勤集团</a></li>
+<li><a href="http://electsys.sjtu.edu.cn/" target="_blank">教学信息网</a></li>
+<li><a href="http://cc.sjtu.edu.cn" target="_blank">课程中心</a></li>
+<li><a href="http://bbs.sjtu.edu.cn" target="_blank">饮水思源BBS</a></li>
+<li><a href="http://sjtu.21campus.cn" target="_blank">交大易班</a></li>
+<li style="width:230px;"><a href="http://www.jdcw.sjtu.edu.cn/payment/" target="_blank" title="网上支付学费、住宿费">上海交通大学网上缴费平台</a></li>
+<li style="width:230px;"><a href="https://bbs.sjtu.edu.cn/bbsdoc?board=WelcomeNewer" target="_blank">饮水思源新生绿色通道</a></li>
+<li style="width:230px;"><a href="http://tieba.com/sjtu" target="_blank">百度交大贴吧</a></li>
+             <!-- 快速通道 end -->
+            </ul>
+          </div></td>
+        </tr>
+        <tr>
+          <td><img src="imgs/item5-line.gif" width="277" height="22" /></td>
+        </tr>
+        <tr>
+          <td align=center style="padding-top:10px;">
+<a href="yiban/invite.html" target="_blank">
+<div style="background-image:url(yiban/link.jpg);display:block;width:250px;height:89px;top:10px">
+</div>
+</a>
+          </td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+</div>
+<div id="Footer">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="400">&nbsp;</td>
+      <td height="66" align="right" background="imgs/bg.gif">沪ICP备05052060　　 版权所有&copy;上海交通大学<br />
+      通讯地址：上海市东川路800号　　邮编：200240　　查号台：86-21-54740000</td>
+    </tr>
+  </table>
+</div>
+<body>
+</html>

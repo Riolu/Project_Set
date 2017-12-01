@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--qq登录验证用-->
+    <meta property="qc:admins" content="5455006266715655"/>
+    <!--ios-->
+            <meta name="apple-itunes-app" content="app-id=933524040, app-argument=tongqu:">
+        <!-- force ie to use the newest engine,and duo core to use chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!--开启响应式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="keywords"
+          content="同去"/>
+    <meta name="description" content="同去网，一站式活动平台"/>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content=" 2;http://www.tongqu.me/static/downloadchrome.html"/>
+    <![endif]-->
+
+    <title>同去网</title>
+
+
+    <!-- the add-on css  -->
+                        <link href="http://www.tongqu.me/js/dist/group/base/base.min.css?hash=e14685" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/dist/page/error/error.min.css?hash=bf918e" rel="stylesheet" media="screen">
+                <!-- end of add-on css  -->
+
+    <script>
+        "use strict";
+        var g_url = {};
+        g_url.site_url = function (url) {
+            var site_url = "http://www.tongqu.me/index.php";// http://tongqu.me/index.php
+            // ltrim the '/'
+            if (url.indexOf('/') === 0) {
+                url = url.substr(1);
+            }
+            return site_url + '/' + url;
+        };
+
+        g_url.base_url = function (url) {
+            var base_url = "http://www.tongqu.me/";// http://tongqu.me/
+            if (url.indexOf('/') === 0) {
+                url = url.substr(1);
+            }
+            return base_url + url;
+        };
+
+    </script>
+
+    <!-- the js that has to be loaded in the header -->
+                    <!-- end of pre js -->
+
+</head>
+
+<body class="dy-skin-default" ng-app="tqApp">
+<!-- the js var eg:ueditor URL-->
+    <script>
+            </script>
+    <script>
+        var g_all_act_types = [{"typeid":"9","typename":"\u62db\u65b0","recommended":"","rank":"1"},{"typeid":"2","typename":"\u8bb2\u5ea7","recommended":"","rank":"3"},{"typeid":"1","typename":"\u827a\u672f","recommended":"","rank":"4"},{"typeid":"10","typename":"\u6237\u5916","recommended":"","rank":"5"},{"typeid":"4","typename":"\u62db\u8058","recommended":"","rank":"7"},{"typeid":"5","typename":"\u6e38\u5b66","recommended":"","rank":"8"},{"typeid":"7","typename":"\u6bd4\u8d5b","recommended":"","rank":"9"},{"typeid":"8","typename":"\u5176\u4ed6","recommended":"","rank":"14"}];var g_all_act_time_status = [{"time_status":2,"status_name":"\u672a\u5f00\u59cb\u62a5\u540d"},{"time_status":1,"status_name":"\u6b63\u5728\u62a5\u540d"},{"time_status":3,"status_name":"\u6b63\u5728\u8fdb\u884c"},{"time_status":4,"status_name":"\u5df2\u7ed3\u675f"}];var g_mobile_view = false;var g_user_info = {"user_login":false};    </script>
+<!-- end of js var-->
+<div id="global-nav" class="navbar navbar-default navbar-fixed-top" ng-controller="MainNavCtrl" ng-cloak>
+    <div class="nav-content">
+        <div class="nav navbar-nav navbar-header">
+            <li>
+                <img src="/images/logo.png"/>
+            </li>
+            <li>
+                <a href="/" style="text-decoration:none">同去</a>
+            </li>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <a href="/" ng-class="{'active': nav == 'home'}">首页</a>
+            </li>
+            <li>
+                <a href="/index.php/act/type" ng-class="{'active': nav == 'act'}">活动</a>
+            </li>
+            <li>
+                <a href="/index.php/team/browse" ng-class="{'active': nav == 'team'}">团队</a>
+            </li>
+                        <li>
+                <a href="/index.php/app" ng-class="{'active': nav == 'app'}">客户端
+                    <!--<span class="badge bg-red">&nbsp;New!&nbsp;</span>-->
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="!userService.isLogin">
+            <li>
+                <a href="/index.php/user/login">登录</a>
+            </li>
+            <li ng-hide="userService.isLogin">
+                <a href="/index.php/user/register/mobile">注册</a>
+            </li>
+        </ul>
+        <ul id="nav-user" class="nav navbar-nav navbar-right" ng-if="userService.isLogin">
+            <li>
+                <a href="/index.php/user/home">{{userService.data.user_name | tqLimit:8}}</a>
+            </li>
+            <li class="divider">
+            </li>
+            <li dropdown>
+                <a class="dropdown-toggle">
+                    <i class="fa fa-envelope-o"></i>
+                </a>
+                <ul id="notification" class="dropdown-menu" role="menu">
+                    <li><a class="help-block" ng-show="msg.navMsg.length==0">没有任何消息</a></li>
+                    <li ng-repeat="m in msg.navMsg | limitTo:5">
+                        <a target="_blank" ng-href="{{m.href}}" ng-click="read.id(m.msg_id)">
+                            <img class="col-xs-2" ng-src="{{m.sender.avatar}}"/>
+                            <div class="col-xs-10">
+                                <span class="person" ng-bind="m.sender.name"></span>&nbsp;&nbsp;
+                                <span class="action" ng-bind="m.action"></span>
+                                </br>
+                                <div class="detail" ng-bind="m.detail" title="{{m.detail}}"></div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </a>
+                    </li>
+                    <li ng-hide="msg.navMsg.length==0">
+                        <a class="btn btn-default check-all" href="http://www.tongqu.me/index.php/user/message">查看全部</a>
+                    </li>
+                </ul>
+            </li>
+            <li dropdown>
+                <a class="dropdown-toggle">
+                    <i class="fa fa-gear"></i>
+                </a>
+                <ul id="user-setting" class="dropdown-menu" role="menu">
+                    <li><a href="/index.php/user/home">个人中心</a></li>
+                    <li><a href="/index.php/user/logout">退出登录</a></li>
+                </ul>
+            </li>
+            <li dropdown>
+                <a class="dropdown-toggle">
+                    <i class="fa fa-plus"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="/index.php/act/detail/create">发布活动</a></li>
+                    <li><a href="/index.php/team/create">创建团队</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="navbar-form navbar-right form-inline" role="search" id="nav-search"
+              action="http://www.tongqu.me/index.php/search" method="get">
+            <div class="form-group has-feedback">
+                <input type="text" ng-model="selected"
+                       placeholder="活动，团队" ng-enter="search()" class="form-control"
+                       autocomplete="off">
+                <span class="glyphicon glyphicon-search form-control-feedback" ng-click="search()"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="feedback" aria-hidden="true" ng-controller="FeedBackDialogCtrl">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">反馈信息</h4>
+            </div>
+
+            <div class="modal-body">
+                                    请先登录。
+                            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" ng-click="fdbacksub(fdback)">提交反馈</button>
+            </div>
+        </div>
+    </div>
+</div><div class="wrap">
+
+    <div class="row">
+        <div class="col-lg-5 ">
+
+            <div class="content">
+
+                <p style="font-size:24pt;text-align:left">Sorry...</p>
+
+                <p style="font-size: 20pt;text-align:left">
+                    <strong>
+                                            </strong>
+                </p>
+
+                <p style="font-size:20pt;text-align:left"><a href="http://www.tongqu.me/index.php/?return_url=http://www.tongqu.me/index.php/team/create"></a></p>
+            </div>
+        </div>
+        <div class="col-lg-5 ">
+            <a href="http://www.tongqu.me/index.php/?return_url=http://www.tongqu.me/index.php/team/create" title="">
+                <img class="error-pic" src="http://www.tongqu.me/images/sad_cat.jpg"
+            </a>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<div id="go-to">
+    <div title="回到顶部" onclick="go_top()" class="up-down"><i class="fa fa-angle-up"></i></div>
+    <div title="回到底部" onclick="go_bottom()" class="up-down"><i class="fa fa-angle-down"></i></div>
+</div>
+
+    <div id="footer">
+        <div class="content">
+            <div class="pull-left">
+                <p>友情链接:&nbsp;<a target="_blank" href="http://zhai.me">宅米&nbsp;zhai.me</a></p>
+                <p>&copy&nbsp;2015&nbsp;Tongqu&nbsp;沪ICP备11039570号</p>
+                <a href="http://www.dongyueweb.com" target="_blank">Powered&nbsp;by&nbsp;东岳网络工作室</a>
+            </div>
+            <div class="pull-right right-part">
+                <div>
+                    <!--QQ 客服的代码，记的换qq号！-->
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2575386529&site=qq&menu=yes"><img border="0"
+                                                                                                               src="http://wpa.qq.com/pa?p=2:2575386529:41"
+                                                                                                               alt="点击联系同去网客服"
+                                                                                                               title="点击联系同去网客服"/></a>
+                </div>
+                <!--end of QQ 客服 -->
+
+                <div style="margin:-1px -10px 0px 10px">
+                    <iframe scrolling="no" frameborder="0" allowtransparency="true"
+                            src="http://widget.renren.com/plugin/followbutton?page_id=601387858&color=0&model=1"
+                            style="width:150px;height:40px;"></iframe>
+                </div>
+
+                <div>
+                    <a href="http://www.tongqu.me/index.php/contact">联系我们</a>
+                </div>
+
+                <div>
+                    <a href="http://www.tongqu.me/index.php/disclaimer">免责声明</a>
+                </div>
+                <div>
+                    <a href="/index.php/app">移动端下载</a>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+
+<!--include the js files-->
+            <script type="text/javascript" src="http://www.tongqu.me/js/dist/group/base/base.min.js?hash=5a75fd"></script>
+    <script>
+    // 回到顶部的代码
+    // TODO:把它变成angular的代码
+    var last_height = 0;
+    $(window).scroll(function () {
+        //console.log($(window).scrollTop());
+        if ($(window).scrollTop() > (200)) {
+            $('#go-to').fadeIn();
+        } else {
+            $('#go-to').fadeOut();
+        }
+    });
+
+    // go to top and bottom
+    function go_top() {
+        $("html, body").animate({scrollTop: 0}, 'slow');
+    }
+
+    function go_bottom() {
+        var bottom = $(document).height();
+        $("html, body").animate({scrollTop: bottom}, 'slow');
+    }
+
+    function showFeedback() {
+        $('#feedback').modal('show');
+    }
+</script>
+    <!--百度统计-->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?fcd79bd95b6da3b03dfe6cbc0dd48b21";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+</html>

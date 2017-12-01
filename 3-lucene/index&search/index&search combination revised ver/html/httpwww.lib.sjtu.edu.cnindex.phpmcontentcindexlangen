@@ -1,0 +1,1106 @@
+ 
+<!DOCTYPE html data-test="">
+<!--[if lt IE 7 ]> <html class="ie ie6 en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 en"> <![endif]-->
+<!--[if gt IE 9 ]>    <html class="fx en"> <![endif]-->
+<!--[if !IE]><!--> <html class="fx en"> <!--<![endif]-->
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE;chrome=1">
+        <meta charset="utf-8">
+    <title>SJTU Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <!-- Le styles -->
+    <link href="/statics/v2/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/statics/v2/css/base.css">
+    <link href="/statics/v2/css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="/statics/v2/css/style_gt_1024.css" type="text/css" rel="stylesheet" media="screen and (min-width: 1125px) and (max-width: 1545px)" />
+    <link href="/statics/v2/css/style_lt_1024.css" type="text/css" rel="stylesheet" media="screen and (max-width: 1124px)" />
+    <link href="/statics/v2/css/style_ie.css" type="text/css" rel="stylesheet" media="screen" />
+    
+    <!--[if IE 9 ]>
+        <script>
+        window.isltIE9 = true;
+        </script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link href="/statics/v2/css/style_lt_1024.css" type="text/css" rel="stylesheet" media="screen" />
+        <script type="text/javascript" src="/statics/v2/js/html5.js"></script>
+        <script type="text/javascript" src="/statics/v2/js/excanvas.min.js"></script>
+        <script>
+        window.isltIE9 = true;
+        </script>
+    <![endif]-->
+
+    <!--[if IE 6 ]>
+    <link href="/statics/v2/css/style_ie6.css" type="text/css" rel="stylesheet" media="screen" />
+    <![endif]-->
+    
+    <script type="text/javascript">
+    //global settings
+    window.domain = window.location.protocol + "//www.lib.sjtu.edu.cn";
+    window.catid = "";
+    window.lang = "en";
+    window.static_path = "/statics/v2/";
+    window.isFlipFallback = !!navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match("Chrome\/21");
+
+    function initHeader(){
+
+        //fixed ie11 bug
+        if(window.isFlipFallback) {
+            var html = document.getElementsByTagName("html")[0];
+            html.className = "ie ie11 cn";
+        }
+    }
+    
+    function fixLinks(){
+        //自动添加语言后缀
+        $.each($("a"),function(i,n){
+	        
+	        if(!$(this).attr("href")) return;
+	        
+            var $href = $(this).attr("href");
+            
+            var $outlink = $href && (($href.indexOf("http://") > -1 || $href.indexOf("https://") > -1) && $href.indexOf(window.domain) < 0);
+        
+            if(!$outlink && $href.indexOf("lang=zh") < 0 && $href.indexOf("javascript:") < 0) {
+                if($href.indexOf("?") < 0)
+                    $(this).attr("href",$href+"?lang=en");    
+                else
+                    $(this).attr("href",$href+"&lang=en");    
+            }
+            
+                
+            //给外链增加target=new
+            if($outlink) {
+                $(this).attr("target", "_blank");
+            }
+        });
+    }
+
+    </script>
+    
+<script>
+	/*if (screen.width < 500) { document.location = "index.php?t=mobile"; }*/
+/*var ua=window.navigator.userAgent;
+var isMobile = screen.width < 500 || ua.indexOf("iPhone") > 0 || ua.indexOf("Android") > 0 || ua.indexOf("Linux") > 0;
+if(isMobile) {
+document.location = "index.php?t=mobile";
+}	*/
+</script>
+ </head>
+<body class="index">
+<!--
+	<div id="tips-header" class="hide clearfix">
+		您如果对图书馆新网站有任何意见请
+		<a href="mailto:master@lib.sjtu.edu.cn"><img src="/statics/v2/img/btn_email_normal.png" /></a>
+		给我们，或
+		<a target="_blank" href="http://survey.lib.sjtu.edu.cn/form/ud/u1/f29.aspx"><img src="/statics/v2/img/btn_feedback_normal.png" /></a>
+		。
+		您还可以
+		<a href=""><img src="/statics/v2/img/btn_guide_normal.png" /></a>
+		<a id="tips-header-btn" href="javascript:void(0);" style="float: right;padding-right:10px;"><img src="/statics/v2/img/btn_close_normal.png" /></a>
+		-->
+	</div>
+    <div id="header" class="navbar">
+        <div class="navbar-inner">
+            <div class="menu-bar">
+                <ul id="menu-row-1" class="clearfix">
+                    <li class="logo">
+                        <a href="index.php?m=content&c=index"><img src="/statics/v2/img/logo.png" style="padding-top:10px;" /></a>  <!--add style="padding-top:10px;"  /-->
+                    </li>
+                    <li class="version">
+                                                <a href="/index.php?m=content&c=index&lang=zh">中文</a>&nbsp;&nbsp;
+                                                                      <a href="/sitemap_en.html" title="Sitemap"><img src="/statics/v2/img/ico-sitemap-mini.png"></a><br />
+                                                
+                          
+                           <a href="http://oldweb.lib.sjtu.edu.cn">旧版</a>&nbsp; <a href="http://guestbook.lib.sjtu.edu.cn/">留言</a>
+                          
+                    </li>
+					
+					                    <li class="menu-list">
+                        <dl class="clearfix">
+                            <!--dd class="first short">
+                            	<a class="active" href="index.php?m=content&c=index">Home</a>
+                            </dd-->
+                            <dd class="short menu-item-resource">
+                            	<a class="menu-item " href="javascript:void(0);">Resources</a>
+                            	<ol>                            	
+
+								 
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=223">Databases</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=283"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=250"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=261">EJournals</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=285"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=show&catid=82&id=24"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=267">Patron Recommendation</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=216">Copyright Reminder</a></li>	
+																
+                            	</ol>
+                            </dd>
+                            <dd class="short">
+                            	<a class="menu-item " href="javascript:void(0);">Sevices</a>
+                            	<ol>
+								 
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=14">Circulation Services</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=13">Course Support</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=17">Research Support</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=24">Campus Culture</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=60">High-tech Experience</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=32">Facilities</a></li>	
+																                            	</ol>
+                            </dd>
+                            
+                            <dd>
+                            	<a class="menu-item " href="javascript:void(0);">Communication</a>
+                            	<ol>
+                            	
+								 
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=71">Alumni</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=117"></a></li>	
+																		<li><a href="https://bbs.sjtu.edu.cn/bbsdoc,board,Library.html">Library BBS</a></li>	
+																		<li><a href="http://jianshu.lib.sjtu.edu.cn/home.action">Book Recommendation</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=65">Book Donation</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=161">Newsletter</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=72">Visiting</a></li>	
+																		<li><a href="http://guestbook.lib.sjtu.edu.cn/">guestbook</a></li>	
+																		<li><a href="http://lostandfound.lib.sjtu.edu.cn">LostandFound</a></li>	
+																                            	</ol>
+                            	</dd>
+                            <dd><a class="menu-item " href="javascript:void(0);">About</a>
+                            	<ol>
+								 
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=28">Director</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=134">Introduction</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=74">Photo Gallery</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=243">Institutions</a></li>	
+																		<li><a href="http://dwgk.lib.sjtu.edu.cn/"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=103"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=199">News and Events</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=136">Yellow Page</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=137">Opening Hours</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=40">FAQ</a></li>	
+																		<li><a href="http://xgh.lib.sjtu.edu.cn/">SCLM</a></li>	
+																                            	</ol>
+                            </dd>
+                            <dd class="menu-item-library"><a class="menu-item " href="javascript:void(0);">Librarians</a>
+                            	<ol>
+								 
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=142">LIS Latest News</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=140"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=141"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=143"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=144">Dewey classification</a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=145"></a></li>	
+																		<li><a href="/index.php?m=content&c=index&a=lists&catid=146"></a></li>	
+																                            	</ol>
+                            </dd>
+
+                        </dl>
+                    </li>					
+                    <li class="hr-info">
+                        <dl class="clearfix">
+
+							                            <dd class="mylib"><a href="/index.php?m=member&c=index&a=public_JAccount_login">Login</a></dd>
+                                                    </dl>
+                    </li>
+                    <li class="blank">
+
+                    </li>
+                    <li class="ads">
+                        <dl>
+                            <dd><a href="index.php?m=content&c=index&a=lists&catid=66" ><img src="/statics/v2/img/logo-1.png"/></a></dd>
+                            <dd><a href="index.php?m=content&c=index&a=lists&catid=57"><img src="/statics/v2/img/logo-2.png" /></a></dd>
+                            <dd class="last"><a href="index.php?m=content&c=index&a=lists&catid=68"><img src="/statics/v2/img/logo-3.png" /></a></dd>
+                        </dl>
+                    </li>
+                </ul>
+                
+                <div id="submenu-bar" style="margin-top:-40px;">
+                	<img id="submenu-bar-arr" src="/statics/v2/img/ico-dropdown-arr.png" />
+                	<ul class="clearfix">
+
+                	</ul>
+                </div>
+            </div>
+            
+            <div class="search-bar clearfix">
+                <a href="http://ourex.lib.sjtu.edu.cn" target="_blank"><img class="search-logo" src="/statics/v2/img/siyuan-logo.png" /></a>
+                <div id="search-bar-type" class="search-type dropdown-wrapper">
+                	<input type="hidden" id="search-type" value="search1">
+                    <a class="dropdown-trigger" href="#" data-type="search1">Book/Journal</a>
+                    <ul class="hide dropdown-list">
+                        <li><a>Book/Journal</a></li>
+                        <li><a>Arcitle</a></li>
+                        <li><a>Dissertation</a></li>
+                        <li><a>Multi-Media</a></li>                        
+                    </ul>
+                </div>
+
+<!--SJTU Search Box-->
+<div id="search_contents" class="hide">	
+
+					
+    <div id="search1" class="tab content" >
+<form id="searchform1" action="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do" method="get" onSubmit="return checkSearch(this)" target="_blank" >
+<!--馆藏目录-->
+<input type="hidden" name="fn" value="search" />
+<input type="hidden" name="tab" value="default_tab" />
+<input type="hidden" name="vid" value="chinese" />
+<input name="scp.scps" type="radio" checked="checked" id="search-option-1" value="scope:(SJT),scope:(sjtu_metadata),scope:(sjtu_sfx),scope:(sjtulibzw),scope:(sjtulibxw),DuxiuBook">
+<input id="query" name="vl(freeText0)" value="" style="colour:#999;font-size:14px"  > 
+<input type=submit value="Search" id="search_submit"/>
+</form>
+    </div>
+ 
+<!--	
+<div id="search1" class="tab content" >
+<form id="searchform1" action="http://opac.lib.sjtu.edu.cn/F/" method="get" onSubmit="return checkSearch(this)" target="_blank" >
+<input type="hidden" name="func" value="find-b" />
+<input type="hidden" name="find_code" value="WRD" />
+<input type="hidden" name="local_base" value="SJT01" />
+<input id="query" name="request" value="" style="colour:#999;font-size:14px"  > 
+<input type=submit value="Search" id="search_submit"/>
+</form>
+    </div>
+--> 
+
+    <div id="search2" class="tab content" style="display:none" >
+<form id="searchform2" action="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do" method="get" onSubmit="return checkSearch(this)" target="_blank">
+<!--查文章-->
+<input type="hidden" name="tab" value="paper_tab" />
+<input type="hidden" name="mode" value="Basic" />
+<input type="hidden" name="vid" value="chinese" />
+<input type="hidden" name="fn" value="search" />
+<input id="query" name="vl(freeText0)" value="" style="colour:#999;font-size:14px"/>
+<input type=submit value="Search" id="search_submit"/>
+</form>
+    </div>
+	
+    <div id="search3" class="tab content" style="display:none" >
+<form id="searchform3" action="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do" method="get" onSubmit="return checkSearch(this)" target="_blank">
+<!--查学位论文-->
+<input type="hidden" name="tab" value="thesis_tab" />
+<input type="hidden" name="mode" value="Basic" />
+<input type="hidden" name="vid" value="chinese" />
+<input type="hidden" name="fn" value="search" />
+<input id="query" name="vl(freeText0)" value="" style="colour:#999;font-size:14px"/>
+<input type=submit value="Search" id="search_submit"/>
+</form>
+    </div>
+	
+    <div id="search4" class="tab content" style="display:none" >
+<form id="searchform4" action="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do" method="get" onSubmit="return checkSearch(this)" target="_blank">
+<!--查多媒体资源-->
+<input type="hidden" name="tab" value="media_tab" />
+<input type="hidden" name="mode" value="Basic" />
+<input type="hidden" name="vid" value="chinese" />
+<input type="hidden" name="fn" value="search" />
+<input id="query" name="vl(freeText0)" value="" style="colour:#999;font-size:14px"/>
+<input type=submit value="Search" id="search_submit"/>
+</form>
+    </div>
+	
+    <div id="search5" class="tab content" style="display:none" >
+<form id="searchform5" action="http://ourex.lib.sjtu.edu.cn/remote.htm" method="get" onSubmit="return checkSearch(this)" target="_blank">
+<!--查全部-->
+<!-- <input type="hidden" name="fn" value="search" /> -->
+<input type="hidden" name="tab" value="all_tab" />
+<!-- <input type="hidden" name="vid" value="chn" /> -->
+<input id="query" name="text" value="" style="colour:#999;font-size:14px" />
+<input type=submit value="Search" id="search_submit"/>
+</form>
+    </div>
+
+	
+    <div id="search6" class="tab content" style="display:none">
+<form id="searchform6" action="http://scholar.google.com.hk/scholar" method="get" onSubmit="return checkSearch(this)" target="_blank">
+<!--Google学术-->
+<input id="query" name="q" value="" style="colour:#999;font-size:14px" /> 
+<input type=submit value="Search" id="search_submit"/>
+</form>  
+    </div>
+</div>
+<!--end of searchbox-->
+
+
+                <div class="search-input clearfix">
+                <form onsubmit="return doSearch(this)">
+         <!--           <input type="text" id="search-input" style="margin-top:6px;" autocomplete=off value="" placeholder="Search catalog (books、jounal、e-book、e-jounal、dissertation of sjtu etc.)" />  -->
+                     <input type="text" id="search-input" style="margin-top:6px;" autocomplete=off value=""  />  
+                    
+	                <div id="search-option-list-1" class="search-type search-option dropdown-wrapper" style="padding:0 0 0 2px;">
+	                	<input type="hidden" id="search-type" value="search1">
+	                	<!--
+	                    <a class="dropdown-trigger dropdown-trigger-white" href="#" data-type="search1">Books&Jounals</a>
+	                    <ul class="hide dropdown-list">
+	                        <li><a href="javascript:void(0)" onclick="selectSearchParam(this)" data-id="search-option-1" data-value="scope:(SJT),scope:(sjtu_metadata),scope:(sjtu_sfx),scope:(sjtulibzw),scope:(sjtulibxw),DuxiuBook">图书和期刊</a></li>
+	                        <li><a href="javascript:void(0)" onclick="selectSearchParam(this)" data-id="search-option-1" data-value="scope:(sjtu_metadata),DuxiuBook">电子图书和图片</a></li>
+	                        <li><a href="javascript:void(0)" onclick="selectSearchParam(this)" data-id="search-option-1" data-value="scope:(sjtulibzw),scope:(sjtulibxw)">纸质图书和期刊</a></li>
+	                    </ul>
+	                  -->
+	                </div>
+
+	                <div id="search-option-list-2" class="search-type search-option dropdown-wrapper" style="padding:0 0 0 2px; display:none;">
+	                	<input type="hidden" id="search-type" value="search2">
+	                	<!--
+	                    <a class="dropdown-trigger dropdown-trigger-white" href="#" data-type="search1">Books&Jounals</a>
+	                    <ul class="hide dropdown-list">
+	                        <li><a href="javascript:void(0)" onclick="selectSearchParam(this)" data-id="search-option-2" data-value="DuxiuJournal,primo_central_multiple_fe">文 章</a></li>
+	                        <li><a href="javascript:void(0)" onclick="selectSearchParam(this)" data-id="search-option-2" data-value="DuxiuJournal">中文文章</a></li>
+	                        <li><a href="javascript:void(0)" onclick="selectSearchParam(this)" data-id="search-option-2" data-value="primo_central_multiple_fe">外文文章</a></li>
+	                    </ul>
+	                  -->
+	                </div>
+	                
+	                <div id="search-option-list-3" class="search-type search-option dropdown-wrapper" style="padding:0 0 0 2px; display:none;">
+	                	<input type="hidden" id="search-type" value="search3">
+	                	<!--
+	                    <a class="dropdown-trigger dropdown-trigger-white" href="#" data-type="search1">学位论文</a>
+	                    <ul class="hide dropdown-list">
+	                        <li><a href="javascript:void(0)" onclick="selectSearchParam(this)" data-id="search-option-3" data-value="DuxiuDissertation,DuxiuFDissertation">学位论文</a></li>
+	                        <li><a href="javascript:void(0)" onclick="selectSearchParam(this)" data-id="search-option-3" data-value="DuxiuDissertation">中文学位论文</a></li>
+	                        <li><a href="javascript:void(0)" onclick="selectSearchParam(this)" data-id="search-option-3" data-value="DuxiuFDissertation">外文学位论文</a></li>
+	                    </ul>
+	                  -->
+	                </div>
+	                
+	                <div id="search-option-list-4" class="search-type search-option dropdown-wrapper" style="padding:0 0 0 2px; display:none;">
+	                	<input type="hidden" id="search-type" value="search4">	                	
+	                </div>
+	                 	                
+                    <button class="search-button" href="javascript:void(0)"> </button>
+                </form>
+                </div>
+               
+
+                <ul class="search-info">
+                    <li><a href="index.php?m=search&c=index&a=init&all=all&q=*">Site Search</a></li>
+                    <li style="position: relative;">
+                    	<a class="dropdown-trigger" href="#">Retrieval<br />platform</a>             	
+                          <dl class="hide dropdown-list" style="width:76px;">
+                            <dd class="opac"  ><a href="http://opac.lib.sjtu.edu.cn" target="_blank">OPAC</a></dd>
+                            <dd class="ars" ><a href="http://aira.lib.sjtu.edu.cn" target="_blank">Academic Resource Searching</a></dd>
+                        </dl>
+                    </li>
+                    
+                    
+                 
+                    <li><a href="index.php?m=content&c=index&a=lists&catid=30">Collections</a></li>
+                    <!--
+                    <li style="position: relative;"><a class="dropdown-trigger" href="#">Retrieval<br />platform</a>
+                        <dl class="hide dropdown-list">
+                            <dd class="opac"><a href="http://opac.lib.sjtu.edu.cn" target="_blank">OPAC</a></dd>
+                            <dd class="ars"><a href="http://aira.lib.sjtu.edu.cn" target="_blank">Academic Resource Searching</a></dd>
+                        </dl>
+                    </li>
+                    -->
+                    
+                    <li class="last"><a href="index.php?m=content&c=index&a=lists&catid=216">Copyright Reminder</a></li>
+                </ul>
+            </div>
+        </div>
+ 
+    </div>
+
+<style>
+.ie #toolbar {
+	margin-top: 118px;
+}
+</style>
+  <style type="text/css">
+        .divStyle
+        {            
+            width: 11px;
+            height: 11px;            
+        }
+        .promptStyle
+        {            
+            width: 225px;
+            height: 50px;
+            visibility: hidden;
+            background-color: grey;
+            position: absolute;
+            font-size:11px;
+            font-weight:normal;
+            margin-left:50px;      
+        }
+    </style>
+    
+      <style>
+  
+  .black_overlay{
+   display: none;
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   width: 100%;
+   height: 100%;
+   background-color: black;
+   z-index:1001;
+   -moz-opacity: 0.8;
+   opacity:.80;
+   filter: alpha(opacity=80);
+  }
+  .white_content {
+   display: none;
+   position: absolute;
+   top: 15%;
+   left: 25%;
+   width: 420px;
+   height: 420px;
+   border: 16px solid #FFF;
+   border-bottom:none;
+   background-color: white;
+   z-index:1002;
+   overflow: auto;
+  }
+ </style>
+ 
+ 
+ 
+ 
+    <script type="text/javascript">
+　　//传入 event 对象
+        function ShowPrompt(objEvent) {
+            var divObj = document.getElementById("promptDiv");
+            divObj.style.visibility = "visible";
+　　　//使用这一行代码，提示层将出现在鼠标附近(如要使用，记得注释 divOjb.style.left = 60+5;  这一句)
+            //divObj.style.left = objEvent.clientX + 5;   //clientX 为鼠标在窗体中的 x 坐标值       
+            divObj.style.left = 60 + 5;
+            divObj.style.top = objEvent.clientY + 5;     //clientY 为鼠标在窗体中的 y 坐标值
+        }
+　　//隐藏提示框
+        function HiddenPrompt() {
+            divObj = document.getElementById("promptDiv");
+            divObj.style.visibility = "hidden";
+        }        
+    </script>
+ 		<script type="text/javascript">
+　　//传入 event 对象
+        function ShowPrompt2(objEvent) {
+            var divObj = document.getElementById("promptDiv2");
+            divObj.style.visibility = "visible";
+　　　//使用这一行代码，提示层将出现在鼠标附近(如要使用，记得注释 divOjb.style.left = 60+5;  这一句)
+            //divObj.style.left = objEvent.clientX + 5;   //clientX 为鼠标在窗体中的 x 坐标值       
+            divObj.style.left = 60 + 5;
+            divObj.style.top = objEvent.clientY - 250;     //clientY 为鼠标在窗体中的 y 坐标值
+        }
+　　//隐藏提示框
+        function HiddenPrompt2() {
+            divObj = document.getElementById("promptDiv2");
+            divObj.style.visibility = "hidden";
+        }        
+    </script>
+ 		<script type="text/javascript">
+　　//传入 event 对象
+        function ShowPrompt3(objEvent) {
+            var divObj = document.getElementById("promptDiv3");
+            divObj.style.visibility = "visible";
+　　　//使用这一行代码，提示层将出现在鼠标附近(如要使用，记得注释 divOjb.style.left = 60+5;  这一句)
+            //divObj.style.left = objEvent.clientX + 5;   //clientX 为鼠标在窗体中的 x 坐标值       
+            divObj.style.left = 60 + 5;
+            divObj.style.top = objEvent.clientY -500;     //clientY 为鼠标在窗体中的 y 坐标值
+        }
+　　//隐藏提示框
+        function HiddenPrompt3() {
+            divObj = document.getElementById("promptDiv3");
+            divObj.style.visibility = "hidden";
+        }        
+    </script>
+    <script type="text/javascript">
+　　//传入 event 对象
+        function ShowPrompt4(objEvent) {
+            var divObj = document.getElementById("promptDiv4");
+            divObj.style.visibility = "visible";
+　　　//使用这一行代码，提示层将出现在鼠标附近(如要使用，记得注释 divOjb.style.left = 60+5;  这一句)
+            //divObj.style.left = objEvent.clientX + 5;   //clientX 为鼠标在窗体中的 x 坐标值       
+            divObj.style.left = 60 + 5;
+            divObj.style.top = objEvent.clientY + 5;     //clientY 为鼠标在窗体中的 y 坐标值
+        }
+　　//隐藏提示框
+        function HiddenPrompt4() {
+            divObj = document.getElementById("promptDiv4");
+            divObj.style.visibility = "hidden";
+        }       
+    </script>
+    <script type="text/javascript">
+　　//传入 event 对象
+        function ShowPrompt5(objEvent) {
+            var divObj = document.getElementById("promptDiv5");
+            divObj.style.visibility = "visible";
+　　　//使用这一行代码，提示层将出现在鼠标附近(如要使用，记得注释 divOjb.style.left = 60+5;  这一句)
+            //divObj.style.left = objEvent.clientX + 5;   //clientX 为鼠标在窗体中的 x 坐标值     
+            divObj.style.left = 60 + 5;
+            divObj.style.top = objEvent.clientY - 250;     //clientY 为鼠标在窗体中的 y 坐标值
+        }
+　　//隐藏提示框
+        function HiddenPrompt5() {
+            divObj = document.getElementById("promptDiv5");
+            divObj.style.visibility = "hidden";
+        }        
+    </script>
+
+    <div class="container flip-container clearfix">
+   
+        <!--left container-->
+        <div id="column-1" class="ui-block column6 non-bg">
+        
+            <!--spotlight-->
+            <div id="block-1-1" class="ui-block column12">
+        <div class="card-face card-front">
+            <div class="card-header spotlight-news" style="">
+            	<marquee behavior="scroll" direction="left" scrollamount="2">
+                <ul class=" clearfix">
+                  			            			            			                	<li class="news"><a href="/index.php?m=content&c=index&a=show&catid=211&id=1131">Library Awarded Best English Website of SJTU</a></li>
+			            			                	<li class="news"><a href="/index.php?m=content&c=index&a=show&catid=211&id=1085">The Party Committee Branch of SJTU Library Launches a Party Lecture on “Three Strict and Three Practical” Special Topic Education</a></li>
+			            			                	<li class="news"><a href="/index.php?m=content&c=index&a=show&catid=211&id=1084">Library Users (Professors) Symposium Held Successfully</a></li>
+			            			                	<li class="news"><a href="/index.php?m=content&c=index&a=show&catid=211&id=1083">Pair Learning between the Third Party Branch of SJTU Library and the Fifth Party Branch of East China Normal University Library</a></li>
+			            			                	<li class="news"><a href="/index.php?m=content&c=index&a=show&catid=211&id=1082">Shanghai Municipal Academic Library Intelligence Committee Convenes Working Conference for First Half 2015</a></li>
+			            			                            </ul>
+							</marquee>	
+               <div class="view-all"><a href="index.php?m=content&c=index&a=lists&catid=212" >View All</a>&nbsp;<a href="index.php?m=content&c=rss&rssid=212&lang=zh" target="_blank" ><img src='/statics/v2/img/ico-rss-white.png'  style="padding-bottom:2px;" /></a>
+               </div>
+            </div>
+			<!--main-->
+                          
+            <div class="card-content" id="spotlights">
+
+				<!-- slider container -->
+				<div id="spotlight-wrapper" class="iosslider">
+				
+					<!-- slider -->
+					<div class='slider'>
+					
+						<!-- slides -->
+				        						<div class='slide' data-url="/index.php?m=content&c=index&a=show&catid=212&id=730" data-title="Resources Recommendation：Emerald" data-desc="">
+							<a class="zoom-hover" href="/index.php?m=content&c=index&a=show&catid=212&id=730"><img src="/uploadfile/2014/0228/20140228025214562.jpg" alt=""/></a>
+						</div>				        
+												<div class='slide' data-url="/index.php?m=content&c=index&a=show&catid=212&id=729" data-title="Resources Recommendation：Biography in Context" data-desc="">
+							<a class="zoom-hover" href="/index.php?m=content&c=index&a=show&catid=212&id=729"><img src="/uploadfile/2014/0228/20140228024552452.png" alt=""/></a>
+						</div>				        
+												<div class='slide' data-url="/index.php?m=content&c=index&a=show&catid=212&id=728" data-title="Resources Recommendation：SciFinder" data-desc="">
+							<a class="zoom-hover" href="/index.php?m=content&c=index&a=show&catid=212&id=728"><img src="/uploadfile/2014/0225/20140225022036616.jpg" alt=""/></a>
+						</div>				        
+						
+					</div>
+					
+			        <div class="ui-more">
+                          <div class="ui-title"><a href="/index.php?m=content&c=index&a=show&catid=212&id=728">Resources Recommendation：SciFinder</a></div>
+                          <div class="ui-desc"></div>
+			        </div>
+					
+					<div class="ui-index clearfix">
+						
+												   <a href="javascript:void(0)" class="active">1</a>
+												   <a href="javascript:void(0)" class="">2</a>
+												   <a href="javascript:void(0)" class="">3</a>
+						
+						  <a href="index.php?m=content&c=rss&rssid=211&lang=zh" target="_blank" ><img src='/statics/v2/img/ico-rss.png' /></a>
+              <a href="index.php?m=content&c=index&a=lists&catid=211" class="all-news">View All</a>
+
+					</div>    
+				
+				</div>
+						
+<!--
+              <div id="spotlight-wrapper" class="barousel">              	
+				    <div class="ui-gallery-images">
+				        				        <a class="zoom-hover gray-hover" href="/index.php?m=content&c=index&a=show&catid=212&id=730"><img src="/uploadfile/2014/0228/20140228025214562.jpg" alt="" class="default" /></a>
+										        <a class="zoom-hover gray-hover" href="/index.php?m=content&c=index&a=show&catid=212&id=729"><img src="/uploadfile/2014/0228/20140228024552452.png" alt="" class="default" /></a>
+										        <a class="zoom-hover gray-hover" href="/index.php?m=content&c=index&a=show&catid=212&id=728"><img src="/uploadfile/2014/0225/20140225022036616.jpg" alt="" class="default" /></a>
+						
+
+				    </div>
+
+
+					<div class="ui-index ui-gallery-nav">
+						<ul class="clearfix">
+						   <li><a href="#">1</a></li>
+						   <li><a href="#">2</a></li>
+						   <li><a href="#">3</a></li>
+						</ul>
+					</div>             
+
+                </div>
+-->
+            </div>
+
+            
+
+        </div>
+			</div>
+
+			<!---->
+			<div id="block-1-2" class="ui-block column6">
+        <div class="card-face card-front">
+          <div class="card-header">
+              Course Support          </div>
+
+          <div class="card-content">
+
+          </div>
+          <div class="ub-footer clearfix">
+				 
+								<a href="/index.php?m=content&c=index&a=lists&catid=16">Textbooks</a>
+								<a href="http://www.lib.sjtu.edu.cn/fresh/">For Freshmen</a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=152">Training Series</a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=147">Thematic Trainings with Academies</a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=148">Trainings embedded in courses teaching</a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=149">Trainings for Information Commissioner</a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=48"></a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=51">Subject Librarians</a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=122"></a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=50">Group Study Rooms</a>
+								<a href="http://oaps.lib.sjtu.edu.cn:8000/oaps/ ">Outstanding Academic Papers by Students</a>
+								          </div>
+        </div>
+			</div>
+
+			<div id="block-1-3" class="ui-block column6">
+        <div class="card-face card-front">
+          <div class="card-header">
+              Research Support          </div>
+
+          <div class="card-content">
+
+          </div>
+          <div class="ub-footer clearfix">
+
+				 
+								<a href="/index.php?m=content&c=index&a=lists&catid=53"></a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=231"></a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=232">Subject Blog</a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=233">LibGuides</a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=23"></a>
+								<a href="/index.php?m=content&c=index&a=lists&catid=52"></a>
+								          </div>
+        </div>
+			</div>
+
+		</div>
+		<!--right contianer-->
+		<div id="column-2" class="ui-block column3 non-bg">
+
+			<div id="block-2-1" class="ui-block column12 flip-card">
+        <div class="card-face card-front">
+          <div class="card-header">
+              Database          </div>
+
+          <div class="card-content">
+
+          </div>
+        </div>
+
+        <div class="card-face card-back">
+          <div class="card-header">
+              Database <a href="index.php?m=content&c=rss&rssid=223&lang=en" target="_blank"><img src='/statics/v2/img/ico-rss-white.png' /></a>          </div>
+          
+          <div class="card-content">
+      			<ul>
+                            
+                                  				<li><a href="/index.php?m=content&c=index&a=show&catid=223&id=942">ACM (Association for Computing Machinery) Digital Library</a></li>
+      			      				<li><a href="/index.php?m=content&c=index&a=show&catid=223&id=943">ACS (American Chemical Society) Journals</a></li>
+      			      				<li><a href="/index.php?m=content&c=index&a=show&catid=223&id=944">AIAA (American Institute of Aeronautics and Astronautics) Electronic Library</a></li>
+      			      				<li><a href="/index.php?m=content&c=index&a=show&catid=223&id=949">AIP (American Institute of Physics) Journals</a></li>
+      			      				<li><a href="/index.php?m=content&c=index&a=show&catid=223&id=1230">American Society for Microbiology</a></li>
+      			                    			</ul>
+                <a href="index.php?m=content&c=index&a=lists&catid=223&lang=en" style="float: right;margin-top: 10px;margin-right: 10px;">&gt;&gt;All</a>
+          </div>
+        </div>        
+			</div>
+
+			<div id="block-2-2" class="ui-block column12 flip-card">
+        <div class="card-face card-front">
+          <div class="card-header">
+              Journals          </div>
+
+          <div class="card-content">
+
+          </div>
+        </div>
+
+        <div class="card-face card-back">
+          <div class="card-header">
+              Journals <a href="http://ersa.lib.sjtu.edu.cn/custom/html/list_by_alph.asp?alph=a&lan=cn" target="_blank"><img src='/statics/v2/img/ico-rss-white.png' /></a>          </div>
+
+          <div class="card-content">
+              <ul>
+                                 
+                                <li><a href="http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3/az?&param_textSearchType_save=contains&param_langcode_save=zh&&param_type_value=browseLetterGroup&param_jumpToPage_value=&param_pattern_value=&param_letter_group_value=A&param_letter_group_script_value=Chinese">中文期刊</a></li>
+                                <li><a href="http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3/az?&param_textSearchType_save=contains&param_langcode_save=en&param_type_value=browseLetterGroup&param_pattern_value=&param_letter_group_value=A&param_letter_group_script_value=Latin">English Journal</a></li>
+                                <li><a href="http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3/az?&param_textSearchType_save=contains&param_langcode_save=en&param_type_value=browseLetterGroup&param_letter_group_value=Others&param_letter_group_script_value=Latin">Other Language</a></li>
+                                <li><a href="http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3/az?param_textSearchType_save=contains&param_langcode_save=en&param_type_value=browseLetterGroup&param_letter_group_value=0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9&param_letter_group_script_value=Latin">From 0 to 9</a></li>
+                                <li><a href="http://sfx.lib.sjtu.edu.cn:3210/sfxlcl3/cgi/core/citation-linker.cgi">Citation Linker</a></li>
+                                              </ul>
+                <a href="index.php?m=content&c=index&a=lists&catid=261&lang=en" style="float: right;margin-top: 10px;margin-right: 10px;">&gt;&gt;All</a>
+          </div>
+        </div>
+			</div>
+
+  			<div id="block-2-3-1" class="ui-block column12 flip-card">
+  	        <div class="card-face card-front">
+              <div class="card-header">
+                  Librarian              </div>
+
+              <div class="card-content">
+
+              </div>
+            </div>
+
+            <div class="card-face card-back">
+              <div class="card-header">
+                  Librarian <a href="index.php?m=content&c=rss&rssid=51&lang=en" target="_blank"><img src='/statics/v2/img/ico-rss-white.png' /></a> 
+              </div>
+
+              <div class="card-content">
+                <ul>
+                                                                      <li><a href="/index.php?m=content&c=index&a=show&catid=51&id=261">Gao Xie <!--xgao@lib.sjtu.edu.cn--></a></li>
+                                    <li><a href="/index.php?m=content&c=index&a=show&catid=51&id=251"> Chen Youhua <!--yhchen@lib.sjtu.edu.cn--></a></li>
+                                    <li><a href="/index.php?m=content&c=index&a=show&catid=51&id=253"> Li Li <!--lli@lib.sjtu.edu.cn--></a></li>
+                                    <li><a href="/index.php?m=content&c=index&a=show&catid=51&id=258"> Liu Zhuoyan <!--zyliu@lib.sjtu.edu.cn --></a></li>
+                                    <li><a href="/index.php?m=content&c=index&a=show&catid=51&id=262">Huang Qinling <!--qllhuang@lib.sjtu.edu.cn--></a></li>
+                                                    </ul>
+                <a href="index.php?m=content&c=index&a=lists&catid=51&lang=en" style="float: right;margin-top: 10px;margin-right: 10px;">&gt;&gt;All</a>
+              </div>
+            </div>
+  			</div>
+
+  			<div id="block-2-3-2" class="ui-block column12 flip-card">
+            <div class="card-face card-front">
+              <div class="card-header">
+                  Library News              </div>
+
+              <div class="card-content">
+              </div>
+            </div>
+
+            <div class="card-face card-back">
+              <div class="card-header">
+                  Library News <a href="index.php?m=content&c=rss&rssid=212&lang=en" target="_blank"><img src='/statics/v2/img/ico-rss-white.png'/></a>              </div>
+
+              <div class="card-content">
+                <ul>
+                                    <li><a href="index.php?m=content&c=index&a=lists&catid=212&dynamic=%E4%B8%BB%E9%A2%98%E6%B4%BB%E5%8A%A8&lang=en">Activities</a></li>
+                  <li><a href="index.php?m=content&c=index&a=lists&catid=212&dynamic=%E8%B5%84%E6%BA%90%E5%8A%A8%E6%80%81&lang=en">Resource</a></li>
+                  <li><a href="index.php?m=content&c=index&a=lists&catid=212&dynamic=%E6%9C%8D%E5%8A%A1%E5%8A%A8%E6%80%81&lang=en">Service</a></li>
+                  <li><a href="index.php?m=content&c=index&a=lists&catid=212&lang=en">All</a></li>
+                                  </ul>
+              </div>
+            </div>
+    </div>
+
+
+     
+      </div>
+
+
+		<div id="column-3" class="ui-block column3 non-mr non-bg">
+
+	
+		
+			<div id="column-3-1" class="ui-block column12 flip-card">
+	          <div class="card-face card-front">
+	              <div class="card-header">
+	               My Library	              </div>
+	
+	              <div class="card-content">
+	            
+	              </div>
+	          </div>
+
+           	 <div class="card-face card-back">
+              	<div class="card-header">
+                  My Library      				  </div>
+
+              	<div class="card-content">
+		            <ul>
+						<li><a href="http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/login.do?loginFn=signin&vid=chinese&targetURL=http://ourex.lib.sjtu.edu.cn/primo_library/libweb/action/search.do?vid=chinese" target="_blank">My Library Information</a></li>
+						<li><a href="index.php?m=content&c=index&a=lists&catid=51&lang=en">My Services Librarian</a></li>						<li><a href="http://ill.sh.calis.edu.cn/gateway/" target="_blank">My ILL situation</a></li>
+						<li><a href="http://studyroom.lib.sjtu.edu.cn/index.asp" target="_blank">My Study Room</a></li>
+		            </dl>
+              	</div>
+			  </div>
+			</div>
+			
+						
+						
+						
+			
+			<div id="column-3-2" class="ui-block column12 flip-card">
+	       <div class="card-face card-front">
+            <div class="card-header">
+                Training Seminars            </div>
+
+            <div class="card-content">
+            </div>
+          </div>
+
+          <div class="card-face card-back">
+            <div class="card-header">
+                Training Seminars            </div>
+
+					                          
+            <div class="card-content">
+		            <ul>
+		                  <li><a href="index.php?m=content&c=index&a=lists&catid=152&lang=en">Training Series</a></li>
+		                  <li><a href="index.php?m=content&c=index&a=lists&catid=259&lang=en">Training for Freshmen</a></li>
+		                  <li><a href="index.php?m=content&c=index&a=lists&catid=147&lang=en">Training for Schools</a></li>
+		                  <li><a href="index.php?m=content&c=index&a=lists&catid=148&lang=en">Embedded Training</a></li>
+		                  <li><a href="index.php?m=content&c=index&a=lists&catid=149&lang=en">Training for Volunteer</a></li>
+		                  <li><a href="index.php?m=content&c=index&a=lists&catid=151&lang=en">Arts and Humanities Lecture</a></li>
+		            </ul>
+            </div>
+                      </div>
+			</div>
+			
+			
+			
+			
+
+			<div id="column-3-3" class="ui-block column12">
+		          <div class="card-face card-front">
+		            <div class="card-header">
+		                Links		            </div>
+		            
+		              <div style="float:left; margin-top:-50px; padding-left:90px;">
+		        
+                    <a href = "#" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><img src='/statics/v2/img/iso-s.png' width="10" height="10" border="0"/></a>                    
+                     <a href = "#" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade2').style.display='block'"><img src='/statics/v2/img/android-s.png' width="10" height="10" border="0"/></a>
+                      <div id="light" class="white_content">
+                      <img src='/statics/v2/img/iso.png'/><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">关闭</a></div>
+                      <div id="fade" class="black_overlay"></div>                      
+                      <div id="light2" class="white_content">
+                      <img src='/statics/v2/img/android.png'/><a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade2').style.display='none'">关闭</a></div>
+                      <div id="fade2" class="black_overlay"></div>
+                                         
+                    </div> 
+		
+		            <div class="card-content links">
+                  	                  <div class="clearfix">
+	                    <ul class="col-1">
+							<a href="http://en.sjtu.edu.cn">SJTU</a>
+							<a href="http://lib.shsmu.edu.cn">SJTU School of Medicine Library</a>
+							<a href="http://www.tdleelib.info/">T.D. Lee Arhives Online</a>
+	                    </ul>
+	                    <ul class="col-1">
+
+							<a href="http://www.calis.edu.cn/">CALIS</a>
+							<a href="http://cflms.lib.sjtu.edu.cn">CFLMS</a>
+							<a href="http://www.cityu.edu.hk/lib/rfid_consortium/index_e.html">Rfid Consortium</a>
+	                    </ul>
+	                  </div>
+	                  <div class="about">
+	                       Copyright© Shanghai Jiao Tong University Library. All rights reserved.<br>
+	<span>800 Dongchuan Road, Min Hang, Shanghai 200240, P.R.Chinapowe</span>
+	                  </div>
+	               
+		            </div>
+		          </div>
+
+			</div>
+			
+			
+			
+			
+		</div>
+		
+		
+
+	   </div>
+    </div>
+
+<script>
+function init(){    
+	
+    $('marquee').marquee('marquee').css("width", "85%").mouseover(function () {
+        $(this).trigger('stop');
+    }).mouseout(function () {
+        $(this).trigger('start');
+    });
+    $('.marquee').children().eq(0).css("width", "100%");
+
+	$('.iosslider').iosSlider({
+		snapToChildren: true,
+		scrollbar: false,
+		scrollbarHide: true,
+		desktopClickDrag: true,
+		autoSlide: true,
+		navSlideSelector: $(".ui-index a"),
+		onSlideChange: changeSlideIdentifier
+	});
+	
+	function changeSlideIdentifier(args){
+		var i = args.currentSlideNumber - 1;
+		var el = $("#spotlight-wrapper div.slide");
+		var target = $("#spotlight-wrapper .ui-more");
+		log(i, el.eq(0), target.find(".ui-title").html())
+
+		target.find(".ui-title").html("<a href='" + el[i].getAttribute("data-url") + "'>" + el[i].getAttribute("data-title") + "</a>")
+		target.find(".ui-desc").html(el[i].getAttribute("data-desc"));
+		target.fadeIn();
+		
+		$(".ui-index a.active").removeClass("active");
+		$(".ui-index a").eq(i).addClass("active");
+	}
+
+}
+</script>
+    	<!--toolbar-->
+      <div id="toolbar" class="toolbar-closed toolbar-en" style="display:none;">
+          <a href="#" class="trigger"></a>
+          <ul class="menu">
+          	<li><a href="index.php?m=content&c=index&a=lists&catid=152&lang=en">Training</a></li>
+          	<li><a href="javascript:void(0);" data-rel="ask">Ask</a></li>
+          	<li><a href="javascript:void(0);" data-rel="links">Links</a></li>
+          	<li><a href="javascript:void(0);" data-rel="share">Share</a></li>
+          	
+          </ul>
+          <ul class="qrcode">
+          	<li id="qrcode-current-page"><a id="page-qrcode-small" href="#" data-qr="" data-rel="qr-large"></a></li>
+			<li class=""><a href="#" data-qr="qr-weibo-L.png" data-rel="qr"><img src="/statics/v2/img/qr-weibo-S.png"></a></li>
+			<li class="last"><a href="#" data-qr="qr-wechat-L.png" data-rel="qr"><img src="/statics/v2/img/qr-wechat-S.png"></a></li>
+          </ul>
+          <div class="toolbar-outside hide toolbar-qrcode" id="toolbar-outside-qr-large">
+
+          </div>
+          <div class="toolbar-outside hide toolbar-qrcode" id="toolbar-outside-qr">
+          	<img src="/statics/v2/img/qr-wechat-S.png" />
+          </div>
+          <div class="toolbar-outside hide" id="toolbar-outside-ask">
+	          <ol id="">
+				<li><a href="http://guestBook.lib.sjtu.edu.cn/">GuestBook</a>
+				<li><a href="index.php?m=content&c=index&a=lists&catid=40">Links</a></li>
+				<li><a href="javascript:void(0)">Tel: 021-34206188<br/></a></li>
+				<li><a href="mailto:master@lib.sjtu.edu.cn">Curator Email:master@lib.sjtu.edu.cn</a></li>
+				<li><a href="http://cvrs.sh.calis.edu.cn:8080//login.do?anonymous=true&loginpage=firstpage&tenantcode=231030">CVRS</a></li>
+				<!--li><a href="#">Robeat</a></li-->
+				
+	          </ol>          
+	      </div>
+	      <div class="toolbar-outside hide" id="toolbar-outside-share">
+	          <ol id="">
+				<li><a href="javascript:void(0)" data-sns="sina"><img src="/statics/v2/img/ico-weibo.png"></a></li>
+				<li><a href="javascript:void(0)" data-sns="tencent"><img src="/statics/v2/img/ico-qqweibo.png"></a></li>
+				<li><a href="javascript:void(0)" data-sns="renren"><img src="/statics/v2/img/ico-renren.png"></a></li>
+				<li><a href="javascript:void(0)" data-sns="douban"><img src="/statics/v2/img/ico-douban.png"></a></li>
+	          </ol>    
+	      </div>
+	      <div class="toolbar-outside hide" id="toolbar-outside-links">
+	          <ol id="">
+				<li><a href="index.php?m=content&c=index&a=lists&catid=137">Opening Hours</a></li>
+				<li><a href="index.php?m=content&c=index&a=lists&catid=30&lang=en">Borrowing</a></li>
+				<li><a href="index.php?m=content&c=index&a=show&catid=82&id=24">ILL</a></li>
+				<li><a href="index.php?m=content&c=index&a=lists&catid=240&lang=en">Fashion Experience</a></li>
+				<li><a href="http://studyroom.lib.sjtu.edu.cn/" target="_blank">Study Room</a></li>
+				<!--
+				<li><a href="http://www.lib.sjtu.edu.cn/fresh/" target="_blank">For Freshmen</a></li>
+				-->
+				<li><a href="index.php?m=content&c=index&a=lists&catid=65">Book Donation</a></li>
+				<li><a href="http://jianshu.lib.sjtu.edu.cn" target="_blank">ASD</a></li>
+				<li><a href="index.php?m=content&c=index&a=lists&catid=217">For Visitors</a></li>
+	          </ol>          
+          </div>
+      </div>
+
+<script>
+function initToolbar() {
+    /*toolbar*/
+
+    $("#toolbar ul li a").hover(function () {
+        var rel = $(this).attr("data-rel");
+        $(".toolbar-outside").addClass("hide");
+
+        if (rel == undefined) return;
+
+        //for qr code
+        if (rel == "qr") {
+            var src = static_path + "img/" + $(this).attr("data-qr");
+            $("#toolbar-outside-" + rel).find("img").eq(0).attr("src", src);
+        }
+
+        $("#toolbar-outside-" + rel).removeClass("hide");
+
+    }, function () {});
+
+    $("#toolbar-outside-share li a").on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        shareToSNS($(this).attr("data-sns"));
+    });
+
+    $(".toolbar-outside").mouseleave(function () {
+        $(this).addClass("hide");
+    });
+
+    //toolbar
+    $("#toolbar .trigger").click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var el = $("#toolbar");
+
+        if (el.hasClass("toolbar-closed")) {
+            el.removeClass("toolbar-closed");
+            el.addClass("toolbar-opened");
+        } else {
+            el.addClass("toolbar-closed");
+            el.removeClass("toolbar-opened");
+        }
+
+    });
+
+    $(document).click(function () {
+        if(!$("#toolbar").hasClass("toolbar-closed")) {
+        	$("#toolbar").removeClass("toolbar-opened").addClass("toolbar-closed");
+        }
+    })
+
+    setTimeout(function () {
+        //made qrcode 
+        try {
+            $("#page-qrcode-small").html("<img src='qrcode/qrcode.php?text=" + document.location.href + "' width='60' height='60' />").find("img").css("width", 60).css("height", 60);
+            $("#toolbar-outside-qr-large").html("<img src='qrcode/qrcode.php?text=" + document.location.href + "' width='240' height='240' />");
+        } catch (e) {}
+
+    }, 2000);
+
+    window.resizeToolbar = function () {
+        //var offset = $("#toolbar").hasClass("toolbar-closed") ? "44px" : "132px";
+        //$("#toolbar").css("left", $("body").width() - offset)
+    }
+
+    //resizeToolbar();
+    $("#toolbar").appendTo($(".container")).css("position", "fixed").show();
+}
+</script>   
+	
+<script type="text/javascript" src="/statics/v2/js/jquery-1.10.2.min.js"></script>
+<!--script type="text/javascript" src="/statics/v2/js/masonry.pkgd.min.js"></script-->
+<script type="text/javascript" src="/statics/v2/js/jquery.qrcode.js"></script>
+<script type="text/javascript" src="/statics/v2/js/jquery.marquee.js"></script>
+<script type="text/javascript" src="/statics/v2/js/jquery.iosslider.js"></script>
+<script type="text/javascript" src="/statics/v2/js/qrcode.js"></script>
+<script type="text/javascript" src="/statics/v2/js/base.js"></script>
+<script type="text/javascript">
+$(function(){
+    if(window.init) init();
+    if(window.initHeader) initHeader();
+    if(window.initToolbar) initToolbar();
+    if(window.fixLinks) fixLinks();
+});
+</script>
+<div style="display:none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F77084b4796089f560a388baa445f9f90' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+</body>
+</html>

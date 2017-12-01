@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/styleFront.css" type="text/css"></link>
+<script type="text/javascript" src="/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="list.js"></script>
+<style>
+.user_input_txt {
+	width:181px;
+	height:25px;
+	line-height:23px;
+	background-color:#fff;
+	border:1px solid #999999;
+	padding-left:2px;}
+</style>
+<title>
+  	公告新闻
+</title>
+</head>
+
+<body>
+	<!--头部-->
+	<!-- 用户账号 -->
+	<div class="ind_top">
+        <ul class="ind_top_q">
+        	<li class="ind_top_l">
+            	<a href="http://www.sjtu.edu.cn/xbdh/yjdh/yx.htm" target="_blank">院系专业</a>
+                <a href="/eweb/jygl/zpfw.so?modcode=null&subsyscode=zpfw&type=searchBysycx">生源信息</a>
+                <a href="/eweb/jygl/jygl.so?modcode=jygl_jygljylc&subsyscode=jygl&type=searchNews&newsType=jylc">就业导航</a>
+                <a href="/channel/index.htm?nParentId=5">访客</a>
+            </li>
+            						            <li class="ind_top_c">
+            	            		<a target="_blank" href="http://info.sjtu.edu.cn/index.aspx?jatkt=rejected">综合信息网</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://3dcampus.sjtu.edu.cn/">虚拟校园</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://www.jwc.sjtu.edu.cn/web/sjtu/198109.htm">校历</a>
+            		            	            	<input type="text" class="search_input" id="strTitle" maxLength="30" />
+            	<input type="button" class="search_btn" onclick="queryInfo()" />
+            	<script type="text/javascript">
+                	function queryInfo(){
+                		var strTitle = document.getElementById("strTitle").value;
+                		if(strTitle!=null && strTitle.length>0){
+                			var url = "/news/result.htm?strTitle=" + strTitle;
+							url = encodeURI(url).replace(/#/g, '%23');
+							window.open(url);
+                		}
+                	}
+                </script>
+               
+            </li>
+        </ul>
+    </div>    <!--头部 END-->
+    <!--宽度1000px-->
+    <div class="">
+    	<!--导航-->
+    	    	<div class="nav_wrap">
+                <div class="nav">
+                    <ul class="nav_logo w1000_margin0"><a href="/index.htm"><img class="logo" src="/images/logo.png" /></a></ul>
+                    <div class="hr"></div>
+                    <ul class="nav_dh w1000_margin0">
+                        <li class="dh_left">
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" href="/index.htm">首页</a>
+		                    </div>
+                            <div class="dh_q">
+		                        <a class="nav_tit" href="/news/list.htm?nType=0">新闻公告</a>
+		                     </div>
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW&zpxxType=new">招聘热点</a>
+		                    </div>
+		                	<div class="dh_q">
+		                        <a  class="nav_tit" href="/intro/index.htm">关于我们</a>
+		                    </div>
+                        </li>
+                        <li class="dh_right">
+		                	<span class="dh_time" id="myDate">
+		                		<span id="myYear"></span>年<span id="myMonth"></span>月<span id="myDay"></span>日
+		                	</span>
+		                    <span class="dh_week" id="myWeek">星期二</span>
+		                    <script type="text/javascript">
+		                		var myDate=new Date()
+		                		document.getElementById("myDate").innerHTML=myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDate()+"日";
+		                		var day =myDate.getDay();
+		                		var week ="";
+		                		if(day==0){
+		                			week ="星期日"
+		                		}
+		                		if(day==1){
+		                			week ="星期一"
+		                		}
+		                		if(day==2){
+		                			week ="星期二"
+		                		}
+		                		if(day==3){
+		                			week ="星期三"
+		                		}
+		                		if(day==4){
+		                			week ="星期四"
+		                		}
+		                		if(day==5){
+		                			week ="星期五"
+		                		}
+		                		if(day==6){
+		                			week ="星期六"
+		                		}
+		                		document.getElementById("myWeek").innerHTML=week;
+		                	</script>
+		                    																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">热点专题</option>
+		                    			                        <option value="http://www3.sjtu.edu.cn/qzlx2013.htm">
+		        					党的教育实践活专题网              
+		        				</option>
+		                        		                        <option value="http://202.120.33.37/14xz/">
+		        					2014年校长奖评选              
+		        				</option>
+		                        		                        <option value="http://xxgk.sjtu.edu.cn/">
+		        					信息公开              
+		        				</option>
+		                        		                        <option value="http://news.sjtu.edu.cn/jdrw.htm">
+		        					学者笔谈              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/18/">
+		        					聚焦十八大              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/jdwmw.htm">
+		        					文明在线              
+		        				</option>
+		                        		                    </select>
+		                    																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">快速通道</option>
+		                       		                        <option value="http://cc.sjtu.edu.cn/G2S/ShowSystem/Index.aspx">
+		        					课程中心               
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/zsjy.htm">
+		        					招生就办               
+		        				</option>
+		                        		                        <option value="http://alumni.sjtu.edu.cn/alumni/xiaoyouhui/index.php">
+		        					校友会               
+		        				</option>
+		                        		                        <option value="http://join.sjtu.edu.cn/">
+		        					人才招聘               
+		        				</option>
+		                        		                        <option value="http://www.qianxslib.sjtu.edu.cn/">
+		        					钱学森图书馆               
+		        				</option>
+		                        		                        <option value="http://postd.sjtu.edu.cn/">
+		        					博士后流动站               
+		        				</option>
+		                        		                        <option value="http://zbb.sjtu.edu.cn/">
+		        					招投标办               
+		        				</option>
+		                        		                    </select>
+		                </li>
+                    </ul>
+                </div>
+            </div>
+        <script type="text/javascript">
+        	function openLink(obj){
+        		if(obj.value !='#'){
+        			window.open(obj.value);
+        		}
+        	}
+		</script>
+                <!--导航 END-->
+        
+        <!--生源信息-->
+        				        <div class="center_sy">
+            <div class="sy_right">
+            	<div class="quick_gallery"><a href="#">
+            			       	 	公告新闻
+		    			    	            	</a></div>
+                <div class="sy_content">
+                	                    <ul class="sy_inf">
+                    	                     	<li>
+                    		<a target="_blank" href="detail.htm?lId=162&nType=0">
+                    		                    		<span>【新闻】中日职业发展论坛在我校成功举办</span>
+                    		<span class="gg_year">2014-09-23</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=161&nType=0">
+                    		                    		<span>【人才交流会】欢迎参加第九届顺德研究生交流会</span>
+                    		<span class="gg_year">2014-09-22</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=160&nType=0">
+                    		                    		<span>【新闻】交大博士应邀参加“教授博士宁波行”活动</span>
+                    		<span class="gg_year">2014-09-22</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=158&nType=0">
+                    		                    		<span>中国空间技术研究院2015年接收本科毕业生攻读硕士学位的办法</span>
+                    		<span class="gg_year">2014-09-18</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=157&nType=0">
+                    		                    		<span>中国工程物理研究院关于2015年接收推荐免攻读硕士学位研究生</span>
+                    		<span class="gg_year">2014-09-17</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=154&nType=0">
+                    		                    		<span>【公益课程】职场智慧</span>
+                    		<span class="gg_year">2014-09-15</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=152&nType=0">
+                    		                    		<span>【通告】第九届顺德研交会报名办法及会程安排</span>
+                    		<span class="gg_year">2014-09-15</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=151&nType=0">
+                    		                    		<span>第十六届高洽会博士教授宁波行</span>
+                    		<span class="gg_year">2014-09-15</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=150&nType=0">
+                    		                    		<span>【暑期实习】安居客校园脑力运动会暨安居客暑期实习生活动</span>
+                    		<span class="gg_year">2014-09-15</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=149&nType=0">
+                    		                    		<span>【社会实践】2014年中国工程物理研究院暑期就业实习实践活动</span>
+                    		<span class="gg_year">2014-09-15</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=148&nType=0">
+                    		                    		<span>【社会实践】2014年）“百名博士防城港行”活动启动公告</span>
+                    		<span class="gg_year">2014-09-15</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=111&nType=0">
+                    		                    		<span>就业协议书信息网上登记、鉴证流程</span>
+                    		<span class="gg_year">2014-05-10</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=110&nType=0">
+                    		                    		<span>我国高等学校高端人才培养模式联席研讨会在我校召开</span>
+                    		<span class="gg_year">2014-05-10</span>
+                    		</a>
+                    	</li>
+                                            	<li>
+                    		<a target="_blank" href="detail.htm?lId=108&nType=0">
+                    		                    		<span>上海市公安局关于办理非上海生源高校毕业生落户“社区公共户”提</span>
+                    		<span class="gg_year">2014-05-10</span>
+                    		</a>
+                    	</li>
+                                            </ul>
+                   	<!--分页-->
+			        <!-- 分页组件使用说明
+1.必需事先定义nPageCount,nRecordCount这2个vm变量
+2.当前页索引从0开始，在url中有pageindex参数代表当前页的索引，如果没有则认为是0
+ -->
+ <style type="text/css">
+ <!--
+.content .con_r .page{float:right; margin-top:18px;}
+#fenye table{margin-top:18px;}
+#fenye table .ys{color:#2e527b; margin-right:18px;}
+#fenye table .swy{width:51px; height:32px; line-height:32px; background:url(/images/PAGE_15.png) 0 0 no-repeat;}
+#fenye table .shua{width:32px; height:32px; line-height:32px; background:url(/images/PAGE_20.png) 0 0 no-repeat;}
+#fenye table .shua {color:#fff;}
+#fenye table .shua a:link{text-decoration:none;color:#fff !important;}
+#fenye table .shua a:visited{text-decoration:none;color:#fff;}
+#fenye table .shua a:hover{text-decoration:underline; color:#fff;}
+#fenye table .shua a:active{text-decoration:none;color:#fff;}
+#fenye table .shu{width:32px; height:32px; line-height:32px; background:url(/images/PAGE_19.png) 0 0 no-repeat;}
+#fenye table .swy a, #fenye table .sxy a, #fenye table .shu a{color:#2d2d2d;}
+#fenye table .swy a:link, #fenye table .sxy a:link, #fenye table .shu a:link{text-decoration:none;}
+#fenye table .swy a:visited, #fenye table .sxy a:visited, #fenye table .shu a:visited{text-decoration:none;}
+#fenye table .swy a:hover, #fenye table .sxy a:hover, #fenye table .shu a:hover{text-decoration:underline; color:#2e527b;}
+#fenye table .swy a:active, #fenye table .sxy a:active, #fenye table .shu a:active{text-decoration:none;}
+#fenye table .sxy{width:51px; height:32px; line-height:32px; background:url(/images/PAGE_21.png) 0 0 no-repeat;}
+-->
+</style>
+
+
+<div id="fenye">
+<table width="100%" >
+	<tr>
+		<td align="right" height="32" align="center" valign="middle"><nobr class="ys">74条记录，共5页</nobr></td>
+					<td class="swy" height="32" align="center" valign="middle"><nobr><a href="http://www.job.sjtu.edu.cn/news/list.htm?nType=0&pageindex=0"><span  style="margin-right:5px;text-align:center; width:51px; height:32px;line-height:32px; background:url(../images/PAGE_15.png) 0 0 no-repeat; vertical-align:middle; display:block; cursor:pointer;">首页</span></a></nobr></td>
+							<td class="sxy" height="32" align="center" valign="middle"><nobr><a href="http://www.job.sjtu.edu.cn/news/list.htm?nType=0&pageindex=3"><span style="margin-right:5px;text-align:center;width:61px; height:32px;line-height:32px;vertical-align:middle; display:block; cursor:pointer;">上一页</span></a></nobr></td>
+						
+							
+									<td class="shu" height="32"  valign="middle"><nobr ><a href="http://www.job.sjtu.edu.cn/news/list.htm?nType=0&pageindex=0" ><span style="margin-right:5px;text-align:center; width:32px; height:32px; line-height:32px;vertical-align:middle; display:block; cursor:pointer;">1</span></a></nobr></td>
+												<td class="shu" height="32"  valign="middle"><nobr ><a href="http://www.job.sjtu.edu.cn/news/list.htm?nType=0&pageindex=1" ><span style="margin-right:5px;text-align:center; width:32px; height:32px; line-height:32px;vertical-align:middle; display:block; cursor:pointer;">2</span></a></nobr></td>
+												<td class="shu" height="32"  valign="middle"><nobr ><a href="http://www.job.sjtu.edu.cn/news/list.htm?nType=0&pageindex=2" ><span style="margin-right:5px;text-align:center; width:32px; height:32px; line-height:32px;vertical-align:middle; display:block; cursor:pointer;">3</span></a></nobr></td>
+												<td class="shu" height="32"  valign="middle"><nobr ><a href="http://www.job.sjtu.edu.cn/news/list.htm?nType=0&pageindex=3" ><span style="margin-right:5px;text-align:center; width:32px; height:32px; line-height:32px;vertical-align:middle; display:block; cursor:pointer;">4</span></a></nobr></td>
+												<td class="shua" height="32" valign="middle"><nobr ><span style="margin-right:5px;text-align:center; width:32px; height:32px; line-height:32px;vertical-align:middle;  display:block; cursor:pointer;"><a href="javascript:void(0);">5</a></span></nobr></td>
+					
+					<td class="sxy" height="32" align="center" valign="middle"><nobr ><a href="javascript:void(0);" disabled="true" style="color:#999;cursor: default;"><span style="margin-right:5px;text-align:center;width:61px; height:32px; line-height:32px;vertical-align:middle; display:block; cursor:default;">下一页</span></a></nobr></td>
+							<td class="swy" height="32" align="center" valign="middle"><nobr ><a href="javascript:void(0);" disabled="true" style="color:#999;cursor: default;"><span style="text-align:center;width:51px; height:32px; line-height:32px;vertical-align:middle; display:block; cursor:default;">尾页</span></a></nobr></td>
+			</tr>
+</table>
+</div>
+			        <!--分页-->
+                </div>
+            </div>
+            <!--右边 END-->
+            <div class="clear"></div>
+        </div>
+        <!--生源信息 END-->
+        
+        <!--底部-->
+                <div class="foot">
+        	<ul class="footer_content">
+                <li>
+                	<a href="http://cert.sjtu.edu.cn/beian_user/show.asp?number=930">沪交ICP备2010930</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                	版权所有：上海交通大学学生就业服务和职业发展中心
+                </li>
+                <li>
+                	地址：上海市闵行区东川路800号交通大学铁生馆&nbsp;&nbsp;&nbsp;&nbsp;
+                	邮编：200240&nbsp;&nbsp;<a href="/intro/index.htm?lId=3">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                	<a target="_blank" href="/admin/welcome.htm">网站管理</a>
+                </li>
+            </ul>
+        </div>        <!--底部 END-->
+	</div>
+    <!--宽度1000px END-->
+</body>
+</html>

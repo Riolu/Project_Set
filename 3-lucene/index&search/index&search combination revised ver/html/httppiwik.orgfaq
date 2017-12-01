@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<!-- This site is optimized with the Yoast SEO plugin v2.3.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>FAQ Archive - Analytics Platform - Piwik</title>
+<link rel="canonical" href="http://piwik.org/faq/" />
+<link rel="next" href="http://piwik.org/faq/page/2/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="object" />
+<meta property="og:title" content="FAQ Archive - Analytics Platform - Piwik" />
+<meta property="og:url" content="http://piwik.org/faq/" />
+<meta property="og:site_name" content="Analytics Platform - Piwik" />
+<meta property="og:image" content="http://piwik.org/wp-content/themes/piwik/assets/img/media/piwik.png" />
+<!-- / Yoast SEO plugin. -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"\/wp-includes\/js\/wp-emoji.js?ver=4.3","twemoji":"\/wp-includes\/js\/twemoji.js?ver=4.3"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" href="/wp-content/plugins/multilingual-press-pro/css/frontend.css?ver=4.3">
+<link rel="stylesheet" href="/wp-content/plugins/cc-syntax-highlight/highlight/tomorrow-night.css">
+<link rel="stylesheet" href="/wp-content/plugins/markdown/highlight/tomorrow-night.css?ver=1.0.0">
+<link rel="stylesheet" href="/wp-content/themes/piwik/assets/css/main.min.css?ver=4e6facf06b484b7a4e30141789370add">
+<script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/highlight.pack.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js'></script>
+<script>window.jQuery || document.write('<script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/modernizr-2.6.2.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.backstretch.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.dlmenu.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/bootstrap-slider.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.swfobject.1-1-1.min.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/youTubeEmbed-jquery-1.0.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/url_builder.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.sticky.js'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/vendor/jquery.validate.min.js'></script>
+
+  <link rel="alternate" type="application/rss+xml" title="Analytics Platform - Piwik Feed" href="http://piwik.org/feed/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+    <!--[if lt IE 9]>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/html5shiv.js"></script>
+      <script src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="archive post-type-archive post-type-archive-faq">
+
+  <!--[if lt IE 7]><div class="alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+  <button class="navbar-toggle-menu" type="button" data-toggle="collapse" data-target=".sidebar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+<div class="sidebar affix" role="complementary">
+
+	<aside>
+		<div id="side-wrap">
+			<div id="side-main">
+				<header class="banner" role="banner">
+					<a class="page-title brand" href="http://piwik.org/"> <i class="ficon-piwik_logo header-logo"></i> Open Analytics Platform </a>
+					<!-- languages -->
+					<div class="language-widget ui-dropdown">
+											</div>
+				</header>
+
+				<nav class="nav-main dl-menuwrapper" id="menu" role="navigation">
+					<ul id="menu-sidebar-header-original" class="nav"><li class="dropdown menu-learn-more"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Learn more <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-what-is-piwik"><a href="http://piwik.org/what-is-piwik/">What is Piwik?</a></li>
+	<li class="menu-features"><a href="http://piwik.org/features/">Features</a></li>
+	<li class="menu-integrations"><a href="http://piwik.org/integrate/">Integrations</a></li>
+	<li class="menu-log-analytics"><a href="http://piwik.org/log-analytics/">Log Analytics</a></li>
+	<li class="menu-roadmap"><a href="http://piwik.org/roadmap/">Roadmap</a></li>
+	<li class="menu-changelog"><a href="/changelog/">Changelog</a></li>
+	<li class="menu-enterprise"><a target="_blank" href="https://piwik.pro/enterprise/?pk_source=Piwik.org&#038;pk_medium=Enterprise_Menu_link&#038;pk_campaign=PO_Enterprise">Enterprise</a></li>
+</ul>
+</li>
+<li class="dropdown menu-community"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://">Community <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-get-involved"><a href="http://piwik.org/get-involved/">Get involved</a></li>
+	<li class="menu-translators"><a href="http://piwik.org/translations/">Translators</a></li>
+	<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+	<li class="menu-contact-the-team"><a href="http://piwik.org/contact/">Contact the team</a></li>
+</ul>
+</li>
+<li class="active dropdown menu-help"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Help <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-user-guides"><a href="/docs">User Guides</a></li>
+	<li class="active menu-faq"><a href="/faq">FAQ</a></li>
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-consulting"><a href="http://piwik.org/consulting/">Consulting</a></li>
+	<li class="menu-issue-tracker"><a target="_blank" href="https://github.com/piwik/piwik/issues">Issue tracker</a></li>
+</ul>
+</li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org/">Marketplace</a></li>
+<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-hosting"><a href="http://piwik.org/hosting/">Hosting</a></li>
+<li class="dropdown menu-about"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://piwik.org/about/">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-jobs-were-hiring"><a href="http://piwik.org/jobs/">Jobs (we&#8217;re hiring!)</a></li>
+	<li class="menu-history"><a href="http://piwik.org/history/">History</a></li>
+	<li class="menu-press"><a href="http://piwik.org/press/">Press</a></li>
+	<li class="menu-testimonials"><a href="/testimonials">Testimonials</a></li>
+	<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+	<li class="menu-team"><a href="http://piwik.org/team/">Team</a></li>
+</ul>
+</li>
+<li class="menu-blog"><a href="/blog/">Blog</a></li>
+</ul>				</nav>
+				<div style="clear: both"> </div>
+			</div>
+		</div>
+		<div class="content-info side-footer" role="contentinfo">
+			<ul id="menu-sidebar-footer" class="nav"><li class="menu-download"><a href="http://piwik.org/download/">Download</a></li>
+<li class="menu-demo"><a target="_blank" href="http://demo.piwik.org">Demo</a></li>
+</ul>			<form role="search" method="get" class="form-inline" action="http://piwik.org/">
+  <div class="form-group search-form">
+    <input type="search" value="" name="s" class="ui-search-field form-control" placeholder="Search phrase...">
+    <label class="hide">Search for:</label>
+     <button type="submit" class="btn-search"><i class="ficon-search"></i></button>
+  </div>
+</form>
+			<div class="side-footer-bottom">
+				<hr class="separate">
+				<a href="http://piwik.pro/?pk_source=Piwik.org&pk_medium=Banner_link&pk_campaign=PO_Explore_Piwik_Pro" title="Explore our professional services at Piwik PRO" class="page-switch">
+					<span class="piwik_logo">Piwik Pro - Explore our business offer</span>
+					<span class="text">Explore our business offer.</span>
+				</a>
+			</div>
+			<div style="clear: both"> </div>
+
+		</div>
+	</aside><!-- /.sidebar -->
+
+</div>
+   <div class="container-content">
+        <header class="page-header default text-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h1>Frequently Asked Questions</h1>
+                                
+                <p>Have a question that has not been answered before? Feel free to flick us an email at hello@piwik.org and we shall pop the answer up here for all to see. Thanks!</p>
+            </div>
+        </div>
+    </div>
+</header>
+    
+     <div class="wrap container-main" role="document">
+      <article class="container">
+
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <nav id="sticky">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                                                    <li>
+                                <a href="#new-to-piwik">New to Piwik</a>
+                            </li>
+                                                    <li>
+                                <a href="#installation">Installation</a>
+                            </li>
+                                                    <li>
+                                <a href="#update">Update</a>
+                            </li>
+                                                    <li>
+                                <a href="#how-to">How to</a>
+                            </li>
+                                                    <li>
+                                <a href="#plugins">Plugins</a>
+                            </li>
+                                                    <li>
+                                <a href="#general">General</a>
+                            </li>
+                                                    <li>
+                                <a href="#troubleshooting">Troubleshooting</a>
+                            </li>
+                                                    <li>
+                                <a href="#log-analytics-tool">Log Analytics tool</a>
+                            </li>
+                                                    <li>
+                                <a href="#mobile-app">Mobile App</a>
+                            </li>
+                                            </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+                            <h3 class="title" id="new-to-piwik">
+                    <a href="/faq/new-to-piwik/">New to Piwik</a>
+                </h3>
+                <nav>
+                    <ol>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_13">
+                                What is Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_15">
+                                How is Piwik different to Google Analytics and other web analytics tools?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_14">
+                                How does Piwik work?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_17">
+                                Is there an online demo available?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_46">
+                                Can Piwik manage multiple user accounts?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_104">
+                                How do I track several websites, domains and multiple subdomains in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_94">
+                                How do I define and track Goal conversions?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_168">
+                                How do I improve accuracy of visitors' Country detection, and enable Cities and Regions tracking?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_123">
+                                How do I track Ecommerce orders, details of purchased products and abandoned carts on my website?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_130">
+                                How does Piwik ensure Privacy of my Analytics data, and Privacy of my website Visitors?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_47">
+                                How does Piwik track downloads?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_71">
+                                What are Outlinks, Clicks or Unique clicks?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_63">
+                                Does Piwik track visitors without Javascript? Does Piwik track search engine bots or other spider / robots?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_64">
+                                Can I use Piwik and Google Analytics / Yahoo! Analytics / WebTrends etc. at the same time?                             </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_18926">
+                                When is the next release of Piwik? What is the release schedule?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_12">
+                                How do I know when new versions are released?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_18925">
+                                How long is each release of Piwik maintained for?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_16">
+                                Where can I get support?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_20541">
+                                Which browsers are officially supported?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_20877">
+                                Is there a Glossary or lexicon of all terms used in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_145">
+                                How much does Piwik cost?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_169">
+                                Is there any Data Limit in Piwik? Is it possible to keep all historical data?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_88">
+                                Does Piwik track visits from Mobile devices (iOS, Android, BlackBerry, Palm Pre, low end mobile phones, etc.)?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_105">
+                                Can I use Piwik and provide analytics Hosting service? What are the requirements for Piwik Hosted as a service?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_45">
+                                Can I rebrand or sell or reuse or re-license or include Piwik in my product, company, or website?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_137">
+                                Does Piwik work on high traffic websites? What is the performance like with millions of pages views per month?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_129">
+                                Can I customize the Piwik logo in the reports, emails and login screen?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_56">
+                                Can I get the data from the Piwik API web services and publish, reuse, process this data in a non GPL software?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_134">
+                                Does Piwik work in a load balanced environment? How do I setup Piwik for high scale tracking?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_174">
+                                Where does the name Piwik come from?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_17729">
+                                Has Piwik won any Award?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_85">
+                                How do I pronounce Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_31">
+                                Who is the team behind Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/new-to-piwik/#faq_173">
+                                Where do I find Video Tutorials teaching how to use Piwik?                            </a>
+                        </li>
+                                    </ol>
+                </nav>
+                            <h3 class="title" id="installation">
+                    <a href="/faq/how-to-install/">Installation</a>
+                </h3>
+                <nav>
+                    <ol>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_1">
+                                How do I install Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_2">
+                                What are the requirements for installing Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_172">
+                                Is there a Video that explains how to Install Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_3">
+                                Do I need to create a MySQL database?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_4">
+                                How do I find out which version of PHP I have?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_77">
+                                My Web host supports PHP4 or PHP<5.3 by default. How do I enable PHP5.3+?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_7">
+                                Do I need to use PHP on my websites to use Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_116">
+                                Is Piwik compatible with Nginx?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_108">
+                                Is Piwik available as one click installation in cPanel, Softaculous, Installatron, Webmin or other tools?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_107">
+                                Is Piwik compatible with Windows, IIS or Apache, or Microsoft Web Platform Installer?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_19424">
+                                Is Piwik compatible with Microsoft SharePoint and provide SharePoint analytics reports?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_98">
+                                How do I configure Piwik when the server is installed behind a proxy?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_17844">
+                                How do I install Piwik on Debian GNU/Linux servers?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_151">
+                                How do I specify to use Mysql on a custom port or to connect Mysql over a socket?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_37">
+                                How can I reinstall Piwik? Can I keep the existing data?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_18">
+                                I want to migrate Piwik and move it to a new domain or a new subdomain URL, with the same MySQL server. How should I proceed?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_76">
+                                How can I move Piwik from one server to another, also migrating the data from one mysql server to another?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_18271">
+                                How do I use Piwik from the official Git repository?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_133">
+                                How do I use the database to store session files, instead of storing sessions in files?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_55">
+                                How do I use another database like Postgresql, SQLite, Oracle? Will you support Nosql databases like Hadoop, Mongodb?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_136">
+                                How do I uninstall Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_20200">
+                                How do I install Piwik using TokuDB table engine in a Mysql or MariaDB database?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_138">
+                                How do I backup Piwik data and files?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-install/#faq_142">
+                                How do I enable unicode characters (Japanese, Chinese, Russian, Hebrew, Arabic, etc.) in graphs in PDF/HTML reports and Piwik Mobile graphs?                            </a>
+                        </li>
+                                    </ol>
+                </nav>
+                            <h3 class="title" id="update">
+                    <a href="/faq/how-to-update/">Update</a>
+                </h3>
+                <nav>
+                    <ol>
+                                        <li>
+                            <a href="/faq/how-to-update/#faq_8">
+                                What version of Piwik do I have?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-update/#faq_9">
+                                What should I do when I want to update Piwik to the latest version?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-update/#faq_10">
+                                How do I backup my MySQL database?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-update/#faq_6">
+                                How do I restore my MySQL database?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-update/#faq_154">
+                                How do I enable Maintenance mode (to display a maintenance message in Piwik, and disable tracking) prior to updates?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-update/#faq_78">
+                                What should I do when the upgrade failed with "Syntax error or access violation: 1142 INDEX command denied to user"                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-update/#faq_179">
+                                After the update, I get sql errors, I would like to try the update again. How do I force Piwik to re-upgrade the database from a past version?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-update/#faq_20844">
+                                How do I upgrade a large Piwik instance without losing any tracking data?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to-update/#faq_159">
+                                I would like to test early beta and RC releases, how do I enable automatic updates to use these development versions?                            </a>
+                        </li>
+                                    </ol>
+                </nav>
+                            <h3 class="title" id="how-to">
+                    <a href="/faq/how-to/">How to</a>
+                </h3>
+                <nav>
+                    <ol>
+                                        <li>
+                            <a href="/faq/how-to/#faq_48">
+                                How do I make Piwik faster?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_19238">
+                                How do I migrate a particular website in Piwik to a different Piwik installation?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_102">
+                                How do I import Google Analytics data in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_170">
+                                How do I White Label Piwik, to change the Logo, the Colors, add custom widgets, etc.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_80">
+                                How do I exclude traffic from an IP or a range of IP addresses?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_81">
+                                How do I exclude URL query parameters from the URLs tracked, and from Pages reports?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_83">
+                                How do I set the time zone for my reports?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_82">
+                                How do I specify the currency used in the Goals revenue reports?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_84">
+                                How do I specify which websites to load by default in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_72">
+                                How do I specify the date used by default in Piwik reports?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_62">
+                                How do I control the categories tree structure in the Page URLs and Page titles reports?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_17931">
+                                How do I add more than the default 5 custom variables?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_54">
+                                After the top 500 or top 1000 rows, Piwik automatically groups pages, keywords, websites, etc. under the label "Others"; How do I force Piwik to not limit the data?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_19486">
+                                How do I track impressions and clicks and CTR of image banners and/or internal banner ads or text ads?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_20991">
+                                How do I view Piwik application logs?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_59">
+                                How do I force the reports to be re-processed from the logs?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_91">
+                                How do I force Piwik to use SSL (https) for improved security?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_60">
+                                How to track error pages (404 pages) in Piwik? Which URLs are 404 and which referers lead to these pages?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_19">
+                                How do I track visits on my intranet?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_30">
+                                How do I automatically login my users in Piwik when they go from my CMS to Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_19496">
+                                How do I generate fake data (generate visits, actions, conversions, etc.) in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_92">
+                                How do I enable users to login into Piwik inside an iframe?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_193">
+                                How do I include Piwik reports within an Iframe?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_186">
+                                How do I specify the URL that users should be redirected to, when they logout of Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_73">
+                                How do I delete all statistics for a given website, or for all websites?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_89">
+                                How do I set some of my website directories or pages to not be tracked?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_18694">
+                                How do I configure my Piwik server to allow cross domain requests? (CORS)                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_20184">
+                                How do I delete old visitors statistics for a given website and/or date?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_33">
+                                How do I get reports for a custom date range?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_185">
+                                How do I search within reports?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_109">
+                                How do I change the default email address "From:" in PDF reports emails?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_18336">
+                                How do I change the default email address “From:” in password reset emails?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_93">
+                                How do I send Piwik emails using Gmail SMTP server?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_90">
+                                On a Windows server using IIS, the pages "Default.aspx" and "default.aspx" are tracked as different pages, but they are the same. How do I force Piwik to record them as the same page?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_20304">
+                                How do I track a Phonegap app with Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_188">
+                                How do I track the URL Hash tags so that the #hash appears in the Page URLs report, and in Visitor Log?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_99">
+                                How do I track my RSS/Atom feed subscribers?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_111">
+                                How do I momentarily disable Piwik User Interface and/or Piwik visitor Tracking?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_113">
+                                How do I enable "Unique Visitors" metric for Yearly reports and for Custom Date Ranges?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_132">
+                                How do I setup Piwik to track multiple websites without revealing the Piwik server URL footprint which appears in the Javascript code in all websites?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_18835">
+                                How do I get the number of active unique users to my app?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_118">
+                                How do I enable third party tracking cookies, as well as the existing first party cookies?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_120">
+                                How do I customize the Piwik Campaign parameters pk_campaign and pk_kwd?                             </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_122">
+                                How do I configure outgoing (forward) proxy in Piwik (eg. squid)?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_126">
+                                How do I exclude / ignore my traffic from Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_139">
+                                I forgot my password or username, how do I reset my password?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_191">
+                                How do I change the Super User's password when password recovery emails are not sent?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_150">
+                                How do I find the visitor IP Addresses?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_17483">
+                                How do I exclude from statistics all requests with a specific User Agent?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_158">
+                                How do I select IP addresses or Visitor ID directly from the database?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_20130">
+                                How do I make Piwik report data public and viewable by anyone?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_155">
+                                How do I record tracking data in the past, and tell Piwik to invalidate and re-process the past reports?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_190">
+                                How do I improve Unique Visitor detection accuracy?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_187">
+                                How do I create new visit on demand, so that several users using the same computer or browser are counted separately?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_19616">
+                                How do I create new visit whenever a user visits my website using a new campaign or a new website referrer?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_163">
+                                How do I get the GeoIP databases to improve accuracy of Country detection, and detect visitors' Cities and Regions?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_164">
+                                How do I install the GeoIP Geo location PECL extension?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_165">
+                                How do I install the GeoIP module for Apache for accurate Geo location data?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_166">
+                                How do I install the GeoIP module for Nginx?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_167">
+                                How do I apply accurate geolocation to old visits, tracked before I enabled geo location?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_180">
+                                How do I get company and ISP information using GeoIP databases?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_161">
+                                How do I make "Transitions" feature work faster on high traffic websites?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_160">
+                                How do I see the pages that most visitors landed on? How do I access the top pages people use before leaving the websites?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_20982">
+                                How do I track and measure how my Piwik service is being used?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_175">
+                                How do I tell Piwik to track Unique Visitors based on the Visitor ID cookie, instead of using IP Address?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_176">
+                                How do I enable tracking for visitors without Javascript?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_181">
+                                How do I take notes of particular events influencing my traffic?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_19087">
+                                How do I customise the JavaScript Tracker code on all websites at once?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_19308">
+                                How do I verify the cryptographic PGP signature of Piwik packages?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_182">
+                                How do I get the Visitor Geo Location data from the Visitor IP?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_19155">
+                                How do I disable the update notification email when a new Piwik version is released?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_189">
+                                How do I access a real time counter of visitors currently on my site?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_192">
+                                How do I create Custom Segments of Visitors and apply the segments to filter my report's data?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_20278">
+                                How do I monitor that Piwik service is up and running?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_17033">
+                                How do I configure Piwik Tracking for high reliability?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_19738">
+                                How do I configure Piwik to use Redis for better scalability?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_20511">
+                                How to configure Redis as a shared cache in a load balanced environment?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_20521">
+                                How do I configure Redis for session handling in a load balanced environment?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/how-to/#faq_17785">
+                                How do I submit a feature request for Piwik?                            </a>
+                        </li>
+                                    </ol>
+                </nav>
+                            <h3 class="title" id="plugins">
+                    <a href="/faq/plugins/">Plugins</a>
+                </h3>
+                <nav>
+                    <ol>
+                                        <li>
+                            <a href="/faq/plugins/#faq_20">
+                                List of Piwik plugins                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/plugins/#faq_21">
+                                How do I install a new plugin?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/plugins/#faq_22">
+                                How do I get started building a plugin for the Piwik platform?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/plugins/#faq_19347">
+                                What is the Piwik Marketplace?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/plugins/#faq_27">
+                                How do I report a bug in a plugin?                            </a>
+                        </li>
+                                    </ol>
+                </nav>
+                            <h3 class="title" id="general">
+                    <a href="/faq/general/">General</a>
+                </h3>
+                <nav>
+                    <ol>
+                                        <li>
+                            <a href="/faq/general/#faq_41">
+                                Are Piwik reports in real time?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_20858">
+                                Does Piwik support clickpath or clickstream analytics?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_43">
+                                How is a 'unique visitor' counted in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_36">
+                                How is a 'visit' defined in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_86">
+                                What is an 'Entry page'?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_87">
+                                What is an 'Exit Page'?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_35">
+                                What is the 'super user' in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_69">
+                                What is the 'admin' permission in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_70">
+                                What is the 'view' permission in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_114">
+                                What is the token_auth and where can I find this token to use in the API calls?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_67">
+                                Can I install Piwik on one server and track visits on websites that are hosted on other servers?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_19212">
+                                How do I find the website ID, also called idSite or Site ID?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_38">
+                                How long does the Piwik archiving process take for high traffic websites - or hundreds of websites?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_66">
+                                Is the Piwik Javascript Tracking Code XHTML 1.0 compatible?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_117">
+                                Why are there sometimes 0 visits, but some conversions recorded, for example for a Keyword, a Website or a Custom Variable?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_106">
+                                Piwik attributes conversions to the last seen referrer by default. How do I credit conversions to the first referrer instead?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_39">
+                                A search engine is counted as a website referer. How can I add the search engine to Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_74">
+                                What is "page title not defined" in the Page titles report?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_75">
+                                What is "page url not defined" in the Pages report?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_52">
+                                In the Providers report, what does "Unknown" mean?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_144">
+                                What does "Keyword not defined" mean in the Referers &gt; Search Engines keywords report?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_40">
+                                Can I help translate Piwik into my native language, or improve the existing translation?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_68">
+                                Does the Piwik Tracking tag work on https (SSL) pages?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_20870">
+                                Does Piwik support IPv6 protocol?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_119">
+                                Does Piwik support Google Analytics campaign parameters (utm_campaign, utm_medium, utm_source, utm_term)?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_124">
+                                What is a Product SKU in the Ecommerce Analytics report?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_125">
+                                When I enable "Purge old logs" in the Privacy settings, how do I make sure that no historical data is lost?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_127">
+                                How many Custom Variables can I set to visitors and/or page views?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_49">
+                                How can I become an official Piwik Consultant?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_152">
+                                Privacy policy: How do I update my privacy policy to explain Piwik Analytics?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_146">
+                                What are the cookies created by Piwik JavaScript Tracking client?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_20000">
+                                How do I let visitors opt-out from tracking?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_157">
+                                How do I disable all cookies for a visitor?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_156">
+                                When cookies are disabled by a visitor, how does it impact Piwik reports accuracy?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_18254">
+                                What data does Piwik track?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_20904">
+                                Is the Piwik JavaScript Tracker CSP (Content Security Policy) compatible and how do I set it up?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_20936">
+                                When the Piwik server is unavailable (down) how does this affect my websites loading speed and tracking data collection?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_437">
+                                Piwik and phpMyVisites                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/general/#faq_18850">
+                                What other free/libre software projects does the Piwik team create and maintain?                            </a>
+                        </li>
+                                    </ol>
+                </nav>
+                            <h3 class="title" id="troubleshooting">
+                    <a href="/faq/troubleshooting/">Troubleshooting</a>
+                </h3>
+                <nav>
+                    <ol>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_58">
+                                Piwik doesn't track any visits and pages, and shows "There is no data for this report" in all reports.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_16966">
+                                Piwik tracks far fewer visits than other web analytics tools, but tracks the same number of pageviews.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_17051">
+                                The Real Time Visitors World Map is not showing data.                             </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_17710">
+                                All visitors have the same IP address and Provider. How do I track individual IPs?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_51">
+                                Visits from search engines or campaigns are not recorded, Piwik shows "There is no data for this report" for all Referrers reports.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_96">
+                                Piwik doesn't track Downloads and Outlinks on my website.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_65">
+                                Piwik doesn't detect accurately the Country and/or Continent of my visitors.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_140">
+                                Piwik is slow! It takes a long time to load widgets, reports and pages.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_50">
+                                Statistics from Piwik and my other web analytics tool (log analyzer, webalizer or javascript based) are different, why?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_19489">
+                                I get 'Oops... there was a problem during the request.' or 'Internal Server Error' or '500 error' or the 'White screen of death'. How do I proceed?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_20866">
+                                Piwik does not track visits on SSL / HTTPS pages.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_148">
+                                After I updated Piwik, it stopped working (blank page, widgets not loading, error message, etc.). How can I fix this?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_53">
+                                The graphs (pie chart, bar chart, evolution graph) are not showing in my Piwik.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_18485">
+                                How do I configure my server to let Piwik serve HTML files?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_34">
+                                The sparklines (small graphs) are not showing in my Piwik.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_135">
+                                Piwik reporting UI doesn't have any css style or, the menu text appears on a white background. How to fix this display problem?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_149">
+                                When tracking visits on an intranet website, Piwik assigns all page views to a few visitors who have very high page views count. How to fix it?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_16646">
+                                How do I configure Piwik on a server without Internet?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_57">
+                                The Piwik Javascript code shows a red cross (on IE) or a broken image icon instead of the 1*1 transparent Pixel, what is the issue?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_100">
+                                How do I configure Piwik when mod_security is enabled?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_141">
+                                Only one or a small number of days/months/date ranges are showing 0 zero visits, but other periods are working as expected.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_162">
+                                The numbers from Transitions don't match other numbers shown in Piwik. Why?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_20272">
+                                How do I check that my Piwik SSL Server is correctly configured?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_42">
+                                How do I delete historical Piwik data? (purge old logs and/or old processed reports)                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_112">
+                                I would like to import an existing Users database (login, password, emails) in Piwik, but the usernames and passwords are more permissive than what Piwik allows. How do I disable the checks on the Logins &amp; Passwords?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_121">
+                                Piwik doesn't show me when new updates are available, and the SEO plugin doesn't work.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_131">
+                                "Segmentation fault Error". Piwik reporting or via cron crashes with Segmentation Fault error. What to do?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_44">
+                                I get the error message: "Fatal error: require_once() [function.require]: Failed opening required XYZ in /path/piwik/XYZ.php on line X". How can I get Piwik to work?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_17045">
+                                How do I fix the error "Parse error: syntax error, unexpected T_STRING in ..."                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_79">
+                                What should I do when I get the error message: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11)                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_61">
+                                I get the error "Warning: gzuncompress() [function.gzuncompress]: data error" when looking at my Piwik reports.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_110">
+                                Emails sent from Piwik use the email address @defaultHostnameIfEmpty.example.org, how do I specify my domain name instead?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_95">
+                                Piwik reports this error and fails: "Fatal error: Allowed memory size of X bytes exhausted (tried to allocate X bytes)". What should I do?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_103">
+                                Piwik reports this error and doesn't continue: "Fatal error: Maximum execution time of 30 seconds exceeded in ..."                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_183">
+                                How do I fix the error "Mysql Server has gone away"?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_143">
+                                Graphs in PDF/HTML reports and/or Piwik Mobile do not display characters correctly in my language (display squares instead).                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_101">
+                                When I use force_ssl=1, I get "Too many redirects". Also when I use https, CSV/PDF reports and graphs don't work.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_19357">
+                                I get the error  Warning: Unexpected character in input: '\' (ASCII=92) state=1                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_171">
+                                Why am I getting a warning about an untrusted hostname?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_147">
+                                When included in an IFrame, Piwik reports do not load. How do I allow Piwik reports to load from within an iframe?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_19363">
+                                I get the error: Table piwik_log_x is marked as crashed and last (automatic?) repair failed.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_115">
+                                I'm a developer, how do I enable logging (and / or SQL profiling) in Piwik?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_153">
+                                I get the error message: "Fatal error: Class 'not found in ...".  What's wrong?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_177">
+                                How do I fix the error 'Unable to find the wrapper "https" - did you forget to enable it when you configured PHP?'                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_178">
+                                How do I disable the OPTIMIZE queries which take too long on my server?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_194">
+                                How do I get LOAD DATA INFILE to work on my server?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_20966">
+                                How do I make sure Search engines robots do not index Piwik server?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_20014">
+                                How do I fix the error 'Fatal error: Maximum function nesting level of '100' reached, aborting!'?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/troubleshooting/#faq_17782">
+                                How do I report a bug in Piwik?                            </a>
+                        </li>
+                                    </ol>
+                </nav>
+                            <h3 class="title" id="log-analytics-tool">
+                    <a href="/faq/log-analytics-tool/">Log Analytics tool</a>
+                </h3>
+                <nav>
+                    <ol>
+                                        <li>
+                            <a href="/faq/log-analytics-tool/#faq_16301">
+                                What is Piwik Server Log Analytics?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/log-analytics-tool/#faq_16303">
+                                When Should I use the Log Analytics Python Script?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/log-analytics-tool/#faq_16305">
+                                Pros and Cons of Using Log files Instead of JavaScript Tracking                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/log-analytics-tool/#faq_16307">
+                                Can I import data Using Piwik Server Log Analytics and using the standard Piwik JS at the same time?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/log-analytics-tool/#faq_17994">
+                                How do I reprocess all websites, all dates and all periods, after initial import of logs?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/log-analytics-tool/#faq_19221">
+                                How do I replay the traffic to Piwik and ingest logs of piwik.php requests?                            </a>
+                        </li>
+                                    </ol>
+                </nav>
+                            <h3 class="title" id="mobile-app">
+                    <a href="/faq/mobile-app/">Mobile App</a>
+                </h3>
+                <nav>
+                    <ol>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16338">
+                                Graphs in Piwik Mobile do not display characters in Chinese, Japanese, Russian, etc.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16340">
+                                Why are there no graphs displayed on my device?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16326">
+                                Which devices are currently supported?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16328">
+                                Are Kindle Fire devices supported?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16330">
+                                I do not have access to Google Play Store, can I download the app directly?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16334">
+                                The app crashes on start                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16332">
+                                The app does not seem to work.                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16336">
+                                How to add ‘Basic Auth’ protection to a Piwik installation?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16342">
+                                Why are there no “Visitor icons” displayed on my device?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_19527">
+                                Does Piwik Mobile support SSL when SNI is in use?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16344">
+                                What if I lose my phone?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16346">
+                                How do I report a suggestion or a bug in the Mobile app?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16356">
+                                How is Piwik Mobile 2 built?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_16358">
+                                In which direction will Piwik Mobile develop in the future?                            </a>
+                        </li>
+                                        <li>
+                            <a href="/faq/mobile-app/#faq_18498">
+                                Why am I getting an error "HTTP 414 Request-URI Too Long"?                            </a>
+                        </li>
+                                    </ol>
+                </nav>
+                    </div>
+    </div>
+</article>
+     </div><!-- /.wrap -->
+
+   <div class="wrapper-body">
+<div class="row extra-foot">
+    <div class="container">
+        <div class="col-md-6 anyquest">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/piwik_help.jpg" class="any-q">
+            <h3>Any questions? </h3>
+            <p>Many answers and more information about Piwik You can find here:</p>
+            <ul class="inline">
+                <li><a href="/docs/">User Guides</a></li>
+                <li><a href="http://forum.piwik.org/">Forums</a></li>
+                <li><a href="/faq/">FAQs</a></li>
+	            <li><a href="http://piwik.pro?pk_source=Piwik.org&pk_medium=footer_link&pk_campaign=PO_Pro_Solutions" target="_blank">PRO Solutions</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="http://piwik.org/wp-content/themes/piwik/assets/img/socials.png" class="socials">
+            <h3>We are social </h3>
+            <p>Follow us:</p>
+            <ul class="inline">
+                <li><a href="/newsletter/">Newsletter</a></li>
+                <li><a href="http://www.facebook.com/Piwik">Facebook</a></li>
+                <li><a href="http://twitter.com/piwik">Twitter</a></li>
+                <li><a href="http://www.linkedin.com/groups?gid=867857" target="_blank">Linkedin</a></li>
+                <li><a href="https://github.com/piwik/piwik">Github</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="container footer-page footer-updated">
+    <div class="row">
+        <div class="col-lg-11 col-md-11 foot-cc">
+            <a href="http://piwik.org/thank-you-all/"><img src="http://piwik.org/wp-content/themes/piwik/assets/img/cc.png" class="clearcode"></a>
+            <span class="pworg">Piwik.org. &copy; 2015</span>
+            <ul id="menu-footer" class="nav"><li class="menu-piwik-cloud"><a href="http://piwik.org/hosting/">Piwik Cloud</a></li>
+<li class="menu-privacy"><a href="http://piwik.org/privacy/">Privacy</a></li>
+<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+<li class="menu-developers"><a target="_blank" href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org">Marketplace</a></li>
+<li class="menu-credits"><a href="http://piwik.org/thank-you-all/">Credits</a></li>
+</ul>            <span class="respect">Piwik respects your privacy and gives you full control over your data.</span>
+        </div>
+    </div>
+</footer>
+</div>
+   </div>
+  <!-- Piwik -->
+<!-- Load Piwik.js from demo2 for continuous testing -->
+<script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/") + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker((("https:" == document.location.protocol) ? "https://demo.piwik.org/" : "http://demo.piwik.org/") + "piwik.php", 1);
+piwikTracker.setCookieDomain('*.piwik.org');
+
+if(document.domain != 'piwik.org') {
+  piwikTracker.setDocumentTitle(document.domain + "/" + document.title);
+}
+
+// Set the domain the visitor landed on, in the Custom Variable
+if(!piwikTracker.getCustomVariable(1)) { 
+  piwikTracker.setCustomVariable(1, "Domain landed", document.domain );
+}
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();  
+} catch( err ) {}
+</script><noscript><p><img src="http://demo.piwik.org/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+
+
+<!-- We're tracking data in demo2.piwik.org for purpose of testing Piwik. Signed: the Piwik core team -->
+<script type="text/javascript">
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://demo2.piwik.org/" : "http://demo2.piwik.org/");
+    try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+        piwikTracker.setCookieDomain('*.piwik.org');
+        // Track Javascript Errors as Events
+        piwikTracker.enableJSErrorTracking();
+        
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+</script>
+  <script>hljs.initHighlightingOnLoad();</script><script type='text/javascript' src='/wp-content/plugins/cc-syntax-highlight/highlight/syntax_highlight.js'></script>
+<script type='text/javascript' src='/wp-content/plugins/markdown/markdown.js?ver=1.0.0'></script>
+<script type='text/javascript' src='/wp-content/themes/piwik/assets/js/scripts.min.js?ver=160b62610afbe732febb44f9896f3afd'></script>
+
+  <div id="fb-root"></div>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.292 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-10-28 00:24:32 -->
+
+<!-- Compression = gzip -->
+<!-- super cache -->

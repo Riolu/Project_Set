@@ -1,0 +1,1 @@
+<script>window.top.location.href='http://pd.ok365.com/?dm=mysjtu.com&acc=CA166093-B2A9-4423-A527-4B147FEAE3D5&poprequest=1'</script>

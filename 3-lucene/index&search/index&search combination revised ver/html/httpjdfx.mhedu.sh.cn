@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>上海交通大学附属实验小学 -- 首页</title>
+<link href="css/css_1.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<script language="JavaScript" type="text/JavaScript" src="../login.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="js/FloatPic.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+
+</script>
+<script language="JavaScript" type="text/JavaScript" src="js/jquery-1.7.1.min.js"></script>
+<script language="JavaScript" type="text/JavaScript" src="js/ShiftPic.js"></script>
+</head>
+
+<body onLoad="TShiftPic();">
+
+<table border="0" align="center" cellpadding="0" cellspacing="0" background="images/header_bg.jpg" class="header">
+  <tr>
+    <td valign="top">
+	 
+        	<table border="0" cellpadding="0" cellspacing="0" class="h_box1"><tr><td><a href="http://jdfx.mhedu.sh.cn/web/jdsxzz/4230001.htm " target="Subject/@LinkWindow">科技子站</a>
+      |
+    <a href="#" target="Subject/@LinkWindow">联系学校</a>
+      |
+    <a href="http://10.106.48.19:8012" target="Subject/@LinkWindow">学校OA</a>
+      |
+    <a href="http://jdfx2.mhedu.sh.cn:8001" target="Subject/@LinkWindow">学校博客</a></td></tr></table>
+		
+	 <table border="0" cellpadding="0" cellspacing="0" class="h_box2">
+       <tr>
+         <td><img src="images/logo.png" /></td>
+       </tr>
+     </table></td>
+  </tr>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="mainnav">
+  <tr>
+    <td>
+      <table width="98%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <a href="135001.htm" target="_self">首页</a>
+          </td>
+          <td>
+            <a href="135002.htm" target="_self">今日交小</a>
+          </td>
+          <td>
+            <a href="135025.htm" target="_self">信息公开</a>
+          </td>
+          <td>
+            <a href="135345.htm" target="_self">党务公开</a>
+          </td>
+          <td>
+            <a href="135247.htm" target="_blank">教工之家</a>
+          </td>
+          <td>
+            <a href="135005.htm" target="_self">教学天地</a>
+          </td>
+          <td>
+            <a href="135006.htm" target="_self">科研园地</a>
+          </td>
+          <td>
+            <a href="135007.htm" target="_self">成长乐园</a>
+          </td>
+          <td>
+            <a href="135008.htm" target="_self">校园风采</a>
+          </td>
+          <td>
+            <a href="135414.htm" target="_blank">家庭教育</a>
+          </td>
+          <td>
+            <a href="135009.htm" target="_self">交小特色</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table height="500" border="0" align="center" cellpadding="0" cellspacing="0" class="pagebody">
+  <tr>
+    <td width="235" align="right" valign="top">
+	
+        	<table border="0" cellpadding="0" cellspacing="0" class="login"><tr><td class="l_td">用户登录</td></tr><tr><td align="center" valign="top"><table border="0" cellpadding="0" cellspacing="0" class="login_font"><form name="form_135017" onsubmit="return LoginFormSubmit(this,LoginID,Password);" target="_blank" action="../../BasePlate/LoginCenter/VirLogin.aspx" method="post"><tr><td>用户名：</td><td><input tabindex="1" type="text" name="LoginID" id="LoginID" class="forms_1"></td></tr><tr><td>密&emsp;码：</td><td><input tabindex="1" name="Password" type="password" id="Password" class="forms_1"></td></tr><tr><td height="20" colspan="2" valign="bottom"><input style="width:76px;height:19px" tabindex="2" type="image" src="images/login_1.gif" border="0" class="pic" hoverimg="images/login_2.gif"></td></tr></form></table></td></tr></table>
+		
+      <table border="0" cellpadding="0" cellspacing="0" class="cal">
+        <tr>
+          <td align="center"><span wicket:id="calendar">
+          <wicket:panel>
+            <script language="JavaScript" type="text/javascript">
+	 var months = new Array("一", "二", "三","四", "五", "六", "七", "八", "九","十", "十一", "十二");
+	 var daysInMonth = new Array(31, 28, 31, 30, 31, 30, 31, 31,30, 31, 30, 31);
+	 var days = new Array("日","一", "二", "三","四", "五", "六");
+	 var classTemp;
+	 var today=new getToday();
+	 var year=today.year;
+	 var month=today.month;
+	 var newCal;
+	
+	 function getDays(month, year) {
+	  if (1 == month) return ((0 == year % 4) && (0 != (year % 100))) ||(0 == year % 400) ? 29 : 28;
+	  else return daysInMonth[month];
+	 }
+	
+	 function getToday() {
+	  this.now = new Date();
+	  this.year = this.now.getFullYear();
+	  this.month = this.now.getMonth();
+	  this.day = this.now.getDate();
+	 }
+	
+	 function Calendar() {
+	  newCal = new Date(year,month,1);
+	  today = new getToday();
+	  var day = -1;
+	  var startDay = newCal.getDay();
+	  var endDay=getDays(newCal.getMonth(), newCal.getFullYear());
+	  var daily = 0;
+	  if ((today.year == newCal.getFullYear()) &&(today.month == newCal.getMonth()))
+	  {
+	   day = today.day;
+	  }
+	  var caltable = document.all.caltable.tBodies.calendar;
+	  var intDaysInMonth =getDays(newCal.getMonth(), newCal.getFullYear());
+	
+	  for (var intWeek = 0; intWeek < caltable.rows.length;intWeek++)
+	   for (var intDay = 0;intDay < caltable.rows[intWeek].cells.length;intDay++)
+	   {
+	    var cell = caltable.rows[intWeek].cells[intDay];
+	    var montemp=(newCal.getMonth()+1)<10?("0"+(newCal.getMonth()+1)):(newCal.getMonth()+1);
+	    if ((intDay == startDay) && (0 == daily)){ daily = 1;}
+	    var daytemp=daily<10?("0"+daily):(daily);
+	    var d="<"+newCal.getFullYear()+"-"+montemp+"-"+daytemp+">";
+	    if(day==daily) cell.className="DayNow";
+	    else if(intDay==6) cell.className = "DaySat";
+	    else if (intDay==0) cell.className ="DaySun";
+	    else cell.className="Day";
+	    if ((daily > 0) && (daily <= intDaysInMonth))
+	    {
+	     cell.innerText = daily;
+	     daily++;
+	    } else
+	    {
+	     cell.className="CalendarTD";
+	     cell.innerText = "";
+	    }
+	  }
+	  document.all.year.value=year;
+	  document.all.month.value=month+1;
+	 }
+	
+	 function subMonth()
+	 {
+	  if ((month-1)<0)
+	  {
+	   month=11;
+	   year=year-1;
+	  } else
+	  {
+	   month=month-1;
+	  }
+	  Calendar();
+	 }
+	
+	 function addMonth()
+	 {
+	  if((month+1)>11)
+	  {
+	   month=0;
+	   year=year+1;
+	  } else
+	  {
+	   month=month+1;
+	  }
+	  Calendar();
+	 }
+	
+	 function setDate()
+	 {
+	  if (document.all.month.value<1||document.all.month.value>12)
+	  {
+	   alert("月的有效范围在1-12之间!");
+	   return;
+	  }
+	  year=Math.ceil(document.all.year.value);
+	  month=Math.ceil(document.all.month.value-1);
+	  Calendar();
+	 }
+	              </script>
+            <script>
+	function buttonOver()
+	{
+	 var obj = window.event.srcElement;
+	 obj.runtimeStyle.cssText = "background-color:#fcecd2";
+	// obj.className="Hover";
+	}
+	
+	function buttonOut()
+	{
+	 var obj = window.event.srcElement;
+	 window.setTimeout(function(){obj.runtimeStyle.cssText = "";},300);
+	}
+	
+	function setPopupValues()
+	{
+	 var sFeatures = "toolbar=no,menubar=yes,scrollbars=yes,resizable=yes,location=no,status=no,height=600,width=500";
+	 /*"scrollbars:yes;dialogTop:0;dialogLeft:0;dialogWidth:405px;dialogHeight:100px;help:yes;scroll:no;status:no;unadorned:yes";
+	// ,"toolbar=no,menubar=yes,scrollbars=yes,resizable=yes,location=no,status=no"*/
+	 return sFeatures;
+	}
+	
+	function getDiary()
+	{
+		var sFeatures = setPopupValues();
+	    if (event.srcElement.innerText != "") {
+	        document.getElementById('currentValue').value = this.year + "-" + (this.month + 1) + "-" + event.srcElement.innerText;
+	        window.open("../../EduPlate/EveryWeek/DayDetail.aspx?d="+document.getElementById('currentValue').value+"&day=1&unitId="+document.getElementById('tbUnitID').value, "", sFeatures);
+	    }
+	}
+	              </script>
+            <style>
+	Input {font-family: verdana;font-size: 9pt;text-decoration: none;background-color: #fef5e3;height: 15px;border: 1px solid #fef5e3;color:#000;}
+	
+	.Calendar {font-family: verdana;text-decoration: none;width: 170;font-size: 9pt;border:0px;}
+	.CalendarTD {font-family: verdana;font-size: 7pt;color: #FFFFFF;height: 18px;width:11%;text-align: center;}
+	
+	.Title {font-family: verdana;font-size: 9pt;font-weight: normal;height: 16px;text-align: center;color: #000;text-decoration: none;border-top-width: 1px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;border-bottom-style:1px;border-top-color: #999999;border-right-color: #999999;border-bottom-color: #999999;border-left-color: #999999;}
+	
+	.Day {font-family: verdana;font-size: 8pt;color:#000;height: 18px;width:11%;text-align: center;}
+	.DaySat {font-family: verdana;font-size: 8pt;color:#348204;text-decoration: none;text-align: center;height: 16px;width: 12%;}
+	.DaySun {font-family: verdana;font-size: 8pt;color: #fe6601;text-decoration: none;text-align: center;height: 16px;width: 12%;}
+	.DayNow {font-family: verdana;font-size: 8pt;color: #cc3300;background-color: #ffe8c6;height: 18px;text-align: center;}
+	
+	.DayTitle {font-family: verdana;font-size: 9pt;color: #000;height: 18px;width:11%;text-align: center;}
+	.DaySatTitle {font-family: verdana;font-size: 9pt;color:#348204;text-decoration: none;text-align: center;height: 18px;width: 12%;}
+	.DaySunTitle {font-family: verdana;font-size: 9pt;color: #fe6601;text-decoration: none;text-align: center;height: 18px;width: 12%;}
+	
+	.DayButton {font-family: Webdings;font-size: 9pt;font-weight: bold;color: #000;cursor:hand;text-decoration: none;}
+	
+	
+                  </style>
+            <table width="95%" height="100" cellpadding="0" cellspacing="0" background="images2/table_rbj_02.jpg" >
+			<input name="tbUnitID" type="hidden" id="tbUnitID" value="2135" />
+              <tr>
+                <td><input type="hidden" id="currentValue" value="" />
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" class="Calendar" id="caltable">
+                      <thead>
+                        <tr align="center" valign="middle">
+                          <td colspan="7" class="Title"><a href="javaScript:subMonth();" class="DayButton">3</a>
+                              <input name="year" type="text" size="4" maxlength="4" onKeyDown="if (event.keyCode==13){setDate()}" onKeyUp="this.value=this.value.replace(/[^0-9]/g,'')"  onpaste="this.value=this.value.replace(/[^0-9]/g,'')" />
+                            年
+                            <input name="month" type="text" size="1" maxlength="2" onKeyDown="if (event.keyCode==13){setDate()}" onKeyUp="this.value=this.value.replace(/[^0-9]/g,'')"  onpaste="this.value=this.value.replace(/[^0-9]/g,'')" />
+                            月 <a href="JavaScript:addMonth();" class="DayButton">4</a> </td>
+                        </tr>
+                        <tr align="center" valign="middle">
+                          <script language="JavaScript" type="text/javascript">
+	   document.write("<TD class=DaySunTitle id=diary >" + days[0] + "</TD>");
+	   for (var intLoop = 1; intLoop < days.length-1;intLoop++)
+	    document.write("<TD class=DayTitle id=diary>" + days[intLoop] + "</TD>");
+	    document.write("<TD class=DaySatTitle id=diary>" + days[intLoop] + "</TD>");
+	                </script>
+                        </tr>
+                      </thead>
+                      <tbody border="1" cellspacing="0" cellpadding="0" id="calendar" align="center" onClick="getDiary()">
+                        <script language="JavaScript" type="text/javascript">
+	  for (var intWeeks = 0; intWeeks < 6; intWeeks++)
+	  {
+	   document.write("<TR style='cursor:hand'>");
+	   for (var intDays = 0; intDays < days.length;intDays++) document.write("<TD class=CalendarTD onMouseover='buttonOver();' onMouseOut='buttonOut();'></TD>");
+	   document.write("</TR>");
+	  }
+	                </script>
+                      </tbody>
+                  </table></td>
+              </tr>
+            </table>
+            <script  language="JavaScript" type="text/javascript">
+	 Calendar();
+	              </script>
+          </wicket:panel>
+          </span></td>
+        </tr>
+      </table>
+      
+        	<table border="0" cellpadding="0" cellspacing="0" class="module_l" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:myNS="urn:myNameSpace"><tr align="center"><td height="35"><table width="88%" border="0" cellpadding="0" cellspacing="0" class="ml_tit color_1"><tr><td align="left"><span>
+                  &gt;&gt;教学园地</span></td><td align="right"><a href="135018.htm" target="Subject/@LinkWindow">-MORE-</a></td></tr></table></td></tr><tr><td height="125" align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_1"><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135018-1350000004413.htm" target="_blank">三校《品德与社会》学科..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135018-1350000004410.htm" target="_blank">2014学年第二学期跨..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135018-1350000004393.htm" target="_blank">交大实小举行家长开放日活动&nbsp;</a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135018-1350000004320.htm" target="_blank">2014学年第二学期综..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135018-1350000004321.htm" target="_blank">交大实小2014学年第..
+      </a></td></tr></table></td></tr></table>
+		
+        	<table border="0" cellpadding="0" cellspacing="0" class="module_l" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:myNS="urn:myNameSpace"><tr align="center"><td height="35"><table width="88%" border="0" cellpadding="0" cellspacing="0" class="ml_tit color_2"><tr><td align="left"><span>&gt;&gt;科研园地</span></td><td align="right"><a href="135019.htm" target="Subject/@LinkWindow">-MORE-</a></td></tr></table></td></tr><tr><td height="125" align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_1"><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135019-1350000004445.htm" target="_blank">2闵行区青年教师教育教..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135019-1350000004446.htm" target="_blank">3闵行区教师教学教学小..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135019-1350000004444.htm" target="_blank">1闵行区教育科学研究项..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135019-1350000003971.htm" target="_blank">环环相扣的“小题大做”&nbsp;</a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135019-1350000003962.htm" target="_blank">2014（第三届）全国..
+      </a></td></tr></table></td></tr></table>
+		
+        	<div id="gg1"><div align="right" style="position:absolute;z-index:2000;top:0px;right:0px;bottom:0px;margin:0px;padding:0px;"><img border="0" src="images/gif-0133.gif" onclick="FloatPicHidden('gg1');" title="关闭浮动图片"></div><div style="position:absolute;z-index:1000;top:0px;right:0px;bottom:0px;margin:0px;padding:0px;"><a href="135165-1350000001971.htm" title="喜报" target="_blank"><img border="0" src="../../Upload/Content/1350000001971.gif"></a></div></div><script type="text/javascript">
+				var ad1=new AdMove("gg1");
+				ad1.Run();
+			</script>
+		
+        	<table border="0" cellpadding="0" cellspacing="0" class="module_l" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:myNS="urn:myNameSpace"><tr align="center"><td height="35"><table width="88%" border="0" cellpadding="0" cellspacing="0" class="ml_tit color_2"><tr><td align="left"><span>&gt;&gt;交小月刊</span></td><td align="right"><a href="135397.htm" target="Subject/@LinkWindow">-MORE-</a></td></tr></table></td></tr><tr><td height="125" align="center" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_1"><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135397-1350000003954.htm" target="_blank">第28期校报&nbsp;</a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135397-1350000003949.htm" target="_blank">第26期校报&nbsp;</a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135397-1350000003953.htm" target="_blank">第27期校报&nbsp;</a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135397-1350000003951.htm" target="_blank">第25期校报&nbsp;</a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135397-1350000003159.htm" target="_blank">第二十三期校报&nbsp;</a></td></tr></table></td></tr></table>
+		
+      </td>
+    <td align="center" valign="top">
+	
+        	<table width="512" height="224" border="0" cellpadding="0" cellspacing="0" class="campusnews" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:myNS="urn:myNameSpace"><tr><td height="40" colspan="2" align="left" valign="top"><table width="90%" border="0" cellpadding="0" cellspacing="0" class="campusnews_tit"><tr><td>校园新闻</td><td align="right"><a href="135020.htm" target="Subject/@LinkWindow"><img src="images/more.gif" width="47" height="15" border="0"></a></td></tr></table></td></tr><tr><td align="right" valign="top"><table width="95%" border="0" cellpadding="0" cellspacing="0" class="campusnews_pic"><tr><td><a id="shimglink135020" href="" target="_blank"><img name="shimage135020" src="" style="display:none;FILTER: revealTrans(duration=2,transition=20)" width="180" height="124" border="0"></a></td></tr><tr><td align="center" class="campusnews_span"><a id="shtxtLink135020" href="" target="_blank"><span id="shtxt135020"></span></a></td></tr></table></td><td width="290" valign="top"><table width="90%" border="0" cellpadding="0" cellspacing="0" class="list_2"><tr><td><img src="images/new.gif" style="float:right;white-space:nowarp;margin-right:17px">
+
+        ·<a href="135020-1350000004516.htm" title="大学与小学的交流互动" alt="大学与小学的交流互动" target="_blank">大学与小学的交流互动&nbsp;</a></td></tr><tr><td><img src="images/new.gif" style="float:right;white-space:nowarp;margin-right:17px">
+
+        ·<a href="135020-1350000004515.htm" title="饮水思源、爱国荣校" alt="饮水思源、爱国荣校" target="_blank">饮水思源、爱国荣校&nbsp;</a></td></tr><tr><td>
+
+        ·<a href="135020-1350000004514.htm" title="我校俞嘉乐同学获2015“中国好作业”金奖" alt="我校俞嘉乐同学获2015“中国好作业”金奖" target="_blank">我校俞嘉乐同学获2015“中国...
+      </a></td></tr><tr><td>
+
+        ·<a href="135020-1350000004507.htm" title="我是向上、向善好少年
+                         ——交大实小第十一届少代会开幕式" alt="我是向上、向善好少年
+                         ——交大实小第十一届少代会开幕式" target="_blank">我是向上、向善好少年
+   ...
+      </a></td></tr><tr><td>
+
+        ·<a href="135020-1350000004502.htm" title="我校举行一年级学习准备期家长开放日活动" alt="我校举行一年级学习准备期家长开放日活动" target="_blank">我校举行一年级学习准备期家长开...
+      </a></td></tr><tr><td>
+
+        ·<a href="135020-1350000004501.htm" title="ONE DREAM ONE GOAL——交大实小&amp;利物浦足球俱乐部足球训练营纪实" alt="ONE DREAM ONE GOAL——交大实小&amp;利物浦足球俱乐部足球训练营纪实" target="_blank">ONE DREAM ONE G...
+      </a></td></tr><tr><td>
+
+        ·<a href="135020-1350000004487.htm" title="饮水思源，爱国荣校，交小少年在行动！（三）" alt="饮水思源，爱国荣校，交小少年在行动！（三）" target="_blank">饮水思源，爱国荣校，交小少年在...
+      </a></td></tr><tr><td>
+
+        ·<a href="135020-1350000004479.htm" title="饮水思源，爱国荣校，交小少年在行动！（二）" alt="饮水思源，爱国荣校，交小少年在行动！（二）" target="_blank">饮水思源，爱国荣校，交小少年在...
+      </a></td></tr></table><script>
+            TAddShiftPicTxt(
+            "shimage135020",            
+            "shtxt135020",            
+            new Array(
+    '/Upload/Content/635816249590074690_366_22533.jpg',
+    '/Upload/Content/635815480372535631_359_24633.jpg',
+    '/Upload/Content/635810208882345253_359_42877.jpg',
+    '/Upload/Content/635804131213382392_400_57889.JPG',
+    '/Upload/Content/635791240828466057_366_49587.jpg',
+    '/Upload/Content/635787942284728471_366_38771.jpg',
+    '/Upload/Content/635780946540323868_308_64802.JPG',
+    '/Upload/Content/635780946935628562_308_64312.JPG'),
+            new Array(
+    '135020-1350000004516.htm',
+    '135020-1350000004515.htm',
+    '135020-1350000004514.htm',
+    '135020-1350000004507.htm',
+    '135020-1350000004502.htm',
+    '135020-1350000004501.htm',
+    '135020-1350000004487.htm',
+    '135020-1350000004479.htm'),
+            new Array(
+    '大学与小学的交流互动'
+	,
+	
+    '饮水思源、爱国荣校'
+	,
+	
+    '我校俞嘉乐同学获2015“中国好作业”金奖'
+	,
+	
+    '我是向上、向善好少年                         ——交大实小第十一届少代会开幕式'
+	,
+	
+    '我校举行一年级学习准备期家长开放日活动'
+	,
+	
+    'ONE DREAM ONE GOAL——交大实小&利物浦足球俱乐部足球训练营纪实'
+	,
+	
+    '饮水思源，爱国荣校，交小少年在行动！（三）'
+	,
+	
+    '饮水思源，爱国荣校，交小少年在行动！（二）'
+	),
+            15,4000);
+          </script></td></tr></table>
+		
+      <table width="512" height="170" border="0" cellpadding="0" cellspacing="0" class="moudel">
+        <tr>
+          
+        	<td width="256" valign="top" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:myNS="urn:myNameSpace"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td><table width="100%" height="25" border="0" cellpadding="0" cellspacing="0" class="lm_bg"><tr><td>校园风采</td><td align="center"><a href="135021.htm" target="Subject/@LinkWindow">-MORE-</a></td></tr></table></td></tr><tr><td align="center" height="140" valign="top"><table width="95%" border="0" cellpadding="0" cellspacing="0" class="list_xyfc"><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135021-1350000004505.htm" target="_blank">我是向上、向善好少年
+  ..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135021-1350000004460.htm" target="_blank">感恩有你  励志奋发 启碇征程&nbsp;</a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135021-1350000004430.htm" target="_blank">2014学年第二学期光荣升旗..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135021-1350000004429.htm" target="_blank">2014年第二学期光荣升旗手..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135021-1350000004428.htm" target="_blank">2014学年第二学期光荣升旗..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135021-1350000004422.htm" target="_blank">2014学年第二学期光荣升旗..
+      </a></td></tr></table></td></tr></table></td>
+		
+        	<td width="256" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:myNS="urn:myNameSpace"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td><table width="100%" height="25" border="0" cellpadding="0" cellspacing="0" class="lm_bg"><tr><td>成长乐园</td><td align="center"><a href="135022.htm" target="Subject/@LinkWindow">-MORE-</a></td></tr></table></td></tr><tr><td align="center" height="150" valign="top"><table width="95%" border="0" cellpadding="0" cellspacing="0" class="list_czly"><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135022-1350000004505.htm" target="_blank">我是向上、向善好少年
+  ..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135022-1350000004486.htm" target="_blank">饮水思源，爱国荣校，交小少年..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135022-1350000004478.htm" target="_blank">饮水思源，爱国荣校，交小少年..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135022-1350000004474.htm" target="_blank">饮水思源，爱国荣校，交小少年..
+      </a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135022-1350000004470.htm" target="_blank">用爱点亮校园，让教育赢在起点&nbsp;</a></td></tr><tr><td><img src="images/li_1.gif" align="absmiddle"><a href="135022-1350000004465.htm" target="_blank">2015学年第一学期交大实小..
+      </a></td></tr></table></td></tr></table></td>
+		
+        </tr>
+      </table>
+
+	   
+        	<table width="512" border="0" cellspacing="0" cellpadding="0"><tr><td height="25"><table width="100%" height="25" border="0" cellpadding="0" cellspacing="0" class="albums_tit"><tr><td width="400">活动图片</td><td align="center"><a href="135253.htm" target="Subject/@LinkWindow">-MORE-</a></td></tr></table></td></tr><tr><td height="135" class="albums_td"><div id="goodo" style="overflow:hidden;width:500px;height:140px;"><table border="0" cellspacing="0" cellpadding="0"><tr><td id="goodo1" valign="top" align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="135253-1350000004498.htm" target="_blank" title="消防演练2"><img src="/Upload/Content/635785988965728420_432_69203.JPG" width="109" height="81" border="0"></a></td></tr><tr><td>消防演练2</td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="135253-1350000004499.htm" target="_blank" title="消防演练3"><img src="/Upload/Content/635785989268212951_432_1293.JPG" width="109" height="81" border="0"></a></td></tr><tr><td>消防演练3</td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="135253-1350000004496.htm" target="_blank" title="利物浦教练足球培训5"><img src="/Upload/Content/635785988363099361_432_77532.JPG" width="109" height="81" border="0"></a></td></tr><tr><td>利物浦教练足球培训5</td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="135253-1350000004497.htm" target="_blank" title="消防演练1"><img src="/Upload/Content/635785988752164045_432_25459.JPG" width="109" height="81" border="0"></a></td></tr><tr><td>消防演练1</td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="135253-1350000004495.htm" target="_blank" title="利物浦教练足球培训4"><img src="/Upload/Content/635785986430099966_432_43966.JPG" width="109" height="81" border="0"></a></td></tr><tr><td>利物浦教练足球培训4</td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="135253-1350000004493.htm" target="_blank" title="利物浦教练足球培训2"><img src="/Upload/Content/635785985948059120_432_44981.JPG" width="109" height="81" border="0"></a></td></tr><tr><td>利物浦教练足球培训2</td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="135253-1350000004494.htm" target="_blank" title="利物浦教练足球培训3"><img src="/Upload/Content/635785986184243535_432_9088.JPG" width="109" height="81" border="0"></a></td></tr><tr><td>利物浦教练足球培训3</td></tr></table></td><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><a href="135253-1350000004492.htm" target="_blank" title="利物浦教练足球培训1"><img src="/Upload/Content/635785985593470497_432_77060.JPG" width="109" height="81" border="0"></a></td></tr><tr><td>利物浦教练足球培训1</td></tr></table></td></tr></table></td><td id="goodo2" valign="top"></td></tr></table></div></td></tr></table><script>
+      var speed=60
+      goodo2.innerHTML=goodo1.innerHTML
+      function Marquee(){
+      if(goodo2.offsetWidth-goodo.scrollLeft  >  0)
+      goodo.scrollLeft++
+      else{
+      goodo.scrollLeft-=goodo1.offsetWidth
+      }
+      }
+
+      var MyMar=setInterval(Marquee,speed)
+      goodo.onmouseover=function() {clearInterval(MyMar)}
+      goodo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+    </script>
+		
+        	<table width="500" height="33" border="0" cellpadding="0" cellspacing="0" class="search">
+  <tr>
+    <td>
+      <table width="350" height="33" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="middle">
+            <input type="text" name="keyword" id="Keyword" class="forms_search">
+          </td>
+          <td>
+            <input type="image" onclick="submitclick();" src="images/search.jpg" style="width:49px;height:19px" border="0">
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<script language="JavaScript">
+      function submitclick()
+      {
+      var o=document.getElementById("Keyword");
+      var href="135024.htm?Keyword="+o.value;
+      window.open(href);
+      }
+    </script>
+		
+        	<table width="512" border="0" cellspacing="0" cellpadding="0"><tr><td height="25"><table width="100%" height="25" border="0" cellpadding="0" cellspacing="0" class="albums_tit"><tr><td width="400">图片链接</td><td align="center"></td></tr></table></td></tr><tr><td><table width="512" border="0" cellspacing="0" cellpadding="0" class="pic_level"><tr><td align="center"><a href="../JDFX/135091.htm" target="_blank" title="行为规范示范校"><img src="../../Upload/Content/1350000003489.gif" width="488" height="102"></a></td></tr></table></td></tr></table>
+		
+      </td>
+    <td width="240" align="left" valign="top">
+	
+        	<table border="0" cellpadding="0" cellspacing="0" class="notice" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:myNS="urn:myNameSpace"><tr><td><table border="0" cellpadding="0" cellspacing="0" class="notice_tit"><tr><td>公告栏</td><td align="right"><a href="135186.htm" target="Subject/@LinkWindow">-MORE-</a></td></tr></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><img src="images/m_bg1.gif"></td></tr><tr><td height="185" class="m_td2"><marquee direction="up" width="180" height="170" scrollamount="2" onMouseOut="this.start()" onMouseOver="this.stop()"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_2"><tr><td>
+        [10-25]<br><a href="135186-1350000001970.htm" target="_blank">喜报&nbsp;</a></td></tr><tr><td>
+        [10-13]<br><a href="135186-1350000004508.htm" target="_blank">我是向上、向善好少年
+         ..
+      </a></td></tr><tr><td>
+        [10-08]<br><a href="135186-1350000004504.htm" target="_blank">2015学年第一学期10月份学生菜单&nbsp;</a></td></tr><tr><td>
+        [09-16]<br><a href="135186-1350000004461.htm" target="_blank">关于开展第十一届中国少年科学院“小院士”课..
+      </a></td></tr><tr><td>
+        [09-15]<br><a href="135186-1350000004462.htm" target="_blank">上海市第九届“宝山杯”青少年生物与环境科学..
+      </a></td></tr><tr><td>
+        [09-15]<br><a href="135186-1350000004463.htm" target="_blank">上海市第九届青少年生物与环境科学小论文评比..
+      </a></td></tr><tr><td>
+        [06-05]<br><a href="135186-1350000004437.htm" target="_blank">关于推荐“闵行区教育系统2015年优秀共产..
+      </a></td></tr><tr><td>
+        [06-03]<br><a href="135186-1350000004435.htm" target="_blank">2014学年第二学期6月份学生午餐菜单&nbsp;</a></td></tr><tr><td>
+        [05-29]<br><a href="135186-1350000004433.htm" target="_blank">我校校园网学生及家长账号开通&nbsp;</a></td></tr><tr><td>
+        [05-19]<br><a href="135186-1350000004416.htm" target="_blank">2015学年上海交通大学附属实验小学招生通告&nbsp;</a></td></tr></table></marquee></td></tr><tr><td><img src="images/m_bg3.gif"></td></tr></table></td></tr></table>
+		
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="mailbox" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:myNS="urn:myNameSpace"><tr><td height="92" align="center" valign="bottom"><img src="../../Upload/Subject/135026_1.jpg" width="118" height="78"></td><td width="53" rowspan="2" background="images/mailbox_tit.png"></td></tr><tr><td height="35" align="center"><a href="mailto:nimei1980@126.com" target="_blank">nimei1980@126.com</a></td></tr></table>
+		
+        	<?xml version="1.0" encoding="gb2312"?><table border="0" cellpadding="0" cellspacing="0" class="notice"><tr><td><table border="0" cellpadding="0" cellspacing="0" class="notice_tit"><tr><td>快速导航</td></tr></table></td></tr><tr><td><table border="0" cellpadding="0" cellspacing="0"><tr><td><img src="images/m_bg1.gif" /></td></tr><tr><td hight="300" valign="top" class="m_td2"><table border="0" cellpadding="0" cellspacing="0" class="piclink"><tr><td><a href="../JDFX/DWW/135345.htm" target="_blank" title="党建园地" class="button"><img src="../../Upload/Content/1350000000224.gif" width="180" border="0" /></a></td></tr><tr><td><a href="../JDFX/135025.htm" target="_blank" title="信息公开" class="button"><img src="../../Upload/Content/1350000000225.gif" width="180" border="0" /></a></td></tr><tr><td><a href="http://eai.mhedu.sh.cn" target="_blank" title="教育局邮箱" class="button"><img src="../../Upload/Content/1350000000229.gif" width="180" border="0" /></a></td></tr><tr><td><a href="../JDFX/135394.htm" target="_blank" title="档案宣传" class="button"><img src="../../Upload/Content/1350000003505.gif" width="180" border="0" /></a></td></tr><tr><td><a href="../JDFX/135406.htm" target="_blank" title="生命科学" class="button"><img src="../../Upload/Content/1350000003070.gif" width="180" border="0" /></a></td></tr><tr><td><a href="http://vblog.mhedu.sh.cn/list.html?tagid=393" target="_blank" title="成长ing" class="button"><img src="../../Upload/Content/1350000002424.gif" width="180" border="0" /></a></td></tr><tr><td><a href="http://jdfx.mhedu.sh.cn/EduPlate/VideoOnDemand/Web/index.aspx?MID=21759&amp;ID=-1&amp;STR=&amp;1874947208" target="_blank" title="视频库" class="button"><img src="../../Upload/Content/1350000003928.jpg" width="180" border="0" /></a></td></tr><tr><td><a href="http://jdfx.mhedu.sh.cn/EduPlate/PicLibrary/Web/PlIndex.aspx?MID=20233&amp;ID=-1&amp;STR=&amp;850012024" target="_blank" title="图片库" class="button"><img src="../../Upload/Content/1350000003929.jpg" width="180" border="0" /></a></td></tr><tr><td><a href="http://jdfx.mhedu.sh.cn/EduPlate/CJGL/index.aspx" target="_blank" title="教学质量分析系统" class="button"><img src="../../Upload/Content/1350000000226.gif" width="180" border="0" /></a></td></tr><tr><td><a href="http://jdfx.mhedu.sh.cn/EduPlate/TrProDevelop/index.aspx?MID=15615&amp;ID=-1&amp;STR=&amp;1050887136" target="_blank" title="教师发展平台" class="button"><img src="../../Upload/Content/1350000000335.gif" width="180" border="0" /></a></td></tr></table></td></tr><tr><td><img src="images/m_bg3.gif" /></td></tr></table></td></tr></table>
+		
+     </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center" valign="top">
+   
+        	<?xml version="1.0" encoding="gb2312"?><table border="0" align="center" cellpadding="0" cellspacing="0" class="link_pic"><tr><tr><td><a href="http://www.mhedu.sh.cn" target="_blank" title="闵行教育信息网"><img src="../../Upload/Content/1350000001715.jpg" width="98" height="30" border="0" /></a></td><td><a href="http://jyxy.mhedu.sh.cn/goodoems/web/mjsjx/159001.htm" target="_blank" title="闵教研训信息网"><img src="../../Upload/Content/1350000001603.jpg" width="98" height="30" border="0" /></a></td><td><a href="http://mhjys.mhedu.sh.cn" target="_blank" title="闵教教育研究所"><img src="../../Upload/Content/1350000001604.jpg" width="98" height="30" border="0" /></a></td><td><a href="http://kszx.mhedu.sh.cn" target="_blank" title="闵行教育考试中心"><img src="../../Upload/Content/1350000001605.jpg" width="98" height="30" border="0" /></a></td><td><a href="http://shutu.mhedu.sh.cn/List.asp?lang=gb" target="_blank" title="闵行教育数字图书馆"><img src="../../Upload/Content/1350000000648.jpg" width="98" height="30" border="0" /></a></td><td><a href="http://www.mhedu.sh.cn/pujiao.php" target="_blank" title="普教业务管理系统"><img src="../../Upload/Content/1350000000649.jpg" width="98" height="30" border="0" /></a></td><td><a href="http://www.21shte.net/main/index.asp" target="_blank" title="上海市教师教育网"><img src="../../Upload/Content/1350000000650.jpg" width="98" height="30" border="0" /></a></td><td><a href="http://www.sherc.net/sherc/index/" target="_blank" title="上海教育资源库"><img src="../../Upload/Content/1350000000651.jpg" width="98" height="30" border="0" /></a></td><tr><td><a href="http://dudao.mhedu.sh.cn:8080/mhwjdc/index.jsp" target="_blank" title="教育督导"><img src="../../Upload/Content/1350000000652.jpg" width="98" height="30" border="0" /></a></td><td><a href="http://jdfx.mhedu.sh.cn/EduPlate/PicLibrary/Web/PlIndex.aspx?MID=20233&amp;ID=-1&amp;STR=&amp;231296967" target="_blank" title="图片库"><img src="../../Upload/Content/1350000003930.jpg" width="98" height="30" border="0" /></a></td><td><a href="http://jdfx.mhedu.sh.cn/EduPlate/VideoOnDemand/Web/index.aspx?MID=21759&amp;ID=-1&amp;STR=&amp;130420327" target="_blank" title="视频库"><img src="../../Upload/Content/1350000003931.jpg" width="98" height="30" border="0" /></a></td><tr></tr></table>
+		
+      <table  border="0" align="center" cellpadding="0" cellspacing="0" class="link">
+        <tr>
+          
+        	<td><select name="select" class="span_01" onchange="if(this.value.length>0)window.open(this.value,'_blank');"><option>
+--教育类相关网站--
+				</option><option value="http://www.baidu.com">友情链接</option></select></td>
+		
+        	<td><select name="select" class="span_01" onchange="if(this.value.length>0)window.open(this.value,'_blank');"><option>
+--校内网站--
+				</option><option value="../JDFX/135368.htm">文明班组网上行</option></select></td>
+		
+        </tr>
+      </table></td>
+  </tr>
+  
+ 
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="footer"><tr><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td><table align="center" border="0" cellspacing="0" cellpadding="0"><tr><td align="right">您是第</td><td><strong id="sCount"></strong></td><td align="left">位访客</td></tr></table></td></tr><tr><td>
+								Copyright&copy;2010 上海交通大学附属实验小学 All rights reserved
+							</td></tr><tr><td>
+								技术支持 <a href="http://www.goodo.com.cn" target="_blank">上海鼎创信息科技有限公司</a></td></tr><tr><td>
+								地址：上海市闵行区德宏路2366号 邮编200240
+							</td></tr><tr><td>
+								总机：54736653 54736653-818 E-mail: <a href="mailto:cai_yub@163.com">cai_yub@163.com</a></td></tr></table></td></tr></table><script language="javascript" type="text/javascript" src="js/ajax.js"></script><script language="javascript" type="text/javascript">
+      
+	
+    GetCount('1');
+    function GetCount(oValue)
+    {
+        var oXml = xmlHTTP.CreateXMLDoc(); //var oXml = new ActiveXObject("Microsoft.XMLDOM");
+        oXml.async = false;
+        oXml.loadXML("<Goodo AddValue='"+oValue+"'></Goodo>");
+        var oXMLHTTP = xmlHTTP.CreateXMLHttp();//var oXMLHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+        oXMLHTTP.open("POST", "../../SiteCounter/wsSiteCounter.asmx/CountGet", false);
+        oXMLHTTP.send(oXml);
+        oXml.async = false;
+        oXml.loadXML(oXMLHTTP.responseText)
+        var Count=new Number(1);
+        if(oXml.documentElement!=null&&isNaN(oXml.documentElement.text)==false)
+        {
+            Count=oXml.documentElement.text;
+            $("#sCount").html(Count);
+        }
+         //alert(Count);
+        //var Count = 12345;
+        //Count = Count.toString();
+        //var len = Count.length;
+
+        //alert(len);
+        //var CountArr = new Array(); //定义数组存放单个数字
+       // for (var i = 1; i <= len; i++) {
+          //  CountArr[len - i] = Count.substring(i - 1, i);
+        //}
+        //for (var j = 0; j < 10 - len; j++) {
+        //    CountArr[len + j] = 0;
+        //}
+        //for (var k = 0; k < 10; k++) {
+        //    $("#Img" + k).attr('src', 'images/' + CountArr[k] + '.gif');
+        //    //alert(CountArr[k]);
+       // }
+  }
+	
+    </script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/porttools.js"></script>
+<script type="text/javascript" src="js/pngfix.js"></script>
+<script>
+//公共脚本文件 main.js
+function addEvent(obj,evtType,func,cap){
+    cap=cap||false;
+ if(obj.addEventListener){
+     obj.addEventListener(evtType,func,cap);
+  return true;
+ }else if(obj.attachEvent){
+        if(cap){
+         obj.setCapture();
+         return true;
+     }else{
+      return obj.attachEvent("on" + evtType,func);
+  }
+ }else{
+  return false;
+    }
+}
+function getPageScroll(){
+    var xScroll,yScroll;
+ if (self.pageXOffset) {
+  xScroll = self.pageXOffset;
+ } else if (document.documentElement && document.documentElement.scrollLeft){
+  xScroll = document.documentElement.scrollLeft;
+ } else if (document.body) {
+  xScroll = document.body.scrollLeft;
+ }
+ if (self.pageYOffset) {
+  yScroll = self.pageYOffset;
+ } else if (document.documentElement && document.documentElement.scrollTop){
+  yScroll = document.documentElement.scrollTop;
+ } else if (document.body) {
+  yScroll = document.body.scrollTop;
+ }
+ arrayPageScroll = new Array(xScroll,yScroll);
+ return arrayPageScroll;
+}
+function GetPageSize(){
+    var xScroll, yScroll;
+    if (window.innerHeight && window.scrollMaxY) { 
+        xScroll = document.body.scrollWidth;
+        yScroll = window.innerHeight + window.scrollMaxY;
+    } else if (document.body.scrollHeight > document.body.offsetHeight){
+        xScroll = document.body.scrollWidth;
+        yScroll = document.body.scrollHeight;
+    } else {
+        xScroll = document.body.offsetWidth;
+        yScroll = document.body.offsetHeight;
+    }
+    var windowWidth, windowHeight;
+    if (self.innerHeight) {
+        windowWidth = self.innerWidth;
+        windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) {
+        windowWidth = document.documentElement.clientWidth;
+        windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) {
+        windowWidth = document.body.clientWidth;
+        windowHeight = document.body.clientHeight;
+    } 
+    if(yScroll < windowHeight){
+        pageHeight = windowHeight;
+    } else { 
+        pageHeight = yScroll;
+    }
+    if(xScroll < windowWidth){ 
+        pageWidth = windowWidth;
+    } else {
+        pageWidth = xScroll;
+    }
+    arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight) 
+    return arrayPageSize;
+}
+
+</body>
+</html>
+
+                                                                                              

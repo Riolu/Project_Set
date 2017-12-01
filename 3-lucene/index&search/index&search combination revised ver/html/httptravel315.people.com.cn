@@ -1,0 +1,850 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta content="all" name="robots" />
+<meta name="description" content="人民网旅游3·15投诉平台" />
+<meta name="keywords" content="旅游投诉 旅游315 旅游维权" />
+
+<META name='filetype' content='0'>
+<META name='publishedtype' content='1'>
+<META name='pagetype' content='2'>
+<META name='catalogs' content='XTW_0002005'>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>人民网旅游3·15投诉平台</title>
+<link  href="style/page.css" type="text/css" rel="stylesheet"   media="all"/>
+<link href="style/smartpaginator.css" type="text/css" rel="stylesheet"   media="all"/>
+<style type="text/css">
+	#fixedImage {	position: fixed;right: 50px;bottom: 100px;text-align: right;}
+	* html #fixedImage{
+		position:absolute;
+		right:expression(eval(document.documentElement.scrollLeft+ (document.documentElement.clientWidth -980)/2-200));
+		bottom:expression(eval(document.documentElement.scrollTop+100))
+	}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/webdig_test.js"></script>
+<script type="text/javascript" src="js/artDialog/artDialog.js?skin=chrome" charset="utf-8"></script>
+<script type="text/javascript" src="js/artDialog/plugins/iframeTools.js?skin=chrome" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.quickpaginate.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/smartpaginator.js" ></script>
+<script>
+function showMena(n){
+	for(var i=1;i<=2;i++){
+		var curCon=document.getElementById("aa_"+i);
+		var curBtn=document.getElementById("ba_"+i);
+ if(i==n){
+	 curCon.className="this";
+	 curBtn.style.display="block";
+	 }
+ else{
+	 curCon.className="";
+	 curBtn.style.display="none";
+
+	 }
+	}
+}
+function showMen(n){
+	var curCon;
+	var curBtn;
+	if(n%2==0){
+		curCon_d=document.getElementById("a_"+n);
+		curBtn_d=document.getElementById("list_a_"+n);
+		
+		curCon_s=document.getElementById("a_"+(n-1));
+		curBtn_s=document.getElementById("list_a_"+(n-1));
+
+		curCon_d.className="this";
+		curBtn_d.style.display="block";
+		curCon_s.className="";
+		curBtn_s.style.display="none";
+
+	}else{
+		curCon_d=document.getElementById("a_"+(n+1));
+		curBtn_d=document.getElementById("list_a_"+(n+1));
+		
+		curCon_s=document.getElementById("a_"+n);
+		curBtn_s=document.getElementById("list_a_"+n);
+
+		curCon_s.className="this";
+		curBtn_s.style.display="block";
+		curCon_d.className="";
+		curBtn_d.style.display="none";
+	}
+}
+function SetString(str,len){
+		var strlen = 0; 
+		var s = "";
+		for(var i = 0;i < str.length;i++){
+			if(str.charCodeAt(i) > 128){
+				strlen += 2;
+			}else{ 
+				strlen++;
+			}
+			s += str.charAt(i);
+			if(strlen >= len){ 
+				return s ;
+			}
+		}
+		return s;
+}
+$(document).ready(function(){
+	
+	//开机加载
+	$.ajax({ 
+		async:false,
+		type: "GET",
+		url: "/interface/select/data_idx.php" , 
+		dataType: "json",
+		cache:false,
+		success: function(data){
+		
+			var comps_num		= data.comps_num;
+			
+			var comps_num_r		= data.comps_num_r;
+			
+			var comps_num_all	= data.comps_num_all;
+			
+			var loss			= data.loss;
+			
+			$("em#change_1").html(loss);
+			$("em#change_2").html(comps_num_r);
+			$("em#change_3").html(comps_num_all);
+
+			if(data.login=="true"){
+				var login_html = "<h4><a id='user_center'>用户中心</a><a class='this' id='quick_comp'>快捷投诉</a></h4>";
+				login_html	  += "<table width='230' border='0' cellspacing='8' cellpadding='0' class='p1_ra clear'>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td><b></b>"+data.user[0].u_nick_name+",欢迎回来!!!</td><td></td></tr>";
+				login_html	  += "<tr><td>您有信息</td><td>"+data.user[0].mes+"条</td></tr>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td>最新投诉状态</td><td>"+data.user[0].comp+"</td></tr>";
+				login_html	  += "<tr><td>最新投诉支持度</td><td>"+data.user[0].dis_s+"支持</td></tr>";
+				login_html	  += "<tr><td></td><td>"+data.user[0].dis_o+"反对</td></tr>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td></td><td><a href='#' id='logout'>登出</a></td></tr>";
+				login_html	  += "</table>";
+
+				$("#login_area").html(login_html);
+
+			}
+			var table_html ;
+			var arr = new Array();
+			arr[1] = "<font color='#8A4B08'>处理中</font>";
+			arr[2] = "<font color='red'>已处理/待反馈</font>";
+			arr[3] = "<font color='green'>已完结</font>";
+			arr[4] = "已反馈";
+			arr[5] = "未通过";
+
+			for (i = 0 ; i<data.comps.length; i++){
+				table_html += "<tr id='" + data.comps[i].c_id + "'>";
+				table_html += "<td>"+data.comps[i].id+"</td>";
+				table_html += "<td>"+data.comps[i].c_create_time+"</td>";
+				table_html += "<td>"+data.comps[i].u_nick_name+"</td>";
+				table_html += "<td>"+data.comps[i].c_title+"</td>";
+				table_html += "<td>"+data.comps[i].c_type+"</td>";
+				table_html += "<td>"+data.comps[i].c_prev+"</td>";
+				table_html += "<td>"+arr[data.comps[i].c_stat]+"</td>";
+				table_html += "<td>"+data.comps[i].c_to+"&nbsp;</td>";
+				table_html += "<td>"+data.comps[i].c_support+"/"+data.comps[i].c_oppose+"</td>";
+				table_html += "</tr>";
+			}
+			$("#comp_list >tbody").html(table_html);
+			$("#comp_list").tablesorter(); 
+			$('#pager_comp_list').smartpaginator({ totalrecords: comps_num,
+                                      recordsperpage: 60, 
+                                      datacontainer: 'comp_list', 
+                                      dataelement: 'tr',
+                                      theme: 'green',
+									  next:'下一页',
+									  prev:'上一页',
+									  first:'首页',
+									  last:'末页',
+									  display:'double',
+									  go:'GO'});
+		},
+		error:function(){
+			alert('加载失败');
+		}
+	});
+
+	$("#comp_list > tbody > tr").live("click",function(){
+		art.dialog.data('c_id', $(this).attr("id"));
+		art.dialog.open('/iframe/shw_xml.html', {title: '查看详情',width:'80%',height:'80%',left: '50%', top: '50%', fixed: true,drag:true,resize:true});
+	});
+	$("#comp_list > tbody > tr").mouseover(function(){  
+        $(this).css({"background-color":"#87CEEB"});  
+		$(this).css({"text-decoration":"underline"});  
+     }).mouseout(function(event){  
+        var $index=$(this).index();  
+        if($index%2==0){  
+            $(this).css({"background-color":"#fff"});  
+			$(this).css({"text-decoration":"none"}); 
+        }else{  
+            $(this).css({"background-color":"#fff"});  
+			$(this).css({"text-decoration":"none"}); 
+        }  
+     });  
+	//用户注册弹层
+	$("#button_reg").bind("click",function(){
+		art.dialog.open('iframe/reg.html', {id:'artreg',title: '新用户注册',width:800,height:600,lock:true,drag:false,resize:false});
+	});
+	//登录
+	$("#button_login").click(function(){
+		
+		var username = $("#username").val();
+		var password = $("#password").val();
+		if(username==""||password==""){
+			alert("请填写用户名和密码");
+			return;
+		}
+		$.post("/interface/select/data_lgi.php",{"username":username,"password":password},function(result){
+			if(result.Status=="failed"){
+				alert(result.reason);
+			}else{
+				var login_html = "<h4><a class='this' id='user_center'>用户中心</a><a id='quick_comp'>快捷投诉</a></h4>";
+				login_html	  += "<table width='230' border='0' cellspacing='8' cellpadding='0' class='p1_ra clear'>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td><b>"+result.data[0].u_nick_name+"</b>,欢迎回来!!!</td><td></td></tr>";
+				login_html	  += "<tr><td>您有信息</td><td>"+result.data[0].mes+"条</td></tr>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td>最新投诉状态</td><td>"+result.data[0].comp+"</td></tr>";
+				login_html	  += "<tr><td>最新投诉支持度</td><td>"+result.data[0].dis_s+"支持</td></tr>";
+				login_html	  += "<tr><td></td><td>"+result.data[0].dis_o+"反对</td></tr>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td></td><td></td></tr>";
+				login_html	  += "<tr><td></td><td><a href='#' id='logout'>登出</a></td></tr>";
+				login_html	  += "</table>";
+
+				$("#login_area").html(login_html);
+			}
+		});
+	});
+	//登出
+	$("#logout").live("click",function(){
+		$.post("/interface/select/data_lgo.php",function(result){
+
+			if(result.Status=="failed"){
+				alert(result.reason);
+			}else{
+				alert(result.reason);
+				window.location.reload();
+			}
+		})
+	})
+	//快捷投诉
+	$("#quick_comp").live("click",function(){
+		art.dialog.open('/iframe/com.html', {title: '用户投诉',width:800,height:600,lock:true,drag:false,resize:false});
+	})
+
+	//用户中心(弹层?还是连接?待定)
+	$("#user_center").live("click",function(){
+		art.dialog.open('/iframe/cen.html', {title: '用户中心',width:'100%',height:'100%',left: '0%', top: '0%',fixed: true,drag:false,resize:false});
+	})
+
+	//忘记密码
+	$("#fgt_pwd").live("click",function(){
+		art.dialog.open('/iframe/fgt.html', {title: '忘记密码',width:800,height:300,lock: true,drag:false,resize:false});
+	})
+
+	//搜索
+	$("#srh_sub").live("click",function(){
+
+		if($("#srh_key").val()==""){
+			alert("搜索关键字不能为空")
+		}else{
+			art.dialog.data('key', $("#srh_key").val());
+			art.dialog.open('/iframe/lst.html', {id:'srh_div',title: '查询结果',width:'100%',height:'100%',left: '0%', top: '0%', fixed: true,drag:false,resize:false});	
+		}
+	})
+
+	//控制标签样式
+	$("[name='title_a']").live("click",function(){
+		$("[name='title_a']").removeClass() ;
+		$(this).addClass("this");
+		if($(this).attr("id")=="main"){
+			$("#content_rank").hide();
+			$("#content_main").show(1000);
+			$("#daohang").html('<div class="top_nav"><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529390.html" style="color:#064d7b;float:left;margin-right:10px" target="_blank">投诉须知</a><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529390-2.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">隐私保护</a><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529390-3.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">版权说明</a><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529390-4.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">常见问题</a><a href="comment.php" style="color:#064d7b;float:left;margin-right:10px" target="_blank">留言板</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="images/ss.gif" width="47" height="31" id="srh_sub"/></span>');
+
+		}else if($(this).attr("id")=="hot"){
+			$("#daohang").html('<div class="top_nav1"><a href="http://travel.people.com.cn/GB/236434/359205/index.html" style="color:#064d7b;float:left;margin-right:10px" target="_blank">热点报道</a><a href="http://travel.people.com.cn/GB/236434/241507/359203/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">“诉”说旅游故事</a><a href="http://travel.people.com.cn/GB/236434/241508/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">平台动态</a><a href="http://travel.people.com.cn/GB/236434/241507/359204/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">跟踪报道</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="images/ss.gif" width="47" height="31" id="srh_sub"/></span>');
+		}else if($(this).attr("id")=="rank"){
+			/*$("#content_rank").show(1000);
+			$("#content_main").hide();
+			$("#daohang").html('<div class="top_nav2"><a href="" style="color:#064d7b;float:left;margin-right:10px" target="_blank">诚信排行</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">投诉数量排行</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">回复数量排行</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">回复时长排行</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="images/ss.gif" width="47" height="31" id="srh_sub"/></span>');*/
+		}else if($(this).attr("id")=="introduce"){
+			$("#daohang").html('<div class="top_nav3"><a href="http://travel.people.com.cn/GB/236434/348173/index.html" style="color:#064d7b;float:left;margin-right:10px" target="_blank">维权指南</a><a href="http://travel.people.com.cn/n/2013/1113/c41570-23529443.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">投诉指南</a><a href="http://travel.people.com.cn/GB/348387/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">法律法规</a><a href="http://travel.people.com.cn/GB/236434/359205/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">出游提示</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="images/ss.gif" width="47" height="31" id="srh_sub"/></span>');
+		}else if($(this).attr("id")=="info"){
+			$("#daohang").html('<div class="top_nav4"><a href="http://travel.people.com.cn/GB/236434/347240/index.html" style="color:#064d7b;float:left;margin-right:10px" target="_blank">质检资讯</a><a href="" style="color:#064d7b;float:left;margin-right:10px"   id="iwr">我要回复</a><a href="http://travel.people.com.cn/GB/236434/361842/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">投诉通讯录</a><a href="http://travel.people.com.cn/GB/236434/243250/index.html" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">注意事项</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="images/ss.gif" width="47" height="31" id="srh_sub"/></span>');
+		}else{
+
+
+		}
+	});
+	
+	$("#iwr").live("click",function(){
+		alert("开通回复权限请与010-65368440联系，谢谢合作。");
+	})
+	/*全部排行榜数据源$.getJSON("/interface/list/data_list_a.php", function(data){
+		var arrayObj = new Array();
+          if(null != data.items){
+            oDatalist = "<tr>",
+			
+             $.each(data.items,function(i){
+                oDatalist += "<td style='vertical-align: bottom;'><div><p>" + data.items[i].nub + "</p><em style='height:" + 380*data.items[i].nub/100 + "px;'>&nbsp;</em><b>" + data.items[i].id + "</b></div></td>";
+				arrayObj.push("{'o_id':'"+data.items[i].id+"','o_num':'"+data.items[i].nub+"'}");
+				
+             })
+             oDatalist += "</tr>",
+             $("#data_list_a").html(oDatalist);
+             $("#data_list_a tr td:odd").find("em").addClass("t1");
+			 var numOrder = arrayObj.sort(function(a, b){	
+				var aa = eval('(' + a + ')');
+				var bb = eval('(' + b + ')');
+				return ( bb.o_num - aa.o_num );
+			 })
+			
+			var newArray = numOrder.slice(0,10);
+
+			$.each(newArray,function(index,value){
+				
+				var json = eval('(' + value + ')');
+
+				$('#index_list_1').append("<li><a href='#'>"+json.o_id+"</a><span>"+json.o_num+"</span></li>");
+				
+
+
+			});
+			
+          }
+    });	
+	$.getJSON("/interface/list/data_list_b.php", function(data){
+		var arrayObj = new Array();
+          if(null != data.items){
+            oDatalist = "<tr>",
+             $.each(data.items,function(i){
+                oDatalist += "<td style='vertical-align: bottom;'><div><p>" + data.items[i].nub + "</p><em style='height:" + 380*data.items[i].nub/100 + "px;'>&nbsp;</em><b>" + data.items[i].id + "</b></div></td>";
+				arrayObj.push("{'o_id':'"+data.items[i].id+"','o_num':'"+data.items[i].nub+"'}");
+             })
+             oDatalist += "</tr>",
+             $("#data_list_b").html(oDatalist);
+             $("#data_list_b tr td:odd").find("em").addClass("t1");
+				var numOrder = arrayObj.sort(function(a, b){	
+				var aa = eval('(' + a + ')');
+				var bb = eval('(' + b + ')');
+				return ( bb.o_num - aa.o_num );
+			 })
+			
+			var newArray = numOrder.slice(0,10);
+
+			$.each(newArray,function(index,value){
+				
+				var json = eval('(' + value + ')');
+
+				$('#index_list_2').append("<li><a href='#'>"+json.o_id+"</a><span>"+json.o_num+"</span></li>");
+				
+
+
+			});
+
+          }
+    });
+	
+
+	$.getJSON("/interface/list/list_a.php", function(data1){
+
+		var arrayObj = new Array();
+          if(null != data1.items){
+            oDatalist1 = "<tr>",
+             $.each(data1.items,function(i){
+                oDatalist1 += "<td style='vertical-align: bottom;'><div><p>" + data1.items[i].per + "</p><em style='height:" + 260*data1.items[i].per/100 + "px;'>&nbsp;</em><b>" + data1.items[i].id + "</b></div></td>";
+				arrayObj.push("{'o_id':'"+data1.items[i].id+"','o_num':'"+data1.items[i].nub+"'}");
+             })
+             oDatalist1 += "</tr>",
+             $("#tb_list_a").html(oDatalist1);
+             var oDatalist_width = 500/data1.items.length-7;
+             $("#tb_list_a tr td").find("em").width(oDatalist_width);
+             $("#tb_list_a tr td").find("p").width(oDatalist_width);
+			 $("#tb_list_a tr td").find("b").hide();
+             $("#tb_list_a tr td:odd").find("em").addClass("t1");
+
+			var numOrder = arrayObj.sort(function(a, b){	
+				var aa = eval('(' + a + ')');
+				var bb = eval('(' + b + ')');
+				return ( bb.o_num - aa.o_num );
+			 })
+			var i = 1;
+			$.each(numOrder,function(index,value){
+				
+				var json = eval('(' + value + ')');
+				if(i<18){
+					$('#phph_list_1_a').append("<tr><td><span class='top'>"+i+"</span></td><td>"+json.o_id+"</td><td><i class='gray'>"+json.o_num+"</i></td></tr>");
+				}else{
+					$('#phph_list_1_b').append("<tr><td><span class='top'>"+i+"</span></td><td>"+json.o_id+"</td><td><i class='gray'>"+json.o_num+"</i></td></tr>");	
+				}	
+				i++;
+			});
+          }
+        });
+	$.getJSON("/interface/list/list_b.php", function(data1){
+
+		var arrayObj = new Array();
+          if(null != data1.items){
+            oDatalist1 = "<tr>",
+             $.each(data1.items,function(i){
+                oDatalist1 += "<td style='vertical-align: bottom;'><div><p>" + data1.items[i].per + "</p><em style='height:" + 260*data1.items[i].per/100 + "px;'>&nbsp;</em><b>" + data1.items[i].id + "</b></div></td>";
+				arrayObj.push("{'o_id':'"+data1.items[i].id+"','o_num':'"+data1.items[i].nub+"'}");
+             })
+             oDatalist1 += "</tr>",
+             $("#tb_list_b").html(oDatalist1);
+             var oDatalist_width = 500/data1.items.length-7;
+             $("#tb_list_b tr td").find("em").width(oDatalist_width);
+             $("#tb_list_b tr td").find("p").width(oDatalist_width);
+			 $("#tb_list_b tr td").find("b").hide();
+             $("#tb_list_b tr td:odd").find("em").addClass("t1");
+
+			var numOrder = arrayObj.sort(function(a, b){	
+				var aa = eval('(' + a + ')');
+				var bb = eval('(' + b + ')');
+				return ( bb.o_num - aa.o_num );
+			 })
+			
+			var i = 1;
+			$.each(numOrder,function(index,value){
+				
+				var json = eval('(' + value + ')');		
+				$('#phph_list_2_a').append("<tr><td><span class='top'>"+i+"</span></td><td>"+json.o_id+"</td><td><i class='gray'>"+json.o_num+"</i></td></tr>");
+				i++;
+
+			});
+          }
+        });
+	$.getJSON("/interface/list/list_c.php", function(data1){
+
+		var arrayObj = new Array();
+          if(null != data1.items){
+            oDatalist1 = "<tr>",
+             $.each(data1.items,function(i){
+                oDatalist1 += "<td style='vertical-align: bottom;'><div><p>" + data1.items[i].per + "</p><em style='height:" + 260*data1.items[i].per/100 + "px;'>&nbsp;</em><b>" + data1.items[i].id + "</b></div></td>";
+				arrayObj.push("{'o_id':'"+data1.items[i].id+"','o_num':'"+data1.items[i].nub+"'}");
+             })
+             oDatalist1 += "</tr>",
+             $("#tb_list_c").html(oDatalist1);
+             var oDatalist_width = 500/data1.items.length-7;
+             $("#tb_list_c tr td").find("em").width(oDatalist_width);
+             $("#tb_list_c tr td").find("p").width(oDatalist_width);
+			 $("#tb_list_c tr td").find("b").hide();
+             $("#tb_list_c tr td:odd").find("em").addClass("t1");
+
+			var numOrder = arrayObj.sort(function(a, b){	
+				var aa = eval('(' + a + ')');
+				var bb = eval('(' + b + ')');
+				return ( bb.o_num - aa.o_num );
+			 })
+			
+			var i = 1;
+			$.each(numOrder,function(index,value){
+				
+				var json = eval('(' + value + ')');
+				if(i<18){
+					$('#phph_list_3_a').append("<tr><td><span class='top'>"+i+"</span></td><td>"+json.o_id+"</td><td><i class='gray'>"+json.o_num+"</i></td></tr>");
+				}else{
+					$('#phph_list_3_b').append("<tr><td><span class='top'>"+i+"</span></td><td>"+json.o_id+"</td><td><i class='gray'>"+json.o_num+"</i></td></tr>");	
+				}	
+				i++;
+			});
+          }
+        });
+	$.getJSON("/interface/list/list_d.php", function(data1){
+
+		var arrayObj = new Array();
+          if(null != data1.items){
+            oDatalist1 = "<tr>",
+             $.each(data1.items,function(i){
+                oDatalist1 += "<td style='vertical-align: bottom;'><div><p>" + data1.items[i].per + "</p><em style='height:" + 260*data1.items[i].per/100 + "px;'>&nbsp;</em><b>" + data1.items[i].id + "</b></div></td>";
+				arrayObj.push("{'o_id':'"+data1.items[i].id+"','o_num':'"+data1.items[i].nub+"'}");
+             })
+             oDatalist1 += "</tr>",
+             $("#tb_list_d").html(oDatalist1);
+             var oDatalist_width = 500/data1.items.length-7;
+             $("#tb_list_d tr td").find("em").width(oDatalist_width);
+             $("#tb_list_d tr td").find("p").width(oDatalist_width);
+			 $("#tb_list_d tr td").find("b").hide();
+             $("#tb_list_d tr td:odd").find("em").addClass("t1");
+
+			var numOrder = arrayObj.sort(function(a, b){	
+				var aa = eval('(' + a + ')');
+				var bb = eval('(' + b + ')');
+				return ( bb.o_num - aa.o_num );
+			 })
+			
+			var i = 1;
+			$.each(numOrder,function(index,value){
+				
+				var json = eval('(' + value + ')');		
+				$('#phph_list_4_a').append("<tr><td><span class='top'>"+i+"</span></td><td>"+json.o_id+"</td><td><i class='gray'>"+json.o_num+"</i></td></tr>");
+				i++;
+
+			});
+          }
+        });
+	  $.getJSON("/interface/list/list_e.php", function(data1){
+
+		var arrayObj = new Array();
+          if(null != data1.items){
+            oDatalist1 = "<tr>",
+             $.each(data1.items,function(i){
+                oDatalist1 += "<td style='vertical-align: bottom;'><div><p>" + data1.items[i].per + "</p><em style='height:" + 260*data1.items[i].per/100 + "px;'>&nbsp;</em><b>" + data1.items[i].id + "</b></div></td>";
+				arrayObj.push("{'o_id':'"+data1.items[i].id+"','o_num':'"+data1.items[i].nub+"'}");
+             })
+             oDatalist1 += "</tr>",
+             $("#tb_list_e").html(oDatalist1);
+             var oDatalist_width = 500/data1.items.length-7;
+             $("#tb_list_e tr td").find("em").width(oDatalist_width);
+             $("#tb_list_e tr td").find("p").width(oDatalist_width);
+			 $("#tb_list_e tr td").find("b").hide();
+             $("#tb_list_e tr td:odd").find("em").addClass("t1");
+
+			var numOrder = arrayObj.sort(function(a, b){	
+				var aa = eval('(' + a + ')');
+				var bb = eval('(' + b + ')');
+				return ( bb.o_num - aa.o_num );
+			 })
+			
+			var i = 1;
+			$.each(numOrder,function(index,value){
+				
+				var json = eval('(' + value + ')');
+
+
+				if(i<18){
+					if(i<11){
+						$('#index_list_3').append("<li><a href='#'>"+json.o_id+"</a><span>"+json.o_num+"</span></li>");
+					}
+					$('#phph_list_5_a').append("<tr><td><span class='top'>"+i+"</span></td><td>"+json.o_id+"</td><td><i class='gray'>"+json.o_num+"</i></td></tr>");
+				}else{
+					$('#phph_list_5_b').append("<tr><td><span class='top'>"+i+"</span></td><td>"+json.o_id+"</td><td><i class='gray'>"+json.o_num+"</i></td></tr>");	
+				}	
+				i++;
+			});
+          }
+        });
+	$.getJSON("/interface/list/list_f.php", function(data1){
+
+		var arrayObj = new Array();
+          if(null != data1.items){
+            oDatalist1 = "<tr>",
+             $.each(data1.items,function(i){
+                oDatalist1 += "<td style='vertical-align: bottom;'><div><p>" + data1.items[i].per + "</p><em style='height:" + 260*data1.items[i].per/100 + "px;'>&nbsp;</em><b>" + data1.items[i].id + "</b></div></td>";
+				arrayObj.push("{'o_id':'"+data1.items[i].id+"','o_num':'"+data1.items[i].nub+"'}");
+             })
+             oDatalist1 += "</tr>",
+             $("#tb_list_f").html(oDatalist1);
+             var oDatalist_width = 500/data1.items.length-7;
+             $("#tb_list_f tr td").find("em").width(oDatalist_width);
+             $("#tb_list_f tr td").find("p").width(oDatalist_width);
+			 $("#tb_list_f tr td").find("b").hide();
+             $("#tb_list_f tr td:odd").find("em").addClass("t1");
+
+			var numOrder = arrayObj.sort(function(a, b){	
+				var aa = eval('(' + a + ')');
+				var bb = eval('(' + b + ')');
+				return ( bb.o_num - aa.o_num );
+			 })
+			
+			var newArray = numOrder.slice(0,10);
+			
+			var i = 1;
+			$.each(numOrder,function(index,value){
+				
+				var json = eval('(' + value + ')');		
+				$('#phph_list_6_a').append("<tr><td><span class='top'>"+i+"</span></td><td>"+json.o_id+"</td><td><i class='gray'>"+json.o_num+"</i></td></tr>");
+				i++;
+
+			});
+          }
+        });
+	*/
+	$(".center").live("click",function(){
+
+		if($(this).attr("id")=== 'pager_comp_list') {return;}
+		var url = "/interface/list/list_" + $(this).attr("id") + ".php" ;
+
+		art.dialog.data('url', url);
+		art.dialog.open('/iframe/watch.html', {title: '查看详情',width:'1000px',height:'500px',left: '50%', top: '50%', background: '#000000', opacity: 0.87,fixed: true,drag:false,resize:false,lock:true});
+	})
+
+
+})
+
+</script>
+</head>
+
+<body>
+<div class="head w980"> <a href="http://www.people.com.cn" target="_blank"><img src="images/logo.gif" border="0" alt="人民网" /></a> </div>
+<div id="head_c"> <img src="images/head_01.jpg" alt=""></div>
+<div class="content w980">
+<div class="bc"><img src="images/top.jpg" border="0" alt="" /></div>
+<!--导航栏-->
+<div class="nav w960">
+	<span href="#" name='title_a' id='main' class="this">首页</span>
+	<span href="#" name='title_a' id='hot'>热点报道</span>
+	<!--<span href="#" name='title_a' id='rank'>排行榜</span>-->
+	<span href="#" name='title_a' id='introduce'>维权指南</span>
+	<span href="#" name='title_a' id='info'>质检咨询</span>
+	<b style="float:right;font-weight:normal;font-size:12px;margin-right:10px;">咨询电话：010-65368440（不接受电话投诉） 邮箱：travel315@people.cn</b>
+</div>
+<div class="ej_path w940 clearfix" id='daohang'>
+<div class="top_nav"><a href="" style="color:#064d7b;float:left;margin-right:10px" target="_blank">投诉须知</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">隐私保护</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">版权说明</a><a href="" style="color:#064d7b;float:left;margin-right:10px"  target="_blank">常见问题</a><a href="comment.php" style="color:#064d7b;float:left;margin-right:10px" target="_blank">留言板</a></div><span><input name="" type="text" style="width:186px;height:26px;" id="srh_key"/><img src="images/ss.gif" width="47" height="31" id="srh_sub"/></span>
+</div>
+<div class="content w980" id="content_main" style="display:block">
+<div class="content w980" style="display:block">
+
+<!--嵌套区域-->
+<iframe width="670" height="260" src="http://travel.people.com.cn/GB/236434/361827/index.html" scrolling="no" frameborder="0" class="fl"></iframe>
+<!--登录区域-->
+<div class="p1_right fr" id="login_area">
+<h4><a style="width:100%">用户登录</a></h4>
+<table width="230" border="0" cellspacing="8" cellpadding="0" class="p1_ra clear" id="login_table">
+<tr><td>用户</td>
+<td><label><input type="text" name="textfield" id="username" /></label></td></tr>
+<tr><td>密码</td>
+<td><input type="password" name="textfield2" id="password" /><br/></td></tr>
+<tr><td>&nbsp;</td><td><img src="../images/dl.gif" width="55" height="26" id="button_login"/>&nbsp;&nbsp;<img src="../images/zc.gif" width="55" height="26" id="button_reg"/></td></tr>
+<tr><td>&nbsp;</td><td><p class="blue"><a href="#" id="fgt_pwd">忘记密码</a></p></td></tr>
+</table>
+<span><b>投诉注意事项：</b>本平台需注册后方可投诉，投诉需上传图片证据方可投诉，证据需为旅游行程单、旅游合同（盖章签名页）、订单截图等。
+ </span>
+</div>
+</div>
+
+<!--嵌套区域-->
+<div class="line1 mt20">&nbsp;</div>
+<div class="p1_content w940 mt20">
+<iframe width="630" height="260" src="http://travel.people.com.cn/GB/236434/361839/index.html" scrolling="no" frameborder="0" class="fl"></iframe>
+<div class="p1_list p1_list1 fr">
+<iframe width="302" height="160" src="http://travel.people.com.cn/GB/236434/361841/index.html" scrolling="no" frameborder="0"></iframe>
+<!--统计区域-->
+
+<div class="p2_ra"><ul>
+<li><i><a href="#">追回款项总计</a></i><em id='change_1'>0</em>元</li>
+<li><i>回复总量</i><em id='change_2'>0</em>条</li>
+<li><i>投诉总量</i><em id='change_3'>0</em>条</li>
+</ul></div>
+
+
+</div></div>
+
+<!--列表区域-->
+<div class="line1 mt20">&nbsp;</div>
+<div class="title1"><span><img src="../images/b1.gif" border="0" alt="" />平台</span></div>
+
+<table class="title2" cellspacing="0" cellpadding="0" border="0" id="comp_list"><thead>
+<tr><th>序号</th><th>提交时间</th><th>提交人</th><th>主题</th><th>分类</th><th>被投诉地区</th><th>状态</th><th>转交部门</th><th><img src="../images/up.gif" width="20" height="21" /> 支持 <img src="../images/dn.gif" width="20" height="21" /> 反对</th></tr></thead><tbody></tbody>
+</table>
+<div class="center page f14 mt20 mb20" id="pager_comp_list" style="height:40px;width:940px;text-align:center;margin:0 auto;"></div>
+<div class="line1 mt20">&nbsp;</div>
+
+<!-- 排行榜 数据抓取区域
+<div class="p1_content w940 mt20">
+
+<div class="p1_list fl">
+<h3><b>各省旅游诚信排名</b><span>分数</span></h3>
+<ul class="ph_list blue mt10" id="index_list_1">
+</ul></div>
+<div class="p1_list fl">
+<h3><b>在线旅游诚信排名</b><span>分数</span></h3>
+<ul class="ph_list blue mt10" id="index_list_2">
+</ul></div>
+<div class="p1_list p1_list1 fr">
+<h3><b>最佳回复排行</b><span>分数</span></h3>
+<ul class="ph_list blue mt10"  id="index_list_3">
+</ul>
+    
+</div></div>
+-->
+<div class="line1 mt20">&nbsp;</div>
+
+<!--嵌套区域-->
+
+<div class="p2_content w940 mt10">
+<iframe width="940" height="280" src="http://travel.people.com.cn/GB/236434/361842/index.html" scrolling="no" frameborder="0"></iframe>
+</div>
+</div></div>
+
+<!--排行榜-->
+
+<div class="content w980" id="content_rank" style="display:none">
+
+<div class="ej_content3 m10" style="width:900px">
+<h4><span class="this" id="aa_1" style="cursor:pointer;" onclick="showMena(1);">各地旅游诚信排名柱状图</span> <span id="aa_2" style="cursor:pointer;" onclick="showMena(2);">在线旅游诚信排名柱状图</span> </h4>
+
+<div class="ej_bor1 p10 m10" id="ba_1" style="display:block;width:900px;margin-top:-2px;">
+	<div class="ph_c ph_c1">
+		<table border="0" cellspacing="10" id="data_list_a" cellpadding="0" class="ph_tab" style="width:850px"></table>
+	</div>
+</div>
+
+<div class="ej_bor1 p10 m10" id="ba_2" style="display:none;width:900px;margin-top:-2px;">
+	<div class="ph_c ph_c1">
+		<table border="0" cellspacing="10" id="data_list_b" cellpadding="0" class="ph_tab" style="width:850px"></table>
+	</div>
+</div>
+
+</div>
+<div class="ph_a mt20">
+<h4>排名规则介绍</h4>
+<p class="p15">本排行榜以人民网旅游3·15投诉平台上的数据为基础，以投诉数量、回复数量、回复时长、投诉支持度、回复支持度、反馈人反馈意见六项数据为参数，统计出“各地旅游诚信排名”和“在线旅游诚信排名”两个排名，同时也公开其中8个参数排行供网友参考，8个参数排行榜分别为各省投诉数量排行、各省回复数量排行、各省回复时长排行、各省回复支持度排行、在线旅游投诉数量排行、在线旅游回复数量排行、在线旅游回复时长排行、在线旅游回复支持度排行。</p>
+</div>
+
+
+
+
+
+
+<h5>分项排行榜</h5>
+
+
+<div class="ej_content3 m10" style="width:900px">
+<h4><span class="this" id="a_1" style="cursor:pointer;" onclick="showMen(1);">各省投诉数量排行</span>
+<span id="a_2" style="cursor:pointer;" onclick="showMen(2);">在线旅游投诉数量排行</span></h4> 
+
+
+
+<div class="ph_c" id="list_a_1" style="display:block"><div class="ej_bor1 p10" style="width:900px">
+<div class="ph_left fl"><div class="ej_bor2"  style="display:block;width:525px;margin-top:-2px;">
+<h3><b>各省投诉数量排行柱状图</b></h3>
+<div class="ph_c2"><table width="100%" border="0" id="tb_list_a" cellspacing="0" cellpadding="0" class="ph_tab1"></table></div></div>
+<div class="center mt10" id="a"><img src="images/ph_28.gif" style="vertical-align:middle;"/> 点击放大此柱状图</div></div>
+<div class="ph_right fr"><div class="ph_table">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ph_b fl">
+<tr><th>排名</th><th>省份</th><th>数量</th></tr><tbody id="phph_list_1_a"></tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ph_b fr">
+<tr><th>排名</th><th>省份</th><th>数量</th></tr><tbody id="phph_list_1_b"></tbody></table>
+</div></div></div></div>
+
+
+
+
+<div class="ph_c" id="list_a_2" style="display:none"><div class="ej_bor1 p10" style="width:900px">
+<div class="ph_left fl"><div class="ej_bor2"  style="display:block;width:525px;margin-top:-2px;">
+<h3><b>在线旅游投诉数量排行</b></h3>
+<div class="ph_c2"><table width="100%" border="0" id="tb_list_b" cellspacing="0" cellpadding="0" class="ph_tab1"></table></div></div>
+<div class="center mt10" id="b"><img src="images/ph_28.gif" style="vertical-align:middle;"/> 点击放大此柱状图</div></div>
+<div class="ph_right fr"><div class="ph_table">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ph_b fl">
+<tr><th>排名</th><th>省份</th><th>数量</th></tr><tbody id="phph_list_2_a"></tbody></table>
+</div></div></div></div>
+
+</div>
+
+
+
+
+
+<div class="ej_content3 m10" style="width:900px">
+<h4><span class="this" id="a_3" style="cursor:pointer;" onclick="showMen(3);">各省回复数量排行</span>
+<span id="a_4" style="cursor:pointer;" onclick="showMen(4);">在线旅游回复数量排行</span></h4> 
+
+
+
+<div class="ph_c" id="list_a_3" style="display:block"><div class="ej_bor1 p10" style="width:900px">
+<div class="ph_left fl"><div class="ej_bor2"  style="display:block;width:525px;margin-top:-2px;">
+<h3><b>各省回复数量排行</b></h3>
+<div class="ph_c2"><table width="100%" border="0" id="tb_list_c" cellspacing="0" cellpadding="0" class="ph_tab1"></table></div></div>
+<div class="center mt10" id="c"><img src="images/ph_28.gif" style="vertical-align:middle;"/> 点击放大此柱状图</div></div>
+<div class="ph_right fr"><div class="ph_table">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ph_b fl">
+<tr><th>排名</th><th>省份</th><th>数量</th></tr><tbody id="phph_list_3_a"></tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ph_b fr">
+<tr><th>排名</th><th>省份</th><th>数量</th></tr><tbody id="phph_list_3_b"></tbody></table>
+</div></div></div></div>
+
+
+
+
+<div class="ph_c" id="list_a_4" style="display:none"><div class="ej_bor1 p10" style="width:900px">
+<div class="ph_left fl"><div class="ej_bor2"  style="display:block;width:525px;margin-top:-2px;">
+<h3><b>在线旅游回复数量排行</b></h3>
+<div class="ph_c2"><table width="100%" border="0" id="tb_list_d" cellspacing="0" cellpadding="0" class="ph_tab1"></table></div></div>
+<div class="center mt10" id="d"><img src="images/ph_28.gif" style="vertical-align:middle;"/> 点击放大此柱状图</div></div>
+<div class="ph_right fr"><div class="ph_table">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ph_b fl">
+<tr><th>排名</th><th>省份</th><th>数量</th></tr><tbody id="phph_list_4_a"></tbody></table>
+</div></div></div></div>
+
+</div>
+
+
+<div class="ej_content3 m10" style="width:900px">
+<h4><span class="this" id="a_5" style="cursor:pointer;" onclick="showMen(5);">各省回复支持度排行</span>
+<span id="a_6" style="cursor:pointer;" onclick="showMen(6);">在线旅游回复支持度排行</span></h4> 
+
+
+
+<div class="ph_c" id="list_a_5" style="display:block"><div class="ej_bor1 p10" style="width:900px">
+<div class="ph_left fl"><div class="ej_bor2"  style="display:block;width:525px;margin-top:-2px;">
+<h3><b>各省回复支持度排行</b></h3>
+<div class="ph_c2"><table width="100%" border="0" id="tb_list_e" cellspacing="0" cellpadding="0" class="ph_tab1"></table></div></div>
+<div class="center mt10" id="e"><img src="images/ph_28.gif" style="vertical-align:middle;"/> 点击放大此柱状图</div></div>
+<div class="ph_right fr"><div class="ph_table">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ph_b fl">
+<tr><th>排名</th><th>省份</th><th>数量</th></tr><tbody id="phph_list_5_a"></tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ph_b fr">
+<tr><th>排名</th><th>省份</th><th>数量</th></tr><tbody id="phph_list_5_b"></tbody></table>
+</div></div></div></div>
+
+
+
+
+<div class="ph_c" id="list_a_6" style="display:none"><div class="ej_bor1 p10" style="width:900px">
+<div class="ph_left fl"><div class="ej_bor2"  style="display:block;width:525px;margin-top:-2px;">
+<h3><b>在线旅游回复支持度排行</b></h3>
+<div class="ph_c2"><table width="100%" border="0" id="tb_list_f" cellspacing="0" cellpadding="0" class="ph_tab1"></table></div></div>
+<div class="center mt10" id="f"><img src="images/ph_28.gif" style="vertical-align:middle;" /> 点击放大此柱状图</div></div>
+<div class="ph_right fr"><div class="ph_table">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="ph_b fl">
+<tr><th>排名</th><th>省份</th><th>数量</th></tr><tbody id="phph_list_6_a"></tbody></table>
+</div></div></div></div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="copyright"> 人 民 网 版 权 所 有, 未 经 书 面 授 权 禁 止 使 用<br />
+Copyright &copy; 1997-2013 by www.people.com.cn all rights reserved </div>
+</div>
+
+<div id="fixedImage">
+	<img id="floatDelete" src="images/delete-float-img.png" width="17" height="16">
+	<br/>
+	<img src="images/erweima.jpg" width="150" height="150">
+</div>
+<script type="text/javascript">
+	var wrap = document.getElementById('fixedImage');
+	function resize(){
+		var left =document.documentElement.scrollLeft+ (document.documentElement.clientWidth -980)/2 - 200;
+		if (left < 0) {
+			left = 0;
+		}
+		wrap.style.right = left + 'px';
+	}
+	window.onresize = resize;
+	var deleteElem = document.getElementById('floatDelete');
+	deleteElem.onclick = function() {
+		var wrap = document.getElementById('fixedImage');
+		wrap.parentNode.removeChild(wrap);
+	};
+</script>
+</body>
+</html>

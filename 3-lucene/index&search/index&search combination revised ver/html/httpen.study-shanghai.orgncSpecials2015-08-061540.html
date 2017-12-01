@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Study in Shanghai</title>
+<link href="/hongbull.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.8.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+                        $(function(){
+                        $(":input").focus(function(){
+                            if($(this).val() ==this.defaultValue){  
+                            $(this).val("");           
+                                } 
+                        }).blur(function(){
+                        if ($(this).val() == '') {
+                        $(this).val(this.defaultValue);
+                                 }
+                        });
+                                        })
+                    
+-->
+
+</script>
+</head>
+
+<body>
+<div id="site">
+	<!--Top Bar 开始-->
+      <div id="top_bar">
+<form name=search_js1 method=post action='/e/search/index.php' > 
+<input name="show" type="hidden" value="title,smalltext,newstext,writer">
+   	  <div id="top_bar_Search">
+      	<div id="top_bar_Search_input"><input name="keyboard" id="sh1" class="top_Search_input" type="text" value="Search" />
+        </div>
+        <div id="top_bar_Search_BT">
+        <input name="" onclick="su();" type="button" class="top_Search_BT" style="cursor:hand"/>
+        </div>
+</form>
+<script>
+function su(){
+var key =$.trim(document.getElementById("sh1").value);
+
+if(key!='' && key!='Search'){
+document.search_js1.submit();
+}else{
+alert('Please enter the keywords!');
+}
+}
+</script>
+   	  </div>
+      <div id="top_Item_app"><a href="http://en.study-shanghai.org/appsh/" class="Font_14_Green">App</a></div>
+      <div id="top_Item_English"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Item_中文"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Logo"><img src="/images/logo.png" />
+      </div>
+    </div>
+    <!--Top Bar 结束-->
+    
+    <!--Banner 开始-->
+    <div id="Banner">
+		<div id="Banner_pic"><img src="/images/Banner4.png" /></div>
+  </div>
+  <script>
+  var Banner_count=3;
+  var Banner_Max =4;
+  var Banner_list = new Array("images/Banner1.png","images/Banner2.png","images/Banner3.png","images/Banner4.png"); 
+
+	$(document).ready(function(){
+ 		$("#Banner_left").click(function(){
+			
+    		if( Banner_count>1 ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count--;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+		
+ 		$("#Banner_right").click(function(){
+			
+    		if( Banner_count<Banner_Max ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count++;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+	});
+
+
+  </script>
+  <!--Banner 结束-->
+  <!--Menu 开始-->
+  <div id="nav" class="nav">
+  <ul class="first">
+<li class="a"><a class="fir" href="/"><span><img src="/images/Menu_Icon_home_on.png" style="margin-right:5px;"/>Home</span></a>
+    <li class="b"><a class="fir" href="/sis/"><span>Study in Shanghai</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+       <ul class="second" style="display: none;">
+          <li><a href="/sis/ws/2014-02-21/26.html"><span>Why Shanghai</span></a></li>
+          <li><a href="/sis/universities/"><span>Universities</span></a></li>
+          <li><a href="/sis/courses/"><span>Courses</span></a></li>
+          <li><a href="/sis/tutors/"><span>Faculty</span></a></li>
+          <li><a href="/e/action/ListInfo/?classid=19&oper=1"><span>Student Stories</span></a></li>
+        </ul>
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+    <li class="c"><a class="fir" href="/ag/"><span>Application Guide</span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ag/lr/"><span>Regulations</span></a></li>
+          <li><a href="/ag/visa/"><span>FAQs</span></a></li>
+          <li><a href="http://www.study-shanghai.org/Scholarship_en.asp"><span>Scholarships</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_3_en"><span>Applying Online</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_STA_en"><span>Status Check</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="d"><a class="fir" href="/ds/"><span>Discover Shanghai </span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ds/cl/"><span>Cultural Life</span></a></li>
+          <li><a href="/ds/museums/"><span>Museums</span></a></li>
+          <li><a href="/ds/living/"><span>Living</span></a></li>
+          <li><a href="/ds/sights/"><span>Sights</span></a></li>
+          <li><a href="/ds/itineraries/"><span>Itineraries</span></a></li> 
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="e cur"><a class="fir" href="/nc/news/"><span>News Center </span>  </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+    <li class="f"><a  class="fir" href="/lc/"><span>Learn Chinese</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/lc/lm/"><span>Mandarin</span></a></li>
+          <li><a href="/lc/ls/"><span>Shanghai Dialect</span></a></li>
+          <li><a href="/lc/hsk/"><span>HSK</span></a></li>
+        </ul>  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+<li class="g"><a class="fir" href="/is/"><span>International Schools</span></a>
+            <ul class="second" style="display: none;">
+              <li>
+                <a href="/is/is"><span>International School</span></a>
+              </li>
+              <li>
+                <a href="/is/id"><span>International Division of Local School</span></a>
+              </li>
+              <li>
+                <a href="/is/asc"><span>After School Class</span></a>
+              </li>
+            </ul>
+          </li>
+  </ul>  
+</div><div class="cb"></div>
+  <!--Menu 结束-->
+  <div id="NavBar">
+  <a href="/index.html">Home</a>&nbsp;>&nbsp;<a href="/nc/">News Center</a>&nbsp;>&nbsp;<a href="/nc/Specials/">Specials</a> </div>  
+<div class="cb"></div>
+
+  <!--Content 开始-->
+  <div id="Content">
+	<div id="End_full">
+  		<div id="End_page_full">
+        	
+       <div id="End_page_top_title">
+         2015 China (Shanghai) International Youth Football Tournament          </div>
+          <div class="End_page_top_datatime">Updated: 2015-08-12 </div>
+          <div class="End_page_top_datatime">  (<a href='http://cn.study-shanghai.org/' target=_blank>study-shanghai.org</a>)</div>
+          <div id="End_page_top_content">
+
+<table border="0" cellspacing="1" cellpadding="1">
+    <tbody>
+        <tr>
+            <td colspan="5">
+            <p style="text-align: center"><img alt="920.jpg" width="920" height="240" src="/d/file/nc/Specials/2015-08-12/1dcfdcb4463c9ebf84dc838d0bd831a5.jpg" /></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+            <p>&nbsp;<span style="font-size: large"><span style="font-family: 'Comic Sans MS'"><em>Editor's note</em></span></span></p>
+            <p style="text-align: justify">The 2015 China (Shanghai) International Youth Football Tournament kicks off on July 11, with an aim to connect young soccer teams from around the world and promote the development of youth soccer in China.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" style="text-align: center">
+            <p style="text-align: left"><img alt="children.jpg" width="920" height="561" src="/d/file/nc/Specials/2015-08-10/3df6df250c057febe7afcf5b4789c2e6.jpg" /></p>
+            <p style="text-align: justify">A total of 12 teams, with eight from abroad, will participate in the weeklong tournament. The foreign teams include a German youth soccer club from Frankfurt, Spain's Escola Esportiva Guineueta club, Cameroun's Yaounde 1-APEJES Academy and Australia's South Melbourne Football Club.</p>
+            <p style="text-align: justify">The four domestic teams are from Shanghai, Fujian province and the Inner Mongolia autonomous region.</p>
+            <p style="text-align: justify"><strong><em>&gt;&gt;&gt;<a href="http://en.study-shanghai.org/nc/news/2015-08-06/1544.html">Read More</a></em></strong></p>
+            <p style="text-align: left">&nbsp;<span style="font-size: large"><font face="Comic Sans MS"><i>Nation works to rebuild its soccer &lsquo;pyramid&rsquo;</i></font></span></p>
+            <p style="text-align: left"><img alt="champion.jpg" width="920" height="583" src="/d/file/nc/Specials/2015-08-10/8c5df10e8b80fbef082cc3b6f6a9b5cf.jpg" /></p>
+            <p style="text-align: justify">Overseas Chinese have provided strong support to the 2015 China (Shanghai) International Youth Football Tournament, an event to promote the growth of youth soccer in the country, according to organizers.</p>
+            <p style="text-align: justify">Data from the Shanghai Overseas Chinese Foundation shows that overseas Chinese contributed about 5.6 million yuan ($900,000) to sponsoring eight foreign teams' insurance, return flights and other related expenses.</p>
+            <p style="text-align: justify"><strong><em>&gt;&gt;&gt;<a href="http://en.study-shanghai.org/nc/news/2015-08-06/1542.html">Read More</a></em></strong></p>
+            <p style="text-align: justify"><em><span style="font-size: large"><font face="Comic Sans MS"><i>China's bid for a level playing field</i></font></span></em></p>
+            <p style="text-align: left"><img alt="shake-hands.jpg" width="920" height="557" src="/d/file/nc/Specials/2015-08-10/9f18a7db1ef1f31b8ec46bc10a5a17eb.jpg" /></p>
+            <p style="text-align: justify">Youth football tournament expected to help young players learn from international competition.</p>
+            <p style="text-align: left">In hosting the 2015 China (Shanghai) International Youth Football Tournament, the first of its kind, physical educators and football experts hoped the event would introduce new training expertise and team-building skills as the country looks to inject new life into youth football.</p>
+            <p style="text-align: left"><strong><em>&gt;&gt;&gt;<a href="http://en.study-shanghai.org/nc/news/2015-08-06/1541.html">Read More</a></em></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+            <p style="text-align: justify"><strong>&nbsp;</strong><span style="font-size: large"><font face="Comic Sans MS"><i>Overseas Chinese&nbsp;offer full support to help share experiences</i></font></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+            <p><img alt="920learn-chinese.jpg" width="920" height="552" src="/d/file/nc/Specials/2015-08-10/6a09f9cc5a7c8770d0491a7cd29712d4.jpg" /></p>
+            <p>&quot;Without support from those overseas Chinese, the preparation of the tournament might not have gone as smoothly as it did,&quot; said Shen Ming, president of the Shanghai All-China Federation of Returned Overseas Chinese.</p>
+            <p style="text-align: left"><strong><em>&gt;&gt;&gt;<a href="http://en.study-shanghai.org/nc/news/2015-08-06/1543.html">Read More</a></em></strong></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+          </div>
+        </div>
+        <div id="blank_bar_h13">
+        </div>
+  <!--底部按钮 开始-->
+      <div class="Learn_Bottom_menu_full">
+      <div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="http://studyinshanghai.cndy.org/e/action/ListInfo/?classid=19&oper=1"><img src="/images/Learn_Icon1.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="http://studyinshanghai.cndy.org/e/action/ListInfo/?classid=19&oper=1">Student Stories</a></div>
+        </div>
+
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="http://studyinshanghai.cndy.org/lc/"><img src="/images/Learn_Icon2.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="http://studyinshanghai.cndy.org/lc/">Learn Chinese</a></div>
+        </div>
+        
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="/appsh/"><img src="/images/Learn_Icon3.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right2">
+          <a href="#">APP</a></div>
+        </div>
+
+    </div>
+    <!--底部按钮 结束-->    
+	</div>
+  </div>
+  <!--Content 结束-->
+        <div id="bottom_bar">
+  	<div id="bottom_left"></div>
+    <div id="bottom_content">
+    	<div id="bottom_content1">
+        	<ul>
+            <li><a href="http://en.study-shanghai.org/sitemap/2014-03-13/442.html" class="Font_12_fff">Sitemap</a></li>
+            <li><a href="http://en.study-shanghai.org/tou/2014-04-07/655.html" class="Font_12_fff">Terms of Use</a></li>
+            <li><a href="http://en.study-shanghai.org/cu/2014-04-07/656.html" class="Font_12_fff">Contact Us</a></li>
+            <li><a href="http://en.study-shanghai.org/lk/2014-03-13/441.html" class="Font_12_fff">Links</a></li>
+            </ul>
+        </div>
+        <div class="cb"></div>
+        <span>Copyright © 2014 Shanghai Municipal Education Commission. All rights reserved.</span>
+    </div>    
+    <div id="bottom_right"></div>
+  </div>
+<div style="dispaly:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1252937499'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D1252937499%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<script type="text/javascript" src="/js/nav.js"></script>
+  
+</div> 
+</body>
+</html>

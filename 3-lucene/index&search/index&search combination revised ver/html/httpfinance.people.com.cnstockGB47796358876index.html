@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta http-equiv="content-language" content="utf-8" />
+<meta name="robots" content="all" />
+<meta name="description" content="“证监会答复投资者信息检索库”，让广大网友更快捷、方便地查询到证监会对投资者历次的回复内容，让更多的投资者通过证监会留言板这个平台获得证监会的答复。" />
+<meta name="keywords" content="证监会、答复、回复、投资者、留言、信息检索、投资者保护
+" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="358876" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="/img/MAIN/2013/03/113015/gpsearch20130131.css" type="text/css" rel="stylesheet" rev="stylesheet" media="all" />
+<script type="text/javascript" src="/img/MAIN/2012/10/112513/js_library/jquery-1.7.1.min.js"></script>
+<script src="/css/search.js"></script>
+<script language="javascript">
+function postMsg()
+{
+	if (document.form1.content.value==null || document.form1.content.value=="") {
+		alert("请填写留言。");
+		return;
+	} else {
+		document.form1.submit();
+	}
+}
+</script>
+<script type="text/javascript">
+ function setCookie1(objName)
+ {		
+	 var bn='95953';
+	document.cookie= objName+"="+bn;		 
+ } 
+ function setCookie(objName)
+ {
+	 var exdate=new Date();
+	 var t=exdate.getTime();
+	 exdate.setTime(exdate.getTime()+6000);//投票间隔时间，可改
+	 var bn=exdate.getTime()+6000;
+	document.cookie= objName+"="+bn+";expires="+exdate.toGMTString(); 
+	 
+ }
+ function getCookie(objName)
+{
+  var arrStr = document.cookie.split("; ");   
+
+   for(var i = 0;i < arrStr.length;i ++)
+   {    
+     var temp = arrStr[i].split("=");    
+	 if(temp[0] == objName) 
+	 return unescape(temp[1]);   } 
+ }     
+ $(document).ready(function(){	 
+ $.getJSON("http://littlepoll.people.com.cn/2012ys/20120224button/json.php?type=85&callback=?",function(data){//每一个投票对应一个type的值
+          for(var i = 0; i < data.length; i++)
+             {
+               
+				 $("#"+data[i].vid).html(data[i].bnum);
+             }		
+	});	 
+	$("img.button1").click(function(){
+		var voteId = $(this).attr("voteId") ;
+		
+    if(getCookie("bt"+voteId) == null||getCookie("bt"+voteId) =='95953'){
+        setCookie1("bt"+voteId);
+	var a = parseInt($("#"+voteId).text()) ,b = 1;	
+	 var num= a + b;	 
+	 $("#"+voteId).text(num);
+	var t=getCookie("bt"+voteId);
+	$.ajax({
+	  type:"get", 
+	  url: "http://littlepoll.people.com.cn/2012ys/20120224button/tp.php?id=" + voteId+"&t="+t+"&type=85",//每一个投票对应一个type的值
+	  voteId : voteId,
+	  dataType:"json",
+	  data:"jsonCallback=?",     
+	  cache: false,
+	  success:alert('投票成功，感谢您的支持！')
+	  
+	});
+	
+ setCookie("bt"+voteId);
+}
+else
+{alert('您太快了，请休息一下！！');}
+		});
+
+   });  
+  </script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".pai_c td.focus span").eq(0).css({background:"#d00"});
+	$(".pai_c td.focus span").eq(1).css({background:"#d00"});
+	$(".pai_c td.focus span").eq(2).css({background:"#d00"});
+});
+</script>
+<title>证监会答复投资者信息检索库--财经--人民网</title>
+</head>
+<body>
+<!--头部-->
+<div class="top_nav_c">
+<div class="top_nav m0 w980"><a href="http://www.people.com.cn" target="_blank"><img src="/img/MAIN/2013/03/113015/images/rmw_logo.jpg" width="73" height="31" alt="人民网" /></a><a href="http://finance.people.com.cn/stock/" target="_blank"><img src="/NMediaFile/2013/0314/MAIN201303141622173314117360577.gif" border="0" alt="" /></a><span><a href="http://finance.people.com.cn/stock/GB/222942/index.html" target="_blank">股票频道滚动新闻</a>|<a href="http://finance.people.com.cn/realstock/cha.html?code1=000001&setcode=1" target="_blank">行情中心</a>|<a href="http://www.people.com.cn/GB/138812/index.html" target="_blank">网站地图</a></span>
+</div>
+</div>
+<div class="content clearfix">
+   <p class="top"><img src="/img/MAIN/2013/03/113015/images/top.jpg" border="0" alt="" /></p>
+   <div class="search">
+      <div class="search_t clearfix clearfix"><span class="fl" style="display:none;"><input type="radio" name="" />证监会答复&nbsp;&nbsp;|&nbsp;&nbsp;<input type="radio" name="" />网友答复</span>
+      <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <span class="bds_more">分享到：</span>
+        <a class="bds_people">
+        <a class="bds_tsina"></a>
+        <a class="bds_qzone"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <a class="bds_tsohu"></a>
+        <a class="bds_t163"></a>
+        <a class="bds_mshare"></a>
+		<a class="shareCount"></a>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=285750" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	var bds_config = {'snsKey':{'tsina':'2672193106','tqq':'b6c906fd723544f5a398d65d0b2638ba'}};
+	document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+      </div>
+       <form action="http://search.people.com.cn/rmw/GB/zjhtbj/gj_search_pd.jsp" name="searchForm" method="post"  onsubmit="if(getParameter_DJ_ZJHTBJ('ALL') == false) return false;" target="_blank">
+      <input type="hidden" name="XMLLIST">
+	  <div class="search_bg clearfix clear"><input name="names" Id="names" type="text"  size="10"></input><a href="javascript:;" onclick="document.searchForm.onsubmit();"><img src="/img/MAIN/2013/03/113015/images/b3.jpg" border="0" alt="" /></a></div><span class="tools">&nbsp;&nbsp;<a href="http://finance.people.com.cn/stock/n/2013/0424/c67815-21259572.html" target="_blank">帮助</a>&nbsp;|&nbsp;<a href='mailto:yangxi@people.cn' target="_blank">邮件反馈</a></span>
+   </div>
+   </form>
+</div>
+<!--资料内容-->
+<div class="p1_content clearfix">
+    <!--左侧-->
+	<div class="p1_left fl">
+	   <h3 class="clearfix clear"><span>网友留言热点排行</span></h3>
+	   <table class="pai_t" cellspacing="0" cellpadding="0" border="0">
+	     <tr>
+	       <td width="35">排名</td>
+		   <td width="180">关键词</td>
+		   <td width="60">留言热度</td>
+		   <td width="75">我要关注</td>
+	     </tr>
+	   </table><table class="pai_c" cellspacing="0" cellpadding="0" border="0">
+	     <tr>
+	       <td class="focus"><span>1</span></td>
+		   <td><a href="http://finance.people.com.cn/stock/n/2013/0715/c67815-22195612.html"target="_blank" class="t2">证监会研究“T+0”</a></td>
+		   <td>★★★★</td>
+		   <td><b id="8416"></b><img src="/img/MAIN/2013/03/113015/images/ding.jpg" border="0" alt="" class="button1" voteId="8416" style="cursor:hand;" /></td>
+	     </tr>
+               <tr>
+	       <td  width="35" class="focus"><span>2</span></td>
+		   <td  width="180"><a href="http://finance.people.com.cn/stock/n/2013/0708/c67815-22111680.html"target="_blank"  class="t2">IPO重启</a></td>
+		   <td  width="60">★★★</td>
+		   <td  width="75"><b id="8412"></b><img src="/img/MAIN/2013/03/113015/images/ding.jpg" border="0" alt="" class="button1" voteId="8412" style="cursor:hand;" /></td>
+	     </tr>
+		  <tr>
+	       <td class="focus"><span>3</span></td>
+		   <td><a href="http://finance.people.com.cn/stock/n/2013/0705/c67815-22096480.html"target="_blank"  class="t2">国债期货</a></td>
+		   <td>★★☆</td>
+		   <td><b id="8413"></b><img src="/img/MAIN/2013/03/113015/images/ding.jpg" border="0" alt="" class="button1" voteId="8413" style="cursor:hand;" /></td>
+	     </tr>
+		  <tr>
+	       <td class="focus"><span>4</span></td>
+		   <td><a href="http://finance.people.com.cn/stock/GB/217390/366109/index.html"target="_blank"  class="t2">A股上半年排行榜</a></td>
+		   <td>★☆☆</td>
+		   <td><b id="8414"></b><img src="/img/MAIN/2013/03/113015/images/ding.jpg" border="0" alt="" class="button1" voteId="8414" style="cursor:hand;" /></td>
+	     </tr>
+		  <tr>
+	       <td class="focus"><span>5</span></td>
+		   <td><a href="http://finance.people.com.cn/stock/n/2013/0624/c222942-21943879.html"target="_blank"  class="t2">融资融券做空A股</a></td>
+		   <td>★☆</td>
+		   <td><b id="8415"></b><img src="/img/MAIN/2013/03/113015/images/ding.jpg" border="0" alt="" class="button1" voteId="8415" style="cursor:hand;" /></td>
+	     </tr>		  
+	   </table>
+	</div>
+	<!--右侧-->
+	<div class="p1_right fr">
+	   <h3 class="clearfix clear"><span>搜索热词</span></h3>
+	  <div class="hot_key clearfix"><a href="http://search.people.com.cn/rmw/GB/rmwsearch/gj_search_lj.jsp?keyword=IPO重启&channel=财经"target="_blank"  class="t2">IPO重启</a><a href="http://search.people.com.cn/rmw/GB/rmwsearch/gj_search_lj.jsp?keyword=股市“T+0”&channel=财经" target="_blank" class="t4">股市“T+0”</a><a href="http://search.people.com.cn/rmw/GB/rmwsearch/gj_search_lj.jsp?keyword=限售股解禁&channel=财经"target="_blank"  class="t3">限售股解禁</a><a href="http://search.people.com.cn/rmw/GB/rmwsearch/gj_search_lj.jsp?keyword=国债期货&channel=财经" target="_blank"  class="t2">国债期货</a><a href="http://search.people.com.cn/rmw/GB/rmwsearch/gj_search_lj.jsp?keyword=余额宝&channel=财经" target="_blank">余额宝</a><a href="http://search.people.com.cn/rmw/GB/rmwsearch/gj_search_lj.jsp?keyword=优先股试点&channel=财经" target="_blank" class="t1">优先股试点</a><a href="http://search.people.com.cn/rmw/GB/rmwsearch/gj_search_lj.jsp?keyword=茅台降价&channel=财经" target="_blank"  class="t3">茅台降价</a><a href="http://search.people.com.cn/rmw/GB/rmwsearch/gj_search_lj.jsp?keyword=史玉柱增持民生银行&channel=财经" target="_blank" class="t4">史玉柱增持民生银行</a></div>
+	  <p><a href="http://finance.people.com.cn/stock/GB/217390/242946/index.html" target="_blank"><img src="/img/MAIN/2013/03/113015/images/dafu.jpg" border="0" alt="" /></a><a href="http://finance.people.com.cn/stock/GB/348678/index.html" target="_blank"><img src="/img/MAIN/2013/03/113015/images/fabu.jpg" border="0" alt="" /></a></p>
+	</div>
+	<!--留言-->
+	<div class="note_list clearfix clear">
+	   <span class="fl"><img src="/img/MAIN/2013/03/113015/images/liuyan.jpg" border="0" alt="" /></span>
+	   <div class="fr">
+       <FORM name="form1" onSubmit="return checkboard()" 
+        action="http://comments.people.com.cn/bbs_new/app/src/main/?action=parse_publish&op=ins&nid=47796" method="post">
+	     <p class="clearfix"><span>用户名:<input type="text" name="yonghuming" />（请填写您的网名，空白不填则显示为:"网友"）</span><strong>&nbsp;&nbsp;<a href="http://comments.people.com.cn/bbs_new/app/src/main/?action=list&amp;nid=47796" target="_blank">查看证监会留言板&gt;&gt;</a></strong></p>
+		 <textarea name="content" rows="" cols=""></textarea>
+		 <p class="tc clearfix"><a href="JavaScript:postMsg();"><img src="/img/MAIN/2013/03/113015/images/b1.jpg" border="0" alt="" /></a>&nbsp;&nbsp;&nbsp;<a href="JavaScript:document.form1.reset();" ><img src="/img/MAIN/2013/03/113015/images/b2.jpg" border="0" alt="" /></a></p>
+         </FORM>
+	   </div>
+	</div>
+</div>
+<div class="copyright clearfix">
+<style type="text/css">
+#copyright{width:980px; margin:0px auto; font-size:12px; text-align:center; padding:20px 0; line-height:180%; clear:both;}
+</style>
+<div id="copyright">人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br />
+Copyright &copy; 1997-2013 by www.people.com.cn. all rights reserved</div>
+</div>
+<script src="/css/2010tianrun/webdig_test.js"
+language="javascript" type="text/javascript"></script>
+</body>
+</html>

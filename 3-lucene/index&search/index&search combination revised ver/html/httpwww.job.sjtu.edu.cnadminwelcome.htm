@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script type="text/javascript" src="../JSLib/Utility.js"></script>
+<script type="text/javascript" src="../JSLib/CDOJS/Utility.js"></script>
+<script type="text/javascript" src="../JSLib/CDOJS/HashMap.js"></script>
+<script type="text/javascript" src="../JSLib/CDOJS/CDO.js"></script>
+<script type="text/javascript" src="../JSLib/CDOJS/HttpClient.js"></script>
+<script type="text/javascript" src="../JSLib/CDOJS/JSON.js"></script>
+<script type="text/javascript" src="login.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<div class="user_top_wrap">
+	<!--头部内容-->
+	<div class="user_top_wrap_content">
+    	<div class="user_logo_wrap"><img src="/images/logo.png" width="479" height="57" /></div>
+        <!--登录信息-->
+        <!--登录信息-->
+    </div>
+    <!--头部内容 END-->
+</div>
+<!--头部 END-->
+
+<!--登录部分-->
+<div class="login_reference_content_warp">
+	<div class="login_reference_content_content">
+    	<!--左边-->
+    	<div class="login_reference_content_left">
+        	<p class="font_24 color_54626f" style="margin-top:30px;">用户登录</p>
+            <ul class="login_list_view" style="margin-top:50px;">
+            	<p style="display:none;color: red;" id="loginError"><img src="/images/icon_no.png" style="vertical-align:text-bottom;"  /> 用户名或密码错误!</p>
+            	<li class="mt10"><img src="/images/login_email_icon.png" /><input type="text" class="login_input_txt" id="strLoginId" onblur="check()"/>
+            	&nbsp;<div style="vertical-align:top;display:inline-block;"><span><img src="/images/icon_right.png" id="right1" style="display: none;vertical-align:text-bottom;margin-top:12px;"/></span><span style="display: none;" id="wrong1"><img src="/images/icon_no.png" style="vertical-align:text-bottom;"  /><span id="cuo1">&nbsp;</span></span><div></li>
+                <li class="mt10"><img src="/images/password_icon.png" /><input type="password" class="login_input_txt" id="strPassword" onblur="check()"/>
+                &nbsp;<div style="vertical-align:top;display:inline-block;"><span><img src="/images/icon_right.png" id="right2" style="display: none;vertical-align:text-bottom;margin-top:12px;"/></span><span style="display: none;" id="wrong2"><img src="/images/icon_no.png" style="vertical-align:text-bottom;"  /><span id="cuo2">&nbsp;</span></span></div></li>
+                <li class="mt10">
+                	<img src="/images/yangzheng_icon.png" /><input type="text" id="strVerifyCode" onblur="check()" class="login_input_txt" style="width:100px;" /><img src="/servlet/verifyCode.svl" id="codeImg" alt="点击重新获取验证码" title="点击重新获取验证码" style="vertical-align:top; margin:8px 0 0 15px;" /><a href="javascript:getCode();" style=" vertical-align:top;margin:0 0 0 15px; display:inline-block;">换一换</a>
+                	&nbsp;<div style="vertical-align:top;display:inline-block;"><span><img src="/images/icon_right.png" id="right3" style="display: none;vertical-align:text-bottom;margin-top:12px;"/></span><span style="display: none;" id="wrong3"><img src="/images/icon_no.png" style="vertical-align:text-bottom;"  /><span id="cuo3">&nbsp;</span></span></div>
+                </li>
+                <li class="mt20">
+                	<input type="button" class="login_btn_1" value="登   录" onclick="login()"/>
+                </li>
+            </ul>
+        </div>
+        <!--左边 END-->
+        
+        <!--右边-->
+        <div class="jd_dl_right">
+            <p style="margin-top:50px;">点击进入上海交通大学统一身份认证入口</p>
+            <p class="jd_dl_right_btn"><a href="/LoginServlet.svl">认证登录</a></p>
+        </div>
+        <!--右边 END-->
+        <div class="clear"></div>
+	</div>
+</div>
+<!--登录部分 END-->
+</body>
+</html>

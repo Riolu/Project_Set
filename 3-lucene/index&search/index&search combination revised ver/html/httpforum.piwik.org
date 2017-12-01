@@ -1,0 +1,619 @@
+
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- START TEMPLATE header.tpl -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN">
+
+<head>
+
+<title>Piwik Forums</title>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="http://forum.piwik.org/css.php?0,css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="http://forum.piwik.org/css.php?0,css_print" media="print" />
+  <link rel="stylesheet" type="text/css" href="http://piwik.org/wp-content/themes/piwik/assets/css/forum.min.css" media="screen" />
+
+
+<script type="text/javascript" src="http://forum.piwik.org/javascript.php"></script>
+
+<script type="text/javascript" src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript" src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery.dlmenu.js"></script>
+<script type="text/javascript" src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery.sticky.js"></script>
+<script type="text/javascript" src="http://piwik.org/wp-content/themes/piwik/assets/js/vendor/jquery.validate.min.js"></script>
+<script type="text/javascript" src="http://piwik.org/wp-content/themes/piwik/assets/js/scripts.min.js"></script>
+<script type="text/javascript" src="http://forum.piwik.org/templates/piwik/js/frontend.js"></script>
+<script type="text/javascript" src="http://forum.piwik.org/templates/piwik/js/prettify.js"></script>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS (topics)" href="http://forum.piwik.org/feed.php?0,type=rss" />
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS (topics + replies)" href="http://forum.piwik.org/feed.php?0,replies=1,type=rss" />
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--[if lte IE 6]>
+  <style type="text/css">
+  #phorum {
+  width:       expression(document.body.clientWidth > 900
+               ? '900px': 'auto' );
+  margin-left: expression(document.body.clientWidth > 900
+               ? parseInt((document.body.clientWidth-900)/2) : 0 );
+  }
+  </style>
+  <![endif]-->
+
+
+<!--
+Some Icons courtesy of:
+  FAMFAMFAM - http://www.famfamfam.com/lab/icons/silk/
+  Tango Project - http://tango-project.org/
+-->
+  <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+
+<body onload="">
+
+<style>
+#header {
+padding:0;
+padding-bottom:20px;
+padding-top:20px;
+margin-left:30px;
+}
+#phorum #logo {
+background:none;
+height:auto;
+}
+#phorum {
+margin-left:5%;
+float:left;
+max-width:64%;
+}
+</style>
+  <button class="navbar-toggle-menu" type="button" data-toggle="collapse" data-target=".sidebar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</button>
+<div class="sidebar affix" role="complementary">
+
+	<aside>
+		<div id="side-wrap">
+			<div id="side-main">
+				<header class="banner" role="banner">
+					<a class="page-title brand" href="http://piwik.org/"> <i class="ficon-piwik_logo header-logo"></i> Open Analytics Platform </a>
+					<!-- languages -->
+					<div class="language-widget ui-dropdown">
+											</div>
+				</header>
+
+				<nav class="nav-main dl-menuwrapper" id="menu" role="navigation">
+					<ul id="menu-sidebar-header-original" class="nav"><li class="dropdown menu-learn-more"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Learn more <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-what-is-piwik"><a href="http://piwik.org/what-is-piwik/">What is Piwik?</a></li>
+	<li class="menu-features"><a href="http://piwik.org/features/">Features</a></li>
+	<li class="menu-integrations"><a href="http://piwik.org/integrate/">Integrations</a></li>
+	<li class="menu-log-analytics"><a href="http://piwik.org/log-analytics/">Log Analytics</a></li>
+	<li class="menu-roadmap"><a href="http://piwik.org/roadmap/">Roadmap</a></li>
+	<li class="menu-changelog"><a href="http://piwik.org/changelog/">Changelog</a></li>
+	<li class="menu-enterprise"><a target="_blank" href="https://piwik.pro/enterprise/?pk_source=Piwik.org&#038;pk_medium=Enterprise_Menu_link&#038;pk_campaign=PO_Enterprise">Enterprise</a></li>
+</ul>
+</li>
+<li class="dropdown menu-community"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://">Community <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-get-involved"><a href="http://piwik.org/get-involved/">Get involved</a></li>
+	<li class="menu-translators"><a href="http://piwik.org/translations/">Translators</a></li>
+	<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+	<li class="menu-contact-the-team"><a href="http://piwik.org/contact/">Contact the team</a></li>
+</ul>
+</li>
+<li class="dropdown menu-help"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Help <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-user-guides"><a href="http://piwik.org/docs">User Guides</a></li>
+	<li class="menu-faq"><a href="http://piwik.org/faq">FAQ</a></li>
+	<li class="menu-forums"><a href="http://forum.piwik.org">Forums</a></li>
+	<li class="menu-consulting"><a href="http://piwik.org/consulting/">Consulting</a></li>
+	<li class="menu-issue-tracker"><a target="_blank" href="https://github.com/piwik/piwik/issues">Issue tracker</a></li>
+</ul>
+</li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org/">Marketplace</a></li>
+<li class="menu-developers"><a href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-hosting"><a href="http://piwik.org/hosting/">Hosting</a></li>
+<li class="dropdown menu-about"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="http://piwik.org/about/">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-jobs-were-hiring"><a href="http://piwik.org/jobs/">Jobs (we&#8217;re hiring!)</a></li>
+	<li class="menu-history"><a href="http://piwik.org/history/">History</a></li>
+	<li class="menu-press"><a href="http://piwik.org/press/">Press</a></li>
+	<li class="menu-testimonials"><a href="http://piwik.org/testimonials">Testimonials</a></li>
+	<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+	<li class="menu-team"><a href="http://piwik.org/team/">Team</a></li>
+</ul>
+</li>
+<li class="menu-blog"><a href="http://piwik.org/blog/">Blog</a></li>
+</ul>				</nav>
+				<div style="clear: both"> </div>
+			</div>
+		</div>
+		<div class="content-info side-footer" role="contentinfo">
+			<ul id="menu-sidebar-footer" class="nav"><li class="menu-download"><a href="http://piwik.org/download/">Download</a></li>
+<li class="menu-demo"><a target="_blank" href="http://demo.piwik.org">Demo</a></li>
+</ul>			<form role="search" method="get" class="form-inline" action="http://piwik.org/">
+  <div class="form-group search-form">
+    <input type="search" value="" name="s" class="ui-search-field form-control" placeholder="Search phrase...">
+    <label class="hide">Search for:</label>
+     <button type="submit" class="btn-search"><i class="ficon-search"></i></button>
+  </div>
+</form>
+			<div class="side-footer-bottom">
+				<hr class="separate">
+				<a href="http://piwik.pro/?pk_source=Piwik.org&pk_medium=Banner_link&pk_campaign=PO_Explore_Piwik_Pro" title="Explore our professional services at Piwik PRO" class="page-switch">
+					<span class="piwik_logo">Piwik Pro - Explore our business offer</span>
+					<span class="text">Explore our business offer.</span>
+				</a>
+			</div>
+			<div style="clear: both"> </div>
+
+		</div>
+	</aside><!-- /.sidebar -->
+
+</div>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div id="phorum">
+
+
+  
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <div id="sticky_menu"></div>
+    <div id="breadcrumb">
+      <div class="breadcrumb-list">
+        
+        
+          
+          
+            <a  href="http://forum.piwik.org/index.php">Home</a>
+          
+          
+        
+      </div>
+      
+      
+      
+      
+        <div id="user-info" class="logged-out">
+
+      
+
+      
+        <span class="welcome">Welcome!</span>
+        <a class="icon icon-key-go" href="http://forum.piwik.org/login.php">Log In</a>
+        <a class="icon icon-user-add" href="http://forum.piwik.org/register.php">Create A New Profile</a>
+      
+
+    </div> <!-- end of div id=user-info -->
+      
+    </div> <!-- end of div id=breadcrumb -->
+
+
+    
+
+    <div id="page-info">
+
+      
+        
+
+        <h1 class="heading">Piwik Forums</h1>
+        
+      
+
+    </div> <!-- end of div id=page-info -->
+
+    
+
+    <div id="search-area">
+      <form id="header-search-form" action="http://forum.piwik.org/search.php" method="get">
+        <input type="hidden" name="forum_id" value="0" />
+
+        <input type="hidden" name="phorum_page" value="search" />
+        <input type="hidden" name="match_forum" value="ALL" />
+        <input type="hidden" name="match_dates" value="365" />
+        <input type="hidden" name="match_threads" value="0" />
+        <input type="hidden" name="match_type" value="ALL" />
+        <input type="text" name="search" value="" class="search-input" /><input type="submit" value="Search" class="styled-button" /><br />
+        <a href="http://forum.piwik.org/search.php">Advanced</a>
+      </form>
+    </div> <!-- end of div id=search-area -->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+ 
+
+<!-- END TEMPLATE header.tpl -->
+
+
+<div class="nav">
+    <a class="icon icon-list" href="http://forum.piwik.org/addon.php?0,module=recent_messages" rel="nofollow">
+        Recent Messages
+    </a>
+</div>
+
+
+<!-- BEGIN TEMPLATE index_new.tpl -->
+<table cellspacing="0" class="list">
+    
+        
+            <tr>
+                
+                    <th align="left">
+                        <img src="http://forum.piwik.org/templates/piwik/images/folder.png" class="icon1616" alt="&bull;" />
+                        Forums
+                    </th>
+                
+                <th class="text-center">Topics</th>
+                <th class="text-center">Posts</th>
+                <th class="text-center">Last Post</th>
+            </tr>
+        
+    
+        
+            <tr>
+                
+                    <td class="topic-text" width="55%">
+                        <h3><a href="http://forum.piwik.org/list.php?2">Support & Bugs</a><a href="http://forum.piwik.org/feed.php?2,type=rss" class="feed-link">RSS</a></h3>
+                        <p>Report a bug or issue while installing or using Piwik</p>
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        10,920
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        47,580
+                        
+                    </td>
+                    <td class="last-post-text" width="21%" nowrap="nowrap">
+                        October 28, 2015 06:10AM
+                    </td>
+                
+            </tr>
+        
+    
+        
+            <tr>
+                
+                    <td class="topic-text" width="55%">
+                        <h3><a href="http://forum.piwik.org/list.php?15">General questions</a><a href="http://forum.piwik.org/feed.php?15,type=rss" class="feed-link">RSS</a></h3>
+                        <p>Find your way around Piwik!</p>
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        983
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        2,621
+                        
+                    </td>
+                    <td class="last-post-text" width="21%" nowrap="nowrap">
+                        October 27, 2015 10:43AM
+                    </td>
+                
+            </tr>
+        
+    
+        
+            <tr>
+                
+                    <td class="topic-text" width="55%">
+                        <h3><a href="http://forum.piwik.org/list.php?9">Plugins & Platform</a><a href="http://forum.piwik.org/feed.php?9,type=rss" class="feed-link">RSS</a></h3>
+                        <p>Support for developers writing a plugin for the open Piwik platform</p>
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        276
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        690
+                        
+                    </td>
+                    <td class="last-post-text" width="21%" nowrap="nowrap">
+                        October 23, 2015 03:15PM
+                    </td>
+                
+            </tr>
+        
+    
+        
+            <tr>
+                
+                    <td class="topic-text" width="55%">
+                        <h3><a href="http://forum.piwik.org/list.php?3">Feature Suggestions</a><a href="http://forum.piwik.org/feed.php?3,type=rss" class="feed-link">RSS</a></h3>
+                        <p>Suggest improvements to Piwik or ideas for a new plugin</p>
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        907
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        3,054
+                        
+                    </td>
+                    <td class="last-post-text" width="21%" nowrap="nowrap">
+                        October 26, 2015 06:00PM
+                    </td>
+                
+            </tr>
+        
+    
+        
+            <tr>
+                
+                    <td class="topic-text" width="55%">
+                        <h3><a href="http://forum.piwik.org/list.php?6">Knowledge base</a><a href="http://forum.piwik.org/feed.php?6,type=rss" class="feed-link">RSS</a></h3>
+                        <p>Share your tips in our community knowledge base</p>
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        51
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        366
+                        
+                    </td>
+                    <td class="last-post-text" width="21%" nowrap="nowrap">
+                        October 22, 2015 09:20PM
+                    </td>
+                
+            </tr>
+        
+    
+        
+            <tr>
+                
+                    <td class="topic-text" width="55%">
+                        <h3><a href="http://forum.piwik.org/list.php?5">Deutschsprachiges forum (support in German)</a><a href="http://forum.piwik.org/feed.php?5,type=rss" class="feed-link">RSS</a></h3>
+                        <p></p>
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        2,617
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        9,968
+                        
+                    </td>
+                    <td class="last-post-text" width="21%" nowrap="nowrap">
+                        October 28, 2015 06:58AM
+                    </td>
+                
+            </tr>
+        
+    
+        
+            <tr>
+                
+                    <td class="topic-text" width="55%">
+                        <h3><a href="http://forum.piwik.org/list.php?8">Support en français (support in French)</a><a href="http://forum.piwik.org/feed.php?8,type=rss" class="feed-link">RSS</a></h3>
+                        <p></p>
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        388
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        1,481
+                        
+                    </td>
+                    <td class="last-post-text" width="21%" nowrap="nowrap">
+                        October 27, 2015 10:34AM
+                    </td>
+                
+            </tr>
+        
+    
+        
+            <tr>
+                
+                    <td class="topic-text" width="55%">
+                        <h3><a href="http://forum.piwik.org/list.php?17">Soporte en español (support in Spanish)</a><a href="http://forum.piwik.org/feed.php?17,type=rss" class="feed-link">RSS</a></h3>
+                        <p></p>
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        11
+                        
+                    </td>
+                    <td class="bold" align="center" width="12%" nowrap="nowrap">
+                        25
+                        
+                    </td>
+                    <td class="last-post-text" width="21%" nowrap="nowrap">
+                        October 22, 2015 08:26PM
+                    </td>
+                
+            </tr>
+        
+    
+</table>
+<!-- END TEMPLATE index_new.tpl -->
+
+<div class="message"
+     style="width:100%;
+            padding: 0px;
+            margin-top:10px;
+            margin-bottom:10px">
+ <div class="generic" style="padding: 0px"></div>
+ <div class="message-body">
+
+  <strong>Piwik Forums - Forum Statistics</strong>
+  
+  <p>
+  <small>
+
+  Topics: 16,204, Posts: 65,965, Users: 16,285.
+  
+  </small>
+  </p>
+  
+  
+  
+ </div>
+</div>
+
+
+<!-- BEGIN TEMPLATE footer.tpl -->
+    <a class="footer-banner" title="Contact Piwik professional services team." target="_blank" href="http://piwik.org/consulting/">
+		<img class="logo" src="templates/piwik/images/piwik-banner-logo.png">
+		<span><strong>Free Forum support is provided by the Piwik Community.</strong></span>
+		<span>If you require any urgent or professional help, contact Piwik Professional Services team!</span>
+		<img class="arrow" src="templates/piwik/images/piwik-banner-arrow.png"/>
+	</a>
+  <div class="row footer-p">
+    <div class="col-lg-10 col-lg-offset-1 text-center">
+        <p>
+          <small>
+            Forum hosting provided by <a href='http://www.mysnip.de/' target='_blank'>MySnip.de</a>
+          </small>
+        </p>
+    </div>
+  </div>
+
+
+ <footer><footer class="container footer-page">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+            <a class="go-top ui-scroll-top" href="#"><span><i class="ficon-arrow-up"></i>Go to top</span></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+            <ul class="social">
+                <li>
+                    <a class="email" href="http://piwik.org/newsletter/"><i class="ficon-email"></i> Newsletter</a>
+                </li>
+                <li>
+                    <a class="facebook" target="_blank" href="http://www.facebook.com/Piwik"><i class="ficon-facebook"></i> Facebook</a>
+                </li>
+                <li>
+                    <a class="twitter"  target="_blank" href="http://twitter.com/piwik"><i class="ficon-twitter"></i> Twitter</a>
+                </li>
+                <li>
+                    <a class="linkedin"  target="_blank" href="http://www.linkedin.com/groups?gid=867857"><i class="ficon-linkedin"></i> Linkedin</a>
+                </li>
+                <li>
+                    <a class="github"  target="_blank" href="https://github.com/piwik/piwik"><i class="ficon-git"></i> Github</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+            <ul id="menu-footer" class="nav"><li class="menu-piwik-cloud"><a href="http://piwik.org/hosting/">Piwik Cloud</a></li>
+<li class="menu-privacy"><a href="http://piwik.org/privacy/">Privacy</a></li>
+<li class="menu-sponsors"><a href="http://piwik.org/about/sponsors/">Sponsors</a></li>
+<li class="menu-developers"><a target="_blank" href="http://developer.piwik.org">Developers</a></li>
+<li class="menu-marketplace"><a href="http://plugins.piwik.org">Marketplace</a></li>
+<li class="menu-credits"><a href="http://piwik.org/thank-you-all/">Credits</a></li>
+</ul>        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+            <p>2015 &copy; Piwik.org. </p>
+            <p><small>Piwik respects your privacy and gives you full control over your data.</small></p>
+
+            <div class="copyright-logo">
+                <p>Website design by</p>
+                <a href="http://piwik.org/thank-you-all/" title="Clearcode"><i class="ficon-cc"></i></a>
+            </div>
+        </div>
+    </div>
+</footer></footer>
+<!-- end of div id="phorum" -->
+  
+  
+<script type="text/javascript">
+(function(jQuery){
+        
+  jQuery( document ).ready( function() {        
+    prettyPrint();
+  } );
+ 
+}(jQuery))
+</script>  
+<!-- Piwik -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://demo.piwik.org/" : "http://demo.piwik.org/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 7);
+
+piwikTracker.setCustomVariable(3, "Forum status", "Anonymous");
+
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://piwik.org/demo/piwik.php?idsite=7" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tag -->
+</body>
+</html>
+<!-- END TEMPLATE footer.tpl -->
+

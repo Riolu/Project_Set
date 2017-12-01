@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>人民直播间--房产--人民网</title>
+<meta http-equiv="content-type" content="text/html;charset=GB2312">
+<meta http-equiv="Content-Language" content="utf-8" />
+<meta content="all" name="robots" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="1" />
+<meta name="pagetype" content="2" />
+<meta name="catalogs" content="387213" />
+<link href="/img/MAIN/2014/07/114679/page.css" type="text/css" rel="stylesheet" media="all" />
+<script language="javascript">
+function postMsg()
+{
+     if (document.form1.content.value==null || document.form1.content.value=="") {
+          alert("请填写留言。");
+          return;
+     } else {
+          document.form1.submit();
+     }
+}
+</script>
+<script src="http://www.people.com.cn/img/2011people/jquery-1.4.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" >
+ function setCookie1(objName)
+ {		
+	 var bn='95953';
+	document.cookie= objName+"="+bn;		 
+ } 
+ function setCookie(objName)
+ {
+	 var exdate=new Date();
+	 var t=exdate.getTime();
+	 exdate.setTime(exdate.getTime()+6000);//投票间隔时间，可改
+	 var bn=exdate.getTime()+6000;
+	document.cookie= objName+"="+bn+";expires="+exdate.toGMTString(); 
+	 
+ }  
+
+ function getCookie(objName)
+{
+  var arrStr = document.cookie.split("; ");   
+
+   for(var i = 0;i < arrStr.length;i ++)
+   {    
+     var temp = arrStr[i].split("=");    
+	 if(temp[0] == objName) 
+	 return unescape(temp[1]);   } 
+	 
+}
+
+function tt()
+{
+
+   if(getCookie("j")==null||typeof getCookie("j")=== 'undefined'||getCookie("j")=="")
+   {
+     var exdate=new Date();
+	 var t=exdate.getTime();
+     exdate.setTime(exdate.getTime()+24*36000);
+      document.cookie="j=1;expires="+exdate.toGMTString();
+	  return 1;
+
+   }
+   else
+   {
+       if(parseInt(getCookie("j"))<20)
+	   {
+  
+         var arrStr = document.cookie;   
+  
+         if(arrStr!='')
+        {
+         var v =parseInt(getCookie("j")),vv=1;
+	
+	     var vvv=v+vv;
+	     
+		  var exdate=new Date();
+	      var t=exdate.getTime();
+          exdate.setTime(exdate.getTime()+24*36000);
+		 
+	     document.cookie= 'j'+"="+vvv+";expires="+exdate.toGMTString();
+		 
+		 
+	    }
+		
+	   return 1;
+
+	   }
+	   else
+	   {
+		  
+		 
+		 return 2;
+		   
+		   }
+
+   }
+}
+
+
+$(document).ready(function(){
+	
+	$.getJSON("http://jingdian.people.com.cn/tp/json.php?type=&callback=?",function(data){//每一个投票对应一个type的值
+          for(var i = 0; i < data.length; i++)
+             {
+               
+				 $("#"+data[i].vid).html(data[i].bnum);
+             }
+			 var nall = 200;
+		 	 var n1 = parseInt($(".zheng_shu").html());
+	         var n2 = parseInt($(".fan_shu").html());
+			  var n3 = n1 + n2;
+			  var n4 = parseInt((n1/n3)*100);
+			  var n5 = parseInt((n2/n3)*100);		
+			  $(".zheng").html(""+n4+"%");
+			  $(".fan").html(""+n5+"%");
+			  $("#zheng_line").css({width:290/100*n4});
+			  $("#fan_line").css({width:290/100*n5});
+	});	
+	
+	$("input.button1").click(function(){
+		var voteId = $(this).attr("voteId") ;
+		var a = parseInt($("#"+voteId).text()) ,b = 1;	
+	    var num= a + b;	 
+	    $("#"+voteId).text(num);
+	$.ajax({
+	  type:"get", 
+	  url:"http://littlepoll.people.com.cn/2012ys/20120224button/tp.php?id=" + voteId+"&type=",
+	  dataType:"jsonp",
+	  //data:"jsonCallback=?",     
+	  cache: false,
+	  success:alert('投票成功，感谢您的支持')
+	  /*  success:function(data){
+  
+if(data.b==1)
+{alert("一个IP每天只能投一票！");}
+else if(data.b==0)
+{alert("投票成功！");}
+else if(data.b==2)
+{alert("投票已结束！");}
+
+  } */
+	  
+	});
+   });
+   
+});  
+</script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="w980 clear"><span><a href="http://www.people.com.cn" target="_blank"><img src="/img/MAIN/2014/07/114679/images/logo.jpg" alt="人民网首页" /></a></span><em></em></div>
+</div>
+<!--top-->
+<div class="top"><img src="/img/MAIN/2014/07/114679/images/top.jpg" alt="" /></div>
+<!--p1-->
+<div class="w980 p1_content clearfix">
+	<div class="p1_left fl"><embed src="http://tvplayer.people.com.cn/player.php/xml/L3B2c2VydmljZS94bWwvMjAxNS8xLzI2LzIwMzNmOWI3LTE0NGEtNDgwZi04ZDI2LTNjZDA4MDhmY2E3OS54bWw=/playerByOsmf.swf" quality="high" width="640" height="400" align="middle" allowscriptaccess="always" allowfullscreen="true" type="application/x-shockwave-flash" name="ptvplayer" id="ptvplayer"><div class="playerActTitle" style="text-align: center;"><a href="http://tv.people.com.cn/n/2015/0126/c14644-26448299.html" target="_blank" target='_blank'>政协委员毛大庆谈他的“两会”提案</a></div></div>
+  	<div class="p1_right fr">
+    	<h2>　　中国最权威、网上播出频次最高的房地产新闻视频专栏。<br><br>
+		
+        <ul class="list_12 clearfix"><li><P align=left><A href="http://house.people.com.cn/GB/166459/392316/393717/index.html"  target='_blank'><FONT size=2>访谈｜房企社会责任“百家争鸣”模式开启</FONT></A></P></li><li><P align=left><A href="http://house.people.com.cn/GB/166459/392316/393594/index.html"  target='_blank'><FONT size=2>访谈｜BIM：房地产业转型升级的催化剂</FONT></A></P></li><li><P align=left><A href="http://house.people.com.cn/GB/166459/392316/392664/index.html"  target='_blank'><FONT size=2>访谈｜夏效鸿谈“新常态”下楼宇经济发展</FONT></A></P></li><li><P align=left><A href="http://house.people.com.cn/GB/166459/392316/392588/index.html"  target='_blank'><FONT size=2>访谈｜王永平谈商业地产VS电商</FONT></A></P></li><li><P align=left><A href="http://house.people.com.cn/GB/166459/392316/392318/index.html"  target='_blank'><FONT size=2>访谈｜陈淮等谈社会公益、慈善环保及社会责任</FONT></A></P></li><li><P align=left><A href="http://house.people.com.cn/GB/166459/392316/392317/index.html"  target='_blank'><FONT size=2>访谈｜张有利谈高端陶瓷如何在家居业立足</FONT></A></P></li><li><P align=left><A href="http://house.people.com.cn/n/2014/0725/c164220-25342925.html"  target='_blank'><FONT size=2>播报｜台风“威马逊”肆虐海南 房企在行动</FONT></A></P></li></ul>
+  </div>
+</div>
+<!--p2-->
+
+<div class="w980 p2_content clearfix">
+	<div class="p2_left fl">
+  	  	
+    </div>
+  	<div class="p2_right fr">
+    	
+    </div>
+    
+</div>
+<!--p3-->
+<div class="p2_1"><h1>往期回顾</h1></div>
+<div class="w980 p2_content clearfix">
+	
+    <ul class="p2_3 p3_2"><li><a href="http://house.people.com.cn/GB/166459/183424/186753/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301748252278488092545.jpg" width="204" height="137" alt="毛大庆解读低碳建筑、谈万科近期动态"/></a><a href="http://house.people.com.cn/GB/166459/183424/186753/index.html" target="_blank">毛大庆解读低碳建筑、谈万科近期动态</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/190414/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301747494218923240220.jpg" width="204" height="137" alt="徐宗威谈城市建设与房地产"/></a><a href="http://house.people.com.cn/GB/166459/190414/index.html" target="_blank">徐宗威谈城市建设与房地产</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/191502/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301746598584436241529.jpg" width="204" height="137" alt="专家解读楼市近期热点"/></a><a href="http://house.people.com.cn/GB/166459/191502/index.html" target="_blank">专家解读楼市近期热点</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/183424/208138/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301744097717209907888.jpg" width="204" height="137" alt="揭开房企“囤地”的秘密"/></a><a href="http://house.people.com.cn/GB/166459/183424/208138/index.html" target="_blank">揭开房企“囤地”的秘密</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/217825/226349/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301743023685836217689.jpg" width="204" height="137" alt="张红培 谈楼市热点及企业发展"/></a><a href="http://house.people.com.cn/GB/166459/217825/226349/index.html" target="_blank">张红培 谈楼市热点及企业发展</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/205769/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301741231692774663170.jpg" width="204" height="137" alt="赵锡军谈近期楼市热点问题"/></a><a href="http://house.people.com.cn/GB/166459/205769/index.html" target="_blank">赵锡军谈近期楼市热点问题</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/206217/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301740528604922561931.jpg" width="204" height="137" alt="掌上明珠家具的中国“智”造"/></a><a href="http://house.people.com.cn/GB/166459/206217/index.html" target="_blank">掌上明珠家具的中国“智”造</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/206892/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301739590041686870438.jpg" width="204" height="137" alt="顾云昌谈房地产市场调控政策"/></a><a href="http://house.people.com.cn/GB/166459/206892/index.html" target="_blank">顾云昌谈房地产市场调控政策</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/207445/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301739238703032582844.jpg" width="204" height="137" alt="廖永林解读近期土地调控政策"/></a><a href="http://house.people.com.cn/GB/166459/207445/index.html" target="_blank">廖永林解读近期土地调控政策</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/211625/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301738419170096843271.jpg" width="204" height="137" alt="合生创展两大项目闪耀京城"/></a><a href="http://house.people.com.cn/GB/166459/211625/index.html" target="_blank">合生创展两大项目闪耀京城</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/215421/215422/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301738022884320507045.jpg" width="204" height="137" alt="全国政协委员童石军谈国际旅游岛建设"/></a><a href="http://house.people.com.cn/GB/166459/215421/215422/index.html" target="_blank">全国政协委员童石军谈国际旅游岛建设</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/215421/215547/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301737229953590413868.jpg" width="204" height="137" alt="全国政协委员王超斌谈城建热点问题"/></a><a href="http://house.people.com.cn/GB/166459/215421/215547/index.html" target="_blank">全国政协委员王超斌谈城建热点问题</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/215421/215679/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301736393742589070408.jpg" width="204" height="137" alt="全国政协委员宋林飞谈房地产市场调控"/></a><a href="http://house.people.com.cn/GB/166459/215421/215679/index.html" target="_blank">全国政协委员宋林飞谈房地产市场调控</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/215421/215697/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301735528001114020045.jpg" width="204" height="137" alt="全国政协委员郭松海做客人民网"/></a><a href="http://house.people.com.cn/GB/166459/215421/215697/index.html" target="_blank">全国政协委员郭松海做客人民网</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/215421/215706/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301734352031271423960.jpg" width="204" height="137" alt="人民网专访全国人大代表胡葆森"/></a><a href="http://house.people.com.cn/GB/166459/215421/215706/index.html" target="_blank">人民网专访全国人大代表胡葆森</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/215421/216885/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301734350321303057487.jpg" width="204" height="137" alt="两会 房地产民生问题冷静思考"/></a><a href="http://house.people.com.cn/GB/166459/215421/216885/index.html" target="_blank">两会 房地产民生问题冷静思考</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/240287/240612/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301729003669528846819.jpg" width="204" height="137" alt="全国人大代表王刚做客人民网"/></a><a href="http://house.people.com.cn/GB/166459/240287/240612/index.html" target="_blank">全国人大代表王刚做客人民网</a></li>
+<li><a href="http://house.people.com.cn/n/2012/1025/c164220-19382177.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301727275829797783297.jpg" width="204" height="137" alt="待红树林成林后就去圆电影梦"/></a><a href="http://house.people.com.cn/n/2012/1025/c164220-19382177.html" target="_blank">待红树林成林后就去圆电影梦</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/353424/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301726151596268986478.jpg" width="204" height="137" alt="法兰克福展览李庆新谈暖通新趋势"/></a><a href="http://house.people.com.cn/GB/166459/353424/index.html" target="_blank">法兰克福展览李庆新谈暖通新趋势</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/353753/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301725278980085395578.jpg" width="204" height="137" alt="国家发改委城镇改革中心李铁谈城镇化"/></a><a href="http://house.people.com.cn/GB/166459/353753/index.html" target="_blank">国家发改委城镇改革中心李铁谈城镇化</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/183424/347968/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301717361059112029620.jpg" width="204" height="137" alt="孙键做客人民网解读华贸城"/></a><a href="http://house.people.com.cn/GB/166459/183424/347968/index.html" target="_blank">孙键做客人民网解读华贸城</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/183424/235054/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301717360085045928990.jpg" width="204" height="137" alt="马强谈“人本地产”下的保障房建设"/></a><a href="http://house.people.com.cn/GB/166459/183424/235054/index.html" target="_blank">马强谈“人本地产”下的保障房建设</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/183424/346126/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301717359084500537956.jpg" width="204" height="137" alt="绿地董事长张玉良谈企业20周年"/></a><a href="http://house.people.com.cn/GB/166459/183424/346126/index.html" target="_blank">绿地董事长张玉良谈企业20周年</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/183424/348029/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301717357938103699825.jpg" width="204" height="137" alt="路劲地产单伟豹做客人民网"/></a><a href="http://house.people.com.cn/GB/166459/183424/348029/index.html" target="_blank">路劲地产单伟豹做客人民网</a></li>
+<li><a href="http://jiaju.people.com.cn/GB/151427/151429/230887/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301717356403485150969.jpg" width="204" height="137" alt="科宝博洛尼总裁蔡明谈家居时尚"/></a><a href="http://jiaju.people.com.cn/GB/151427/151429/230887/index.html" target="_blank">科宝博洛尼总裁蔡明谈家居时尚</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/183424/347187/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301717355239719105198.jpg" width="204" height="137" alt="凯德商用中国总裁骆伟汉做客人民网"/></a><a href="http://house.people.com.cn/GB/166459/183424/347187/index.html" target="_blank">凯德商用中国总裁骆伟汉做客人民网</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/183424/235492/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301717353346186268113.jpg" width="204" height="137" alt="国投方诚副总经理马超美谈商业地产"/></a><a href="http://house.people.com.cn/GB/166459/183424/235492/index.html" target="_blank">国投方诚副总经理马超美谈商业地产</a></li>
+<li><a href="http://house.people.com.cn/GB/166459/231341/index.html" target="_blank"><img src="/NMediaFile/2014/0730/MAIN201407301717351693155646728.jpg" width="204" height="137" alt="北京建工总经理戴彬彬谈保障房建设"/></a><a href="http://house.people.com.cn/GB/166459/231341/index.html" target="_blank">北京建工总经理戴彬彬谈保障房建设</a></li>
+</ul>
+</div>
+<!--p4-->
+<div class="w980 p4_content clearfix">
+  	<div class="p4_left fl">
+    <form name="form1" method="post" action="http://comments.people.com.cn/bbs_new/app/src/main/?action=parse_publish&op=ins&nid=" target="_blank">
+		<div class="p4_1">
+       		<h3>网友留言</h3>
+          	<span>昵称<input type="text" name="yonghuming" />来自<input type="text" name="textfield" /></span>
+        </div>
+  	  	<ul class="p4_2 clearfix">
+   	  	  	<li><textarea name="content" cols="45" rows="5"></textarea></li>
+       	  	<li class="on"><span><a href="http://comments.people.com.cn/bbs_new/app/src/main/?action=list&op=ins&nid=" target="_blank">点击查看</a></span><em><a href="JavaScript:postMsg();"><img src="/img/MAIN/2014/07/114679/images/icon2.jpg" alt="" /></a></em></li>
+   	  	</ul>
+    </form>
+    	
+    </div>
+    <div class="p4_right fr">
+    	
+    </div>
+</div>
+<!--copyright-->
+<div id="copyright">
+  人 民 网 <a href="http://www.people.com.cn/GB/1018/22259/6138836.html" target="_blank">版 权 所 有</a> ，未 经 书 面 授 权 禁 止 使 用<br />
+  Copyright &copy; 1997-2014 by www.people.com.cn. all rights reserved
+</div>
+<script src="/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>

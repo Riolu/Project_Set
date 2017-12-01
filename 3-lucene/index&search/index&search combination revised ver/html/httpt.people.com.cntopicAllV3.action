@@ -1,0 +1,436 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="gbk">
+<head>
+<title>人民微博</title>
+<meta http-equiv="content-type" content="text/html;charset=gbk" />
+<meta http-equiv="content-language" content="gbk" />
+<meta name="robots" content="all" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta property="qc:admins" content="1446632360570456375636" />
+<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+<META HTTP-EQUIV="expires" CONTENT="0">
+<!-- 天润测试代码 -->
+<META name="filetype" content="1">
+<META name="publishedtype" content="1">
+<META name="pagetype" content="2">
+<META name="catalogs" content="SQ_0002001">
+<!-- /天润测试代码 -->
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-17274035-4']);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+(function(){
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<link rel="stylesheet" href="http://t.people.com.cn/microblog-v3//css/public.css" />
+<script type="text/javascript" src="http://t.people.com.cn/microblog-v3//js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+RMWeibo_config = {
+	user : {
+		userId : -1,
+		nick : '',
+		domain : '',
+		headimg_b : '',
+		headimg_m : '',
+		headimg_s : '',
+		groupId : ''
+	},
+	path : 'http://t.people.com.cn/microblog-v3/',
+	currenttime : '1446014644029'
+}
+</script>
+
+<!-- 放在RMWeibo_config顺序下面，让RMWeibo_config先加载 -->
+<script type="text/javascript" src="http://t.people.com.cn/microblog-v3//js/weibo-widgets.js"></script>
+<script type="text/javascript" src="http://t.people.com.cn/microblog-v3//js/weibo-class.js"></script>
+
+<!-- dwr interface -->
+<script type='text/javascript' src="http://t.people.com.cn/dwr/util.js"></script>
+<script type='text/javascript' src="http://t.people.com.cn/dwr/engine.js"></script>
+
+<script type='text/javascript' src='http://t.people.com.cn/dwr/interface/indexV3Ajax.js'></script>
+<script type='text/javascript' src='http://t.people.com.cn/dwr/interface/subjectV3Ajax.js'></script>
+<script type='text/javascript' src='http://t.people.com.cn/dwr/interface/newUserSetAjax.js'></script>
+<script type='text/javascript' src='http://t.people.com.cn/dwr/interface/indexAjax.js'></script>
+<script type='text/javascript' src="http://t.people.com.cn/dwr/interface/usertag.js"></script>
+<script type="text/javascript" src="http://t.people.com.cn/dwr/interface/personpaper.js"></script>
+<script type='text/javascript' src='http://t.people.com.cn/dwr/interface/longMicroBlogAjax.js'></script>
+<script type="text/javascript" src="http://t.people.com.cn/dwr/interface/microVote.js"></script>
+<!-- /dwr interface -->
+
+</head>
+<body>
+
+<!-- topbar -->
+<!-- topbar --><div class="WBM_topbar" data-widget="topbar"><div class="tpd_fixed"><div class="tpb_wrap"><div class="tpb_left"><div class="tpb_logo"><a href="/" title="人民微博">人民微博</a></div><div class="tpb_menu"><dl class="tpb_menu_b" data-nodeType="menu"><dt><a href="/"><span class="tpb_arr">微博首页</span></a></dt><dd><a href="http://www.people.com.cn/" target="_blank">人民网</a><a href="http://bbs1.people.com.cn/" target="_blank">强国社区</a></dd></dl><dl data-nodeType="menu"><dt><a href="/duihuagw.html"><span>对话官微</span></a></dt></dl><dl data-nodeType="menu"><dt><a href="/hotV3.action"><span class="tpb_arr">热点</span></a></dt><dd><a href="/talksV3.html">微访谈</a><a href="/topicAllV3.action">微话题</a><a href="/hotMicroSubjectAllV3.action">微专题</a><a href="/discuss.html">微争鸣</a><a href="/liveindexV3.action">微播报</a><a href="/eventindex.html">微活动</a><a href="/hotRankV3.action">排行榜</a></dd></dl><dl class="tpb_menu_b" data-nodeType="menu"><dt><a href="javascript:void(0)"><span class="tpb_arr">产品·游戏</span></a></dt><dd><a href="/g/woshiguojiao" target="_blank">我是国脚</a><a href="/g/daguizi" target="_blank">打鬼子</a><a href="/g/datanfu" target="_blank">打贪腐</a><a href="http://z.people.com.cn" target="_blank">人民微管家</a><a href="http://zhengwutong.com" target="_blank">政务通</a><a href="/quanziIndex.action">圈子</a><a href="http://www.okooo.com" target="_blank">买彩票</a></dd></dl></div><div class="tpb_search"><form action="/searchV3.action" data-nodeType="search"><input type="text" class="tpb_key" name="searchInput" data-nodeType="search_key" value="搜索微博、找人"/><input type="submit" class="tpb_btn" value="" /></form></div></div><div class="tpb_remind" data-widget="remind"><a href="javascript:void(0)" data-nodeType="close" class="pop_close"></a><ul class="skin_color_01" data-nodeType="list"><li>无</li></ul></div></div></div></div><!-- /topbar -->
+<!-- /topbar -->
+
+
+
+
+<link href="http://t.people.com.cn/microblog-v3//css/page_hot.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+<!-- main -->
+<div class="wrap pb_boder01 margin_29">
+	<div class="blk_main_c1" style="padding:25px 40px;">
+    	<div class="blk_topic_cont  clearfix">
+			<h2 class="skin_color_01" style="margin-bottom:10px;">全部微话题</h2>
+           <!-- <div class="wbp_listnav clearfix blk_tab01">
+				<div id="indexWeiboTags" class="ln_tags">
+					<dl id="hotVote" class="selected">
+						<dt><a href="/hotV3.action?queryType=1">最新话题</a></dt>
+					</dl>
+					<dl id="newVote">
+						<dt><a href="/hotV3.action?queryType=2">热门话题</a></dt>
+					</dl>
+				</div>
+			</div>-->
+            <ul class="topic_item" style="float:left;">
+            	 
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2055" target="_blank"><span class="dian"></span>如何为孩子的成长护航</a>
+            
+            	<div class="tips_layer"><span></span>人民时评：该让孩子们多玩一玩了</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2053" target="_blank"><span class="dian"></span>说说你对改革的新期待</a>
+            
+            	<div class="tips_layer"><span></span>十八届五中全会10月26日至29日召开</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2051" target="_blank"><span class="dian"></span>国考冷热不均折射了什么</a>
+            
+            	<div class="tips_layer"><span></span>国考冷热不均的正常与不正常</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2049" target="_blank"><span class="dian"></span>预防雾霾，我们能做些什么</a>
+            
+            	<div class="tips_layer"><span></span>环保部：20省疑似烧秸秆致雾霾</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2047" target="_blank"><span class="dian"></span>扶贫，我们能做些什么？</a>
+            
+            	<div class="tips_layer"><span></span>10月17日全国第二个扶贫日</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2045" target="_blank"><span class="dian"></span>说说令你印象深刻的影片</a>
+            
+            	<div class="tips_layer"><span></span>《夏洛特烦恼》回答&ldquo;喜剧的意义&rdquo;</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2043" target="_blank"><span class="dian"></span>你的时间有多少用来陪伴家人</a>
+            
+            	<div class="tips_layer"><span></span>8岁儿子写作文怨爸爸太忙</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2040" target="_blank"><span class="dian"></span>如何把文明根植在心中？</a>
+            
+            	<div class="tips_layer"><span></span>年轻男子脚踩消防烈士铜像头顶拍照</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2038" target="_blank"><span class="dian"></span>十一长假，你如何度过</a>
+            
+            	<div class="tips_layer"><span></span>说说你的国庆计划</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+             
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2036" target="_blank"><span class="dian"></span>&ldquo;青年担当&rdquo;成长记</a>
+            
+            	<div class="tips_layer"><span></span>成功背后有怎样的艰辛付出和心路历程</div>
+            	
+           
+            	</li>
+               
+               
+             
+               
+              
+            </ul>
+            <ul class="topic_item" style="float:right;">
+            	
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2054" target="_blank"><span class="dian"></span>过去一年，你家发生了哪些新变化</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>网友票选：过去一年，我家发生了哪些新变化？结果出炉</div>
+            
+            	</li>
+                
+                
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2052" target="_blank"><span class="dian"></span>养生，你有什么秘籍</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>探访全国7个长寿乡 百岁老人长寿有道</div>
+            
+            	</li>
+                
+                
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2050" target="_blank"><span class="dian"></span>&ldquo;老无所养&rdquo;如何破解？</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>中国农村出现&ldquo;养老断层&rdquo; 高龄老人被迫务农自养</div>
+            
+            	</li>
+                
+                
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2048" target="_blank"><span class="dian"></span>流动人口的社会保障如何更完善</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>重视一亿跨省流动者的保障之忧</div>
+            
+            	</li>
+                
+                
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2046" target="_blank"><span class="dian"></span>禁止在职公务员国考透露什么信息</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>国考15日起报名招2.7万人 首次仅面向体制外招录</div>
+            
+            	</li>
+                
+                
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2044" target="_blank"><span class="dian"></span>出租车改革方案如何更惠民</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>不能帮出租灭专车，也不能活专车死出租</div>
+            
+            	</li>
+                
+                
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2041" target="_blank"><span class="dian"></span>说说你喜欢的阅读方式</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>聚焦&ldquo;互联网+&rdquo;阅读新形式</div>
+            
+            	</li>
+                
+                
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2039" target="_blank"><span class="dian"></span>你的同学聚会，变味了吗？</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>各类同学聚会扎堆黄金周</div>
+            
+            	</li>
+                
+                
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2037" target="_blank"><span class="dian"></span>你遭遇过挂号难吗？</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>挂号最长通话记录： 10小时57分22秒</div>
+            
+            	</li>
+                
+                
+            	
+                
+            	
+            	<li><a class="text_link" href="/topicsearchV3.action?topicId=2035" target="_blank"><span class="dian"></span>中秋节，你的家乡有啥习俗</a>
+            	
+            	
+            	<div class="tips_layer"><span></span>中秋佳节话民俗</div>
+            
+            	</li>
+                
+                
+              
+            </ul>
+        </div>
+        <div class="wbp_pagelist" style="text-align:center;border:none;">
+						<span>上一页</span>
+<span class='selected'>1</span>
+<a href='/topicAllV3.action?page=2&#38;t=1307'>2</a>
+<a href='/topicAllV3.action?page=3&#38;t=1307'>3</a>
+<a href='/topicAllV3.action?page=4&#38;t=1307'>4</a>
+<a href='/topicAllV3.action?page=5&#38;t=1307'>5</a>
+<a href='/topicAllV3.action?page=6&#38;t=1307'>6</a>
+<a href='/topicAllV3.action?page=7&#38;t=1307'>7</a>
+...
+<a href='/topicAllV3.action?page=66&#38;t=1307'>66</a>
+<a href='/topicAllV3.action?page=2&#38;t=1307'>下一页</a></span>
+&nbsp;<span>共1307条</span>
+
+				</div>
+    </div>  
+</div>
+<!-- /main -->
+
+
+
+
+
+
+
+
+
+
+<!-- footer -->
+
+<!-- footer -->
+<div class="wbp_footer">
+	<div class="foot_1 clearfix">
+		<div class="foot_wrap">
+			<dl>
+				<dt><a href="javascript:void(0)" style="text-decoration:none; cursor:default;">找感兴趣</a></dt>
+				<dd><a href="http://t.people.com.cn/searchfriendV3.action">名人 / 政府机构</a></dd>
+				<dd><a href="http://t.people.com.cn/searchV3.action">微博</a>&nbsp;&nbsp;&nbsp;<a href="http://t.people.com.cn/quanziIndex.action">圈子</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="javascript:void(0)" style="text-decoration:none; cursor:default;">热点内容</a></dt>
+				<dd><a href="http://t.people.com.cn/hotV3.action">微话题</a>&nbsp;&nbsp;&nbsp;<a href="http://t.people.com.cn/talksV3.html">微访谈</a></dd>
+				<dd><a href="http://t.people.com.cn/liveindexV3.action">微播报</a>&nbsp;&nbsp;&nbsp;<a href="http://t.people.com.cn/hotMicroSubjectAllV3.action">微专题</a></dd>
+				<dd><a href="http://t.people.com.cn/eventindex.html">微活动</a>&nbsp;&nbsp;&nbsp;<a href="http://t.people.com.cn/hotV3.action">微投票</a></dd>
+				<dd><a href="http://www.people.com.cn/GB/347065/347759/index.html">微新闻</a>&nbsp;&nbsp;&nbsp;<a href="http://www.people.com.cn/GB/347065/347079/index.html">微快报</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="javascript:void(0)" style="text-decoration:none; cursor:default;">排行榜</a></dt>
+				<dd><a href="http://t.people.com.cn/userhotrankingV3.action">关注排行</a></dd>
+				<dd><a href="http://t.people.com.cn/dorenwu.action?groupType=1">政务微博排行</a></dd>
+				<dd><a href="http://t.people.com.cn/hotRankV3.action">热门微博</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="javascript:void(0)" style="text-decoration:none; cursor:default;">手机玩微博</a></dt>
+				<dd><a href="http://w.people.com.cn" target="_blank">WAP版短彩发微博</a></dd>
+				<dd><a href="https://itunes.apple.com/us/app/id390405450" target="_blank">iphone客户端</a></dd>
+				<dd><a href="http://i0.peopleurl.cn/t.apk" target="_blank">Android客户端</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="javascript:void(0)" style="text-decoration:none; cursor:default;">认证&amp;合作</a></dt>
+				<dd><a href="http://t.people.com.cn/judgeMeIsV.action" target="_blank">申请认证</a></dd>
+				<dd><a href="http://t.people.com.cn/companyCooperateV3.action" target="_blank">申请圈子</a></dd>
+				<dd><a href="http://t.people.com.cn/companyCooperateV3.action" target="_blank">政务合作</a></dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="foot_2 clearfix">
+		<div class="foot_wrap">
+			<div class="foot_left">
+				<!-- 
+				<a href="javascript:void(0)">帮助</a>
+				 -->
+				<a href="http://passport.people.com.cn/readMe.jsp">用户协议</a>
+				<a href="http://gp.people.com.cn/yangshuo/hr/shzw1.php?bm=%E5%BE%AE%E5%8D%9A%E4%BA%8B%E4%B8%9A%E9%83%A8&place=%E5%8C%97%E4%BA%AC&job_time=0&job_title=&x=9&y=7" target="_blank">微博招聘</a>
+				<a href="http://www.people.com.cn/GB/138812/index.html" target="_blank">人民网导航</a>
+				<a href="http://zhengwutong.com/" target="_blank">政务通</a>
+				<a href="http://z.people.com.cn/" target="_blank">人民微管家</a>
+			</div>
+			<div class="foot_right">Copyright &copy; 1997-2015 by www.people.com.cn. all rights reserved</div>
+		</div>
+	</div>
+</div>
+<!-- /footer -->
+
+<!-- toTopButton -->
+<a href="javascript:void(0)" class="WBM_toTop" data-widget="toTopButton" data-pageWidth="960"></a>
+<!-- /toTopButton -->
+
+<script type="text/javascript">
+if(window.RMWeibo && RMWeibo.Widgets && RMWeibo.Widgets.ready){
+	RMWeibo.Widgets.ready()
+};
+</script>
+ <!-- 天润测试代码 -->
+ <script src="http://www.people.com.cn/css/2010tianrun/webdig_test.js" type="text/javascript"></script>
+ <!-- /天润测试代码 -->
+ 
+</body>
+</html>
+<!-- /footer -->

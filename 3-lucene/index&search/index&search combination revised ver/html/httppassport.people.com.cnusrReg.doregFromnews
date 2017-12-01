@@ -1,0 +1,150 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>人民网通行证-注册</title>
+<link href="/resource/css/passport.css" type="text/css" rel="stylesheet" />
+<script src="/resource/js/jquery.js" type="text/javascript"></script>
+<script src="/resource/js/jquery.form.js" type="text/javascript"></script>
+<script src="/resource/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="/resource/js/common.js" type="text/javascript"></script>
+<script src="/resource/js/sso_web.js" type="text/javascript"></script>
+<script src="/resource/js/reg.js" type="text/javascript"></script>
+<script type="text/javascript">
+	CONTEXT_PATH = "";
+</script>
+</head>
+<body>
+	<div class="page_Register">
+		<nav>
+			<div class="nav">
+				<a href="/u/basicinfo"><img src="/resource/images/logo_txz.png" class="fl" alt="人民网通行证"></a>
+				<div class="fr">
+					<a class="" href="http://www.people.com.cn/">人民网首页</a>
+					<a class="" href="javascript:void(0)">帮助</a>
+				</div>
+			</div>
+		</nav>
+		<section>
+			<div class="txz_main">
+				<div class="wrap">
+					<ul class="pb_tab tab_c2">
+						<li class="current"><span class="tab_phone">手机注册</span></li>
+						<li class=""><span class="tab_email">邮箱注册</span></li>
+					</ul>
+					<div class="tab_cont">
+						<div class="phone_inform">
+							<form id="form_phone" action="/u/reg" method="post" autocomplete="off" class="fm_01">
+								<input type="hidden" id="regType" name="regType" value="2" />
+								<input type="hidden" id="appCode" name="appCode" value="Q8O5cGE9" />
+								<input type="hidden" id="fromUrl" name="fromUrl" value="http://passport.people.com.cn" />
+								<table class="table_R">
+									<col width="90px">
+									<tr>
+										<td class="left"><label for="">手机号</label></td>
+										<td class="center"><input type="text" id="phoneNum" name="phoneNum" class="wgt_txt_01" /><span class="btn_getCode">发送验证短信</span></td>
+										<td class="right"><label id="phoneNum-error" class="error" for="phoneNum"></label><div><span>请使用你的手机注册，绑定后可用手机号登入人民网通行证</span></div></td>
+									</tr>
+									<tr>
+										<td class="left"><label for="">短信验证码</label></td>
+										<td class="center"><input type="text" id="phoneCode" name="phoneCode" class="wgt_txt_01"></td>
+										<td class="right"><label id="phoneCode-error" class="error" for="phoneCode"></label><div><span>请输入6位短信验证码</span></div></td>
+									</tr>
+									<tr>
+										<td class="left"><label for="">昵称</label></td>
+										<td class="center"><input type="text" id="phoneNickName" name="phoneNickName" class="wgt_txt_01"></td>
+										<td class="right"><label id="phoneNickName-error" class="error" for="phoneNickName"></label><div><span>4-12个中英文或数字，将公开显示</span></div></td>
+									</tr>
+									<tr>
+										<td class="left"><label for="">密码</label></td>
+										<td class="center"><input type="password" id="phonePwd1" name="phonePwd1" class="wgt_txt_01"></td>
+										<td class="right"><label id="phonePwd1-error" class="error" for="phonePwd1"></label><div><span>8-20个字符，建议使用大小写字母及数字，增强密码安全性</span></div></td>
+									</tr>
+									<tr>
+										<td class="left"><label for="">确认密码</label></td>
+										<td class="center"><input type="password" id="phonePwd2" name="phonePwd2" class="wgt_txt_01"></td>
+										<td class="right"><label id="phonePwd2-error" class="error" for="phonePwd2"></label><div><span>请再次输入密码</span></div></td>
+									</tr>
+									<tr>
+										<td class="left"></td>
+										<td class="center"><div class="m5"><input type="checkbox" id="phoneAgree" name="phoneAgree" checked="checked" /> 我已阅读并同意<a class="" href="javascript:void(0)">人民网用户协议</a></div></td>
+										<td class="right"><label id="phoneAgree-error" class="error" for="phoneAgree"></label></td>
+									</tr>
+									<tr>
+										<td class="left"></td>
+										<td class="center"><div class="m30"><input type="submit" class="wgt_btn_01 btn_Reg01" value="提交" /><input type="reset" class="wgt_btn_02 btn_Reg01" /></div></td>
+										<td class="right"></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+						<div class="email_inform" style="display:none">
+							<form id="form_email" action="/u/reg" method="post" autocomplete="off" class="fm_01">
+								<input type="hidden" id="regType" name="regType" value="1" />
+								<input type="hidden" id="appCode" name="appCode" value="Q8O5cGE9" />
+								<input type="hidden" id="fromUrl" name="fromUrl" value="http://passport.people.com.cn" />
+								<table class="table_R">
+									<col width="90px">
+									<tr>
+										<td class="left"><label for="">邮箱</label></td>
+										<td class="center"><input type="text" id="email" name="email" data-widget="username" class="wgt_txt_01" /></td>
+										<td class="right"><label id="email-error" class="error" for="email"></label><div>请使用常用邮箱注册，绑定后可用邮箱登入人民网通行证</div></td>
+									</tr>
+									<tr>
+										<td class="left"><label for="">昵称</label></td>
+										<td class="center"><input type="text" id="emailNickName" name="emailNickName" class="wgt_txt_01" /></td>
+										<td class="right"><label id="emailNickName-error" class="error" for="emailNickName"></label><div>4-12个中英文或数字，将公开显示</div></td>
+									</tr>
+									<tr>
+										<td class="left"><label for="">密码</label></td>
+										<td class="center"><input type="password" id="emailPwd1" name="emailPwd1" class="wgt_txt_01" /></td>
+										<td class="right"><label id="emailPwd1-error" class="error" for="emailPwd1"></label><div>8-20个字符，建议使用大小写字母及数字，增强密码安全性</div></td>
+									</tr>
+									<tr>
+										<td class="left"><label for="">确认密码</label></td>
+										<td class="center"><input type="password" id="emailPwd2" name="emailPwd2" class="wgt_txt_01" /></td>
+										<td class="right"><label id="emailPwd2-error" class="error" for="emailPwd2"></label><div>请再次输入密码</div></td>
+									</tr>
+									<tr>
+										<td class="left"><label for="">验证码</label></td>
+										<td class="center"><input type="text" id="emailCode" name="emailCode" class="wgt_txt_01 VerCode" /><a class="VerCodeSource" href="javascript:changeEmailCode();"><img id="emailCodeImg" src="/util/rand6" alt=""></a></td>
+										<td class="right"><label id="emailCode-error" class="error" for="emailCode"></label><div><a class="" href="javascript:changeEmailCode();">看不清？换一换</a></div></td>
+									</tr>
+									<tr>
+										<td class="left"></td>
+										<td class="center"><div class="m5"><input type="checkbox" id="emailAgree" name="emailAgree" checked="checked" /> 我已阅读并同意<a class="" href="javascript:void(0)">人民网用户协议</a></div></td>
+										<td class="right"><label id="emailAgree-error" class="error" for="emailAgree"></label></td>
+									</tr>
+									<tr>
+										<td class="left"></td>
+										<td class="center"><div class="m30"><input type="submit" class="wgt_btn_01 btn_Reg01" value="提交" /><input type="reset" class="wgt_btn_02 btn_Reg01" /></div></td>
+										<td class="right"></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
+					<!-- <dl class="other_count">
+						<dt>用其他社交帐号登录</dt>
+						<dd>
+							<a class="sina_count count_item" href="javascript:void(0)"><span>微博登录</span></a>
+							<a class="tx_count count_item" href="javascript:void(0)"><span>QQ登录</span></a>
+							<a class="RR_count count_item" href="javascript:void(0)"><span>人人登录</span></a>
+						</dd>
+					</dl> -->
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="footer02">人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用<br /> Copyright © 1997-2015 by www.people.com.cn. all rights reserved</div>
+		</footer>
+	</div>
+</body>
+</html>

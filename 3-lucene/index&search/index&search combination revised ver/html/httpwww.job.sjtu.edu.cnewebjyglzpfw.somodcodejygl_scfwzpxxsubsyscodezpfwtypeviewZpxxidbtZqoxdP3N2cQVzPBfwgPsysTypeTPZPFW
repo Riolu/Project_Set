@@ -1,0 +1,858 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>招聘信息-查看</title>
+
+<link rel="stylesheet" href="/eweb/jygl/css/sjtucss.css" type="text/css"/>
+<script language="JavaScript" type="text/javascript" src="/eweb/wfc/js/wfc.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/engine.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/util.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/interface/codeLoad.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/interface/supload.js"></script>
+<script type="text/javascript"	src="/eweb/js/jqueryui1.10/external/jquery/jquery.js"></script>
+<script type="text/javascript"	src="/eweb/dwr/interface/jygldwr.js"></script>
+
+<style type="text/css">
+#tdnr a{
+color:blue;;
+}
+</style>
+</head>
+<body>
+	 
+
+
+
+
+
+
+
+
+<style>
+/*系统入口*/
+.sys_entrance_warp {
+	width:100%;
+	height:165px;
+	background-color:#000;
+	opacity: 0.50;
+	filter: alpha(opacity=50);
+	-moz-opacity:0.5;
+	position:fixed;
+	top:78px;
+	z-index:999;
+	text-align: center;}
+.sys_entrance_content {
+	height:165px;
+	width:930px;
+	position:fixed;
+	top:78px;
+	left:50%;
+	margin-left:-465px;
+	z-index:9999;
+	}
+.sys_1 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 0;}
+.sys_1 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#da6c15;
+	color:#fff;
+	text-align:center;}
+.sys_1 a:hover {
+	background-color:#df820b;}
+.sys_2 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_2 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#278419;
+	color:#fff;
+	text-align:center;}
+.sys_2 a:hover {
+	background-color:#1f9a0c;}
+.sys_3 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_3 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#581596;
+	color:#fff;
+	text-align:center;}
+.sys_3 a:hover {
+	background-color:#6e09af;}
+.sys_4 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_4 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#1583c2;
+	color:#fff;
+	text-align:center;}
+.sys_4 a:hover {
+	background-color:#159ad2;}
+.sys_5 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_5 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#1834a1;
+	color:#fff;
+	text-align:center;}
+.sys_5 a:hover {
+	background-color:#1c46b6;}
+.sys_6 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_6 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#c60203;
+	color:#fff;
+	text-align:center;}
+.sys_6 a:hover {
+	background-color:#de1012;}
+</style>
+<script>
+function showSystem(flag){
+	var div_header = document.getElementById("system_Id");
+	var div_systemSjtu = document.getElementById("systemSjtu");
+	if(flag==0){
+		if(div_header!=null){
+			div_header.style.display="none";
+		}
+		if(div_systemSjtu!=null){
+			div_systemSjtu.style.display="none";
+		}
+	}else{
+		if(div_header!=null){
+			div_header.style.display="block";
+		}
+		if(div_systemSjtu!=null){
+			div_systemSjtu.style.display="block";
+		}
+	}
+}
+</script>
+ <!--系统入口-->
+
+    <!--系统入口 END -->
+ <div class="head" onmouseover="javascript:showSystem(1)" onmouseout="javascript:showSystem(0)">
+  <div class="main">
+   <div class="logo">
+       <img src="/eweb/jygl/css/sjtuimgs/logo-zpfw.png" />
+   </div>
+   
+  </div>
+   <div style="width:100%;top: 100px;display: none;" id="system_Id" >
+     <div class="sys_entrance_warp" ></div>
+	   <ul class="sys_entrance_content">
+         <li class="sys_1">
+	       <a href="/index.htm" target="_self">
+       	   <img src="/eweb/jygl/css/sjtuimgs/sys6.png" style="margin-top:20px;" />
+       	   <p>就业网首页</p>
+       	   </a>
+	     </li>
+	     <li class="sys_2">
+		   <a href="/support/index.htm" target="_self">
+		     <img src="/eweb/jygl/css/sjtuimgs/sys2.png" style="margin-top:20px;" />
+		     <p>教师支持</p>
+		   </a>
+		</li>
+        <li class="sys_3">
+	      <a href="/eweb/jygl/jygl.so"  target="_self" >
+            <img src="/eweb/jygl/css/sjtuimgs/sys3.png" style="margin-top:20px;" />
+            <p>就业管理</p>
+          </a>
+          </li>
+         <li class="sys_4">
+            <a href="/eweb/jygl/zpfw.so" target="_self" >
+        	 <img src="/eweb/jygl/css/sjtuimgs/sys4.png"  style="margin-top:17px;" />
+        	 <p>招聘服务</p>
+        	</a>
+         </li>
+	     <li class="sys_5"><a target="_blank" href="/sjcj/"><img src="/eweb/jygl/css/sjtuimgs/sys5.png" style="margin-top:26px;" /><p>生涯数据</p></a></li>
+         <li class="sys_6">
+       	   <a href="/career/index.htm" target="_self">
+		      <img src="/eweb/jygl/css/sjtuimgs/sys1.png" style="margin-top:20px;" />
+		      <p>生涯伴随</p>
+	       </a>
+       	</li>
+       	</ul>
+    </div>
+ </div>
+ <div class="nav">
+  <div class="main">
+   <ul>
+   
+     
+    	 
+    	     <li><a href="/eweb/jygl/zpfw.so">招聘首页</a></li>
+    	     <li><a href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW">招聘热点</a></li>
+    	     <li><a href="/eweb/jygl/zpfw.so?type=zpxx">招聘信息</a></li>
+    	     <li><a href="/eweb/jygl/zpfw.so?type=xjh">招聘宣讲会</a></li>
+	 	     <li><a href="/eweb/jygl/zpfw.so?type=zph">招聘双选会</a></li>
+    		 <li><a href="/eweb/jygl/zpfw.so?type=dwfw">单位招聘指南</a></li>
+     	 
+     
+  </ul>
+  <div class="clear"></div>
+  </div>
+ </div>
+
+ <!-- 导航图 -->
+ 
+ <div class="banner2">
+     <div class="main">
+     	<a href="javascript:void(0);" onclick="javascript:window.open('http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?modcode=jygl_zphxxck&subsyscode=zpfw&type=viewZphxx&id=SK5fTEnzVvmyG1SL2Wn3HH')"><img src="/eweb/jygl/cms/imgs/JiSMAHNv1ry5F9n3b1iGZ3.jpg" /></a>
+     </div>
+ </div>
+
+ <div class="content">
+  <div class="main">
+    
+
+
+
+<div class="z_position">
+	<div class="z_title"><a href="#">招聘信息发布</a></div>
+	<div class="z_home"><a href="/eweb/jygl/zpfw.so">首页</a> > <a>招聘信息发布</a></div>
+	<div class="clear"></div>
+</div>
+
+	<div class="z_content">
+		  <input type="hidden" name="xxid" id="xxid" value="sjtu10248"/>
+		  <div class="bd_one">
+	    	<div class="bd_title"><span>招聘基本信息</span></div>
+		    <table id="tab" width="983" border="0" class="bd_tab">
+	        <tr>
+	            <td  class="td_bg td_border_one">单位名称</td>
+	            <td  colspan="3" class="td_border_two">
+	                <a style="color: blue;" href="/eweb/jygl/zpfw.so?entityId=SCFW_JYGL_DWXX&subsyscode=zpfw&modcode=jygl_scfwyrdw&type=viewDwxx&id=35640">
+		           		中国航空工业集团公司
+		           	</a>
+	            </td>
+	        </tr>
+	        <tr>
+	        	<td style="width: 15%" class="td_bg td_border_three">主题</td>
+	            <td style="width: 50%" class="td_border_three">
+	                【专场招聘会】中国航空工业集团公司2016年专场招聘会
+	            </td>
+	            <td style="width: 15%" class="td_bg td_border_three">招聘截止日期</td>
+	            <td style="width: 20%" class="td_border_four">
+	                2015-12-16
+	            </td>
+	        </tr>
+	        <tr>
+	            <td  class="td_bg td_border_three">应聘网址</td>
+	            <td  class="td_border_three">
+	            	<a style="color: blue;" href="http://www.avic.com.cn" target="_blank">
+	                www.avic.com.cn
+	                </a>
+	            </td>
+	            <td  class="td_bg td_border_three">简历投递邮箱</td>
+	            <td  class="td_border_four">
+	            	<a style="color: blue;" href="mailto:">
+	                
+	                </a>
+	            </td>
+	        </tr>
+	        
+	        <tr>
+	        	<td  colspan="4" class="td_border_four" style="text-align: left;">招聘说明：</td>
+	        </tr>
+	        <tr>
+	           <td id="tdnr" colspan="4" class="td_border_four">
+	            	<p class="MsoNormal" style="color:#5e5e5e;text-align:center;background-color:#ffffff;text-indent:0px;" align="center">
+	<b><span style="font-size:16pt;font-family:仿宋;"><span style="color:#000000;">上海交</span><span style="color:#000000;">通大学</span><span style="color:#000000;">2016</span><span style="color:#000000;">届毕业生中国航空工业集团公司专场招聘会</span></span></b> 
+</p>
+<p class="MsoNormal" style="color:#5e5e5e;background-color:#ffffff;text-indent:28pt;">
+	<span style="font-size:14pt;font-family:仿宋;line-height:23px;"></span> 
+</p>
+<p class="MsoNormal" style="color:#5e5e5e;background-color:#ffffff;text-indent:28pt;">
+	<span><span style="font-size:14pt;font-family:仿宋;line-height:23px;"><span style="color:#000000;">经协商，</span><span style="color:#000000;">我校决定于</span><span style="color:#000000;">2015</span><span><span style="color:#000000;">年</span><b><span style="color:#337fe5;">10</span><span style="color:#0070c0;"><span style="color:#337fe5;">月</span><span style="color:#337fe5;">26</span><span style="color:#337fe5;">日</span></span></b><span style="color:#000000;">（星期一）在上海交通大学闵行校区</span><b><span style="color:#0070c0;"><span style="color:#337fe5;">新体育馆二楼</span><span style="color:#337fe5;">2A-2B</span><span style="color:#337fe5;">长廊</span></span></b><span style="color:#000000;">举办</span></span><span style="color:#000000;">2016</span><span style="color:#000000;">届毕业生</span><b><span style="color:#337fe5;">中国航空工业集团专场招聘会</span></b><span style="color:#000000;">。</span><span></span></span></span> 
+</p>
+<p class="MsoNormal" style="color:#5e5e5e;background-color:#ffffff;text-indent:28pt;">
+	<span><span><span style="font-size:14pt;font-family:仿宋;line-height:23px;"><span style="color:#000000;">望我校</span><span style="color:#000000;">2016</span><span style="color:#000000;">届毕业生积极参与。</span><span></span></span></span></span> 
+</p>
+<p class="MsoNormal" style="color:#5e5e5e;background-color:#ffffff;text-indent:28pt;">
+	<span style="color:#000000;"><span style="color:#000000;"><span style="font-size:14pt;font-family:仿宋;color:#000000;line-height:23px;">相关网站：<a href="http://www.avic.com.cn">www.avic.com.cn</a></span></span></span> 
+</p>
+<p style="background:white;color:#5e5e5e;text-indent:0px;">
+	<span><span><span style="font-size:14pt;font-family:仿宋;color:#0070c0;"><span style="color:#337fe5;">◆<span class="Apple-converted-space">&nbsp;</span></span><strong><span style="font-family:仿宋;color:#000000;"><span style="color:#337fe5;">招聘会时间</span>：</span></strong></span></span></span><span style="color:#000000;"><span style="color:#000000;"><span style="font-size:14pt;font-family:仿宋;color:#000000;">2015</span></span></span><span style="color:#000000;"><span style="color:#000000;"><span style="font-size:14pt;font-family:仿宋;color:#000000;">年</span></span></span><span style="color:#337fe5;"><span style="color:#337fe5;"><b><span style="font-size:14pt;font-family:仿宋;color:#337fe5;">10</span></b></span></span><span><span><b><span style="font-size:14pt;font-family:仿宋;color:#0070c0;"><span style="color:#337fe5;">月</span><span style="color:#337fe5;">26</span><span style="color:#337fe5;">日</span></span></b></span></span><span><span><span style="font-size:14pt;font-family:仿宋;color:#3e3e3e;"><span class="Apple-converted-space">&nbsp;</span></span></span></span><span><span><b><span style="font-size:14pt;font-family:仿宋;color:#0070c0;"><span style="color:#337fe5;">上午</span><span style="color:#337fe5;">9:00</span><span style="color:#337fe5;">—</span><span style="color:#337fe5;">12:00</span></span></b></span></span><span><span><span style="font-size:14pt;font-family:仿宋;color:#3e3e3e;"></span></span></span> 
+</p>
+<p style="background:white;color:#5e5e5e;text-indent:0px;">
+	<span><span><span style="font-size:14pt;font-family:仿宋;color:#0070c0;"><span style="color:#337fe5;">◆<span class="Apple-converted-space">&nbsp;</span></span><strong><span style="font-family:仿宋;color:#000000;"><span style="color:#337fe5;">招聘会地点</span>：</span></strong></span></span></span><span><span><span style="font-size:14pt;font-family:仿宋;color:#3e3e3e;"><span style="color:#000000;">上海市闵行区东川路</span><span style="color:#000000;">800</span><span style="color:#000000;">号上海交通大学闵行校区</span></span></span></span><span><span><b><span style="font-size:14pt;font-family:仿宋;color:#0070c0;"><span style="color:#337fe5;">新体育馆二楼</span><span style="color:#337fe5;">2A-2B</span><span style="color:#337fe5;">长廊</span><span></span></span></b></span></span> 
+</p>
+<p style="background:white;color:#5e5e5e;text-indent:0px;">
+	<span><span><span style="font-size:14pt;font-family:仿宋;color:#0070c0;"><span style="color:#337fe5;">◆<span class="Apple-converted-space">&nbsp;</span></span><strong><span style="font-family:仿宋;color:#337fe5;">参会单位：</span></strong></span></span></span><span><span><span style="font-size:14pt;font-family:仿宋;color:#3e3e3e;"><span style="color:#000000;">（共</span><span style="color:#000000;">42</span><span style="color:#000000;">家单位）</span></span></span></span> 
+</p>
+<table class="ke-zeroborder" style="width:651pt;border-collapse:collapse;" cellspacing="0" cellpadding="0" width="868" border="0">
+	<tbody>
+		<tr>
+			<td class="xl71" height="36" rowspan="2" width="72">
+				序号
+			</td>
+			<td class="xl71" rowspan="2" width="796">
+				成员单位
+			</td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				1
+			</td>
+			<td class="xl68">
+				中国航空规划设计研究总院有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				2
+			</td>
+			<td class="xl68">
+				中航技进出口有限责任公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				3
+			</td>
+			<td class="xl68">
+				中航工业试飞中心
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				4
+			</td>
+			<td class="xl68">
+				中国空空导弹研究院
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				5
+			</td>
+			<td class="xl68">
+				沈阳飞机工业（集团）有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				6
+			</td>
+			<td class="xl68">
+				庆安集团有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				7
+			</td>
+			<td class="xl68">
+				中航工业上海航空电器有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				8
+			</td>
+			<td class="xl68">
+				贵州永红航空机械有限责任公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				9
+			</td>
+			<td class="xl68">
+				中航飞机股份有限公司西安飞机分公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				10
+			</td>
+			<td class="xl68">
+				贵阳航空电机有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				11
+			</td>
+			<td class="xl68">
+				太原航空仪表有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				12
+			</td>
+			<td class="xl68">
+				中国航空工业综合技术研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				13
+			</td>
+			<td class="xl68">
+				北京航空精密机械研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				14
+			</td>
+			<td class="xl68">
+				贵州天义电器有限责任公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				15
+			</td>
+			<td class="xl68">
+				江西洪都航空工业集团有限责任公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				16
+			</td>
+			<td class="xl68">
+				中航工业合肥江航飞机装备有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				17
+			</td>
+			<td class="xl68">
+				中航通飞华北飞机工业有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				18
+			</td>
+			<td class="xl68">
+				沈阳飞机设计研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				19
+			</td>
+			<td class="xl68">
+				中国直升机设计研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				20
+			</td>
+			<td class="xl68">
+				中航飞机股份有限公司研发中心
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				21
+			</td>
+			<td class="xl68">
+				中航工业特种飞行器研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				22
+			</td>
+			<td class="xl68">
+				沈阳发动机设计研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				23
+			</td>
+			<td class="xl68">
+				中航工业集团公司雷华电子技术研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				24
+			</td>
+			<td class="xl68">
+				中国航空动力机械研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				25
+			</td>
+			<td class="xl68">
+				中航工业金城南京机电液压工程研究中心
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				26
+			</td>
+			<td class="xl70">
+				中航工业成都飞机设计研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				27
+			</td>
+			<td class="xl68">
+				中国航空工业集团公司航空动力控制系统研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				28
+			</td>
+			<td class="xl70">
+				中国航空工业集团公司航空动力控制系统研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				29
+			</td>
+			<td class="xl70">
+				创明传动公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				30
+			</td>
+			<td class="xl68">
+				中航工业无线电电子研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				31
+			</td>
+			<td class="xl68">
+				中国航空工业集团公司北京航空材料研究院
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				32
+			</td>
+			<td class="xl68">
+				中国飞机强度研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				33
+			</td>
+			<td class="xl68">
+				西安航空计算技术研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				34
+			</td>
+			<td class="xl68">
+				上海航空测控技术研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				35
+			</td>
+			<td class="xl68">
+				中国航空工业集团济南特种结构研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				36
+			</td>
+			<td class="xl68">
+				中航工业新乡航空工业（集团）有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				37
+			</td>
+			<td class="xl68">
+				中国航空工业空气动力研究院
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				38
+			</td>
+			<td class="xl68">
+				中航贵州飞机有限责任公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				39
+			</td>
+			<td class="xl68">
+				贵州航空发动机研究所
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				40
+			</td>
+			<td class="xl68">
+				中航工业信息技术中心（金航数码）
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				41
+			</td>
+			<td class="xl68">
+				中航通飞研究院有限公司
+			</td>
+		</tr>
+		<tr>
+			<td class="xl67" height="43">
+				42
+			</td>
+			<td class="xl68">
+				宝胜集团有限公司
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p style="background:white;color:#5e5e5e;text-indent:0px;">
+	&nbsp;
+</p>
+<p style="background:white;color:#5e5e5e;text-indent:0px;">
+	附：中国航空工业集团简介
+</p>
+<div class="para" style="color:#333333;background-color:#ffffff;">
+	中国航空工业集团公司（简称：<b>中航工业</b>，英文：<b>Aviation Industry Corporation of China</b>，英文缩写：<b>AVIC</b>），是中国由中央管理的国有特大型企业，是国家授权投资的机构，于2008年11月6日由原中国航空工业第一、第二集团公司重组整合而成立。
+</div>
+<div class="para" style="color:#333333;background-color:#ffffff;">
+	中国航空工业集团公司设有航空装备、运输机、发动机、直升机、机载设备与系统、通用飞机、航空研究、飞行试验、贸易物流、资产管理、金融、工程建设、汽车等产业板块，下辖140余家成员单位、近30家上市公司，员工逾50万人。
+</div>
+<div class="para" style="color:#333333;background-color:#ffffff;">
+	2009年中航工业首次申报并成功入选美国《财富》杂志<a href="http://baike.baidu.com/view/1033807.htm" target="_blank">世界500强企业</a>，排名第四百二十六位，成为首家入选的中国军工企业。2015年中航工业连续第七次入围《财富》世界500强企业，排名跃升至第一百五十六位。
+</div>
+<div class="para" style="color:#333333;background-color:#ffffff;">
+	中航工业形成以<a href="http://baike.baidu.com/subview/4556/10459818.htm" target="_blank">飞机</a>、<a href="http://baike.baidu.com/view/22518.htm" target="_blank">直升机</a>为龙头，<a href="http://baike.baidu.com/view/136142.htm" target="_blank">航空发动机</a>、机载系统和航空武器配套齐全，技术基础较完备，军民结合、相对完整、具有较强实力的高科技工业体系。中航工业自主研制军用航空器形成了“探索一代、研制一代、生产一代”的发展格局。
+</div>
+<p style="background:white;color:#5e5e5e;text-indent:0px;">
+	&nbsp;
+</p>
+	            </td>
+	        </tr>
+	        <tr>
+	            <td  class="td_bg td_border_three">附件</td>
+	            <td  colspan="3" class="td_border_four">
+	        		
+<script type="text/javascript"	src="/eweb/dwr/interface/supload.js"></script>
+
+<table>
+	<tr>
+        <td valign="top"><div id="thumbnailsviewbtZqoxdP3N2cQVzPBfwgPzpxxfj"  valign="top"></div></td>
+    </tr>
+</table>
+<script type="text/javascript">
+supload.getAttachFileListView('btZqoxdP3N2cQVzPBfwgPzpxxfj','zpxxfj',"null",{callback:function (dataFromServer) {
+	DWRUtil.setValue("thumbnailsviewbtZqoxdP3N2cQVzPBfwgPzpxxfj", dataFromServer);
+	if(window.parent!=null && window.parent.dynaIframeHight!=null){//如果有dynaIframeHight的方法 则调用该方法 
+		window.parent.dynaIframeHight(window.parent.document.getElementById("content"));
+	}//设置报表条件页面
+}});
+</script>
+
+			 	</td>
+	        </tr>
+	        <tr>
+	            <td  class="td_bg td_border_three">备注</td>
+	            <td  colspan="3" class="td_border_four">
+	            	
+	            </td>
+	        </tr>
+	    </table>
+	  </div>
+	    
+	    <div class="xgxzButton">
+           <input class='inputButton' name='back' type='button' id='back' onclick='window.close();' value='关闭'/>
+        </div>
+	  </div>
+	</div>
+</div>
+ 
+
+
+
+
+
+ <div class="links">
+  <div class="links_t">
+   <div class="main">友情链接</div>
+  </div>
+  <div class="links_main">
+	   <ul>
+		    
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.12zyw.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/S1SyX7R19VSP5SHCsetAHr.png" title="中国研究生网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.hzrc.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/Hx32kFBg2u2cUUYrPU5oPy.png" title="杭州人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.haorc.com/zdyj/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/NyiEDEa7y4ywWThkt5RV7U.png" title="西安市人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://zhaopin.shanghai-air.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/Kk7k4KsF9UJ74AH8gbcX2A.png" title="上航网上招聘"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.hr.com.cn/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/7Coot2NjWCcHAzxdHXMayb.png" title="中国人力资源网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.job100.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/URjsLXSz9sKFNSKbeFvn5H.png" title="中才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.xmrc.com.cn/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/TWhtc5ESbX7UT64dGCRvYe.png" title="厦门人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.szrc.cn/szrc/default.html" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/4KuUAoGn19xZZkkwGeMZkr.png" title="苏州人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li >
+		    	<a href="http://xds.gcdr.gov.cn" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/JYgWxkVyGxWJnGFckWv4ZR.png" title="四川优秀大学生选调网"/>
+		    	</a>
+		    </li>
+	   		
+	   </ul>
+   <div class="clear"></div>
+  </div>
+ </div>
+ <div class="foot">
+  <div class="foot_o">
+   <div class="main">
+   <ul>
+    <li class="lxfs">
+	 <div class="lxfs_t"><a href="#">联系方式</a></div>
+	 <div class="lxfs_o">
+  	 <p>邮编：200240</p>
+     <p>地址：上海市闵行区东川路800号交通大学铁生馆</p> 
+     <p>电话总机：86-21-54745721、54745904、54747570、 54743091、54745994</p>
+	 </div>
+	</li>
+	<li class="yrdw">
+	 <div class="yrdw_t"><a href="#">用人单位服务</a></div>
+	 <div class="yrdw_o">
+	  <p>电话分机：881、882、883</p>
+      <p>邮箱：career@sjtu.edu.cn</p> 
+      <p>地址：铁生馆201室</p>
+      <p>&nbsp;&nbsp;</p>
+	 </div>
+	</li>
+	<li class="xsjy">
+	 <div class="xsjy_t"><a href="#">学生就业事务</a></div>
+	 <div class="xsjy_o">
+	  <p>电话：86-21-54745751</p>
+      <p>传真：86-21-54744803</p> 
+      <p>邮箱：em.scc@sjtu.org</p>
+	  <p>地址：学服200号(闵行校区) 浩然103室(徐汇校区)</p>
+	 </div>
+	</li>
+	<li class="xssy">
+	 <div class="xssy_t"><a href="#">学生生涯服务</a></div>
+	 <div class="xsjy_o">
+	  <p>电话分机：771</p>
+      <p>传真：86-21-54744803</p> 
+      <p>邮箱：career@sjtu.org</p>
+	  <p>地址：铁生馆207室</p>
+	 </div>
+	</li>
+   </ul><div class="clear"></div>
+   </div>
+  </div>
+  <div class="foot_t">
+   <div class="foot_main">
+   <ul>
+    <li class="d_logo"> <img src="/eweb/jygl/css/sjtuimgs/logo2.png" /></li>
+	<li class="d_copyright"> 
+		<span style=" font-size:14px; color:#FFFFFF;">学生就业服务和职业发展中心</span> <span style="font-size:12px;">版权所有2014</span>
+   		<span style=" font-size:14px; color:#FFFFFF;">（建议使用IE7以上浏览器）</span>
+   	</li>
+   </ul><div  class="clear"></div>
+ </div>
+  </div>
+ </div>
+</body>
+</html>

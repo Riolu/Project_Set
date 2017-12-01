@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<script src="/include/jquery-1.6.2.min.js"></script>
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/compatible.css" type="text/css" media="all" />
+<title>新通图 - 新通图 享受图片经营的乐趣</title>
+<meta name="description" content="新通图,ntpic.cn" />
+<meta name="keywords" content="新通图" /></head>
+<body>
+	<div id="top">
+    	<div class="content">
+        	<div class="d1">
+<div style="height:0px">&nbsp;</div>
+            	<div class="left"><div><a href="/f/ContactUs.aspx">联系我们</a></div><div><a href="/f/Map.aspx">网站地图</a></div><div><a href="#" class="ct">English</a></div></div>
+            	<div class="right">
+                    
+                    会员登录：<input type="text" class="Email" />会员密码：<input type="password" class="Psd"  name="" /><input type="checkbox"  id="jizhu" value="1" /><label for="jizhu">记住密码</label><img src="/images/loginbai_btn.jpg" class="login" /><span><a href="/u/cReg.aspx">客户注册</a></span><span><a href="/u/pReg.aspx">摄影师注册</a></span>
+                    
+            	</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".Email").val("邮箱/手机").css("color", "#ccc");
+        $(".Email").focus(function () {
+            if ($(this).val() == "邮箱/手机")
+                $(this).val("").css("color","black");
+        }).blur(function () {
+            if($(this).val()=="")
+                $(".Email").val("邮箱/手机").css("color", "#ccc");
+        })
+        var jizhu = 0;
+        $(".login").click(function () {
+            var p = window.location.pathname + window.location.search;
+            p = p.replace("?", "|").replace("&", "||");
+            var Email = $(".Email").val();
+            if (Email == "邮箱/手机")
+                Email = "";
+            if ($("#jizhu").attr("checked")) {
+                jizhu = 1;
+            }
+            $.get("/u/LoginProving.aspx", { "Email": Email, "Passwd": $(".Psd").val(),"jizhu":jizhu,"r":Math.random() }, function (data) {
+                if (data == "ok") {
+                    window.location.href = p.replace("||", "&").replace("|", "?");
+                }
+                else
+                    window.location.href = "/u/Login.aspx?e=1&Em=" + Email + "&p=" + p + "&r=" + jizhu ;  
+            })
+        })      
+    })
+</script> </div>
+            <div class="d2">
+<a href="/"><img title="新通图" src="/images/logo.jpg" class="logo" /></a>
+               <a href="http://www.news.cn/" target="_blank"> <img width="795" height="90"  alt="首页顶部广告位" src="/Uploadfile/Advertise/2015151903.jpg" class="logo_right" /></a></div>
+        </div>
+    </div>
+    <div id="main" style=" background:url(images/content_bj.jpg) repeat-x;">
+    	<div class="content" style=" background:url(images/content_bj.jpg) repeat-x;">
+    		<div class="nav">
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".navUl li").removeClass("now");
+        $(".navUl li").eq(0).addClass("now");
+    })
+</script>
+            	<ul class="navUl">
+                	<li class="li_click" target=""url="/index.aspx" >首&nbsp;&nbsp;&nbsp;&nbsp;页<img src="/images/nav_sanjiao.png" class="nav_sanjiao" /></li>
+                	<li class="shu"><img src="/images/nav_li_shu.jpg" /></li>
+                	<li class="li_click" target=""url="/f/Topic.aspx" >全部图片<img src="/images/nav_sanjiao.png" class="nav_sanjiao" /></li>
+                	<li class="shu"><img src="/images/nav_li_shu.jpg" /></li>
+                	<li class="li_click" target=""url="/f/Notice.aspx" >新通教学<img src="/images/nav_sanjiao.png" class="nav_sanjiao" /></li>
+                	<li class="shu"><img src="/images/nav_li_shu.jpg" /></li>
+                	<li class="li_click" target=""url="/f/Activity.aspx" >摄影活动<img src="/images/nav_sanjiao.png" class="nav_sanjiao" /></li>
+                	<li class="shu"><img src="/images/nav_li_shu.jpg" /></li>
+                	<li class="li_click" target=""url="/f/About.aspx">关于我们<img src="/images/nav_sanjiao.png" class="nav_sanjiao" /></li>
+                	<li class="shu"><img src="/images/nav_li_shu.jpg" /></li>
+                	<li class="li_click" target=""url="/f/ContactUs.aspx">联系我们<img src="/images/nav_sanjiao.png" class="nav_sanjiao" /></li>
+                    <li class="shu"><img src="/images/nav_li_shu.jpg" /></li>
+                    <li class="li_click" target=""url="/f/Recruit.aspx">招募信息<img src="/images/nav_sanjiao.png" class="nav_sanjiao" /></li>
+                </ul>
+<a id="link_new_window" ><span></span></a> </div>
+            <div class="big_img" style="position:relative;overflow:hidden;">
+                <ul style="width:1000px;height:480px;  position:absolute; font-size:0;" class="gundong">
+                    <li style="width:1000px;height:480px;"><a href="http://www.ntpic.cn/f/pic.aspx?id=15710" target="_blank"><img title="Eichstaedt, Brandenburg, GER - Pferd trabt ueber eine Koppel bei Sonnenaufgang. Gestuet Eichstaedt" alt="Eichstaedt, Brandenburg, GER - Pferd trabt ueber eine Koppel bei Sonnenaufgang. Gestuet Eichstaedt" src="Uploadfile/Article/201510143034.jpg" /></a><input class="hidden" type="hidden" value="1.10.2015, Eichstaedt, Brandenburg, GER - Pferd trabt ueber eine Koppel bei Sonnenaufgang. Gestuet Eichstaedt. 1 10 2015 Eichstaedt Brandenburg ger Horse trabt About a Koppel at Sunrise Stud Eichstaedt " /></li> <li style="width:1000px;height:480px;"><a href="http://www.ntpic.cn/" target="_blank"><img title="关注新通图服务号 关注更多精彩" alt="关注新通图服务号 关注更多精彩" src="Uploadfile/Article/20157205575.jpg" /></a><input class="hidden" type="hidden" value="新通图服务号开通。关注新通图服务号，关注更多精彩！" /></li> <li style="width:1000px;height:480px;"><a href="http://www.ntpic.cn/f/pic.aspx?id=15022" target="_blank"><img title="纪念抗战七十周年阅兵：受阅空中梯队飞过天安门广场上空" alt="纪念抗战七十周年阅兵：受阅空中梯队飞过天安门广场上空" src="Uploadfile/Article/2015962827.jpg" /></a><input class="hidden" type="hidden" value="2015年9月3日，纪念中国人民抗日战争暨世界反法西斯战争胜利70周年，战机翱翔，壮我中华掠影。新通图/史奎华 " /></li> <li style="width:1000px;height:480px;"><a href="http://www.ntpic.cn/f/pic.aspx?id=15711" target="_blank"><img title="St Annen Kirche Annaberg Buchholz DEU Sachsen Annaberg Buchholz Die St Annenkirche erbaut 1499 - 152" alt="St Annen Kirche Annaberg Buchholz DEU Sachsen Annaberg Buchholz Die St Annenkirche erbaut 1499 - 152" src="Uploadfile/Article/201510144154.jpg" /></a><input class="hidden" type="hidden" value="St.-Annen-Kirche Annaberg-Buchholz DEU/Sachsen/Annaberg-Buchholz: Die St. Annenkirche, erbaut 1499 - 1525, ist eine der bedeutendsten sp鋞gotischen Hallenkirchen Deutschlands. Sie entstand an der Schwelle zwischen Sp鋞gotik und Renaissance und ist mi..." /></li> <li style="width:1000px;height:480px;"><a href="http://www.ntpic.cn/f/pic.aspx?id=15877" target="_blank"><img title="额济纳金秋童话胡杨林" alt="额济纳金秋童话胡杨林" src="Uploadfile/Article/201510192278.jpg" /></a><input class="hidden" type="hidden" value="金秋十月，在内蒙古额济纳旗上百平方公里的胡杨林公园内，坚强的躯干之上飞扬着一望无际的灿烂，枝头的金黄在漫无边际的林海中延伸着。满眼金灿灿的秋叶、无边耀眼的金黄，将古老的生命赋予顽强的定义，宛如大漠戈壁的仙境，赋予金秋美丽的童话。据说胡杨生而千年不死，..." /></li> <li style="width:1000px;height:480px;"><a href="http://www.ntpic.cn/f/pic.aspx?id=15550" target="_blank"><img title="Light & Stars Charity Party im Hotel Grand Elysee Hamburg 27 09 2015" alt="Light & Stars Charity Party im Hotel Grand Elysee Hamburg 27 09 2015" src="Uploadfile/Article/20159291944.jpg" /></a><input class="hidden" type="hidden" value="" /></li> 
+                </ul>
+                <div style=' width:1000px;position:absolute; background:black;  opacity:0.3;filter:alpha(opacity=30); height:60px;z-index:1; bottom:0;'></div>
+                <div class="summary" style='width:800px; line-height:20px; height:50px;margin-left:35px; background:none;position:absolute;color:#fff;z-index:2;bottom:0px;opacity:1;filter:alpha(opacity=100)'></div>
+                <div class="nav" style='width:36px; height:60px;position:absolute;right:0;z-index:10;left:946px;opacity:1;filter:alpha(opacity=100);bottom:0;'>
+                    <img class="shang" style='width:36px; height:30px; cursor:pointer;' src="/images/shang_btn.jpg" />
+                    <img class="xia" style='width:36px; height:30px;cursor:pointer;' src="/images/xia_btn.jpg"  />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bjeee">
+        <div class="bjeeecontent">
+            <div class="creative"><div class="d1">图片搜索</div><div class="d2"><input type="text" class="keywords" /><img src="images/sousuo_pian.jpg" class="search"  /><div class="awai"><a href="/f/PicsList.aspx" class="firsta">高级搜索 </a><a href="/f/Topic.aspx">分类图片 </a><a href="/f/PicsList.aspx?h=1">热门图片 </a><a href="/f/PicsList.aspx?h=2">最新图片</a></div></div></div>
+            <div class="xuanxiang">
+    			<div style="height:0px">&nbsp;</div>
+            	<ul class="leixing">
+                    <li><input type="radio"  checked="checked" name="leixing" value="0" /><label for="radio1">全部</label></li>
+                  
+                	<li><input type="radio" id="radio1"  name="leixing" value="1" /><label for="radio1">创意图片</label></li>
+                	<li><input type="radio" id="radio2"  name="leixing" value="2" /><label for="radio2">专线图片</label></li>
+                	<li><input type="radio" id="radio3"  name="leixing" value="3" /><label for="radio3">特殊题材</label></li>
+                	<li><input type="radio" id="radio4"  name="leixing" value="4" /><label for="radio4">漫画图表</label></li>
+                	<li><input type="radio" id="radio5"  name="leixing" value="5" /><label for="radio5">纪实摄影</label></li>
+                	<li><input type="radio" id="radio6"  name="leixing" value="6" /><label for="radio6">体坛赛事</label></li>
+                	<li><input type="radio" id="radio7"  name="leixing" value="7" /><label for="radio7">山水风光</label></li>
+                	<li><input type="radio" id="radio8"  name="leixing" value="8" /><label for="radio8">人文风俗</label></li>
+                	<li><input type="radio" id="radio9"  name="leixing" value="9" /><label for="radio9">明星时尚</label></li>
+                </ul>
+            	<ul class="yangshi">
+                    
+                	<li style="width:100px;"><input type="checkbox" id="checkbox0" name="yangshi" value="1" /><label for="checkbox0" title="RM(版权管理)">RM(版权管理)</label></li> 
+                	<li style="width:100px;"><input type="checkbox" id="checkbox1" name="yangshi" value="4" /><label for="checkbox1" title="RF(自由版权)">RF(自由版权)</label></li> 
+                	<li style="width:100px;"><input type="checkbox" id="checkbox2" name="yangshi" value="32" /><label for="checkbox2" title="PE(简单定价)">PE(简单定价)</label></li> 
+                	<li style="width:100px;"><input type="checkbox" id="checkbox3" name="yangshi" value="31" /><label for="checkbox3" title="限价图片">限价图片</label></li> 
+                	<li style="width:100px;"><input type="checkbox" id="checkbox4" name="yangshi" value="5" /><label for="checkbox4" title="横构图">横构图</label></li> 
+                	<li style="width:100px;"><input type="checkbox" id="checkbox5" name="yangshi" value="6" /><label for="checkbox5" title="竖构图">竖构图</label></li> 
+                	<li style="width:100px;"><input type="checkbox" id="checkbox6" name="yangshi" value="7" /><label for="checkbox6" title="正方图">正方图</label></li> 
+                	<li style="width:100px;"><input type="checkbox" id="checkbox7" name="yangshi" value="8" /><label for="checkbox7" title="全景图">全景图</label></li> 
+                	<li style="width:100px;"><input type="checkbox" id="checkbox8" name="yangshi" value="27" /><label for="checkbox8" title="特写图">特写图</label></li> 
+                </ul>
+            </div>
+            <div class="contenes">
+                <div class="wutu">
+                    
+                    <div class="tul"><img width="240" height="433" class="li_click" target="_blank" url="http://www.ntpic.cn/f/pic.aspx?id=15691" alt="Model for Parade Grif Faven in The 17th Edition of Trend Autumn Winter Mines" title="Model for Parade Grif Faven in The 17th Edition of Trend Autumn Winter Mines" src="/Uploadfile/Article/20151081328.jpg"/>
+                           <div class="cengleft li_click" url="http://www.ntpic.cn/f/pic.aspx?id=15691" target="_blank">
+                            <div>Model for Parade Grif Faven in The 17th Edition of Trend Autumn Winter Mines</div>
+                            <p>BELO HORIZONTE, MG - 06/10/2015: MINING TREND AUTUMN WINTER 2016 - Model for parade Grife Faven in the 17th edition of Trend Autumn Winter Mines 2016 06 to October 09 at Expominas - Avenida Amazonas, 6030 - Gameleira - BH - MG. . PUBLICATIONxNOTxINxBRA Mour?oxPanda Belo Horizons mg 06 10 2015 Mining Trend Autumn Winter 2016 Model for Parade Grif Faven in The 17th Edition of Tr...</p>
+                            <img src="images/ceng_jiantou.png" />
+                        </div>
+                        <img width="240" height="433" src="" class="li_click" target=""  />   <img width="240" height="433" src="" class="li_click" target=""  />   <img width="240" height="433" src="" class="li_click" target=""  />   <img width="240" height="433" src="" class="li_click" target=""  />   
+                    </div>
+                    <div class="tur">
+                              <div class="rightsitu shang"> <img width="240" height="210" class="li_click  " target="_blank" url="http://www.ntpic.cn/f/pic.aspx?id=15590"  alt="Arsenal vs Olympiacos UEFA Champion s League Emirates Stage London" title="Arsenal vs Olympiacos UEFA Champion s League Emirates Stage London" src="/Uploadfile/Article/20151086882.jpg" />
+                                                <div class="cengright li_click" url="http://www.ntpic.cn/f/pic.aspx?id=15590" target="_blank">
+                                                    <div>Arsenal vs Olympiacos UEFA Champion s League Emirates Stage London</div>
+                                                    <p></p>
+                                                    <img src="images/ceng_jiantou.png" />
+                                                </div></div>   
+                              <div class="rightsitu shang"> <img width="240" height="210" class="li_click  " target="_blank" url="http://www.ntpic.cn/f/pic.aspx?id=14392"  alt="电影《小羊肖恩 》洛杉矶放映式" title="电影《小羊肖恩 》洛杉矶放映式" src="/Uploadfile/Article/2015839101.jpg" />
+                                                <div class="cengright li_click" url="http://www.ntpic.cn/f/pic.aspx?id=14392" target="_blank">
+                                                    <div>电影《小羊肖恩 》洛杉矶放映式</div>
+                                                    <p>7月18日，电影《Pixels》的首映式在美国纽约举行。 新通图/MAXPPP</p>
+                                                    <img src="images/ceng_jiantou.png" />
+                                                </div></div>   
+                              <div class="rightsitu "> <img width="240" height="210" class="li_click  " target="_blank" url="http://www.ntpic.cn/f/pic.aspx?id=14122"  alt="第11届比利时Tomorrowland音乐节" title="第11届比利时Tomorrowland音乐节" src="/Uploadfile/Article/20157277025.jpg" />
+                                                <div class="cengright li_click" url="http://www.ntpic.cn/f/pic.aspx?id=14122" target="_blank">
+                                                    <div>第11届比利时Tomorrowland音乐节</div>
+                                                    <p>7月24日，比利时博姆城举行的第11届Tomorrowland音乐节首日现场直击。本届音乐节从24号持续到26日。新通图/BELGA/JONAS ROOSENS
+</p>
+                                                    <img src="images/ceng_jiantou.png" />
+                                                </div></div>   
+                              <div class="rightsitu "> <img width="240" height="210" class="li_click  " target="_blank" url="http://www.ntpic.cn/f/pic.aspx?id=15561"  alt="UCI世界自行车锦标赛" title="UCI世界自行车锦标赛" src="/Uploadfile/Article/20159299324.jpg" />
+                                                <div class="cengright li_click" url="http://www.ntpic.cn/f/pic.aspx?id=15561" target="_blank">
+                                                    <div>UCI世界自行车锦标赛</div>
+                                                    <p>20150927 - RICHMOND, UNITED STATES: Belgian Iljo Keisse of team Etixx - Quick-Step runs the men elite′s race at the UCI Road World Cycling championships in Richmond, Virginia, The...</p>
+                                                    <img src="images/ceng_jiantou.png" />
+                                                </div></div>   
+                    </div>
+                </div>
+                <div class="wutur">
+                	<div class="wuturTop"><span  class="li_click" target="" url="/f/Notice.aspx" style="float:right; margin-right:5px; cursor:pointer; font-size:12px; margin-top:3px;">MORE>></span>征稿启示</div>
+                    <ul class="revelation">
+                        
+                    	<li class="li_click" target="_blank" url="/f/NoticeDetail.aspx?id=152">
+                        	<div>“迎中秋  探风俗”各地中秋风俗征稿启示</div>
+                            <p>在你的故乡，或者你生活工作的地方，是否有一些特有的中秋风俗？...</p>
+                        </li>  
+                    	<li class="li_click" target="_blank" url="/f/NoticeDetail.aspx?id=151">
+                        	<div>“铭记历史，追忆烽火岁月”纪念抗战胜利70周年摄影作品征集</div>
+                            <p>今天，让我们寻找相关的抗战遗址和人物、重温当年的抗战故事，用...</p>
+                        </li>  
+                    	<li class="li_click" target="_blank" url="/f/NoticeDetail.aspx?id=98">
+                        	<div>NTP发布图片的类型和标准</div>
+                            <p>NTP接受的图片标准为：图片尺寸达到 3000×2000 pixels 、300dpi...</p>
+                        </li>  
+                    </ul>
+                	<div class="wuturTop">热点推荐</div>
+                    <ul class="recommend"> 
+                    	<li style=" overflow:hidden;" title="数据漫画"><a target="_blank"; href="http://www.ntpic.cn/f/Topic.aspx?k=4">数据漫画</a></li>
+                    	<li style=" overflow:hidden;" title="时尚时装"><a target="_blank"; href="http://www.ntpic.cn/f/pic.aspx?id=42">时尚时装</a></li>
+                    	<li style=" overflow:hidden;" title="特警生活"><a target="_blank"; href="http://www.ntpic.cn/f/pic.aspx?id=273">特警生活</a></li>
+                    	<li style=" overflow:hidden;" title="埃特纳火山"><a target="_blank"; href="http://www.ntpic.cn/f/pic.aspx?id=281">埃特纳火山</a></li>
+                    	<li style=" overflow:hidden;" title="摄影大赛"><a target="_blank"; href="http://www.ntpic.cn/f/Topic.aspx?k=10">摄影大赛</a></li>
+                    	<li style=" overflow:hidden;" title="留守儿童"><a target="_blank"; href="http://www.ntpic.cn/f/pic.aspx?id=54">留守儿童</a></li>
+                    	<li style=" overflow:hidden;" title="航展"><a target="_blank"; href="http://www.ntpic.cn/f/pic.aspx?id=53">航展</a></li>
+                    	<li style=" overflow:hidden;" title="新闻图片"><a target="_blank"; href="http://www.ntpic.cn">新闻图片</a></li>
+                    	<li style=" overflow:hidden;" title="创意图片"><a target="_blank"; href="http://www.ntpic.cn/f/Topic.aspx?k=1">创意图片</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="main" style="background:#fff;" >
+    	<div class="content" style="background:#fff;" >
+            <div class="pices">
+                <div class="picesl">精品图片</div>
+                <ul class="picesr">
+                	<li class="li_click" target="_blank"url="http://www.ntpic.cn/f/Activity.aspx">摄影活动</li>
+                	<li class="li_click" target="_blank"url="http://www.ntpic.cn/f/PicsList.aspx?h=1">每日热点</li>
+                	<li class="li_click" target="_blank"url="http://www.ntpic.cn/f/Topic.aspx?k=4">图表漫画</li>
+                	<li class="li_click" target="_blank"url="http://www.xinhuanet.com/foto">新华摄影</li>
+                	<li class="li_click" target="_blank"url="http://forum.home.news.cn/index.jsp">摄影论坛</li>
+                </ul>
+            </div>
+            <div class="xiangji li_click" target="_blank" url="http://news.xinhuanet.com/foto/2014-11/27/c_127257472.htm" style="cursor:pointer;" ><img src="/Uploadfile/Advertise/20141258413.jpg" alt="首页精品图片广告位" /></div>
+            <div class="lunbo">
+            	<ul class="lunboul">
+                	<li title="江西遂川瑰丽早霞"><img width="240" alt="江西遂川瑰丽早霞" height="211" class="li_click" target="_blank" url="http://www.ntpic.cn/f/pic.aspx?id=14124" src="/Uploadfile/Article/20157276328.jpg" /><div>江西遂川瑰丽早霞</div></li>
+                	<li title="圆明园美景"><img width="240" alt="圆明园美景" height="211" class="li_click" target="_blank" url="http://www.ntpic.cn/f/pic.aspx?id=14470" src="/Uploadfile/Article/2015868064.jpg" /><div>圆明园美景</div></li>
+                	<li title="风情郁金香，香飘秦黄河"><img width="240" alt="风情郁金香，香飘秦黄河" height="211" class="li_click" target="_blank" url="http://www.ntpic.cn/f/pic.aspx?id=12119" src="/Uploadfile/Article/2015562168.jpg" /><div>风情郁金香，香飘秦黄河</div></li>
+                	<li title="江西遂川：日出云海气势磅礴景象壮美"><img width="240" alt="江西遂川：日出云海气势磅礴景象壮美" height="211" class="li_click" target="_blank" url="http://www.ntpic.cn/f/pic.aspx?id=11996" src="/Uploadfile/Article/2015569173.jpg" /><div>江西遂川：日出云海气势磅礴景象壮美</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+    	<div class="content">
+<div style="height:0px">&nbsp;</div>
+            <ul class="bottul">
+            	<li class="li_click" target="" url="/f/Map.aspx">网站地图</li>
+            	<li class="li_click" target="" url="/f/ContactUs.aspx">联系我们</li>
+            	
+            	<li class="li_click" target="" url="/u/cReg.aspx">客户注册</li>
+            	<li class="li_click" target="" url="/u/pReg.aspx">摄影师注册</li>
+            	<li><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1253501447'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1253501447' type='text/javascript'%3E%3C/script%3E"));</script></li>
+            </ul>
+        	<div class="banquan"><p>
+	版权所有 通普泰克（北京）网络科技有限公司 京ICP备13023248号
+</p></div></div>
+    </div>
+    
+
+<script src="/include/Always.js"></script>
+<script src="/include/imageLoad.js"></script>
+<script src="/include/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="jq/index.js"></script>
+    <script type="text/javascript">
+        count = 6 +0;
+        common="/";
+    </script>
+</body>
+</html>

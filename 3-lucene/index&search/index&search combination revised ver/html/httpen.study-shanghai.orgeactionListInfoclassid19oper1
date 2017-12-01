@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Study in Shanghai</title>
+<link href="/hongbull.css" rel="stylesheet" type="text/css" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery-1.8.3.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+$(function(){
+	$(":input").focus(function(){
+		if($(this).val() ==this.defaultValue)
+			{
+				$(this).val("");
+			} 
+        }
+		)
+		.blur(function(){
+        if ($(this).val() == '') 
+			{
+            	$(this).val(this.defaultValue);
+            }
+        }
+		);
+		
+	$(".StudnetStory_item_long").mouseover(function(){
+	//alert("enter");
+		
+		my_img = $(this).children("img");
+               $(this).find("img").animate({opacity:0.5},1);
+		my_span= $(this).children("span");
+		my_span.addClass("current");
+
+	//$(this#"StudnetStory_item_long_pic".img).animate({opacity:0.8});
+		
+	
+	});
+	$(".StudnetStory_item_long").mouseout(function(){
+	//alert("enter");
+		my_img = $(this).children("div").children("img");
+		$(this).find("img").animate({opacity:1},1);
+		my_span= $(this).children("span");
+		my_span.removeClass("current");
+
+	
+	});
+	
+	$(".StudnetStory_item_short").mouseover(function(){
+	//alert("enter");
+	
+		my_img = $(this).children("div").children("img");
+		my_img.animate({opacity:0.5},1);
+		
+		my_span= $(this).children("span");
+		my_span.addClass("current");
+
+	// $(this#"StudnetStory_item_long_pic".img).animate({opacity:0.8});
+		
+	
+	});
+	$(".StudnetStory_item_short").mouseout(function(){
+	//alert("enter");
+		
+		my_img = $(this).children("div").children("img");
+		my_img.animate({opacity:1},1);
+		my_span= $(this).children("span");
+		my_span.removeClass("current");
+
+	
+	});
+})
+                    
+-->
+</script>
+<script type="text/javascript">
+<!--
+                        $(function(){
+                        $(":input").focus(function(){
+                            if($(this).val() ==this.defaultValue){  
+                            $(this).val("");           
+                                } 
+                        }).blur(function(){
+                        if ($(this).val() == '') {
+                        $(this).val(this.defaultValue);
+                                 }
+                        });
+                                        })
+                    
+-->
+
+</script>
+</head>
+
+<body>
+<div id="site">
+	<!--Top Bar 开始-->
+      <div id="top_bar">
+<form name=search_js1 method=post action='/e/search/index.php' > 
+<input name="show" type="hidden" value="title,smalltext,newstext,writer">
+   	  <div id="top_bar_Search">
+      	<div id="top_bar_Search_input"><input name="keyboard" id="sh1" class="top_Search_input" type="text" value="Search" />
+        </div>
+        <div id="top_bar_Search_BT">
+        <input name="" onclick="su();" type="button" class="top_Search_BT" style="cursor:hand"/>
+        </div>
+</form>
+<script>
+function su(){
+var key =$.trim(document.getElementById("sh1").value);
+
+if(key!='' && key!='Search'){
+document.search_js1.submit();
+}else{
+alert('Please enter the keywords!');
+}
+}
+</script>
+   	  </div>
+      <div id="top_Item_app"><a href="http://en.study-shanghai.org/appsh/" class="Font_14_Green">App</a></div>
+      <div id="top_Item_English"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Item_中文"><a href="http://www.study-shanghai.org/index.asp" class="Font_14_Green">中文</a></div>
+      <div id="top_Logo"><img src="/images/logo.png" />
+      </div>
+    </div>
+    <!--Top Bar 结束-->
+    
+    <!--Banner 开始-->
+    <div id="Banner">
+		<div id="Banner_pic"><img src="/d/file/flash/2014-03-10/065988151b6aa3ca09ae0f842111b624.png" /></div>
+  </div>
+  <script>
+  var Banner_count=3;
+  var Banner_Max =4;
+  var Banner_list = new Array("images/Banner1.png","images/Banner2.png","images/Banner3.png","images/Banner4.png"); 
+
+	$(document).ready(function(){
+ 		$("#Banner_left").click(function(){
+			
+    		if( Banner_count>1 ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count--;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+		
+ 		$("#Banner_right").click(function(){
+			
+    		if( Banner_count<Banner_Max ){
+				$("#Banner_item li:eq("+(Banner_count-1)+")").removeClass("current")
+				Banner_count++;
+				var pic_str = Banner_list[Banner_count-1];
+				//alert("pic_str="+pic_str);
+				$("#Banner_pic img").attr("src",pic_str)
+			}
+			$("#Banner_item li:eq("+(Banner_count-1)+")").addClass("current")
+ 		});
+	});
+
+
+  </script>
+  <!--Banner 结束-->
+  
+  <!--Menu 开始-->
+  <div id="nav" class="nav">
+  <ul class="first">
+<li class="a"><a class="fir" href="/"><span><img src="/images/Menu_Icon_home_on.png" style="margin-right:5px;"/>Home</span></a>
+    <li class="b cur"><a class="fir" href="/sis/"><span>Study in Shanghai</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+    <li class="c"><a class="fir" href="/ag/"><span>Application Guide</span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ag/lr/"><span>Regulations</span></a></li>
+          <li><a href="/ag/visa/"><span>FAQs</span></a></li>
+          <li><a href="http://www.study-shanghai.org/Scholarship_en.asp"><span>Scholarships</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_3_en"><span>Applying Online</span></a></li>
+          <li><a href="http://www.study-shanghai.org/controller.asp?action=SignUp_STA_en"><span>Status Check</span></a></li>
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="d"><a class="fir" href="/ds/"><span>Discover Shanghai </span> </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/ds/cl/"><span>Cultural Life</span></a></li>
+          <li><a href="/ds/museums/"><span>Museums</span></a></li>
+          <li><a href="/ds/living/"><span>Living</span></a></li>
+          <li><a href="/ds/sights/"><span>Sights</span></a></li>
+          <li><a href="/ds/itineraries/"><span>Itineraries</span></a></li> 
+        </ul> 
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>  
+
+    <li class="e"><a class="fir" href="/nc/news/"><span>News Center </span>  </a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+    <li class="f"><a  class="fir" href="/lc/"><span>Learn Chinese</span></a>
+      <!--[if IE 7]><!--><!--<![endif]-->  
+      <!--[if lte IE 6]><table><tr><td><![endif]-->  
+        <ul class="second" style="display: none;">
+          <li><a href="/lc/lm/"><span>Mandarin</span></a></li>
+          <li><a href="/lc/ls/"><span>Shanghai Dialect</span></a></li>
+          <li><a href="/lc/hsk/"><span>HSK</span></a></li>
+        </ul>  
+      <!--[if lte IE 6]></td></tr></table></a><![endif]-->  
+    </li>
+<li class="g"><a class="fir" href="/is/"><span>International Schools</span></a>
+            <ul class="second" style="display: none;">
+              <li>
+                <a href="/is/is"><span>International School</span></a>
+              </li>
+              <li>
+                <a href="/is/id"><span>International Division of Local School</span></a>
+              </li>
+              <li>
+                <a href="/is/asc"><span>After School Class</span></a>
+              </li>
+            </ul>
+          </li>
+  </ul>  
+</div><div class="cb"></div>
+  <!--Menu 结束-->
+  <div id="NavBar">
+ Home > <a href="/sis/">Study in Shanghai</a> > Student Stories </div>
+  <div class="cb"></div>
+  <!--Content 开始-->
+  <div id="Content">
+ 	<div id="Content_left_News">
+    	<div class="left_menu">
+        	<UL>
+            	<li ><a href="/sis/ws/" class="Font_20_fff"><span>Why Shanghai</span></a></li>
+                <li ><a href="/sis/universities/" class="Font_20_fff"><span>Universities</span></a></li>
+                <li ><a href="/sis/courses/" class="Font_20_fff"><span>Courses</span></a></li>       
+                <li ><a href="/sis/tutors/" class="Font_20_fff"><span>Faculty</span></a></li>     
+                <li class="cur"><a href="/e/action/ListInfo/?classid=19&oper=1" class="Font_20_fff"><span>Student Stories</span></a></li>   
+            </UL>
+          </div>
+
+    </div>
+    <div id="Content_right_News">
+    <div id="AppGuide_Title">
+    	<div id="AppGuide_Title_pic">
+        	<img src="/images/Icon_Discover.jpg" />
+        </div>
+      <div id="AppGuide_Title_word">
+        	<p>Student Stories</p>
+            <span>Students come here from many different countries for a wide range of disciplines, but they all have one thing in common — study in Shanghai, China’s most attractive and alluring modern city.
+            <br />
+            <br />
+          Students share their stories about their life in Shanghai, the happiness, the experiences, as well as the problems they encounter. So, if diverse cultures are what interest you or you’re crazy about the Chinese language, why not join them? Shanghai’s your best choice.</span>
+        </div>
+    </div>
+    <div class="cb"></div>
+    
+    
+    <div id="StudentStory_box">
+    	<div id="StudentStory_box_top">
+        	<div id="StudentStory_box_top_switch">
+
+            <a href="/e/action/ListInfo/?classid=19&oper=1"><img src="/images/StudentStory_swtch1_on.jpg" /></a>
+           <a href="/e/action/ListInfo/?classid=19"><img src="/images/StudentStory_swtch2.jpg" /></a>
+          </div>
+            <div id="StudentStory_box_top_info">
+            32 student stories 
+            </div>
+        </div>
+ 
+		<div id="StudentStory_box_content">
+         
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2015-10-08/1603.html'><img src='/d/file/sis/ss/2015-10-08/24c4d93bd5a48157e09c8589754d577c.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Amanda Robyn Maclean</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2015-07-07/1517.html'><img src='/d/file/sis/ss/2015-07-07/58c9f7c30732bdee1b63a44459a73885.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Chai Yuan-chang</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2015-06-15/1498.html'><img src='/d/file/sis/ss/2015-06-15/a48c2f7e5969429d7236c080813135a7.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Pak Anastassiya</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-12-11/1245.html'><img src='/d/file/sis/ss/2014-12-11/cccacc36b7f52a38d498e533bb1f3c0f.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Ik Soo Yoo</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-06-16/854.html'><img src='/d/file/sis/ss/2014-06-17/b83c9358e0f4afca427763f91ef574bc.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Chai Jia Ying</span></div>
+
+
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-06-16/855.html'><img src='/d/file/sis/ss/2014-06-17/1efae82310a414eb48809eff55c81af5.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Oh Sun Young</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-06-16/856.html'><img src='/d/file/sis/ss/2014-06-16/0af1dc6bd3e48be8d5372c25548db6c5.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Tan Wentien</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-06-16/857.html'><img src='/d/file/sis/ss/2014-06-17/f01474bd61722921a4dd2514a099969f.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Lau Yee Ping</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-06-16/858.html'><img src='/d/file/sis/ss/2014-06-16/d14493c130f61d3371dd52941fcad7c2.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Cindy Lu</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-06-16/859.html'><img src='/d/file/sis/ss/2014-06-17/6be40f6bf5c124459339a2f7bc2e6128.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Skrebutenaite Ieva</span></div>
+
+
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-06-16/860.html'><img src='/d/file/sis/ss/2014-10-28/7bae4a31874eeca0a410f63854dda941.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class=""> Prabhu Saish Maheshwar</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-20/458.html'><img src='/d/file/sis/ss/2014-03-20/b4c0c2fae2236c00a5d65606f5c05280.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Huong</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-20/457.html'><img src='/d/file/sis/ss/2014-03-20/4fee3b0c0d181a01140c112a2f70b75b.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Lweis James</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-20/456.html'><img src='/d/file/sis/ss/2014-03-20/aeee8b63aa9d4fb0930b32116364952c.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Huang Xiuzhi</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-06/180.html'><img src='/d/file/nc/ss/2014-03-10/6906f1095b8503700af413a5b1a3bf30.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Mishi Saran</span></div>
+
+
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-05/161.html'><img src='/d/file/nc/ss/2014-03-10/542229ff7dfc82c6b0c5344043cbdb28.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Zhong Yanqiao</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-05/169.html'><img src='/d/file/nc/ss/2014-03-05/164b926a71d0ec307a579e191ffd069c.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Ban Cai</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-05/172.html'><img src='/d/file/nc/ss/2014-03-10/064d55a5865b0e9a181af625a710eebb.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Pelayo Maye</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-06/179.html'><img src='/d/file/nc/ss/2014-03-10/2a39bbad8b3c5a2c5537cea746571b22.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Feng Ai</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-13/439.html'><img src='/d/file/sis/ss/2014-03-13/018950dde73bea1f6894228e4ee06ce7.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Baba Risa</span></div>
+
+
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-05/162.html'><img src='/d/file/nc/ss/2014-03-11/eac4468999d7b8fb66a2401226bdf7e8.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Di Na</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-05/177.html'><img src='/d/file/nc/ss/2014-03-10/c67cebe1000fe271a8809af6676c9878.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Ning Jing</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-06/184.html'><img src='/d/file/sis/ss/2014-03-20/540858c433ee1addd82afabe25e2e247.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Justine Luvanda</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-06/183.html'><img src='/d/file/sis/ss/2014-03-20/cd6db3cb2600f26ba4eae9af192cbbde.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Li Zhencheng</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-06/182.html'><img src='/d/file/sis/ss/2014-03-20/bd0fe9732c4efbf4c56da6692a2877c9.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Na Lisha</span></div>
+
+
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-06/181.html'><img src='/d/file/sis/ss/2014-03-20/4dfd9dc3c251b62776da9f57a4473862.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Ke Han</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-05/175.html'><img src='/d/file/sis/ss/2014-04-08/64d619b495b39e7850d028aaa88a4bd8.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class=""> Rauan</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-05/174.html'><img src='/d/file/sis/ss/2014-04-08/68c44c4e37e26f198184fb61991d2b3a.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Huynh Phuong</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-05/173.html'><img src='/d/file/sis/ss/2014-04-08/baa811de058d8ac8862190af56611dee.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class="">Alhadj Armyaou</span></div>
+<div class="StudnetStory_item_long"><div class="StudnetStory_item_long_pic"><a href='/sis/ss/2014-03-05/178.html'><img src='/d/file/sis/ss/2014-04-11/51cdf8774f7e6e5f8b64b65999d16d52.jpg' width="150" height="138" style="opacity: 1;"></a></div><span class=""> Viloun</span></div>
+
+
+             
+      </div> 
+      
+    </div>
+    <!--翻页 开始-->
+		<div id="jogger_box">
+         <div class="jogger">
+                         <a title="Total">&nbsp;<b>32</b> </a>&nbsp;&nbsp;&nbsp;<span class='current'>1</span>&nbsp;<a href="/e/action/ListInfo/index.php?page=1&amp;classid=19&amp;totalnum=32">2</a>&nbsp;<a href="/e/action/ListInfo/index.php?page=1&amp;classid=19&amp;totalnum=32">></a>&nbsp;<a href="/e/action/ListInfo/index.php?page=1&amp;classid=19&amp;totalnum=32">End</a>
+                    </div>   
+      </div> 
+      <!--翻页 结束-->
+     <!--底部按钮 开始-->
+      <div class="Learn_Bottom_menu">
+      <div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="/e/action/ListInfo/?classid=19&oper=1"><img src="/images/Learn_Icon1.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="/e/action/ListInfo/?classid=19&oper=1">Student Stories</a></div>
+        </div>
+
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="/lc/"><img src="/images/Learn_Icon2.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right"><a href="/lc/">Learn Chinese</a></div>
+        </div>
+        
+      	<div class="LearnMenuBox">
+        	<div class="Learn_menu_box_left"> <a href="/app/2014-04-09/707.html"><img src="/images/Learn_Icon3.jpg" /></a>
+          </div>
+            <div class="Learn_menu_box_right2">
+          <a href="/app/2014-04-09/707.html">APP</a></div>
+        </div>
+
+    </div>
+    <!--底部按钮 结束-->
+
+    </div>
+  </div>
+  <!--Content 结束-->
+    <div id="bottom_bar">
+  	<div id="bottom_left"></div>
+    <div id="bottom_content">
+    	<div id="bottom_content1">
+        	<ul>
+            <li><a href="http://en.study-shanghai.org/sitemap/2014-03-13/442.html" class="Font_12_fff">Sitemap</a></li>
+            <li><a href="http://en.study-shanghai.org/tou/2014-04-07/655.html" class="Font_12_fff">Terms of Use</a></li>
+            <li><a href="http://en.study-shanghai.org/cu/2014-04-07/656.html" class="Font_12_fff">Contact Us</a></li>
+            <li><a href="http://en.study-shanghai.org/lk/2014-03-13/441.html" class="Font_12_fff">Links</a></li>
+            </ul>
+        </div>
+        <div class="cb"></div>
+        <span>Copyright © 2014 Shanghai Municipal Education Commission. All rights reserved.</span>
+    </div>    
+    <div id="bottom_right"></div>
+  </div>
+<div style="dispaly:none">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1252937499'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D1252937499%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<script type="text/javascript" src="/js/nav.js"></script>
+  
+</div> 
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <title>
+            中国志愿服务联合会        </title>
+		        <link href="" type="image/x-icon" rel="shortcut icon">
+		<link href="/templates/pc/zg/css/style.css" rel="stylesheet" type="text/css">
+        <script language="javascript" type="text/javascript" src="/templates/lib/jquery-1.7.1.min.js" ></script>
+        <script type="text/javascript" src="/templates/lib/common.js"></script>
+        <!--[if lte IE 6]>
+        <script language="javascript" type="text/javascript" src="/templates/lib/png.js" ></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix('div, ul, li, input , h2, b, s');
+        </script>
+        <![endif]-->
+        <script type="text/javascript">
+            /*搜索*/
+            function do_search(){
+            var searchvalue = $("#search-txt").val();
+            if(searchvalue==''){alert('请输入搜索关键词'); return false;}
+            window.location.href="/index.php?tpl=search&q="+encodeURIComponent(searchvalue);
+            }
+        </script>        <script language="javascript" type="text/javascript" src="/templates/lib/jquery.scroll.js" ></script>
+        <script language="javascript" type="text/javascript" src="/templates/lib/img_silder/jquery.img_silder.js" ></script>
+		<script src="/templates/pc/zg/css/comm.js"></script>
+        <script>
+            $(function(){
+                //友情链接
+                C.tabs({"params":[
+                    {"nav":"#flink_group_0","con":"#flink_list_0","sclass":"current","nclass":""},
+                    {"nav":"#flink_group_1","con":"#flink_list_1","sclass":"current","nclass":""},
+                    {"nav":"#flink_group_2","con":"#flink_list_2","sclass":"current","nclass":""},
+                    {"nav":"#flink_group_3","con":"#flink_list_3","sclass":"current","nclass":""},
+                    {"nav":"#flink_group_4","con":"#flink_list_4","sclass":"current","nclass":""}
+                    ]
+                });
+                //工作聚焦地方传真
+                C.tabs({"params":[
+                    {"nav":"#lm1_1","con":"#lm1_1con","sclass":"cur1","nclass":"cur1_no"},
+                    {"nav":"#lm1_2","con":"#lm1_2con","sclass":"cur1","nclass":"cur1_no"}
+                ]
+                });
+                //个人会员单位会员
+                C.tabs({"params":[
+                    {"nav":"#lm2_1","con":"#lm2_1con","sclass":"cur1","nclass":"cur1_no"},
+                    {"nav":"#lm2_2","con":"#lm2_2con","sclass":"cur1","nclass":"cur1_no"}
+                ]
+                });
+                //志愿快讯-国内国际
+                C.tabs({"params":[
+                    {"nav":"#lm3_1","con":"#lm3_1con","sclass":"cur2","nclass":"cur2_no"},
+                    {"nav":"#lm3_2","con":"#lm3_2con","sclass":"cur2","nclass":"cur2_no"}
+                ]
+                });
+            });
+            $(document).ready(function(){
+                $('#index_photo').kxbdSuperMarquee({distance:665,time:6,direction:'left'});
+            });
+            $(document).ready(function(){
+                $('#fengcai').kxbdSuperMarquee({distance:665,time:4,direction:'left'});
+            });
+            $(function(){
+                $('#silder').imgSilder({
+                    s_width:500, //容器宽度
+                    s_height:293, //容器高度
+                    is_showTit:true, // 是否显示图片标题 false :不显示，true :显示
+                    s_times:3000, //设置滚动时间
+                    css_link:'/templates/lib/img_silder/style.css'
+                });
+            });
+        </script>
+        <base target="_blank">
+            <style type="text/css">
+                a.cur1{margin-right:3px;font-family:微软雅黑;text-align:center;font-size:14px;line-height:30px;color:#fff;float:left;width:106px;height:30px;display:block;background:url(/templates/pc/zg/css/img/tit.png) no-repeat;}
+                a.cur1_no{margin-right:3px;font-family:微软雅黑;text-align:center;font-size:14px;line-height:30px;color:#c5050c;float:left;width:106px;height:30px;display:block;background:url(/templates/pc/zg/css/img/tit2.png) no-repeat;}
+                a.cur2{margin-right:3px;font-family:微软雅黑;text-align:center;font-size:14px;line-height:30px;color:#c5050c;float:left;padding:0 20px;height:30px;display:block;background:url(/templates/pc/zg/css/img/3.png) center bottom no-repeat;}
+                a.cur2_no{margin-right:3px;font-family:微软雅黑;text-align:center;font-size:14px;line-height:30px;color:#c5050c;float:left;padding:0 20px;height:30px;display:block;background:none;}
+            </style>
+    </head>
+    <body>
+        <!-- 横幅 -->
+        <!--
+        <link rel=stylesheet type=text/css href="cj2014/chunjie2014.css">
+        <div class="gg_full wrapfix">
+            <div class="gg_fbtn">
+                <a style="display: none" class="gg_freplay" title="重播" href="#"></a><a class="gg_fclose" title="关闭" href="#"></a>
+            </div>
+            <div class="gg_fcon"></div>
+        </div>
+        <script type="text/javascript" src="cj2014/chunjie2014.js"></script>
+    -->
+        <p class="line-t-5"></p> 
+		<!-- 顶部 搜索 -->
+		        <!--[if lte IE 6]>
+            <script language="javascript" type="text/javascript" src="/templates/lib/png.js" ></script>
+            <script type="text/javascript">
+                DD_belatedPNG.fix('div, ul, li, input , a, a:hover, h2, b');
+            </script>
+        <![endif]-->
+        <div class="top box_100">
+			<div class="box_1000 h43">
+                
+                <script type="text/javascript" src="http://v.cvf.org.cn/app/api/site.all.js"></script>	
+                <style>
+                .topmenu_r a{line-height:40px;}
+                .area_all .topmenu_con{top:40px;}
+                    .topmenu_r a.arrow1{background:url(http://css.zhiyuanyun.com/default/images/btn.png) 65px -318px no-repeat;text-align:left;padding-left:10px;*padding-left:5px;}
+                </style>		
+<span class="l" style="line-height:40px;"><script type="text/javascript" src="http://v.cvf.org.cn/app/api/top.status.php"></script></span>
+<div class="firend l">
+					<a href="http://weibo.com/cvforgcn" target="_blank"><img src="/templates/pc/zg/css/img/sina.png" /><span class="">新浪微博</span></a>
+				</div>
+				<div class="search r">
+					<div class="search_wrap">
+						<input type="input" id="search-txt" onkeydown="if(event.keyCode==13) do_search();" class="search-txt" value=""/>
+						<a href="javascript:void(0);" onclick="do_search();" class="search-btn" title="搜索" target="_self">搜索</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 顶部logo -->
+		<div class="header logo_box h110">
+			<div class="hd_logo l">
+				<a href="javascript:void(0);">
+					<img src="/upload/images/2014/01/08/52cd17a613a6b.gif" />
+				</a>
+			</div>
+			<div class="weather r">
+				<div class="day_time">
+					2015年10月28日&nbsp;&nbsp;&nbsp;&nbsp;星期三				</div>
+
+				<div class="wt">
+					<iframe width="200" scrolling="no" height="15" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=11&icon=1"></iframe>
+				</div>
+			<!-- 背景音乐 -->
+						<script>
+            	function hasClass(ele,cls) { 
+            		return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)')); 
+            	} 
+            	function musicPalyer(obj){
+            		var myAuto =document.getElementById('musicPalyer');
+            		var playerBtn = document.getElementById('player_btn');
+            		var boolClass = hasClass(playerBtn,'close_player');
+            		if(boolClass){
+            			myAuto.pause(); //暂停播放
+            			playerBtn.className="player";
+            		}else{
+            			myAuto.play();
+            			playerBtn.className +=" " + 'close_player';
+            		}
+            	}
+            </script>
+            <style>
+            	.player{background:url(/upload/player-r.png) no-repeat 50% 50%;width: 24px;height: 24px;display: block;float: right;text-indent: -9999px;margin-top:5px;}	
+            	.player.close_player{background:url(/upload/player-d.png) no-repeat 50% 50%;}
+            </style>
+        	<audio autoplay id="musicPalyer"> 
+        		<source src="/upload/dbs.mp3" type="audio/mpeg" /> 
+        	</audio> 
+        	<a href="javascript:void(0);" target="_self" id="player_btn" class="player close_player" onclick="musicPalyer(this)"></a>
+				<!--
+<span class="player" style="margin-top:5px;">
+				<audio autoplay> 
+		<source src="/upload/dbs.mp3" type="audio/mpeg" /> 
+	</audio>
+					<script>
+						/*
+var swf_width=24
+						var swf_height=24
+						var config='5|0xffffff|0x0099ff|50|0xffffff|0x0099ff|0x000000'
+						// config 设置分别为: 自动播放时间(秒)|文字颜色|文字背景色|文字背景透明度|按键数字色|当前按键色|普通按键色
+						var files='123.jpg'
+						var links='1'
+						var texts='ri'
+						document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+						document.write('<param name="movie" value="/templates/pc/zg/css/flash_music/nomusic.swf" />');
+						document.write('<param name="quality" value="high" />');
+						document.write('<param name="menu" value="false" />');
+						document.write('<param name=wmode value="opaque" />');
+						document.write('<param name="FlashVars" value="config='+config+'&bcastr_flie='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'" />');
+						document.write('<embed src="/templates/pc/zg/css/flash_music/nomusic.swf" wmode="opaque" FlashVars="config='+config+'&bcastr_flie='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+						document.write('</object>');
+*/
+					</script>
+				</span>
+-->
+						</div>
+		</div>
+		<!-- 导航 -->
+		<div class="nav">
+			<ul class="nav_list" id="nav_list">
+				<li>
+					<a href="/" class="current" target="_self">首&nbsp;&nbsp;&nbsp;&nbsp;页</a>
+				</li>
+<li>
+					<a href="http://v.cvf.org.cn/app/opp/list.php" target="_self">志愿项目</a>
+				</li>
+<li>
+					<a href="http://v.cvf.org.cn/app/org/list.php" target="_self">志愿团体</a>
+				</li>
+                				<li>
+					<a href="http://www.cvf.org.cn/cate/zykx/"  target="_self">志愿快讯</a>
+                    					<!--<ul class="child_nav_list" id="child_nav_list" style="display:none;">
+                        						<li><a href="http://www.cvf.org.cn/cate/gndt/">国内动态</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/gjdt/">国际动态</a></li>
+                        					</ul> -->
+                    				</li>
+                				<li>
+					<a href="http://www.cvf.org.cn/cate/zldt/"  target="_self">志联动态</a>
+                    					<!--<ul class="child_nav_list" id="child_nav_list" style="display:none;">
+                        						<li><a href="http://www.cvf.org.cn/cate/tzgg/">通知公告</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/gzdt/">工作动态</a></li>
+                        					</ul> -->
+                    				</li>
+                				<li>
+					<a href="http://www.cvf.org.cn/cate/mtbd/"  target="_self">媒体聚焦</a>
+                    				</li>
+                				<li>
+					<a href="http://www.cvf.org.cn/cate/hyfc/"  target="_self">志愿风采</a>
+                    					<!--<ul class="child_nav_list" id="child_nav_list" style="display:none;">
+                        						<li><a href="http://www.cvf.org.cn/cate/hygs/">会员故事</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/grhy/">个人会员</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/tthy/">单位会员</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/youxiuzhiyuanzhe/">优秀志愿者</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/youxiuzhiyuantuanti/">优秀志愿团体</a></li>
+                        					</ul> -->
+                    				</li>
+                				<li>
+					<a href="http://www.cvf.org.cn/cate/zcfg/"  target="_self">政策法规</a>
+                    					<!--<ul class="child_nav_list" id="child_nav_list" style="display:none;">
+                        						<li><a href="http://www.cvf.org.cn/cate/zybk/">志愿百科</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/wenjianxiazai/">文件下载</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/zywj/">中央部委</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/fwtl/">志愿服务条例</a></li>
+                        						<li><a href="http://www.cvf.org.cn/cate/gngd/">国内各地</a></li>
+                        					</ul> -->
+                    				</li>
+                			</ul>
+		</div>        <p class="line-t-5"></p>
+        <div class="box_1000"><a href="/cate/linlishouwangchengguozhanshi/" target="_blank"><img src="/2015/sftt/llsw2015.jpg" border="0"></a></div>
+		<p class="line-t-5"></p>
+		<!-- 主体内容 -->
+		<div class="content">
+			<!-- 主体内容 上 -->
+			<div class="box_1000">
+				<div class="silder banner_silder l" id="silder">
+					<ul class="silder_list" id="silder_list">
+						<li><a href="/show/4167.html" target="_blank"><img src="/upload/images/2015/10/14/561e0143d9ee0.jpg" border="0" alt="全国“邻里守望”志愿服务成果展示系列活动在京举行"></a></li><li><a href="/show/4167.html" target="_blank"><img src="/upload/images/2015/10/14/561e0170aeb96.jpg" border="0" alt="刘淇会长出席“邻里守望”志愿服务项目对接现场签约仪式"></a></li><li><a href="/show/4167.html" target="_blank"><img src="/upload/images/2015/10/14/561e01ba156a8.jpg" border="0" alt="“邻里守望情 志愿中国行”全国“邻里守望”志愿服务文艺演出"></a></li><li><a href="/show/4160.html" target="_blank"><img src="/upload/images/2015/10/14/561e02ccc57c7.jpg" border="0" alt="刘淇会长出席“邻里守望”志愿服务 实践与理论创新座谈会"></a></li><li><a href="/show/3857.html" target="_blank"><img src="/upload/images/2015/09/11/55f299ba90052.jpg" border="0" alt="刘淇会长出席2015首届中国志愿服务论坛并在吉林市调研"></a></li><li><a href="/show/3857.html" target="_blank"><img src="/upload/images/2015/09/11/55f297e459031.jpg" border="0" alt="刘淇会长出席2015首届中国志愿服务论坛并在吉林市调研"></a></li>                    </ul>
+				</div>
+				<div class="cnt_info_hot r" style="width:495px;">
+                    <div class="clearfix" style="height:30px;overflow:hidden;"><a id="lm1_1" href="javascript:void(0);" target="_self">工作聚焦</a><a id="lm1_2" href="javascript:void(0);" target="_self">地方传真</a></div>
+					<ul id="lm1_1con" class="hot_list hot_list2" style="height:250px;padding-bottom:6px;padding-top:6px;">
+                        						<li class="first_css">
+							<a style="text-align:center;line-height:24px;font-weight:bold;color:red;margin:10px 0;font-size:20px;" href="http://www.cvf.org.cn/show/4167.html">全国“邻里守望”志愿服务成果展示<br>系列活动在京举行</a>
+                            <p><a href="http://www.cvf.org.cn/show/4167.html" style="color:#000;font-size:12px;font-weight:normal;line-height:18px;height:55px;">　　由中国志愿服务联合会和中国志愿服务基金会联合主办的全国“邻里守望”志愿服务成果展示系列活动10月12日至20日在北京举行。中央政治局原委员、中国志愿服务联合会会长刘淇，北京市委常委、市委副书记吕锡文等领导出席相关活动。</a></p>
+						</li>
+                        						<li class="bdrb2">
+							<a href="http://www.cvf.org.cn/show/4195.html" title="刘淇会长出席国际志愿服务交流大会">刘淇会长出席国际志愿服务交流大会</a>
+							<em>10/21</em>
+						</li>
+                        						<li >
+							<a href="http://www.cvf.org.cn/show/4194.html" title="中国志愿服务联合会赴北京市大兴区调研">中国志愿服务联合会赴北京市大兴区调研</a>
+							<em>10/21</em>
+						</li>
+                        						<li >
+							<a href="http://www.cvf.org.cn/show/4191.html" title="“邻里守望情 志愿中国行”志愿服务主题展览在京举行">“邻里守望情 志愿中国行”志愿服务主题展览在京举行</a>
+							<em>10/20</em>
+						</li>
+                        						<li >
+							<a href="http://www.cvf.org.cn/show/4185.html" title="“邻里守望情 志愿中国行”志愿服务文艺演出在京举行">“邻里守望情 志愿中国行”志愿服务文艺演出在京举行</a>
+							<em>10/19</em>
+						</li>
+                        					</ul>
+                    <ul id="lm1_2con" class="hot_list hot_list2" style="display:none;height:250px;padding-bottom:6px;padding-top:6px;">
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/4035.html" title="深圳1.2万人次志愿者国庆期间参与志愿服务活动">深圳1.2万人次志愿者国庆期间参与志愿服务活动</a>
+                                <em>10/08</em>
+                            </li>
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/4017.html" title="邯郸举办“燕赵志愿云”系统应用培训班">邯郸举办“燕赵志愿云”系统应用培训班</a>
+                                <em>09/25</em>
+                            </li>
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/3844.html" title="北京:志愿服务纳入学生综合素质评价">北京:志愿服务纳入学生综合素质评价</a>
+                                <em>09/08</em>
+                            </li>
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/3825.html" title="推动志愿服务健康发展  《吉林省志愿服务条例》正式施行">推动志愿服务健康发展  《吉林省志愿服务条例》正式施行</a>
+                                <em>08/31</em>
+                            </li>
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/3824.html" title="南宁市举办2015年“志愿云”系统操作培训班">南宁市举办2015年“志愿云”系统操作培训班</a>
+                                <em>08/29</em>
+                            </li>
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/3814.html" title="曲靖宣威龙潭镇得基村大学生志愿者协会组织留守儿童开展“爱，让留守儿童不再孤独”文艺活动">曲靖宣威龙潭镇得基村大学生志愿者协会组织留守儿童开展“爱，让留守儿童不再孤独”文艺活动</a>
+                                <em>08/28</em>
+                            </li>
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/3785.html" title="天津青年志愿者:与救援部队同时抵达事故现场">天津青年志愿者:与救援部队同时抵达事故现场</a>
+                                <em>08/18</em>
+                            </li>
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/3784.html" title="北京应急志愿者有序服务天津“8.12”爆炸 事故救援工作">北京应急志愿者有序服务天津“8.12”爆炸 事故救援工作</a>
+                                <em>08/18</em>
+                            </li>
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/3778.html" title="2015年山东省青年志愿服务交流会开幕">2015年山东省青年志愿服务交流会开幕</a>
+                                <em>08/17</em>
+                            </li>
+                                                    <li>
+                                <a href="http://www.cvf.org.cn/show/3780.html" title="天津志愿者积极参与救助">天津志愿者积极参与救助</a>
+                                <em>08/14</em>
+                            </li>
+                                            </ul>
+				</div>
+			</div>
+            <p class="line-t-5"></p>
+            <!--邻里守望-->
+            <div class="box_1000 llsw llsw2 clearfix">
+                <div class="l" style="width:350px;"><a style="display:block;width:300px;height:100px;" href="http://www.cvf.org.cn/cate/linlishouwang/" target="_blank"></a></div>
+                <div class="l" style="width:640px;height:80px;margin-top:10px;">
+                <ul class="clearfix"><li><a title="南京：16种服务满足社区及周边人需求" class="l" href="http://www.cvf.org.cn/show/4228.html" target="_blank">[江苏]南京：16种服务满足社区及周边人需求</a><font style="float:left;margin-left:4px;color:red;font-size:12px;">New</font><span class="r"></span></li><li><a title="百步亭推出“时间银行”奖励社区志愿服务" class="l" href="http://www.cvf.org.cn/show/4227.html" target="_blank">[湖北]百步亭推出“时间银行”奖励社区志愿服务</a><font style="float:left;margin-left:4px;color:red;font-size:12px;">New</font><span class="r"></span></li><li><a title="惠州市首家大群防志愿者之家落户江北" class="l" href="http://www.cvf.org.cn/show/4226.html" target="_blank">[广东]惠州市首家大群防志愿者之家落户江北</a><span class="r"></span></li><li><a title="无锡市强化志愿服务工作 助力世界佛教论坛盛会" class="l" href="http://www.cvf.org.cn/show/4225.html" target="_blank">[江苏]无锡市强化志愿服务工作 助力世界佛教论坛盛会</a><span class="r"></span></li><li><a title="河北省无极“爱心义工团”8年帮扶千余人" class="l" href="http://www.cvf.org.cn/show/4224.html" target="_blank">[河北]河北省无极“爱心义工团”8年帮扶千余人</a><span class="r"></span></li><li><a title="亳州“互联网+”志愿服务模式即将启动" class="l" href="http://www.cvf.org.cn/show/4223.html" target="_blank">[安徽]亳州“互联网+”志愿服务模式即将启动</a><span class="r"></span></li></ul>                </div>
+            </div>
+			<p class="line-t-5"></p>
+            <!--志愿快讯-->
+            <div class="list_con l box2" style="width:600px;">
+                <div class="item_tit"><span class="tit_na">志愿快讯</span><a id="lm3_1" href="javascript:void(0);" target="_self">国内</a><a id="lm3_2" href="javascript:void(0);" target="_self">国际</a><a class="more" href="http://www.cvf.org.cn/cate/zykx/" title="志愿快讯">更多...</a></div>
+                <style>
+                    .img_item a.info_img{width:85px;}
+                </style>
+                <div class="item h230 newitem">
+                    <div id="lm3_1con">
+                        <div class="img_item l" style="margin-left:10px;">
+                                                            <a href="http://www.cvf.org.cn/show/4165.html" title="国际志愿服务交流大会在京举行 五大洲27个国家参加"><img class="info_img" width="130" height="90" src="/upload/images/2015/10/20/thumb_5625f4624d663.jpg" alt="国际志愿服务交流大会在京举行 五大洲27个国家参加"><br>国际志愿服务交流大会在京举行 五大洲27个国家参加</a>
+                                                       <a href="http://www.cvf.org.cn/show/4169.html" title="全国“邻里守望情 志愿中国行”志愿服务文艺演出举行"><img class="info_img" width="130" height="90" src="/upload/images/2015/10/20/thumb_5625f3b271425.jpg" alt="全国“邻里守望情 志愿中国行”志愿服务文艺演出举行"><br>全国“邻里守望情 志愿中国行”志愿服务文艺演出举行</a>
+                                                 </div>
+                                                <ul class="news_list l list_d list_d_new">
+                                                            <li><a href="http://www.cvf.org.cn/show/4231.html" title="我国志愿服务信息化标准化规范化建设全面铺开">我国志愿服务信息化标准化规范化建设全面铺开&nbsp;&nbsp;<font color=red>New</font></a><span class="r">10/28</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4230.html" title="中宣部、中组部、中央文明办等部门开展推选志愿服务“四个100”先进典型活动">中宣部、中组部、中央文明办等部门开展推选志愿服务&nbsp;&nbsp;<font color=red>New</font></a><span class="r">10/27</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4190.html" title="陕西开评首批新时期爱国卫生运动优秀志愿者">陕西开评首批新时期爱国卫生运动优秀志愿者</a><span class="r">10/20</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4189.html" title="光明日报:邻里守望，践行核心价值观">光明日报:邻里守望，践行核心价值观</a><span class="r">10/20</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4187.html" title="陕西省志愿服务组织负责人培训班西安首次开班">陕西省志愿服务组织负责人培训班西安首次开班</a><span class="r">10/19</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4184.html" title="贵州省志愿者网络实名注册突破150万人">贵州省志愿者网络实名注册突破150万人</a><span class="r">10/19</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4182.html" title="中国青年志愿服务项目大赛入围决赛项目出炉">中国青年志愿服务项目大赛入围决赛项目出炉</a><span class="r">10/19</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4181.html" title="“志愿家庭”全员服务空巢老人">“志愿家庭”全员服务空巢老人</a><span class="r">10/19</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4183.html" title="“2015中国文艺志愿者公益演出季”北京开幕">“2015中国文艺志愿者公益演出季”北京开幕</a><span class="r">10/19</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4165.html" title="国际志愿服务交流大会在京举行 五大洲27个国家参加">国际志愿服务交流大会在京举行 五大洲27个国家参</a><span class="r">10/14</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4175.html" title="河北廊坊市志愿服务联合会成立">河北廊坊市志愿服务联合会成立</a><span class="r">10/14</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/4169.html" title="全国“邻里守望情 志愿中国行”志愿服务文艺演出举行">全国“邻里守望情 志愿中国行”志愿服务文艺演出举</a><span class="r">10/14</span></li>
+                                                    </ul>
+                    </div>
+
+                    <div id="lm3_2con" style="display:none;">
+                        <div class="img_item l" style="margin-left:10px;">
+                                                            <a href="http://www.cvf.org.cn/show/3682.html" title="中法志愿者 携手修古居"><img class="info_img" width="130" height="90" src="/upload/images/2015/07/16/thumb_55a75790ddfff.jpg" alt="中法志愿者 携手修古居"><br>中法志愿者 携手修古居</a>
+                                                            <a href="http://www.cvf.org.cn/show/186.html" title="志愿者的微笑绽放索契冬奥会"><img class="info_img" width="130" height="90" src="/upload/images/2014/02/10/thumb_52f86c6827b66.jpg" alt="志愿者的微笑绽放索契冬奥会"><br>志愿者的微笑绽放索契冬奥会</a>
+                                                    </div>
+                                                <ul class="news_list l list_d list_d_new">
+                                                            <li><a href="http://www.cvf.org.cn/show/3787.html" title="中国驻泰使馆组织志愿者赴医院提供中文翻译服务">中国驻泰使馆组织志愿者赴医院提供中文翻译服务中国驻泰使馆组织志愿者赴医院提供中文翻译服务</a><span class="r">08/18</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/3687.html" title="里约奥运会开闭幕式招募志愿者">里约奥运会开闭幕式招募志愿者里约奥运会开闭幕式招募志愿者</a><span class="r">07/17</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/3682.html" title="中法志愿者 携手修古居">中法志愿者 携手修古居中法志愿者 携手修古居</a><span class="r">07/16</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/3478.html" title="尼泊尔震灾国际照护服务志愿者凯旋">尼泊尔震灾国际照护服务志愿者凯旋尼泊尔震灾国际照护服务志愿者凯旋</a><span class="r">06/02</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/3359.html" title="贵州志愿者救援队奔赴尼泊尔 飞越世界屋脊的救援">贵州志愿者救援队奔赴尼泊尔 飞越世界屋脊的救援贵州志愿者救援队奔赴尼泊尔 飞越世界屋脊的救援</a><span class="r">04/27</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/3222.html" title="逾八千中国志愿者报名里约奥运会">逾八千中国志愿者报名里约奥运会逾八千中国志愿者报名里约奥运会</a><span class="r">03/30</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/3164.html" title="志愿者访日交流体会">志愿者访日交流体会志愿者访日交流体会</a><span class="r">03/13</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/3034.html" title="外国志愿者现武汉地铁 称武汉志愿服务氛围浓厚">外国志愿者现武汉地铁 称武汉志愿服务氛围浓厚外国志愿者现武汉地铁 称武汉志愿服务氛围浓厚</a><span class="r">02/26</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/3024.html" title="埃博拉治愈患者成为抗埃志愿者">埃博拉治愈患者成为抗埃志愿者埃博拉治愈患者成为抗埃志愿者</a><span class="r">02/24</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/2600.html" title="第六批援塞舌尔志愿服务队顺利抵塞开展服务">第六批援塞舌尔志愿服务队顺利抵塞开展服务第六批援塞舌尔志愿服务队顺利抵塞开展服务</a><span class="r">11/17</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/2296.html" title="里约奥运志愿者报名超10万人 中国排第3">里约奥运志愿者报名超10万人 中国排第3里约奥运志愿者报名超10万人 中国排第3</a><span class="r">10/07</span></li>
+                                                            <li><a href="http://www.cvf.org.cn/show/2241.html" title="志愿者折射亚运多元文化">志愿者折射亚运多元文化志愿者折射亚运多元文化</a><span class="r">09/22</span></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+            <!--通知公告-->
+            <div class="list_con r box1" style="margin-right:0;width:385px;">
+                <div class="item_tit"><span class="tit_na">通知公告</span><a class="more" href="http://www.cvf.org.cn/cate/tzgg/" title="通知公告">更多...</a></div>
+                <div class="item h230" style="height:285px;">
+                    <ul class="news_list nohidden">
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/4186.html" title="关于举办《志愿服务信息系统基本规范》培训班的通知">关于举办《志愿服务信息系统基本规范》培训班的通知&nbsp;&nbsp;<font color=red>New</font></a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/3613.html" title="关于征集“邻里守望”志愿服务成果的通知">关于征集“邻里守望”志愿服务成果的通知</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/3505.html" title="关于征集中国志愿服务论文的通知">关于征集中国志愿服务论文的通知</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/3239.html" title="关于向中国志愿服务联合会报送宣传素材的通知">关于向中国志愿服务联合会报送宣传素材的通知</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/2701.html" title="在“12•5”国际志愿者日主题宣传与实践活动启动仪式上的倡议书">在“12•5”国际志愿者日主题宣传与实践活动启动仪式上的倡议书</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/2578.html" title="关于举办中国志愿服务联合会第二期培训班（信息化）的通知">关于举办中国志愿服务联合会第二期培训班（信息化）的通知</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/2535.html" title="全国志愿服务标识征集活动优秀作品公示">全国志愿服务标识征集活动优秀作品公示</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/2518.html" title="关于征集“邻里守望”志愿服务案例的通知">关于征集“邻里守望”志愿服务案例的通知</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/2105.html" title="关于征集全国志愿服务标识的公告">关于征集全国志愿服务标识的公告</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/1781.html" title="关于积极有序参与抗震救灾和灾后重建志愿服务的倡议书">关于积极有序参与抗震救灾和灾后重建志愿服务的倡议书</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/2106.html" title="关于志愿服务广州交流会暨首届中国青年志愿服务项目大赛的通知">关于志愿服务广州交流会暨首届中国青年志愿服务项目大赛的通知</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/218.html" title="中国志愿服务联合会招聘工作人员公告">中国志愿服务联合会招聘工作人员公告</a></li>
+                                            </ul>
+                </div>
+            </div>
+            <p class="line-t-10"></p>
+            <!--媒体聚焦-->
+            <div class="list_con l box2" style="width:600px;">
+                <div class="item_tit"><span class="tit_na">媒体聚焦</span><a class="more" href="http://www.cvf.org.cn/cate/mtbd/" title="志愿快讯">更多...</a></div>
+                <style>
+                    .img_item a.info_img{width:85px;}
+                </style>
+                <div class="item h230 newitem">
+
+                    <div class="img_item l" style="margin-left:10px;">
+                                                    <a href="http://www.cvf.org.cn/show/4166.html" title="《北京新闻》:国际志愿服务交流大会开幕"><img class="info_img" width="130" height="90" src="/upload/images/2015/10/20/thumb_5625f4cd62a83.jpg" alt="《北京新闻》:国际志愿服务交流大会开幕"><br>《北京新闻》:国际志愿服务交流大会开幕</a>
+                                                    <a href="http://www.cvf.org.cn/show/4163.html" title="《光明日报》:“邻里守望”志愿服务成果在京展示"><img class="info_img" width="130" height="90" src="/upload/images/2015/10/20/thumb_5625f5a0de3a0.jpg" alt="《光明日报》:“邻里守望”志愿服务成果在京展示"><br>《光明日报》:“邻里守望”志愿服务成果在京展示</a>
+                                            </div>
+                                        <ul class="news_list l list_d list_d_new">
+                                                    <li><a href="http://www.cvf.org.cn/show/4166.html" title="《北京新闻》:国际志愿服务交流大会开幕">《北京新闻》:国际志愿服务交流大会开幕</a><span class="r">10/14</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/4163.html" title="《光明日报》:“邻里守望”志愿服务成果在京展示">《光明日报》:“邻里守望”志愿服务成果在京展示</a><span class="r">10/14</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/4164.html" title="《北京日报》:国际志愿服务交流大会开幕">《北京日报》:国际志愿服务交流大会开幕</a><span class="r">10/14</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/4168.html" title="新华网:国际志愿服务交流大会暨“邻里守望”志愿服务成果展开幕">新华网:国际志愿服务交流大会暨“邻里守望”志愿服</a><span class="r">10/14</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/3867.html" title="《光明日报》:首届中国志愿服务论坛举行">《光明日报》:首届中国志愿服务论坛举行</a><span class="r">09/14</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/3862.html" title="《新闻联播》:文化助盲 构建盲人的精神家园">《新闻联播》:文化助盲 构建盲人的精神家园</a><span class="r">09/14</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/3861.html" title="《新闻联播》:百步亭社区：邻里守望 共建家园">《新闻联播》:百步亭社区：邻里守望 共建家园</a><span class="r">09/14</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/3855.html" title="人民网:习近平总书记回信 最关注教育及志愿者">人民网:习近平总书记回信 最关注教育及志愿者</a><span class="r">09/11</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/3854.html" title="《吉林日报》:2015首届中国志愿服务论坛开幕">《吉林日报》:2015首届中国志愿服务论坛开幕</a><span class="r">09/10</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/3853.html" title="《吉林新闻联播》:首届中国志愿服务论坛开幕">《吉林新闻联播》:首届中国志愿服务论坛开幕</a><span class="r">09/10</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/3849.html" title="《光明日报》:为吉林志愿服务“点赞”">《光明日报》:为吉林志愿服务“点赞”</a><span class="r">09/09</span></li>
+                                                    <li><a href="http://www.cvf.org.cn/show/3837.html" title="《光明日报》:党员志愿者为党旗添彩">《光明日报》:党员志愿者为党旗添彩</a><span class="r">09/07</span></li>
+                                            </ul>
+                </div>
+            </div>
+            <!--政策法规-->
+            <div class="list_con r box1" style="margin-right:0;width:385px;">
+                <div class="item_tit"><span class="tit_na">政策法规</span><a class="more" href="http://www.cvf.org.cn/cate/zcfg/" title="通知公告">更多...</a></div>
+                <div class="item h230" style="height:285px;">
+                    <ul class="news_list nohidden">
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/3827.html" title="民政部《志愿服务信息系统基本规范》行业标准">民政部《志愿服务信息系统基本规范》行业标准</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/4222.html" title="中央文明办 民政部 教育部 共青团中央《关于规范志愿服务记录证明的指导意见》">中央文明办 民政部 教育部 共青团中央《关于规范志愿服务记录证明的指导意见》</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/3472.html" title="中共中央办公厅、国务院办公厅印发《关于深入推进农村社区建设试点工作的指导意见》">中共中央办公厅、国务院办公厅印发《关于深入推进农村社区建设试点工作的指导意见》</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/3384.html" title="中共中央 国务院《关于加快推进生态文明建设的意见》">中共中央 国务院《关于加快推进生态文明建设的意见》</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/3230.html" title="教育部《学生志愿服务管理暂行办法》">教育部《学生志愿服务管理暂行办法》</a></li>
+                                                                            <li style="width:auto;"><a href="http://www.cvf.org.cn/show/3631.html" title="天津市《关于推进志愿服务制度化的实施意见》">天津市《关于推进志愿服务制度化的实施意见》</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/2159.html" title="陕西省《关于在职党员到社区为群众志愿服务的意见》">陕西省《关于在职党员到社区为群众志愿服务的意见》</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/1035.html" title="河北省《关于全省共产党员广泛参与志愿服务活动的意见》">河北省《关于全省共产党员广泛参与志愿服务活动的意见》</a></li>
+                                                    <li style="width:auto;"><a href="http://www.cvf.org.cn/show/210.html" title="北京市《关于组织全市共产党员、共青团员积极参加学雷锋志愿服务活动实施意见》">北京市《关于组织全市共产党员、共青团员积极参加学雷锋志愿服务活动实施意见》</a></li>
+                                                                            <li style="width:360px;"><a href="http://www.cvf.org.cn/show/3506.html" title="重庆市志愿服务条例">重庆市志愿服务条例</a></li>
+                                                    <li style="width:360px;"><a href="http://www.cvf.org.cn/show/3470.html" title="西藏自治区志愿服务条例">西藏自治区志愿服务条例</a></li>
+                                                    <li style="width:360px;"><a href="http://www.cvf.org.cn/show/2864.html" title="山西省志愿服务条例">山西省志愿服务条例</a></li>
+                                                    <li style="width:360px;"><a href="http://www.cvf.org.cn/show/2863.html" title="湖南省志愿服务条例">湖南省志愿服务条例</a></li>
+                                            </ul>
+                </div>
+            </div>
+            <p class="line-t-10"></p>
+            <!--底部右侧广告图--><style>.yxgg li img{width:385px;height:80px;}</style>
+			<div class="list_con r" style="width:385px;">
+                <ul class="yxgg clearfix"><li><a href="http://www.cvf.org.cn/cate/linlishouwang/" target="_blank"><img src="/upload/images/2015/09/14/55f668d045e31.png" border="0" alt="邻里守望"></a></li><li><a href="http://www.cvf.org.cn/cate/yxdyzyz/" target="_blank"><img src="/upload/images/2015/09/14/55f680025aa19.png" border="0" alt="党员志愿者"></a></li><li><a href="http://v.cvf.org.cn/app/api/map.all.php" target="_blank"><img src="/upload/images/2015/02/05/54d387a7e62dd.png" border="0" alt="志愿服务数据"></a></li><li><a href="http://www.zhiyuanyun.com" target="_blank"><img src="/upload/images/2015/09/14/55f67e8fca632.png" border="0" alt="志愿云"></a></li><li><a href="http://www.cvf.org.cn/cate/peixunban/" target="_blank"><img src="/upload/images/2015/09/15/55f77613a8e45.jpg" border="0" alt="培训班"></a></li></ul>
+			</div>
+            <!--单位会员个人会员-->
+			<div class="list_con l" style="width:600px;">
+                <div class="clearfix" style="height:30px;overflow:hidden;"><a id="lm2_1" href="javascript:void(0);" target="_self">单位会员</a><a id="lm2_2" href="javascript:void(0);" target="_self">个人会员</a></div>
+                <div id="lm2_1con">
+                    <div class="item h140 item2015" id="index_photo" style="width:598px;overflow:hidden;">
+                        <ul class="img_list" id="index_photo_inner">
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/538.html" title="天津市和平区学雷锋志愿服务促进会">
+                                    <p><img src="/upload/images/2014/04/17/534f3416ece8a.jpg" title="天津市和平区学雷锋志愿服务促进会" alt="天津市和平区学雷锋志愿服务促进会"/></p>
+                                    <p class="item_img_name">天津市和平区学雷锋志愿服务促进会</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/91.html" title="南宁志愿服务联合会">
+                                    <p><img src="/upload/images/2014/06/09/53955c535e2a5.jpg" title="南宁志愿服务联合会" alt="南宁志愿服务联合会"/></p>
+                                    <p class="item_img_name">南宁志愿服务联合会</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/98.html" title="马鞍山市志愿者协会">
+                                    <p><img src="/upload/images/2013/12/16/52aeb3f00b69e.jpg" title="马鞍山市志愿者协会" alt="马鞍山市志愿者协会"/></p>
+                                    <p class="item_img_name">马鞍山市志愿者协会</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/97.html" title="广州市志愿者联合会">
+                                    <p><img src="/upload/images/2013/12/16/52aeb3a503c8c.jpg" title="广州市志愿者联合会" alt="广州市志愿者联合会"/></p>
+                                    <p class="item_img_name">广州市志愿者联合会</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/96.html" title="大医博爱志愿者服务总队">
+                                    <p><img src="/upload/images/2013/12/16/52aeb34e2dbef.jpg" title="大医博爱志愿者服务总队" alt="大医博爱志愿者服务总队"/></p>
+                                    <p class="item_img_name">大医博爱志愿者服务总队</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/95.html" title="洛阳市志愿者联合会">
+                                    <p><img src="/upload/images/2013/12/16/52aeb3144c437.jpg" title="洛阳市志愿者联合会" alt="洛阳市志愿者联合会"/></p>
+                                    <p class="item_img_name">洛阳市志愿者联合会</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/93.html" title="贵阳市志愿者协会">
+                                    <p><img src="/upload/images/2013/12/16/52aeb2ba4c437.jpg" title="贵阳市志愿者协会" alt="贵阳市志愿者协会"/></p>
+                                    <p class="item_img_name">贵阳市志愿者协会</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/92.html" title="绵阳市志愿者服务总队">
+                                    <p><img src="/upload/images/2013/12/16/52aeb0bd4c437.jpg" title="绵阳市志愿者服务总队" alt="绵阳市志愿者服务总队"/></p>
+                                    <p class="item_img_name">绵阳市志愿者服务总队</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/87.html" title="厦门市志愿者联合会">
+                                    <p><img src="/upload/images/2013/12/16/52aea9d3d597b.jpg" title="厦门市志愿者联合会" alt="厦门市志愿者联合会"/></p>
+                                    <p class="item_img_name">厦门市志愿者联合会</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/86.html" title="上海市浦东新区志愿者协会">
+                                    <p><img src="/upload/images/2013/12/16/52aea86e81ab5.jpg" title="上海市浦东新区志愿者协会" alt="上海市浦东新区志愿者协会"/></p>
+                                    <p class="item_img_name">上海市浦东新区志愿者协会</p>
+                                </a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+                <div id="lm2_2con" style="display:none;">
+                    <div class="item h140 item2015" id="fengcai" style="width:598px;overflow:hidden;">
+                        <ul class="img_list" id="fengcai_ul">
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/508.html" title="费敏秀">
+                                    <p><img src="/upload/images/2014/04/16/thumb_534de815ae4d8.jpg" title="费敏秀" alt="费敏秀"/></p>
+                                    <p class="item_img_name">费敏秀</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/504.html" title="赵广军">
+                                    <p><img src="/upload/images/2014/04/16/thumb_534de199b7116.jpg" title="赵广军" alt="赵广军"/></p>
+                                    <p class="item_img_name">赵广军</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/501.html" title="谢亮">
+                                    <p><img src="/upload/images/2014/04/15/thumb_534d0488139e8.jpg" title="谢亮" alt="谢亮"/></p>
+                                    <p class="item_img_name">谢亮</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/500.html" title="吴天祥">
+                                    <p><img src="/upload/images/2014/04/15/thumb_534d02c3422d2.jpg" title="吴天祥" alt="吴天祥"/></p>
+                                    <p class="item_img_name">吴天祥</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/495.html" title="王波">
+                                    <p><img src="/upload/images/2014/04/15/thumb_534d00a6434ef.jpg" title="王波" alt="王波"/></p>
+                                    <p class="item_img_name">王波</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/475.html" title="陈廷军">
+                                    <p><img src="/upload/images/2014/04/15/thumb_534cf8651c63b.jpg" title="陈廷军" alt="陈廷军"/></p>
+                                    <p class="item_img_name">陈廷军</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/52.html" title="冯艾">
+                                    <p><img src="/upload/images/2013/12/13/thumb_52aaec5499b79.jpg" title="冯艾" alt="冯艾"/></p>
+                                    <p class="item_img_name">冯艾</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/41.html" title="郭明义">
+                                    <p><img src="/upload/images/2013/12/13/thumb_52aaeb5a86a4c.jpg" title="郭明义" alt="郭明义"/></p>
+                                    <p class="item_img_name">郭明义</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/40.html" title="胡大一">
+                                    <p><img src="/upload/images/2014/01/18/thumb_52d9feeeec9fe.jpg" title="胡大一" alt="胡大一"/></p>
+                                    <p class="item_img_name">胡大一</p>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.cvf.org.cn/show/39.html" title="厉莉">
+                                    <p><img src="/upload/images/2013/12/13/thumb_52aaf37892167.jpg" title="厉莉" alt="厉莉"/></p>
+                                    <p class="item_img_name">厉莉</p>
+                                </a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+                <p class="line-t-10"></p>
+                <div class="l">
+                    <a href="http://www.cvf.org.cn/index.php?tpl=content_info&id=1449"><img src="http://www.cvf.org.cn/upload/images/2014/07/01/53b2781495714.jpg" height="240"></a>
+                </div>
+                <style>
+                    .erwm_show{margin-top:30px;}
+                    .erwm_show li{width:200px;text-align:center;float:left;}
+                </style>
+                <ul class="r erwm_show">
+                    <li><img src="/upload/images/2014/04/23/53578b0daaf3a.gif" border="0" alt="官方微信"></li><li><img src="/upload/images/2014/04/23/53578b1041ba5.gif" border="0" alt="官方微博"></li>                </ul>
+			</div>
+<!-- 条幅2 -->
+            <p class="line-t-10"></p>
+            <style>
+                .hzmt li{float:left;width:20%;height:65px;text-align:center;overflow:hidden;}
+            </style>
+            <ul class="hzmt clearfix"><li><a href="http://www.xinhuanet.com" target="_blank"><img src="/upload/images/2014/07/02/53b37039a2ef9.png" border="0" alt=""></a></li><li><a href="http://paper.people.com.cn" target="_blank"><img src="/upload/images/2014/07/02/53b370604e39c.png" border="0" alt=""></a></li><li><a href="http://www.people.com.cn" target="_blank"><img src="/upload/images/2014/07/14/53c39a52eda56.png" border="0" alt=""></a></li><li><a href="http://epaper.gmw.cn/gmrb" target="_blank"><img src="/upload/images/2014/07/02/53b370ac0387e.png" border="0" alt=""></a></li><li><a href="http://www.gmw.cn" target="_blank"><img src="/upload/images/2014/07/02/53b370cadc16c.png" border="0" alt=""></a></li></ul>
+			<p class="line-t-10"></p>
+			<!-- flink -->
+			<div class="web_nav list_con">
+				<div class="l web_nav_left">
+					<span class="web_n_img l"></span>
+					<div class="web_n_tabs l">
+                        						<a href="javascript:void(0);" id="flink_group_0" target="_self">常务理事单位</a>
+                        						<a href="javascript:void(0);" id="flink_group_1" target="_self">友情链接</a>
+                        					</div>
+				</div>
+				<div class="l web_nav_right">
+                    					<div class="link_item" id="flink_list_0">
+											<div class="l img_link" style="height:66px;width:auto;">
+							                                <a style="height:66px;width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;" href="http://cva.mca.gov.cn/" title=" 中华志愿者协会"><img src="/upload/images/2013/12/14/52abd9f6de61b.jpg" target="_blank"></a>
+                                                            <a style="height:66px;width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;" href="http://www.zhiyuanfuwu.com" title=" 中国志愿服务基金会"><img src="/upload/images/2013/12/14/52abd9ef1fa59.jpg" target="_blank"></a>
+                                                            <a style="height:66px;width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;" href="http://www.zgzyz.org.cn" title=" 中国青年志愿者协会"><img src="/upload/images/2013/12/14/52abd9e641faa.jpg" target="_blank"></a>
+                                                            <a style="height:66px;width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;" href="http://www.wyzyz.org/" title=" 中国文艺志愿者协会"><img src="/upload/images/2013/12/14/52abda6058de0.jpg" target="_blank"></a>
+                                                            <a style="height:66px;width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;" href="http://www.bv2008.cn" title=" 北京市志愿服务联合会"><img src="/upload/images/2014/07/04/53b6398b2c52e.gif" target="_blank"></a>
+                                                            <a style="height:66px;width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;" href="http://www.volunteer.sh.cn" title=" 上海市志愿者协会"><img src="/upload/images/2013/12/14/52abdb4e92167.jpg" target="_blank"></a>
+                                                            <a style="height:66px;width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;" href="http://www.beijing2008.cn/" title=" 北京奥运城市发展促进会"><img src="/upload/images/2013/12/14/52abd9f6de61b.jpg" target="_blank"></a>
+                            						</div>
+						<div class="l wz_link" style="width:auto;">
+                            							<a href="http://cva.mca.gov.cn/" style="width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;height:15px;" title=" 中华志愿者协会" target="_blank">中华志愿者协会</a>
+                            							<a href="http://www.zhiyuanfuwu.com" style="width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;height:15px;" title=" 中国志愿服务基金会" target="_blank">中国志愿服务基金会</a>
+                            							<a href="http://www.zgzyz.org.cn" style="width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;height:15px;" title=" 中国青年志愿者协会" target="_blank">中国青年志愿者协会</a>
+                            							<a href="http://www.wyzyz.org/" style="width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;height:15px;" title=" 中国文艺志愿者协会" target="_blank">中国文艺志愿者协会</a>
+                            							<a href="http://www.bv2008.cn" style="width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;height:15px;" title=" 北京市志愿服务联合会" target="_blank">北京市志愿服务联合会</a>
+                            							<a href="http://www.volunteer.sh.cn" style="width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;height:15px;" title=" 上海市志愿者协会" target="_blank">上海市志愿者协会</a>
+                            							<a href="http://www.beijing2008.cn/" style="width:115px;display:block;float:left;padding:0;text-align:center;overflow:hidden;height:15px;" title=" 北京奥运城市发展促进会" target="_blank">北京奥运城市发展促进会</a>
+                            						</div>
+						
+					</div>
+                    					<div class="link_item" id="flink_list_1">
+											<div class="l wz_link" style="width:auto;">
+                            							<a href="http://www.wenming.cn" title=" 中国文明网" target="_blank">中国文明网</a>
+                            							<a href="http://www.bjwmb.gov.cn" title=" 首都文明网" target="_blank">首都文明网</a>
+                            							<a href="http://www.cncn.org.cn" title=" 中国社区网" target="_blank">中国社区网</a>
+                            							<a href="http://www.cncv.org.cn" title=" 中国社区志愿服务网" target="_blank">中国社区志愿服务网</a>
+                            							<a href="http://www.zygz.org.cn" title=" 志愿贵州" target="_blank">志愿贵州</a>
+                            							<a href="http://www.hbzyfw.cn" title=" 河北志愿服务网" target="_blank">河北志愿服务网</a>
+                            							<a href="http://www.zyhn.org" title=" 志愿海南" target="_blank">志愿海南</a>
+                            							<a href="http://www.people.com.cn/" title=" 人民网" target="_blank">人民网</a>
+                            							<a href="http://www.gmw.cn/" title=" 光明网" target="_blank">光明网</a>
+                            							<a href="http://www.xinhuanet.com/" title=" 新华网" target="_blank">新华网</a>
+                            							<a href="http://zyfw.hznews.com/" title=" 惠州志愿服务网" target="_blank">惠州志愿服务网</a>
+                            							<a href="http://www.zqgongyi.org" title=" 中青公益" target="_blank">中青公益</a>
+                            						</div>
+						<!--
+						<div class="l img_link">
+							                                <a href="" title=" "><img src="" target="_blank"></a>
+                            						</div>-->
+						
+					</div>
+                    				</div>
+			</div>
+
+            
+            <p class="line-t-10"></p>
+		</div>
+		<p class="line-t-10"></p>
+
+		<!-- 底部 -->
+		<div class="footer">
+			<!-- 链接 -->
+			<div class="list_links">
+				<a target="_self" href="javascript:void(0);" onclick="C.sethome('http://www.cvf.org.cn');">设为首页</a>|
+				<a target="_self" href="javascript:void(0);" onclick="C.fav('中国志愿服务联合会','http://www.cvf.org.cn')">加入收藏</a>|
+				<a target="_self" href="http://www.cvf.org.cn/cate/about/">关于我们</a>|
+				<a target="_self" href="http://www.cvf.org.cn/cate/tthy/">志愿组织</a>
+			<!-- 其他 -->
+			<p class="line-t-10"></p>
+			<div class="f_else" style="line-height:200%;">
+				<span>主办：中国志愿服务联合会©版权所有</span>&nbsp;&nbsp;技术支持：<a href="http://www.zhiyuanyun.com" target="_blank">志愿云</a><br>
+				<span>地址：北京市东城区建国门内大街28号民生金融中心B座 邮编：100005</span><br>
+			</div>
+			<p class="line-t-30"></p>
+            <div style="display:none;"><script src="http://s13.cnzz.com/stat.php?id=5779414&web_id=5779414" language="JavaScript"></script></div>
+		</div>    </body>
+</html><!--Powerd By MCMS 1.3.750-->

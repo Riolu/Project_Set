@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>南洋学堂</title>
+    <meta http-equiv=X-UA-Compatible content=IE=EmulateIE7>
+    <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+    <script src="../js/jquery.autocomplete.js" type="text/javascript"></script>
+    <link href="../css/boxy.css" rel="stylesheet" type="text/css" />
+    <link href="../css/OCW.css" type="text/css" rel="Stylesheet" />
+    <link href="../css/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="../css/RevealTrans.css" type="text/css" rel="Stylesheet" />
+    <link href="../css/ImgScroll.css" type="text/css" rel="Stylesheet" />
+    <link href="../css/Page.css" type="text/css" rel="Stylesheet" />
+    <script type="text/javascript" src="../js/TopMaster.js"></script>
+    <script type="text/javascript" src="../js/FootMaster.js"></script>
+    <script type="text/javascript" src="../js/RevealTrans.js"></script>
+    <scrit src="../js/jquery.boxy.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Index.js"></script>
+    <link href="../css/MM.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .container
+        {
+            background: url(../banner/banner1.jpg) repeat-x;
+            width: 1000px;
+            height: 220px;
+            margin: 20px 100px 20px 100px;
+            font-size: 0px;
+            z-index: 999;
+            position: absolute;
+            top: 140px;
+            left: 70px;
+        }
+        .showCourseRecommend
+        {
+        }
+        .Itengra_tabarrow1
+        {
+            margin-top: 15px;
+            background: url(../images/arrow.gif) no-repeat;
+            width: 15px;
+            height: 21px;
+            cursor: hand;
+        }
+        .Itengra_tabarrow2
+        {
+            margin-top: 15px;
+            background: url(../images/arrow.gif) no-repeat;
+            width: 15px;
+            height: 21px;
+            cursor: hand;
+        }
+        .Itengra_tabarrow3
+        {
+            margin-top: 15px;
+            background: url(../images/arrow.gif) no-repeat;
+            width: 15px;
+            height: 21px;
+            cursor: hand;
+        }
+        .buttonPageSelect
+        {
+            background: url(../images/page2.gif) no-repeat -12px 0px;
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+            font-size: 0px;
+        }
+        .buttonPageNoSelect
+        {
+            background: url(../images/page2.gif) no-repeat;
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+            font-size: 0px;
+        }
+        .Itengra_arrow_h{ background-position:20px 0px;}
+        #sis_block td{padding-left:10px;padding-right:10px;}
+        .Itengra_arrow_h1{ background-position:30px 0px;}
+        *+html #sis_block td{padding-right:9px;padding-left:9px;}
+    </style>
+   
+
+
+</head>
+<body>
+    <div id="divHed">
+    </div>
+    <div style=" display:none;">
+      <script type="text/javascript">
+          var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+          document.write(unescape("%3Cscript  src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F7b1c65f81036307375c7f79b108c6e8f'  type='text/javascript'%3E%3C/script%3E"));
+   </script>
+    </div>
+    <div style="width: 100%">
+        <div id="idPicShow" style="z-index: 998; width: 1000px; height: 220px; position: relative;
+            margin: 20px auto 20px auto; font-size: 0px;" >
+            <ul id="idNum">
+            </ul>
+        </div>
+    </div>
+    <div class="line_bordercolor" style="width: 100%">
+        <div class="subtab_back " style="border-bottom: 0px;">
+            <div style="width: 1000px; height: auto; margin-left: auto; margin-right: auto">
+                <div class="subtab_active" id="proDiv1" tab="#courseRecommendDiv" group="1" style="width: 90px;
+                    cursor: pointer;" onclick="changetab('proDiv1');">
+                    <div class="TXTOverEllipsis" style="width: 90px;">
+                        <span>课程</span>
+                    </div>
+                </div>
+                <div class="subtab_not" id="proDiv2" tab="#teacherRecommendDiv" group="1" style="width: 90px;
+                    cursor: pointer;" onclick="changetab('proDiv2');">
+                    <div class="TXTOverEllipsis" style="width: 90px;">
+                        <span>教师</span>
+                    </div>
+                </div>
+                <div class="subtab_not" id="proDiv3" tab="#cathedraRecommendDiv" group="1" style="width: 90px;
+                    cursor: pointer;" onclick="changetab('proDiv3');">
+                    <div class="TXTOverEllipsis" style="width: 90px;">
+                        <span>讲座</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="photo_Bg2" style="background-color:#FBF9F7;width:100%;height:220px;border-top:none 0px #CEC9C0; border-bottom:solid 1px #CEC9C0; border-left:solid 0px #CEC9C0; border-right:solid 0px #CEC9C0;">
+    <div id="courseRecommendDiv" align="center" style="width:1000px; height:auto; margin-left:auto; margin-right:auto">
+        <table cellpadding="0" cellspacing="0" border="0" id="sis_block1">
+            <tr>
+                <td>
+                    <div style="float: left;cursor: pointer;" id="Itengra_tabarrowleft1" class="Itengra_tabarrow1" type="left"></div>
+                </td>
+                <td>
+                    <div id="divPlaning1" style="width: 970px; overflow: hidden; position:relative" align="left"></div>
+                </td>
+                <td>
+                    <div style="float: left; cursor: pointer;background-position: -30px 0px;" id="Itengra_tabarrowright1"class="Itengra_tabarrow1" type="right"></div>
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" id="hidPage" />
+        <div style="width: 98%; margin-top:10px">
+            <div id="courseRecommendPage" style="float:left; margin-left:45% !important;margin-left:220px; clear:both"></div>
+            <div style="float:right;width:100px" id="div_More"></div>    
+        </div>
+        
+    </div>
+    <!--courseRecommend end-->
+
+    </div>
+    <div style="margin-top: 30px; width: 100%; background: url(../images/bottomborder.gif) repeat-x; height: 4px; font-size: 0px;"/>
+
+    <div id="divFoot" style="clear: both">
+    </div>
+
+    <script type="text/javascript">
+        var rvt = new RevealTrans("idPicShow");
+        var root = "../banner/";
+        jQuery.ajax({ url: 'Teacher.ashx?action=GetPicture&id=1', cache: false,
+            success: function(data) {
+                var json = eval("(" + data + ")");
+                if (1==1) {
+                    for (var i = 0; i < json.Rows.length; i++) {
+                        var rows = json.Rows[i];
+                        var iid = rows.ID;
+                        var fPathName = rows.fPathName;
+                        var fPointOut_cn = rows.fPointOut_cn;
+                        var fLink = rows.fLink;
+                        var fPointOut_en = rows.fPointOut_en;
+                        var fPointOut = "";
+                        if (fPointOut_cn != "") {
+                            fPointOut = fPointOut_cn;
+                        } else {
+                            fPointOut = fPointOut_en;
+                        }
+                        rvt.Add(root + fPathName, fPointOut, fLink);
+                    } //(for)
+                   // alert(1);
+//                    rvt.Add(root + "9b796401-6ea6-4bd9-9346-761fedd7d83c.jpg", 1, "1");
+//                    rvt.Add(root + "a54885d9-a69a-4d21-914b-a8a01e4afbad.jpg", 1, "1");
+                    var oList = document.getElementById("idPicShow"), arrImg = [];
+                    var oNum = document.getElementById("idNum"), arrNum = [];
+
+                    //设置图片列表
+                    Each(rvt.List, function(list, i) {
+                        //按钮式
+                        var li = document.createElement("li");
+                        arrNum[i] = li;
+                        oNum.appendChild(li);
+                        //事件设置
+                        li.onmouseover = function() { rvt.Auto = false; rvt.Index = i; rvt.Start(); };
+                        li.onmouseout = function() { rvt.Auto = true; rvt.Start(); };
+                    });
+
+                    //设置图片列表样式 文本显示区域
+                    rvt.onShow = function() {
+                        var i = this.Index, list = this.List[i];
+                        //按钮式
+                        Each(arrNum, function(o) { o.className = ""; }); arrNum[i].className = "on";
+
+                    }
+
+                    rvt.Start();
+
+                } //(if)
+            }
+        });
+
+        noselectNavButton();
+        $("#IndexButton").removeClass("IndexButtonnoselect");
+        $("#IndexButton").addClass("IndexButtonselect");
+
+    </script>
+
+    <!--<script type="text/javascript"  src="../js/ImgScroll.js"></script>-->
+</body>
+</html>

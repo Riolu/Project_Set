@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="/support/css/login_style1.css" />
+<script type="text/javascript" src="/support/js/JSLib/Utility.js"></script>
+<script type="text/javascript" src="/support/js/JSLib/CDOJS/Utility.js"></script>
+<script type="text/javascript" src="/support/js/JSLib/CDOJS/HashMap.js"></script>
+<script type="text/javascript" src="/support/js/JSLib/CDOJS/CDO.js"></script>
+<script type="text/javascript" src="/support/js/JSLib/CDOJS/HttpClient.js"></script>
+<script type="text/javascript" src="/support/js/JSLib/CDOJS/JSON.js"></script>
+<title>登录</title>
+</head>
+<body>
+<input id="strDomainPath" type="hidden" value="/support"/>
+<input id="returnUrl" type="hidden" value="http://www.job.sjtu.edu.cn/support/supportDevelop/front/datumIndex.htm"/>
+<!--头部-->
+<div class="login_reference_top_warp_1">
+	<div class="login_reference_top_content">
+    	<img src="/support/images/logo_icon.png" width="37" height="37" style="vertical-align:middle;" />&nbsp;&nbsp;教师支持系统
+    </div>
+</div>
+<!--头部 END-->
+<script type="text/javascript" src="login.js"></script>
+<!--登录部分-->
+<div class="login_reference_content_warp">
+	<div class="login_reference_content_content">
+    	<!--左边-->
+    	<div class="login_reference_content_left">
+        	<p class="font_24 color_54626f" style="margin-top:30px;">用户登录</p>
+            <ul class="login_list_view" style="margin-top:50px;">
+            	<p style="display:none;color: red;" id="loginError"><img src="/support/images/icon_no.png" style="vertical-align:text-bottom;"  /> 用户名或密码错误!</p>
+            	<li class="mt10"><img src="/support/images/login_email_icon.png" /><input type="text" class="login_input_txt"  id="strLoginId" onblur="check()"/>
+            	&nbsp;<div style="vertical-align:top;display:inline-block;"><span><img src="/support/images/icon_right.png" id="right1" style="display: none;vertical-align:text-bottom; margin-top:12px;"/></span><span style="display: none;" id="wrong1"><img src="/support/images/icon_no.png" style="vertical-align:text-bottom;"  /><span id="cuo1">&nbsp;</span></span><div></li>
+                <li class="mt10"><img src="/support/images/password_icon.png" /><input type="password" class="login_input_txt" id="strPassword" onblur="check()"/>
+                &nbsp;<div style="vertical-align:top;display:inline-block;"><span><img src="/support/images/icon_right.png" id="right2" style="display: none;vertical-align:text-bottom;margin-top:12px;"/></span><span style="display: none;" id="wrong2"><img src="/support/images/icon_no.png" style="vertical-align:text-bottom;"  /><span id="cuo2">&nbsp;</span></span></div></li>
+                <li class="mt10">
+                	<img src="/support/images/yangzheng_icon.png" /><input type="text" id="strVerifyCode" class="login_input_txt" style="width:100px;" onblur="check()"/><img src="/support/servlet/verifyCode.svl" style="cursor:pointer;width: 80px;height: 38px;margin-left: 15px;" id="codeImg" alt="点击重新获取验证码" title="点击重新获取验证码" style="vertical-align:top; margin:8px 0 0 15px;" /><a href="javascript:getCode();" style=" vertical-align:top;margin:0 0 0 15px; display:inline-block;">换一换</a>
+                	&nbsp;<div style="vertical-align:top;display:inline-block;"><span><img src="/support/images/icon_right.png" id="right3" style="display: none;vertical-align:text-bottom;margin-top:12px;"/></span><span style="display: none;" id="wrong3"><img src="/support/images/icon_no.png" style="vertical-align:text-bottom;"  /><span id="cuo3">&nbsp;</span></span></div>
+                </li>
+                <li class="mt20">
+                	<input type="button" class="login_btn_1" value="登   录" onclick="login()"/>
+                </li>
+            </ul>
+        </div>
+        <!--左边 END-->
+        
+        <!--右边-->
+        <div class="support_sys_right_wrap">
+            <p style="margin-top:50px;">点击进入上海交通大学统一身份认证入口</p>
+            <p class="internal_student"><a href="/support/LoginServlet.svl?url=http://www.job.sjtu.edu.cn/support/supportDevelop/front/datumIndex.htm">认证登录</a></p>
+        </div>
+        <!--右边 END-->
+        <div class="clear"></div>
+	</div>
+</div>
+<!--登录部分 END-->
+
+<!--footer-->
+<div class="login_footer_warp">
+	<div class="login_footer_content">
+    	<ul>
+        	<li>版权所有@2012-2013 上海交通大学学生就业服务和职业发展中心</li>
+            <li>备案号：沪交ICP备2010930</li>
+            <li>上海交通大学与新锦成教育联合开发</li>
+        </ul>
+    </div>
+</div>
+<!--footer END -->
+</body>
+</html>

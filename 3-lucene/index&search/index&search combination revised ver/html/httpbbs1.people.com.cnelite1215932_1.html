@@ -1,0 +1,2267 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>深入讨论-强国社区-人民网</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="深入讨论，集百家争鸣为改革发展建言，聚万千智慧探强国富民之策，强国论坛最火的时事讨论区。" />
+        <meta name="keywords" content="人民网，强国论坛，深水，时政，评论，社会，民生，经济，军事，国际，原创，观点，深入话题，强国视点"/>
+        <META name="filetype" content="1" />
+        <META name="publishedtype" content="2" />
+        <META name="pagetype" content="2" />
+        <META name="catalogs" content="bbs_2" />
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+        <link href="/css_bbs/qgbbs.css?v=20140320" rel="stylesheet" />        <script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/qgBasePlugin.js"></script>
+        <script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/qgList.js"></script>
+        <script type="text/javascript" src="/js_library/qgbbs/2013/include/qgListElite.js"></script>
+        <script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/qgbbs_base.js"></script>
+        <script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/jquery.rmw.global.js"></script>
+        <script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/faces.js"></script>
+        <script type="text/javascript">
+            var cdomain = "http://bbs1.people.com.cn";
+            var mdomain = "http://bbs1.people.com.cn";
+            var snsdomain="http://sns.people.com.cn";
+            var officialPost = 1;
+            $(document).ready(function(){
+		            rmw.global.setSNSDomain("http://sns.people.com.cn") ;
+		            RMWSSO.getUserData(function(guzzLoginUser){
+			            if(guzzLoginUser && guzzLoginUser.userId > 0){
+				            var displayName = guzzLoginUser.nickname;
+				            var userNick = guzzLoginUser.nickname;
+				            $("#loginHeaderUserNick").html(displayName+"<i></i>") ;
+				            $(".loginUserNick").show();
+				            $(".guest").hide();
+				            $(".forumEditorUserNick").html('<a href="/userInfo.do?userNick='+userNick+'" target="_blank">'+displayName+'</a>');
+				            $("#formEditorPostListImg").attr("userNick",userNick);
+				            var _userName =  guzzLoginUser.username;
+				            $("#tableListView").attr("userName",_userName);
+				            $("#treeListView").attr("userName",_userName);
+			            	loadNewsCount();
+			            }else{
+			                var retUrl = encodeURI(top.location.href);
+				            $(".msgTips").remove();
+				            $(".userReg").attr("href",rmw.sns.regUserLink("bbs",true));
+		                }
+	                });
+            });
+        </script>
+    </head>
+    <body>
+    <div class="headerNavAd clearfix">
+		<center>  
+			<script type='text/javascript' src='http://pmm.people.com.cn/main/s?user=people|bbs1|topfullcolumn_liebiaoye&db=people&border=0&local=yes&js=ie' charset='gbk'></script>
+		</center>
+</div>	<div class="rel">
+    	<div id="pageNo" class="hide">1</div>
+    	<div id="boardId" class="hide">2</div>
+        <div id="pid" class="hide">121593</div>
+        <div class="people_line">
+<div class="tempDiv clearfix">
+  		<div class="float_l floatTitle">
+        	<p class="FTtop"></p>
+            <p class="clearfix FTbtm">
+            	<span class="float_l"><a target="_blank" href="http://bbs1.people.com.cn">强国社区</a><span class="SMArrow"></span><a target="_blank" href="http://bbs1.people.com.cn/board/2.html">深入讨论</a></span>
+                <span class="float_R"><a href="http://bbs1.people.com.cn/userInfo.do?userNick=" target="_blank"></a><span class="SMline"></span></span>
+            </p>
+        </div>
+        <div class="float_R buttons">
+            <div class="DDWrap mR15 freadMode float_l">
+                <span class="showPart bold">阅读设置<i></i></span>
+                <div class="hidePart modeWrap">
+	                                    <p>楼主正文显示宽度</p>
+	                <ul class="mode showWidth clearfix">
+			            <li id='showWidth0'><strong>全幅</strong></li>
+			            <li id='showWidth1' class="focus special"><strong>2/3幅</strong></li>
+			            <li id='showWidth2' class="special"><strong>1/2幅</strong></li>
+			        </ul>
+			                          <p>跟帖显示为</p>
+                  <ul class="mode clearfix">
+                    <li boardId="${rootPost.boardId}" postId="${rootPost.id}"  view="2" userName="-1" class=" tableView"><strong>表状</strong></li>
+                    <li boardId="${rootPost.boardId}" postId="${rootPost.id}"  view="1" userName="-1" class="focus treeView"><strong>树状</strong></li>
+                  </ul>
+                   <p>跟帖内容</p>
+                  <ul class="mode clearfix">
+                    <li class="notAuthorOnly focus" boardId="${post.boardId}" postId="${post.id}"><strong>全部</strong></li>
+                    <li class="authorOnly " userId="$userId" boardId="${post.boardId}" postId="${post.id}"><strong>楼主直播</strong></li>
+		          </ul>
+                </div>
+             </div>
+           <div class="DDWrap float_l">
+              <span class="showPart bold share">分享<i></i></span>
+              <div class="hidePart posts_tools shareWrap clearfix">
+                  <div class="bshare-custom"><div class="bsPromo bsPromo2"></div>
+                      <a href="javascript:void(0);" class="bshare-peoplemb" title="分享到人民微博"></a>
+                      <a href="javascript:void(0);" class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+                      <a href="javascript:void(0);" class="bshare-weixin" title="分享到微信"></a>
+                      <a href="javascript:void(0);" class="bshare-qzone" title="分享到QQ空间"></a>
+                      <a href="javascript:void(0);" class="bshare-qqmb" title="分享到腾讯微博"></a>
+                      <a href="javascript:void(0);" class="bshare-renren" title="分享到人人网"></a>
+                      <a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+               </div>
+            </div>
+         </div>
+                <span class="float_l supportBtn" postId="${post.id}" overscore="${post.vote_yes}">赞(${post.vote_yes})</span>
+                <span class="float_l mainrRepBtn blueBtn">快速回复</span>
+         </div>
+  </div>
+</div>
+<div id="header">
+		<div class="headerNav clearfix">
+		<ul id="headerNavUl">
+			<li><a target="_blank" href="http://bbs1.people.com.cn">社区首页</a></li>
+			<li><a target="_blank" href="http://bbs1.people.com.cn/board/1.html">论坛</a></li>
+			<li><a target="_blank" href="http://qgblog.people.com.cn/">博客</a></li>
+			<li><a target="_blank" href="http://bbs1.people.com.cn/board/1/131.html">育儿宝</a></li>
+			<li><a target="_blank" href="http://ezheng.people.com.cn/">E政</a></li>
+			<li><a target="_blank" href="http://fangtan.people.com.cn/">访谈</a></li>
+			<li><a target="_blank" href="http://t.people.com.cn/">微博</a></li>
+			<li><a target="_blank" href="http://vblog.people.com.cn/">播客 </a></li>
+			<li><a target="_blank" href="http://sns.people.com.cn/">SNS </a></li>
+		</ul>
+		<div>
+			<a target="_blank" href="http://people.com.cn">人民网首页</a>
+		</div>
+	</div>
+		<div class='logo'>
+		<a href="http://bbs1.people.com.cn" target="_blank" style="display:inline-block;width:120px;height:49px;float:left;*display:inline; *zoom:1;"></a>
+    	<div class="searchWrap">
+        	<span class="search clearfix">
+        	<span class="inputTips"><a class="closeInputTips" href="javascript:void(0);"></a></span>
+        		<span class="float_l">
+				<form action="http://bbs1.people.com.cn/quickSearch.do" name="searchFrm1" id="searchFrm1" target="_blank" method="GET" class="float_l">
+    				<input type="hidden" value="title" name="field" id="field"/>
+					<input type="hidden" value="1" name="threadtype">
+					<input type="text" autocomplete="off"  name="content" id="searchTopic" value="输入标题/笔名查找感兴趣的话题..." /> <span id="searchBtn"></span>
+				 </form>
+				 <a href="/quickSearch.do" class="seniorLink" target='_blank'>高级检索</a>
+				 </span>
+				<ul class="userCenter">
+					<li class="pT10 last guest">
+						<a class="userReg" target="_blank" href="#">注册</a>
+					</li>
+					<li class="pT10 last loginBtn guest">
+						<a href="javascript:void(0);">登录</a>
+					</li>
+    				<li class="DDWrap userMsg loginUserNick" style="display:none;">
+    					<span class="showPart" id="loginHeaderUserNick"><i></i></span>
+    					<ul class="hidePart">
+                            <li><a href="/personInfo.do" target="_blank" id="personInfo">个人信息</a></li>
+                            <li><a href="http://sns.people.com.cn/usr/saveImage.do" target="_blank">修改头像</a></li>
+                            <li><a href="http://sns.people.com.cn/usr/userRegister.do" target="_blank">设置</a></li>
+                            <li class="keepGray"><a href="javascript:logout();">退出</a></li>
+    					</ul>
+    				</li>
+					<li class="DDWrap userMsg userNewMsg loginUserNick" style="display:none;">
+						<span class="showPart">提醒<span id="allNum"></span><i></i></span>
+						<ul class="hidePart">
+							<li><a id="newFansCount" title="粉丝"  target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=fans">粉丝</a></li>
+							<li><a id="newBulletinCount" title="公告" target="_blank"  href="http://sns.people.com.cn/usr/sms/administratorMsgs.jsp">公告</a></li>
+							<li><a id="newSmsCount" title="站内信" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=sms">站内信</a></li>
+                            <li><a id="newAppMsgCount" title="回复提醒" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=appMsg">回复提醒</a></li>
+							<li><a id="newBirthdayCount" title="生日提醒" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=birthday">生日提醒</a></li>
+							<li><a id="newSysMsgCount" title="系统消息" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=sysmsg">系统消息</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="tipList">
+					<li class="paper" search="userNick"></li>
+					<li class="user" search="title"></li>
+				</ul> 
+			</span>
+    	</div>
+	</div>
+	<div class='hotTopic'>
+		<div class='topicWrap clearfix'>
+			<div class="entrance float_l">
+					<!--<strong>深入讨论</strong>-->
+				<span class="subNav">
+			      	时政版块
+			      <ul class="navList clearfix">
+					<li><a href="http://bbs1.people.com.cn/board/1.html" target="_blank">强国论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/2.html" target="_blank">深入讨论</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/1/129.html" target="_blank">新闻论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/6.html" target="_blank">国际论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/7.html" target="_blank">军事论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/71.html" target="_blank">百姓监督</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/60.html" target="_blank">煮酒论史</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/11.html" target="_blank">经济论坛</a></li>
+			      </ul>
+			      </span>
+			      <span class="subNav">
+			      	生活版块
+			      <ul class="navList clearfix">
+					<li><a href="http://bbs1.people.com.cn/board/1/29.html" target="_blank">贴图论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/27.html" target="_blank">娱乐论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/26.html" target="_blank">女性论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/23.html" target="_blank">生活论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/24.html" target="_blank">联谊会馆</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/131.html" target="_blank">育儿宝</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/80.html" target="_blank">大学生</a></li>
+					<li><a href="http://bbs1.people.com.cn/citan" target="_blank">人民瓷坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/57.html" target="_blank">房产论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/8.html" target="_blank">教育论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/44.html" target="_blank">文化论坛</a></li>
+			      </ul>
+			      </span>
+			      <span class="subNav">
+			      	地区版块
+			      <ul class="navList clearfix">
+			        <li><a href="http://bbs1.people.com.cn/board/133.html" target="_blank">城市论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/13.html" target="_blank">中日论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/4.html" target="_blank">港澳台</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/73.html" target="_blank">强桂论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/75.html" target="_blank">强闽论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/86.html" target="_blank">强陕论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/87.html" target="_blank">强深论坛 </a></li>
+					<li><a href="http://bbs1.people.com.cn/board/74.html" target="_blank">热带语林</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/88.html" target="_blank">湖北论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/132.html" target="_blank">强赣论坛</a></li>
+			      </ul>
+			      </span>
+			      <span class="original">
+			      	原创栏目
+			      <ul class="originalNav clearfix">
+					<li><a href="http://www.people.com.cn/32306/359302/359317/index.html" target="_blank">一语惊坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/2/123.html" target="_blank">i态度</a></li>
+					<li><a href="http://www.people.com.cn/32306/387208/index1.html" target="_blank">强国图解</a></li>
+					<li><a href="http://www.people.com.cn/32306/390007/index.html" target="_blank">强国视点</a></li>
+					<li><a href="http://www.people.com.cn/32306/355718/364306/index.html" target="_blank">态度调查</a></li>
+					<li><a href="http://www.people.com.cn/32306/363234/366740/index.html" target="_blank">谣言狙击榜</a></li>
+					<li><a href="http://bbs1.people.com.cn/eliteList.do?pid=118921&bid=1" target="_blank">真心话大冒险</a></li>
+					<li><a href="http://bbs1.people.com.cn/eliteList.do?pid=118873&bid=7" target="_blank">名家点兵</a></li>
+			      </ul>
+			      </span>
+			</div>
+			<div class="float_l nav_R" id="forumsTalkingAbout"></div>
+			<script type="text/javascript">
+        		jQuery.ajax({
+        			url : "http://bbs1.people.com.cn/api/config.do?action=getConfigurationVal&key=forumsTalkingAbout",
+        			type: "GET",
+        			dataType: "jsonp",
+        			success: function(text){
+        				jQuery("#forumsTalkingAbout").html(text);
+        			}
+        		});
+        		function logout(){
+        		   RMWSSO.logout(function(){
+				       location.reload(true);
+			       });
+			    }
+    		</script>
+		</div>
+	</div>
+</div>        <div class="outer">
+            <div class='goTop'></div>
+            <div class='ad bannerTag' id="bannerTag">
+	<a href="" target="_blank"></a>
+</div>
+<script language="javascript" type="text/javascript">
+	jQuery.ajax({
+		url : "http://bbs1.people.com.cn/api/config.do?action=getConfigurationVal&key=boardTopAdv" ,
+		type: "GET",
+		dataType: "jsonp",
+		success: function(text){
+			jQuery(".bannerTag").html(text);
+		}	
+	});	 
+</script>            <div class='navBar borderBtn'>
+                <div class="wrapNavBar clearfix">
+                    <a target="_blank" href="http://people.com.cn" class="peopleLogo"></a>
+                    <span>&gt;</span>
+                    <a target="_blank" href="http://bbs1.people.com.cn">强国社区</a>
+                    <span>&gt;</span>
+                    <a target="_blank" href="http://bbs1.people.com.cn/board/2.html">深入讨论</a>
+                    <span class="float_R">版主：昕笙</span>
+                                            <span class="float_R"><a target="_blank" href="http://bbs1.people.com.cn/post/1/2/1/152369311.html">值班表</a></span>
+                                    </div>
+                <div class="otherPlate clearfix">
+                    <div class="platesWrap topPlate">
+                        <script language="JavaScript">
+
+$(document).ready(function(){
+
+	});
+
+	function list_tab(n){
+
+	for(var i=1;i<=3;i++){
+
+		var curCon=document.getElementById("list_"+i);
+
+		var curBtn=document.getElementById("list_c_"+i);
+
+		if(n==i){
+
+			curBtn.style.display="block";
+
+			curCon.className="focus";
+
+			
+
+		}else{
+
+			curBtn.style.display="none";
+
+			curCon.className="";			
+
+		}
+
+	}
+
+}
+
+</script>
+   <div class="ywyl_left fl">
+
+      <h3><span><img src="http://bbs1.people.com.cn/postImages/26/10/10/CA/1396502958282.jpg" border="0" alt="" /></span></h3>
+
+	 <ul>
+<li><a href="http://bbs1.people.com.cn/post/1/1/2/152280916.html" target=_blank><font color=black>视点:习近平到底是哪个队的球迷</font></a></a></li>
+<li><a href="http://bbs1.people.com.cn/post/2/1/2/152341646.html" target=_blank><font color=black>热议:五中全会开启"民生新里程" </font></a></li>
+<li><a href="http://bbs1.people.com.cn/post/1/1/2/152336797.html" target=_blank><font color=black>话题:"十三五"哪些事和你休戚相关</font></a></li>
+
+
+	
+	  </ul>
+
+   </div>
+
+   <div class="ywyl_center fl">
+
+     <img src="http://bbs1.people.com.cn/images/bbs_2012/ywyl_left_b.gif" class="prev fl" border="0" alt="" />
+
+	 <div class="cj_scroll" style="position:relative;">
+
+	   
+<ul style="position:relative;">
+
+<li><a href="http://bbs1.people.com.cn/post/2/1/2/152341212.html" target="_blank"><img 
+src="http://www.people.com.cn/NMediaFile/2015/1026/MAIN201510261645068465387493007.jpg" border="0" alt="" /></a><a href="http://bbs1.people.com.cn/post/2/1/2/152341212.html" target="_blank">采暖费下调,难在哪</a></li> 
+
+	      <li><a href="http://bbs1.people.com.cn/post/2/1/2/152326642.html" target="_blank"><img 
+src="http://www.people.com.cn/NMediaFile/2015/1026/MAIN201510261645067179822841400.jpg" border="0" alt="" 
+/></a><a href="http://bbs1.people.com.cn/post/2/1/2/152326642.html" target="_blank">4吨扬州炒饭如何变垃圾</a></li>
+
+<li><a href="http://bbs1.people.com.cn/post/1/1/2/152342620.html" target="_blank"><img 
+src="http://www.people.com.cn/NMediaFile/2015/1026/MAIN201510261645065966474425450.jpg" border="0" alt="" /></a><a href="http://bbs1.people.com.cn/post/1/1/2/152342620.html" target="_blank">"熬夜衰老"能算工伤吗</a></li>
+
+
+	 <li><a href="http://bbs1.people.com.cn/post/1/1/2/152279772.html" target="_blank"><img src="http://www.people.com.cn/NMediaFile/2015/1022/MAIN201510221448279269286301966.jpg" 
+border="0" alt="" /></a><a href="http://bbs1.people.com.cn/post/1/1/2/152279772.html" target="_blank">老漂族的晚年如何安放</a></li>
+
+<li><a href="http://bbs1.people.com.cn/photoView/152281792_15.html" target="_blank"><img src="http://people.com.cn/NMediaFile/2015/1026/MAIN201510261613161964213805796.jpg" border="0" alt="" 
+/></a><a href="http://bbs1.people.com.cn/photoView/152281792_15.html" target="_blank">抗美援朝的女战士</a></li>
+
+
+
+
+
+
+
+　　</ul>
+	 </div>
+
+	 <img src="http://bbs1.people.com.cn/images/bbs_2012/ywyl_right_b.gif" class="next fr" border="0" alt="" />
+
+   </div>
+
+   <div class="ywyl_right fr">
+
+      <h3><span class="focus" id="list_1" onMouseOver="list_tab(1)">版主推荐</span><span id="list_2" onMouseOver="list_tab(2)">人民访谈</span><span id="list_3" onMouseOver="list_tab(3)">活动策划
+
+</span></h3>
+ <ul  style="display:block;" id="list_c_1">
+		 
+
+	     <li><strong><font color=red>[互动话题]</font></strong><a href="http://bbs1.people.com.cn/post/1/1/2/152118221.html" target="_blank">拿什么拯救你?我的廉价药!
+</a></li>
+
+<li><strong><font color=red>[网友活动]</font></strong><a href="http://www.people.com.cn/n/2015/1016/c347407-27705943.html " target="_blank">"寻找历史记忆"吉林站活动</a></li>
+	
+	     <li><strong><font color=red>[热图推荐]</font></strong><a href="http://www.people.com.cn/n/2015/0929/c347407-27648610.html" target="_blank">世博20国国家馆服炫民族风
+</a></li>
+
+</ul>
+
+	  <ul style="display:none;" id="list_c_2">
+<li><strong><font color=red>[14日]</font></strong><a href="http://ft.people.com.cn/fangtanDetail.do?pid=12267" target="_blank">陆川等谈电影《九层妖塔》</a></li>
+<li><strong><font color=red>[20日]</font></strong><a href="http://ft.people.com.cn/fangtanDetail.do?pid=11592" target="_blank">翟京丽：为环境把关让绿色生生不息</a></li>
+<li><strong><font color=red>[30日]</font></strong><a href="http://ft.people.com.cn/fangtanDetail.do?pid=11590" target="_blank">宁泽涛讲述“体育人生”</a></li>
+  </ul>
+	 
+	  <ul  style="display:none;" id="list_c_3">
+
+	    <li><strong><font color=red>[视点]</font></strong><a href="http://bbs1.people.com.cn/post/1/1/2/152160658.html" target="_blank">11月起哪些新政将为你"壮胆"</li>
+		  <li><strong><font color=red>[话题]</font></strong><a href="http://bbs1.people.com.cn/post/1/1/2/152136185.html" target=_blank>六年内全面脱贫,咋有人不信</a></li>
+		   <li><strong><font color=red>[互动]</font></strong><a href="http://bbs1.people.com.cn/post/1/2/1/152089424.html" target="_blank">联合国又要涨中国"份子钱"?
+</a></li>
+	  </ul>
+
+   </div>
+                    </div>
+                </div>
+                <div class="articleInfo clearfix" style='padding: 10px 0;'>
+                    <div class="focusOn float_l">
+                        <span id="allPostList" class="button float_l ">全部</span>
+                        <span id="allElitePostList" class="button float_l buttonG">精华</span>
+                        <span id="myPostList" class="button float_l">我的帖</span>
+                                                                    </div>
+                    <span class="float_R blueBtn" id="addNewPost">加新帖</span>
+                    <span class="reFrash button" id="reFrash">
+                        <i></i>
+                        刷新</span>
+                </div>
+                                    <div class="clearfix clearBoth">
+                        <span class="float_l">话题</span>
+                        <span class="float_R">（&nbsp;作者&nbsp;发表时间&nbsp;）&nbsp;字数&nbsp;（&nbsp;阅读/回复&nbsp;）</span>
+                    </div>
+                            </div>
+            <div class="replayWrap scrollFlag">
+                <ul class="replayList clearfix">
+                                                                <li class="treeReplyItem">
+                            <p class="elite ">
+                                1.
+                                                                <a id="id_1" class="treeReply" target="_blank" href="/post/2/1/2/143781603.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度专栏】金正恩视察458军的照片泄漏六大机密(图)(原创首发)',false);
+                                        var target=document.getElementById("id_1");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=李海年"
+                                        class="tableAuthor">
+                                        李海年
+                                    </a>
+                                    2014年12月09日 07:24)
+                                </span>
+                                <span>
+                                    8302字
+                                </span>
+                                <span>
+                                    (68318/18)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                2.
+                                                                <a id="id_2" class="treeReply" target="_blank" href="/post/2/1/2/143697953.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度专栏】职务职级并行，基层公务员别期望过高',false);
+                                        var target=document.getElementById("id_2");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=周蓬安"
+                                        class="tableAuthor">
+                                        周蓬安
+                                    </a>
+                                    2014年12月04日 16:06)
+                                </span>
+                                <span>
+                                    2290字
+                                </span>
+                                <span>
+                                    (5132/33)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                3.
+                                                                <a id="id_3" class="treeReply" target="_blank" href="/post/2/1/2/143690574.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('加薪不加职，对财政类人员无形是一剂“强化剂”(原创首发)',false);
+                                        var target=document.getElementById("id_3");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=张奋"
+                                        class="tableAuthor">
+                                        张奋
+                                    </a>
+                                    2014年12月04日 11:28)
+                                </span>
+                                <span>
+                                    1135字
+                                </span>
+                                <span>
+                                    (582/3)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                4.
+                                                                <a id="id_4" class="treeReply" target="_blank" href="/post/2/1/2/143686575.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度专栏】《公务员收入之真相》作者：真心为习大大点个赞(原创首发)',false);
+                                        var target=document.getElementById("id_4");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=鼓台山"
+                                        class="tableAuthor">
+                                        鼓台山
+                                    </a>
+                                    2014年12月04日 09:08)
+                                </span>
+                                <span>
+                                    6331字
+                                </span>
+                                <span>
+                                    (55763/62)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                5.
+                                                                <a id="id_5" class="treeReply" target="_blank" href="/post/2/1/2/143686065.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('碧翰烽：县级公务员工资改革能破官本位！？(原创首发)',false);
+                                        var target=document.getElementById("id_5");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=翰烽"
+                                        class="tableAuthor">
+                                        翰烽
+                                    </a>
+                                    2014年12月04日 08:40)
+                                </span>
+                                <span>
+                                    6610字
+                                </span>
+                                <span>
+                                    (9465/35)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                6.
+                                                                <a id="id_6" class="treeReply" target="_blank" href="/post/2/1/2/143672316.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('“不升职也可加薪”为实现干部清正“保驾护航”',false);
+                                        var target=document.getElementById("id_6");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=雄风A"
+                                        class="tableAuthor">
+                                        雄风A
+                                    </a>
+                                    2014年12月03日 13:54)
+                                </span>
+                                <span>
+                                    16220字
+                                </span>
+                                <span>
+                                    (20369/47)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                7.
+                                                                <a id="id_7" class="treeReply" target="_blank" href="/post/2/1/2/141054793.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【专栏】如何塑造中国“强而不霸”的国际形象？',false);
+                                        var target=document.getElementById("id_7");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=方乐迪"
+                                        class="tableAuthor">
+                                        方乐迪
+                                    </a>
+                                    2014年08月04日 13:03)
+                                </span>
+                                <span>
+                                    1707字
+                                </span>
+                                <span>
+                                    (9779/57)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                8.
+                                                                <a id="id_8" class="treeReply" target="_blank" href="/post/2/1/2/143680081.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度专栏】以“纪念日”构筑中国国家认同体系',false);
+                                        var target=document.getElementById("id_8");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=方乐迪"
+                                        class="tableAuthor">
+                                        方乐迪
+                                    </a>
+                                    2014年12月03日 18:56)
+                                </span>
+                                <span>
+                                    7626字
+                                </span>
+                                <span>
+                                    (4191/22)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                9.
+                                                                <a id="id_9" class="treeReply" target="_blank" href="/post/2/1/2/141364501.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】习总如何重塑中国政治生态?',false);
+                                        var target=document.getElementById("id_9");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=方乐迪"
+                                        class="tableAuthor">
+                                        方乐迪
+                                    </a>
+                                    2014年08月19日 11:09)
+                                </span>
+                                <span>
+                                    6379字
+                                </span>
+                                <span>
+                                    (16062/43)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                10.
+                                                                <a id="id_10" class="treeReply" target="_blank" href="/post/2/1/2/143380188.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('喜大普奔，中办向基层干部传递啥福音？(原创首发)',false);
+                                        var target=document.getElementById("id_10");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=蝶梦流年2"
+                                        class="tableAuthor">
+                                        蝶梦流年2
+                                    </a>
+                                    2014年11月20日 08:02)
+                                </span>
+                                <span>
+                                    3045字
+                                </span>
+                                <span>
+                                    (38523/65)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                11.
+                                                                <a id="id_11" class="treeReply" target="_blank" href="/post/2/1/2/143347556.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('“公考”降温是一种理性回归(原创首发)',false);
+                                        var target=document.getElementById("id_11");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=小土过后是多云"
+                                        class="tableAuthor">
+                                        小土过后是多云
+                                    </a>
+                                    2014年11月18日 21:27)
+                                </span>
+                                <span>
+                                    1899字
+                                </span>
+                                <span>
+                                    (12358/32)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                12.
+                                                                <a id="id_12" class="treeReply" target="_blank" href="/post/2/1/2/143303621.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('习近平中南海习奥会说出了道路自信的真理(原创首发)',false);
+                                        var target=document.getElementById("id_12");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=方圆视点"
+                                        class="tableAuthor">
+                                        方圆视点
+                                    </a>
+                                    2014年11月17日 07:02)
+                                </span>
+                                <span>
+                                    9214字
+                                </span>
+                                <span>
+                                    (14642/13)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                13.
+                                                                <a id="id_13" class="treeReply" target="_blank" href="/post/2/1/2/143061253.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('梁石川：何种力量才可搬掉“呼格案”中的山头主义(原创)',false);
+                                        var target=document.getElementById("id_13");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=梁石川"
+                                        class="tableAuthor">
+                                        梁石川
+                                    </a>
+                                    2014年11月04日 07:11)
+                                </span>
+                                <span>
+                                    12338字
+                                </span>
+                                <span>
+                                    (3050/14)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                14.
+                                                                <a id="id_14" class="treeReply" target="_blank" href="/post/2/1/2/143028596.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('碧翰烽：习近平古田会议首提徐案有何深意？(原创首发)',false);
+                                        var target=document.getElementById("id_14");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=翰烽"
+                                        class="tableAuthor">
+                                        翰烽
+                                    </a>
+                                    2014年11月02日 08:12)
+                                </span>
+                                <span>
+                                    8431字
+                                </span>
+                                <span>
+                                    (14554/23)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                15.
+                                                                <a id="id_15" class="treeReply" target="_blank" href="/post/2/1/2/142944166.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】依法治国进行时，强坛网友五大“态度”哪点触动你？',false);
+                                        var target=document.getElementById("id_15");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=强国论坛"
+                                        class="tableAuthor">
+                                        强国论坛
+                                    </a>
+                                    2014年10月28日 17:36)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (44713/238)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                16.
+                                                                <a id="id_16" class="treeReply" target="_blank" href="/post/2/1/2/142202895.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】假期太少导致中国人更爱出境游？中国如何缩小旅游消费逆差？',false);
+                                        var target=document.getElementById("id_16");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年09月25日 17:46)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (53997/83)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                17.
+                                                                <a id="id_17" class="treeReply" target="_blank" href="/post/2/1/2/141962998.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】关于九·一八,你不得不了解的问题:"不抵抗"的命令到底是谁下的?',false);
+                                        var target=document.getElementById("id_17");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年09月18日 08:37)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (87031/113)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                18.
+                                                                <a id="id_18" class="treeReply" target="_blank" href="/post/2/1/2/141920367.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度调查】您最痛恨哪种官场“逆淘汰”？官场“潜规则”有哪些？',false);
+                                        var target=document.getElementById("id_18");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年09月16日 14:15)
+                                </span>
+                                <span>
+                                    158字
+                                </span>
+                                <span>
+                                    (93556/368)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                19.
+                                                                <a id="id_19" class="treeReply" target="_blank" href="/post/2/1/2/142929109.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】乒乓国手一脚踢飞的仅仅是27万元冠军奖吗？',false);
+                                        var target=document.getElementById("id_19");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=复兴中国梦11"
+                                        class="tableAuthor">
+                                        复兴中国梦11
+                                    </a>
+                                    2014年10月27日 23:08)
+                                </span>
+                                <span>
+                                    1476字
+                                </span>
+                                <span>
+                                    (29574/41)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                20.
+                                                                <a id="id_20" class="treeReply" target="_blank" href="/post/2/1/2/142670096.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('[原创]祝贺女婿获奖，与有荣焉实为可笑',false);
+                                        var target=document.getElementById("id_20");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=维扬卧龙"
+                                        class="tableAuthor">
+                                        维扬卧龙
+                                    </a>
+                                    2014年10月15日 22:27)
+                                </span>
+                                <span>
+                                    1447字
+                                </span>
+                                <span>
+                                    (6525/16)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                21.
+                                                                <a id="id_21" class="treeReply" target="_blank" href="/post/2/1/2/142594483.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】中国城镇居民人均住房面积将居世界前列？',false);
+                                        var target=document.getElementById("id_21");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=罗源湾"
+                                        class="tableAuthor">
+                                        罗源湾
+                                    </a>
+                                    2014年10月13日 09:13)
+                                </span>
+                                <span>
+                                    2990字
+                                </span>
+                                <span>
+                                    (9056/31)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                22.
+                                                                <a id="id_22" class="treeReply" target="_blank" href="/post/2/1/2/142271891.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('<font color="#ff00">鄯爱红：国庆节的意义不在于怎么过，而在这一天所连接的过去、现在和未来</font>',false);
+                                        var target=document.getElementById("id_22");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=鄯爱红"
+                                        class="tableAuthor">
+                                        鄯爱红
+                                    </a>
+                                    2014年09月28日 11:09)
+                                </span>
+                                <span>
+                                    22174字
+                                </span>
+                                <span>
+                                    (10933/22)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                23.
+                                                                <a id="id_23" class="treeReply" target="_blank" href="/post/2/1/2/142972618.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】提高贪污贿赂量刑标准与零容忍高压反腐并不矛盾(原创首发)',false);
+                                        var target=document.getElementById("id_23");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=方圆视点"
+                                        class="tableAuthor">
+                                        方圆视点
+                                    </a>
+                                    2014年10月30日 08:38)
+                                </span>
+                                <span>
+                                    6676字
+                                </span>
+                                <span>
+                                    (8913/50)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                24.
+                                                                <a id="id_24" class="treeReply" target="_blank" href="/post/2/1/2/142972552.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】碧翰烽：14套房的“北京房娃”厌学不只是教育问题？(原创首发)',false);
+                                        var target=document.getElementById("id_24");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=翰烽"
+                                        class="tableAuthor">
+                                        翰烽
+                                    </a>
+                                    2014年10月30日 08:36)
+                                </span>
+                                <span>
+                                    5438字
+                                </span>
+                                <span>
+                                    (7174/17)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                25.
+                                                                <a id="id_25" class="treeReply" target="_blank" href="/post/2/1/2/142857100.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('“依法治国2.0时代”呼唤法治意识回归',false);
+                                        var target=document.getElementById("id_25");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=倪洋军"
+                                        class="tableAuthor">
+                                        倪洋军
+                                    </a>
+                                    2014年10月24日 07:55)
+                                </span>
+                                <span>
+                                    2146字
+                                </span>
+                                <span>
+                                    (4913/24)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                26.
+                                                                <a id="id_26" class="treeReply" target="_blank" href="/post/2/1/2/142259555.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【文化】鲁迅的伟岸是蚍蜉们撼动不了的！',false);
+                                        var target=document.getElementById("id_26");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=小土过后是多云"
+                                        class="tableAuthor">
+                                        小土过后是多云
+                                    </a>
+                                    2014年09月27日 20:21)
+                                </span>
+                                <span>
+                                    7216字
+                                </span>
+                                <span>
+                                    (19856/129)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                27.
+                                                                <a id="id_27" class="treeReply" target="_blank" href="/post/2/1/2/142074370.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【收入分配改革】谈谈分配制度一：各类票证供给的价格双轨制',false);
+                                        var target=document.getElementById("id_27");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=江苏徐知励"
+                                        class="tableAuthor">
+                                        江苏徐知励
+                                    </a>
+                                    2014年09月22日 16:06)
+                                </span>
+                                <span>
+                                    3454字
+                                </span>
+                                <span>
+                                    (17798/65)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                28.
+                                                                <a id="id_28" class="treeReply" target="_blank" href="/post/2/1/2/141962142.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】谁不痛恨官场“逆淘汰”？',false);
+                                        var target=document.getElementById("id_28");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=古洋斋"
+                                        class="tableAuthor">
+                                        古洋斋
+                                    </a>
+                                    2014年09月18日 07:35)
+                                </span>
+                                <span>
+                                    18589字
+                                </span>
+                                <span>
+                                    (13146/54)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                29.
+                                                                <a id="id_29" class="treeReply" target="_blank" href="/post/2/1/2/141881455.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【工业党】论证新中国前三十年对外援助是正确的做法',false);
+                                        var target=document.getElementById("id_29");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数学"
+                                        class="tableAuthor">
+                                        数学
+                                    </a>
+                                    2014年09月14日 20:40)
+                                </span>
+                                <span>
+                                    3872字
+                                </span>
+                                <span>
+                                    (17247/79)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                30.
+                                                                <a id="id_30" class="treeReply" target="_blank" href="/post/2/1/2/141777166.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【教师节】习近平心目中的好老师是啥样？',false);
+                                        var target=document.getElementById("id_30");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=李海年"
+                                        class="tableAuthor">
+                                        李海年
+                                    </a>
+                                    2014年09月10日 02:03)
+                                </span>
+                                <span>
+                                    12973字
+                                </span>
+                                <span>
+                                    (6642/33)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                31.
+                                                                <a id="id_31" class="treeReply" target="_blank" href="/post/2/1/2/141689920.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】中国高铁应该是条汉子，此“汉子”要有啥品格？',false);
+                                        var target=document.getElementById("id_31");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=云涌"
+                                        class="tableAuthor">
+                                        云涌
+                                    </a>
+                                    2014年09月05日 09:57)
+                                </span>
+                                <span>
+                                    882字
+                                </span>
+                                <span>
+                                    (12259/17)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                32.
+                                                                <a id="id_32" class="treeReply" target="_blank" href="/post/2/1/2/141648023.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】中国周边外交正在开新局，中国真正的快速发展在后面',false);
+                                        var target=document.getElementById("id_32");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=犁"
+                                        class="tableAuthor">
+                                        犁
+                                    </a>
+                                    2014年09月03日 06:54)
+                                </span>
+                                <span>
+                                    1581字
+                                </span>
+                                <span>
+                                    (6518/8)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                33.
+                                                                <a id="id_33" class="treeReply" target="_blank" href="/post/2/1/2/141598546.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】房价过高是因为超发的货币落到了少数人口袋？',false);
+                                        var target=document.getElementById("id_33");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=三横一纵"
+                                        class="tableAuthor">
+                                        三横一纵
+                                    </a>
+                                    2014年08月31日 11:53)
+                                </span>
+                                <span>
+                                    8062字
+                                </span>
+                                <span>
+                                    (14040/52)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                34.
+                                                                <a id="id_34" class="treeReply" target="_blank" href="/post/2/1/2/141328037.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【纪念小平】华国锋解决邓小平同志工作问题，体现了一名领袖的稳重.',false);
+                                        var target=document.getElementById("id_34");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=西部修士"
+                                        class="tableAuthor">
+                                        西部修士
+                                    </a>
+                                    2014年08月17日 18:46)
+                                </span>
+                                <span>
+                                    18554字
+                                </span>
+                                <span>
+                                    (123432/340)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                35.
+                                                                <a id="id_35" class="treeReply" target="_blank" href="/post/2/1/2/141201569.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【建议】动用外储购买外国土地供国内移民去耕种',false);
+                                        var target=document.getElementById("id_35");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数学"
+                                        class="tableAuthor">
+                                        数学
+                                    </a>
+                                    2014年08月11日 18:19)
+                                </span>
+                                <span>
+                                    1269字
+                                </span>
+                                <span>
+                                    (8873/53)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                36.
+                                                                <a id="id_36" class="treeReply" target="_blank" href="/post/2/1/2/141068317.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('碧翰烽：李克强为何三次称赞鲁甸县领导敢说真话？(原创首发)',false);
+                                        var target=document.getElementById("id_36");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=翰烽"
+                                        class="tableAuthor">
+                                        翰烽
+                                    </a>
+                                    2014年08月05日 07:17)
+                                </span>
+                                <span>
+                                    10947字
+                                </span>
+                                <span>
+                                    (18161/22)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                37.
+                                                                <a id="id_37" class="treeReply" target="_blank" href="/post/2/1/2/141827223.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】"不让座"与"强迫让座"谁更无礼? 网友:不要随便用道德标准评价别人',false);
+                                        var target=document.getElementById("id_37");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年09月12日 08:31)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (64316/188)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                38.
+                                                                <a id="id_38" class="treeReply" target="_blank" href="/post/2/1/2/141371397.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【纪念小平】"在整个改革开放过程中都要反对腐败"邓小平语录你最喜欢哪句?',false);
+                                        var target=document.getElementById("id_38");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年08月19日 15:35)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (158377/1207)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                39.
+                                                                <a id="id_39" class="treeReply" target="_blank" href="/post/2/1/2/141285019.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】抗战胜利69周年:中国年轻人应如何看待中日关系的历史现状与未来?',false);
+                                        var target=document.getElementById("id_39");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年08月15日 10:15)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (86142/129)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                40.
+                                                                <a id="id_40" class="treeReply" target="_blank" href="/post/2/1/2/141267809.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】中日关系频繁"动荡",年轻人如何在国家间政治中表达自己的态度?',false);
+                                        var target=document.getElementById("id_40");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年08月14日 13:49)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (24549/56)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                41.
+                                                                <a id="id_41" class="treeReply" target="_blank" href="/post/2/1/2/141245030.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】抗战胜利69周年讨论:"日本热"不再,中国人的对日态度是如何转变的?',false);
+                                        var target=document.getElementById("id_41");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年08月13日 13:40)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (43243/78)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                42.
+                                                                <a id="id_42" class="treeReply" target="_blank" href="/post/2/1/2/141224435.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】抗战胜利69周年讨论:日本侵华留下的"仇恨",年轻人是否该"继承"?',false);
+                                        var target=document.getElementById("id_42");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年08月12日 15:57)
+                                </span>
+                                <span>
+                                    145字
+                                </span>
+                                <span>
+                                    (26568/143)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                43.
+                                                                <a id="id_43" class="treeReply" target="_blank" href="/post/2/1/2/141004019.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】中国如何在“甲午舆论战”中取胜？',false);
+                                        var target=document.getElementById("id_43");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年08月01日 16:19)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (37307/165)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                44.
+                                                                <a id="id_44" class="treeReply" target="_blank" href="/post/2/1/2/140844503.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】甲午战争120年后，中国应塑造怎样的“大国心态”和“国民精神”？',false);
+                                        var target=document.getElementById("id_44");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年07月29日 11:17)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (103400/126)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                45.
+                                                                <a id="id_45" class="treeReply" target="_blank" href="/post/2/1/2/140758765.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】甲午战争中国到底败在何处？',false);
+                                        var target=document.getElementById("id_45");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年07月24日 11:24)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (71285/198)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                46.
+                                                                <a id="id_46" class="treeReply" target="_blank" href="/post/2/1/2/140614534.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度策划】博物馆为何沦为了“观光地”？今天，我们还需要参观博物馆吗？',false);
+                                        var target=document.getElementById("id_46");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年07月17日 14:14)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (25562/35)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                47.
+                                                                <a id="id_47" class="treeReply" target="_blank" href="/post/2/1/2/140295774.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【态度】专家网友共同探讨：日本解禁集体自卫权，中国如何应对？',false);
+                                        var target=document.getElementById("id_47");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=今日态度"
+                                        class="tableAuthor">
+                                        今日态度
+                                    </a>
+                                    2014年07月02日 14:53)
+                                </span>
+                                <span>
+                                    153字
+                                </span>
+                                <span>
+                                    (117316/180)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                48.
+                                                                <a id="id_48" class="treeReply" target="_blank" href="/post/2/1/2/140971112.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【反腐】落马省部级贪官为何政协副主席多？',false);
+                                        var target=document.getElementById("id_48");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=山右京客.blog"
+                                        class="tableAuthor">
+                                        山右京客.blog
+                                    </a>
+                                    2014年07月31日 18:40)
+                                </span>
+                                <span>
+                                    6341字
+                                </span>
+                                <span>
+                                    (47809/62)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                49.
+                                                                <a id="id_49" class="treeReply" target="_blank" href="/post/2/1/2/140813515.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【甲午断想】反思甲午战争教训，要从鸦片战争说起',false);
+                                        var target=document.getElementById("id_49");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=煮酒青梅"
+                                        class="tableAuthor">
+                                        煮酒青梅
+                                    </a>
+                                    2014年07月27日 16:42)
+                                </span>
+                                <span>
+                                    2744字
+                                </span>
+                                <span>
+                                    (5209/26)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                50.
+                                                                <a id="id_50" class="treeReply" target="_blank" href="/post/2/1/2/140680281.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【热议】小伙伴们，你们说这座该让吗？60岁老太把座位给16岁孙子',false);
+                                        var target=document.getElementById("id_50");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=维扬卧龙"
+                                        class="tableAuthor">
+                                        维扬卧龙
+                                    </a>
+                                    2014年07月20日 20:03)
+                                </span>
+                                <span>
+                                    1570字
+                                </span>
+                                <span>
+                                    (46121/123)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                51.
+                                                                <a id="id_51" class="treeReply" target="_blank" href="/post/2/1/2/140576586.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【反腐】中纪委新一轮反腐风暴剑指何方？',false);
+                                        var target=document.getElementById("id_51");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=金笔头"
+                                        class="tableAuthor">
+                                        金笔头
+                                    </a>
+                                    2014年07月16日 07:35)
+                                </span>
+                                <span>
+                                    6101字
+                                </span>
+                                <span>
+                                    (21150/28)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                52.
+                                                                <a id="id_52" class="treeReply" target="_blank" href="/post/2/1/2/140523908.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【反腐】警惕只打“老虎”不打“苍蝇”的怪圈',false);
+                                        var target=document.getElementById("id_52");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=山右京客.blog"
+                                        class="tableAuthor">
+                                        山右京客.blog
+                                    </a>
+                                    2014年07月13日 20:25)
+                                </span>
+                                <span>
+                                    6327字
+                                </span>
+                                <span>
+                                    (6781/39)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                53.
+                                                                <a id="id_53" class="treeReply" target="_blank" href="/post/2/1/2/140116137.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【国际】当今世界六大热点 中国从容应对的机巧和关键是什么？',false);
+                                        var target=document.getElementById("id_53");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=方圆视点"
+                                        class="tableAuthor">
+                                        方圆视点
+                                    </a>
+                                    2014年06月24日 10:04)
+                                </span>
+                                <span>
+                                    6494字
+                                </span>
+                                <span>
+                                    (3774/19)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                54.
+                                                                <a id="id_54" class="treeReply" target="_blank" href="/post/2/1/2/140052681.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【强文】中国的市场经济在全世界都算是成功的原因',false);
+                                        var target=document.getElementById("id_54");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=数学"
+                                        class="tableAuthor">
+                                        数学
+                                    </a>
+                                    2014年06月21日 11:27)
+                                </span>
+                                <span>
+                                    3218字
+                                </span>
+                                <span>
+                                    (16162/113)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                55.
+                                                                <a id="id_55" class="treeReply" target="_blank" href="/post/2/1/2/140540515.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】德国打破了欧洲球队在南美捧不了世界杯的“魔咒”',false);
+                                        var target=document.getElementById("id_55");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年07月14日 16:07)
+                                </span>
+                                <span>
+                                    6666字
+                                </span>
+                                <span>
+                                    (12110/22)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                56.
+                                                                <a id="id_56" class="treeReply" target="_blank" href="/post/2/1/2/140499261.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】大力神杯属于准备更好的德国队',false);
+                                        var target=document.getElementById("id_56");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年07月12日 15:54)
+                                </span>
+                                <span>
+                                    6083字
+                                </span>
+                                <span>
+                                    (5546/28)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                57.
+                                                                <a id="id_57" class="treeReply" target="_blank" href="/post/2/1/2/140438966.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】巴西惨败德国：7:1如何酿成？',false);
+                                        var target=document.getElementById("id_57");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年07月09日 18:40)
+                                </span>
+                                <span>
+                                    5861字
+                                </span>
+                                <span>
+                                    (28327/26)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                58.
+                                                                <a id="id_58" class="treeReply" target="_blank" href="/post/2/1/2/140392392.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】巴西队不易迈过德国关',false);
+                                        var target=document.getElementById("id_58");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年07月07日 18:19)
+                                </span>
+                                <span>
+                                    3361字
+                                </span>
+                                <span>
+                                    (25067/9)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                59.
+                                                                <a id="id_59" class="treeReply" target="_blank" href="/post/2/1/2/140342619.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】德国和法国，谁能挺进半决赛？',false);
+                                        var target=document.getElementById("id_59");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年07月04日 17:08)
+                                </span>
+                                <span>
+                                    3823字
+                                </span>
+                                <span>
+                                    (11878/14)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                60.
+                                                                <a id="id_60" class="treeReply" target="_blank" href="/post/2/1/2/140254527.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】亚洲球队为何全部铩羽而归？',false);
+                                        var target=document.getElementById("id_60");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年06月30日 19:08)
+                                </span>
+                                <span>
+                                    7231字
+                                </span>
+                                <span>
+                                    (21573/11)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                61.
+                                                                <a id="id_61" class="treeReply" target="_blank" href="/post/2/1/2/140149908.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】老战士不死，他们只是慢慢凋零',false);
+                                        var target=document.getElementById("id_61");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年06月25日 18:42)
+                                </span>
+                                <span>
+                                    5153字
+                                </span>
+                                <span>
+                                    (25314/19)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                62.
+                                                                <a id="id_62" class="treeReply" target="_blank" href="/post/2/1/2/140099198.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】上帝支持哪支球队？',false);
+                                        var target=document.getElementById("id_62");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年06月23日 18:30)
+                                </span>
+                                <span>
+                                    2706字
+                                </span>
+                                <span>
+                                    (13852/5)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                63.
+                                                                <a id="id_63" class="treeReply" target="_blank" href="/post/2/1/2/140016125.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】“老牌劲旅”西班牙惨败，中了啥“魔咒”？',false);
+                                        var target=document.getElementById("id_63");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年06月19日 18:26)
+                                </span>
+                                <span>
+                                    2353字
+                                </span>
+                                <span>
+                                    (8438/16)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                64.
+                                                                <a id="id_64" class="treeReply" target="_blank" href="/post/2/1/2/139966661.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】为何巴西人罢工、游行示威，反对世界杯？',false);
+                                        var target=document.getElementById("id_64");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年06月17日 17:58)
+                                </span>
+                                <span>
+                                    7577字
+                                </span>
+                                <span>
+                                    (14000/14)
+                                </span>
+                            </p>
+                        </li>
+                                            <li class="treeReplyItem">
+                            <p class="elite ">
+                                65.
+                                                                <a id="id_65" class="treeReply" target="_blank" href="/post/2/1/2/139925035.html">
+                                                                    <script>
+                                        var str =  removeHTMLTag('【世界杯专栏：高看一眼】强坛特约评论员高初建揭秘：专家预测为何成笑料？',false);
+                                        var target=document.getElementById("id_65");
+                                        target.innerHTML='<img src="/images/bbs_2013/jing.jpg" />'+str;
+                                    </script>
+                                </a>
+                                <span>
+                                    (
+                                    <a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=高初建"
+                                        class="tableAuthor">
+                                        高初建
+                                    </a>
+                                    2014年06月15日 20:34)
+                                </span>
+                                <span>
+                                    3157字
+                                </span>
+                                <span>
+                                    (10204/18)
+                                </span>
+                            </p>
+                        </li>
+                                    </ul>
+            </div>
+            <!-- we need propery PAGE_FLIP[1][65] -->
+            <div id="boardBottomAdv" class="ad">
+	<a href="" target="_blank"></a>
+</div>
+<script language="javascript" type="text/javascript">
+	jQuery.ajax({
+		url : "http://bbs1.people.com.cn/api/config.do?action=getConfigurationVal&key=boardBottomAdv" ,
+		type: "GET",
+		dataType: "jsonp",
+		success: function(text){
+			jQuery("#boardBottomAdv").html(text);
+		}	
+	});	 
+</script>            <div class="joinTopic">快速发帖</div>
+            <ul class="fReplay clearfix author">
+	<li>
+		<a href="/userInfo.do?userNick=" target="_blank">			
+			<img id="formEditorPostListImg" width="50" height="50" class="portrait" userNick="Guest" imgWidth="50" border="0" />		
+		</a>
+	</li>
+	<li class="replayli nickName forumEditorUserNick">
+		<a class="loginBtn" href="javascript:void(0);">登录</a>
+		<a class="userReg" target="_blank" href="javascript:window.location.href=rmw.sns.regUserLink('bbs',true);">注册</a>
+	</li>
+	<li class="lastLi">
+		<form id="quickPostForm">
+		<input name='bid' type='hidden'  value='2'/>
+		<input type="hidden" name="pageNo" value="1" />
+		<input type="text" name="titleText" class="inputTitle" value="添加标题">
+		<textarea class="subTextarea" name="message">添加内容</textarea>
+		<div class="clearfix">
+			<span id="advancedReply" boardId="2" class="button float_l">图文编辑模式</span>
+			<span class='float_R'>
+				<span class="blueBtn float_R" onclick="submitFormPost(this);">发表</span><span class="smile"></span>
+			</span>
+		</div>
+		<div class="faces">
+			<table class="faceTable">
+			</table>
+			<ul class="facePage clearfix">
+				<li class="focus">1</li>
+				<li>2</li>
+			</ul>
+		</div>
+		</form>
+	</li>
+</ul>
+	<script type="text/javascript">
+					rmw.global.translateMillSecondsByNewBoard($(".newTime"));
+				  rmw.global.bindUserPortraitsByNewBoard($("img.portrait", $(".tableWrap"))) ;
+		   RMWSSO.getUserData(function(guzzLoginUser){
+			if(guzzLoginUser && guzzLoginUser.userId > 0){
+			  var displayName = guzzLoginUser.usernick;
+			  $("#formEditorPostListImg").attr("userNick",displayName);
+		    }
+		  });
+		 rmw.global.bindUserPortraits($("img.portrait", $(".fReplay"))) ;
+    </script>        </div>
+        <div id="footer">
+		<ul id="footerNavUl">
+		<li><a target="_blank" href="http://bbs1.people.com.cn">强国社区</a>
+		</li>
+		<li><a target="_blank" href="http://bbs1.people.com.cn/post/1/0/1/135544954.html">意见反馈</a>
+		</li>
+		<li><a target="_blank" href="/gltl.do">管理条例</a>
+		</li>
+		<li><a target="_blank" href="http://kf.people.com.cn/GB/193845/index.html">如何删帖</a>
+        </li>
+		<li><a target="_blank" href="http://bbs1.people.com.cn/help.htm">帮助</a>
+		</li>
+	</ul>
+	©&nbsp;1997-2015&nbsp;by&nbsp;<a target="_blank" href="http://www.people.com.cn">www.people.com.cn</a>&nbsp;All&nbsp;Rights&nbsp;Reserved.
+</div>
+<script src="http://www.people.com.cn/css/2010tianrun/webdig_test.js" type="text/javascript"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45054704-1', 'auto');
+  ga('send', 'pageview');
+
+</script>        <div id='floatTips'><p class="tipTitle">提示</p><p class="tipsCont"></p><a href="javascript:;" class="closeTip"></a></div>
+
+<!-- 顶 踩 成功的弹出框-->
+<div  class="pop_box clearfix" id="dialog" title="" style="display:none;">
+	  		   <h1 id="textTitle"></h1>
+	   		   <h2 id="textShare">你的态度靠谱吗？发到你的主页让大家评一评！</h2>
+			   <div class="shear clearfix" style="display:none;">
+			   	<strong>分享到：</strong>
+				<div class="iocn" style="display:block;">
+					<div class="bshare-custom icon-medium-plus">
+						<div class="bsPromo bsPromo1"></div>
+						<a title="分享到人民微博" class="bshare-peoplemb"></a>
+						<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+						<a title="分享到人人网" class="bshare-renren"></a>
+						<a title="分享到QQ空间" class="bshare-qzone"></a>
+						<a title="分享到豆瓣" class="bshare-douban"></a>
+						<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+						<span class="BSHARE_COUNT bshare-share-count">0</span>
+	  					<p style="display: none;" id="BSHARE_TEXT" class="BSHARE_TEXT" ></p>
+					</div>
+				</div>
+			</div>
+   			<div class="pop_sucees" style="display:none;padding-top: 20px;">恭喜您成为强国社区用户！
+   			 	<a href="javascript:void(0)" id="userPassword" target="_blank"><img src="http://bbs1.people.com.cn/2013lianghui/images/edit_password.png" border="0" alt="" /></a>
+   			 	<a href="http://sns.people.com.cn/usr/home.do" target="_blank"><img src="http://bbs1.people.com.cn/2013lianghui/images/login_index.png" border="0" alt="" /></a>
+   			</div><br />
+  			<h3 class="pop_sucees" style="display:none;">用户名：<span id="myUserName"></span>&nbsp;&nbsp;&nbsp;昵称：<span id="myUserNick"></span></h3>
+</div>
+<!-- 顶 踩 成功的弹出框-->
+
+<div class="mask">
+<div class="maskBg"></div>
+<div class="maskWrap">
+	<div class="followTips">请登录后继续操作....</div>
+    <div class="maskCont">
+    	<div class="loginCont">
+        	<div class="closeMask"></div>
+            <h3>强国社区-人民网</h3>
+            <img src="/images/bbs_2013/login.jpg" />            
+            <form method="post" id="loginForm">
+		      <input type="hidden" value="1" name="rememberMe">
+		      <input type="hidden" value="" id="retUrl" name="retUrl">
+		      	<table class="loginTable">
+	           	 	<tr><td>英文或数字登录名</td><td colspan="2">密码</td></tr>
+	            	<tr><td><input type="text" id="userName" name="userName" class="input"/></td><td><input type="password" id="passWord" name="password"  class="input"/></td><td><span id="login_btn" class="button">登录</span></td></tr>
+	            	<tr><td><input type="checkbox" class="keepAlive"/>在本电脑一直保持登录状态</td><td colspan="2"><a class="losePassword" href="http://sso.people.com.cn/u/findpwd/phone">忘记密码</a></td></tr>
+	            	<tr>
+						<td colspan="3">
+							<div class="otherAccount">
+								<a href="javascript:window.location.href=rmw.sns.regUserLink('bbs',true);">注册新账号</a>
+								或使用合作伙伴账号
+									<span class="otherLoginWrap">
+										<a href="http://open.denglu.cc/transfer/qzone?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon tengxun"></a>
+										<a href="http://open.denglu.cc/transfer/sina?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon weibo"></a>
+										<a href="http://open.denglu.cc/transfer/windowslive?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon MSN"></a>
+										<a href="http://open.denglu.cc/transfer/renren?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon renren"></a>
+										<a href="http://open.denglu.cc/transfer/baidu?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" ><img style="vertical-align:inherit;" src="http://bbs1.people.com.cn/images/bbs_2012/baidu.gif"></a>
+									</span>
+							</div>
+						</td>
+					</tr>
+                </table>
+		    </form>
+        </div>
+    </div>
+</div>
+</div>
+<script language="javascript" src="http://bbs1.people.com.cn/js_library/writePeopleLog.js"></script>
+        <input type="hidden" id="page_flip_pageNo" value="1" />
+	</div>
+    </body>
+</html>

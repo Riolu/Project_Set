@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="description" content="人民网地方频道 地方领导留言板 地方 领导" >
+<meta name="keywords" content="地方领导留言板,地方,领导" >
+<!-- 天润测试代码 -->
+<META name="filetype" content="1">
+<META name="publishedtype" content="1">
+<META name="pagetype" content="2">
+<META name="catalogs" content="178291">
+<!-- /天润测试代码 -->
+
+<!--<meta http-equiv="Refresh" content="0;url=http://leaders.people.com.cn/GB/178291/index.html" /> -->
+<TITLE> 地方领导留言板 - 地方领导频道 - 人民网 </TITLE>
+<STYLE TYPE="text/css">
+body{ padding:0; margin:0;  background:transparent;}
+	margin:0px;
+	padding:0px;
+</STYLE>
+<script language="javascript">
+function fGetQuery(name){
+    var sUrl = window.location.search.substr(1);  
+	return (sUrl == '' ? null : sUrl);  
+} 
+var bForcepc = fGetQuery("dv") == "_Page";  
+
+function fBrowserRedirect(){  
+	var sUserAgent = navigator.userAgent.toLowerCase();  
+	var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";    
+	var bIsAndroid = sUserAgent.match(/android/i) == "android";  
+	var bIsiphone = sUserAgent.match(/iphone/i) == "iphone";
+
+	if( bIsIpad || bIsAndroid || bIsiphone ){             
+		if(!bForcepc)
+		{  
+			if(bIsiphone || bIsAndroid)
+			{
+				window.location.href ="index.php?moblie=1";
+			}else{
+				window.location.href ="http://leaders.people.com.cn/GB/178291/index.html";  
+			}
+		}  
+	}  
+ 
+}  
+fBrowserRedirect();
+
+function closeMark( targetid )
+{
+    var target=document.getElementById(targetid);
+    if (target.style.visibility=="visible"){
+         target.style.visibility="hidden";
+    }
+}
+</script>
+<style type="text/css">
+.fixed{ width:112px; height:480px; text-align:center; bottom:20px; position:fixed; _position:absolute;right:5px; font-size:12px;}
+.fixed img{ display:block;}
+.fixed a{ text-decoration:none;}
+</style>
+</HEAD>
+
+<BODY margin="0">
+  <div class="fixed" id="MarkDiv" style="visibility:visible; background-color:#FFF">
+  <a href="http://leaders.people.com.cn/GB/178291/218130/382354/index.html" target="_blank"><img src="images_old/erwei3.gif" width="112" border="0" /></a><img src="images_old/erwei4.gif" width="112" border="0" /><img src="imagesnew/erwei5.gif" width="112" border="0" /><br><img width="45" height="21" src="images_old/close01.jpg"style="float:right;" onClick="javascript:closeMark('MarkDiv');">
+  </div>
+  <iframe SRC="http://leaders.people.com.cn/GB/178291/index.html" height="2550" width="100%"  border="0" frameborder="0" marginheight="0" marginwidth="0" vspace="-1" scrolling="no" style="padding:0; margin:0;"></iframe>
+  <iframe src="http://ldzl.people.com.cn/dfzlk/front/firstPage.htm" width="0" height="0" frameborder="0"></iframe>
+  <script src="http://www.people.com.cn/css/2010tianrun/webdig_test.js" language="javascript" type="text/javascript"></script>
+</BODY>
+</HTML>

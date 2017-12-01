@@ -1,0 +1,1455 @@
+<!doctype html>
+<html>
+<head>
+<title>【惊坛投稿】帮你上头条！来给“一语惊坛”投稿，下一个头条就是你！</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="description" content="各位有才的父老乡亲：&nbsp; &nbsp; 为了让大家更好地展示自己华丽的文采和超凡的才华，强国论坛即日起决定开辟一个惊坛投稿专用通道，大家有什么精彩的评论"/>
+<meta name="keywords" content="" />
+<meta name="filetype" content="1" />
+<meta name="publishedtype" content="2" />
+<meta name="pagetype" content="1" />
+<meta name="catalogs" content="bbs_71" />
+<meta name="contentid" content="149629185" />
+<meta name="publishdate" content="Fri Jul 03 16:53:12 CST 2015" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="/css_bbs/qgbbs.css?v=20140320" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="http://bbs1.people.com.cn/css_bbs/jquery-ui-1.10.0.custom.css" />
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/qrcode.min.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/qgBasePlugin.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/qgbbs_base.js?v=3"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/faces.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/qgDetail.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/qgbbs/2013/include/qgSearch.js"></script>
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/base/jquery.rmw.global.js?v=20151019"></script> 	
+<script type="text/javascript" src="http://bbs1.people.com.cn/js_library/plug/jquery-ui-1.10.0.custom.min.js"></script>
+<script type="text/javascript">
+var cdomain = "http://bbs1.people.com.cn";
+var mdomain = "http://bbs1.people.com.cn";
+	var officialPost = 1;
+var snsdomain="http://sns.people.com.cn";
+ $(document).ready(function(){
+	rmw.global.setSNSDomain("http://sns.people.com.cn") ;
+	RMWSSO.getUserData(function(guzzLoginUser){
+		if(guzzLoginUser && guzzLoginUser.userId > 0){
+		 	var displayName = guzzLoginUser.nickname;
+			var userNick = guzzLoginUser.nickname;
+			var userId = guzzLoginUser.userId;
+			$("#loginHeaderUserNick").html(displayName+"<i></i>") ;
+			$(".loginUserNick").show();
+			$(".guest").hide();
+			$(".forumEditorUserNick").html('<a href="/userInfo.do?userNick='+userNick+'" target="_blank">'+displayName+'</a>');
+			$("#formEditorPostListImg").attr("userNick",userNick);
+			$(".showWidth").attr("userId",userId);
+			var showWidth = getCookie("BBS_SHOW_WIDTH"+userId);
+			var showWidthClick = "#showWidth"+showWidth;
+			$(showWidthClick).click();
+			var _userName =  guzzLoginUser.username;
+			$("#tableView").attr("userName",_userName);
+			$("#treeView").attr("userName",_userName);
+			$(".notAuthorOnly").attr("userName",_userName);
+	    	loadNewsCount();
+		}else{
+		    var retUrl = encodeURI(top.location.href);
+			$(".msgTips").remove();
+			$(".userReg").attr("href",rmw.sns.regUserLink("bbs",true));
+		}
+	});
+	rmw.global.bindUserPortraits($("img.portrait", $(document))) ;
+  });
+</script>
+
+<script>  
+var imgUrl ="";
+	imgUrl = 'http://bbs1.people.com.cn/images/weixinlogo.jgp';
+
+
+var lineLink = 'http://bbs1.people.com.cn/post/71/1/2/149629185.html';  
+var descContent = "<font color="#0000ff">【惊坛投稿】帮你上头条！来给“一语惊坛”投稿，下一个头条就是你！</font>";  
+var shareTitle = '<font color="#0000ff">【惊坛投稿】帮你上头条！来给“一语惊坛”投稿，下一个头条就是你！</font>';  
+var appid = 'wxce319a0146ca3f28';  
+  
+function shareFriend() {  
+    WeixinJSBridge.invoke('sendAppMessage',{  
+                            "appid": appid,  
+                            "img_url": imgUrl,  
+                            "img_width": "640",  
+                            "img_height": "640",  
+                            "link": lineLink,  
+                            "desc": descContent,  
+                            "title": shareTitle  
+                            }, function(res) {  
+                            _report('send_msg', res.err_msg);  
+                            })  
+}  
+function shareTimeline() {  
+    WeixinJSBridge.invoke('shareTimeline',{  
+                            "img_url": imgUrl,  
+                            "img_width": "640",  
+                            "img_height": "640",  
+                            "link": lineLink,  
+                            "desc": descContent,  
+                            "title": shareTitle  
+                            }, function(res) {  
+                            _report('timeline', res.err_msg);  
+                            });  
+}  
+function shareWeibo() {  
+    WeixinJSBridge.invoke('shareWeibo',{  
+                            "content": descContent,  
+                            "url": lineLink,  
+                            }, function(res) {  
+                            _report('weibo', res.err_msg);  
+                            });  
+}  
+// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。  
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {  
+  
+        // 发送给好友  
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){  
+            shareFriend();  
+            });  
+  
+        // 分享到朋友圈  
+        WeixinJSBridge.on('menu:share:timeline', function(argv){  
+            shareTimeline();  
+            });  
+  
+        // 分享到微博  
+        WeixinJSBridge.on('menu:share:weibo', function(argv){  
+            shareWeibo();  
+            });  
+        }, false);  
+</script>
+</head>
+<body style="overflow-x:hidden">
+	<div class="headerNavAd clearfix">
+	<center>  
+		<script type='text/javascript' src='http://pmm.people.com.cn/main/s?user=people|bbs1|topfullcolumn_tieziye&db=people&border=0&local=yes&js=ie' charset='gbk'></script>
+	</center>
+</div>	<div class="rel">
+	<div class="people_line">
+<div class="tempDiv clearfix">
+  		<div class="float_l floatTitle">
+        	<p class="FTtop">【惊坛投稿】帮你上头条！来给“一语惊坛”投稿，下一个头条就是你！</p>
+            <p class="clearfix FTbtm">
+            	<span class="float_l"><a target="_blank" href="http://bbs1.people.com.cn">强国社区</a><span class="SMArrow"></span><a target="_blank" href="http://bbs1.people.com.cn/board/71.html">百姓监督</a></span>
+                <span class="float_R"><a href="http://bbs1.people.com.cn/userInfo.do?userNick=一语惊坛" target="_blank">一语惊坛</a><span class="SMline"></span>2015-07-03</span>
+            </p>
+        </div>
+        <div class="float_R buttons">
+            <div class="DDWrap mR15 freadMode float_l">
+                <span class="showPart bold">阅读设置<i></i></span>
+                <div class="hidePart modeWrap">
+	                                  <p>跟帖显示为</p>
+                  <ul class="mode clearfix">
+                    <li boardId="71" postId="149629185"  view="2" userName="-1" class="focus tableView"><strong>表状</strong></li>
+                    <li boardId="71" postId="149629185"  view="1" userName="-1" class=" treeView"><strong>树状</strong></li>
+                  </ul>
+                   <p>跟帖内容</p>
+                  <ul class="mode clearfix">
+                    <li class="notAuthorOnly focus" boardId="71" postId="149629185"><strong>全部</strong></li>
+                    <li class="authorOnly " userId="527471" boardId="71" postId="149629185"><strong>楼主直播</strong></li>
+		          </ul>
+                </div>
+             </div>
+           <div class="DDWrap float_l">
+              <span class="showPart bold share">分享<i></i></span>
+              <div class="hidePart posts_tools shareWrap clearfix">
+                  <div class="bshare-custom"><div class="bsPromo bsPromo2"></div>
+                      <a href="javascript:void(0);" class="bshare-peoplemb" title="分享到人民微博"></a>
+                      <a href="javascript:void(0);" class="bshare-sinaminiblog" title="分享到新浪微博"></a>
+                      <a href="javascript:void(0);" class="bshare-weixin" title="分享到微信"></a>
+                      <a href="javascript:void(0);" class="bshare-qzone" title="分享到QQ空间"></a>
+                      <a href="javascript:void(0);" class="bshare-qqmb" title="分享到腾讯微博"></a>
+                      <a href="javascript:void(0);" class="bshare-renren" title="分享到人人网"></a>
+                      <a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+               </div>
+            </div>
+         </div>
+                <span class="float_l supportBtn" postId="149629185" overscore="522">赞(522)</span>
+                <span class="float_l mainrRepBtn blueBtn">快速回复</span>
+         </div>
+  </div>
+</div>
+<div id="header">
+		<div class="headerNav clearfix">
+		<ul id="headerNavUl">
+			<li><a target="_blank" href="http://bbs1.people.com.cn">社区首页</a></li>
+			<li><a target="_blank" href="http://bbs1.people.com.cn/board/1.html">论坛</a></li>
+			<li><a target="_blank" href="http://qgblog.people.com.cn/">博客</a></li>
+			<li><a target="_blank" href="http://bbs1.people.com.cn/board/1/131.html">育儿宝</a></li>
+			<li><a target="_blank" href="http://ezheng.people.com.cn/">E政</a></li>
+			<li><a target="_blank" href="http://fangtan.people.com.cn/">访谈</a></li>
+			<li><a target="_blank" href="http://t.people.com.cn/">微博</a></li>
+			<li><a target="_blank" href="http://vblog.people.com.cn/">播客 </a></li>
+			<li><a target="_blank" href="http://sns.people.com.cn/">SNS </a></li>
+		</ul>
+		<div>
+			<a target="_blank" href="http://people.com.cn">人民网首页</a>
+		</div>
+	</div>
+		<div class='logo'>
+		<a href="http://bbs1.people.com.cn" target="_blank" style="display:inline-block;width:120px;height:49px;float:left;*display:inline; *zoom:1;"></a>
+    	<div class="searchWrap">
+        	<span class="search clearfix">
+        	<span class="inputTips"><a class="closeInputTips" href="javascript:void(0);"></a></span>
+        		<span class="float_l">
+				<form action="http://bbs1.people.com.cn/quickSearch.do" name="searchFrm1" id="searchFrm1" target="_blank" method="GET" class="float_l">
+    				<input type="hidden" value="title" name="field" id="field"/>
+					<input type="hidden" value="1" name="threadtype">
+					<input type="text" autocomplete="off"  name="content" id="searchTopic" value="输入标题/笔名查找感兴趣的话题..." /> <span id="searchBtn"></span>
+				 </form>
+				 <a href="/quickSearch.do" class="seniorLink" target='_blank'>高级检索</a>
+				 </span>
+				<ul class="userCenter">
+					<li class="pT10 last guest">
+						<a class="userReg" target="_blank" href="#">注册</a>
+					</li>
+					<li class="pT10 last loginBtn guest">
+						<a href="javascript:void(0);">登录</a>
+					</li>
+    				<li class="DDWrap userMsg loginUserNick" style="display:none;">
+    					<span class="showPart" id="loginHeaderUserNick"><i></i></span>
+    					<ul class="hidePart">
+                            <li><a href="/personInfo.do" target="_blank" id="personInfo">个人信息</a></li>
+                            <li><a href="http://sns.people.com.cn/usr/saveImage.do" target="_blank">修改头像</a></li>
+                            <li><a href="http://sns.people.com.cn/usr/userRegister.do" target="_blank">设置</a></li>
+                            <li class="keepGray"><a href="javascript:logout();">退出</a></li>
+    					</ul>
+    				</li>
+					<li class="DDWrap userMsg userNewMsg loginUserNick" style="display:none;">
+						<span class="showPart">提醒<span id="allNum"></span><i></i></span>
+						<ul class="hidePart">
+							<li><a id="newFansCount" title="粉丝"  target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=fans">粉丝</a></li>
+							<li><a id="newBulletinCount" title="公告" target="_blank"  href="http://sns.people.com.cn/usr/sms/administratorMsgs.jsp">公告</a></li>
+							<li><a id="newSmsCount" title="站内信" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=sms">站内信</a></li>
+                            <li><a id="newAppMsgCount" title="回复提醒" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=appMsg">回复提醒</a></li>
+							<li><a id="newBirthdayCount" title="生日提醒" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=birthday">生日提醒</a></li>
+							<li><a id="newSysMsgCount" title="系统消息" target="_blank" href="http://sns.people.com.cn/usr/resetNewsCount.do?newsCat=sysmsg">系统消息</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="tipList">
+					<li class="paper" search="userNick"></li>
+					<li class="user" search="title"></li>
+				</ul> 
+			</span>
+    	</div>
+	</div>
+	<div class='hotTopic'>
+		<div class='topicWrap clearfix'>
+			<div class="entrance float_l">
+					<!--<strong>百姓监督</strong>-->
+				<span class="subNav">
+			      	时政版块
+			      <ul class="navList clearfix">
+					<li><a href="http://bbs1.people.com.cn/board/1.html" target="_blank">强国论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/2.html" target="_blank">深入讨论</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/1/129.html" target="_blank">新闻论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/6.html" target="_blank">国际论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/7.html" target="_blank">军事论坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/71.html" target="_blank">百姓监督</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/60.html" target="_blank">煮酒论史</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/11.html" target="_blank">经济论坛</a></li>
+			      </ul>
+			      </span>
+			      <span class="subNav">
+			      	生活版块
+			      <ul class="navList clearfix">
+					<li><a href="http://bbs1.people.com.cn/board/1/29.html" target="_blank">贴图论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/27.html" target="_blank">娱乐论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/26.html" target="_blank">女性论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/23.html" target="_blank">生活论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/24.html" target="_blank">联谊会馆</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/131.html" target="_blank">育儿宝</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/80.html" target="_blank">大学生</a></li>
+					<li><a href="http://bbs1.people.com.cn/citan" target="_blank">人民瓷坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/57.html" target="_blank">房产论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/8.html" target="_blank">教育论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/44.html" target="_blank">文化论坛</a></li>
+			      </ul>
+			      </span>
+			      <span class="subNav">
+			      	地区版块
+			      <ul class="navList clearfix">
+			        <li><a href="http://bbs1.people.com.cn/board/133.html" target="_blank">城市论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/13.html" target="_blank">中日论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/4.html" target="_blank">港澳台</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/73.html" target="_blank">强桂论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/75.html" target="_blank">强闽论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/86.html" target="_blank">强陕论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/87.html" target="_blank">强深论坛 </a></li>
+					<li><a href="http://bbs1.people.com.cn/board/74.html" target="_blank">热带语林</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/1/88.html" target="_blank">湖北论坛</a></li>
+					<li><a href="http://bbs1.people.com.cn/board/132.html" target="_blank">强赣论坛</a></li>
+			      </ul>
+			      </span>
+			      <span class="original">
+			      	原创栏目
+			      <ul class="originalNav clearfix">
+					<li><a href="http://www.people.com.cn/32306/359302/359317/index.html" target="_blank">一语惊坛</a></li>
+			        <li><a href="http://bbs1.people.com.cn/board/2/123.html" target="_blank">i态度</a></li>
+					<li><a href="http://www.people.com.cn/32306/387208/index1.html" target="_blank">强国图解</a></li>
+					<li><a href="http://www.people.com.cn/32306/390007/index.html" target="_blank">强国视点</a></li>
+					<li><a href="http://www.people.com.cn/32306/355718/364306/index.html" target="_blank">态度调查</a></li>
+					<li><a href="http://www.people.com.cn/32306/363234/366740/index.html" target="_blank">谣言狙击榜</a></li>
+					<li><a href="http://bbs1.people.com.cn/eliteList.do?pid=118921&bid=1" target="_blank">真心话大冒险</a></li>
+					<li><a href="http://bbs1.people.com.cn/eliteList.do?pid=118873&bid=7" target="_blank">名家点兵</a></li>
+			      </ul>
+			      </span>
+			</div>
+			<div class="float_l nav_R" id="forumsTalkingAbout"></div>
+			<script type="text/javascript">
+        		jQuery.ajax({
+        			url : "http://bbs1.people.com.cn/api/config.do?action=getConfigurationVal&key=forumsTalkingAbout",
+        			type: "GET",
+        			dataType: "jsonp",
+        			success: function(text){
+        				jQuery("#forumsTalkingAbout").html(text);
+        			}
+        		});
+        		function logout(){
+        		   RMWSSO.logout(function(){
+				       location.reload(true);
+			       });
+			    }
+    		</script>
+		</div>
+	</div>
+</div>	<div class="outer">
+		<div class='goTop'></div>
+		<div class='ad bannerTag' id="bannerTag"></div>
+<script language="javascript" type="text/javascript">
+	jQuery.ajax({
+		url : "http://bbs1.people.com.cn/api/config.do?action=getConfigurationVal&key=postTopAdv" ,
+		type: "GET",
+		dataType: "jsonp",
+		success: function(text){
+			jQuery(".bannerTag").html(text);
+		}	
+	});	 
+</script>
+<!--
+<div class="w980 clearfix">
+    <iframe marginheight="0" style="float:left;width:770px;" marginwidth="0" frameborder="0" width="770" height="90" scrolling="no" src="http://pmm.people.com.cn/main/s?user=people|post|bigbanner&amp;db=people&amp;border=0&amp;local=yes">
+    </iframe>
+</div>
+-->		<div class='navBar'>
+	<div class="wrapNavBar clearfix">
+		<a target="_blank" href="http://people.com.cn" class="peopleLogo"></a><span>&gt;</span>
+		<a target="_blank" href="http://bbs1.people.com.cn">强国社区</a><span>&gt;</span>
+					<a target="_blank" href="http://bbs1.people.com.cn/board/71.html">百姓监督</a>
+			</div>
+	<h2>  【惊坛投稿】帮你上头条！来给“一语惊坛”投稿，下一个头条就是你！</h2>
+	<div class="articleInfo clearfix">
+		<ul class="author float_l">
+			<li>
+								<a href="http://bbs1.people.com.cn/userInfo.do?userNick=%E4%B8%80%E8%AF%AD%E6%83%8A%E5%9D%9B" target="_blank">
+					<img class="portrait" userNick="一语惊坛" width="50" border="0" />
+				</a>
+							</li>
+			<li><div class="clearfix" style="margin-bottom:2px;">
+									<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=%E4%B8%80%E8%AF%AD%E6%83%8A%E5%9D%9B" class="float_l userNick"><font color="">一语惊坛</font></a>
+								</div>
+				<div class="focusOn">
+					<span toUser="一语惊坛" userId="527471" loginUser="Guest" class="followBtn">关注</span>
+					<a target="_blank" isLogin="true" toUser="一语惊坛" toUserName="yiyujingtan" href="javascript:void(0);" class='sendMsg mR10' title="发私信"></a>
+					<div class="DDWrap mR15 readMode float_l">
+		                <span class="showPart bold">阅读设置<i></i></span>
+		                <div class="hidePart modeWrap">
+		                			                  <p>跟帖显示为</p>
+		                  <ul class="mode clearfix">
+		                    <li id="tableView" boardId="71" postId="149629185"  view="2" userName="-1" class="focus tableView"><strong>表状</strong></li>
+		                    <li id="treeView"  boardId="71" postId="149629185"  view="1" userName="-1" class=" treeView"><strong>树状</strong></li>
+		                  </ul>
+		                   <p>跟帖内容</p>
+		                  <ul class="mode clearfix">
+		                    <li class="notAuthorOnly focus" boardId="71" postId="149629185"><strong>全部</strong></li>
+                 		    <li class="authorOnly " userId="527471" boardId="71" postId="149629185"><strong>楼主直播</strong></li>
+		                  </ul>
+		                </div>
+             		</div>
+    	           <style type="text/css">
+    				   .postContent .showPart{width:110px;}
+					   .postContent .showPart2{height:20px;}
+    				   .postContent .showPart span{float:left;}
+    				   .postContent .hidePart{width:132px;}
+    		   		</style>
+					<div class="DDWrap float_l postContent">
+                      	<div class="showPart showPart2 bold share">
+        	              <span>分享</span>
+        	              <div class="bdsharebuttonbox" style="float:right;margin-top:-3px;">
+        	              	  <a href="#" class="bds_people" data-cmd="people" title="分享到人民微博"></a>
+        		              <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        		              <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        	              </div>
+        					<i></i>
+        					 <script type="text/javascript">
+        						window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        			   		</script>
+        			  	</div>
+                      	<div class="hidePart posts_tools shareWrap clearfix">
+                          <div class="bshare-custom">
+                          	  <div class="bsPromo bsPromo2"></div>
+                              <a href="javascript:void(0);" class="bshare-qzone" title="分享到QQ空间"></a>
+                              <a href="javascript:void(0);" class="bshare-qqmb" title="分享到腾讯微博"></a>
+                              <a href="javascript:void(0);" class="bshare-renren" title="分享到人人网"></a>
+                              <a class="bshare-more bshare-more-icon more-style-addthis" title="更多平台"></a>
+              				</div>
+                    	</div>
+        			</div>
+				</li>
+		</ul>
+		<p class="replayInfo">
+			<span class="float_l mT10">阅读(<span class="readNum">290652</span>)&nbsp;回复(<span class="replayNum">2715</span>)&nbsp;&nbsp;2015-07-03 16:53:12</span>
+			       		<span class="float_l supportBtn" postId="149629185" overscore="522">赞(522)</span>
+       					<span class="blueBtn mainrRepBtn float_l">快速回复</span>
+		</p>
+	</div>
+</div>
+	<article>
+    	<div class="article scrollFlag" id="post_content_149629185" allowOutsideImage="true"   content_id="149629185" content_path="http://bbs1.people.com.cn/posts/Z5/08/EB/29/01/content_html.txt"	>
+    		      
+    		    	</div>
+		         <p class="lianxi">本帖只代表<a target="_blank" href="http://sns.people.com.cn/home.do?uid=527471">一语惊坛</a>的个人观点，不代表人民网观点。 如将本文用于其他媒体出版, 请与<a target="_blank" href="http://sns.people.com.cn/home.do?uid=527471">一语惊坛</a>联系。<span class="jubao float_R" onclick="openComplaintDia(this, 149629185);">举报</span></p>
+	 		<div class="erweima erweima3" id="erweima1">
+              <div> 
+               <span class="close_erweima"></span>
+               <div class="img" id="erweima_1"></div>
+               <p>微信扫一扫<br />分享本帖到朋友圈</p>
+              </div>
+            </div>
+            <div class="erweima1 erweima3" id="erweima2"> 
+              <div>
+               <span class="close_erweima"></span>
+               <div class="img" id="erweima_2"></div>
+               <p>微信扫一扫<br />分享本帖到朋友圈</p>
+              </div>
+            </div>
+	</article>		<script type='text/javascript' src='http://pmm.people.com.cn/main/s?user=people|bbs1|tonglan01_tieziye&db=people&border=0&local=yes&js=ie' charset='gbk'></script>		<div>
+	<iframe width="795" scrolling="no" height="555" frameborder="0" style="margin-left: 92px; margin-top: 10px; text-align: left" src="http://www.people.cn/32306/348298/index.html"></iframe>
+</div>
+<script src="/js_library/buttonLite.js" charset="utf-8" type="text/javascript"></script>
+<script src="/js_library/bshareC0.js" charset="utf-8" type="text/javascript"></script>					<a id="replayList" name="replayList"> </a>
+<div class="replayWrap">
+	<ul class="replayList clearfix">
+		 								<li class="replayItem clearfix firstReply">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="121.34.166" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											121.34.166.*
+									</li>
+				<li class="replayMsg">
+					<p>先說說投稿有啥好處先。</p>
+					<p class="mB" postTitle="先說說投稿有啥好處先。" id="post_content_149629238"  content_id="149629238" content_path="http://bbs1.people.com.cn/posts/Z8/08/EB/29/36/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149629238" class="upNum">(3)</span></a>
+						</span>
+						<span class="floorNum">
+							1楼
+													</span>
+						2015-07-03 16:55:51
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149629238">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149629238);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149629238",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149629238">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149629238" id="readMore_149629238">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149629238"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149629238" id="myReply_149629238">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="119.185.129" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											119.185.129.*
+									</li>
+				<li class="replayMsg">
+					<p>上个头条. 送十只人民网股票------- [大笑]</p>
+					<p class="mB" postTitle="上个头条. 送十只人民网股票------- [大笑]" id="post_content_149629332"  content_id="149629332" content_path="http://bbs1.people.com.cn/posts/Z2/08/EB/29/94/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149629332" class="upNum">(1)</span></a>
+						</span>
+						<span class="floorNum">
+							2楼
+													</span>
+						2015-07-03 17:00:29
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149629332">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149629332);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149629332",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149629332">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149629332" id="readMore_149629332">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149629332"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149629332" id="myReply_149629332">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="119.185.129" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											119.185.129.*
+									</li>
+				<li class="replayMsg">
+					<p>上个头条. 送十只强坛股票---- [大笑]</p>
+					<p class="mB" postTitle="上个头条. 送十只强坛股票---- [大笑]" id="post_content_149629360"  content_id="149629360" content_path="http://bbs1.people.com.cn/posts/Z0/08/EB/29/B0/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149629360" class="upNum">(0)</span></a>
+						</span>
+						<span class="floorNum">
+							3楼
+													</span>
+						2015-07-03 17:01:52
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149629360">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149629360);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149629360",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149629360">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149629360" id="readMore_149629360">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149629360"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149629360" id="myReply_149629360">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+										<a href="http://bbs1.people.com.cn/userInfo.do?userNick=%E7%BB%9D%E5%9C%B0%E6%9E%AD%E9%9B%84" target="_blank">
+						<img class="portrait" userNick="绝地枭雄" Width="50" border="0" />
+					</a>
+									</li>
+				<li class="replayli nickName">
+					    					<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=%E7%BB%9D%E5%9C%B0%E6%9E%AD%E9%9B%84" class="noWrap">绝地枭雄</a>
+    					    					<p class="mailTo">
+    						<a target="_blank" isLogin="true" toUser="绝地枭雄" href="javascript:void(0);"  class='sendMsg mR10' title="发私信"></a>
+    					</p>
+									</li>
+				<li class="replayMsg">
+					<p>养老金即将入市，你怎么看？</p>
+					<p class="mB" postTitle="养老金即将入市，你怎么看？" id="post_content_149629369"  content_id="149629369" content_path="http://bbs1.people.com.cn/posts/Z9/08/EB/29/B9/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149629369" class="upNum">(2)</span></a>
+						</span>
+						<span class="floorNum">
+							4楼
+													</span>
+						2015-07-03 17:02:16
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149629369">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149629369);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149629369",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149629369">
+    			</ul>
+    			    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+										<a href="http://bbs1.people.com.cn/userInfo.do?userNick=%E7%90%86%E7%9C%9F%E8%A7%81%E8%A1%80%E8%A7%81%E7%9C%9F%E7%90%86" target="_blank">
+						<img class="portrait" userNick="理真见血见真理" Width="50" border="0" />
+					</a>
+									</li>
+				<li class="replayli nickName">
+					    					<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=%E7%90%86%E7%9C%9F%E8%A7%81%E8%A1%80%E8%A7%81%E7%9C%9F%E7%90%86" class="noWrap">理真见血见真理</a>
+    					    					<p class="mailTo">
+    						<a target="_blank" isLogin="true" toUser="理真见血见真理" href="javascript:void(0);"  class='sendMsg mR10' title="发私信"></a>
+    					</p>
+									</li>
+				<li class="replayMsg">
+					<p>一边是劳动力短缺，一边却是“公务员热”反映的不是劳动力短缺，而是不公平！只有对世界上最庞大的公务员群体减员降薪降待遇！才能让“公务员热”去缓解“劳动力短缺”！</p>
+					<p class="mB" postTitle="一边是劳动力短缺，一边却是“公务员热”反映的不是劳动力短缺，而是不公平！只有对世界上最庞大的公务员群体减员降薪降待遇！才能让“公务员热”去缓解“劳动力短缺”！" id="post_content_149629394"  content_id="149629394" content_path="http://bbs1.people.com.cn/posts/Z4/08/EB/29/D2/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149629394" class="upNum">(3)</span></a>
+						</span>
+						<span class="floorNum">
+							5楼
+													</span>
+						2015-07-03 17:03:13
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149629394">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149629394);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149629394",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149629394">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149629394" id="readMore_149629394">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149629394"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149629394" id="myReply_149629394">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+										<a href="http://bbs1.people.com.cn/userInfo.do?userNick=%E6%B8%94%E8%88%9F%E5%94%B1%E6%99%9A479938" target="_blank">
+						<img class="portrait" userNick="渔舟唱晚479938" Width="50" border="0" />
+					</a>
+									</li>
+				<li class="replayli nickName">
+					    					<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=%E6%B8%94%E8%88%9F%E5%94%B1%E6%99%9A479938" class="noWrap">渔舟唱晚479938</a>
+    					    					<p class="mailTo">
+    						<a target="_blank" isLogin="true" toUser="渔舟唱晚479938" href="javascript:void(0);"  class='sendMsg mR10' title="发私信"></a>
+    					</p>
+									</li>
+				<li class="replayMsg">
+					<p>机关不养闲人；河南省平顶山市石龙区；个个机关人满为患；一个安监局几十号人天天没事干；工资照发；都是纳税人的血汗；都是买官卖官惹的祸；请省纪委的同志来查一查；</p>
+					<p class="mB" postTitle="机关不养闲人；河南省平顶山市石龙区；个个机关人满为患；一个安监局几十号人天天没事干；工资照发；都是纳税人的血汗；都是买官卖官惹的祸；请省纪委的同志来查一查；" id="post_content_149740779"  content_id="149740779" content_path="http://bbs1.people.com.cn/posts/Z9/08/EC/DC/EB/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149740779" class="upNum">(3)</span></a>
+						</span>
+						<span class="floorNum">
+							6楼
+													</span>
+						2015-07-04 18:25:44
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149740779">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149740779);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149740779",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149740779">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149740779" id="readMore_149740779">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149740779"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149740779" id="myReply_149740779">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="115.60.102" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											115.60.102.*
+									</li>
+				<li class="replayMsg">
+					<p>股市正在动荡，监管层虽组合拳救市，效果不明显，这时养老金入市合适吗、</p>
+					<p class="mB" postTitle="股市正在动荡，监管层虽组合拳救市，效果不明显，这时养老金入市合适吗、" id="post_content_149747460"  content_id="149747460" content_path="http://bbs1.people.com.cn/posts/Z0/08/EC/F7/04/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149747460" class="upNum">(0)</span></a>
+						</span>
+						<span class="floorNum">
+							7楼
+													</span>
+						2015-07-05 10:01:31
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149747460">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149747460);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="171.82.161" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											171.82.161.*
+									</li>
+				<li class="replayMsg">
+					<p>养老金名义上并轨了，可待遇差问题仍没解决。在已退休的人员中，公务员养老金仍是企业职工的二至三倍。这与“平等·公正”的社会主义核心价值观太不符了！</p>
+					<p class="mB" postTitle="养老金名义上并轨了，可待遇差问题仍没解决。在已退休的人员中，公务员养老金仍是企业职工的二至三倍。这与“平等·公正”的社会主义核心价值观太不符了！" id="post_content_149749294"  content_id="149749294" content_path="http://bbs1.people.com.cn/posts/Z4/08/EC/FE/2E/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149749294" class="upNum">(10)</span></a>
+						</span>
+						<span class="floorNum">
+							8楼
+													</span>
+						2015-07-05 11:22:17
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149749294">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149749294);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149749294",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149749294">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149749294" id="readMore_149749294">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149749294"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149749294" id="myReply_149749294">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="27.12.172" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											27.12.172.*
+									</li>
+				<li class="replayMsg">
+					<p>靠人社部（公务员）牵头，专家教授（事业高端人才）顶层设计养老金改革--养老并轨，是不可能公平的，他们为什么至始至终强调改革后机关事业退休人员待遇不能降低，与此同</p>
+					<p class="mB" postTitle="靠人社部（公务员）牵头，专家教授（事业高端人才）顶层设计养老金改革--养老并轨，是不可能公平的，他们为什么至始至终强调改革后机关事业退休人员待遇不能降低，与此同" id="post_content_149792968"  content_id="149792968" content_path="http://bbs1.people.com.cn/posts/Z8/08/ED/A8/C8/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149792968" class="upNum">(8)</span></a>
+						</span>
+						<span class="floorNum">
+							9楼
+													</span>
+						2015-07-07 16:06:34
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149792968">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149792968);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149792968",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149792968">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149792968" id="readMore_149792968">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149792968"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149792968" id="myReply_149792968">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+										<a href="http://bbs1.people.com.cn/userInfo.do?userNick=shihuashiahuo" target="_blank">
+						<img class="portrait" userNick="shihuashiahuo" Width="50" border="0" />
+					</a>
+									</li>
+				<li class="replayli nickName">
+					    					<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=shihuashiahuo" class="noWrap">shihuashiahuo</a>
+    					    					<p class="mailTo">
+    						<a target="_blank" isLogin="true" toUser="shihuashiahuo" href="javascript:void(0);"  class='sendMsg mR10' title="发私信"></a>
+    					</p>
+									</li>
+				<li class="replayMsg">
+					<p>"深圳市血液中心辟谣"人均薪酬35万" 是虚假报道"的说法不妥： 1 原始数据是真实的，是深圳市卫计委你们自己提供的，媒体只不过做了个除法，有何错？ 2</p>
+					<p class="mB" postTitle=""深圳市血液中心辟谣"人均薪酬35万" 是虚假报道"的说法不妥： 1 原始数据是真实的，是深圳市卫计委你们自己提供的，媒体只不过做了个除法，有何错？ 2" id="post_content_149798511"  content_id="149798511" content_path="http://bbs1.people.com.cn/posts/Z1/08/ED/BE/6F/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149798511" class="upNum">(3)</span></a>
+						</span>
+						<span class="floorNum">
+							10楼
+													</span>
+						2015-07-07 21:05:06
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149798511">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149798511);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="101.69.0" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											101.69.0.*
+									</li>
+				<li class="replayMsg">
+					<p>一群以个人利益为中心，指手划脚，“唯恐天下不乱”，以扭曲的个人“三观”凌驾于国家和民族的利益于意识之上的人，不会懂得我中华崛起的意义。</p>
+					<p class="mB" postTitle="一群以个人利益为中心，指手划脚，“唯恐天下不乱”，以扭曲的个人“三观”凌驾于国家和民族的利益于意识之上的人，不会懂得我中华崛起的意义。" id="post_content_149841654"  content_id="149841654" content_path="http://bbs1.people.com.cn/posts/Z4/08/EE/66/F6/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149841654" class="upNum">(1)</span></a>
+						</span>
+						<span class="floorNum">
+							11楼
+													</span>
+						2015-07-09 15:13:51
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149841654">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149841654);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+										<a href="http://bbs1.people.com.cn/userInfo.do?userNick=chales1" target="_blank">
+						<img class="portrait" userNick="chales1" Width="50" border="0" />
+					</a>
+									</li>
+				<li class="replayli nickName">
+					    					<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=chales1" class="noWrap">chales1</a>
+    					    					<p class="mailTo">
+    						<a target="_blank" isLogin="true" toUser="chales1" href="javascript:void(0);"  class='sendMsg mR10' title="发私信"></a>
+    					</p>
+									</li>
+				<li class="replayMsg">
+					<p>当股市公安部查处垮行业操纵股市恶意做空，那谁来查政府为了土地豺政垮行业操纵房地产市场恶意做多房地产泡沫？</p>
+					<p class="mB" postTitle="当股市公安部查处垮行业操纵股市恶意做空，那谁来查政府为了土地豺政垮行业操纵房地产市场恶意做多房地产泡沫？" id="post_content_149862182"  content_id="149862182" content_path="http://bbs1.people.com.cn/posts/Z2/08/EE/B7/26/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149862182" class="upNum">(2)</span></a>
+						</span>
+						<span class="floorNum">
+							12楼
+													</span>
+						2015-07-10 08:17:59
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149862182">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149862182);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="60.220.213" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											60.220.213.*
+									</li>
+				<li class="replayMsg">
+					<p>你好！</p>
+					<p class="mB" postTitle="你好！" id="post_content_149875974"  content_id="149875974" content_path="http://bbs1.people.com.cn/posts/Z4/08/EE/ED/06/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149875974" class="upNum">(0)</span></a>
+						</span>
+						<span class="floorNum">
+							13楼
+													</span>
+						2015-07-10 17:21:12
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149875974">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149875974);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+										<a href="http://bbs1.people.com.cn/userInfo.do?userNick=%E7%BE%A4%E4%BC%97%E8%B7%AF%E7%BA%BF%E4%B8%87%E5%B2%81" target="_blank">
+						<img class="portrait" userNick="群众路线万岁" Width="50" border="0" />
+					</a>
+									</li>
+				<li class="replayli nickName">
+					    					<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=%E7%BE%A4%E4%BC%97%E8%B7%AF%E7%BA%BF%E4%B8%87%E5%B2%81" class="noWrap">群众路线万岁</a>
+    					    					<p class="mailTo">
+    						<a target="_blank" isLogin="true" toUser="群众路线万岁" href="javascript:void(0);"  class='sendMsg mR10' title="发私信"></a>
+    					</p>
+									</li>
+				<li class="replayMsg">
+					<p>教育经费管理体制改革是不是该是日程了</p>
+					<p class="mB" postTitle="教育经费管理体制改革是不是该是日程了" id="post_content_149876510"  content_id="149876510" content_path="http://bbs1.people.com.cn/posts/Z0/08/EE/EF/1E/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149876510" class="upNum">(1)</span></a>
+						</span>
+						<span class="floorNum">
+							14楼
+													</span>
+						2015-07-10 17:48:46
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149876510">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149876510);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149876510",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149876510">
+    			</ul>
+    			    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+										<a href="http://bbs1.people.com.cn/userInfo.do?userNick=%E6%8C%AF%E5%85%B4%E4%B8%AD%E5%8D%8E%E6%88%91%E5%87%BA%E5%8A%9B" target="_blank">
+						<img class="portrait" userNick="振兴中华我出力" Width="50" border="0" />
+					</a>
+									</li>
+				<li class="replayli nickName">
+					    					<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=%E6%8C%AF%E5%85%B4%E4%B8%AD%E5%8D%8E%E6%88%91%E5%87%BA%E5%8A%9B" class="noWrap">振兴中华我出力</a>
+    					    					<p class="mailTo">
+    						<a target="_blank" isLogin="true" toUser="振兴中华我出力" href="javascript:void(0);"  class='sendMsg mR10' title="发私信"></a>
+    					</p>
+									</li>
+				<li class="replayMsg">
+					<p>当今的社会风气之败坏，都是一些基层流氓官员带坏的，他们没有为人民服务的理想，只想着升官发财，应该改改这个现象了吧，不然怎么实现中国梦</p>
+					<p class="mB" postTitle="当今的社会风气之败坏，都是一些基层流氓官员带坏的，他们没有为人民服务的理想，只想着升官发财，应该改改这个现象了吧，不然怎么实现中国梦" id="post_content_149905023"  content_id="149905023" content_path="http://bbs1.people.com.cn/posts/Z3/08/EF/5E/7F/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149905023" class="upNum">(5)</span></a>
+						</span>
+						<span class="floorNum">
+							15楼
+													</span>
+						2015-07-12 20:17:27
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149905023">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149905023);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149905023",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149905023">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149905023" id="readMore_149905023">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149905023"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149905023" id="myReply_149905023">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="118.186.220" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											118.186.220.*
+									</li>
+				<li class="replayMsg">
+					<p>中国的金融到底有多腐败？农民"被贷款“报警居然不立案！</p>
+					<p class="mB" postTitle="中国的金融到底有多腐败？农民"被贷款“报警居然不立案！" id="post_content_149912305"  content_id="149912305" content_path="http://bbs1.people.com.cn/posts/Z5/08/EF/7A/F1/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149912305" class="upNum">(2)</span></a>
+						</span>
+						<span class="floorNum">
+							16楼
+													</span>
+						2015-07-13 09:02:25
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149912305">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149912305);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149912305",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149912305">
+    			</ul>
+    			    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="118.186.220" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											118.186.220.*
+									</li>
+				<li class="replayMsg">
+					<p>中国的金融到底有多腐败？农民"被贷款“报警居然不立案！毛泽东时代！坑农害农的事件有吗？现在的坑农害农的事谁来管？</p>
+					<p class="mB" postTitle="中国的金融到底有多腐败？农民"被贷款“报警居然不立案！毛泽东时代！坑农害农的事件有吗？现在的坑农害农的事谁来管？" id="post_content_149912327"  content_id="149912327" content_path="http://bbs1.people.com.cn/posts/Z7/08/EF/7B/07/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149912327" class="upNum">(2)</span></a>
+						</span>
+						<span class="floorNum">
+							17楼
+													</span>
+						2015-07-13 09:03:41
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149912327">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149912327);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="118.186.220" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											118.186.220.*
+									</li>
+				<li class="replayMsg">
+					<p>毛时代坑农害弄的事有吗？中国的金融到底有多腐败？农民"被贷款“报警居然不立案！</p>
+					<p class="mB" postTitle="毛时代坑农害弄的事有吗？中国的金融到底有多腐败？农民"被贷款“报警居然不立案！" id="post_content_149912361"  content_id="149912361" content_path="http://bbs1.people.com.cn/posts/Z1/08/EF/7B/29/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149912361" class="upNum">(1)</span></a>
+						</span>
+						<span class="floorNum">
+							18楼
+													</span>
+						2015-07-13 09:05:04
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149912361">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149912361);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149912361",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149912361">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149912361" id="readMore_149912361">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149912361"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149912361" id="myReply_149912361">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+											<img src="http://sns.people.com.cn/images/defaultAvatar.gif" userNick="118.186.220" Width="50" border="0" />
+									</li>
+				<li class="replayli nickName">
+											118.186.220.*
+									</li>
+				<li class="replayMsg">
+					<p>银监会有啥用处？</p>
+					<p class="mB" postTitle="银监会有啥用处？" id="post_content_149912378"  content_id="149912378" content_path="http://bbs1.people.com.cn/posts/Z8/08/EF/7B/3A/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149912378" class="upNum">(0)</span></a>
+						</span>
+						<span class="floorNum">
+							19楼
+													</span>
+						2015-07-13 09:06:01
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149912378">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149912378);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149912378",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149912378">
+    			</ul>
+    			    			    		</li>
+    								<li class="replayItem clearfix ">
+			<ul class="author">
+				<li>
+										<a href="http://bbs1.people.com.cn/userInfo.do?userNick=%E5%9F%8E%E5%B8%82%E6%97%A0%E4%BA%A7%E6%B0%91" target="_blank">
+						<img class="portrait" userNick="城市无产民" Width="50" border="0" />
+					</a>
+									</li>
+				<li class="replayli nickName">
+					    					<a target="_blank" href="http://bbs1.people.com.cn/userInfo.do?userNick=%E5%9F%8E%E5%B8%82%E6%97%A0%E4%BA%A7%E6%B0%91" class="noWrap">城市无产民</a>
+    					    					<p class="mailTo">
+    						<a target="_blank" isLogin="true" toUser="城市无产民" href="javascript:void(0);"  class='sendMsg mR10' title="发私信"></a>
+    					</p>
+									</li>
+				<li class="replayMsg">
+					<p>[哭]社保....我交不起啊</p>
+					<p class="mB" postTitle="[哭]社保....我交不起啊" id="post_content_149912477"  content_id="149912477" content_path="http://bbs1.people.com.cn/posts/Z7/08/EF/7B/9D/content_html.txt"	>
+					</p>
+					<p class="publishTime">
+						<span class="up">
+								<a class='upIcon' href="javascript:;">顶<span postId="149912477" class="upNum">(6)</span></a>
+						</span>
+						<span class="floorNum">
+							20楼
+													</span>
+						2015-07-13 09:10:20
+					</p>
+				</li>
+				<li class="replayli"><span class="button replyButton" _bId="71" _parentId="149912477">回复</span>
+					<p class="jubaoWrap" onclick="openComplaintDia(this, 149912477);">
+						<a href="javascript:void(0);" class="jubao">举报</a>
+					</p>
+				</li>
+			</ul>
+    							<script>
+					loadPostRelay("149912477",1,0);
+            	</script>
+    			<ul class="subReplay" id="subReplay_149912477">
+    			</ul>
+    			    			<div class="clearfix">
+    				<div class="float_l clearfix ML200" postId="149912477" id="readMore_149912477">
+    					<div class="readMore float_l">
+    						<strong>点击查看(<span class="hideNum" id="hideCountNum_149912477"></span>)</strong>
+    					</div>
+    				</div>
+    				<div class="myReply" postId="149912477" id="myReply_149912477">
+    					<strong>我也说说</strong>
+    				</div>
+    			</div>
+				    			    		</li>
+    					</ul>
+</div>			<!-- we need propery PAGE_FLIP[108][2144] -->
+<div class="pageBar" postId="149629185" bid="71" boardId="71" pageCount="108" noAjax="true" >
+		<ul param="pageNo" flipUrl="/postDetail.do?boardId=1&treeView=2&view=1&id=149629185" class="pageBarUl" id="pageBarUl" view="1" treeView="false" boardId="71" flipType="post">
+		</ul>
+		<script type='text/javascript'>
+    		changePage(1,108,$("#pageBarUl"));
+        </script>
+</div>
+			<ul class="fReplay clearfix author">
+	<li>
+		<a href="/userInfo.do?userNick=Guest" target="_blank">			
+			<img id="formEditorPostListImg" width="50" height="50" class="portrait" userNick="Guest" imgWidth="50" border="0" />		
+		</a>
+	</li>
+	<li class="replayli nickName forumEditorUserNick">
+		<a class="loginBtn" href="javascript:void(0);">登录</a>
+		<a class="userReg" target="_blank" href="javascript:window.location.href=rmw.sns.regUserLink('bbs',true);">注册</a>
+	</li>
+	<li class="lastLi">
+		<form >
+		<input name='parentId' id="_parentId" type='hidden'  value='149629185'/>
+		<input name='bid' type='hidden'  value='71'/>
+		<input name='titleText' type='hidden'  value=''/>
+		<input type="hidden" name="pageNo" value="1" />
+		<input type="hidden" name="view" value="false" />
+		<textarea class="subTextarea" name="message">添加内容</textarea>
+		<div>
+			<span id="advancedReply" class="button float_l">图文编辑模式</span>
+			<p class="fakeLogin">
+				<span class="blueBtn float_R" onclick="submitFormPost(this);">发表</span><span class="smile"></span>
+			</p>
+		</div>
+		<div class="faces">
+			<table class="faceTable">
+			</table>
+			<ul class="facePage clearfix">
+				<li class="focus">1</li>
+				<li>2</li>
+			</ul>
+		</div>
+		</form>
+	</li>
+</ul>			</div>
+	<div id="footer">
+		<ul id="footerNavUl">
+		<li><a target="_blank" href="http://bbs1.people.com.cn">强国社区</a>
+		</li>
+		<li><a target="_blank" href="http://bbs1.people.com.cn/post/1/0/1/135544954.html">意见反馈</a>
+		</li>
+		<li><a target="_blank" href="/gltl.do">管理条例</a>
+		</li>
+		<li><a target="_blank" href="http://kf.people.com.cn/GB/193845/index.html">如何删帖</a>
+        </li>
+		<li><a target="_blank" href="http://bbs1.people.com.cn/help.htm">帮助</a>
+		</li>
+	</ul>
+	©&nbsp;1997-2015&nbsp;by&nbsp;<a target="_blank" href="http://www.people.com.cn">www.people.com.cn</a>&nbsp;All&nbsp;Rights&nbsp;Reserved.
+</div>
+<script src="http://www.people.com.cn/css/2010tianrun/webdig_test.js" type="text/javascript"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45054704-1', 'auto');
+  ga('send', 'pageview');
+
+</script>	<div id='floatTips'><p class="tipTitle">提示</p><p class="tipsCont"></p><a href="javascript:;" class="closeTip"></a></div>
+
+<!-- 顶 踩 成功的弹出框-->
+<div  class="pop_box clearfix" id="dialog" title="" style="display:none;">
+	  		   <h1 id="textTitle"></h1>
+	   		   <h2 id="textShare">你的态度靠谱吗？发到你的主页让大家评一评！</h2>
+			   <div class="shear clearfix" style="display:none;">
+			   	<strong>分享到：</strong>
+				<div class="iocn" style="display:block;">
+					<div class="bshare-custom icon-medium-plus">
+						<div class="bsPromo bsPromo1"></div>
+						<a title="分享到人民微博" class="bshare-peoplemb"></a>
+						<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+						<a title="分享到人人网" class="bshare-renren"></a>
+						<a title="分享到QQ空间" class="bshare-qzone"></a>
+						<a title="分享到豆瓣" class="bshare-douban"></a>
+						<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+						<span class="BSHARE_COUNT bshare-share-count">0</span>
+	  					<p style="display: none;" id="BSHARE_TEXT" class="BSHARE_TEXT" ></p>
+					</div>
+				</div>
+			</div>
+   			<div class="pop_sucees" style="display:none;padding-top: 20px;">恭喜您成为强国社区用户！
+   			 	<a href="javascript:void(0)" id="userPassword" target="_blank"><img src="http://bbs1.people.com.cn/2013lianghui/images/edit_password.png" border="0" alt="" /></a>
+   			 	<a href="http://sns.people.com.cn/usr/home.do" target="_blank"><img src="http://bbs1.people.com.cn/2013lianghui/images/login_index.png" border="0" alt="" /></a>
+   			</div><br />
+  			<h3 class="pop_sucees" style="display:none;">用户名：<span id="myUserName"></span>&nbsp;&nbsp;&nbsp;昵称：<span id="myUserNick"></span></h3>
+</div>
+<!-- 顶 踩 成功的弹出框-->
+
+<div class="mask">
+<div class="maskBg"></div>
+<div class="maskWrap">
+	<div class="followTips">请登录后继续操作....</div>
+    <div class="maskCont">
+    	<div class="loginCont">
+        	<div class="closeMask"></div>
+            <h3>强国社区-人民网</h3>
+            <img src="/images/bbs_2013/login.jpg" />            
+            <form method="post" id="loginForm">
+		      <input type="hidden" value="1" name="rememberMe">
+		      <input type="hidden" value="" id="retUrl" name="retUrl">
+		      	<table class="loginTable">
+	           	 	<tr><td>英文或数字登录名</td><td colspan="2">密码</td></tr>
+	            	<tr><td><input type="text" id="userName" name="userName" class="input"/></td><td><input type="password" id="passWord" name="password"  class="input"/></td><td><span id="login_btn" class="button">登录</span></td></tr>
+	            	<tr><td><input type="checkbox" class="keepAlive"/>在本电脑一直保持登录状态</td><td colspan="2"><a class="losePassword" href="http://sso.people.com.cn/u/findpwd/phone">忘记密码</a></td></tr>
+	            	<tr>
+						<td colspan="3">
+							<div class="otherAccount">
+								<a href="javascript:window.location.href=rmw.sns.regUserLink('bbs',true);">注册新账号</a>
+								或使用合作伙伴账号
+									<span class="otherLoginWrap">
+										<a href="http://open.denglu.cc/transfer/qzone?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon tengxun"></a>
+										<a href="http://open.denglu.cc/transfer/sina?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon weibo"></a>
+										<a href="http://open.denglu.cc/transfer/windowslive?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon MSN"></a>
+										<a href="http://open.denglu.cc/transfer/renren?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" class="loginIcon renren"></a>
+										<a href="http://open.denglu.cc/transfer/baidu?appid=11646denmMU7U45KpQ1WYz2J9lfOnA" ><img style="vertical-align:inherit;" src="http://bbs1.people.com.cn/images/bbs_2012/baidu.gif"></a>
+									</span>
+							</div>
+						</td>
+					</tr>
+                </table>
+		    </form>
+        </div>
+    </div>
+</div>
+</div>
+<script language="javascript" src="http://bbs1.people.com.cn/js_library/writePeopleLog.js"></script>
+	<div id="readCountFrame" style="display:none">
+		<iframe frameborder="0" scrolling="no" src="http://bbs1.people.com.cn/postReadCount.do?id=149629185&threadId=149629185&fixed=false&userId=527471"></iframe>
+	</div>
+	<input type="hidden" id="page_flip_pageNo" value="1" />
+</div>
+<script>
+$(function(){
+	new QRCode("erweima_1",{
+	    text: "http://bbs1.people.com.cn/postDetail.do?id=149629185&qrcode1",
+	    width: 110,
+	    height: 110,
+	    correctLevel : QRCode.CorrectLevel.L
+	});
+    $("#erweima_1").find("img").css("margin","auto");
+    $("#erweima_1").find("table").css("margin","auto");
+    $("#erweima_1").find("table").css("height","110px");
+    $("#erweima_1").find("table").css("width","110px");
+    
+	new QRCode("erweima_2",{
+        text: "http://bbs1.people.com.cn/postDetail.do?id=149629185&qrcode2",
+        width: 110,
+        height: 110,
+        correctLevel : QRCode.CorrectLevel.L
+    });
+    $("#erweima_2").find("img").css("margin","auto");
+    $("#erweima_2").find("table").css("margin","auto");
+    $("#erweima_2").find("table").css("height","110px");
+    $("#erweima_2").find("table").css("width","110px");
+    On = 0;
+    try{
+        var o = $(".navBar").offset();
+        var o1 = $(".article").offset();
+        var otop = o.top;
+        var oleft = o.left;
+        var otop1 = o1.top;
+        var oleft1 = o1.left;
+        var ob = $(".erweima");
+        var ob1 = $(".erweima1");
+        ob.css({left:-170,top:-75});
+        ob1.css({right:-170,top:-75});
+        var s = parseInt(2*Math.random());
+        var t = (s+1)%2;
+            $(".erweima3").eq(s).animate({
+             opacity:1
+             }, 1000);
+            $(".erweima3").eq(t).hide();
+        window.On = s;
+        $(".close_erweima").bind("click",function(){
+            $(".erweima3").hide();
+        });
+    }catch(e){
+    }
+    //滚动控制二维码显示位置
+    try{
+        var Oer = $(".erweima3").eq(On);
+        var Oe_top = Oer.offset().top;
+        var Oe_left = Oer.offset().left;
+        var OerId = $(".erweima3").eq(On).attr("id");
+        if(OerId == "erweima3"){
+            $(window).scroll(function(){
+               Oer.css({left:Oe_left,top:"716px",position:"fixed"})
+            })
+        }else{
+          $(window).scroll(function(){
+           Oer.css({left:Oe_left,top:Oe_top,position:"fixed"})
+          })
+        }
+        
+    }catch(error){}
+    
+    //窗口大小控制二维码显示与隐藏
+    try{
+        var Swidth = $(document).width();
+        
+        if(Swidth < 980){
+            Oer.css({display:"none"})
+        }
+   
+        $(window).resize(function(){
+             var Swidth_sub = document.body.clientWidth;
+             
+             if(Swidth_sub <= 980){
+                Oer.css({display:"none"})
+             }else{
+                Oer.css({display:"block"})
+             }
+        });
+    }catch(error){}
+});
+</script>
+<!-- 两会导航 -->
+</body>
+</html>
