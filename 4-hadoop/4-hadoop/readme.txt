@@ -1,0 +1,1 @@
+请在课前按照InstallationOfHaddop2.2.x.pdf内所述，先行安装ubuntu与hadoop。
