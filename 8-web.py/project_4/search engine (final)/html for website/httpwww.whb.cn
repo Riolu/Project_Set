@@ -1,0 +1,2785 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>汇思想 汇生活- 文汇网</title>
+<link rel="stylesheet" type="text/css" href="/r/cms/www/whb/newIndex/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="/r/cms/www/whb/newIndex/css/style.css"/>
+
+<!-- 活动日历 -->
+<link rel="stylesheet" type="text/css" href="/r/cms/www/whb/css/common.css">
+<link rel="stylesheet" type="text/css" href="/r/cms/www/whb/css/wnl-documentation.css">
+<link rel="stylesheet" type="text/css" href="/r/cms/www/whb/css/wnl-jalendar.css">
+<!-- 活动日历滚动 -->
+<link rel="stylesheet" type="text/css" href="/r/cms/www/whb/css/flash.css">
+
+<script src="/r/cms/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+
+<script src="/r/cms/www/whb/js/Koala.min.1.3.3.js" type="text/javascript"></script>
+<script src="/r/cms/www/whb/js/Qfast1.0.1.js" type="text/javascript"></script>
+<script src="/r/cms/www/whb/js/jquery.foucs.js" type="text/javascript"></script>
+<script src="/r/cms/www/whb/js/index.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/r/cms/www/whb/js/nav.js"></script>
+<script type="text/javascript" src="/r/cms/www/whb/js/indexPage.js"></script>
+<script type="text/javascript">
+var baseUrl = '';
+jQuery(function($) {
+	$(document).ready( function() {
+		$('.navbar-wrapper').stickUp();
+		
+		Cms.siteFlow("", location.href, document.referrer, "首页", null, null);
+	});
+});
+</script>
+</head><body>
+﻿<div class="w100 orangebg">
+	<div class="topnav">
+	<div class="right w35 txtright" id="loginCsiDiv"></div>
+	汇思想 汇生活  源于事实 来自眼界
+	</div>
+</div>
+<div class="topad">
+<!-- 广告位 -->
+<script type="text/javascript" src="/ad.jspx?id=13"></script>
+</div>
+<div class="navbar-wrapper" style="position: relative; top: 0px;  z-index:100; width:100%;border-bottom: solid 1px #e7e7e7; background:#fff;">
+	<div class="head">
+		<h3 class="right" style=" margin-top:30px">
+			<ul>
+				<li>
+					<a href="http://weibo.com/wenhuiwang" target="_blank">
+					<img src="/r/cms/www/whb/images/newIndex/weibologo.png" width="26" height="26" alt="" style="vertical-align:middle"/>&nbsp;微博加关注
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" onclick="showwx();">
+						<img src="/r/cms/www/whb/images/newIndex/weixinlogo.png" width="26" height="26" alt="" style="vertical-align:middle"/>&nbsp;微信扫一扫
+					</a>
+					<div class="wx-lock  hegt450" id="weixin" autoScroll="true">
+					<img src="/r/cms/www/whb/images/wx.png" />
+					<p class="wx-content" style="overflow-x: hidden;">
+						<a class="clor45 wx-fone"  href="javascript:void(0);" onclick="closeWx();">关闭 </a>
+	                        <span class="wx-con ">
+	                        	 <img src="/u/cms/www/201406/03102456oi5g.jpg" alt="文汇报官方微信" width="91px;" height="91px;"/>
+	                        	 <b>文汇报官方微信</b> 
+	                        </span>
+	                        <span class="wx-con ">
+	                        	 <img src="/u/cms/www/201401/02123907rqy3.jpg" alt="汇拍微信" width="91px;" height="91px;"/>
+	                        	 <b>汇拍微信</b> 
+	                        </span>
+	                        <span class="wx-con ">
+	                        	 <img src="/u/cms/www/201401/02163136yy7y.jpg" alt="汇玩微信" width="91px;" height="91px;"/>
+	                        	 <b>汇玩微信</b> 
+	                        </span>
+	                        <span class="wx-con ">
+	                        	 <img src="/u/cms/www/201312/25190740t12m.jpg" alt="汇吃微信" width="91px;" height="91px;"/>
+	                        	 <b>汇吃微信</b> 
+	                        </span>
+	                        <span class="wx-con ">
+	                        	 <img src="/u/cms/www/201312/2519083682qy.jpg" alt="汇演微信" width="91px;" height="91px;"/>
+	                        	 <b>汇演微信</b> 
+	                        </span>
+	                        <span class="wx-con ">
+	                        	 <img src="/u/cms/www/201312/26101832f3yp.jpg" alt="文汇讲堂" width="91px;" height="91px;"/>
+	                        	 <b>文汇讲堂</b> 
+	                        </span>
+	                        <span class="wx-con ">
+	                        	 <img src="/u/cms/www/201312/29134556uk13.jpg" alt="上海跑步者" width="91px;" height="91px;"/>
+	                        	 <b>上海跑步者</b> 
+	                        </span>
+					</p>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:void(0)" onclick="showapp();" style="display:inline-block; vertical-align:middle;">
+					<img src="/r/cms/www/whb/images/newIndex/whlogo.png" width="26" height="26" alt="" style="vertical-align:middle"/> 下载APP</a>
+					<div class="wx-lock" id="app" style="height:180px;"><img src="/r/cms/www/whb/images/app.png" />
+					<p class="wx-content" ><a class="clor45 wx-fone"  href="javascript:void(0);" onclick="closeApp();">关闭</a>
+		                        <span class="wx-con ">
+		                             <a href="https://itunes.apple.com/cn/app/wen-hui-bao-ipad-ban/id688636310?mt=8" onclick="$.get('/friendlink_view.jspx?id=5')" target="_blank">
+		                        	    <img src="/u/cms/www/201407/23172157avq9.png" alt="iPad版" width="91px;" height="91px;" />
+		                        	 </a>
+		                        	 <b>iPad版</b> 
+		                          
+		                        </span>
+		                        <span class="wx-con ">
+		                             <a href="https://itunes.apple.com/cn/app/wen-hui-bao-iphone-ban/id688641199?mt=8" onclick="$.get('/friendlink_view.jspx?id=6')" target="_blank">
+		                        	    <img src="/u/cms/www/201412/13175528hbjx.png" alt="iPhone版" width="91px;" height="91px;" />
+		                        	 </a>
+		                        	 <b>iPhone版</b> 
+		                          
+		                        </span>
+						
+					</p>
+					</div>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</h3>
+		<a href="http://whb.cn"><img src="/r/cms/www/whb/images/logo.png" /></a>
+	</div>
+
+	<div class="pagenav" >
+		<div class="search right">
+			<form id="searchForm" action="/search.jspx" target="_blank">
+			<input type="text" name="q" style="color:#ACA8A8" class="searchline" onclick="searchText('click');" onBlur="searchText('blur');" value="快速查询最新资讯"> 
+			<a class="btn1" href="javascript:void(0);">
+				<i class="fa fa-search white fa-lg" onclick="javascript:search();"></i>
+			</a>
+			</form>
+		</div>
+		<script>
+		function searchText(type) {
+			if(type == 'blur') {
+				if($(".searchline").val() == null || $(".searchline").val() == "")
+					$(".searchline").val("快速查询最新资讯");
+			}
+			if(type == 'click')
+				$(".searchline").val("");
+		}
+		function search() {
+			var keyword = $(".searchline").val();
+			if(keyword == null || keyword == "" || keyword == "快速查询最新资讯") {
+				alert("请输入关键字！");
+				return ;
+			}
+			$("#searchForm").submit();
+		}
+		</script>
+		
+		<ul id="navul" class="cl" style="width:auto!important;height:40px;float:left;position:relative;z-index:999 ;">
+			<li style="float:left;width:40px;height:40px;position:relative;text-align:center;line-height:40px;padding:0 10px;">
+				<a href="http://whb.cn">首页</a>
+			</li>
+			<!-- 汇思想/汇生活/微电影/热点专题 -->
+			<!-- 586 -->
+			<li style="float:left;width:70px;height:40px;position:relative;text-align:center;line-height:40px;padding:0 10px;">
+				<a href="/zhuzhan/sixiang/">汇思想</a> <a href="javascript:void(0);"></a> 
+				<ul parentId="62" style="display:none;position:absolute;z-index:999;background:#e6e6e6;border:#c6c6c6 1px solid;border-bottom:none;left:-1px;margin-left:0px;width: 90px;">
+						<!-- 汇思想 -->
+						<li ><a href="/zhuzhan/guandian/" target="_blank">
+						观点
+						</a></li>
+						<!-- 汇思想 -->
+						<li ><a href="/zhuzhan/kandian/" target="_blank">
+						看点
+						</a></li>
+						<!-- 汇思想 -->
+						<li ><a href="/zhuzhan/jiaodian/" target="_blank">
+						焦点
+						</a></li>
+						<!-- 汇思想 -->
+				</ul>
+			</li>
+			<!-- 汇思想/汇生活/微电影/热点专题 -->
+			<!-- 586 -->
+			<li style="float:left;width:70px;height:40px;position:relative;text-align:center;line-height:40px;padding:0 10px;">
+				<a href="/zhuzhan/shenghuo/">汇生活</a> <a href="javascript:void(0);"></a> 
+				<ul parentId="67" style="display:none;position:absolute;z-index:999;background:#e6e6e6;border:#c6c6c6 1px solid;border-bottom:none;left:-1px;margin-left:0px;width: 90px;">
+						<!-- 汇生活 -->
+						<li ><a href="/zhuzhan/xue/" target="_blank" >
+						教育
+						</a></li>
+						<!-- 汇生活 -->
+						<li ><a href="/zhuzhan/jiankang/" target="_blank" >
+						健康
+						</a></li>
+						<!-- 汇生活 -->
+						<li ><a href="/zhuzhan/chi/" target="_blank" >
+						美食
+						</a></li>
+						<!-- 汇生活 -->
+						<li ><a href="/zhuzhan/wan/" target="_blank" >
+						游玩
+						</a></li>
+						<!-- 汇生活 -->
+						<li ><a href="/zhuzhan/cai/" target="_blank" >
+						理财
+						</a></li>
+						<!-- 汇生活 -->
+						<!-- 汇生活 -->
+						<!-- 汇生活 -->
+						<li ><a href="/zhuzhan/huanqiu/" target="_blank" >
+						环球
+						</a></li>
+				</ul>
+			</li>
+			<!-- 汇思想/汇生活/微电影/热点专题 -->
+			<!-- 586 -->
+			<li style="float:left;width:70px;height:40px;position:relative;text-align:center;line-height:40px;padding:0 10px;">
+				<a href="/zhuzhan/huishiting/">汇视听</a> <a href="javascript:void(0);"></a> 
+				<ul parentId="586" style="display:none;position:absolute;z-index:999;background:#e6e6e6;border:#c6c6c6 1px solid;border-bottom:none;left:-1px;margin-left:0px;width: 90px;">
+						<li ><a href="/hsttupian/index.htm" target="_blank"  >
+						图片
+						</a></li>
+						<li ><a href="/zhuzhan/shipin/" target="_blank"  >
+						视频
+						</a></li>
+						<li ><a href="/zhuzhan/yinping/" target="_blank"  >
+						音频
+						</a></li>
+				</ul>
+			</li>
+			<!-- 汇思想/汇生活/微电影/热点专题 -->
+			<!-- 586 -->
+			<li style="float:left;width:70px;height:40px;position:relative;text-align:center;line-height:40px;padding:0 10px;">
+				<a href="/zhuzhan/weidianying/">微电影</a> <a href="javascript:void(0);"></a> 
+				<ul parentId="77" style="display:none;position:absolute;z-index:999;background:#e6e6e6;border:#c6c6c6 1px solid;border-bottom:none;left:-1px;margin-left:0px;width: 90px;">
+						<li ><a href="/zhuzhan/zuopin/" target="_blank" style="width:170px;" >
+						最美中国大学生微电影
+						</a></li>
+						<li ><a href="/zhuzhan/texunyin/" target="_blank" style="width:170px;" >
+						特训营高校行
+						</a></li>
+						<li ><a href="/zhuzhan/wangjie/" target="_blank" style="width:170px;" >
+						往届最美中国大学生微电影
+						</a></li>
+						<li ><a href="/zhuzhan/gaoxiaoxing/" target="_blank" style="width:170px;" >
+						微电影作品
+						</a></li>
+				</ul>
+			</li>
+			<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+			<!-- 586 -->
+			<li style="float:left;width:70px;height:40px;position:relative;text-align:center;line-height:40px;padding:0 10px;">
+				<a href="/zhuzhan/zhuanti/">热点专题</a> <a href="javascript:void(0);"></a> 
+			</li>
+			<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<!-- 汇思想/汇生活/微电影/热点专题 -->
+						<li style="float:left;width:70px;height:40px;position:relative;text-align:center;line-height:40px;padding:0 10px;">
+				<a href="javascript:void(0);">文汇电子报</a>
+				<ul style="display:none;position:absolute;z-index:999;background:#e6e6e6;border:#c6c6c6 1px solid;border-bottom:none;left:-1px;margin-left:0px;width: 90px;">
+					<LI>
+					<A onclick="javascript:displayUL();" href="http://wenhui.sumg.com.cn/" target=_blank>电子版</A>
+				</LI>
+				<LI>
+					<A onclick="javascript:displayUL();" href="http://wenhuipdf.sumg.com.cn/" target=_blank>PDF版</A>
+				</LI>
+				</ul>
+			</li>
+<li style="float:left;width:70px;height:40px;position:relative;text-align:center;line-height:40px;padding:0 10px;">
+				<a href="http://whds.whb.cn/" target=_blank>文汇读书</a></li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript"> 
+function closeApp(){
+	$("#app").css("display", "none");
+} 
+function showapp(){	
+	var display = $("#app").css("display");
+	if(display == "block")
+		$("#app").css("display", "none");
+	else
+		$("#app").css("display", "block");
+	var wxDisplay = $("#weixin").css("display");
+	if(wxDisplay == "block")
+		$("#weixin").css("display", "none");
+}
+	
+function closeWx(){
+	$("#weixin").css("display", "none");
+} 
+function showwx(){
+	var weixinDisplay = $("#weixin").css("display");
+	if(weixinDisplay == "block")
+		$("#weixin").css("display", "none");
+	else
+		$("#weixin").css("display", "block");
+	var appDisplay = $("#app").css("display");
+	if(appDisplay == "block")
+		$("#app").css("display", "none");
+}
+$(function(){
+	Cms.loginCsi("","loginCsiDiv",null);
+});
+</script><div class="page-container">
+<div class="pagebox">
+<div class="pageleftbox left">
+	<!-- 首页头条 -->
+	<div class="adbox">
+<div id="preview">
+	<div id="spec-n1">
+		<!-- 首页4条头条大图，只取第一条，后3条 -->
+		<div class="o-img" >
+			<a id="contentUrl" href="" target="_blank" style="position:relative;display:block;width:545px;height:355px;">
+				<img id="contentTypeImg" width="545" height="355" alt="" src=""/>
+			</a>
+			<p id="topTitle" style="text-align:left;position:absolute; bottom:0px; left:0px; padding:0 8px; background:#000;opacity:0.6; height:50px; clear:both; color:#fff; width:545px; line-height:40px; font-size:24px; font-family:微软雅黑;z-index:999"></p>
+		</div>
+	</div>
+	<div id="spec-n5">
+		<!-- <div id="spec-top" class="control disabled"></div>
+		<div id="spec-bottom" class="control"></div> -->
+		<!-- 4条头条 -->
+		<div id="spec-list">
+			<ul>
+						<!-- 友情链接 -->
+			
+				<li class="curr" index="1">
+					<img index='1' id="img41927" onclick="javascript:changeImg('img41927');" width="110" height="75" alt="【专题】聚焦党的十八届五中全会 " title="【专题】聚焦党的十八届五中全会 " src="/u/cms/www/201510/311213212f2s.jpg"/>
+				</li>
+				<script>
+				var topCon = {
+					typeImg : "/u/cms/www/201510/31121247dtor.jpg",
+					title : "【专题】聚焦党的十八届五中全会 ",
+					url : "http://whb.cn/topic/106.jspx",
+					type : "content"
+				}
+				topArr.push(topCon);
+				</script>
+				<li  index="2">
+					<img index='2' id="img42683" onclick="javascript:changeImg('img42683');" width="110" height="75" alt="【特别报道】“双十一” 七年之痒" title="【特别报道】“双十一” 七年之痒" src="/u/cms/www/201511/09162050qf5g.jpg"/>
+				</li>
+				<script>
+				var topCon = {
+					typeImg : "/u/cms/www/201511/09162043h9u8.jpg",
+					title : "【特别报道】“双十一” 七年之痒",
+					url : "http://www.whb.cn/topic/110.jspx",
+					type : "content"
+				}
+				topArr.push(topCon);
+				</script>
+				<li  index="3">
+					<img index='3' id="img42776" onclick="javascript:changeImg('img42776');" width="110" height="75" alt="2029年我国人口达14.5亿峰值" title="2029年我国人口达14.5亿峰值" src="/u/cms/www/201511/11085015buuw.jpg"/>
+				</li>
+				<script>
+				var topCon = {
+					typeImg : "/u/cms/www/201511/11085001wc9a.jpg",
+					title : "2029年我国人口达14.5亿峰值",
+					url : "/zhuzhan/kandian/20151111/42776.html",
+					type : "content"
+				}
+				topArr.push(topCon);
+				</script>
+				<li  index="4">
+					<img index='4' id="img42771" onclick="javascript:changeImg('img42771');" width="110" height="75" alt="四招识别新版百元人民币" title="四招识别新版百元人民币" src="/u/cms/www/201511/11083642dpk1.jpg"/>
+				</li>
+				<script>
+				var topCon = {
+					typeImg : "/u/cms/www/201511/11083346nnrf.jpg",
+					title : "四招识别新版百元人民币",
+					url : "/zhuzhan/kandian/20151111/42771.html",
+					type : "content"
+				}
+				topArr.push(topCon);
+				</script>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="thickdiv" style="display:none;"></div>
+<!-- <div class="thickbox" style="width:272px;height:90px;display:none;">
+	<div style="width:250" class="thicktitle">
+		<span>提示</span>
+	</div>
+	<div style="width:250px;height:40px;" id="" class="thickcon">已经到最后一张了！</div>
+	<a class="thickclose" href="#">×</a>
+</div> -->	</div>
+	<!-- 首页热门一 -->
+		<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+			<a href="/zhuzhan/guandian/20151111/42775.html" target="_blank">
+				<img src="/u/cms/www/201511/11084715l1cy.jpg" width="200" height="130" alt="坚持协调发展 实现全面小康"/>
+			</a>
+			<a href="/zhuzhan/guandian/20151111/42775.html" target="_blank">
+				<h3 class="title">【文汇时评】坚持协调发展 实现全面小康</h3>
+				<div class="text">全面小康，重在“全面”。十八届五中全会提出的“五大发展理念”中，“协调发展”强调的正是“全面”二字，注重的是解决发展不平衡问题。
+					<span class="red">[详细]</span>
+				</div>
+			</a>
+			<div>
+				<div class="left">
+					<a href="/tag/29996.jspx" target="_blank" class="red">全面小康</a>
+				</div>
+				<div class="right">快速分享&nbsp;<b onmouseover="setShare('坚持协调发展 实现全面小康', '/zhuzhan/guandian/20151111/42775.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+			<a href="/zhuzhan/kandian/20151111/42768.html" target="_blank">
+				<img src="/u/cms/www/201511/11083337902y.jpg" width="200" height="130" alt="习近平同蒙古国总统会谈 推动全面战略伙伴关系发展"/>
+			</a>
+			<a href="/zhuzhan/kandian/20151111/42768.html" target="_blank">
+				<h3 class="title">习近平同蒙古国总统会谈 推动全面战略伙伴关系发展</h3>
+				<div class="text">国家主席习近平10日在人民大会堂同蒙古国总统额勒贝格道尔吉举行会谈。两国元首同意共同努力，推动中蒙全面战略伙伴关系不断向前发展，造福两国人民。
+					<span class="red">[详细]</span>
+				</div>
+			</a>
+			<div>
+				<div class="left">
+					<a href="/tag/30296.jspx" target="_blank" class="red">习近平访蒙古</a>
+					<a href="/tag/2760.jspx" target="_blank" class="red">外交</a>
+				</div>
+				<div class="right">快速分享&nbsp;<b onmouseover="setShare('习近平同蒙古国总统会谈 推动全面战略伙伴关系发展', '/zhuzhan/kandian/20151111/42768.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+			<a href="/zhuzhan/kandian/20151111/42765.html" target="_blank">
+				<img src="/u/cms/www/201511/1108060668zk.jpg" width="200" height="130" alt="结构性改革坚持持久战打好歼灭战"/>
+			</a>
+			<a href="/zhuzhan/kandian/20151111/42765.html" target="_blank">
+				<h3 class="title">结构性改革坚持持久战打好歼灭战</h3>
+				<div class="text">中共中央总书记、国家主席、中央军委主席、中央财经领导小组组长习近平11月10日上午主持召开中央财经领导小组第十一次会议，研究经济结构性改革和城市工作。
+					<span class="red">[详细]</span>
+				</div>
+			</a>
+			<div>
+				<div class="left">
+					<a href="/tag/1511.jspx" target="_blank" class="red">改革</a>
+				</div>
+				<div class="right">快速分享&nbsp;<b onmouseover="setShare('结构性改革坚持持久战打好歼灭战', '/zhuzhan/kandian/20151111/42765.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	
+	<!-- 首页中部广告 -->
+	<div class="adline">
+		<script type="text/javascript" src="/ad.jspx?id=15"></script>
+	</div>
+	<!-- 首页热门二，显示27条 -->
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42799.html" target="_blank">
+			<img src="/u/cms/www/201511/111321471pxf.jpg" width="200" height="130" alt="上海火车站拟建环形换乘轨道和主题公园"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42799.html" target="_blank">
+			<h3 class="title">上海火车站拟建环形换乘轨道和主题公园</h3>
+			<div class="text">上海老北站、上海火车站，作为曾经上海对外交通的主要门户，将在城市更新中整合南北联系，成为上海的“新门户”。澎湃新闻记者11月10日获悉，铁路上海站地区城市设计大学生国际竞赛即将进行成果汇报。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/15624.jspx" target="_blank" class="red">上海火车站</a>
+			<a href="/tag/30316.jspx" target="_blank" class="red">环形换乘轨道</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('上海火车站拟建环形换乘轨道和主题公园', '/zhuzhan/kandian/20151111/42799.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42797.html" target="_blank">
+			<img src="/u/cms/www/201511/111027106x2s.jpg" width="200" height="130" alt="五角场最后一只“角”将建成 解决交通拥堵"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42797.html" target="_blank">
+			<h3 class="title">五角场最后一只“角”将建成 解决交通拥堵</h3>
+			<div class="text">今年年底前，五角场的最后一个“角”就将建好。昨天，杨浦区委书记诸葛宇杰在做客《市民与社会》节目时透露了以上信息。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/8764.jspx" target="_blank" class="red">五角场</a>
+			<a href="/tag/17949.jspx" target="_blank" class="red">交通拥堵</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('五角场最后一只“角”将建成 解决交通拥堵', '/zhuzhan/kandian/20151111/42797.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42791.html" target="_blank">
+			<img src="/u/cms/www/201511/11094353ao4r.jpg" width="200" height="130" alt="上海中心地下金库10平米售价上千万 已卖出不少"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42791.html" target="_blank">
+			<h3 class="title">上海中心地下金库10平米售价上千万 已卖出不少</h3>
+			<div class="text">1平方米100万至150万元，这是上海中心地下保管库目前一间库房的单位面积售价。上海中心大厦高118层、632米，是目前中国已经建成的第一高楼。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/11627.jspx" target="_blank" class="red">金库</a>
+			<a href="/tag/1451.jspx" target="_blank" class="red">上海中心</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('上海中心地下金库10平米售价上千万 已卖出不少', '/zhuzhan/kandian/20151111/42791.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42785.html" target="_blank">
+			<img src="/u/cms/www/201511/11092100gy5v.jpg" width="200" height="130" alt="来自“南洋”大别墅里的诈骗电话"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42785.html" target="_blank">
+			<h3 class="title">来自“南洋”大别墅里的诈骗电话</h3>
+			<div class="text">今年1-9月，诈骗集团从境外发起的电信诈骗案件约占全市同类案件总报案数的三成，涉案金额超过总案值的六成。跨国电信诈骗已成为主要案件类型，并且每年造成巨额经济损失。
+
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/20317.jspx" target="_blank" class="red">诈骗电话</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('来自“南洋”大别墅里的诈骗电话', '/zhuzhan/kandian/20151111/42785.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42783.html" target="_blank">
+			<img src="/u/cms/www/201511/11091701k4ba.jpg" width="200" height="130" alt="“双11”是不是审美疲劳了 “宝贝”爆棚却不知道买啥"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42783.html" target="_blank">
+			<h3 class="title">“双11”是不是审美疲劳了 “宝贝”爆棚却不知道买啥</h3>
+			<div class="text">从2009年一路走来的“双11”，到今年正好是七年。从一个小小的购物节，变成今年的国际购物狂欢节，这个人造节日的威力和地位已难以撼动，没有人怀疑今年的销售额会比去年的571亿元更好看。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/14419.jspx" target="_blank" class="red">“双11”</a>
+			<a href="/tag/4046.jspx" target="_blank" class="red">淘宝</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('“双11”是不是审美疲劳了 “宝贝”爆棚却不知道买啥', '/zhuzhan/kandian/20151111/42783.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42781.html" target="_blank">
+			<img src="/u/cms/www/201511/11091252073b.jpg" width="200" height="130" alt="德中关系的开拓者和推动者——德国前总理施密特去世"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42781.html" target="_blank">
+			<h3 class="title">德中关系的开拓者和推动者——德国前总理施密特去世</h3>
+			<div class="text">据德国媒体报道，德国前总理赫尔穆特·施密特10日在德国北部城市汉堡去世，享年96岁。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/30306.jspx" target="_blank" class="red">德中关系</a>
+			<a href="/tag/30307.jspx" target="_blank" class="red">德国前总理施密特</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('德中关系的开拓者和推动者——德国前总理施密特去世', '/zhuzhan/kandian/20151111/42781.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42780.html" target="_blank">
+			<img src="/u/cms/www/201511/11091040qwtz.jpg" width="200" height="130" alt="超半数企业海外经营实现盈利"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42780.html" target="_blank">
+			<h3 class="title">超半数企业海外经营实现盈利</h3>
+			<div class="text">10日发布的《中国企业海外可持续发展报告2015》称，中国企业反映其海外经营业绩基本良好，超过半数的企业实现盈利，两成多企业经营业绩暂时处于亏损状态。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/1512.jspx" target="_blank" class="red">企业</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('超半数企业海外经营实现盈利', '/zhuzhan/kandian/20151111/42780.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42779.html" target="_blank">
+			<img src="/u/cms/www/201511/11090705vrua.jpg" width="200" height="130" alt="流亡约旦的叙利亚童工"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42779.html" target="_blank">
+			<h3 class="title">流亡约旦的叙利亚童工</h3>
+			<div class="text">叙利亚危机爆发以来，数十万叙利亚人逃往邻国约旦。随着难民营人数不断增加，供给难民的资源日益减少，许多难民不得不选择离开难民营，前往约旦各地定居。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/2656.jspx" target="_blank" class="red">约旦</a>
+			<a href="/tag/3748.jspx" target="_blank" class="red">叙利亚</a>
+			<a href="/tag/6474.jspx" target="_blank" class="red">童工</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('流亡约旦的叙利亚童工', '/zhuzhan/kandian/20151111/42779.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42778.html" target="_blank">
+			<img src="/u/cms/www/201511/11090123efg3.jpg" width="200" height="130" alt="欧非峰会：给钱能解决难民问题吗"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42778.html" target="_blank">
+			<h3 class="title">欧非峰会：给钱能解决难民问题吗</h3>
+			<div class="text">欧盟与非洲领导人峰会将于今明两天在马耳他首都瓦莱塔举行。如何有效减少来自非洲的经济难民和非法移民，是本届峰会的主要议题。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/30305.jspx" target="_blank" class="red">欧非峰会</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('欧非峰会：给钱能解决难民问题吗', '/zhuzhan/kandian/20151111/42778.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/jiaodian/20151111/42777.html" target="_blank">
+			<img src="/u/cms/www/201511/1108483192fn.jpg" width="200" height="130" alt="引导未成年人志存高远崇德向善"/>
+		</a>
+		<a href="/zhuzhan/jiaodian/20151111/42777.html" target="_blank">
+			<h3 class="title">引导未成年人志存高远崇德向善</h3>
+			<div class="text">上海市未成年人思想道德建设工作经验交流会昨天在上海展览中心举行。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/4022.jspx" target="_blank" class="red">未成年人</a>
+			<a href="/tag/30304.jspx" target="_blank" class="red">思想道德</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('引导未成年人志存高远崇德向善', '/zhuzhan/jiaodian/20151111/42777.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42773.html" target="_blank">
+			<img src="/u/cms/www/201511/11084200x7n6.jpg" width="200" height="130" alt="多数人支持专车登记为出租车"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42773.html" target="_blank">
+			<h3 class="title">多数人支持专车登记为出租车</h3>
+			<div class="text">“关于推进出租汽车健康发展（征求意见稿)”和“网络预约出租汽车（征求意见稿）”于昨日零时结束向社会公开征求意见工作，共收到有效意见5008件。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/3723.jspx" target="_blank" class="red">出租车</a>
+			<a href="/tag/30301.jspx" target="_blank" class="red">专车登记</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('多数人支持专车登记为出租车', '/zhuzhan/kandian/20151111/42773.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151111/42770.html" target="_blank">
+			<img src="/u/cms/www/201511/11083620ilh1.jpg" width="200" height="130" alt="中外科学家开辟抗肿瘤药物研发新方向"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151111/42770.html" target="_blank">
+			<h3 class="title">中外科学家开辟抗肿瘤药物研发新方向</h3>
+			<div class="text">铜离子是人体内的“危险分子”，绝大多数情况下都必须有伴侣蛋白陪护，而不少肿瘤少了铜离子就会生长停滞。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/30298.jspx" target="_blank" class="red">抗肿瘤</a>
+			<a href="/tag/2217.jspx" target="_blank" class="red">科学</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('中外科学家开辟抗肿瘤药物研发新方向', '/zhuzhan/kandian/20151111/42770.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42756.html" target="_blank">
+			<img src="/u/cms/www/201511/10193039495t.jpg" width="200" height="130" alt="上海举行未成年人思想道德建设工作经验交流会  "/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42756.html" target="_blank">
+			<h3 class="title">上海举行未成年人思想道德建设工作经验交流会  </h3>
+			<div class="text">上海市未成年人思想道德建设工作经验交流会今天（10日）在上海展览中心举行。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/1442.jspx" target="_blank" class="red">上海</a>
+			<a href="/tag/30287.jspx" target="_blank" class="red">思想道德建设</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('上海举行未成年人思想道德建设工作经验交流会  ', '/zhuzhan/kandian/20151110/42756.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42763.html" target="_blank">
+			<img src="/u/cms/www/201511/1021211030nt.jpg" width="200" height="130" alt="“4大招”理性对待“双十一”网购节"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42763.html" target="_blank">
+			<h3 class="title">“4大招”理性对待“双十一”网购节</h3>
+			<div class="text">随着“双十一”临近，许多消费者面对各大电商陆续推出的促销活动摩拳擦掌，准备“血拼”。在网络促销大潮中，消费者如何全面考量、理性消费？市消保委在此给您支招。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/30294.jspx" target="_blank" class="red">“双十一”网购节</a>
+			<a href="/tag/30295.jspx" target="_blank" class="red">消保委提醒</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('“4大招”理性对待“双十一”网购节', '/zhuzhan/kandian/20151110/42763.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42760.html" target="_blank">
+			<img src="/u/cms/www/201511/10195205r77f.jpg" width="200" height="130" alt="“双十一”旅游网购警惕五大陷阱"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42760.html" target="_blank">
+			<h3 class="title">“双十一”旅游网购警惕五大陷阱</h3>
+			<div class="text">“双十一”进入倒计时，携程、阿里、途牛、同程等在线旅游网站纷纷加入抢客大战，推出“3折游世界”等促销活动，出国游甚至低于千元。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/30292.jspx" target="_blank" class="red">旅游网购</a>
+			<a href="/tag/10353.jspx" target="_blank" class="red">陷阱</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('“双十一”旅游网购警惕五大陷阱', '/zhuzhan/kandian/20151110/42760.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/jiaodian/20151110/42753.html" target="_blank">
+			<img src="/u/cms/www/201511/10164635qn0w.png" width="200" height="130" alt="市委召开常委扩大会议：坚决拥护中央决定，坚定不移推进党风廉政和反腐败斗争"/>
+		</a>
+		<a href="/zhuzhan/jiaodian/20151110/42753.html" target="_blank">
+			<h3 class="title">市委召开常委扩大会议：坚决拥护中央决定，坚定不移推进党风廉政和反腐败斗争</h3>
+			<div class="text">今天下午（11月10日），中共上海市委召开常委扩大会议，通报中央关于艾宝俊涉嫌严重违纪，接受组织调查的决定。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/5638.jspx" target="_blank" class="red">市委</a>
+			<a href="/tag/30285.jspx" target="_blank" class="red">常委扩大会议</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('市委召开常委扩大会议：坚决拥护中央决定，坚定不移推进党风廉政和反腐败斗争', '/zhuzhan/jiaodian/20151110/42753.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42752.html" target="_blank">
+			<img src="/u/cms/www/201511/10163148ttsx.png" width="200" height="130" alt="上海市委常委、副市长艾宝俊涉嫌严重违纪接受组织调查"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42752.html" target="_blank">
+			<h3 class="title">上海市委常委、副市长艾宝俊涉嫌严重违纪接受组织调查</h3>
+			<div class="text">上海市委常委、副市长艾宝俊涉嫌严重违纪，目前正接受组织调查。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/30284.jspx" target="_blank" class="red">艾宝俊</a>
+			<a href="/tag/9852.jspx" target="_blank" class="red">涉嫌严重违纪</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('上海市委常委、副市长艾宝俊涉嫌严重违纪接受组织调查', '/zhuzhan/kandian/20151110/42752.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42747.html" target="_blank">
+			<img src="/u/cms/www/201511/10152316bhtv.jpg" width="200" height="130" alt="39名特大电信诈骗嫌疑人押解归国   "/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42747.html" target="_blank">
+			<h3 class="title">39名特大电信诈骗嫌疑人押解归国   </h3>
+			<div class="text">今天（10日）上午07:57，由雅加达飞往广州的南航CZ8624航班安全降落在广州白云国际机场。然而这并不是一个普通的航班任务，航班上的旅客都是我国公安部在印尼破获的特大电信诈骗团伙成员，共计39人。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/8149.jspx" target="_blank" class="red">南航</a>
+			<a href="/tag/30281.jspx" target="_blank" class="red">押送</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('39名特大电信诈骗嫌疑人押解归国   ', '/zhuzhan/kandian/20151110/42747.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42746.html" target="_blank">
+			<img src="/u/cms/www/201511/101519213jxg.jpg" width="200" height="130" alt=" “双十一”带旺货物运输市场 "/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42746.html" target="_blank">
+			<h3 class="title"> “双十一”带旺货物运输市场 </h3>
+			<div class="text">“双十一”俨然成了每年的网购节，记者从南航上海分公司货运部了解到，10月20日以来，上海货运国内单日平均出港快件量达到80吨以上，较去年同期高出约一成。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/13089.jspx" target="_blank" class="red">“双十一”</a>
+			<a href="/tag/30280.jspx" target="_blank" class="red">货运市场</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare(' “双十一”带旺货物运输市场 ', '/zhuzhan/kandian/20151110/42746.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42744.html" target="_blank">
+			<img src="/u/cms/www/201511/10132308x7cw.jpg" width="200" height="130" alt="女司机造史上最短代驾订单，仅50米"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42744.html" target="_blank">
+			<h3 class="title">女司机造史上最短代驾订单，仅50米</h3>
+			<div class="text">最快完结的代驾订单行驶距离仅为50米，来自一位在地下车库里无法成功倒车入库的女司机。没错， 你没看错，又是女司机。
+
+
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/9765.jspx" target="_blank" class="red">代驾</a>
+			<a href="/tag/17109.jspx" target="_blank" class="red">女司机</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('女司机造史上最短代驾订单，仅50米', '/zhuzhan/kandian/20151110/42744.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42736.html" target="_blank">
+			<img src="/u/cms/www/201511/101048234m6n.jpg" width="200" height="130" alt="小心！东北重霾今明或飘来上海"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42736.html" target="_blank">
+			<h3 class="title">小心！东北重霾今明或飘来上海</h3>
+			<div class="text">昨天申城空气质量也不佳，是否与东北污染有关？市环境监测中心表示，昨天申城污染源除了本地外，还有外来输送。但根据西北风的风向，外来污染来自江苏、山东的可能性更大。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/30273.jspx" target="_blank" class="red">东北重霾</a>
+			<a href="/tag/1442.jspx" target="_blank" class="red">上海</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('小心！东北重霾今明或飘来上海', '/zhuzhan/kandian/20151110/42736.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42733.html" target="_blank">
+			<img src="/u/cms/www/201511/10101812wrw8.jpg" width="200" height="130" alt="盘点“双十一”网购陷阱 0元购手机等多为诈骗"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42733.html" target="_blank">
+			<h3 class="title">盘点“双十一”网购陷阱 0元购手机等多为诈骗</h3>
+			<div class="text">近几年来，无论是线上还是线下，“双11”已经成为购物的盛宴。随着“双11”的钟声即将响起，网络购物诈骗的“号角”也要吹起来了。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/3668.jspx" target="_blank" class="red">网购</a>
+			<a href="/tag/13089.jspx" target="_blank" class="red">“双十一”</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('盘点“双十一”网购陷阱 0元购手机等多为诈骗', '/zhuzhan/kandian/20151110/42733.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42732.html" target="_blank">
+			<img src="/u/cms/www/201511/10100543l100.jpg" width="200" height="130" alt="上海一女婴出生后被弃绿化带死亡，17岁母亲大出血送医抢救"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42732.html" target="_blank">
+			<h3 class="title">上海一女婴出生后被弃绿化带死亡，17岁母亲大出血送医抢救</h3>
+			<div class="text">11月9日7时16分许，上海浦东新区泥城镇一小区门口附近草丛处发现一名新生女婴。经120到场确认，该女婴已死亡。经查，女婴母亲年仅17岁，事发当晚在其暂住地自然分娩产下女婴，并丢弃至绿化带。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/3687.jspx" target="_blank" class="red">弃婴</a>
+			<a href="/tag/1442.jspx" target="_blank" class="red">上海</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('上海一女婴出生后被弃绿化带死亡，17岁母亲大出血送医抢救', '/zhuzhan/kandian/20151110/42732.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42731.html" target="_blank">
+			<img src="/u/cms/www/201511/10100652z2td.jpg" width="200" height="130" alt="美研究报告：气温升4摄氏度 上海等城市将被淹"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42731.html" target="_blank">
+			<h3 class="title">美研究报告：气温升4摄氏度 上海等城市将被淹</h3>
+			<div class="text">据BBC报道，美国研究机构“气候中心”最新报告指出，如果全球气温上升4摄氏度，受到海平面升高威胁最严重的国家是中国，10个受影响的大城市中有4个在中国，其中包括上海、天津、香港、浙江台州。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/5475.jspx" target="_blank" class="red">气候</a>
+			<a href="/tag/1442.jspx" target="_blank" class="red">上海</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('美研究报告：气温升4摄氏度 上海等城市将被淹', '/zhuzhan/kandian/20151110/42731.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42725.html" target="_blank">
+			<img src="/u/cms/www/201511/1009371316ag.jpg" width="200" height="130" alt="超市食盐含塑料颗粒引争议 专家：别陷入解读误区"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42725.html" target="_blank">
+			<h3 class="title">超市食盐含塑料颗粒引争议 专家：别陷入解读误区</h3>
+			<div class="text">“别慌，事情并没有那么严重。”中科院上海生科院营养科学研究所研究员王慧表示。那些耸人听闻的食品安全新闻，往往有解读“陷阱”。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/30271.jspx" target="_blank" class="red">超市食盐</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('超市食盐含塑料颗粒引争议 专家：别陷入解读误区', '/zhuzhan/kandian/20151110/42725.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42719.html" target="_blank">
+			<img src="/u/cms/www/201511/10091715n6up.jpg" width="200" height="130" alt="沪拟用三大古镇打造世界级湖区"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42719.html" target="_blank">
+			<h3 class="title">沪拟用三大古镇打造世界级湖区</h3>
+			<div class="text">上海拟让朱家角、金泽、练塘三大历史文化古镇联动发展，打造成一个世界著名湖区。1
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/1442.jspx" target="_blank" class="red">上海</a>
+			<a href="/tag/21493.jspx" target="_blank" class="red">古镇</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('沪拟用三大古镇打造世界级湖区', '/zhuzhan/kandian/20151110/42719.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<div class="newsbox" onmousemove=(this.className="newsboxon") onmouseout=(this.className="newsbox")>
+		<a href="/zhuzhan/kandian/20151110/42728.html" target="_blank">
+			<img src="/u/cms/www/201511/100958506by1.png" width="200" height="130" alt="无业人员上海盗车连撞10人致2死8伤，和复旦大学无关"/>
+		</a>
+		<a href="/zhuzhan/kandian/20151110/42728.html" target="_blank">
+			<h3 class="title">无业人员上海盗车连撞10人致2死8伤，和复旦大学无关</h3>
+			<div class="text">11月9日下午，上海浦东新区一辆轿车连续撞人，目前，事故已造成2死8伤。肇事司机神智不清，已送医救治。
+				<span class="red">[详细]</span>
+			</div>
+		</a>
+		<div>
+		<div class="left">
+			<a href="/tag/7031.jspx" target="_blank" class="red">交通事故</a>
+			<a href="/tag/19668.jspx" target="_blank" class="red">偷车</a>
+			<a href="/tag/1648.jspx" target="_blank" class="red">复旦大学</a>
+		</div>
+		<div class="right">快速分享&nbsp;<b onmouseover="setShare('无业人员上海盗车连撞10人致2死8伤，和复旦大学无关', '/zhuzhan/kandian/20151110/42728.html');"><a class="flo_rig flo_bg01 right jiathis jiathis_txt" href="http://www.jiathis.com/share" target="_blank"><img alt="" src="/r/cms/www/whb/images/afav_01.png"></a></b></div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30268",
+		name : "汉莎航空"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "7437",
+		name : "罢工"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42718',
+		title : '汉莎航空发生“史无前例”罢工 929次航班被取消',
+		url : "/zhuzhan/kandian/20151110/42718.html",
+		desc : "德国最大航空公司汉莎航空公司说，空乘罢工引发航班取消，9日将影响11.3万人次旅客。汉莎航空称这次罢工“史无前例”。",
+		typeImg : "/u/cms/www/201511/10091702jff7.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30266",
+		name : "韩国大米"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "30267",
+		name : "饮食习惯"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42716',
+		title : '饮食习惯悄然改变 米饭摄入持续减少 韩国“发愁”大米库存过多',
+		url : "/zhuzhan/kandian/20151110/42716.html",
+		desc : "随着饮食习惯的改变，韩国大米需求日益减少、转而被小麦替代，导致大米库存过多。为此，韩国政府急欲扶持大米加工食品行业、促进大米出口。",
+		typeImg : "/u/cms/www/201511/10091449emi9.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "2526",
+		name : "文汇时评"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42714',
+		title : '以创新创业带动大学生就业',
+		url : "/zhuzhan/guandian/20151110/42714.html",
+		desc : "当前，我国经济发展进入新常态，大众创业、万众创新已成为经济社会发展新引擎，而高校毕业生更是实施创新驱动发展战略和推进大众创业、万众创新的生力军。“双创”对缓解高校毕业生的就业压力，实现个人...",
+		typeImg : "/u/cms/www/201511/10091235hmsm.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "1928",
+		name : "日本"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "10397",
+		name : "建筑业"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "30264",
+		name : "“豆腐渣”工程"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42713',
+		title : '日建筑业曝出“豆腐渣”大丑闻',
+		url : "/zhuzhan/kandian/20151110/42713.html",
+		desc : "据日本媒体披露，事情被曝光始于日本最大的房地产商三井不动产集团售出的横滨市住宅大楼“ParkCity Lala”去年突然开始发生倾斜。",
+		typeImg : "/u/cms/www/201511/10091143915p.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "1442",
+		name : "上海"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "14871",
+		name : "消防演练"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42711',
+		title : '申城演练火灾救援 直升机无人机亮出消防“真功夫”',
+		url : "/zhuzhan/kandian/20151110/42711.html",
+		desc : "一声警报响过，企业迅速启动装置预警，化工区应急响应中心也随即启动园区救助联动，消防高喷车赶赴现场进行增援并控制灾情，警用直升机紧急出动救助伤员，专业技术人员进行带压堵漏，无人机勘查出动……",
+		typeImg : "/u/cms/www/201511/10090848lrwc.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30263",
+		name : "缅甸大选"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42710',
+		title : '缅甸执政党主席承认大选落败',
+		url : "/zhuzhan/kandian/20151110/42710.html",
+		desc : "缅甸大选9日开始将陆续开票，最大在野党全国民主联盟对获胜信心满满，预测将获得超过七成待选议会席位。执政党联邦巩固与发展党主席吴泰乌承认竞选失利，并表示将接受选举结果。",
+		typeImg : "/u/cms/www/201511/10090625zd4n.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "14419",
+		name : "“双11”"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "30262",
+		name : "旅游产品"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42707',
+		title : '“双11”前低价旅游产品“满天飞” 这些产品靠不靠谱呢？',
+		url : "/zhuzhan/kandian/20151110/42707.html",
+		desc : "由于旅游预订产品周期较长，尤其是出境游还牵涉到签证等不确定性因素，抢购低价产品还有各种限制条件，因此，即使你“秒”到低价旅游产品，也不一定意味着到时想出行就能出行。",
+		typeImg : "/u/cms/www/201511/10090324ok3h.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "1442",
+		name : "上海"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "2379",
+		name : "融资"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42705',
+		title : '上海探索建立新型融资担保体系',
+		url : "/zhuzhan/kandian/20151110/42705.html",
+		desc : "市委副书记、市长杨雄昨天主持召开市政府常务会议，研究部署贯彻国务院融资担保行业发展电视电话会议精神，促进本市融资担保行业发展工作",
+		typeImg : "/u/cms/www/201511/10085707qcqe.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "8969",
+		name : "ARJ21飞机"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "9043",
+		name : "交付"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42703',
+		title : '我国首架ARJ21飞机年底交付',
+		url : "/zhuzhan/kandian/20151110/42703.html",
+		desc : "由中国商飞设计制造的首架ARJ21“翔凤”飞机年底前将交付成都航空公司，预计这一飞机有望投入成都与北京、上海等热门航线。",
+		typeImg : "/u/cms/www/201511/10085222p9n5.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30259",
+		name : "网络宣传工作座谈会"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "30260",
+		name : "五中全会精神"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42702',
+		title : '让五中全会精神走进千家万户 中宣部和中央网信办作部署',
+		url : "/zhuzhan/kandian/20151110/42702.html",
+		desc : " 中宣部、中央网信办11月9日在浙江杭州联合召开网络宣传工作座谈会，以“让五中全会精神走进千家万户”为主题，深入学习宣传贯彻党的十八届五中全会精神，研究部署加强网络宣传工作。",
+		typeImg : "/u/cms/www/201511/10083032vd2e.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30258",
+		name : "上海制造业"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42701',
+		title : '上海制造业走向高效绿色',
+		url : "/zhuzhan/kandian/20151110/42701.html",
+		desc : "记者从昨天举行的市政府新闻发布会上获悉，“十三五”期间，上海产业部门将继续以创新为关键词，通过八大工程推进产业升级和结构优化。过去五年，依靠创新，上海制造业持续走向高效和绿色。",
+		typeImg : "/u/cms/www/201511/10084335wvyj.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "4352",
+		name : "电视剧"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42700',
+		title : '“闯关打怪”的游戏逻辑霸占荧屏',
+		url : "/zhuzhan/guandian/20151110/42700.html",
+		desc : "“现在的电视剧创作有一股潮流：历史被虚化，取而代之的是‘闯关打怪’的游戏逻辑。”日前，中国电视剧制作产业协会会长、导演尤小刚在上海接受记者采访时，道出了对当下荧屏古装剧的一大观感。",
+		typeImg : "/u/cms/www/201511/100826449aup.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30257",
+		name : "上海“十三五”新发展"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "29967",
+		name : "创新发展"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42699',
+		title : '打造系统完整人才体系链',
+		url : "/zhuzhan/kandian/20151110/42699.html",
+		desc : "以“创新发展”为主题，谋划上海“十三五”新发展，在昨天举行的市政府新闻发布会上，相关政府职能部门负责人不约而同地表示，实施创新驱动、转型发展，上海必须打造系统完整的人才体系链。",
+		typeImg : "/u/cms/www/201511/100825248hhn.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "4626",
+		name : "黄浦"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "14297",
+		name : "“119消防周”"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42694',
+		title : '黄浦区“119消防周”活动今启动',
+		url : "/zhuzhan/kandian/20151109/42694.html",
+		desc : "今天，黄浦区消防安全委员会在上海当代艺术博物馆举办2015年“119消防宣传周”暨冬防工作启动仪式。",
+		typeImg : "/u/cms/www/201511/09203826q5nb.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "14266",
+		name : "腾讯WE大会"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42682',
+		title : '2015腾讯WE大会开幕 用科技预言炫酷未来',
+		url : "/zhuzhan/kandian/20151109/42682.html",
+		desc : "11月8日，北京，北展剧场，2015腾讯WE大会开幕。寒冷的天气没有阻挡住参会者的脚步，超过5000位互联网从业者、科技控、投资者和媒体人蜂拥而来。",
+		typeImg : "/u/cms/www/201511/09154502jdpi.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "29756",
+		name : "性别平等"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42679',
+		title : '立冬了，来喝一锅有关性别平等的鸡汤',
+		url : "/zhuzhan/kandian/20151109/42679.html",
+		desc : "昨天（8日），市妇联在上海图书馆开展了一场以“性别平等”为主题的TED，邀请沈奕斐、黄佟佟、陆婷婷、吴迪等不同领域人士结合各自专业，以演讲的方式，分析现实生活中存在的不平等现象及其原因，分享对...",
+		typeImg : "/u/cms/www/201511/09141727ala2.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "2399",
+		name : "小学生"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "30243",
+		name : "孤独症"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42671',
+		title : '普通学校小学生中 每千人有4.1人患孤独症',
+		url : "/zhuzhan/kandian/20151109/42671.html",
+		desc : "一项针对全国8个城市共12万多名普通学校小学生的筛查显示，孤独症的患病率达到0.41%，也就是每千人中有4.1人患孤独症，而且这些孩子的老师和家人基本都没有意识到孩子可能患病。
+",
+		typeImg : "/u/cms/www/201511/091334038rzm.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30233",
+		name : "双11新规"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "3668",
+		name : "网购"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "5847",
+		name : "秒杀"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42664',
+		title : '解读双11新规  “剁手党”不要随意买买买',
+		url : "/zhuzhan/jiaodian/20151109/42664.html",
+		desc : "“双11”临近，各大电商早已摩拳擦掌打响价格战，“冰价”、“爆款”等字眼线上乱飞，出境游的价格甚至跌破1000元，如此“零度冰价”引众多人甘当“剁手党”，只等零点的秒杀时刻。",
+		typeImg : "/u/cms/www/201511/09105530h8pb.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30128",
+		name : "上海消防局"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "2602",
+		name : "招聘"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42388',
+		title : '上海消防局招700位消防员 战斗员月薪5600元以上',
+		url : "/zhuzhan/kandian/20151109/42388.html",
+		desc : "记者从上海市新闻办获悉，上海消防公开招聘一线执勤岗位政府专职消防员，其中，战斗员530名，执勤车驾驶员170名。战斗员月平均工资薪金5600元以上，执勤车驾驶员月平均工资薪金5200元以上。",
+		typeImg : "/u/cms/www/201511/06160509wdmi.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30244",
+		name : "“光棍危机感”"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42654',
+		title : '“光棍危机感”：1/4上海单身女相亲10次以上',
+		url : "/zhuzhan/kandian/20151109/42654.html",
+		desc : "双十一临近，除了“买买买神”迎来购物狂欢，“单身族”们也迎来光棍节，今年“光棍”们的状态如何？",
+		typeImg : "/u/cms/www/201511/090929452p12.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "1528",
+		name : "文化"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42646',
+		title : '用文化空间提升城市的魅力和品质',
+		url : "/zhuzhan/kandian/20151109/42646.html",
+		desc : "2015上海城市空间艺术季首次以“文化兴市，艺术建城”为理念，以“城市更新”为主题，打造具有“国际性、公众性、实践性”的城市空间艺术品牌活动，从而改善生活空间品质、提升城市魅力。",
+		typeImg : "/u/cms/www/201511/09085106l8ea.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30223",
+		name : "传统手工艺"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "1442",
+		name : "上海"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42642',
+		title : '传统手工艺不该只是少数人“专利”',
+		url : "/zhuzhan/kandian/20151109/42642.html",
+		desc : "昨天，2015市民文化节手工艺大赛成果展在宝山区木文化博物馆拉开帷幕，100位市民手工艺达人的作品及30位专业手工艺人的精品齐聚一堂，吸引了众多参观者。",
+		typeImg : "/u/cms/www/201511/09084051w0tb.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "1660",
+		name : "科技"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42641',
+		title : '背上“背包”翱翔天空不是梦',
+		url : "/zhuzhan/kandian/20151109/42641.html",
+		desc : "昨天，作为中国连接世界的跨界创新平台，2015腾讯WE大会邀请了10位全球顶尖互联网思想家，展示了这些领域的全球顶级科技前沿应用案例。",
+		typeImg : "/u/cms/www/201511/09083731oz9w.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "5012",
+		name : "上海国际马拉松赛"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42640',
+		title : '20岁“上马”承载丰满城市精神',
+		url : "/zhuzhan/kandian/20151109/42640.html",
+		desc : "细雨霏霏，东方初白，在这个略带寒意的初冬清晨，上海却焕发着特别的生气。第20届上海国际马拉松赛昨晨举行。",
+		typeImg : "/u/cms/www/201511/09083504a3z4.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "12166",
+		name : "特教"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "1415",
+		name : "教育"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42639',
+		title : '普校“全能冠军”变身特教创新者',
+		url : "/zhuzhan/kandian/20151109/42639.html",
+		desc : "在长期的教学一线实践中，张洁华深知：教育特殊学生需要真诚的爱，又不能仅仅只有爱，这个过程需要探索和不断创新特教的最佳途径和人本方法。",
+		typeImg : "/u/cms/www/201511/09083248fubz.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30221",
+		name : "中央宣讲团"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "29007",
+		name : "五中全会"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42637',
+		title : '中央宣讲团在沪举行报告会 以新的理念指导实践',
+		url : "/zhuzhan/kandian/20151109/42637.html",
+		desc : "按照中央统一部署和安排，中央宣讲团党的十八届五中全会精神报告会，昨天下午在世博中心举行。",
+		typeImg : "/u/cms/www/201511/09081736nihp.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "21110",
+		name : "“互联网+”"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "30220",
+		name : "架构师"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42636',
+		title : 'WEB前端开发工程师最紧俏 架构师年薪可达 37.57万元',
+		url : "/zhuzhan/kandian/20151109/42636.html",
+		desc : "“互联网+”如火如荼，人才竞争也日趋白热化。日前，猎聘网发布的《上海互联网行业人才紧缺指数（TSI）报告》显示，今年三季度，互联网在上海全行业中成为人才需求最为紧迫的行业。",
+		typeImg : "/u/cms/www/201511/09081216leth.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30218",
+		name : "上海静安寺"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "30219",
+		name : "Wi-Fi"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42632',
+		title : '上海静安寺有公共Wi-Fi为钓鱼信号，盗取个人信息',
+		url : "/zhuzhan/kandian/20151109/42632.html",
+		desc : "日前，信息安全组织“雨袭团”发布了“中国一线城市Wi-Fi安全与潜在威胁调查研究报告”，报告显示在北京、上海、广州的机场、火车站、旅游景点、商业中心等6万多个Wi-Fi信号中，有8.5%的Wi-Fi信号为钓鱼...",
+		typeImg : "/u/cms/www/201511/09075809w624.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "4171",
+		name : "中超"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "3008",
+		name : "申花"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "4358",
+		name : "上港"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42631',
+		title : '中超落幕一周 申花上港照练',
+		url : "/zhuzhan/kandian/20151109/42631.html",
+		desc : "本赛季的中超联赛一周前曲终人散，绝大部分中超球队都迎来了为期一个月左右的假期，但申花和上港两支上海球队则没有这么轻松，两队队员们仍然在训练场上挥汗如雨。",
+		typeImg : "/u/cms/www/201511/090754096b6d.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "4209",
+		name : "上马"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "6667",
+		name : "刘翔"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42630',
+		title : '惜字如金，刘翔仍是话题人物',
+		url : "/zhuzhan/kandian/20151109/42630.html",
+		desc : "从栏架间到城市中，本届上马10公里赛，刘翔跨出了运动生涯的新一步。",
+		typeImg : "/u/cms/www/201511/090751246fbe.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30216",
+		name : "美国警察"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "30217",
+		name : "射杀6岁儿童"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42629',
+		title : '美国警察乱枪射杀6岁儿童',
+		url : "/zhuzhan/kandian/20151109/42629.html",
+		desc : "美国两名警察3日把一对父子逼进死胡同，连开多枪，当场打死6岁的儿子，重伤父亲。警方7日宣布，这对警察涉嫌二级谋杀，已经被逮捕。",
+		typeImg : "/u/cms/www/201511/09074608e9im.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30212",
+		name : "埃及旅游业"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42626',
+		title : '多国取消往返航班外国游客纷纷离开 埃及旅游业迎来“寒冬”',
+		url : "/zhuzhan/kandian/20151109/42626.html",
+		desc : "俄罗斯客机在埃及坠毁后，多国为安全起见陆续取消往返埃及的航班并升级安保措施，负面效应迅速传导至埃及旅游业。",
+		typeImg : "/u/cms/www/201511/09074016og5v.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<script>
+	var tagArr = new Array();
+	var tag = {
+		id : "30210",
+		name : "俄客机坠毁毁事件"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "30211",
+		name : "俄罗斯A321客机"
+	}
+	tagArr.push(tag);
+	var tag = {
+		id : "26933",
+		name : "恐袭"
+	}
+	tagArr.push(tag);
+	var con = {
+		id : '42625',
+		title : '俄间接承认空难系恐袭造成',
+		url : "/zhuzhan/kandian/20151109/42625.html",
+		desc : "俄罗斯A321客机在埃及西奈半岛坠毁事件已经过去一周，俄罗斯和埃及等国官方仍未就失事原因给出正式说法。",
+		typeImg : "/u/cms/www/201511/09073658mgkf.jpg",
+		importTitle : "",
+		tag : tagArr,
+		ups : 0
+		
+	};
+	hot2Con.push(con);
+	</script>
+	<!-- 加载更多，点击加载15条，共三次 -->
+	<a href="javascript:void(0);" id="hot2" onclick="javascript:loadHot2();"><div count="0" class="morebox txtcenter">继续加载文汇网热点新闻</div></a>
+
+	<!-- 广告位 -->
+	
+	<div class="adline">
+		<p class="mar15" style="width:1000px;"><script type="text/javascript" src="/ad.jspx?id=6"></script></p>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<!--左侧-->
+<div class="pagerightbox right">
+
+<!-- 文化 -->
+<div class="pagerightbox">
+<h2 class="rbtitleline">
+<!-- 服务器：591 -->
+<a href="/zhuzhan/wenhua/" target="_blank" style="color:#fff;">
+	<div class="right font12 mt10 mr5">查看更多</div>
+</a>文化
+</h2>
+<!-- 子栏目 -->
+<div class="rightboxlist">
+	<ul class="rbnav">
+<!-- 服务器：591 -->
+		<a href="javascript:void(0);)" onclick="changeWHTab('592', 0);">
+				<li id="592" name="whtab" class="on">新闻
+				<div class="arr"><img src="/r/cms/www/whb/images/newIndex/arrd.png" width="10" height="5" alt=""/></div>
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201511/11092415vwpo.jpg",
+					title : "《戚继光》：台州乱弹重放异彩",
+					url : "/zhuzhan/xinwen/20151111/42786.html"
+				}
+				whCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "592",
+					title : "郑晓龙：我更享受幕后的感觉",
+					url : "/zhuzhan/xinwen/20151110/42726.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "592",
+					title : "孟京辉热衷颠覆性改编《你好，忧愁》...",
+					url : "/zhuzhan/xinwen/20151106/42380.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "592",
+					title : "绍兴小百花尝试历史题材新编越剧《屈...",
+					url : "/zhuzhan/xinwen/20151106/42379.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+		<a href="javascript:void(0);)" onclick="changeWHTab('593', 1);">
+				<li id="593" name="whtab" >聚焦
+				
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201511/11091529b1ey.jpg",
+					title : "谁是《芈月传》真正的编剧？",
+					url : "/zhuzhan/jujiao/20151111/42782.html"
+				}
+				whCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "593",
+					title : "布鲁克《惊奇的山谷》：蕴藏着丰富的...",
+					url : "/zhuzhan/jujiao/20151111/42784.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "593",
+					title : "网络书商巨头亚马逊首家实体书店西雅...",
+					url : "/zhuzhan/jujiao/20151110/42729.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "593",
+					title : "版权千万，99%网络写手拿不到一分钱?",
+					url : "/zhuzhan/jujiao/20151109/42648.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+		<a href="javascript:void(0);)" onclick="changeWHTab('597', 2);">
+				<li id="597" name="whtab" >记忆
+				
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201511/10092658ug75.jpg",
+					title : "抵拒浊世污染的“掩门自贞”",
+					url : "/zhuzhan/jiyi/20151110/42723.html"
+				}
+				whCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "597",
+					title : "汤显祖：以美好想象的升华取代人世真...",
+					url : "/zhuzhan/jiyi/20151110/42722.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "597",
+					title : "侦探女王失踪，这是真的！",
+					url : "/zhuzhan/jiyi/20151013/39379.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "597",
+					title : "好莱坞“黄金时代”影片80%都会在上...",
+					url : "/zhuzhan/jiyi/20150925/38200.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+		<a href="javascript:void(0);)" onclick="changeWHTab('598', 3);">
+				<li id="598" name="whtab" >艺术
+				
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201511/05072940tug1.jpg",
+					title : "鬼才达利创作精华来沪展出",
+					url : "/zhuzhan/yishu/20151105/42289.html"
+				}
+				whCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "598",
+					title : "唐卡：观照人心的光华来自何处",
+					url : "/zhuzhan/yishu/20151028/40963.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "598",
+					title : "岁月的淬火——我看韩天衡的篆刻书法...",
+					url : "/zhuzhan/yishu/20151023/40470.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "598",
+					title : "跨越国界的人文与心灵沟通",
+					url : "/zhuzhan/yishu/20151022/40326.html"
+				}
+				otherWHCon.push(otherCon);
+				</script>
+				<a href="javascript:void(0);)" onclick="changeWHTab('96', 4);">
+				<li id="96" name="whtab">笔会</li>
+				</a>
+					<script>
+					var con = {
+						typeImg : "/u/cms/www/201510/30071651t1i9.png",
+						title : "父子合作的一个奇迹",
+						url : "/zhuzhan/bihui/20151030/41529.html"
+					}
+					whCon.push(con);
+					</script>
+					<!-- 其他内容 -->
+							<script>
+							var otherCon = {
+								channelId : "96",
+								title : "重读《红楼风俗谭》",
+								url : "/zhuzhan/bihui/20151105/42297.html"
+							}
+							otherWHCon.push(otherCon);
+							</script>
+							<script>
+							var otherCon = {
+								channelId : "96",
+								title : "泥鳅记",
+								url : "/zhuzhan/bihui/20151105/42296.html"
+							}
+							otherWHCon.push(otherCon);
+							</script>
+							<script>
+							var otherCon = {
+								channelId : "96",
+								title : "一个乡下少年的清晨",
+								url : "/zhuzhan/bihui/20151105/42295.html"
+							}
+							otherWHCon.push(otherCon);
+							</script>
+							<script>
+							var otherCon = {
+								channelId : "96",
+								title : "吴宓日记中的新文学赞语",
+								url : "/zhuzhan/bihui/20151105/42294.html"
+							}
+							otherWHCon.push(otherCon);
+							</script>
+				<a href="javascript:void(0);)" onclick="changeWHTab('97', 5);">
+				<li id="97" name="whtab">影视</li>
+				</a>
+					<script>
+					var con = {
+						typeImg : "/u/cms/www/201511/11092706yizy.jpg",
+						title : "导演处女作《一个勺子》下周上映 陈...",
+						url : "/zhuzhan/yingshi/20151111/42788.html"
+					}
+					whCon.push(con);
+					</script>
+					<!-- 其他内容 -->
+							<script>
+							var otherCon = {
+								channelId : "97",
+								title : "那些邦德教会好莱坞的事",
+								url : "/zhuzhan/yingshi/20151105/42316.html"
+							}
+							otherWHCon.push(otherCon);
+							</script>
+							<script>
+							var otherCon = {
+								channelId : "97",
+								title : "有一种电影叫007，有一种偶像叫邦德",
+								url : "/zhuzhan/yingshi/20151105/42315.html"
+							}
+							otherWHCon.push(otherCon);
+							</script>
+							<script>
+							var otherCon = {
+								channelId : "97",
+								title : "国产影视音乐，期待原创“好声音”",
+								url : "/zhuzhan/yingshi/20151104/42216.html"
+							}
+							otherWHCon.push(otherCon);
+							</script>
+		<div class="clear"></div>
+	</ul>
+	<!-- 头条，只取当前标签栏目头条内容？ -->
+	<div class="newsimgbox2" name="whTop" style="">
+		<img src="/u/cms/www/201511/11092415vwpo.jpg" width="275" height="190"/>
+		<div class="newviewtxt2 txtcenter" style="margin-top:-70px;">
+			<a href="/zhuzhan/xinwen/20151111/42786.html" target="_blank" class="white">《戚继光》：台州乱弹重放异彩</a>
+		</div>
+		<div class="newsimgtxtbg2" style="margin-top:-73px;"></div>
+	</div>
+	<div>
+	<ul class="newslist">
+		<a id="wh1" href="/zhuzhan/xinwen/20151110/42726.html" target="_blank"><li>郑晓龙：我更享受幕后的感觉</li></a>
+		<a id="wh2" href="/zhuzhan/xinwen/20151106/42380.html" target="_blank"><li>孟京辉热衷颠覆性改编《你好，忧愁》...</li></a>
+		<a id="wh3" href="/zhuzhan/xinwen/20151106/42379.html" target="_blank"><li>绍兴小百花尝试历史题材新编越剧《屈...</li></a>
+	</ul>
+	</div>
+</div>
+</div>
+<!-- 学人 -->
+<div class="rightbox">
+	<div class="newsimgbox" style="position:relative;">
+		<img src="/u/cms/www/201511/09080757dnf3.jpg" width="295" height="190"/>
+		<div class="more"><a href="/xueren/index.htm" class="white" target="_blank">查看更多</a></div>
+		<div class="newsimgtline"><h2>学人</h2></div>
+		<div class="newsimgtlinebg"></div>
+		<!-- 头条 -->
+		<div class="newviewtxt" style="margin-top:-45px;">
+			<a href="/xueren/42412.htm" class="white" target="_blank">
+				<h3>【专题】国企效益如何与中国经济活力划等号 </h3>
+			</a>
+		</div>
+		<div class="newsimgtxtbg" style="margin-top:-43px;height:40px;"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="hotnewslist">
+	<ul>
+		<li>
+		<a href="/xueren/42420.htm" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;【视界观】当图像“遭遇”数字
+		</a>
+		</li>
+		<li>
+		<a href="/xueren/42417.htm" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;【讲演】郑培凯：中国历代是怎么...
+		</a>
+		</li>
+		<li>
+		<a href="/xueren/42416.htm" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;【学林】“睹乔木而思故家，考文...
+		</a>
+		</li>
+	</ul>
+	</div>
+</div>
+<!-- 读书 -->
+<div class="rightbox">
+	<div class="newsimgbox" style="position:relative;">
+		<img src="/u/cms/www/201511/09073004k6fa.jpg" width="295" height="190"/>
+		<div class="more"><a href="/zhuzhan/dushu/" class="white" target="_blank">查看更多</a></div>
+		<div class="newsimgtline"><h2>读书</h2></div>
+		<div class="newsimgtlinebg"></div>
+		<!-- 头条 -->
+		<div class="newviewtxt" style="margin-top:-45px;">
+			<a href="/zhuzhan/dushu/20151109/42624.html" class="white" target="_blank">
+				<h3>陈铁健：师缘十载漫思忆</h3>
+			</a>
+		</div>
+		<div class="newsimgtxtbg" style="margin-top:-43px;height:40px;"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="hotnewslist">
+	<ul>
+		<li>
+		<a href="/zhuzhan/dushu/20151109/42634.html" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;【每周一书】《生活与命运》
+		</a>
+		</li>
+		<li>
+		<a href="/zhuzhan/dushu/20151109/42658.html" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;【阅读西方】 《黛德丽与里芬斯...
+		</a>
+		</li>
+		<li>
+		<a href="/zhuzhan/dushu/20151109/42650.html" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;【特稿】可敬的吴江老夫子
+		</a>
+		</li>
+	</ul>
+	</div>
+</div>
+<div class="pagerightbox">
+	<!-- <h2 class="rbtitleline"><div class="right font12 mt10 mr5">查看更多</div>合作伙伴</h2> -->
+	<div class="rightboxlist" style="margin-right: -5px;padding:0px;">
+		<p class="mar15"><script type="text/javascript" src="/ad.jspx?id=17"></script></p>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<!--热点专题-->
+<div class="rightbox">
+	<div class="newsimgbox" style="position:relative;">
+		<img src="/u/cms/www/201511/061801124mgs.jpg" width="295" height="190"/>
+		<!-- 服务器为222 -->
+		<div class="more"><a href="/zhuzhan/zhuanti/" class="white" target="_blank">查看更多</a></div>
+		<div class="newsimgtline">
+			<h2>热点专题</h2>
+		</div>
+		<div class="newsimgtlinebg"></div>
+
+		<div class="newviewtxt" style="margin-top:-45px;">
+			<a href="/topic/109.jspx" class="white" target="_blank"><h3> 两岸领导人习近平、马英九新加坡会面</h3></a>
+		</div>
+		<div class="newsimgtxtbg" style="margin-top:-43px;height:40px;"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="hotnewslist">
+	<ul>
+		<li>
+		<a href="/topic/108.jspx" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;习近平对越南、新加坡进行国事访问
+		</a>
+		</li>
+		<li>
+		<a href="/topic/98.jspx" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;在上海，爱上海
+		</a>
+		</li>
+		<li>
+		<a href="/topic/110.jspx" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;“双十一”七年之痒
+		</a>
+		</li>
+		<li>
+		<a href="/topic/107.jspx" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16" />&nbsp;&nbsp;&nbsp;2015工博会
+		</a>
+		</li>
+	</ul>
+	</div>
+</div>
+
+<!--微电影--> 
+<div class="rightbox">
+	<div class="newsimgbox" style="position:relative;">
+		<img src="/u/cms/www/201501/19115924bkqq.jpg" width="295" height="190"/>
+		<div class="more"><a href="/zhuzhan/weidianying/" target="_blank" class="white">查看更多</a></div>
+		<div class="newsimgtline"><h2>微电影</h2></div>
+		<div class="newsimgtlinebg"></div>
+		<div class="newviewtxt" style="margin-top:-45px;">
+			<a href="/zhuzhan/gaoxiaoxing/20150119/22551.html" class="white" target="_blank"><h3>《第51把钥匙》</h3></a>
+		</div>
+		<div class="newsimgtxtbg" style="margin-top:-43px;height:40px;"></div>
+		<div class="clear"></div>
+	</div>
+	<div class="hotnewslist">
+		<ul>
+		<li>
+		<a href="/zhuzhan/gaoxiaoxing/20150115/22385.html" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16"/>&nbsp;&nbsp;&nbsp;《把你留下》
+		</a>
+		</li>
+		<li>
+		<a href="/zhuzhan/gaoxiaoxing/20150119/22553.html" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16"/>&nbsp;&nbsp;&nbsp;《小梁的休息日》
+		</a>
+		</li>
+		<li>
+		<a href="/zhuzhan/gaoxiaoxing/20150119/22552.html" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16"/>&nbsp;&nbsp;&nbsp;《无界》
+		</a>
+		</li>
+		<li>
+		<a href="/zhuzhan/gaoxiaoxing/20140709/26409.html" target="_blank">
+			<img src="/r/cms/www/whb/images/newIndex/hicon.png" width="16" height="16"/>&nbsp;&nbsp;&nbsp;《茸城之光》
+		</a>
+		</li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<!--汇生活-->
+<div class="pagerightbox">
+<h2 class="rbtitleline">
+<a href="/zhuzhan/shenghuo/" target="_blank" style="color:#fff;">
+	<div class="right font12 mt10 mr5">查看更多</div>
+</a>汇生活
+</h2>
+<!-- 子栏目 -->
+<div class="rightboxlist">
+	<ul class="rbnav">
+		<a href="javascript:void(0);)" onclick="changeTab('73', 0);">
+			<li id="73" name="hsh" class="on">
+			<!-- TODO 待修改 汇学-->
+			教育
+				<div class="arr"><img src="/r/cms/www/whb/images/newIndex/arrd.png" width="10" height="5" alt=""/></div>
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201510/2008544065dq.jpg",
+					title : "职业教育“攀高”才能“脱困”？",
+					url : "/zhuzhan/xue/20151020/40052.html"
+				}
+				huiCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "73",
+					title : "一流学科带动一流大学建设",
+					url : "/zhuzhan/xue/20151106/42403.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "73",
+					title : "“溯源”全国设计教育学术研讨会在沪...",
+					url : "/zhuzhan/xue/20151031/42193.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "73",
+					title : "6人获上海市自然科学牡丹奖",
+					url : "/zhuzhan/xue/20151103/42130.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "73",
+					title : "纪念冯契百年诞辰研讨会举行",
+					url : "/zhuzhan/xue/20151103/42129.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "73",
+					title : "外语学习步入“多语种+”时代",
+					url : "/zhuzhan/xue/20151103/42128.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+		<a href="javascript:void(0);)" onclick="changeTab('587', 1);">
+			<li id="587" name="hsh" >
+			<!-- TODO 待修改 健康-->
+			健康
+				
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201510/12072123m8cd.png",
+					title : "血脂“正常”，还需服药治疗吗?",
+					url : "/zhuzhan/jiankang/20151012/39255.html"
+				}
+				huiCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "587",
+					title : "药食俱佳的“天橘”",
+					url : "/zhuzhan/jiankang/20151102/42026.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "587",
+					title : "你有医学健康疑问，我们邀请医学专家...",
+					url : "/zhuzhan/jiankang/20151102/42025.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "587",
+					title : "定期肾体检，远离肾脏病",
+					url : "/zhuzhan/jiankang/20151102/42024.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "587",
+					title : "痛风患者“贴秋膘”的11个注意事项",
+					url : "/zhuzhan/jiankang/20151102/42023.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "587",
+					title : "虾肥蟹美防痛风",
+					url : "/zhuzhan/jiankang/20151019/39926.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+		<a href="javascript:void(0);)" onclick="changeTab('68', 2);">
+			<li id="68" name="hsh" >
+			<!-- TODO 待修改 汇吃-->
+			美食
+				
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201407/22101803fc7y.jpg",
+					title : "【还敢吃快餐？】无拌面不夏天",
+					url : "/zhuzhan/chi/20140721/10850.html"
+				}
+				huiCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "68",
+					title : "爱尔兰食品局牵手顺丰优选抢占中国市场",
+					url : "/zhuzhan/chi/20151106/42457.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "68",
+					title : "朋友圈摄影大赛，终于产生冠军！",
+					url : "/zhuzhan/chi/20151009/39115.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "68",
+					title : "从容不迫西班牙",
+					url : "/zhuzhan/chi/20150921/37836.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "68",
+					title : "陆家嘴深处的“世外桃源”",
+					url : "/zhuzhan/chi/20150921/37835.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "68",
+					title : ""愿意为何书桓做一辈子菜"",
+					url : "/zhuzhan/chi/20150909/36984.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+		<a href="javascript:void(0);)" onclick="changeTab('69', 3);">
+			<li id="69" name="hsh" >
+			<!-- TODO 待修改 汇玩-->
+			游玩
+			
+				
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201501/1308061705hw.jpg",
+					title : "《智取威虎山》引爆东北冰雪游",
+					url : "/zhuzhan/wan/20150113/22207.html"
+				}
+				huiCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "69",
+					title : "白领文化艺术节 体验传统文化魅力  ",
+					url : "/zhuzhan/wan/20151022/40398.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "69",
+					title : "骑游法国南部，登顶旺度山",
+					url : "/zhuzhan/wan/20151012/39469.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "69",
+					title : "阅兵女兵“中国之美” 国货自然堂来打造",
+					url : "/zhuzhan/wan/20150910/37101.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "69",
+					title : "上海宝诚BMW 5系商务车队向上海明天...",
+					url : "/zhuzhan/wan/20150910/37070.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "69",
+					title : "让超级小熊BOOMi陪你的孩子一起度假",
+					url : "/zhuzhan/wan/20150908/36921.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+		<a href="javascript:void(0);)" onclick="changeTab('71', 4);">
+			<li id="71" name="hsh" >
+			<!-- TODO 待修改 汇财-->
+			理财
+				
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201509/08071459g32h.jpg",
+					title : "指数熔断机制方案公开征求意见",
+					url : "/zhuzhan/cai/20150908/36836.html"
+				}
+				huiCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "71",
+					title : "国内首家银行托管众筹平台上线",
+					url : "/zhuzhan/cai/20151026/40749.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "71",
+					title : "“过山车”A股昨现“千股涨停”",
+					url : "/zhuzhan/cai/20150917/37533.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "71",
+					title : "央行今起降息0.25个百分点  9月6日起...",
+					url : "/zhuzhan/cai/20150826/36029.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "71",
+					title : "中金所实施股指期货管控",
+					url : "/zhuzhan/cai/20150826/36028.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+		<a href="javascript:void(0);)" onclick="changeTab('588', 5);">
+			<li id="588" name="hsh" >
+			<!-- TODO 待修改 环球-->
+			环球
+				
+			</li>
+		</a>
+		<!-- 取子栏目的一条头条 -->
+				<script>
+				var con = {
+					typeImg : "/u/cms/www/201510/29070937qa8p.jpg",
+					title : "政要与足球的天作之合",
+					url : "/zhuzhan/huanqiu/20151029/41203.html"
+				}
+				huiCon.push(con);
+				</script>
+		<!-- 其他内容 -->
+				<script>
+				var otherCon = {
+					channelId : "588",
+					title : "巴以暴力冲突有愈演愈烈之势",
+					url : "/zhuzhan/huanqiu/20151105/42310.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "588",
+					title : "俄罗斯这次可不想输了舆论战",
+					url : "/zhuzhan/huanqiu/20151105/42309.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "588",
+					title : "叙利亚成为俄新式武器“秀场”",
+					url : "/zhuzhan/huanqiu/20151105/42308.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "588",
+					title : "德意志银行裁员1.5万人",
+					url : "/zhuzhan/huanqiu/20151030/41521.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+				<script>
+				var otherCon = {
+					channelId : "588",
+					title : "白河夜船",
+					url : "/zhuzhan/huanqiu/20151029/41205.html"
+				}
+				otherHuiCon.push(otherCon);
+				</script>
+		<div class="clear"></div>
+	</ul>
+	<!-- 头条，只取当前标签栏目头条内容？ -->
+	<div class="newsimgbox2" name="hshTop">
+		<img src="/u/cms/www/201510/2008544065dq.jpg" width="275" height="190"/>
+		<div class="newviewtxt2 txtcenter" style="margin-top:-70px;margin-left:5px;">
+			<a href="/zhuzhan/xue/20151020/40052.html" target="_blank" class="white">职业教育“攀高”才能“脱困”？</a>
+		</div>
+		<div class="newsimgtxtbg2" style="margin-top:-65px;height:40px;"></div>
+	</div>
+	<div>
+	<ul class="newslist">
+		<a id="huiCon0" href="/zhuzhan/xue/20151106/42403.html" target="_blank"><li>一流学科带动一流大学建设</li></a>
+		<a id="huiCon1" href="/zhuzhan/xue/20151031/42193.html" target="_blank"><li>“溯源”全国设计教育学术研讨会在沪...</li></a>
+		<a id="huiCon2" href="/zhuzhan/xue/20151103/42130.html" target="_blank"><li>6人获上海市自然科学牡丹奖</li></a>
+		<a id="huiCon3" href="/zhuzhan/xue/20151103/42129.html" target="_blank"><li>纪念冯契百年诞辰研讨会举行</li></a>
+		<a id="huiCon4" href="/zhuzhan/xue/20151103/42128.html" target="_blank"><li>外语学习步入“多语种+”时代</li></a>
+	</ul>
+	</div>
+</div>
+</div>
+
+<!--汇试听(微视频/汇生活/汇拍)-->
+<div class="pagerightbox">
+	<h2 class="rbtitleline"><div class="right font12 mt10 mr5"><a href="/zhuzhan/huishiting/" style="color:#fff;" target="_blank">查看更多</a></div>汇视听</h2>
+	<!-- 图片(汇拍) -->
+	<div class="rightboxlist">
+		<div class="left" style="position: relative;">
+			<a href="/hsttupian/42567.htm" target="_blank">
+				<img src="/u/cms/www/201511/07191254vg4m.jpg" width="100" height="65" alt="" class="opacity"/>
+			</a>
+			<div class="white typeicon"><i class="fa fa-image fa-3x"></i></div>
+		</div>
+		<div class="left ml10 height15 w60">
+			<a href="/hsttupian/42567.htm" target="_blank"><h3 class="black">与洋护士同台竞技</h3>
+		<span class="dgray">为了培养国际化护理人才，搭建医学院校与医院及国外...</span></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- 视频(微视频其他栏目) -->
+	<div class="rightboxlist">
+		<div class="left" style="position: relative;">
+			<a href="/zhuzhan/xwsp/20150511/30159.html" target="_blank">
+				<img src="/u/cms/www/201505/11154414jx70.jpg" width="100" height="65" alt="" class="opacity"/>
+			</a>
+			<div class="white typeicon"><i class="fa fa-play-circle-o fa-3x"></i></div>
+		</div>
+		<div class="left ml10 height15 w60">
+			<a href="/zhuzhan/xwsp/20150511/30159.html" target="_blank"><h3 class="black">“同一种精神，同一个...</h3>
+		<span class="dgray">伴随着雄壮激昂的《保卫黄河》，上海市志愿服务公益...</span></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+<!-- 音频(汇听) -->
+	<div class="rightboxlist">
+		<div class="left" style="position: relative;">
+			<a href="/zhuzhan/htsp/20140228/3763.html" target="_blank">
+				<img src="/u/cms/www/201402/28152549npxr.jpg" width="100" height="65" alt="" class="opacity"/>
+			</a>
+			<div class="white typeicon"><i class="fa fa-microphone fa-3x"></i></div>
+		</div>
+		<div class="left ml10 height15 w60">
+			<a href="/zhuzhan/htsp/20140228/3763.html" target="_blank"><h3 class="black">上海制造，上海味道</h3>
+		<span class="dgray">本期嘉宾：马尚龙 陈海汶</span></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<!-- 广告位   -->
+<div class="pagerightbox">	
+	<div class="rightboxlist" style="margin-right: -5px;padding:0px;">
+		<p class="mar15"><script type="text/javascript" src="/ad.jspx?id=16"></script></p>
+		<div class="clear"></div>
+	</div>
+</div>
+<!--活动日历-->
+<div class="pagerightbox">
+	<h2 class="rbtitleline">
+		<div class="right font12 mt10 mr5">
+			<a href="/zhuzhan/huodong/" style="color:#fff;" target="_blank">查看更多</a>
+		</div>活动日历
+	</h2>
+	<div class="rightboxlist" style="padding: 0;">
+		<!-- 日历 -->
+		<div id="myId" class="jalendar"></div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+
+<!-- 友情链接 -->
+<div class="pagerightbox">
+	<!-- <h2 class="rbtitleline"><div class="right font12 mt10 mr5">查看更多</div>合作伙伴</h2> -->
+	<div class="rightboxlist" style="margin-right: -5px;padding:0px;">
+		<p class="mar15"><script type="text/javascript" src="/ad.jspx?id=8"></script></p>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<!-- 广告位   -->
+<div class="pagerightbox">
+	<div class="left w50 txtright">
+		<p class="mar15"><script type="text/javascript" src="/ad.jspx?id=7"></script></p>
+	</div>
+	<div class="left w50 txtright" style="width:auto;">
+		<p class="mar15"><script type="text/javascript" src="/ad.jspx?id=9"></script></p>
+	</div>
+<div class="left w50 txtright" style="width:auto;">
+		<p class="mar15"><script type="text/javascript" src="/ad.jspx?id=18"></script></p>
+	</div>
+	<div class="left w50 txtright" style="width:auto;">
+		<p class="mar15"><script type="text/javascript" src="/ad.jspx?id=19"></script></p>
+	</div>
+	<div class="left w50 txtright" style="width:auto;">
+		<p class="mar15"><script type="text/javascript" src="/ad.jspx?id=20"></script></p>
+	</div>
+	
+</div>
+ 
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+</div>
+</div>
+
+<!-- 页脚 -->
+﻿<script>
+var linkWXName = new Array();
+var linkWXImg = new Array();
+var linkAppName = new Array();
+var linkAppImg = new Array();
+function changeLink(id) {
+	var nameArr, imgArr;
+	var ul = $("#friendLink");
+	var ctgId = ul.attr("ctgId");
+	if(id == ctgId)
+		return ;
+	var child = ul.children("li");
+	for(var li in child) {
+		child.remove();
+	}
+	if(ctgId == "1") {
+		nameArr = linkAppName;
+		imgArr = linkAppImg;
+		ul.attr("ctgId", "2");
+	} else {
+		nameArr = linkWXName;
+		imgArr = linkWXImg;
+		ul.attr("ctgId", "1");
+	}
+	
+	for(var i = 0; i < nameArr.length; i++) {
+		var html = "<li><img src='" + imgArr[i] + "' alt='" + nameArr[i] + "' width='77' height='77'/>" +
+				"<br>" + nameArr[i] + "</li>";
+		ul.append(html);
+	}
+}
+</script>
+<div class="copyright">
+	<div class="crmore">
+		<div class="left w30 txtleft height20 m10" >
+			<img src="/r/cms/www/whb/images/newIndex/whlogocp.png" width="110" height="76" alt=""/><br>
+		本网站文字、图片和视频作品，除特别说明外均为独家授权发布，转载请注明出处和原文链接。<br>
+			<!-- 201 -->
+			<a href="/wenhuibjiesao.htm" target="_blank" class="white">文汇报介绍</a>
+			<!-- 202 --> 
+			| <a href="/wenhuiwjiesao.htm" target="_blank" class="white">文汇网介绍</a>
+			 <!-- 203 -->
+			| <a href="/lianxiwomen.htm" target="_blank" class="white">联系我们</a>
+			<br/>
+			<a href="http://www.whb.cn/whwgg/23629.htm" class="white">文汇网跟帖评论自律管理承诺书</a>
+
+		</div>
+		<div class="left w20 mt10 pl10" style="border-left: solid 1px #9c9c9c;">
+		<div class="w100 left">
+			<ul>
+				<a href="javascript:void(0);" onclick="changeLink('1');" class="white">
+					<li>
+						<img src="/r/cms/www/whb/images/newIndex/wx.png" width="32" height="32" alt=""/><br>互动微信
+					</li>
+				</a>
+				<a href="http://weibo.com/wenhuiwang" target="_blank" class="white">
+					<li>
+						<img src="/r/cms/www/whb/images/newIndex/wb.png" width="32" height="32" alt=""/><br>官方微博
+					</li>
+				</a>
+				<a href="javascript:void(0);" onclick="changeLink('2');" class="white">
+					<li>
+						<img src="/r/cms/www/whb/images/newIndex/wh.png" width="32" height="32" alt=""/><br>APP下载
+					</li>
+				</a>
+			</ul>
+		</div>
+				<script>linkAppName.push("iPad版");linkAppImg.push("/u/cms/www/201407/23172157avq9.png")</script>
+				<script>linkAppName.push("iPhone版");linkAppImg.push("/u/cms/www/201412/13175528hbjx.png")</script>
+		<div class="w100 left">
+			<ul id="friendLink" ctgId="1">
+				<li>
+					<img src="/u/cms/www/201406/03102456oi5g.jpg" alt="文汇报官方微信" width="77" height="77"/>
+					<br>文汇报官方微信
+				</li>
+				<script>linkWXName.push("文汇报官方微信");linkWXImg.push("/u/cms/www/201406/03102456oi5g.jpg")</script>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		</div>
+		<div class="left w45 mt10 pl10" style="border-left: solid 1px #9c9c9c;">
+			<div class="w100 left">
+				<table width="99%" height="199" border="0" cellpadding="0" cellspacing="4">
+				<tbody>
+					<tr><td height="23" align="left"><h3>友情链接</h3></td></tr>
+					<tr>
+						<td height="164" align="left" valign="top" class="height15">
+							<a href="http://www.cac.gov.cn" target="_blank" class="white">国家互联网信息办公室</a> | 
+							<a href="http://www.jingan.gov.cn" target="_blank" class="white">上海静安</a> | 
+	                                                <a href="http://www.ljzfin.com/" target="_blank" class="white">陆家嘴金融网</a> |
+							<a href="http://www.cherish.com.cn/" target="_blank" class="white">上海秀群</a><br>
+                                                          <a href="http://www.shzh.net/" target="_blank" class="white">上海装潢网</a>  
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="copyrightline">
+	<div class="copyrighttxt">文汇网 ● 版权所有 All Rights Reserved ICP许可 沪 B2-20150001 号 Copyright(c)2004</div>
+</div></body>
+</html>

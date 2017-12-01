@@ -1,0 +1,774 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="description" content="SJTU Portal, Codename Canvas, since 2011" />
+    <meta name="keywords" content="SJTU,Portal,Canvas,OA,上海交通大学,门户,协同办公,社交,工作区" />
+    <meta name="author" content="marstone" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>欢迎访问::我的数字交大</title>
+    <link rel="shortcut icon" href="http://canvas.sjtu.edu.cn/favicon.ico" type="image/x-icon">
+    <link href="/App_Themes/Default/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/Default/canvas.menu.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/Default/canvas.web.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/Default/canvas.im.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript">Function.debug = false;</script>
+
+    <script src="/App_Scripts/canvas.sdk.js" type="text/javascript"></script>
+    <script src="http://202.120.35.202:8000/client.js" type="text/javascript"></script>
+    <script src="/App_Scripts/jquery-1.5.1.js" type="text/javascript"></script>
+    <script src="http://taskcenter.sjtu.edu.cn/resources/common/js/infoplus.sdk.js" type="text/javascript"></script>
+    <script src="/App_Scripts/canvas.web.js" type="text/javascript" charset="gb2312"></script>
+    
+    <script src="/App_Scripts/canvas.date.js" type="text/javascript"></script>
+    <script src="/App_Scripts/modernizr-2.8.3.js" type="text/javascript"></script>
+    <script src="/App_Scripts/jquery-ui-1.8.11.min.js" type="text/javascript"></script>
+    <script src="/App_Scripts/jquery.blockUI-2.39.js" type="text/javascript"></script>
+    
+    <script src="/App_Scripts/canvas.menu.js" type="text/javascript"></script>
+    <script src="/App_Scripts/strophejs-1.0.2/strophe.js" type="text/javascript"></script>
+    <script src="/App_Scripts/canvas.im.js" type="text/javascript"></script>
+    
+    
+
+    
+    
+        <script src="/App_Scripts/snowstorm.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        // google analytics, add by marstone, 2012/03/21
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1472479-7']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        // 顶部top
+        $(function () {
+            $("#logoBar").click(function () {
+                if ($("#canvas_headerBar").is(":hidden")) {
+                    $("#canvas_headerBar").slideDown("slow");
+                    $("#canvas_headerBar .c_h_discussion").each(function () {
+                        $(this).attr("style", generateMixed($(this).attr("title")));
+                    });
+                }
+                $("#MainBody").click(function () {
+                    if (!$("#canvas_headerBar").is(":hidden")) {
+                        $("#canvas_headerBar").slideUp();
+                    };
+                });
+                return false;
+            });
+        });
+
+        var chars = ["#C62969", "#038360", "#AC170B", "#7C069D", "#006BA7", "#78B201", "#D15B03", "#B10101", "#FF7227", "#1788CA"];
+
+        function generateMixed(n) {
+            var char = 0;
+            var len = n.length;
+            for (var i = 0; i < len; i++) {
+                var a = n.substr(i, 1);
+                char = char ^ a.charCodeAt();
+            }
+            char = char % 10;
+            var res = "";
+            res = chars[char];
+            return "background: none repeat scroll 0 0 "+res;
+        }
+    </script>
+    
+<script type="text/javascript">
+
+    Canvas.Web.appPath = "/";
+    Canvas.Web.now = 1447219962;
+    Canvas.Web.utcNow = 1447219962;
+    Canvas.Web.timeDifference = Math.round(Canvas.Web.now - new Date().getTime() / 1000);
+    Canvas.Web.appSettings = [{"description":"科研管理系统（文科）","creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":0,"code":"08744879-5649-49e8-aa0b-0b46858d95f2","id":"08744879-5649-49e8-aa0b-0b46858d95f2"},{"creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":1,"code":"4e7f6045-5877-4fb8-8643-51e013b6bb04","id":"4e7f6045-5877-4fb8-8643-51e013b6bb04"},{"creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":1,"code":"61d2eb10-af8e-4ad4-b21a-561cdf962106","id":"61d2eb10-af8e-4ad4-b21a-561cdf962106"},{"description":"门户应用-讨论","creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":0,"code":"CanvasDiscussion","id":"375c1ed7-3c51-487c-abdc-5fd69dbf1fc8"},{"description":"科研管理系统（理科）","creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":0,"code":"427cee7c-6b0a-4949-8dc6-88ae80e48128","id":"427cee7c-6b0a-4949-8dc6-88ae80e48128"},{"description":"管理学院整合入本硕博学校门户","creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":0,"code":"cd406342-4f5a-4472-a173-9a25aee762d6","id":"cd406342-4f5a-4472-a173-9a25aee762d6"},{"description":"我的数字交大","creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":0,"code":"fd158cf2-a2fe-470d-93e4-9a80bd7ecbfe","id":"fd158cf2-a2fe-470d-93e4-9a80bd7ecbfe"},{"description":"知识库","creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":0,"code":"CanvasKnowledgeBase","id":"0bca7d2c-fa58-4d2c-a3a4-9ddae11e3585"},{"description":"管理员管理infoplus","creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":0,"code":"f70656f7-f843-48c0-9381-b94c0a223dd6","id":"f70656f7-f843-48c0-9381-b94c0a223dd6"},{"creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":1,"code":"e1a4f5c2-03fc-4985-bc92-d7f5e0326bc6","id":"e1a4f5c2-03fc-4985-bc92-d7f5e0326bc6"},{"description":"高基表","creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":0,"height":0,"code":"fdd56451-dff7-456e-8fbe-e88b0f1e2873","id":"fdd56451-dff7-456e-8fbe-e88b0f1e2873"},{"description":"网络集成管理系统","creationDate":"0001-01-01T00:00:00.0000000+08:00","installedCount":0,"isInstalled":false,"width":1,"height":0,"code":"NICMAN","id":"fdd56451-dff7-456e-8fbe-e88b0f1e2880"}];
+    Canvas.Web.app = { "code": null };
+
+
+
+    $(document).ready(function() {
+
+        Canvas.Home = "http://my.sjtu.edu.cn/";
+        // Initialize Widgets
+        Canvas.widgetize();
+
+        // Initialize this site
+        Canvas.Web.initialize();
+
+        if(null != Canvas.Web.user)
+        {
+            // Load menu bar
+            var $menu = $("#app_menu");
+            $.ajax({
+                type: "GET",
+                url: "/Home/MenuBar" + "?app=" + Canvas.Web.app.code,
+                cache: false,
+                data: '{ "app":"' + Canvas.Web.app.code + '","rand":' + Math.random() * 999 + '}',
+                contentType: "application/text;charset=utf-8",
+                dataType: "text",
+                error: function(e) {
+                },
+                success: function(data) {
+                    setTimeout(function() {
+                        if(null != preloader) preloader.stopAnimation();
+                        $menu.hide();
+                        $menu.html(data);
+                        $("#canvas_menu").appMenu();
+                        $menu.show();
+                    }, 50);
+                }
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "/Task/Me/AjaxTodo",
+                cache: false,
+                data: null,
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                error: function (e) { },
+                success: function (data) {
+                    if (data.total > 0) {
+                        $("#canvas-global-menu li:eq(1) .num").show().text(data.total > 99 ? "99+" : data.total);
+                    } else {
+                        $("#canvas-global-menu li:eq(1) .num").hide();
+                    }
+                },
+                complete: function () { }
+            });
+        }
+
+        
+        // $(function() { $("ul.canvas-menu").lavaLamp({ fx: "backout", speed: 700}) });
+        // $(function() { $("ul.canvas-menu").lavaLamp({ fx: "easeOutBack", speed: 700}) });
+
+        var card = document.getElementById("canvas_profile_card");
+        if(null != Canvas.Web.user && null != card)
+        {
+            var $search = $("#canvas_contacts_search");
+            $search.keypress(function () {
+                // need login
+                if(null == Canvas.Web.user) return;
+                var ul = document.getElementById("canvas_contacts_list");
+                refreshContacts(true);
+            });
+                
+            card.backgroundColor="red";
+            $(card.getElementsByTagName("a")[0]).button( { icons: { primary: "ui-icon-mail-closed" } } );
+            $(card.getElementsByTagName("a")[1]).button( { icons: { primary: "ui-icon-comment" } } );
+            $(card).mouseleave(function() {
+                this.style.display = "none";
+            });
+        }
+
+        // workspace button
+        $(".logo .button").click(function () { $(".logo .workspaces").slideDown(300); });
+        $(".logo").mouseleave(function () { $(".logo .workspaces").slideUp(300); });
+
+        // workspace button
+        $(".login .truename").click(function () { $(".login .settings").slideDown(300); });
+        $(".login").mouseleave(function () { $(".login .settings").slideUp(300); });
+
+        // set canvas-global-menu cur
+        var $menus = $("#canvas-global-menu");
+        var keywords = ["/Task", "/Notification", "/Circle", "/App"];
+        for(var i = 0; i < keywords.length; i++) {
+            if(window.location.href.indexOf(keywords[i]) > 0) {
+                var selector = "li:nth-child(" + (i+2) + ") a";
+                $menus.find(selector).addClass("cur");
+                $menus.find("li a").first().removeClass("cur");
+            }
+        }
+
+        setTimeout(function() {
+            try {
+                return;
+                $(".canvas_im_dock").show();
+                refreshContacts(true);
+            } catch(e) {
+                debugger;
+            }
+        }, 2000);
+    });
+
+     
+    /**
+     * Calculate data page width
+     */    
+    function strWidth(str) {
+        var intLength = 0;
+        for (var i = 0; i < str.length; i++) {
+            if ((str.charCodeAt(i) < 0) || (str.charCodeAt(i) > 255))
+                intLength += 13;
+            else if ((str.charCodeAt(i) > 0x40) && (str.charCodeAt(i) < 0x5B))
+                intLength += 10;
+            else 
+                intLength += 8;
+        }
+        return intLength;
+    }
+
+    function refreshContacts(check) {
+        var updateInterval = 1000;
+        var ul = document.getElementById("canvas_contacts_list");
+        if(null == ul) return;
+        var now = new Date().getTime();
+        var timespan = now - ul.lastSubmit;
+        // shall we hang up the suggest request?
+        if (timespan < updateInterval && check) {
+            // One timer is enough
+            if (null == ul.timer)
+                ul.timer = setTimeout(function () { refreshContacts(false); }, updateInterval - timespan);
+            return;
+        }
+        // Clear timer
+        if (null != ul.timer) clearTimeout(ul.timer);
+        ul.timer = undefined;
+
+        var box = document.getElementById("canvas_contacts_search");
+        var thisSubmit = new Date().getTime();
+        ul.lastSubmit = thisSubmit;
+
+        $(box).addClass("loading");
+        $.ajax({
+            type: "POST",
+            url: "/Profile/Me/AjaxContacts",
+            cache: false,
+            data: '{prefix:"' + box.value + '",code:"Contacts",pageNo:0,rand:' + Math.random() * 999 + '}',
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            error: function (e) { },
+            success: function (data) { 
+                if (ul.lastSubmit > thisSubmit) return;
+                $(box).removeClass("loading");
+                Canvas.Web.suggestedContacts = null;
+                if(null != data && null != data.items)
+                {
+                    ul.innerHTML = "";
+                    Canvas.Web.suggestedContacts = data.items;
+                    for(var e = 0; e < data.items.length; e++)
+                    {
+                        var li = document.createElement("li");
+                        
+                        // calculate width
+                        var name = data.items[e].codeName;
+                        if(strWidth(name) > 100)
+                        {
+                            while(strWidth(name) > 97) name = name.substring(0, name.length - 1);
+                            name += "..";
+                        }
+                        li.innerHTML = name;
+
+                        li.codeId = data.items[e].codeId;
+                        li.className = "online";
+                        ul.appendChild(li);
+                        li.onclick = function() {
+                            var card = document.getElementById("canvas_profile_card");
+                            var user = null;
+                            for (var i = 0; i < Canvas.Web.suggestedContacts.length; i++) {
+                                var contact = Canvas.Web.suggestedContacts[i];
+                                if (contact.codeId == this.codeId) {
+                                    user = contact;
+                                    break;
+                                }
+                            }
+                            // Find user & card
+                            if (null == user || null == card) return false;
+                            card.style.position = "fixed";
+                            card.style.top = this.offsetTop + "px";
+                            card.style.right = this.offsetWidth + 32 + "px";
+                            card.style.display = "block";
+                            var spans = card.getElementsByTagName("span");
+                            // for(i = 0; i < spans.length; i++) { }
+                            spans[0].innerHTML = user.codeName;
+                            spans[1].innerHTML = user.itemHint;
+                            spans[2].innerHTML = user.itemCode;
+                            document.getElementById("canvas_card_avatar").src = user.itemImageUri;
+
+                            // jabber id, also email address
+                            var email = user.codeId + "@sjtu.edu.cn";
+                            var jid = user.codeId + "@i634.tk";
+
+                            var anchors = card.getElementsByTagName("a");
+                            anchors[0].href = "mailto:" + email;
+
+                            // Send offline message
+                            anchors[1].onclick = function() {
+                                Canvas.IM.open(jid);
+                            };
+                        }
+                    }
+                }
+            },
+            complete: function () {  }
+        });
+    }
+</script>
+
+
+<script type="text/javascript">
+
+    var Preloader = function(s) {
+        var instance = this;
+        clearTimeout(this.cImageTimeout);
+        cImageTimeout=0;
+        var startWrapper = function() {
+            instance.loaderImage = document.getElementById('loaderImage');
+            if (null != instance.loaderImage)
+                instance.startAnimation();
+            else
+                cImageTimeout = setTimeout(startWrapper, 100);
+        };
+        this.genImage = new Image();
+        this.genImage.onload=function (){
+            cImageTimeout = setTimeout(startWrapper, 20);
+        };
+        // genImage.onerror=new Function('alert(\'Could not load the image\')');
+        this.genImage.src=s;
+        this.cImageSrc = s;
+    };
+    Preloader.SECONDS_BETWEEN_FRAMES = 0;
+    
+    Preloader.prototype = {
+        cSpeed : 8,
+        cWidth:65,
+        cHeight:5,
+        cTotalFrames:37,
+        cFrameWidth:65,
+        cImageTimeout:false,
+        cIndex:0,
+        cXpos:0,
+        
+        isStop : false,
+        genImage : null,
+        cImageSrc : null,
+        stopAnimation: function () {
+            this.isStop = true;
+        },
+        
+        startAnimation:function(){
+            if(this.isStop) return;
+            var instance = this;
+            this.loaderImage.style.backgroundImage='url('+this.cImageSrc+')';
+            this.loaderImage.style.width=this.cWidth+'px';
+            this.loaderImage.style.height=this.cHeight+'px';
+		
+            //FPS = Math.round(100/(maxSpeed+2-speed));
+            var FPS = Math.round(100/this.cSpeed);
+            Preloader.SECONDS_BETWEEN_FRAMES = 1 / FPS;
+		
+            setTimeout(function () {
+                instance.continueAnimation();
+            }, Preloader.SECONDS_BETWEEN_FRAMES/1000);
+        },
+        
+        getloaderElement:function () {
+            
+        },
+
+        continueAnimation : function () {
+            if(this.isStop) return;
+            var instance = this;
+            this.cXpos += this.cFrameWidth;
+            //increase the index so we know which frame of our animation we are currently on
+            this.cIndex += 1;
+		 
+            //if our cIndex is higher than our total number of frames, we're at the end and should restart
+            if (this.cIndex >= this.cTotalFrames) {
+                this.cXpos =0;
+                this.cIndex=0;
+            }
+		
+            this.loaderImage.style.backgroundPosition=(-this.cXpos)+'px 0';
+            setTimeout(function () {
+                instance.continueAnimation();
+            }, Preloader.SECONDS_BETWEEN_FRAMES*1000);
+        }
+
+    };
+
+    //The following code starts the animation
+    var preloader = new Preloader("/App_Themes/Default/Images/sprites.png");
+	
+</script>
+    
+    <script type="text/javascript">
+        $(function () {
+            if ($.browser.msie) {
+                if ($.browser.version < 8) {
+                    $("#browserOverlayer").css("height", $(window).height() + "px");
+                    $("#browserNotice").css("margin-top", $(window).height() / 2 - 100 + "px");
+                    $("#browserOverlayer").show();
+                    $("#browserNotice").show();
+                }
+            }
+            $(".appshower").hide();
+            if ("" == "False") {
+                $(".appshower").show();
+                $(".appshower").bind("click", function() {
+                    if ($(".canvas_container #slideLeftbar").css("display") == "none") {
+                        $(".canvas_container #slideLeftbar").show("normal");
+                        $(".canvas_container #slideLeftbar").addClass("float").removeClass("left");
+                    } else {
+                        $(".canvas_container #slideLeftbar").hide();
+                        $(".canvas_container #slideLeftbar").addClass("left").removeClass("float");
+
+                    }
+        });
+            }
+
+        });
+    </script>
+</head>
+    <body id="MainBody">
+    <div id="browserOverlayer" class="opacity9" style="display:none">
+    </div>
+    <div id="browserNotice" style="display:none">
+        <h2>浏览器不兼容</h2><br />
+        为了您能达到最佳浏览效果，我们建议您将浏览器升级至 IE8 或以上，感谢您对我们工作的支持与理解！<br/>
+        （如果您已经使用 IE8 或以上版本依然看到此提示，请检查并关闭该浏览器工具菜单中的兼容模式）<br/><br />
+        <a href="http://windows.microsoft.com/zh-CN/internet-explorer/download-ie" target="_blank">点击下载</a>
+    </div>
+        
+    <!-- 顶部浮动菜单 Start -->
+    <div id="canvas_headerBar" style="top:0px;display:none;">
+        <div>
+            <ul class="c_h_ttl">
+                <li>
+                    <a href="/" class="c_h_discussion" title="首页">
+                        <span class="is_c">
+                            <img src='https://api.sjtu.edu.cn/v1/file/eca26bca-0f77-4dec-b40e-7a6a5435db1c/' alt="首页" class="is_img"/>
+                        </span>
+                        <span>首页</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/Stream/" class="c_h_discussion" title="动态">
+                        <span class="is_c">
+                            <img src='https://api.sjtu.edu.cn/v1/file/2ce0bf01-16e8-4697-a0bc-01e8c53337f1/' alt="动态" class="is_img" />
+                        </span>
+                        <span>动态</span>
+                    </a>
+                </li>
+
+                           <li>
+                                    <a href="/App/4e7f6045-5877-4fb8-8643-51e013b6bb04/Load" class="c_h_discussion" title="日程管理">
+                                    <span class="is_c">
+                                            <img src='https://api.sjtu.edu.cn/v1/file/2a174070-9171-409f-ba7c-ed83fad3d257/' alt="日程管理" class="is_img" />
+                                    </span>
+                                    <span>日程管理</span>
+                                </a>
+                            </li>
+                           <li>
+                                    <a href="/App/61d2eb10-af8e-4ad4-b21a-561cdf962106/Load" class="c_h_discussion" title="会议管理">
+                                    <span class="is_c">
+                                            <img src='https://api.sjtu.edu.cn/v1/file/de0de241-f830-4e7a-9cca-e15c4e51f056/' alt="会议管理" class="is_img" />
+                                    </span>
+                                    <span>会议管理</span>
+                                </a>
+                            </li>
+                           <li>
+                                    <a href="/App/e1a4f5c2-03fc-4985-bc92-d7f5e0326bc6/Load" class="c_h_discussion" title="公文系统">
+                                    <span class="is_c">
+                                            <img src='https://api.sjtu.edu.cn/v1/file/61523b3a-a582-4eef-8dce-f92b3d6be743/' alt="公文系统" class="is_img" />
+                                    </span>
+                                    <span>公文系统</span>
+                                </a>
+                            </li>
+            </ul>
+        </div>
+        <div style="clear:both;display: block;"></div>
+    </div>
+    <!-- 顶部浮动菜单 End -->
+    <!-- header -->
+    <div class="canvas_header">
+        <div class="logo">
+            <div class="float_menu" id="logoBar"></div>
+                <div style="width:100px;height:35px;"></div>
+                <div class="button" style="float:left;">
+                    <div class="arrow"></div>
+                    <div class="workspace-icon">
+选择工作区                    </div>
+                </div>
+                <div>
+                <span style="line-height:26px">&nbsp;</span>
+                </div>
+                <div style="padding-left:50px;">
+                <div class="workspaces">
+                    <ul>
+                        <li><a href="/Account/Workspace/Me">个人工作区</a></li>
+                    </ul>
+                
+            </div>
+                </div>
+        </div>
+
+        <div class="global-menu">
+            <ul id="canvas-global-menu">
+                <li><a href="/" class="cur">首页</a></li>
+
+                <li><a href="/Task">流程<span class="num" style="display: none"></span></a ></li>
+                <li><a href="/Notification/">通知
+                    <span class="num" style="display: none"></span>
+                </a></li>
+
+                
+                <li><a href="/Circle/">人脉</a></li>
+                <li><a href="/App">应用</a></li>
+                
+            </ul>
+            <div class="clear"></div>
+        </div>
+        
+        <div class="login">
+            
+                <div class="truename">
+                    <span style="font-size:14px;line-height:24px;"><a href="/Account/LogOn">登录</a></span>
+                    <img src="/Uploads/Avatars/default_avatar_Tiny.jpg" alt="more" width="24" height="24" style="padding-top: -2px;padding-right:0px;float:right;" />
+                </div>   
+        </div>
+
+        <!-- start of application menu -->
+        <div id="app_menu" class="app-menu" >
+            <!-- <progress style="color: white; height:10px;width:600px;" class="win-medium win-ring"></progress> -->
+            <br/>
+            <div id="loaderImage"></div>
+        </div>
+        <!-- end of application menu -->
+    </div>
+    <!-- header end -->
+    <!-- container -->
+    
+    <div class="canvas_container">
+        <div class="appshower"></div>
+        <div class="left" id="slideLeftbar" style="">
+            
+            <div class="leftbar">
+                <ul>                        
+                    <li><img src="/App_Themes/Default/Images/icon-meeting.gif" width="16" height="16" /><a href="/App/CanvasKnowledgeBase/Load">知识库</a></li>
+                    <li><img src="/App_Themes/Default/Images/icon-act.gif" width="16" height="16" /><a href="/Stream">动态</a><span class="num" style="display: none"></span></li>
+                    <li><img src="/App_Themes/Default/Images/icon-talking.gif" width="16" height="16" /><a href="/App/CanvasDiscussion/Load">讨论</a></li>
+                    
+                            <li>
+                                    <img src="https://api.sjtu.edu.cn/v1/file/0d65ebfc-1d5a-4f51-8b3e-4eba69c9c69e" width="16" height="16" alt="日程管理" onerror="javascript:Canvas.Web.imgAppError(this,'16');" />
+<a href="/App/4e7f6045-5877-4fb8-8643-51e013b6bb04/Load">日程管理</a>                                    <a href="http://oa.sjtu.edu.cn/default.aspx?AppCode=Calendar" target="_blank" style="padding-left:5px;">
+                                        <img src="/App_Themes/Default/Images/index.png" width="10" height="10" style="margin-top:4px;" />
+                                    </a> 
+                                
+                                
+                            </li>
+                            <li>
+                                    <img src="https://api.sjtu.edu.cn/v1/file/2f4e51e4-7221-459b-84fc-bb2a9d5f02b7" width="16" height="16" alt="会议管理" onerror="javascript:Canvas.Web.imgAppError(this,'16');" />
+<a href="/App/61d2eb10-af8e-4ad4-b21a-561cdf962106/Load">会议管理</a>                                    <a href="http://oa.sjtu.edu.cn/default.aspx?AppCode=OA_Meeting" target="_blank" style="padding-left:5px;">
+                                        <img src="/App_Themes/Default/Images/index.png" width="10" height="10" style="margin-top:4px;" />
+                                    </a> 
+                                
+                                
+                            </li>
+                            <li>
+                                    <img src="https://api.sjtu.edu.cn/v1/file/6a48af36-4ae1-432c-9f6a-9b87fcb79dc6" width="16" height="16" alt="公文系统" onerror="javascript:Canvas.Web.imgAppError(this,'16');" />
+<a href="/App/e1a4f5c2-03fc-4985-bc92-d7f5e0326bc6/Load">公文系统</a>                                    <a href="http://oa.sjtu.edu.cn/default.aspx?AppCode=DocApp" target="_blank" style="padding-left:5px;">
+                                        <img src="/App_Themes/Default/Images/index.png" width="10" height="10" style="margin-top:4px;" />
+                                    </a> 
+                                
+                                
+                            </li>
+                </ul>
+                
+            </div>
+            <div class="circles"></div>
+                
+            <div class="version" style="position: fixed;">&nbsp;&nbsp;Version: 20150407 (β) <span style="display:none;">&nbsp;&nbsp; Weather 
+                <a href="#" onclick="if(null != snowStorm)snowStorm.toggleSnow();this.innerHTML=(this.innerHTML=='On'?'Off':'On');">Off</a></span>
+            </div>
+        </div>
+        
+        <div class="renderbody" style="width:840px">
+
+<style>
+.welcome_login
+{
+filter: alpha(opacity=90);
+opacity: .9;
+background-color: #1f1f1f;
+float:right;
+width:300px;
+height:120px;
+color:#ffff80;
+position:absolute;
+margin:0 0 0 510px;
+padding:20px 20px 20px 20px;
+}
+.welcome_login h2
+{
+font-size:20pt;
+font-weight:bolder;
+margin:0 0 10px;
+}
+
+.welcome_login a, a:visited
+{
+    color: #7BC5EA;
+}
+.welcome_login a:hover
+{
+    color: orange;
+}
+
+.oops
+{
+padding:20px 20px 20px 20px;
+}
+
+.oops h2
+{
+font-size:16pt;
+font-weight:bolder;
+margin:0 0 10px;
+}
+
+#canvas_dev_status .hidden {
+    display: none;    
+}
+
+</style>
+<div class="welcome_login">
+<h2>欢迎你，交大人</h2>
+<span>您正在使用上海交通大学部门级办公门户。如果您还没有JAccount，请点<a href="http://net.sjtu.edu.cn/info/1022/1401.htm">这里</a>查看如何申请账号。<a target="_blank" href="http://net.sjtu.edu.cn/">网络信息中心</a></span>
+<br /><br />
+<div id="welcome_login"><a href="/Account/LogOn">使用JAccount登录</a></div>
+
+</div>
+
+<img alt="Welcome" src="/App_Themes/Default/Images/canvas-welcome-80.jpg" />
+
+<!-- "我们一直在进步", add by marstone, 2012/03/27 -->
+<div id="canvas_dev_status">
+    <div style="font-weight:bolder; padding-left: 60px; padding-top: 10px; line-height:24px;">交大人，我们一直在进步:</div>
+    <ul style="padding-left: 80px;line-height:20px;color:#666;">
+        <li>2013年12月23日 调整日历现实和无信息的显示</li>
+        <li>2013年11月 合并流程的再办和已办，增加查询界面</li>
+        <li>2013年6月21日 支持Profile系统新版。</li>
+        <li>2013年6月20日 提高菜单加载性能。</li>
+        <li>2013年4月14日 修正和流程相关的若干问题，增加提示上限。</li>
+        <li>2013年4月12日 增加我的外事链接。</li>
+        <li>2013年1月2日 改进Profile首页的设置。</li>
+        <li>2012年12月29日 增加app悬停菜单。</li>
+    </ul>
+    <ul style="padding-left: 80px;line-height:20px;color:#666;" class="hidden">
+        <li>2012年12月26日 完善Profile信息，增加身份特征、修改密码等功能，并面向所有用户开放。</li>
+        <li>2012年12月20日 增加版本号显示；增加天气开关。</li>
+        <li>2012年12月14日 改进公告系统，对于人数较少的工作区将会对成员同时进行通知提醒。</li>
+        <li>2012年12月13日 优化动态展示区域和评论加载的部分界面，增加链接和换行的显示。</li>
+        <li>2012年12月11日 修改诸多页面的标题，使其更人性化。</li>
+        <li>2012年12月10日 集成身份系统，提供密码修改等功能。</li>
+        <li>2012年11月30日 增加两种新应用模式的支持：全屏宽度模式和浏览器高度模式。</li>
+        <li>2012年11月27日 启用新的通知提醒系统。</li>
+        <li>2012年11月23日 优化存取的缓存机制，修改默认应用图标，异步加载应用菜单。</li>
+        <li>2012年11月23日 优化头像存取速度，增加API缩略图，增加头像自动重建逻辑。</li>
+        <li>2012年11月22日 增加评论内容的通知功能；修复Nicman加载的一个问题。</li>
+        <li>2012年11月21日 修正几个IE8相关的问题，增加兼容性检测。</li>
+        <li>2012年11月20日 增加原OA系统的外部链接；Nicman应用正式上线使用；修正特定用户类型的同步问题。</li>
+        <li>2012年11月19日 修复诸多问题，主要包括再办分页、工作区顺序调整等。</li>
+        <li>2012年11月17日 性能优化，调整异步加载待办事项。</li>
+        <li>2012年11月7日 调整UI布局，工作区增加右边栏悬停，任务栏增加"更多"按钮</li>
+        <li>2012年11月5日 在Windows 8和IE 10下测试。</li>
+        <li>2012年10月29日 改进更友好的错误提示，修复登录部分异常的问题。</li>
+        <li>2012年10月21日 修改新版门户配色，新界面更加平面、清晰、整洁调整。</li>
+        <li>2012年10月20日 开始部署新版门户，服务暂停。</li>
+        <li>2012年10月18日 修改应用加载的显示样式，支持多种宽度应用设置。</li>
+        <li>2012年10月16日 门户头像、信息流附件改为存放到上海交通大学云存储。</li>
+        <li>2012年10月11日 用户取消应用授权。</li>
+        <li>2012年10月10日 应用中心功能内测，增加应用安装、浏览；工作区应用安装。</li>
+        <li>2012年9月14日 消息服务开发完成，完成用户个性化设置。</li>
+        <li>2012年7月5日 开始完善个性化设置。</li>
+        <li>2012年7月4日 应用中心开发开发,群组功能重构。</li>
+        <li>2012年6月25日 开始重构任务中心。</li>
+        <li>2012年6月21日 继续完善群组功能，测试中。</li>
+        <li>2012年5月25日 通知功能Beta测试。</li>
+        <li>2012年5月24日 群组功能Beta测试。</li>
+        <li>2012年5月14日 调整流程优先级，开始逐步重构流程api。</li>
+        <li>2012年5月3日 控制联系人权限。</li>
+        <li>2012年4月27日 群组的初步功能开始测试。</li>
+        <li>2012年4月25日 性能调优。</li>
+        <li>2012年4月23日 调整信息流评论的样式，增加"复议"按钮。</li>
+        <li>2012年4月19日 改进对非本系统的其它类型的jAccount帐号的提示。</li>
+        <li>2012年4月17日 信息流支持显示缩略图，重构js sdk部分代码</li>
+        <li>2012年4月13日 调整任务列表显示。</li>
+        <li>2012年4月11日 流程首页改为待办。信息流预取</li>
+        <li>2012年4月10日 改进工作区级别的信息流API、信息流的明细显示</li>
+        <li>2012年4月9日 调整信息流加载时的动画显示</li>
+        <li>2012年4月7日 为移动设备的快捷方式增加图标</li>
+        <li>2012年4月6日 更换群组图标，调整界面细节表现；开始支持IE8的页面间跨域通讯。</li>
+        <li>2012年4月5日 规范"流程"、"人脉"等多处用户界面表述</li>
+        <li>2012年4月3日 修正若干和IE8相关的问题</li>
+        <li>2012年3月28日 修正讨论和知识库对IE浏览器的支持</li>
+        <li>2012年3月27日 信息流增加显示评论数量</li>
+        <li>2012年3月27日 更换Logo, 改善消息提示泡泡的颜色和位置</li>
+        <li>2012年3月26日 Canvas在网络信息中心内部开始测试</li>
+    </ul>
+    <a style="padding-left: 80px" href="#" onclick="javascript:$(this).prev().toggleClass('hidden');return false;">更多...</a>
+    <div style="font-weight:bolder; padding-left: 60px; padding-top: 10px; line-height:24px;">
+        <a href="http://developer.sjtu.edu.cn/" target="_blank">关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" onclick="alert('coming soon...')">意见反馈</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#welcome_login").button();
+
+        if ("" == "Beta" || "" == "Sync") {
+            var dialog = $("#Oops" + "").dialog({
+                modal: true,
+                minHeight: 240,
+                minWidth: 360,
+                buttons: {
+                    /* "加为收藏": function () {
+                    var link = "http://canvas.sjtu.edu.cn/";
+                    var text = "上海交通大学门户";
+                    if (document.all)
+                    window.external.AddFavorite(link, text);
+                    else if (window.sidebar)
+                    window.sidebar.addPanel(text, link, '');
+                    } */
+                    "Ok": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            // dialog.dialog("open");
+        }
+    });
+</script>
+
+
+<div id="OopsBeta" class="oops" style="display:none">
+<h2>对不起，Canvas尚未对您开放</h2>
+<br />
+<span>我们很抱歉的通知您，如果您看到此信息，说明本系统(SJTU Canvas)尚处于测试阶段，您没有成为我们的测试用户。Canvas系统即将对外开放，敬请期待！</span>
+<br />
+</div>
+
+
+<div id="OopsSync" class="oops" style="display:none">
+<h2>对不起，Canvas没有找到您的信息。</h2>
+<br />
+<span>我们很抱歉的通知您，如果您看到此信息，说明您不是Canvas的用户。这可能是由于您的帐号类型造成的，也有可能是由于您的数据尚未完全同步到我们的系统。一般来说，同步过程大约需要5到10分钟。</span>
+<br />
+</div></div>
+        <div class="clear"></div>
+    </div>
+    <!-- container end -->
+</body>
+</html>

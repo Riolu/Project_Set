@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/styleFront.css" type="text/css"></link>
+<script type="text/javascript">
+	function testAuto(thisId, needLeng) {
+		var element = document.getElementById(thisId);
+		var nowLeng = element.innerText.length;
+		if (nowLeng > needLeng) {
+			var nowWord = element.innerText.substr(0, needLeng) + '...';
+			element.innerHTML = nowWord;
+		}
+	}
+</script>
+<title>
+快速通道-
+	在校生
+</title>
+</head>
+
+<body>
+	<!--头部-->
+	<!-- 用户账号 -->
+	<div class="ind_top">
+        <ul class="ind_top_q">
+        	<li class="ind_top_l">
+            	<a href="http://www.sjtu.edu.cn/xbdh/yjdh/yx.htm" target="_blank">院系专业</a>
+                <a href="/eweb/jygl/zpfw.so?modcode=null&subsyscode=zpfw&type=searchBysycx">生源信息</a>
+                <a href="/eweb/jygl/jygl.so?modcode=jygl_jygljylc&subsyscode=jygl&type=searchNews&newsType=jylc">就业导航</a>
+                <a href="/channel/index.htm?nParentId=5">访客</a>
+            </li>
+            						            <li class="ind_top_c">
+            	            		<a target="_blank" href="http://info.sjtu.edu.cn/index.aspx?jatkt=rejected">综合信息网</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://3dcampus.sjtu.edu.cn/">虚拟校园</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://www.jwc.sjtu.edu.cn/web/sjtu/198109.htm">校历</a>
+            		            	            	<input type="text" class="search_input" id="strTitle" maxLength="30" />
+            	<input type="button" class="search_btn" onclick="queryInfo()" />
+            	<script type="text/javascript">
+                	function queryInfo(){
+                		var strTitle = document.getElementById("strTitle").value;
+                		if(strTitle!=null && strTitle.length>0){
+                			var url = "/news/result.htm?strTitle=" + strTitle;
+							url = encodeURI(url).replace(/#/g, '%23');
+							window.open(url);
+                		}
+                	}
+                </script>
+               
+            </li>
+        </ul>
+    </div>    <!--头部 END-->
+    <!--宽度1000px-->
+    <div class="">
+    	<!--导航-->
+    	    	<div class="nav_wrap">
+                <div class="nav">
+                    <ul class="nav_logo w1000_margin0"><a href="/index.htm"><img class="logo" src="/images/logo.png" /></a></ul>
+                    <div class="hr"></div>
+                    <ul class="nav_dh w1000_margin0">
+                        <li class="dh_left">
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" href="/index.htm">首页</a>
+		                    </div>
+                            <div class="dh_q">
+		                        <a class="nav_tit" href="/news/list.htm?nType=0">新闻公告</a>
+		                     </div>
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW&zpxxType=new">招聘热点</a>
+		                    </div>
+		                	<div class="dh_q">
+		                        <a  class="nav_tit" href="/intro/index.htm">关于我们</a>
+		                    </div>
+                        </li>
+                        <li class="dh_right">
+		                	<span class="dh_time" id="myDate">
+		                		<span id="myYear"></span>年<span id="myMonth"></span>月<span id="myDay"></span>日
+		                	</span>
+		                    <span class="dh_week" id="myWeek">星期二</span>
+		                    <script type="text/javascript">
+		                		var myDate=new Date()
+		                		document.getElementById("myDate").innerHTML=myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDate()+"日";
+		                		var day =myDate.getDay();
+		                		var week ="";
+		                		if(day==0){
+		                			week ="星期日"
+		                		}
+		                		if(day==1){
+		                			week ="星期一"
+		                		}
+		                		if(day==2){
+		                			week ="星期二"
+		                		}
+		                		if(day==3){
+		                			week ="星期三"
+		                		}
+		                		if(day==4){
+		                			week ="星期四"
+		                		}
+		                		if(day==5){
+		                			week ="星期五"
+		                		}
+		                		if(day==6){
+		                			week ="星期六"
+		                		}
+		                		document.getElementById("myWeek").innerHTML=week;
+		                	</script>
+		                    																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">热点专题</option>
+		                    			                        <option value="http://www3.sjtu.edu.cn/qzlx2013.htm">
+		        					党的教育实践活专题网              
+		        				</option>
+		                        		                        <option value="http://202.120.33.37/14xz/">
+		        					2014年校长奖评选              
+		        				</option>
+		                        		                        <option value="http://xxgk.sjtu.edu.cn/">
+		        					信息公开              
+		        				</option>
+		                        		                        <option value="http://news.sjtu.edu.cn/jdrw.htm">
+		        					学者笔谈              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/18/">
+		        					聚焦十八大              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/jdwmw.htm">
+		        					文明在线              
+		        				</option>
+		                        		                    </select>
+		                    																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">快速通道</option>
+		                       		                        <option value="http://cc.sjtu.edu.cn/G2S/ShowSystem/Index.aspx">
+		        					课程中心               
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/zsjy.htm">
+		        					招生就办               
+		        				</option>
+		                        		                        <option value="http://alumni.sjtu.edu.cn/alumni/xiaoyouhui/index.php">
+		        					校友会               
+		        				</option>
+		                        		                        <option value="http://join.sjtu.edu.cn/">
+		        					人才招聘               
+		        				</option>
+		                        		                        <option value="http://www.qianxslib.sjtu.edu.cn/">
+		        					钱学森图书馆               
+		        				</option>
+		                        		                        <option value="http://postd.sjtu.edu.cn/">
+		        					博士后流动站               
+		        				</option>
+		                        		                        <option value="http://zbb.sjtu.edu.cn/">
+		        					招投标办               
+		        				</option>
+		                        		                    </select>
+		                </li>
+                    </ul>
+                </div>
+            </div>
+        <script type="text/javascript">
+        	function openLink(obj){
+        		if(obj.value !='#'){
+        			window.open(obj.value);
+        		}
+        	}
+		</script>
+                <!--导航 END-->
+        
+        <!--中心简介-->
+        <div class="center_intro w1000_margin0">
+        	<!--左边-->
+            <div class="main_left">
+            	<ul class="left_nav_list">
+                    <li><a href="/channel/index.htm?nParentId=1"  class="pitch" >在校生</a></li>
+                    <li><a href="/channel/index.htm?nParentId=2" >用人单位</a></li>
+                    <li><a href="/channel/index.htm?nParentId=3" >教师</a></li>
+                    <li><a href="/channel/index.htm?nParentId=4" >校友</a></li>
+                    <li><a href="/channel/index.htm?nParentId=5" >访客</a></li>
+                </ul>
+            </div>
+            <!--左边 END-->
+            
+            <!--右边-->
+            <div class="main_right">
+            	<div class="quick_gallery">
+            		<a href="#">快速通道</a><
+            		<a href="#">
+            								在校生
+																									            		</a>
+            	</div>
+                <div class="main_content" style="min-height:300px;">
+                																																<div class="person_infor">
+					                    	<div class="person_infor_left"><a href="http://www.job.sjtu.edu.cn/career/" target=_blank>生涯伴随</a></div>
+                    													                        <ul class="person_infor_list">
+                        	                        	<li>
+                        		<a id="a_136" target="_blank" title="生涯唤醒" 
+                        			href="http://www.job.sjtu.edu.cn/career/career/archives/front/archivesIndex.htm">
+                        		生涯唤醒
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_136',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_137" target="_blank" title="认识自我" 
+                        			href="http://www.job.sjtu.edu.cn/career/evalution/front/evalutionHome.htm?lId=2&evalutionType=1">
+                        		认识自我
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_137',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_174" target="_blank" title="职业世界" 
+                        			href="http://www.job.sjtu.edu.cn/career/profession/career/front/careerHome.htm">
+                        		职业世界
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_174',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_175" target="_blank" title="成长指导" 
+                        			href="http://www.job.sjtu.edu.cn/career/growthGuide/careerDevelop/front/datumIndex.htm">
+                        		成长指导
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_175',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_176" target="_blank" title="素养提升" 
+                        			href="http://www.job.sjtu.edu.cn/career/course/front/index.htm">
+                        		素养提升
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_176',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_177" target="_blank" title="校园活动" 
+                        			href="http://www.tongqu.me/">
+                        		校园活动
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_177',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_179" target="_blank" title="专业发展指导" 
+                        			href="http://www.sjtu.edu.cn/xbdh/yjdh/yx.htm">
+                        		专业发展指导
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_179',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_180" target="_blank" title="职业百科" 
+                        			href="http://www.job.sjtu.edu.cn/career/profession/career/front/careerHome.htm">
+                        		职业百科
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_180',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_270" target="_blank" title="生涯发展指导" 
+                        			href="http://www.job.sjtu.edu.cn/career/growthGuide/careerDevelop/front/datumIndex.htm">
+                        		生涯发展指导
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_270',9)
+								</script>
+                        	</li>
+                                                    </ul>
+                    	<div class="clear"></div>
+                    </div>
+                                        																<div class="person_infor" style="margin-top:10px;">
+					                    	<div class="person_infor_left"><a href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so" target=_blank>就业管理</a></div>
+                    													                        <ul class="person_infor_list">
+                        	                        	<li>
+                        		<a id="a_138" target="_blank" title="生源信息核对" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=XS_JYGL_XSJBXX&subsyscode=jygl&modcode=jygl_xsjbxx">
+                        		生源信息核对
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_138',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_139" target="_blank" title="推荐表自制" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=XS_JYGL_XSTJBXX&subsyscode=jygl&modcode=jygl_xstjb">
+                        		推荐表自制
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_139',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_211" target="_blank" title="毕业去向登记" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=XS_JYGL_BYQX&subsyscode=jygl&modcode=jygl_xsbyqxdj">
+                        		毕业去向登记
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_211',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_216" target="_blank" title="户档回生源地" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=XS_JYGL_XSHKDAHSYDSQ&subsyscode=jygl&modcode=jygl_xshkdahsyddj">
+                        		户档回生源地
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_216',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_162" target="_blank" title="专利公示登记" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=XS_JYGL_XSZLGS&subsyscode=jygl&modcode=jygl_xszlgsdj">
+                        		专利公示登记
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_162',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_215" target="_blank" title="报到证打印" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&subsyscode=jygl&modcode=jygl_xsxsbdzdydj&entityId=XS_JYGL_XSBDZDYSQ">
+                        		报到证打印
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_215',9)
+								</script>
+                        	</li>
+                                                    </ul>
+                    	<div class="clear"></div>
+                    </div>
+                                        																<div class="person_infor" style="margin-top:10px;">
+					                    	<div class="person_infor_left"><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so" target=_blank>求职应聘</a></div>
+                    													                        <ul class="person_infor_list">
+                        	                        	<li>
+                        		<a id="a_314" target="_blank" title="招聘热点" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW">
+                        		招聘热点
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_314',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_143" target="_blank" title="招聘信息" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=zpxx">
+                        		招聘信息
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_143',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_219" target="_blank" title="宣讲会信息" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=xjh">
+                        		宣讲会信息
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_219',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_290" target="_blank" title="招聘会信息" 
+                        			href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=zph">
+                        		招聘会信息
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_290',9)
+								</script>
+                        	</li>
+                                                    </ul>
+                    	<div class="clear"></div>
+                    </div>
+                                        																<div class="person_infor" style="margin-top:10px;">
+					                    	<div class="person_infor_left"><a href="http://www.job.sjtu.edu.cn/sjcj/" target=_blank>生涯数据</a></div>
+                    													                        <ul class="person_infor_list">
+                        	                        	<li>
+                        		<a id="a_221" target="_blank" title="问卷调查" 
+                        			href="http://www.job.sjtu.edu.cn/sjcj/jyfx/tpxs/dcwj.bo?modcode=xsdcwj">
+                        		问卷调查
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_221',9)
+								</script>
+                        	</li>
+                                                    	<li>
+                        		<a id="a_222" target="_blank" title="分析报告" 
+                        			href="http://www.job.sjtu.edu.cn/sjcj/jyfx/tpxs/tjbg.bo?modcode=xstjbg">
+                        		分析报告
+                        		</a>
+                        		<script type="text/javascript">
+									testAuto('a_222',9)
+								</script>
+                        	</li>
+                                                    </ul>
+                    	<div class="clear"></div>
+                    </div>
+                                                        </div>
+            </div>
+            <!--右边 END-->
+            <div class="clear"></div>
+        </div>
+        <!--中心简介 END-->
+        
+        <!--底部-->
+                <div class="foot">
+        	<ul class="footer_content">
+                <li>
+                	<a href="http://cert.sjtu.edu.cn/beian_user/show.asp?number=930">沪交ICP备2010930</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                	版权所有：上海交通大学学生就业服务和职业发展中心
+                </li>
+                <li>
+                	地址：上海市闵行区东川路800号交通大学铁生馆&nbsp;&nbsp;&nbsp;&nbsp;
+                	邮编：200240&nbsp;&nbsp;<a href="/intro/index.htm?lId=3">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                	<a target="_blank" href="/admin/welcome.htm">网站管理</a>
+                </li>
+            </ul>
+        </div>        <!--底部 END-->
+	</div>
+    <!--宽度1000px END-->
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿$def with (form, key, title, url, surround)
+
+<form action="/s" method="GET">
+    $:form.render()
+</form>
+
+$if key:
+    <h1>Search Result for "$key"</h1><br/>
+$else:
+    Error!<br/>
+
+<body>
+    $for i in range(len(title)):
+        <a href=$url[i] style="font-weight:bold; font-style:italic">$title[i]</a><br/>
+	<font>$:surround[i]</font><br/>
+        <font color="green">$url[i]</font><br/>
+        <br/>
+</body>

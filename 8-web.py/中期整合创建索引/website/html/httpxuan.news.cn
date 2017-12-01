@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>新时空</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="format-detection" content="telephone=no,address=no,email=no" />
+   <meta name="mobileOptimized" content="width" />
+  <meta name="handheldFriendly" content="true" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta name="filetype" content="0">
+  <meta name="publishedtype" content="1">
+  <meta name="pagetype" content="2">
+  <meta name="catalogs" content="m_newsindex">
+  <script src="http://tmisc.home.news.cn/cloudnews/res/build/seed-min.js"></script>
+  <script type="text/javascript" src="http://t.home.news.cn/ip/getIpInfo.js?t=1447214211"></script>
+  <script>
+    var _day = new Date(),
+      _tag = '';
+    //正式环境
+    if(_day.getMonth() + 1 < 10) {
+      _tag = _day.getFullYear() + '0' + (_day.getMonth()+1);
+    }else{
+      _tag = _day.getFullYear() + '' +(_day.getMonth()+1);
+    }
+    if(_day.getDate() < 10){
+      _tag += '0' + _day.getDate();
+    }else{
+      _tag += '' + _day.getDate();
+    }
+    //调试状态
+    _tag = _day.getTime();
+    KISSY.config({
+      base: 'http://tmisc.home.news.cn/cloudnews/res/build/',
+      debug: false,
+      combine: true,
+      tag: _tag,
+      packages: {
+        'gallery': {
+          base: 'http://tmisc.home.news.cn/cloudnews/res/gallery/',
+          charset: 'utf-8',
+          group: 'gallery',
+          ignorePackageNameInUri: true
+        },
+        'new-homepage': {
+          base: 'http://tmisc.home.news.cn/cloudnews/res/dest/',
+          charset: 'utf-8'
+        },
+        'login-intime':{
+          base: 'http://tmisc.home.news.cn/cloudnews/res/dest/',
+          charset: 'utf-8'
+        }
+
+        }
+    });
+  </script>
+ <!--  <link rel="stylesheet" type="text/css" href="../src/new-homepage/homepage.css"> -->
+   <link rel="stylesheet" type="text/css" href=" http://tmisc.home.news.cn/cloudnews/res/dest/new-homepage/homepage-min.css">
+   <link rel="stylesheet" type="text/css" href="http://tmisc.home.news.cn/cloudnews/res/dest/new-header/header-min.css">
+</head>
+<body>
+<!--header start-->
+<div class="header mo_none clearfix" id="pcheader">
+    <div class="wrap">
+        <div class="login_center fwit" id="login_center">
+            <div class="normal_login">
+               --- <span id="w_login">登录</span> or <a href="http://login.home.news.cn/reg.jsp" target="_blank">注册</a> ---
+            </div> 
+            <div class="fast_login"><span class="yjty" id="yjty">一键体验</span></div>
+            <div class="coworker">
+                <a class="partner qq" href="http://login.home.news.cn/profile/cologin.do?t=qq&amp;callback=http://xuan.news.cn/" target="_blank" id="QQ_a">QQ</a>
+                <a class="partner sina" href="http://login.home.news.cn/profile/cologin.do?t=sina&amp;callback=http://xuan.news.cn/" target="_blank" id="sina_a">新浪</a>
+                <a class="partner weixin" href="http://login.home.news.cn/profile/cologin.do?t=weixin&amp;callback=callback=http://xuan.news.cn/"  target="_blank" id="163_a">微信</a>
+            </div>
+        </div>
+        <div class="after_login fwit" id="after_login" style="display:none">
+            <div class="user_opt"><a href="/cloudc/logout.xhtm?returnurl=http://xuan.news.cn" class="user_logout">安全退出</a></div>
+        </div>
+    </div>
+</div>
+<!--header end-->
+
+<!-- top nav start-->
+<div class="top_nav">
+    <div class="wrap clearfix">
+        <div class="mo_btn" id="mo_btn"></div>
+        <div class="logo">炫空间</div>
+        <div class="nav_list mo_none">
+            <ul class="nav ">
+                <li class="on"><span>首页</span></li>
+                <li><a href="http://xuan.news.cn/news/index.html" target="_blank">新闻</a></li>
+                <li><a href="http://xuan.news.cn/hd/index.html" target="_blank">互动</a></li>
+                <li><a href="http://xuan.news.cn/newspace/index.html" target="_blank">时空</a></li>
+                <li><a href="http://xuan.news.cn/cloudnews/top.html" target="_blank">网眼</a></li>
+                <li><a href="http://app.news.cn/" target="_blank">客户端</a></li>
+				<li><a href="http://xuan.news.cn/qiyejuhe/index.html" target="_blank">商务直达</a></li>
+            </ul>
+        </div>
+        <div class="search_fm mo_none">
+            <input type="text" id="news_search_tx" name="key" class="input_01"  onclick="this.select()" value="搜索新闻" onfocus="if(this.value=='搜索新闻') {this.value=''}" /><a href="http://xuan.news.cn/cloudnews/cloudnews/template/search.html?keyword=" target="_blank" class="search_btn icons" id="news_search_btn">this</a>
+        </div>
+        <div class="mo_login">
+            <div class="mo_user_face mo_beforeL " id="mo_beforeL"><span id="w_mo_login">登录</span> or <a href="http://login.home.news.cn/reg.jsp" target="_blank">注册</a></div>
+            <div class="mo_user_face mo_afterL" id="mo_afterL"> <a href="/cloudc/logout.xhtm?returnurl=http://xuan.news.cn" class="user_logout">退出</a></div>
+        </div>
+    </div>
+    <ul class="mo_btn_menu" id="mo_btn_menu" >
+        <li class="mo_li">首页</li>
+        <li class="mo_li"><a href="http://xuan.news.cn/news/index.html" target="_blank">新闻</a></li>
+        <li class="mo_li"><a href="http://xuan.news.cn/hd/index.html" target="_blank">互动</a></li>
+        <li class="mo_li"><a href="http://xuan.news.cn/newspace/index.html" target="_blank">时空</a></li>
+        <li class="mo_li"><a href="http://xuan.news.cn/cloudnews/top.html" target="_blank">网眼</a></li>
+		<li class="mo_li"><a href="http://xuan.news.cn/qiyejuhe/index.html" target="_blank">商务</a></li>
+    </ul>
+    
+</div>
+<!-- top nav end -->
+
+<!--content start-->
+<div class="wrap">
+    <!--part01 start-->
+    <div class="part01 clearfix">
+        <div class="p_l">
+			<!--slider for touch screen start-->
+            <div class="slider01" id="slider01" >
+                <ul class="piclist fwit tmbg" id="picList">
+    
+	 
+     
+				   <li class="picli">
+				   <a href="http://xuan.news.cn/shangjie/20151111/2607407_c.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M08/B2/C4/wKhTglZCkYMEAAAAAAAAAAAAAAA486.jpg">
+				  <span>设计者揭秘新版人民币三大“升级”</span></a></li>
+    
+	 
+     
+				   <li class="picli">
+				   <a href="http://xuan.news.cn/shangjie/20151111/2607232_c.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M07/B3/2C/wKhTg1ZClOsEAAAAAAAAAAAAAAA170.jpg">
+				  <span>黄金跌至5年来低点 美联储恐要加息</span></a></li>
+    
+	 
+     
+				   <li class="picli">
+				   <a href="http://xuan.news.cn/wyxh/20151111/2607391_c.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M08/B2/C0/wKhTglZCj_wEAAAAAAAAAAAAAAA904.jpg">
+				  <span>德国前总理施密特去世 享年96岁</span></a></li>
+    
+	 
+     
+				   <li class="picli">
+				   <a href="http://xuan.news.cn/wyxh/20151111/2607434_c.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M09/B2/C8/wKhTglZCk10EAAAAAAAAAAAAAAA560.jpg">
+				  <span>博士妈妈吐槽一年级孩子数学题</span></a></li>
+    
+	 
+     
+				   <li class="picli">
+				   <a href="http://xuan.news.cn/wyxh/20151111/2607315_c.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M08/B3/19/wKhTg1ZCjQEEAAAAAAAAAAAAAAA982.jpg">
+				  <span>最暖的已读:女儿发送"我爱你"给已故父亲</span></a></li>
+    
+	 
+     
+    
+	 
+     
+    
+	 
+     
+    
+	 
+     
+    
+	 
+     
+    
+	 
+     
+    
+	 
+     
+    
+	 
+     
+                </ul>
+                <dl class="dotlist" id="dotList">
+                    <dt  class="on">1</dt>
+                    <dt>2</dt>
+                    <dt>3</dt>
+                    <dt>4</dt>
+                    <dt class="last">5</dt>
+                </dl>
+            </div>
+            <!--slider for touch screen end-->
+
+            <!--abstract  start-->
+            <div class="blk_yw">
+                <div class="txt">
+                    <h2><a href="http://xuan.news.cn/wyxh/20151111/2607457_c.html" target="_blank">北京持续5天空气污染 周末可达重度</a>
+                    </h2>
+                    <p><a href="http://xuan.news.cn/wyxh/20151111/2607457_c.html" target="_blank">未来五天北京将经历连续污染过程，其中周末两天（14日至...</a></p>
+                </div>
+                <div class="txt">
+                    <h2><a href="http://xuan.news.cn/wyxh/20151111/2607684_c.html" target="_blank">人民币的生死旅程：30吨纸币可发电3万度</a>
+                    </h2>
+                    <p><a href="http://xuan.news.cn/wyxh/20151111/2607684_c.html" target="_blank">11月12日，已经“服役”10年的第五套人民币即将发行...</a></p>
+                </div>
+                <div class="txt">
+                    <h2><a href="http://xuan.news.cn/wyxh/20151111/2607685_c.html" target="_blank">拜仁队长拉姆向中国球迷送&quot;光棍节&quot;祝福</a>
+                    </h2>
+                    <p><a href="http://xuan.news.cn/wyxh/20151111/2607685_c.html" target="_blank">拜仁队长拉姆的生日恰逢“光棍节”，今天他通过新华网独家...</a></p>
+                </div>
+            </div>
+            <!--abstract  end-->
+			
+            <!--new space start-->
+            <div class="blk01 fwit">
+			<div class="pictxt tmbg ">
+                    <div class="pic lf">
+					<h3 class="tit01 titl ">
+					<a href="http://xuan.news.cn/newspace/index.html" target="_blank">新时空</a></h3>
+					<a href="http://xuan.news.cn/zt/shuang11.html" target="_blank">
+					<img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M01/B1/CF/wKhTg1ZBv60EAAAAAAAAAAAAAAA898.jpg" border="0" title="双十一省钱攻略：真便宜！" data="http://xuan.news.cn/zt/shuang11.html">
+					<span>双十一省钱攻略：真便宜！</span></a>
+					</div>
+					
+			 
+                    <div class="pic rt">
+					<h3 class="tit01 titl t_xhview">
+					<a href="http://xuan.news.cn/cloudnews/top.html" target="_blank">网眼新华</a></h3>
+					<a href="http://xuan.news.cn/cloudread/#/wyxh/20151111/2607274" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M03/B2/B6/wKhTglZCi70EAAAAAAAAAAAAAAA663.jpg" border="0" title="孕妇地铁站临产 乘务搭"产房"" data="http://xuan.news.cn/cloudread/#/wyxh/20151111/2607274"><span>孕妇地铁站临产 乘务搭"产房"</span>
+					</a>
+                    </div>
+             </div> 
+            </div>
+            <!--new space end-->
+			
+            <!--xinhua view && yinhua start-->
+            <!--xinhua view && yinhua end-->
+        </div>
+        <div class="p_m mo_none">
+            <div class="p_m_bor">
+                <ul class="list01">
+                    <li><a href="http://xuan.news.cn/wyxh/20151111/2607245_c.html" target="_blank">北京行政副中心已具备开工条件 正规划设计</a></li>
+                    <li><a href="http://xuan.news.cn/wyxh/20151111/2607534_c.html" target="_blank">中国高铁新型动车组可御零下40度严寒</a></li>
+                    <li><a href="http://xuan.news.cn/shangjie/20151111/2607632_c.html" target="_blank">12306网站注册新举措 黄牛:暂时未破解</a></li>
+                    <li><a href="http://xuan.news.cn/wyxh/20151111/2607477_c.html" target="_blank">大众砸钱“灭火”被批侮辱消费者</a></li>
+                    <li><a href="http://xuan.news.cn/wyxh/20151111/2607439_c.html" target="_blank">女子美容店纹唇死亡 嫌犯竟不会用麻醉剂</a></li>
+                </ul>
+            </div>
+            <div class="p_m_more">
+                    <a href="http://xuan.news.cn/news/index.html" target="_blank" class="icons yw_more">加载更多</a>
+            </div>  
+        </div>
+        
+        <div class="p_r mo_none" >
+            <!--互动 start-->
+            <div id="interaction">
+                  <div class="tit_hd">
+                    <h2><a href="http://xuan.news.cn/hd/index.html" target="_blank">互动</a></h2>
+                    <a href="http://xuan.news.cn/hd/index.html" target="_blank" class="fblue">更多>></a>
+                  </div>
+                  <!--hd slider start-->
+                  <div id="slider_hd" class="slider_hd">
+                      <div class="slider_hd_c " id="slider_hd_c">
+						 <div class="hd_c c_vote" id="c_vote0" data-type="vote" data-id="1721">
+                          </div>
+						 <div class="hd_c c_vote" id="c_vote1" data-type="vote" data-id="541">
+                          </div>
+						<div class="hd_c c_debate" id="c_debate2" data-type="debate" data-id="3716">
+                        </div>
+					   <!-- <div class="hd_c"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/left-bar/demo/author-face-4.jpg" width="305" height="180" alt="广告位"></div> -->
+                      </div>
+                      <div class="slider_hd_dot" id="slider_hd_dot"><span class="on"></span><span></span><span></span></div>
+                  </div>
+                  <!--hd slider end-->
+            </div>
+            <!--互动 end-->
+
+            <!--radio start-->
+            <div class="blk_radio" id="radio">
+                <div class="cont" id="radioCont">
+                    <div class="radioloading" id="radioloading"></div>
+                </div>
+                <div id="swf"></div>
+            </div>
+            <!--radio end-->
+        </div>
+
+    </div>
+    <!--part01 end-->
+</div>
+<!--part02 start-->
+    <div class="part02 clearfix">
+        <div class="wrap">
+
+             <h2 class="tit">大家都在</h2>
+             <div class="cont clearfix" >
+			    <!-- 赞 -->
+		
+                       <div class="blk02 i_zhan">
+                    <div class="bcont">
+                        <div class="pic"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M02/B3/18/wKhTg1ZCjGwEAAAAAAAAAAAAAAA034.jpg"></div>
+                        <div class="txt">
+                              <h2>[赞] <a href="http://xuan.news.cn/wyxh/20151111/2607310_c.html" target="_blank">公司女员工被劫持 男同事主动“换人”被赞中国好同事</a></h2>
+                              <p><a href="http://xuan.news.cn/wyxh/20151111/2607310_c.html" target="_blank">9日，四川眉山市东坡区某公司女员工朱艳林与同事刘萍，被一男子劫持。危急一刻，该公司两名男员工挺身而出顶替两名女同事，劫匪最终被警方制服。 </a></p>
+                        </div>
+                    </div>
+                </div>
+				
+				
+				<!-- 转 -->
+		
+                       <div class="blk02 i_zhuan rt">
+                    <div class="bcont">
+                        <div class="pic"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M04/B2/BF/wKhTglZCj6QEAAAAAAAAAAAAAAA897.jpg"></div>
+                        <div class="txt">
+                              <h2>[转] <a href="http://xuan.news.cn/wyxh/20151111/2607385_c.html" target="_blank">临沂男子抱母取暖走红网络 因凳子凉担心母亲冷</a></h2>
+                              <p><a href="http://xuan.news.cn/wyxh/20151111/2607385_c.html" target="_blank">近日，一张中年男子怀抱母亲取暖的照片在网络传开。很多网友为老人有这样的孝顺儿子而感动，更有网友说，“这是今冬临沂最温暖的一幕！”</a></p>
+                        </div>
+                    </div> 
+                </div>
+				
+				
+				<!-- 评 -->
+		
+                       <div class="blk02 i_ping">
+                    <div class="bcont">
+                        <div class="pic"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M02/B3/26/wKhTg1ZCksQEAAAAAAAAAAAAAAA185.jpg"></div>
+                        <div class="txt">
+                              <h2>[评] <a href="http://xuan.news.cn/shangjie/20151111/2607422_c.html" target="_blank">狂欢节式电商营销可持续吗</a></h2>
+                              <p><a href="http://xuan.news.cn/shangjie/20151111/2607422_c.html" target="_blank">狂欢仍在继续，如果任由恶性竞争、以次充好、诚信欺诈等乱象发展，那么下一个七年，电商传奇恐难继续。</a></p>
+                        </div>
+                    </div>  
+                </div>
+				
+				<!-- 议 -->
+		
+                       <div class="blk02 i_yi rt">
+                    <div class="bcont">
+                        <div class="pic"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M08/B3/1D/wKhTg1ZCjvEEAAAAAAAAAAAAAAA302.jpg"></div>
+                        <div class="txt">
+                              <h2>[议] <a href="http://xuan.news.cn/wyxh/20151111/2607373_c.html" target="_blank">儿子的一封亲笔信 戒除了爸爸多年的烟瘾</a></h2>
+                              <p><a href="http://xuan.news.cn/wyxh/20151111/2607373_c.html" target="_blank">家书抵万金。宁波大学阳明学院的新生王定耀，对此话深有感触。因为给家里的一封手写信，戒烟数次都失败的爸爸，这次终于成功了。在这个网络轰炸的年代，怎么会想到用最传统的方式写家书？</a></p>
+                        </div>
+                    </div>  
+                </div>
+				
+             </div>
+        </div>
+        
+    </div>
+    <!--part02 end-->
+
+    <!--part03 start-->
+    <div class="part03">
+
+        <div class="wrap ">
+            <div class="p_l ">
+                <div class="tit_sp tl">
+                      <h2><a href="http://xuan.news.cn/news/news-photo.html" target="_blank">图集</a></h2>
+                      <a href="http://xuan.news.cn/news/news-photo.html" target="_blank" class="fblue">更多&gt;&gt;</a>
+                  </div>
+				
+                <div class="blk03 fwit">
+                    <div class="pictxt tmbg lf ">  
+		
+                               <div class="pic">
+						<a href="http://xuan.news.cn/ktsh/20151111/2607505_p.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M04/B3/36/wKhTg1ZCmLEEAAAAAAAAAAAAAAA489.jpg" border="0" title="“高校女神”现场卸妆引热议" data="http://xuan.news.cn/ktsh/20151111/2607505_p.html"><span>“高校女神”现场卸妆引热议</span></a>
+						</div>
+		
+       		
+                           </div>
+						
+					
+                    <div class="pictxt tmbg rt ">
+		
+       		
+                               <div class="pic">
+						<a href="http://xuan.news.cn/ktsh/20151111/2607495_p.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M03/B2/D6/wKhTglZCmB4EAAAAAAAAAAAAAAA559.jpg" border="0" title="90后白领的微商生活" data="http://xuan.news.cn/ktsh/20151111/2607495_p.html"><span>90后白领的微商生活</span></a>
+						</div>
+		
+                               <div class="pic">
+						<a href="http://xuan.news.cn/ktsh/20151110/2606031_p.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M04/AF/93/wKhTglZBSscEAAAAAAAAAAAAAAA100.jpg" border="0" title="揭秘大一女生的兼职网络直播"掘金"路" data="http://xuan.news.cn/ktsh/20151110/2606031_p.html"><span>揭秘大一女生的兼职网络直播"掘金"路</span></a>
+						</div>
+					 </div>
+
+                </div>
+                
+
+            </div> 
+            <div class="p_r">
+                  <div class="tit_sp tl">
+                      <h2><a href="http://xuan.news.cn/news/news-video.html" target="_blank">视频</a></h2>
+                      <a href="http://xuan.news.cn/news/news-video.html" target="_blank" class="fblue">更多&gt;&gt;</a>
+                  </div>
+				  
+                  <div class="blk03 fwit">
+				 
+				  <div class="pictxt tmbg lf ">
+		
+                               <div class="pic">
+						<a href="http://xuan.news.cn/xhsp/20151111/2607580_v.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M04/B3/3D/wKhTg1ZCmvcEAAAAAAAAAAAAAAA963.jpg" border="0" title="不喝水能长寿?美国26岁小伙3年未进点滴液体" data="http://xuan.news.cn/xhsp/20151111/2607580_v.html"><span>不喝水能长寿?美国26岁小伙3年未进点滴液体</span>
+						<p class="vido"></p></a></div>
+					 </div>
+					
+                    <div class="pictxt tmbg rt ">
+		
+                               <div class="pic"><a href="http://xuan.news.cn/xhsp/20151111/2607621_v.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M08/B2/E4/wKhTglZCnEIEAAAAAAAAAAAAAAA374.jpg" border="0" title="北京持续5天空气污染 周末可达重度" data="http://xuan.news.cn/xhsp/20151111/2607621_v.html"><span>北京持续5天空气污染 周末可达重度</span><p class="vido"></a></p>
+                        </div>
+		
+                               <div class="pic"><a href="http://xuan.news.cn/xhsp/20151111/2607589_v.html" target="_blank"><img src="http://tpic.home.news.cn/xhCloudNewsPic/xhpic001/M04/B2/DF/wKhTglZCmzYEAAAAAAAAAAAAAAA921.jpg" border="0" title="澳洲少年发明数学定理 计算速度超计算机" data="http://xuan.news.cn/xhsp/20151111/2607589_v.html"><span>澳洲少年发明数学定理 计算速度超计算机</span><p class="vido"></a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!--part03 end-->
+    <div class="part04 clearfix">
+          <div class="wrap">
+                <div class="p_l">
+                     <div class="p_l_c orderNews" id="orderNews">
+                          <div class="order_menu" id="order_menu">
+                              <div class="obtn icons " id="obtn">+定制</div>
+                              <!--obtn icons select 选中-->
+                              <div class="onews" id="onews" >新闻</div>
+                              <div class="omenu" id="omenu">
+                                  <ul class="omenu_li clearfix" id="omenu_li">
+                                      <li style="visibility:hidden"><span>加载中</span></li><!--取li宽用　此处保留-->
+                                      
+                                  </ul>
+                                  <!--omenu_more on 打开-->
+                                  <div class="omenu_more" id="omenu_more" >
+                                      <p class="omenu_more_btn"><i class="icons">更多</i></p>
+                                      <ul class="omenu_more_li" id="omenu_more_li">
+                                          <li><span>标题</span></li>
+                                         <li><span>标题</span></li>
+                                      </ul> 
+                                  </div>
+                              </div>
+
+
+                              <div class="order_window" id="order_window" >
+                                    <dl class="ordered" >
+                                        <dt>已订阅频道</dt>
+                                        <dd id="channelOrdered" class="clearfix">
+                                        </dd>
+                                    </dl>
+                                    <dl class="orderopt" >
+                                        <dt>可订阅频道 (点击你喜欢的栏目进行订阅)</dt>
+                                        <dd id="channenlOptions">
+                                        </dd>
+                                    </dl>
+                                    <div class="ordertip">
+                                        温馨提示:点击完成后根据订阅更新全新的内容
+                                        <a href="javascript:void(0)" class="done" id="done">完成</a>
+                                        <a href="javascript:void(0)" class="done" id="cancle">取消</a>
+                                    </div>  
+                               </div>  
+                          </div>
+
+                          <div class="order_cont" id="order_cont">
+                              
+                              <div id="oarderCont_265" style="display:none">
+                              </div>
+                          </div>
+                          
+
+                          
+                     </div>
+                </div>
+                <div class="p_r mo_none" id="p_r_fix">
+                    <div class="blk04" id="guesslike">
+                         <div class="tit"><h2>猜你喜欢</h2>
+                              <span class="refresh icons" id="refresh"></span>
+                         </div>
+                         <div id="guesscont" class="blkcont">
+                         </div>
+                    </div> 
+                    
+
+                    <div class="blk04" id="localnews">
+                         <div class="tit icons"><h2 class="place" id="place" >北京新闻</h2><span id="localswitch" class="switch" data-cityId="1561100000">[切换]</span></div>
+                         <div class="fixposition" id="fixPosition">
+                               <div class="c clearfix" id="selector_c">
+                                  <label>省/市/自治区：</label>
+                                  <select name="province" id="province">  
+                                  </select>
+                                  <select name="city" id="city" style="display:none">  
+                                  </select>
+                                  <span id="localBtn" class="localBtn">确定</span>
+                               </div>
+                            
+
+                         </div> 
+                         <div id="localcont" class="blkcont"></div>
+                    </div>    
+
+
+                    <div class="blk05">
+                        <a class="QR" target="_blank" href="http://app.news.cn/"></a>
+
+                    </div>
+                </div>
+
+          </div>
+              
+    </div>  
+<!--content end-->
+<div class="wrap"><a href="url" target="_blank"  class="mo_app"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-homepage/mo_app.png"></a></div>
+<div class="footer">
+    <div class="wrap">Copyright © 2000 - 2015 XINHUANET.com　All Rights Reserved. 　制作单位：新华网</div>
+</div> 
+<!--新加广告-->
+<div class="part_friends">
+    <div class="wrap">
+        <h2 class="fblue">友情链接</h2>
+        <p><a href="http://zhushou.2345.com/" target="_blank">2345手机游戏下载</a>
+
+        </p> 
+
+        <!-- 以后备用 <h2 class="fblue">合作单位</h2>
+         <p class="pic clearfix">
+              <a href="http://100042088.home.news.cn/portal/" target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/backChina.jpg" alt="中国银行" height="30px"></a>
+            <a href="" target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/airchina.gif" alt="中国国际航空公司" height="35px"></a>
+            <a href="http://xhw_bgy.home.news.cn/portal/" target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/biguiyuan.jpg" alt="碧桂园" height="50px" width="45px" height="35px"></a>
+            <a href="http://100042115.home.news.cn/portal/" target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/ccb.jpg" alt="中国建设银行" height="30px"></a>
+            <a href="http://102040508.home.news.cn/portal/" target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/dell.jpg" alt="戴尔" height="50px"></a>
+            <a href="http://101270492.home.news.cn/portal/" target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/hetao.jpg" alt="河套" height="50px"></a>
+            <a href="http://100039003.home.news.cn/portal/ " target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/kaspersky.jpg" alt="卡巴斯基" height="50px"></a>
+            <a href="http://www.5c.com.cn/" target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/meilian.png" alt="美联软通" height="50"></a>
+            <a href="http://www.unionluck.com/" target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/unionluck.jpg" alt="协和洛克" height="50px"></a>
+            <a href="url" target="_blank"><img src="http://tmisc.home.news.cn/cloudnews/res/assets/img/xuan-bizLogo/xinhuajinniu.jpg" alt="新华金牛" height="50px"></a>
+            
+         </p> -->
+    </div>
+</div>
+<div id="b2t" class="icons">回顶部</div> 
+<!-- 统计代码 -->
+<script type="text/javascript" src="http://da.xuan.news.cn/js/config/global-cfg.js"></script>
+<script type="text/javascript" charset="utf-8">    
+window._xh_st_global_obj.location="-";
+window._xh_st_global_obj.cfg_1={        
+        ck:"",     
+        et:"", 
+       	cb:"default",
+	    wt:"4", 
+        at:"xz",
+        pt:"1", 
+        ce:"1", 
+        ct:"",  
+        th:"",  
+        st:"1",  
+        ni:"01",    
+        cf:"",      
+        xzn:"kan",    
+    ext:function(){}
+};  
+</script>     
+<script type="text/javascript" src="http://da.xuan.news.cn/js/fetch/st-main.js?st-cfg=config/xz-config&st-v=combine-st/combine-st" id="st-main"></script>
+ <div style="display:none">
+                        <div id="fwl">010070220010000000000000011200000000000000</div>
+			<script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script>
+			<script type="text/javascript">
+				wd_paramtracker("_wdxid=010070220010000000000000011200000000000000");
+			</script>
+			<noscript>
+				<img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010070220010000000000000011200000000000000" border="0" />
+			</noscript>	
+</div>
+<script type="text/javascript">
+  KISSY.use('new-homepage/main',function(S,Main){  
+    var homePage= new Main();
+  });
+  if(screen.width>=1024){//以1024为分界点,也包含pad,所以forpc中也有触屏处理
+    KISSY.use('new-homepage/forpc',function(S,Forpc){
+    var forPC=new Forpc();   
+    });
+  }
+</script>
+</body>
+</html>

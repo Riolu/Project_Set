@@ -1,0 +1,1759 @@
+
+
+
+
+
+
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上海交通大学-招聘信息服务系统</title>
+
+<link href="/eweb/jygl/css/sjtucss.css" type="text/css" rel="stylesheet" />
+</head>
+<!--[if IE 6]>
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+  /* EXAMPLE */
+  DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+
+
+<script type="text/javascript" language="javascript"> 
+//<!CDATA[ 
+function g(o){return document.getElementById(o);} 
+function HoverLi(n,m,o){ 
+//如果有N个标签,就将i<=N;  
+//本功能非常OK,兼容IE7,FF,IE6 
+	for(var i=1;i<=o;i++){
+		g('tb_'+i+'_'+m).className='normaltab';
+		g('tbc_0'+i+'_'+m).className='undis';
+		g('m01_'+i+'_'+m).className='undis';
+	}
+	g('tb_'+n+'_'+m).className='hovertab'; 
+	g('tbc_0'+n+'_'+m).className='dis';
+	g('m01_'+n+'_'+m).className='dis';
+}
+//]]>
+//查看招聘热点详细信息
+function viewNews(id, zprdlx){
+	if (zprdlx == 'zpgg'){//招聘公告
+		window.open('/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id='+id);
+	} else {//招聘热点
+		window.open('/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=viewZpxx&id='+id);
+	}
+}
+//查看更多招聘热点
+function moreZprd(){
+	window.open('/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW');	
+}
+//查看升学和海外深造
+function moreSxhhwsz(){
+	window.open('/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchSxhhwsz&sysType=TPZPFW');	
+}
+//查看更多选调村官三支一扶
+function moreXdcgszyf(){
+	window.open('/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchXdcgszyf&sysType=TPZPFW');	
+}
+//查看更多部队单位和应征入伍
+function moreBddwyzrw(){
+	window.open('/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchBddwyzrw&sysType=TPZPFW');	
+}
+//查看单位招聘信息
+function viewDwzpxx(dwid, modcode){
+	window.open('/eweb/jygl/zpfw.so?modcode='+modcode+'&subsyscode=zpfw&type=searchZpxx&zpxxType=new&dwid='+dwid);
+}
+//查看招聘信息详细信息
+function viewZpxx(id, modcode){
+	window.open('/eweb/jygl/zpfw.so?modcode='+modcode+'&subsyscode=zpfw&type=viewZpxx&id='+id);
+}
+//查看更多招聘信息
+function moreZpxx(modcode, type){
+	window.open('/eweb/jygl/zpfw.so?modcode='+modcode+'&subsyscode=zpfw&type=searchZpxx&zpxxType='+type);	
+}
+//查看招聘会详细信息
+function viewZphxx(id, modcode){
+	window.open('/eweb/jygl/zpfw.so?modcode='+modcode+'&subsyscode=zpfw&type=viewZphxx&id='+id);
+}
+//查看更多招聘会信息
+function moreZphxx(modcode, type){
+	window.open('/eweb/jygl/zpfw.so?modcode='+modcode+'&subsyscode=zpfw&type=searchZphxx&zphtype='+type);	
+}
+//查看宣讲会详细信息
+function viewXjhxx(id){
+	window.open('/eweb/jygl/zpfw.so?modcode=jygl_xjhxxck&subsyscode=zpfw&type=viewXjhxx&id='+id);
+}
+//查看更多宣讲会信息
+function moreXjhxx(type){
+	window.open('/eweb/jygl/zpfw.so?modcode=jygl_xjhxxck&subsyscode=zpfw&type=searchXjhxx&xjhType='+type);	
+}
+</script> 
+
+
+<body>
+ 
+
+
+
+
+
+
+
+
+<style>
+/*系统入口*/
+.sys_entrance_warp {
+	width:100%;
+	height:165px;
+	background-color:#000;
+	opacity: 0.50;
+	filter: alpha(opacity=50);
+	-moz-opacity:0.5;
+	position:fixed;
+	top:78px;
+	z-index:999;
+	text-align: center;}
+.sys_entrance_content {
+	height:165px;
+	width:930px;
+	position:fixed;
+	top:78px;
+	left:50%;
+	margin-left:-465px;
+	z-index:9999;
+	}
+.sys_1 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 0;}
+.sys_1 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#da6c15;
+	color:#fff;
+	text-align:center;}
+.sys_1 a:hover {
+	background-color:#df820b;}
+.sys_2 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_2 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#278419;
+	color:#fff;
+	text-align:center;}
+.sys_2 a:hover {
+	background-color:#1f9a0c;}
+.sys_3 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_3 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#581596;
+	color:#fff;
+	text-align:center;}
+.sys_3 a:hover {
+	background-color:#6e09af;}
+.sys_4 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_4 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#1583c2;
+	color:#fff;
+	text-align:center;}
+.sys_4 a:hover {
+	background-color:#159ad2;}
+.sys_5 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_5 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#1834a1;
+	color:#fff;
+	text-align:center;}
+.sys_5 a:hover {
+	background-color:#1c46b6;}
+.sys_6 {
+	width:130px;
+	height:130px;
+	float:left;
+	margin:20px 0 0 30px;}
+.sys_6 a {
+	width:130px;
+	height:130px;
+	display:block;
+	background-color:#c60203;
+	color:#fff;
+	text-align:center;}
+.sys_6 a:hover {
+	background-color:#de1012;}
+</style>
+<script>
+function showSystem(flag){
+	var div_header = document.getElementById("system_Id");
+	var div_systemSjtu = document.getElementById("systemSjtu");
+	if(flag==0){
+		if(div_header!=null){
+			div_header.style.display="none";
+		}
+		if(div_systemSjtu!=null){
+			div_systemSjtu.style.display="none";
+		}
+	}else{
+		if(div_header!=null){
+			div_header.style.display="block";
+		}
+		if(div_systemSjtu!=null){
+			div_systemSjtu.style.display="block";
+		}
+	}
+}
+</script>
+ <!--系统入口-->
+
+    <!--系统入口 END -->
+ <div class="head" onmouseover="javascript:showSystem(1)" onmouseout="javascript:showSystem(0)">
+  <div class="main">
+   <div class="logo">
+       <img src="/eweb/jygl/css/sjtuimgs/logo-zpfw.png" />
+   </div>
+   
+  </div>
+   <div style="width:100%;top: 100px;display: none;" id="system_Id" >
+     <div class="sys_entrance_warp" ></div>
+	   <ul class="sys_entrance_content">
+         <li class="sys_1">
+	       <a href="/index.htm" target="_self">
+       	   <img src="/eweb/jygl/css/sjtuimgs/sys6.png" style="margin-top:20px;" />
+       	   <p>就业网首页</p>
+       	   </a>
+	     </li>
+	     <li class="sys_2">
+		   <a href="/support/index.htm" target="_self">
+		     <img src="/eweb/jygl/css/sjtuimgs/sys2.png" style="margin-top:20px;" />
+		     <p>教师支持</p>
+		   </a>
+		</li>
+        <li class="sys_3">
+	      <a href="/eweb/jygl/jygl.so"  target="_self" >
+            <img src="/eweb/jygl/css/sjtuimgs/sys3.png" style="margin-top:20px;" />
+            <p>就业管理</p>
+          </a>
+          </li>
+         <li class="sys_4">
+            <a href="/eweb/jygl/zpfw.so" target="_self" >
+        	 <img src="/eweb/jygl/css/sjtuimgs/sys4.png"  style="margin-top:17px;" />
+        	 <p>招聘服务</p>
+        	</a>
+         </li>
+	     <li class="sys_5"><a target="_blank" href="/sjcj/"><img src="/eweb/jygl/css/sjtuimgs/sys5.png" style="margin-top:26px;" /><p>生涯数据</p></a></li>
+         <li class="sys_6">
+       	   <a href="/career/index.htm" target="_self">
+		      <img src="/eweb/jygl/css/sjtuimgs/sys1.png" style="margin-top:20px;" />
+		      <p>生涯伴随</p>
+	       </a>
+       	</li>
+       	</ul>
+    </div>
+ </div>
+ <div class="nav">
+  <div class="main">
+   <ul>
+   
+     
+    	 
+    	     <li><a href="/eweb/jygl/zpfw.so">招聘首页</a></li>
+    	     <li><a href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW">招聘热点</a></li>
+    	     <li><a href="/eweb/jygl/zpfw.so?type=zpxx">招聘信息</a></li>
+    	     <li><a href="/eweb/jygl/zpfw.so?type=xjh">招聘宣讲会</a></li>
+	 	     <li><a href="/eweb/jygl/zpfw.so?type=zph">招聘双选会</a></li>
+    		 <li><a href="/eweb/jygl/zpfw.so?type=dwfw">单位招聘指南</a></li>
+     	 
+     
+  </ul>
+  <div class="clear"></div>
+  </div>
+ </div>
+
+ <!-- 导航图 -->
+ 
+ <div class="banner2">
+     <div class="main">
+     	<a href="javascript:void(0);" onclick="javascript:window.open('http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?modcode=jygl_zphxxck&subsyscode=zpfw&type=viewZphxx&id=SK5fTEnzVvmyG1SL2Wn3HH')"><img src="/eweb/jygl/cms/imgs/JiSMAHNv1ry5F9n3b1iGZ3.jpg" /></a>
+     </div>
+ </div>
+
+
+ <div class="content">
+  <div class="main">
+    <div class="con_tl">
+	
+
+
+
+
+
+
+
+
+
+    
+	
+		<div class="s_login">
+			<div class="wrong" style="display: none;" id="wrong" onclick="noneWrong();">
+				<p class="wrong_ts" id="wrongtxt"></p>
+			</div>
+	 		<div class="s_title">登   录</div>
+			 <div class="s_nr">
+	  			<form  name="form1" id="form1" action="/eweb/LoginAction.do" method="post">
+	  				<table  border="0"> 
+      					<tr>
+      						<td width="150px">用户名：</td>
+      						<td class="forget">
+      						
+      							<a class="forget" target="_blank" href="/eweb/jygl/jyglext.so?type=yrdwWjyhm">忘记帐号？</a>
+      						
+      						</td>
+      					</tr>
+      					<tr>
+      						<td colspan="2">
+      						<input tabindex="1" type="text" style="width:175px;border:1px solid #cacaca; padding:5px 0px 5px 3px;" name="usercode" id="usercode" />
+      						</td> 
+      					</tr>
+	  				</table>
+	  				<table>
+      					<tr>
+      						<td width="150px">登录密码：</td>
+      						<td class="forget">
+      							
+      								<a class="forget" target="_blank" href="/eweb/jygl/jyglext.so?type=yrdwWjmm">
+      									忘记密码？
+      								</a>
+      							
+      						</td>
+     					</tr>
+      					<tr>
+      						<td colspan="2">
+      	  					<input tabindex="2" type="password" style="width:175px;border:1px solid #cacaca; padding:5px 0px 5px 3px;" name="pwd" id="pwd"/>
+	  						</td>
+      					</tr>
+	  				</table>
+	  				<table>
+      					<tr>
+      						<td width="100">验证码：</td>
+      						<td width="89">
+								<a style="text-decoration:none; color:#5a5a5a; display:block;" href="#" onclick="reloadCode();">换一张</a>
+	  						</td>
+      					</tr>
+      					<tr>
+      						<td>
+      							<input tabindex="3" type="text" style="width:80px;border:1px solid #e6e6e6; padding:5px 0px 5px 3px;" name="vpwd" id="vpwd"/>
+      						</td>
+      						<td>
+      							<img id="rpdimg" src="/eweb/wfc_r4d.so?type=r4d" width="63" height="26" style="margin-left:5px;vertical-align:middle;"/>
+      						</td>
+      					</tr>
+     			</table>
+				<table style="margin-top:10px;">
+	 				<tr>
+	 					<td width="88" height="36">
+	 						<a id="dlButton" tabindex="4" style=" background:url(/eweb/jygl/css/sjtuimgs/bg.png) no-repeat; width:91px; height:34px; line-height:34px; text-align:center;display:block; float:left;float:left;" href="javascript:void(0);"  onclick="return checkSubmitForm();">登 录</a></td>
+	 					<td width="91">
+	 						<a tabindex="5" style="background:url(/eweb/jygl/css/sjtuimgs/bg2.png) no-repeat; font-size:13px;  width:97px; height:34px; line-height:34px; text-align:center;display:block; float:left;float:right;" href="/eweb/jygl/sso.so?action=goToSsoLogin&jreurl=%2Fjygl%2Fzpfw.so">JAccount  登录</a>
+	 					</td>
+					 </tr>
+	 			</table>
+				<input type="hidden" name="actionType" value="singlelogin"/>
+    			
+				<input type="hidden" name="cmd" value=""/>
+				<input type="hidden" name="newloginpage" value="1"/>
+				<input type="hidden" name="subsyscode" value="zpfw"/>
+				<input type="hidden" name="reurl" value="/jygl/zpfw.so"/>
+				<input type="hidden" name="loginpage" value="jygl/zpfw.so"/>
+      	
+      	</form> 
+	 </div>
+	</div>
+	<div class="s_road">
+		<div class="s_title">注册通道</div>
+			<div class="sr_nr" style="height: 35px;">
+			   <ul>
+			   	<li style="padding-left: 50px;height: 35px;">
+ 				 
+					   <a tabindex="5" href="/eweb/jygl/jyglext.so?type=dwzc" style="background:url(/eweb/jygl/css/sjtuimgs/bg2.png) no-repeat; font-size:13px;  width:97px; height:34px; line-height:34px; text-align:center;display:block; float:left;float:right;color: #fff;" target="_blank">单位注册</a>
+     				 
+     				 </li>
+			  </ul>
+			  <div class="clear"></div>
+		 </div>
+	 </div> 
+<script type="text/javascript" language="javascript">
+function reloadCode(){
+	document.getElementById('rpdimg').src= '/eweb/wfc_r4d.so?type=r4d&t='+new Date().getTime();
+}
+String.prototype.trim=function(){
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+function viewWrong(){
+	document.getElementById('wrong').style.display='block';
+}
+function noneWrong(){
+	document.getElementById('wrong').style.display='none';
+}
+function checkSubmitForm(){
+var dlObj = document.getElementById('dlButton');
+dlObj.innerHTML='正在登录...';
+var usercodeObj = document.getElementById('usercode');
+var pwdObj = document.getElementById('pwd');
+var vpwdObj = document.getElementById('vpwd');
+var msg = document.getElementById('wrongtxt');
+if('' == usercodeObj.value || usercodeObj.value.trim().length == 0){
+	msg.innerHTML='用户名不能为空！';
+	viewWrong();
+	usercodeObj.value = usercodeObj.value.trim();
+	usercodeObj.focus();
+	dlObj.innerHTML='登录';
+	return false;
+}
+if('' == pwdObj.value || pwdObj.value.trim().length == 0){
+    msg.innerHTML='密码不能为空！';
+    viewWrong();
+	pwdObj.value = pwdObj.value.trim();
+	pwdObj.focus();
+	dlObj.innerHTML='登录';
+	return false;
+}
+if('' == vpwdObj.value || vpwdObj.value.trim().length == 0){
+    msg.innerHTML='验证码不能为空！';
+    viewWrong();
+	vpwdObj.value = vpwdObj.value.trim();
+	vpwdObj.focus();
+	dlObj.innerHTML='登录';
+	return false;
+}else if(vpwdObj.value.trim().length !=4 ){
+	viewWrong();
+ 	msg.innerHTML='验证码不正确！';
+ 	vpwdObj.focus();
+ 	dlObj.innerHTML='登录';
+	return false;
+}
+document.getElementById('form1').submit();
+}
+
+document.onkeydown = function(evt){
+	var evt = window.event?window.event:evt;
+	if(evt.keyCode==13) {
+		checkSubmitForm();
+	}
+}
+
+
+</script>
+
+
+<div class="s_road">
+		<div class="s_title">招聘专区</div>
+			<div class="sr_nr">
+			   <ul>
+			   
+			   		<li style="float:none;width:195px;margin-bottom: 0px;">
+			   			<a href="http://kit.52campus.net/sch/79985c7a67304c99b282e43f408734cd" target="_blank">
+		    				<img src="/eweb/jygl/cms/imgs/Xt9L79QwY4oLMkFnpeu2wB.jpg" width="180" height="50" title="前程无忧招聘专区"/>
+		    			</a>
+     				</li>
+     			
+			  </ul>
+			  <div class="clear"></div>
+		 </div>
+	 </div> 
+
+	
+	</div>
+	
+	
+<div class="w936"> 
+ <div class="d_one">
+  <div class="d_title">
+   <ul>
+    <li class="dd_title"><a href="javascript:void(0);">招聘热点</a></li>
+	<li class="d_more"><a href="javascript:moreZprd();"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></li>
+   </ul>
+   <div class="clear"></div>
+  </div>
+  <div style="padding-left:15px; padding-right:11px;height: 150px;" class="ctm_con">
+	 <ul>
+	  
+	 <li>
+	    <div class="ctm_tt"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('Kr2HwSbkFwQcu6JqHDVg1v', 'zprd');">【佛山  人社局】佛山市人力资源和社会保障局2016年校园招聘</a></div>
+	    <div class="time">2015-11-11</div>
+	    <div class="clear"></div>
+	  </li>
+	  	 
+	 <li>
+	    <div class="ctm_tt"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('55w6Qi3s3HNfBVmNn81Euz', 'zprd');">锡市2015年高端人才招聘会</a></div>
+	    <div class="time">2015-11-10</div>
+	    <div class="clear"></div>
+	  </li>
+	  	 
+	 <li>
+	    <div class="ctm_tt"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('WVSFEYZ9GZo8YeMhyxLvws', 'zpgg');">【通知】四川省面向上海交通大学2016届毕业生专场招聘会暨四川省...</a></div>
+	    <div class="time">2015-11-10</div>
+	    <div class="clear"></div>
+	  </li>
+	  	 
+	 <li>
+	    <div class="ctm_tt"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('3Wwk1GZWoEKSQsFdpgdjmG', 'zpgg');">【四川 选调生】四川省2016年面向上海交通大学 选调急需紧缺专...</a></div>
+	    <div class="time">2015-11-10</div>
+	    <div class="clear"></div>
+	  </li>
+	  	 
+	 <li>
+	    <div class="ctm_tt"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('2m6DDZ9VpUMqDp2TWi16CT', 'zpgg');">【通知】关于开展“四川—上海高校活动周” 有关安排的通知</a></div>
+	    <div class="time">2015-11-10</div>
+	    <div class="clear"></div>
+	  </li>
+	  	 
+	 <li>
+	    <div class="ctm_tt"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('LQ5DG9EnVKzdFZznEDxNRY', 'zprd');">无锡市2015年高端人才招聘会</a></div>
+	    <div class="time">2015-11-09</div>
+	    <div class="clear"></div>
+	  </li>
+	  	 
+	 </ul>
+	 
+	</div>
+ </div>
+ <div class="d_two">
+  <div class="d_title">
+   <ul>
+    <li class="zp_title"><a href="javascript:void(0);">最新招聘信息</a></li>
+	<li class="d_more"><a href="javascript:void(0);" onclick="moreZpxx('jygl_scfwzpxx', 'new')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></li>
+   </ul>
+   <div class="clear"></div>
+  </div>
+  
+  <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:480px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right; padding-right:5px;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+  <div class="d_lb" style="padding-left:15px; padding-right:11px;height: 150px;">
+	   <div class="zp_llb">
+	   
+		   <ul>
+			   <li style="width:245px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('4uueGVvY3sBeS4rdvTmX4b', 'jygl_scfwyrdw')">上海博坤投资管理有限公司</a></li>
+			   <li style="width:350px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('7dNKft14dKpJaU3ZJgCMFf', 'jygl_zpxxck')">博坤-资金助理</a></li>
+			   <li style="width:125px;text-align:right;">2015-11-11</li>
+		   </ul>
+		   <div class="clear"></div>
+	   
+		   <ul>
+			   <li style="width:245px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('48726', 'jygl_scfwyrdw')">三胞集团有限公司</a></li>
+			   <li style="width:350px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('HofZagDDGLmiEhBmDHAPjd', 'jygl_zpxxck')">三胞集团2016年“千人计划”全球校园招聘</a></li>
+			   <li style="width:125px;text-align:right;">2015-11-11</li>
+		   </ul>
+		   <div class="clear"></div>
+	   
+		   <ul>
+			   <li style="width:245px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('12965', 'jygl_scfwyrdw')">上海华彩管理咨询有限公司</a></li>
+			   <li style="width:350px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('PaKAiKo3zoX4oDLHYMTwkj', 'jygl_zpxxck')">华彩咨询协作咨询顾问</a></li>
+			   <li style="width:125px;text-align:right;">2015-11-11</li>
+		   </ul>
+		   <div class="clear"></div>
+	   
+		   <ul>
+			   <li style="width:245px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('47368', 'jygl_scfwyrdw')">佛山市人力资源开发服务中心</a></li>
+			   <li style="width:350px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('Kr2HwSbkFwQcu6JqHDVg1v', 'jygl_zpxxck')">【佛山  人社局】佛山市人力资源和社会保障局2016年...</a></li>
+			   <li style="width:125px;text-align:right;">2015-11-11</li>
+		   </ul>
+		   <div class="clear"></div>
+	   
+		   <ul>
+			   <li style="width:245px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('39430', 'jygl_scfwyrdw')">京滨电子装置研究开发（上海）有限公...</a></li>
+			   <li style="width:350px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('MzneBAMdWSEFbifrZkhMc8', 'jygl_zpxxck')">京滨电子装置研究开发（上海）有限公司2016校园招聘</a></li>
+			   <li style="width:125px;text-align:right;">2015-11-11</li>
+		   </ul>
+		   <div class="clear"></div>
+	   
+	   </div>
+   </div>
+	  
+ </div>
+<!---->
+<!---->
+<div id="tb5_" class="tb_5" style="margin-top:0px;"> 
+<div style="float:right; padding-top:3px; padding-right:10px;" id="m015_1_4"><a href="javascript:void(0);" onclick="moreXjhxx('all')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis5" id="m015_2_4"><a href="javascript:void(0);" onclick="moreXjhxx('jt')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis5" id="m015_3_4"><a href="javascript:void(0);" onclick="moreXjhxx('mt')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis5" id="m015_4_4"><a href="javascript:void(0);" onclick="moreXjhxx('bz')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis5" id="m015_5_4"><a href="javascript:void(0);" onclick="moreXjhxx('yjb')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<ul> 
+<li id="tb5_1_4" class="hovertab5w" onclick="moreXjhxx('all');" onmouseover="x:HoverLi3(1,4,5);"><a href="javascript:void(0);">全部</a></li> 
+<li id="tb5_2_4" class="normaltab5" onclick="moreXjhxx('jt');" onmouseover="t:HoverLi3(2,4,5);"><a href="javascript:void(0);">今天</a></li>
+<li id="tb5_3_4" class="normaltab5" onclick="moreXjhxx('mt');" onmouseover="t:HoverLi3(3,4,5);"><a href="javascript:void(0);">明天</a></li> 
+<li id="tb5_4_4" class="normaltab5" onclick="moreXjhxx('bz');" onmouseover="t:HoverLi3(4,4,5);"><a href="javascript:void(0);">本周</a></li> 
+<li id="tb5_5_4" class="normaltab5" onclick="moreXjhxx('yjb');" onmouseover="t:HoverLi3(5,4,5);"><a href="javascript:void(0);">已举办</a></li> 
+</ul> 
+</div> 
+<div class="ctt6"> 
+<div class="dis5" id="tbc5_01_4" style="height: 150px;">
+	<div class="zp_items">
+       <ul>
+         <li style=" width:270px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	     <li style=" width:280px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">地点</li>
+	     <li style=" width:100px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">时间</li>
+	     <li style=" width:80px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">场次</li>
+      </ul> 
+    </div>
+    <div class="d_lb">
+       
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('H5cYhLC9JikURqcd6opTfN')">华东交通大学</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('H5cYhLC9JikURqcd6opTfN')">铁生馆100号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">09：30-11：30</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('KKPPYZdVvksfc62SkVLdpy')">上海振华重工（集团）股份有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('KKPPYZdVvksfc62SkVLdpy')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">09：30-11：30</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('FSq63uQwFQkg2ekgzwXs6Z')">苏州斯莱克精密设备股份有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('FSq63uQwFQkg2ekgzwXs6Z')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">09：30-11：30</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('XrgHZnohvYhiZF4MMTp9N')">上海浦东软件园股份有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('XrgHZnohvYhiZF4MMTp9N')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">13：00-15：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('HZda9z1DfAgsZxZo67ZTMj')">徐州矿务集团有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('HZda9z1DfAgsZxZo67ZTMj')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">13：00-15：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+         
+   </div>
+</div>
+<div class="undis5" id="tbc5_02_4" style="height: 150px;">
+	<div class="zp_items">
+       <ul>
+         <li style=" width:270px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	     <li style=" width:280px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">地点</li>
+	     <li style=" width:100px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">时间</li>
+	     <li style=" width:80px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">场次</li>
+      </ul> 
+    </div>
+    <div class="d_lb">
+       
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;" ><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('H5cYhLC9JikURqcd6opTfN')">华东交通大学</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('H5cYhLC9JikURqcd6opTfN')">铁生馆100号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">09：30-11：30</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;" ><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('KKPPYZdVvksfc62SkVLdpy')">上海振华重工（集团）股份有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('KKPPYZdVvksfc62SkVLdpy')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">09：30-11：30</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;" ><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('FSq63uQwFQkg2ekgzwXs6Z')">苏州斯莱克精密设备股份有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('FSq63uQwFQkg2ekgzwXs6Z')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">09：30-11：30</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;" ><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('XrgHZnohvYhiZF4MMTp9N')">上海浦东软件园股份有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('XrgHZnohvYhiZF4MMTp9N')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">13：00-15：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;" ><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('HZda9z1DfAgsZxZo67ZTMj')">徐州矿务集团有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('HZda9z1DfAgsZxZo67ZTMj')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-11</li>
+	      <li style=" width:80px;text-align:center;">13：00-15：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+         
+   </div>
+</div>
+<div class="undis5" id="tbc5_03_4" style="height: 150px;">
+	<div class="zp_items">
+       <ul>
+         <li style=" width:270px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	     <li style=" width:280px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">地点</li>
+	     <li style=" width:100px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">时间</li>
+	     <li style=" width:80px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">场次</li>
+      </ul> 
+    </div>
+    <div class="d_lb">
+       
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('YPHMLFxRwcboAwUTEbTNs8')">佛山市人力资源开发服务中心</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('YPHMLFxRwcboAwUTEbTNs8')">铁生馆100号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-12</li>
+	      <li style=" width:80px;text-align:center;">09：30-11：30</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('AvXaEpd9ocvmFb6GWf36Ph')">上海纵目科技有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('AvXaEpd9ocvmFb6GWf36Ph')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-12</li>
+	      <li style=" width:80px;text-align:center;">09：30-11：30</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('HqzDHZD8kYWpxfzPjVAdNj')">郑州易盛信息技术有限公司上海分公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('HqzDHZD8kYWpxfzPjVAdNj')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-12</li>
+	      <li style=" width:80px;text-align:center;">13：00-15：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('K6peuqpDNhr7GLNJ4DPyck')">南昌工程学院</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('K6peuqpDNhr7GLNJ4DPyck')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-12</li>
+	      <li style=" width:80px;text-align:center;">13：00-15：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('AmUjro376tvMKqXkby41w1')">山东临工工程机械有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('AmUjro376tvMKqXkby41w1')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-12</li>
+	      <li style=" width:80px;text-align:center;">16：00-18：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+         
+   </div>
+</div>
+<div class="undis5" id="tbc5_04_4" style="height: 150px;">
+	<div class="zp_items">
+       <ul>
+         <li style=" width:270px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	     <li style=" width:280px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">地点</li>
+	     <li style=" width:100px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">时间</li>
+	     <li style=" width:80px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">场次</li>
+      </ul> 
+    </div>
+    <div class="d_lb">
+       
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('S8mJSzYq9anwHLsDPG5bVV')">晶晨半导体（上海）有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('S8mJSzYq9anwHLsDPG5bVV')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-09</li>
+	      <li style=" width:80px;text-align:center;">13：00-15：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('A2kWkDwbWHKWjHdEdSgxB3')">德硕管理咨询（上海）有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('A2kWkDwbWHKWjHdEdSgxB3')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-09</li>
+	      <li style=" width:80px;text-align:center;">16：00-18：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('jgAc8N3J62TMPpVCW9xgq')">上海阅文信息技术有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('jgAc8N3J62TMPpVCW9xgq')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-09</li>
+	      <li style=" width:80px;text-align:center;">19：00-21：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('MzihBop4uduT1nSmC854u3')">迪卡侬（上海）体育用品有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('MzihBop4uduT1nSmC854u3')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-09</li>
+	      <li style=" width:80px;text-align:center;">19：00-21：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('EEgaordDBTdyrAFTvr85ze')">上海市创业专修学院</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('EEgaordDBTdyrAFTvr85ze')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-10</li>
+	      <li style=" width:80px;text-align:center;">09：30-11：30</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+         
+   </div>
+</div>
+<div class="undis5" id="tbc5_05_4" style="height: 150px;">
+	<div class="zp_items">
+       <ul>
+         <li style=" width:270px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	     <li style=" width:280px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">地点</li>
+	     <li style=" width:100px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">时间</li>
+	     <li style=" width:80px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">场次</li>
+      </ul> 
+    </div>
+    <div class="d_lb">
+       
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('BFBXTwxHY3EY8FSqrd6rq9')">兰州兰石集团有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('BFBXTwxHY3EY8FSqrd6rq9')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-10</li>
+	      <li style=" width:80px;text-align:center;">19：00-21：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('fiDWe12XhVts1JVKHuEeC')">心动网络股份有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('fiDWe12XhVts1JVKHuEeC')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-10</li>
+	      <li style=" width:80px;text-align:center;">19：00-21：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('CfaPHNELBzNSyFcM1s9wQe')">摩恩（上海）厨卫有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('CfaPHNELBzNSyFcM1s9wQe')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-10</li>
+	      <li style=" width:80px;text-align:center;">16：00-18：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('D66nhMagZif9jLP9MKHz5u')">浙江正泰电器股份有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('D66nhMagZif9jLP9MKHz5u')">铁生馆200号宣讲厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-10</li>
+	      <li style=" width:80px;text-align:center;">13：00-15：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+     
+      <div class="zp_llb">
+        <ul>
+          <li style="width:270px; text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('QBJa5ByQPC3jiAfyjuRqKe')">电通安吉斯（上海）投资有限公司</a></li>
+	      <li style=" width:280px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewXjhxx('QBJa5ByQPC3jiAfyjuRqKe')">铁生馆300号多功能厅</a></li>
+	      <li style=" width:100px;text-align:center;">2015-11-10</li>
+	      <li style=" width:80px;text-align:center;">13：00-15：00</li>
+       </ul>
+       <div class="clear"></div>
+     </div>
+         
+   </div>
+</div>
+</div>
+<!---->
+<!---->
+<div id="tb2_" class="tb_2"> 
+<div style="float:right; padding-top:3px; padding-right:10px;" id="m012_1_1"><a href="javascript:void(0);" onclick="moreZpxx('jygl_zpxxck', 'allqy')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis2" id="m012_2_1"><a href="javascript:void(0);" onclick="moreZpxx('jygl_zpxxck', 'gyqy')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis2" id="m012_3_1"><a href="javascript:void(0);" onclick="moreZpxx('jygl_zpxxck', 'myqy')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis2" id="m012_4_1"><a href="javascript:void(0);" onclick="moreZpxx('jygl_zpxxck', 'wzqy')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis2" id="m012_5_1"><a href="javascript:void(0);" onclick="moreZpxx('jygl_zpxxck', 'qtqy')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<ul> 
+<li id="tb2_1_1" class="hovertab2w" onmouseover="x:HoverLi2(1,1,5);"><a href="javascript:void(0);">全部</a></li> 
+<li id="tb2_2_1" class="normaltab2" onclick="moreZpxx('jygl_zpxxck', 'gyqy');" onmouseover="t:HoverLi2(2,1,5);"><a href="javascript:void(0);">国有企业</a></li>
+<li id="tb2_3_1" class="normaltab2" onclick="moreZpxx('jygl_zpxxck', 'myqy')" onmouseover="t:HoverLi2(3,1,5);"><a href="javascript:void(0);">民营企业</a></li> 
+<li id="tb2_4_1" class="normaltab2" onclick="moreZpxx('jygl_zpxxck', 'wzqy')" onmouseover="t:HoverLi2(4,1,5);"><a href="javascript:void(0);">外资企业</a></li> 
+<li id="tb2_5_1" class="normaltab2" onclick="moreZpxx('jygl_zpxxck', 'qtqy')" onmouseover="t:HoverLi2(5,1,5);"><a href="javascript:void(0);">海外及其他企业</a></li> 
+</ul> 
+</div> 
+<div class="ctt6"> 
+<div class="dis2" id="tbc2_01_1" style="height: 150px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:470px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('4uueGVvY3sBeS4rdvTmX4b', 'jygl_scfwyrdw')">上海博坤投资管理有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('7dNKft14dKpJaU3ZJgCMFf', 'jygl_zpxxck')">博坤-资金助理</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('48726', 'jygl_scfwyrdw')">三胞集团有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('HofZagDDGLmiEhBmDHAPjd', 'jygl_zpxxck')">三胞集团2016年“千人计划”全球校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('12965', 'jygl_scfwyrdw')">上海华彩管理咨询有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('PaKAiKo3zoX4oDLHYMTwkj', 'jygl_zpxxck')">华彩咨询协作咨询顾问</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('47368', 'jygl_scfwyrdw')">佛山市人力资源开发服务中心</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('Kr2HwSbkFwQcu6JqHDVg1v', 'jygl_zpxxck')">【佛山  人社局】佛山市人力资源和社会保障局2016年...</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('39430', 'jygl_scfwyrdw')">京滨电子装置研究开发（上海）有限公...</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('MzneBAMdWSEFbifrZkhMc8', 'jygl_zpxxck')">京滨电子装置研究开发（上海）有限公司2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+ </div>
+
+<div class="undis2" id="tbc2_02_1" style="height: 150px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:470px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right; width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('36221', 'jygl_scfwyrdw')">中国华电集团公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('HNgNpFTdiSx5csuz1PvnSM', 'jygl_zpxxck')">中国华电集团公司2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('48498', 'jygl_scfwyrdw')">中国铁建国际集团有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('SUkuWYpXe7YYJgwRfpwxUQ', 'jygl_zpxxck')">2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('50974', 'jygl_scfwyrdw')">上海浦东软件园股份有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('S5N9NcLCvFdHhUMjabsmGF', 'jygl_zpxxck')">上海浦东软件园股份有限公司 2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('dSapSnNc93vrT2yC8vNVu', 'jygl_scfwyrdw')">中国能源建设集团安徽电力建设第一工...</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('RMPiMTtvrGr4iTffVPaiE7', 'jygl_zpxxck')">2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('36077', 'jygl_scfwyrdw')">上海世纪出版股份有限公司科技教育出...</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('83VrYoxQRhAnv2tB5GseMP', 'jygl_zpxxck')">上海科技教育出版社招聘启事</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+</div>
+<div class="undis2" id="tbc2_03_1" style="height: 150px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:470px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('4uueGVvY3sBeS4rdvTmX4b', 'jygl_scfwyrdw')">上海博坤投资管理有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('7dNKft14dKpJaU3ZJgCMFf', 'jygl_zpxxck')">博坤-资金助理</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('AAJdEL4DhZR2STH52GWUwd', 'jygl_scfwyrdw')">上海羽泰信息技术有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('KBHHCf1rhLcjSQzspHQVtr', 'jygl_zpxxck')">上海羽泰信息技术有限公司2015年校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('SJfkfzcRcmwSsToy5gEwnG', 'jygl_scfwyrdw')">横店集团控股有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('Nz66KRDLsVPyJ8B4SkEBmQ', 'jygl_zpxxck')">2016年校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('2VQA2HnrPwajNtdpLJGB6F', 'jygl_scfwyrdw')">上海灿谷投资管理咨询服务有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('75aTcSL8mDAWR1bZ5VJVsw', 'jygl_zpxxck')">上海灿谷投资管理咨询服务有限公司2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('VsEYqTr49J8HMivtHGAsHj', 'jygl_scfwyrdw')">北京知象科技有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('NyC6dgCwtWirpASvS26U9b', 'jygl_zpxxck')">2016年校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+</div>
+<div class="undis2" id="tbc2_04_1" style="height: 150px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:470px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('39430', 'jygl_scfwyrdw')">京滨电子装置研究开发（上海）有限公...</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('MzneBAMdWSEFbifrZkhMc8', 'jygl_zpxxck')">京滨电子装置研究开发（上海）有限公司2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('W35538kdsCXBAqyyfcYQqt', 'jygl_scfwyrdw')">嘉善上虹商用设备股份有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('LFwJpufMTXL1Wd26nfqjsS', 'jygl_zpxxck')">浙江嘉善上虹企业2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('H7rK4ePtEqD8ATgWgXpzYB', 'jygl_scfwyrdw')">城云科技（杭州）有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('XdweR2UyWsPD3jdm7ozecz', 'jygl_zpxxck')">城云科技2016校园招聘简章</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('CPmjLQV3Av1jrST4Zf9aBy', 'jygl_scfwyrdw')">上海孚因流体动力设备有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('6vXWk2j2fnDdDMP934Txke', 'jygl_zpxxck')">应届毕业生招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('48897', 'jygl_scfwyrdw')">银硃（北京）投资顾问有限公司上海分...</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('5XZJcZPiqCadJ2kCtJtQai', 'jygl_zpxxck')">外资投资银行上海办公室实习生招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+</div>
+<div class="undis2" id="tbc2_05_1" style="height: 150px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:470px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('48726', 'jygl_scfwyrdw')">三胞集团有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('HofZagDDGLmiEhBmDHAPjd', 'jygl_zpxxck')">三胞集团2016年“千人计划”全球校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('12965', 'jygl_scfwyrdw')">上海华彩管理咨询有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('PaKAiKo3zoX4oDLHYMTwkj', 'jygl_zpxxck')">华彩咨询协作咨询顾问</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('47368', 'jygl_scfwyrdw')">佛山市人力资源开发服务中心</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('Kr2HwSbkFwQcu6JqHDVg1v', 'jygl_zpxxck')">【佛山  人社局】佛山市人力资源和社会保障局2016年...</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('MDNtDJ6W4THDitDrqsLUi1', 'jygl_scfwyrdw')">北京清和泉资本管理有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('RLUape9MzEh6VSbQNyapQL', 'jygl_zpxxck')">研究员、交易员</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('45970', 'jygl_scfwyrdw')">复纳科学仪器（上海）有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('V7X83qXBR5jWJ5pgGsSLpw', 'jygl_zpxxck')">复纳科学仪器（上海）有限公司【飞纳中国】 招聘信息</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+</div>
+</div> 
+<!---->
+<!---->
+<div id="tb2_" class="tb_2"> 
+<div style="float:right; padding-top:3px; padding-right:10px;" id="m012_1_2"><a href="javascript:void(0);" onclick="moreZpxx('jygl_scfwzpxx', 'alldw')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis2" id="m012_2_2"><a href="javascript:void(0);" onclick="moreZpxx('jygl_zpxxck', 'jgsydw')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis2" id="m012_3_2"><a href="javascript:void(0);" onclick="moreXdcgszyf()"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis2" id="m012_4_2"><a href="javascript:void(0);" onclick="moreBddwhyzrw()"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<ul> 
+<li id="tb2_1_2" class="hovertab2w" onmouseover="x:HoverLi2(1,2,4);"><a href="javascript:void(0);">全部</a></li> 
+<li id="tb2_2_2" class="normaltab2" onclick="moreZpxx('jygl_zpxxck', 'jgsydw');" onmouseover="t:HoverLi2(2,2,4);"><a href="javascript:void(0);">机关事业单位招聘</a></li>
+<li id="tb2_3_2" class="normaltab2" onclick="moreXdcgszyf();" onmouseover="t:HoverLi2(3,2,4);"><a href="javascript:void(0);">选调生、村官、三支一扶</a></li> 
+<li id="tb2_4_2" class="normaltab2" onclick="moreBddwhyzrw();" onmouseover="t:HoverLi2(4,2,4);"><a href="javascript:void(0);">部队单位与应征入伍</a></li> 
+</ul> 
+</div> 
+<div class="ctt6"> 
+<div class="dis2" id="tbc2_01_2" style="height: 150px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:470px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('21134', 'jygl_scfwyrdw')">中科院生物物理研究所</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('R5Yj6AM2kuM6vaN2gxJfhX', 'jygl_zpxxck')">中科院生物物理研究所2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('106ecdf0d00b64ffe05078ca6a017f36', 'jygl_scfwyrdw')">广西医科大学</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('PHNEtzWvahptypCRGvkwg7', 'jygl_zpxxck')">2016年广西医科大学人才招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('42883', 'jygl_scfwyrdw')">西北有色金属研究院</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('M3WzFT3tw25LQAhEaLdpMb', 'jygl_zpxxck')">西北有色金属研究院2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('48371', 'jygl_scfwyrdw')">中国计量学院</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('JHwaftjCrrBxfVVQ3shDn6', 'jygl_zpxxck')">中国计量学院2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('36749', 'jygl_scfwyrdw')">中国工商银行博士后科研工作站</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('PhtGfQ4fFC2q5XY1dhEcvA', 'jygl_zpxxck')">中国工商银行博士后科研工作站2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+ </div>
+
+<div class="undis2" id="tbc2_02_2" style="height: 150px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:470px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('21134', 'jygl_scfwyrdw')">中科院生物物理研究所</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('R5Yj6AM2kuM6vaN2gxJfhX', 'jygl_zpxxck')">中科院生物物理研究所2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('106ecdf0d00b64ffe05078ca6a017f36', 'jygl_scfwyrdw')">广西医科大学</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('PHNEtzWvahptypCRGvkwg7', 'jygl_zpxxck')">2016年广西医科大学人才招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('42883', 'jygl_scfwyrdw')">西北有色金属研究院</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('M3WzFT3tw25LQAhEaLdpMb', 'jygl_zpxxck')">西北有色金属研究院2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('48371', 'jygl_scfwyrdw')">中国计量学院</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('JHwaftjCrrBxfVVQ3shDn6', 'jygl_zpxxck')">中国计量学院2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewDwzpxx('36749', 'jygl_scfwyrdw')">中国工商银行博士后科研工作站</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('PhtGfQ4fFC2q5XY1dhEcvA', 'jygl_zpxxck')">中国工商银行博士后科研工作站2016校园招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-11</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+</div> 
+<div class="undis2" id="tbc2_03_2" style="height: 150px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:245px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" width:420px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">&nbsp;</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+		<li style=" width:595px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('3Wwk1GZWoEKSQsFdpgdjmG', 'zpgg');">【四川 选调生】四川省2016年面向上海交通大学 选调急需紧缺专业优秀大学毕业生公告</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+		<li style=" width:595px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('LnfjhWzrjtP8VepAGvktax', 'zpgg');">【青海 选调生】青海省2016年面向上海交通大学 定向招录选调生公告</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-03</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+		<li style=" width:595px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('7dXYDs87kiL2uUB6GX2hke', 'zpgg');">【广西 选调生】广西2016年定向上海交通大学招录选调生公告</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-02</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+		<li style=" width:595px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('QRNijr5z6vdSJxDk84oqC3', 'zpgg');">【选调 事业编制】浙江省平湖市定向选调2016年优秀应届高校毕业生公告</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-01</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+		<li style=" width:595px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('7MbDotuveu78vrr6tcGKPK', 'zpgg');">【贵州 选调生】贵州省2016年定向上海交通大学招录选调生公告</a></li>
+		<li style=" width:125px;text-align:right;">2015-10-29</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+</div>
+<div class="undis2" id="tbc2_04_2" style="height: 150px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:245px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" width:420px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">&nbsp;</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+		<li style=" width:595px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('U18MrxQyR6UJJqSuD3uZb7', 'zpxx');">2016年度上海市海警总队招聘信息</a></li>
+		<li style=" width:125px;text-align:right;">2015-10-17</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+</div>
+</div> 
+<!---->
+<!---->
+<div id="tb2_" class="tb_2"> 
+<div style="float:right; padding-top:3px; padding-right:10px;" id="m012_1_3"><a href="javascript:void(0);" onclick="moreZpxx('jygl_zpxxck', 'allgzlx')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis2" id="m012_2_3"><a href="javascript:void(0);" onclick="moreZpxx('jygl_zpxxck', 'sxjz')"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<div style="float:right; padding-top:3px; padding-right:10px;" class="undis2" id="m012_3_3"><a href="javascript:void(0);" onclick="moreSxhhwsz();"><img src="/eweb/jygl/css/sjtuimgs/more.png" /></a></div>
+<ul> 
+<li id="tb2_1_3" class="hovertab2w" onmouseover="x:HoverLi2(1,3,3);"><a href="javascript:void(0);">全部</a></li> 
+<li id="tb2_2_3" class="normaltab2" onclick="moreZpxx('jygl_zpxxck', 'sxjz');" onmouseover="t:HoverLi2(2,3,3);"><a href="javascript:void(0);">实习兼职</a></li>
+<li id="tb2_3_3" class="normaltab2" onclick="moreSxhhwsz();"  onmouseover="t:HoverLi2(3,3,3);"><a href="javascript:void(0);">升学和海外留学</a></li> 
+</ul> 
+</div> 
+<div class="ctt6"> 
+<div class="dis2" id="tbc2_01_3" style="height: 160px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:470px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('YEn41AG2SBG2Tf5ti4J5ao', 'jygl_zpxxck')">悦资创业投资（上海）有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('YEn41AG2SBG2Tf5ti4J5ao', 'jygl_zpxxck')">互联网金融领域技术类实习生</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('64x24TSW2e5sgCs1hwRQbb', 'jygl_zpxxck')">铭江（上海）投资管理有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('64x24TSW2e5sgCs1hwRQbb', 'jygl_zpxxck')">铭江（上海）投资管理有限公司招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('83VrYoxQRhAnv2tB5GseMP', 'jygl_zpxxck')">上海世纪出版股份有限公司科技教育出...</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('83VrYoxQRhAnv2tB5GseMP', 'jygl_zpxxck')">上海科技教育出版社招聘启事</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('9gSkxxziTXLS3FaNMFDG6Y', 'jygl_zpxxck')">建投投资有限责任公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('9gSkxxziTXLS3FaNMFDG6Y', 'jygl_zpxxck')">中国建投成员企业建投投资2016年春季和暑期实习生计划...</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('5XZJcZPiqCadJ2kCtJtQai', 'jygl_zpxxck')">银硃（北京）投资顾问有限公司上海分...</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('5XZJcZPiqCadJ2kCtJtQai', 'jygl_zpxxck')">外资投资银行上海办公室实习生招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+ </div>
+
+<div class="undis2" id="tbc2_02_3" style="height: 160px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:195px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">单位</li>
+	<li style=" width:470px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('YEn41AG2SBG2Tf5ti4J5ao', 'jygl_zpxxck')">悦资创业投资（上海）有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('YEn41AG2SBG2Tf5ti4J5ao', 'jygl_zpxxck')">互联网金融领域技术类实习生</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('64x24TSW2e5sgCs1hwRQbb', 'jygl_zpxxck')">铭江（上海）投资管理有限公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('64x24TSW2e5sgCs1hwRQbb', 'jygl_zpxxck')">铭江（上海）投资管理有限公司招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('83VrYoxQRhAnv2tB5GseMP', 'jygl_zpxxck')">上海世纪出版股份有限公司科技教育出...</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('83VrYoxQRhAnv2tB5GseMP', 'jygl_zpxxck')">上海科技教育出版社招聘启事</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('9gSkxxziTXLS3FaNMFDG6Y', 'jygl_zpxxck')">建投投资有限责任公司</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('9gSkxxziTXLS3FaNMFDG6Y', 'jygl_zpxxck')">中国建投成员企业建投投资2016年春季和暑期实习生计划...</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+    
+	   <div class="zp_llb">
+	    <ul>
+	     <li style="width:245px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('5XZJcZPiqCadJ2kCtJtQai', 'jygl_zpxxck')">银硃（北京）投资顾问有限公司上海分...</a></li>
+		<li style=" width:350px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewZpxx('5XZJcZPiqCadJ2kCtJtQai', 'jygl_zpxxck')">外资投资银行上海办公室实习生招聘</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-10</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+</div> 
+<div class="undis2" id="tbc2_03_3" style="height: 160px;">
+   
+   <div class="zp_items">
+   <ul>
+    <li style=" width:245px; background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">主题</li>
+	<li style=" width:420px;background:url(/eweb/jygl/css/sjtuimgs/xian.png) bottom no-repeat;">&nbsp;</li>
+	<li style=" text-align:right;width:65px;background:url(/eweb/jygl/css/sjtuimgs/xian3.png) bottom no-repeat;">发布时间</li>
+   </ul> 
+  </div>
+    <div class="d_lb">
+    
+	   <div class="zp_llb">
+	    <ul>
+		<li style=" width:595px;text-align:left;"><a class="sy_a" href="javascript:void(0);" onclick="viewNews('7p6RyyLdzXcudnkD8e2dLH', 'zpxx');"> 江苏科技大学2016年博士招聘启事</a></li>
+		<li style=" width:125px;text-align:right;">2015-11-03</li>
+	   </ul><div class="clear"></div>
+	   </div>
+   
+   </div>
+   
+   
+</div>
+</div> 
+<!---->
+</div>
+
+<div class="clear"></div>
+  </div>
+ </div>
+  
+
+
+
+
+
+ <div class="links">
+  <div class="links_t">
+   <div class="main">友情链接</div>
+  </div>
+  <div class="links_main">
+	   <ul>
+		    
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.12zyw.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/S1SyX7R19VSP5SHCsetAHr.png" title="中国研究生网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.hzrc.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/Hx32kFBg2u2cUUYrPU5oPy.png" title="杭州人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.haorc.com/zdyj/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/NyiEDEa7y4ywWThkt5RV7U.png" title="西安市人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://zhaopin.shanghai-air.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/Kk7k4KsF9UJ74AH8gbcX2A.png" title="上航网上招聘"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.hr.com.cn/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/7Coot2NjWCcHAzxdHXMayb.png" title="中国人力资源网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.job100.com/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/URjsLXSz9sKFNSKbeFvn5H.png" title="中才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.xmrc.com.cn/" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/TWhtc5ESbX7UT64dGCRvYe.png" title="厦门人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li style="padding-top: 0px;">
+		    	<a href="http://www.szrc.cn/szrc/default.html" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/4KuUAoGn19xZZkkwGeMZkr.png" title="苏州人才网"/>
+		    	</a>
+		    </li>
+	   		
+		    <li >
+		    	<a href="http://xds.gcdr.gov.cn" target="_blank">
+		    		<img src="/eweb/jygl/cms/imgs/JYgWxkVyGxWJnGFckWv4ZR.png" title="四川优秀大学生选调网"/>
+		    	</a>
+		    </li>
+	   		
+	   </ul>
+   <div class="clear"></div>
+  </div>
+ </div>
+ <div class="foot">
+  <div class="foot_o">
+   <div class="main">
+   <ul>
+    <li class="lxfs">
+	 <div class="lxfs_t"><a href="#">联系方式</a></div>
+	 <div class="lxfs_o">
+  	 <p>邮编：200240</p>
+     <p>地址：上海市闵行区东川路800号交通大学铁生馆</p> 
+     <p>电话总机：86-21-54745721、54745904、54747570、 54743091、54745994</p>
+	 </div>
+	</li>
+	<li class="yrdw">
+	 <div class="yrdw_t"><a href="#">用人单位服务</a></div>
+	 <div class="yrdw_o">
+	  <p>电话分机：881、882、883</p>
+      <p>邮箱：career@sjtu.edu.cn</p> 
+      <p>地址：铁生馆201室</p>
+      <p>&nbsp;&nbsp;</p>
+	 </div>
+	</li>
+	<li class="xsjy">
+	 <div class="xsjy_t"><a href="#">学生就业事务</a></div>
+	 <div class="xsjy_o">
+	  <p>电话：86-21-54745751</p>
+      <p>传真：86-21-54744803</p> 
+      <p>邮箱：em.scc@sjtu.org</p>
+	  <p>地址：学服200号(闵行校区) 浩然103室(徐汇校区)</p>
+	 </div>
+	</li>
+	<li class="xssy">
+	 <div class="xssy_t"><a href="#">学生生涯服务</a></div>
+	 <div class="xsjy_o">
+	  <p>电话分机：771</p>
+      <p>传真：86-21-54744803</p> 
+      <p>邮箱：career@sjtu.org</p>
+	  <p>地址：铁生馆207室</p>
+	 </div>
+	</li>
+   </ul><div class="clear"></div>
+   </div>
+  </div>
+  <div class="foot_t">
+   <div class="foot_main">
+   <ul>
+    <li class="d_logo"> <img src="/eweb/jygl/css/sjtuimgs/logo2.png" /></li>
+	<li class="d_copyright"> 
+		<span style=" font-size:14px; color:#FFFFFF;">学生就业服务和职业发展中心</span> <span style="font-size:12px;">版权所有2014</span>
+   		<span style=" font-size:14px; color:#FFFFFF;">（建议使用IE7以上浏览器）</span>
+   	</li>
+   </ul><div  class="clear"></div>
+ </div>
+  </div>
+ </div>
+<script type="text/javascript" language="javascript"> 
+//<!CDATA[ 
+function g(o){return document.getElementById(o);} 
+function HoverLi3(r,s,o){ 
+//如果有N个标签,就将i<=N;  
+//本功能非常OK,兼容IE7,FF,IE6 
+	for(var h=1;h<=o;h++){
+		g('tb3_'+h+'_'+s).className='normaltab3';
+		g('tbc3_0'+h+'_'+s).className='undis3';
+		g('m013_'+h+'_'+s).className='undis3';
+	}
+	g('tb3_'+r+'_'+s).className='hovertab3w'; 
+	g('tbc3_0'+r+'_'+s).className='dis3';
+	g('m013_'+r+'_'+s).className='dis3';
+} 
+</script>
+<script type="text/javascript" language="javascript"> 
+//<!CDATA[ 
+function g(o){return document.getElementById(o);} 
+function HoverLi2(f,e,o){ 
+//如果有N个标签,就将i<=N;  
+//本功能非常OK,兼容IE7,FF,IE6 
+	for(var t=1;t<=o;t++){
+		g('tb2_'+t+'_'+e).className='normaltab2';
+		g('tbc2_0'+t+'_'+e).className='undis2';
+		g('m012_'+t+'_'+e).className='undis2';
+	}
+	g('tb2_'+f+'_'+e).className='hovertab2w'; 
+	g('tbc2_0'+f+'_'+e).className='dis2';
+	g('m012_'+f+'_'+e).className='dis2';
+} 
+</script>
+<script type="text/javascript" language="javascript"> 
+//<!CDATA[ 
+function g(o){return document.getElementById(o);} 
+function HoverLi3(k,l,o){ 
+//如果有N个标签,就将i<=N;  
+//本功能非常OK,兼容IE7,FF,IE6 
+	for(var p=1;p<=o;p++){
+		g('tb5_'+p+'_'+l).className='normaltab5';
+		g('tbc5_0'+p+'_'+l).className='undis5';
+		g('m015_'+p+'_'+l).className='undis5';
+	}
+	g('tb5_'+k+'_'+l).className='hovertab5w'; 
+	g('tbc5_0'+k+'_'+l).className='dis5';
+	g('m015_'+k+'_'+l).className='dis5';
+} 
+</script>
+</body>
+</html>

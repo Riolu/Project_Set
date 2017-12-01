@@ -1,0 +1,1344 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>四川优秀大学生选调</title>
+<LINK href="/home/images/index.css" type=text/css rel=stylesheet>
+<script type="text/javascript" src="/com/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/com/jquery-plugin/jquery.tabs.js"></script>
+<script type="text/javascript" src="/com/jquery-plugin/myfocus/myfocus-2.0.1.min.js"></script>
+<script type="text/javascript" src="/home/images/fly.js"></script>
+<script type="text/javascript">
+$(function(){
+	  $('#newsBox').myFocus({
+	    pattern:'mF_classicHC',//风格应用的名称	 
+	    trigger:'click',//触发切换模式:'click'(点击)/'mouseover'(悬停)
+	    width:314,//设置图片区域宽度(像素)
+	    height:217,//设置图片区域高度(像素)
+	    txtHeight:20//文字层高度设置(像素),'default'为默认高度，0为隐藏
+	  });
+	})
+$(function(){
+	  $('#secondBox').myFocus({
+	    pattern:'mF_classicHC',//风格应用的名称	 
+	    trigger:'click',//触发切换模式:'click'(点击)/'mouseover'(悬停)
+	    width:740,//设置图片区域宽度(像素)
+	    height:174,//设置图片区域高度(像素)
+	    txtHeight:0//文字层高度设置(像素),'default'为默认高度，0为隐藏
+	  });
+	})
+</script>
+<script type="text/javascript">
+function key(){ 
+if(event.shiftKey){
+window.close();}
+//禁止Shift
+if(event.altKey){
+window.close();}
+//禁止Alt
+if(event.ctrlKey){
+window.close();}
+//禁止Ctrl
+return false;}
+document.onkeydown=key;
+if (window.Event)
+document.captureEvents(Event.MOUSEUP);
+function nocontextmenu(){
+event.cancelBubble = true
+event.returnValue = false;
+return false;}
+function norightclick(e){
+if (window.Event){
+if (e.which == 2 || e.which == 3)
+return false;}
+else
+if (event.button == 2 || event.button == 3){
+event.cancelBubble = true
+event.returnValue = false;
+return false;}
+}
+//禁右键
+document.oncontextmenu = nocontextmenu;   // for IE5+
+document.onmousedown = norightclick;   // for all others
+var omitformtags=["input", "textarea", "select"]
+omitformtags=omitformtags.join("|")
+function disableselect(e){ 
+if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1) 
+return false 
+}
+function reEnable(){ 
+return true 
+}
+if (typeof document.onselectstart!="undefined") 
+document.onselectstart=new Function ("return false") 
+else{ 
+document.onmousedown=disableselect 
+document.onmouseup=reEnable 
+} 
+</script>
+
+</head>
+
+<body  oncontextmenu="return false" onselectstart="return false" style="background:url(/home/images/bj.jpg) repeat">
+<table width=1000 align=center bgcolor="#ffffff">
+<tr>
+<td height=316 colspan=2>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title></title>
+<LINK href="/home/images/head.css" type=text/css rel=stylesheet>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function AddFavorite(sURL, sTitle)
+{
+    try
+    {
+        window.external.addFavorite(sURL, sTitle);
+    }
+    catch (e)
+    {
+        try
+        {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        }
+        catch (e)
+        {
+            alert("加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}
+function SetHome(obj,vrl){
+        try{
+                obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+                if(window.netscape) {
+                        try {
+                                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                        }
+                        catch (e) {
+                                alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                        }
+                        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                        prefs.setCharPref('browser.startup.homepage',vrl);
+                 }
+        }
+}
+
+$(function(){  
+	$("#nav li:last").css("background","none");//关键函数，注意容器id"#test"要和html代码中一样  
+	})
+	
+</SCRIPT> 
+</head>
+
+<body>
+<div align="center">	
+<table border="0" cellspacing="0" cellpadding="0" class="headbg">
+        <tr>
+            <td id="lefttd">欢迎访问：四川优秀大学生选调网</td>
+            <td id="righttd"><a a href="#" onclick="SetHome(this,window.location)" style="text-decoration:none;">设为首页</a>&nbsp;&nbsp;<img src="/home/images/line_top.png" />&nbsp;&nbsp;<a href="#" onclick="AddFavorite(window.location,'四川优秀大学生选调网')" style="text-decoration:none;">加入收藏</a>&nbsp;&nbsp;</td>
+        </tr>
+		 <tr><td height=212></td></tr>
+		<tr>
+			<td colspan=2>
+			<div style="text-align:center;margin-left:60px;">
+				<ul id="nav" >
+						<li class="first"><a href="/"  target="_blank">首&nbsp;页</a></li>	
+						<li style="width:17px;"><img src="/home/images/menusplit.png"/></li>		
+						<li><a href="/home/list.jsp?categoryId=402888f446835daf0146836020990004" target="_blank">政策法规</a>
+</li>			
+						<li style="width:17px;"><img src="/home/images/menusplit.png"/></li>	
+						<li><a href="/home/list.jsp?categoryId=402888f446835daf0146835fda0b0002" target="_blank">领导讲话</a>
+</li>
+						<li style="width:17px;"><img src="/home/images/menusplit.png"/></li>	
+						<li><a href="/home/list.jsp?categoryId=402888f446835daf014683859028000a" target="_blank">热点资讯</a>
+</li>						
+						<li style="width:17px;"><img src="/home/images/menusplit.png"/></li>	
+						<li><a href="/home/list.jsp?categoryId=402888f446835daf01468360014a0003" target="_blank">经验交流</a>
+</li>
+						<li style="width:17px;"><img src="/home/images/menusplit.png"/></li>						
+						<li><a href="/home/list.jsp?categoryId=402888f446835daf01468360441f0005" target="_blank">风采展示</a>
+</li>
+                        <li style="width:17px;"><img src="/home/images/menusplit.png"/></li>	
+                        <li style="background:none"><a href=#>好书有约</a>
+</li>					
+                        <li style="width:17px;"><img src="/home/images/menusplit.png"/></li>
+                        <li><a href="/home/list.jsp?categoryId=fdc08fe6475c7e9801475d65b65c0017" target="_blank">名人纪实</a>
+</li>
+						<li style="width:17px;"><img src="/home/images/menusplit.png"/></li>
+                        <li><a href="" target="_blank">文苑荟萃</a>
+</li>
+						<li style="width:17px;"><img src="/home/images/menusplit.png"/></li>		
+                        <li><a href="listmail.jsp" target="_blank">工作信箱</a></li> 
+					</ul>
+				</div>
+			</td>
+		</tr>		
+		<tr>
+           <td height=38 colspan=2 class="search">   
+           <form onsubmit="return search();" action="search.jsp" id="searchform" name="searchform">       
+           <table width=100%>
+             <tr>
+               <td class="label">站内检索：</td>              
+               <td style="padding-top:4px;"> <input type="text" name="UrlParamName_keyword" id="UrlParamName_keyword" class="txt"  value="请在此键入检索关键词" onMouseOver="if(this.value=='请在此键入检索关键词') { this.value='';this.focus() }" onMouseOut="if(this.value=='') this.value='请在此键入检索关键词';" onFocus="this.select()" onClick="if(this.value=='请在此键入检索关键词') this.value=''"> </td>            
+               <td style="width:435px;padding-top:2px;">
+                <input type="submit" value="" onclick="" class="btn">	
+               </td>
+             <td style="width:20px;padding-top:4px;text-align:right;"><img src="/home/images/time.jpg" /></td>
+             <td style="width:255px;padding-top:6px;color:#575555">&nbsp;现在是： <script language="javascript" type="text/javascript" src="/home/images/datetime.js"></script></td>
+             </tr>
+            </table>   
+            </form>  
+            	<script type="text/javascript">
+					function search(){
+						var form = $("#searchform")[0];
+						if ("请在此键入检索关键词" == form["UrlParamName_keyword"].value) {
+							alert("请输入搜索关键词");
+							return false;
+						} 
+			   	   }
+				
+				</script>      
+           </td>
+        </tr>
+	</table>	
+</div>
+</body>
+</html>
+</td>
+</tr>
+<tr>
+<td>
+<table width=100%  style="margin-top:7px;">
+<tr>
+<td width=250 valign=top>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title></title>
+<LINK href="/home/images/left.css" type=text/css rel=stylesheet>
+</head>
+<body>
+<div align="center" >	
+<table border="0" width="230" cellspacing="0" cellpadding="0" align=center style="margin-top:0px">		
+			
+					<tr>
+						
+						<td valign=top height=330>
+							
+								<table class="noticepanel">
+									<tr style="margin-left:10px;" >
+										<td height="28">
+										 <div style="float:left;margin:5px 10px 5px 10px;color:#ffffff;font-size:14px;font-weight:bold">通知公告</div>
+										 <div style="float:right;margin:10px 16px 5px 0px"><a href="/home/list.jsp?categoryId=402888f446889271014688986d800002"  target="_blank"><img src="/home/images/more.png" /></a>
+</div>
+									    </td>
+									</tr>
+								
+								<tr height="318px" rowspan="2">
+										<td valign="top">
+										<MARQUEE onmouseover=this.stop() onmouseout=this.start() scrollAmount=1 scrollDelay=100 direction=up height="99%">
+										<table style="margin:5px 10px 0px 10px" width="210px" align=center >
+          
+         
+      
+        <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150f04b3db61053" target=_blank title="关于开展“四川—上海高校活动周”有关安排的通知
+">关于开展“四川—上海高校活动周”有关安排的通知
+</a>&nbsp;(2015-11-10)</td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        
+         					
+		
+      
+        <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f01509382c5b50f86" target=_blank title="四川省2016年面向国（境）外部分知名高校选调优秀大学毕业生公告
+">四川省2016年面向国（境）外部分知名高校选调优...</a>&nbsp;(2015-10-23)</td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        
+         					
+		
+      
+        <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014f62a7efcc0d14" target=_blank title="四川省2015年度选调优秀大学毕业生到基层工作拟录用人员公示
+">四川省2015年度选调优秀大学毕业生到基层工作拟...</a>&nbsp;(2015-08-25)</td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        
+         					
+		
+      
+        <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014f0659c7530c83" target=_blank title="四川省2015年度选调优秀大学毕业生到基层工作递补人员公告
+">四川省2015年度选调优秀大学毕业生到基层工作递...</a>&nbsp;(2015-08-07)</td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        
+         					
+		
+      
+        <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014e6c59edfe0b4b" target=_blank title="四川省2015年度选调优秀大学毕业生到基层工作进入体检、考察人员递补公告
+">四川省2015年度选调优秀大学毕业生到基层工作进...</a>&nbsp;(2015-07-08)</td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        
+         					
+		
+      
+        <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014e477244530b1b" target=_blank title="《四川优秀大学生选调网》栏目信息编发通报">《四川优秀大学生选调网》栏目信息编发通报</a>&nbsp;(2015-07-01)</td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        
+         					
+		
+    
+	
+         
+         </table></MARQUEE>
+        </td>
+         </tr>	 
+							  </table>
+						</td>
+				   </tr>
+				   <tr><td height=3></td></tr>
+				   <tr>
+				    <td>
+					 
+							<div class=piclink style="margin-top:12px"><a  href="http://bms.gcdr.gov.cn/home/student" target=_blank><img src="/home/images/wsbm.jpg"  border=0></a></div>
+							<div class=piclink style="margin-top:12px"><a  href="http://bms.gcdr.gov.cn/home/singinfolist" target=_blank><img src="/home/images/zkzdy.jpg"  border=0></a></div>
+							<div class=piclink style="margin-top:12px"><a  href="http://bms.gcdr.gov.cn/home/queryscore" target=_blank><img src="/home/images/cjcx.jpg"  border=0></a></div>
+							<div class=piclink style="margin-top:12px"><a  href="http://bms.gcdr.gov.cn/home/volunteer" target=_blank><img src="/home/images/zytb.jpg"  border=0></a></div>
+							<div class=piclink style="margin-top:12px"><a  href="/home/listmail.jsp" target=_blank><img src="/home/images/zzxx.jpg"  border=0></a></div>
+							<div class=piclink style="margin-top:12px"><a  href="/home/listsubmission.jsp" target=_blank><img src="/home/images/tgxx.jpg"  border=0></a></div>
+					</td>
+					</tr>
+					
+							   <tr><td height=12></td></tr>
+							<tr>
+					  <td>
+								<table class="noticepanel" style="height:413px;">
+									<tr style="margin-left:10px;">
+										<td style="float:left;margin:5px 10px 0px 19px" height="28px">
+										<a href="/home/list.jsp?categoryId=402888f446889271014688b7e76c0003" target=_blank style="font-size:12px;font-weight:bold;color:#ffffff">有关视频</a></td>
+
+									</tr>
+									<tr height="389px">
+										<td valign="top">
+										<table style="margin:2px 10px 0px 10px" width="210px" align=center >
+         
+         
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=4028809e474858fc014748c6fbda008f" target=_blank title="心系天府 圆梦四川">心系天府 圆梦四川</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014a9a44859e00cd" target=_blank title="眉山市宣传片">眉山市宣传片</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014a807bdc8d0007" target=_blank title="“四川—清华活动周”在北京圆满结束">“四川—清华活动周”在北京圆...</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014a807b11430006" target=_blank title="我省与清华大学召开省校战略合作实施工作会议">我省与清华大学召开省校战略合...</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014a807a873d0005" target=_blank title="清华大学、北京大学2015届毕业生招聘会  暨四川省高层次人才引进会成功举办">清华大学、北京大学2015届...</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014a8079c92c0004" target=_blank title="德阳市宣传片">德阳市宣传片</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014a807949d00003" target=_blank title="创业沃土——宜宾市宣传片">创业沃土——宜宾市宣传片</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014a8078b7900002" target=_blank title="美在宜宾——宜宾市宣传片2">美在宜宾——宜宾市宣传片2</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014a8076a51a0001" target=_blank title="记2014届清华大学选调生张晓强">记2014届清华大学选调生张...</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=fdc08fe6493c1aea0149410cd20f007b" target=_blank title="记2004届北京大学选调生袁海晗">记2004届北京大学选调生袁...</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=fdc08fe6493c1aea0149410c65e8007a" target=_blank title="记2009届清华大学选调生程莉">记2009届清华大学选调生程...</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+         <tr><td colspan=2 height=2></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>  
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="/home/infodetail.jsp?id=fdc08fe6493c1aea0149410bcf840079" target=_blank title="家乡的明月——2014届清华大学选调生黎明月">家乡的明月——2014届清华...</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         					
+         					
+		
+    
+         
+         </table> 
+        </td>
+         </tr>
+									 
+							  </table>
+							  </td>
+							</tr>
+							 <tr><td height=12></td></tr>
+							<tr>
+					  <td>
+									<table  class="noticepanel" style="height:306px">
+									<tr style="margin-left:10px;">
+										<td style="float:left;margin:5px 10px 0px 19px" height="28px">
+										<span style="font-size:12px;font-weight:bold;color:#ffffff">友情链接</span></td>
+									</tr>
+									<tr>
+										<td height="281px" valign=top>
+										<table style="margin:1px 10px 0px 10px" width="210px" align=center class="divcss5-b" >
+         
+        
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="http://www.gcdr.gov.cn" target=_blank title="四川组工网">&nbsp;四川组工网</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="http://cpc.people.com.cn/"  target=_blank title="中国共产党新闻">&nbsp;中国共产党新闻</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="http://www.zgdjyj.com/" target=_blank title="党建研究">&nbsp;党建研究</a></td>
+         </tr>
+          <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="http://www.newssc.org/" target=_blank title="党建研究">&nbsp;四川新闻网</a></td>
+         </tr>
+          <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="http://www.scgqt.org.cn/home/" target=_blank title="党建研究">&nbsp;四川青年网</a></td>
+         </tr>
+          <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="http://www.scdjw.com.cn/" target=_blank title="党建研究">&nbsp;四川党建网</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+           <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><select style="width:200px;height:23px;border-width:0px;border-left-style: none;" onchange="if(this.options[this.selectedIndex].value!='') window.open(this.options[this.selectedIndex].value,'_blank')" name=sel3> <option selected>省内党务党建党史类网站</option>
+<option value="http://cdzzb.chengdu.gov.cn">成都市委组织部</option>
+<option value="http://www.zgzzb.gov.cn">自贡市委组织部</option>
+<option value="http://zzb.panzhihua.gov.cn">攀枝花市委组织部</option>
+<option value="http://www.lzzg.gov.cn">泸州市委组织部</option>
+<option value="http://zzb.my.gov.cn">绵阳市委组织部</option>
+<option value="http://www.gyzzb.gov.cn">广元市委组织部</option>
+<option value="http://www.snswzzb.gov.cn">遂宁市委组织部</option>
+<option value="http://www.njdjw.gov.cn">内江市委组织部</option>
+<option value="http://www.ncdj.gov.cn">南充市委组织部</option>
+<option value="http://www.gadj.gov.cn">广安市委组织部</option>
+<option value="http://www.dzdjw.gov.cn">达州市委组织部</option>
+<option value="http://www.bzswzzb.gov.cn">巴中市委组织部</option>
+<option value="http://www.yadjw.gov.cn">雅安市委组织部</option>
+<option value="http://www.ms.gov.cn">眉山市委组织部</option>
+<option value="http://www.zyzgw.gov.cn">资阳市委组织部</option>
+<option value="http://www.abzzg.gov.cn">阿坝州委组织部</option>
+<option value="http://www.xyxf.gov.cn">甘孜州委组织部</option>
+<option value="http://125.68.57.25/">凉山州委组织部</option>
+</SELECT></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><select style="width:200px;height:23px;border-width:0px;border-left-style: none;" onchange="if(this.options[this.selectedIndex].value!='') window.open(this.options[this.selectedIndex].value,'_blank')" name=sel3> <option selected>各市（州）人民政府网</option>
+<option value="http://www.sc.gov.cn/">四川省人民政府网</option>
+<option value="http://www.chengdu.gov.cn/">成都市</option>
+<option value="http://www.zg.gov.cn/">自贡市</option>
+<option value="http://www.panzhihua.gov.cn/">攀枝花市</option>
+<option value="http://www.luzhou.gov.cn/">泸州市</option>
+<option value="http://www.deyang.gov.cn/">德阳市</option>
+<option value="http://www.my.gov.cn/">绵阳市</option>
+<option value="http://www.cngy.gov.cn/html/index.html">广元市</option>
+<option value="http://www.suining.gov.cn/">遂宁市</option>
+<option value="http://www.neijiang.gov.cn/">内江市</option>
+<option value="http://www.leshan.gov.cn/">乐山市</option>
+<option value="http://www.nanchong.gov.cn/">南充市</option>
+<option value="http://www.yb.gov.cn/index.html">宜宾市</option>
+<option value="http://www.guang-an.gov.cn/">广安市</option>
+<option value="http://www.dazhou.gov.cn/">达州市</option>
+<option value="http://www.cnbz.gov.cn/">巴中市</option>
+<option value="http://www.yaan.gov.cn/htm/index.html">雅安市</option>
+<option value="http://www.ms.gov.cn/">眉山市</option>
+<option value="http://www.ziyang.gov.cn/">资阳市</option>
+<option value="http://www.abazhou.gov.cn/">阿坝州</option>
+<option value="http://www.gzz.gov.cn/">甘孜州</option>
+<option value="http://www.lsz.gov.cn/publish/portal0/">凉山州</option>
+
+</SELECT></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><select style="width:200px;height:23px;border-width:0px;border-left-style: none;" onchange="if(this.options[this.selectedIndex].value!='') window.open(this.options[this.selectedIndex].value,'_blank')" name=sel3> <option selected>各市（州）旅游网</option>
+<option value="http://www.scta.gov.cn/sclyj/">四川旅游网</option>
+<option value="http://www.cdta.gov.cn/web/main.aspx">成都市</option>
+<option value="http://www.zgta.gov.cn/">自贡市</option>
+<option value="http://www.pzhsta.gov.cn/">攀枝花市</option>
+<option value="http://www.lzsta.gov.cn/">泸州市</option>
+<option value="http://www.dysta.gov.cn/">德阳市</option>
+<option value="http://www.mysta.gov.cn/">绵阳市</option>
+<option value="http://www.gysta.gov.cn/">广元市</option>
+<option value="http://www.snta.gov.cn/">遂宁市</option>
+<option value="http://www.njta.gov.cn/">内江市</option>
+<option value="http://www.lssta.gov.cn/">乐山市</option>
+<option value="http://www.ncta.gov.cn/">南充市</option>
+<option value="http://www.ybta.gov.cn/">宜宾市</option>
+<option value="http://www.gata.gov.cn/">广安市</option>
+<option value="http://www.dzsta.gov.cn/">达州市</option>
+<option value="http://www.bzsta.gov.cn/">巴中市</option>
+<option value="http://www.yata.gov.cn/">雅安市</option>
+<option value="http://www.msta.gov.cn/">眉山市</option>
+<option value="http://www.zyta.gov.cn/">资阳市</option>
+<option value="http://www.abzta.gov.cn/">阿坝州</option>
+<option value="http://www.gzzta.gov.cn/">甘孜州</option>
+<option value="http://www.lszta.gov.cn/">凉山州</option>
+</SELECT></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+          <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="http://www.scol.com.cn/" target=_blank title="四川在线">&nbsp;四川在线</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="http://www.scpublic.cn/"  target=_blank title="四川发布">&nbsp;四川发布</a></td>
+         </tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href=" http://www.maijinjob.com/" target=_blank title="四川旅游人才网">&nbsp;四川旅游人才网</a></td>
+         </tr>
+          <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <tr><td colspan=2 height=4></td></tr>
+         <tr> 
+           <td width=10 align=center valign=top style="color:#7F7F7F">·</td>        
+          <td style="font-size:12px;color:#555555;vertical-align:middle"><a href="http://www.scgis.net:8738/scly/defaultmain.htm" target=_blank title="天地图-四川旅游">&nbsp;天地图-四川旅游</a></td>
+         </tr>
+          <tr><td colspan=2 height=4></td></tr>
+         <tr><td colspan=2 height=4 style="border-top:1px dashed #DDDDDD;"></td></tr>
+         <tr><td colspan=2 height=2></td></tr>
+         <tr><td colspan=2 height=5></td></tr>					
+         					
+		  
+         
+         </table> 
+										</td>
+									</tr>
+									 
+							  </table>
+							  </td>
+							</tr>
+							 
+							
+									
+				</table>
+</div>
+</body>
+</html>
+</td>
+<td width=750 valign=top>
+ <table width=740 align="left"> 
+  <tr>
+    <td width=100% height=240 colspan=2 > 
+     <!-- 图片新闻 工作动态 -->
+     <table border="0" width="100%" cellspacing="0" cellpadding="0" height=100%>
+		<tr>
+			<td>
+			<!-- pic news begin -->
+			<div id="newsBox" style="margin-top:2px;visibility:hidden; width:314px;height:247px;overflow:hidden"><!--焦点图盒子-->  
+		        <div class="pic" style="width:314px;height:247px;overflow:hidden"><!--内容列表(li数目可随意增减)-->
+		       	 <ul>
+		     	 
+        			 <li><a href="infodetail.jsp?id=8a8048e54a80541f014f2b79992a0cd5" target="_blank"><img src=/upload/info/201508/5e055248e8dd45f08abda417910c887d.jpg width=314 height=217 alt="我省召开同济大学在川选调生座谈会" text="我省召开同济大学在川选调生座谈会" ></a></li>      
+     			 
+        			 <li><a href="infodetail.jsp?id=8a8048e54a80541f014f62e4b8f20d3e" target="_blank"><img src=/upload/info/201508/aa199a305b7743fc8850bec1354e9f3b.jpg width=314 height=217 alt="我省召开中国人民大学在川选调生座谈会" text="我省召开中国人民大学在川选调生座谈会" ></a></li>      
+     			 
+        			 <li><a href="infodetail.jsp?id=8a8048e54a80541f014ed39f01d30bd7" target="_blank"><img src=/upload/info/201507/190d4b275e9245c69775fbbf6910c4c2.jpg width=314 height=217 alt="我省召开中国农业大学选调生座谈会" text="我省召开中国农业大学选调生座谈会" ></a></li>      
+     			 
+        			 <li><a href="infodetail.jsp?id=8a8048e54a80541f014d51307ed20a0b" target="_blank"><img src=/upload/info/201505/5f6e9c0de1a44b97a799bab914fd140c.jpg width=314 height=217 alt="四川省2015年度选调生面试顺利进行<br>" text="四川省2015年度选调生面试顺利进行<br>" ></a></li>      
+     			 
+        			 <li><a href="infodetail.jsp?id=8a8048e54a80541f014c72a5d20b07a6" target="_blank"><img src=/upload/info/201504/7e7d31820ebb42199b86ba12915c0c45.jpg width=314 height=217 alt="我省召开海外知名高校选调生座谈会" text="我省召开海外知名高校选调生座谈会" ></a></li>      
+     			 
+        			 <li><a href="infodetail.jsp?id=8a8048e54a80541f014c5397d0520721" target="_blank"><img src=/upload/info/201503/37f30fe8595045768e15021274c10a98.jpg width=314 height=217 alt="中国青年政治学院调研组来我部交流座谈" text="中国青年政治学院调研组来我部交流座谈" ></a></li>      
+     			 
+        			 <li><a href="infodetail.jsp?id=8a8048e54a80541f014c44beecfc0680" target="_blank"><img src=/upload/info/201503/71f0b6cdd33e45bea065cc8b5cddbfc1.jpg width=314 height=217 alt="四川省2015年度选调生笔试在成都顺利进行" text="四川省2015年度选调生笔试在成都顺利进行" ></a></li>      
+     			 
+        			 <li><a href="infodetail.jsp?id=8a8048e54a80541f014b8c1650160467" target="_blank"><img src=/upload/info/201502/0054e9f34e7e4a0db0a26c9d71f517f1.jpg width=314 height=217 alt="新年贺词" text="新年贺词" ></a></li>      
+     			 
+ 
+		         <!-- <div class="imagetext"><a href='infodetail.jsp?id=$id$' target=_blank>$标题$</a></div> -->
+		      	 </ul>
+		      	 </div>
+		     </div>
+			<!-- pic news end -->
+			</td>
+			<td valign=top align=left style="padding-left:10px;margin-top:2px;">
+			<!--工作动态 -->
+			<div style="background:url('/home/images/gzdtbg3.jpg') left top no-repeat;width:410px;height:32px">
+				<table border="0" width="100%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td width=119 height=32 align=center style="padding-top:5px;color:#BF0E08;font-weight:bold;font-size:14px;">热点资讯</td><td align=right width=279>
+						<a href="/home/list.jsp?categoryId=402888f446835daf014683859028000a" target="_blank"><img src="images/more.png" /></a>&nbsp;</td>
+					</tr>					
+				</table>
+			</div>
+			<div >
+				<table  width=410 style="padding-left:10px;">
+		       <tr>
+           <td colspan=3 height=99 style="padding-top:8px;vertical-align:top">
+              <div style="width:155px;float:left;padding-top:10px;padding-left:5px"><a href="/home/list.jsp?categoryId=402888f446835daf014683859028000a" target="_blank"><img src="images/rdzx.jpg"/></a></div>
+           
+              <div style="width:209px;float:left;padding-top:2px"><div style="font-weight:bold;color:#BF0E06;font-size:12px;line-height:24px;padding-top:30px">四川优秀大学生选调——热点资讯</div></div>                          
+           </td>          
+          </tr>
+	       		</table>
+			</div>
+			<div>
+			<table border="0" width="410" cellspacing="0" cellpadding="0" style="padding-left:10px;">
+			<tr><td height=10 colspan=3></td></tr>
+			
+         	<tr>
+         		 <td width=10 height=23 align=left><img src="images/gzdtprev.png" /></td>
+         		 <td width=300 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150e58ad6fe101a" target=_blank title="习近平同马英九会面">习近平同马英九会面</a></td>
+          		<td width=75 align=right style="font-size:12px;color:#C8C8C8;">[2015-11-09]</td>
+         	</tr>
+            <tr><td colspan=3 height=5 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        	
+         	<tr>
+         		 <td width=10 height=23 align=left><img src="images/gzdtprev.png" /></td>
+         		 <td width=300 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150da8745e7100c" target=_blank title="四川新三板挂牌企业达110家 居西部第一">四川新三板挂牌企业达110家 居西部第一</a></td>
+          		<td width=75 align=right style="font-size:12px;color:#C8C8C8;">[2015-11-06]</td>
+         	</tr>
+            <tr><td colspan=3 height=5 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        	
+         	<tr>
+         		 <td width=10 height=23 align=left><img src="images/gzdtprev.png" /></td>
+         		 <td width=300 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150b6741a9f0fbd" target=_blank title="中共十八届五中全会在北京举行">中共十八届五中全会在北京举行</a></td>
+          		<td width=75 align=right style="font-size:12px;color:#C8C8C8;">[2015-10-30]</td>
+         	</tr>
+            <tr><td colspan=3 height=5 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        	
+         	<tr>
+         		 <td width=10 height=23 align=left><img src="images/gzdtprev.png" /></td>
+         		 <td width=300 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150a36643390f97" target=_blank title="4859人竞争104个职位">4859人竞争104个职位</a></td>
+          		<td width=75 align=right style="font-size:12px;color:#C8C8C8;">[2015-10-26]</td>
+         	</tr>
+            <tr><td colspan=3 height=5 style="border-top:1px dashed #DDDDDD;"></td></tr>
+        	
+
+	         
+	       </table> 
+			</div>
+
+			<!--工作动态 end -->
+			</td>
+		</tr>
+	</table>
+     <!-- 图片新闻 工作动态  end-->
+    </td>
+  </tr>
+  <tr><td height=9></td></tr>
+  <!-- row1 begin -->
+  <tr>
+    <td width=364 valign=top>
+     <table width=364>
+     <tr>
+        <td class="blockhead">
+         <div style="float:left;margin:11px 0px 0px 30px">领导讲话</div>
+         <div style="float:right;margin:12px 16px 0px 0px"><a href="/home/list.jsp?categoryId=402888f446835daf0146835fda0b0002" target="_blank"><img src="images/more.png" /></a></div>
+       </td>
+     </tr>
+     <tr>
+       <td class="blockborder_v2">
+         <table width=344 align=center>
+         <tr>
+           <td colspan=3 height=99 style="padding-top:8px;vertical-align:top">
+              <div style="width:135px;float:left"><a href="/home/list.jsp?categoryId=402888f446835daf0146835fda0b0002" target="_blank"><img src="images/logo_zcjh.jpg"/></a></div>
+           
+              <div style="width:209px;float:left"><div style="font-weight:bold;color:#BF0E06;font-size:12px;line-height:24px;padding-top:30px">四川优秀大学生选调——领导讲话</div></div>                          
+           </td>          
+         </tr>
+         
+         
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014f87fe0b6c0d6f" target=_blank title="在会见全国优秀县委书记时的讲话">在会见全国优秀县委书记时的讲话</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-09-01]</td>
+         </tr>
+         <tr><td colspan=3 height=2 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014ed8f40c400bee" target=_blank title="让青春在实现中国梦的征程上焕发光彩——以习近平同志为总书记的党中央关心青年和青年工作纪实
+">让青春在实现中国梦的征程上焕发光彩—...</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-07-29]</td>
+         </tr>
+         <tr><td colspan=3 height=2 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014e2de19c130afe" target=_blank title="贯彻从严要求当看务实干事">贯彻从严要求当看务实干事</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-06-26]</td>
+         </tr>
+         <tr><td colspan=3 height=2 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014d23437faa08b8" target=_blank title="习大大对青年说的12句话">习大大对青年说的12句话</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-05-05]</td>
+         </tr>
+         <tr><td colspan=3 height=2 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+    
+         
+         </table>     
+       </td>
+     </tr>
+     </table>
+    </td>     
+    <td width=364 valign=top>
+     <table width=364 align=right> 
+     <tr>
+       <td class="blockhead">
+         <div style="float:left;margin:11px 0px 0px 30px">经验交流</div>
+         <div style="float:right;margin:12px 16px 0px 0px"><a href="/home/list.jsp?categoryId=402888f446835daf01468360014a0003" target="_blank"><img src="images/more.png" /></a></div>
+       </td>
+     </tr>
+     <tr><td class="blockborder_v2">
+      <table align=center width=344>
+         <tr>
+           <td colspan=3 height=99 style="padding-top:8px;vertical-align:top">
+              <div style="width:135px;float:left"><a href="/home/list.jsp?categoryId=402888f446835daf01468360014a0003" target="_blank"><img src="images/logo_jyjl.jpg"/></a></div>
+          
+              <div style="width:209px; float:left"><div style="font-weight:bold;color:#BF0E06;font-size:12px;line-height:24px;padding-top:30px">四川优秀大学生选调——经验交流</div></div>                         
+           </td>          
+         </tr>
+         
+        
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150ac48132c0fb5" target=_blank title="广安市“用”字当先铺设选调生成长快速通道">广安市“用”字当先铺设选调生成长快速...</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-10-28]</td>
+         </tr>
+         <tr><td colspan=3 height=2 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150ac478d3b0fb4" target=_blank title="石棉县“三实”机制切实抓好平时考核试点工作">石棉县“三实”机制切实抓好平时考核试...</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-10-28]</td>
+         </tr>
+         <tr><td colspan=3 height=2 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f01506550c8030f3b" target=_blank title="攀枝花市采取“互联网+”模式创刊发行《攀枝花选调生》简报
+">攀枝花市采取“互联网+”模式创刊发行...</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-10-14]</td>
+         </tr>
+         <tr><td colspan=3 height=2 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f01501d2c08870ed8" target=_blank title="在选调之路上绽放青春绚丽的光彩">在选调之路上绽放青春绚丽的光彩</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-09-30]</td>
+         </tr>
+         <tr><td colspan=3 height=2 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+   
+		 
+       </table>
+     </td></tr>
+     </table>
+    </td>
+  </tr>
+  <!-- row1 end -->
+  <tr><td height=9></td></tr>
+   <tr>
+    <td valign=top colspan=2>
+    
+     <!-- pic news begin -->
+			<div id="secondBox" style="margin-top:2px;visibility:hidden; width:740px;height:174px;overflow:hidden"><!--焦点图盒子-->  
+		        <div class="pic" style="width:740px;height:174px;overflow:hidden"><!--内容列表(li数目可随意增减)-->
+		       	 <ul>
+		     	
+                    <li><a href="/home/list.jsp?categoryId=fdc08fe6495459230149595824ba0029" target=_blank><img src="/home/images/beidaxds.jpg"/></a></li>      
+     			 
+ 
+     			 
+                    <li><a href="/home/list.jsp?categoryId=8a8048e54a80541f014a807f4ad80008" target=_blank><img src="/home/images/finalTsinghua2.jpg"/></a></li>      
+     			 
+
+		         <!-- <div class="imagetext"><a href='infodetail.jsp?id=$id$' target=_blank>$标题$</a></div> -->
+		      	 </ul>
+		      	 </div>
+		     </div>
+
+     </td>
+  </tr>
+   <tr><td height=9></td></tr>
+  <!-- row2 begin -->
+<tr>
+    <td width=364 valign=top>
+     <table width=364>
+     <tr>
+        <td class="blockhead">
+         <div style="float:left;margin:11px 0px 0px 30px">政策法规</div>
+         <div style="float:right;margin:12px 16px 0px 0px"><a href="/home/list.jsp?categoryId=402888f446835daf0146836020990004" target="_blank"><img src="images/more.png" /></a></div>
+       </td>
+     </tr>
+     <tr>
+       <td class="blockborder_v2">
+         <table width=344 align=center>
+         <tr>
+           <td colspan=3 height=99 style="padding-top:8px;vertical-align:top">
+              <div style="width:135px;float:left"><a href="/home/list.jsp?categoryId=402888f446835daf0146836020990004" target="_blank"><img src="images/logo_llyj.jpg"/></a></div>
+            
+              <div style="width:209px;float:left"><div style="font-weight:bold;color:#BF0E06;font-size:12px;line-height:24px;padding-top:30px">四川优秀大学生选调——政策法规</div></div>                         
+           </td>          
+         </tr>
+         
+         
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014e057b32a50adf" target=_blank title="中国共产党党组工作条例（试行）">中国共产党党组工作条例（试行）</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-06-18]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014c6e9c65d0078b" target=_blank title="中国一带一路规划正式公布(全文)">中国一带一路规划正式公布(全文)</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-03-31]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f014ae1fd95de01ad" target=_blank title="支持四川天府新区建设发展若干政策">支持四川天府新区建设发展若干政策</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-01-13]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a516ddb014a63686b950058" target=_blank title="创新奋进的四川活力">创新奋进的四川活力</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2014-12-20]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+    
+         
+         </table>     
+       </td>
+     </tr>
+     </table>
+    </td>     
+    <td width=364 valign=top>
+     <table width=364 align=right> 
+     <tr>
+       <td class="blockhead">
+         <div style="float:left;margin:11px 0px 0px 30px">风采展示</div>
+         <div style="float:right;margin:12px 16px 0px 0px"><a href="/home/list.jsp?categoryId=402888f446835daf01468360441f0005" target="_blank"><img src="images/more.png" /></a></div>
+       </td>
+     </tr>
+     <tr><td class="blockborder_v2">
+      <table align=center width=344>
+         <tr>
+           <td colspan=3 height=99 style="padding-top:8px;vertical-align:top">
+              <div style="width:135px;float:left"><a href="/home/list.jsp?categoryId=402888f446835daf01468360441f0005" target="_blank"><img src="images/logo_fczs.jpg"/></a></div>
+          
+              <div style="width:209px; float:left"><div style="font-weight:bold;color:#BF0E06;font-size:12px;line-height:24px;padding-top:30px">四川优秀大学生选调——风采展示</div></div>                      
+           </td>          
+         </tr>
+         
+        
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=4028809e474858fc01474881cbd10041" target=_blank title="胸怀信念与使命前行 ">胸怀信念与使命前行 </a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2014-07-18]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=4028809e474858fc0147488187d30040" target=_blank title="扎根基层，争做群众信赖的好干部">扎根基层，争做群众信赖的好干部</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2014-07-18]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=4028809e474858fc014748814ec1003f" target=_blank title="三十年如一日扎根大小凉山">三十年如一日扎根大小凉山</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2014-07-18]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=4028809e474858fc014748811245003e" target=_blank title="学无止境">学无止境</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2014-07-18]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+    
+          
+       </table>
+     </td></tr>
+     </table>
+    </td>
+  </tr>
+  <!-- row2 end -->
+   <tr><td height=9></td></tr>
+  <!-- row3 begin --> 
+  <tr>
+    <td width=364 valign=top>
+    <div style="width:135px;float:left"><img src="/home/images/hsyy.jpg"/></div>
+
+    </td>
+  </tr>
+   
+  <!-- row3 end --> 
+  <tr><td height=9></td></tr>
+  <!-- row4 begin -->
+  <tr>
+    <td width=364 valign=top>
+     <table width=364>
+     <tr>
+        <td class="blockhead">
+         <div style="float:left;margin:11px 0px 0px 30px">文苑荟萃</div>
+         <div style="float:right;margin:12px 16px 0px 0px"><a href="/home/list.jsp?categoryId=fdc08fe64839791d01485e379295011e" target="_blank"><img src="images/more.png" /></a></div>
+       </td>
+     </tr>
+     <tr>
+       <td class="blockborder_v2">
+         <table width=344 align=center>
+         <tr>
+           <td colspan=3 height=99 style="padding-top:8px;vertical-align:top">
+              <div style="width:135px;float:left"><a href="/home/list.jsp?categoryId=fdc08fe64839791d01485e379295011e" target="_blank"><img src="images/logo_llts.jpg"/></a></div>
+           
+              <div style="width:209px;float:left"><div style="font-weight:bold;color:#BF0E06;font-size:12px;line-height:24px;padding-top:30px">四川优秀大学生选调——文苑荟萃</div></div>                         
+           </td>          
+         </tr>
+         
+         
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150e58de719102e" target=_blank title="读书从来就不是一件热闹的事">读书从来就不是一件热闹的事</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-11-09]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150c62d79ac0fc1" target=_blank title="世界诱惑太多，我们要学会专注">世界诱惑太多，我们要学会专注</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-11-02]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f0150a35fa71b0f93" target=_blank title="你那么努力，为的是什么？">你那么努力，为的是什么？</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-10-26]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/infodetail.jsp?id=8a8048e54a80541f015059b0485f0f18" target=_blank title="我是怎样度过人生的低潮期的">我是怎样度过人生的低潮期的</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-10-12]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+    
+         
+         </table>     
+       </td>
+     </tr>
+     </table>
+    </td>     
+    <td width=364 valign=top >
+     <table width=364 align=right> 
+     <tr>
+       <td class="blockhead">
+         <div style="float:left;margin:11px 0px 0px 30px">看&nbsp;四&nbsp;川</div>
+         <div style="float:right;margin:12px 16px 0px 0px"><a href="/home/pdflist.jsp?categoryId=fdc08fe64839791d0148690d27f70145" target="_blank"><img src="images/more.png" /></a></div>
+       </td>
+     </tr>
+     <tr><td class="blockborder_v2">
+      <table align=center width=344>
+         <tr>
+           <td colspan=3 height=99 style="padding-top:8px;vertical-align:top">
+              <div style="width:135px;float:left"><a href="/home/pdflist.jsp?categoryId=fdc08fe64839791d0148690d27f70145" target="_blank"><img src="images/logo_ksc.jpg"/></a></div>
+          
+              <div style="width:209px; float:left"><div style="font-weight:bold;color:#BF0E06;font-size:12px;line-height:24px;padding-top:30px">四川优秀大学生选调——看四川</div></div>                      
+           </td>          
+         </tr>
+         
+        
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/pdfdetail.jsp?id=8a8048e54a80541f0150e58d315e101d" target=_blank title="成都银杏地图">成都银杏地图</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-11-09]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/pdfdetail.jsp?id=8a8048e54a80541f0150c632db550fc4" target=_blank title="四川最美秋景">四川最美秋景</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-11-02]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/pdfdetail.jsp?id=8a8048e54a80541f0150a36780d40f98" target=_blank title="四川红叶生态旅游节">四川红叶生态旅游节</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-10-26]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+		 <tr>
+          <td width=10 height=20 align=left><img src="images/infoprev.jpg" /></td>
+          <td width=260 align=left style="font-size:12px;color:#555555;"><a href="/home/pdfdetail.jsp?id=8a8048e54a80541f01507f28ee7b0f6e" target=_blank title="川西高原上美得不可方物的藏区建筑">川西高原上美得不可方物的藏区建筑</a></td>
+          <td align=right style="font-size:12px;color:#C8C8C8;">[2015-10-19]</td>
+         </tr>
+         <tr><td colspan=3 height=3 style="border-top:1px dashed #DDDDDD;"></td></tr>						
+		
+    
+          
+       </table>
+     </td></tr>
+     </table>
+    </td>
+  </tr>
+  <!-- row4 end -->
+ <tr><td height=8></td></tr>
+  <tr>
+    <td width=740 height=227 align=center colspan="2"><a href="/home/list.jsp?categoryId=4028809e46dca6c00146dcb52b9e0017" target="_blank"><img src="images/blog3.gif" /></a>
+
+    </td>
+  </tr>
+ </table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td height=8></td></tr>
+<tr>
+  <td width=1000 >
+      <table width="1000" style="height:197px;background:url(images/scgdbg.jpg) center top no-repeat">
+      <tr>
+       <td align="left" style="height:30px;font-size:14px;font-weight:bold;color:#bf0e06;padding:5px 0px 0px 40px;">四川各地</td>
+       <td align="right" style="padding:0px 12px 0px 28px;"><a href="/home/list.jsp?categoryId=402888f4468995f1014689b214a60001" target="_blank"><img src="images/more.png" /></a>
+&nbsp;&nbsp;</td>
+     </tr>
+     <tr>
+     <td colspan=2 width=1000>
+       <table width=100%>
+       <tr>
+       <td width="210" height="170"></td>
+       <td width="790" valign=top>
+                <link href="/home/images/lrscroll.css" rel="stylesheet" type="text/css">
+				<script type="text/javascript" src="/home/images/lrscroll.js" type="text/javascript"></script>			
+							
+						
+									<div class="photo_video" id="scroll_video" style="z-index:0">  	
+									    <div class="img_l_video"><img src="/home/images/back.jpg" /></div>
+									    <div class="photo_nav_video">
+									      <div class="photo_w_video">															           															      		
+									      		
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6d74e80001" target=_blank><img src="/home/images/scgd/chengdu.png" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6d74e80001" target=_blank>成&nbsp;都</a></div>
+												</div>
+												
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6da1f30002" target=_blank><img src="/home/images/scgd/zigong.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6da1f30002" target=_blank>自&nbsp;贡</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6dee4e0003" target=_blank><img src="/home/images/scgd/panzhihua.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6dee4e0003" target=_blank>攀枝花</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6e25aa0004" target=_blank><img src="/home/images/scgd/luzhou.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6e25aa0004" target=_blank>泸&nbsp;州</a></div>
+												</div>	
+												
+
+												
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6e4c2e0005" target=_blank><img src="/home/images/scgd/deyang.png" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6e4c2e0005" target=_blank>德&nbsp;阳</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6edb100007" target=_blank><img src="/home/images/scgd/mianyang.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6edb100007" target=_blank>绵&nbsp;阳</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f03970008" target=_blank><img src="/home/images/scgd/guangyuan.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f03970008" target=_blank>广&nbsp;元</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f297e0009" target=_blank><img src="/home/images/scgd/suining.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f297e0009" target=_blank>遂&nbsp;宁</a></div>
+												</div>
+												
+
+												
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f4f75000a" target=_blank><img src="/home/images/scgd/neijiang.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f4f75000a" target=_blank>内&nbsp;江</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f755c000b" target=_blank><img src="/home/images/scgd/leshan.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f755c000b" target=_blank>乐&nbsp;山</a></div>
+												</div>												
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f9b81000d" target=_blank><img src="/home/images/scgd/nanchong.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6f9b81000d" target=_blank>南&nbsp;充</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6fbef7000e" target=_blank><img src="/home/images/scgd/yibin.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b6fbef7000e" target=_blank>宜&nbsp;宾</a></div>
+												</div>
+												
+
+												
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b70024a0010" target=_blank><img src="/home/images/scgd/guangan.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b70024a0010" target=_blank>广&nbsp;安</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b7033ca0011" target=_blank><img src="/home/images/scgd/dazhou.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b7033ca0011" target=_blank>达&nbsp;州</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b7054fe0012" target=_blank><img src="/home/images/scgd/bazhong.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b7054fe0012" target=_blank>巴&nbsp;中</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b7078260013" target=_blank><img src="/home/images/scgd/yaan.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b7078260013" target=_blank>雅&nbsp;安</a></div>
+												</div>
+												
+
+												
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b70a3e90014" target=_blank><img src="/home/images/scgd/meishan.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b70a3e90014" target=_blank>眉&nbsp;山</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b70c7fb0015" target=_blank><img src="/home/images/scgd/ziyang.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b70c7fb0015" target=_blank>资&nbsp;阳</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b70e69f0016" target=_blank><img src="/home/images/scgd/aba.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b70e69f0016" target=_blank>阿&nbsp;坝</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b7116980018" target=_blank><img src="/home/images/scgd/ganzi.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b7116980018" target=_blank>甘&nbsp;孜</a></div>
+												</div>
+												<div class='photo_array_video'>
+													<div class='photo_img_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b713cdd0019" target=_blank><img src="/home/images/scgd/liangshan.jpg" width="152" height="100"></img></a></div>
+													<div class='photo_info_video'><a href="/home/list.jsp?categoryId=fdc08fe6489b6c3301489b713cdd0019" target=_blank>凉&nbsp;山</a></div>
+												</div>
+												
+
+											
+									      </div>
+									    </div>
+									    <div class="img_r_video"><img src="/home/images/next.jpg" /></div>
+									</div>
+																			
+       </td>
+       </tr>
+       </table>
+      </td>     
+     </tr>
+     </table>    
+    </td>
+</tr>
+<tr>
+<td height=123 colspan=2 valign=bottom>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title></title>
+</head>
+
+<body>
+<div align="center">	
+<table width="1000" height=118 cellspacing="0" cellpadding="0" >
+  <tr>
+    <td height="30" ><img src="/home/images/foottitle.png"></td>
+  </tr>
+  <tr>
+    <td height="18" align="center" valign="top" ><span style="font-size:14px;color:#454545;'">版权所有 侵权必究 <img src="/home/images/c.png" width="14" height="13" />中共四川省委组织部</span></td>
+  </tr>
+  <tr valign="middle">
+    <td height="25" align="center" valigh="top" ><span style="font-size:14px;color:#454545;">主办单位：中共四川省委组织部&nbsp;&nbsp; 地址：成都市青羊区商业街16号</span></td>
+  </tr>
+  <tr>
+    <td  align=center valign="middle" >&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:14px;color:#454545">蜀ICP备12009026号</span> &nbsp;&nbsp;&nbsp;<span style="font-size:14px;color:#FF0000;">您是第&nbsp;<script type="text/javascript" src="http://stat.sckjcg.gov.cn/stat/statjs.jsp?webId=4028807a46a3c88d0147327320602cef&picType=counter4"></script>
+      	<noscript><img src="http://stat.sckjcg.gov.cn/logclick?webId=4028888e37735c060137735fdc610001&picType=counter4" border=0 ></noscript>个访问者</span></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" >&nbsp;</td>
+  </tr>
+		
+</table>
+</div>
+</body>
+</html>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

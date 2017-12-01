@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--qq登录验证用-->
+    <meta property="qc:admins" content="5455006266715655"/>
+    <!--ios-->
+            <meta name="apple-itunes-app" content="app-id=933524040, app-argument=tongqu:">
+        <!-- force ie to use the newest engine,and duo core to use chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="keywords"
+          content="大学生,活动,上海活动,上海大学生,上海同城,电影,社团,大学生社团,同去"/>
+    <meta name="description" content="同去网是东岳网络工作室开发和维护、服务于高校校园团队的互联网产品，为团队提供包括讲座、比赛、旅游、招新、电影、演出等活动的发布和报名服务，并提供高效的团队管理功能，为高校学生提供可浏览丰富校园活动的网络平台。"/>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content=" 2;http://www.tongqu.me/static/downloadchrome.html"/>
+    <![endif]-->
+
+    <title>同去网</title>
+
+
+    <!-- the add-on css  -->
+                        <link href="http://www.tongqu.me/js/lib/bootstrap/dist/css/bootstrap.css?hash=aafac6" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/lib/fontawesome/css/font-awesome.css?hash=d747d5" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/act.css?hash=e0b6fc" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/button.css?hash=d1b805" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/color.css?hash=b738d0" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/general.css?hash=608f01" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/layout.css?hash=72e8c0" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/message.css?hash=d41d8c" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/modal.css?hash=3ae068" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/nav.css?hash=507ea7" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/page.css?hash=7d0edf" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/style/team.css?hash=1418a7" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/ng/directive/tqavatar/tqavatar.css?hash=c3640e" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/ng/directive/tab_slide/tab_slide.css?hash=5151ea" rel="stylesheet" media="screen">
+                    <link href="http://www.tongqu.me/js/app/home_act/home_act.css?hash=a2763f" rel="stylesheet" media="screen">
+                <!-- end of add-on css  -->
+
+    <script>
+        "use strict";
+        var g_url = {};
+        g_url.site_url = function (url) {
+            var site_url = "http://www.tongqu.me/index.php";// http://tongqu.me/index.php
+            // ltrim the '/'
+            if (url.indexOf('/') === 0) {
+                url = url.substr(1);
+            }
+            return site_url + '/' + url;
+        };
+
+        g_url.base_url = function (url) {
+            var base_url = "http://www.tongqu.me/";// http://tongqu.me/
+            if (url.indexOf('/') === 0) {
+                url = url.substr(1);
+            }
+            return base_url + url;
+        };
+
+    </script>
+
+    <!-- the js that has to be loaded in the header -->
+                    <!-- end of pre js -->
+
+</head>
+
+<body class="dy-skin-default" ng-app="tqApp">
+<!-- the js var eg:ueditor URL-->
+    <script>
+            </script>
+    <script>
+        var g_all_act_types = [{"typeid":"9","typename":"\u62db\u65b0","recommended":"","rank":"1"},{"typeid":"2","typename":"\u8bb2\u5ea7","recommended":"","rank":"3"},{"typeid":"1","typename":"\u827a\u672f","recommended":"","rank":"4"},{"typeid":"10","typename":"\u6237\u5916","recommended":"","rank":"5"},{"typeid":"4","typename":"\u62db\u8058","recommended":"","rank":"7"},{"typeid":"5","typename":"\u6e38\u5b66","recommended":"","rank":"8"},{"typeid":"7","typename":"\u6bd4\u8d5b","recommended":"","rank":"9"},{"typeid":"8","typename":"\u5176\u4ed6","recommended":"","rank":"14"}];var g_all_act_time_status = [{"time_status":2,"status_name":"\u672a\u5f00\u59cb\u62a5\u540d"},{"time_status":1,"status_name":"\u6b63\u5728\u62a5\u540d"},{"time_status":3,"status_name":"\u6b63\u5728\u8fdb\u884c"},{"time_status":4,"status_name":"\u5df2\u7ed3\u675f"}];var g_mobile_view = false;var g_user_info = {"user_login":false};var g_config = {"nav":"home"};var g_acts_popular = [{"actid":"10786","type":"8","name":"\u3010\u53cc11\u6d3b\u52a8\u5012\u8ba1\u65f6\uff01\u3011\u3010\u897f\u88c5\u5b9a\u5236\u7279\u60e0\u5468\u3011\u2014\u2014\u7b80\u00b7\u88c1\u5b9a\u5236\uff0c\u5408\u8eab\u4e0d\u8d35","location":"\u4ea4\u5927\u95f5\u884c\u6821\u533a","poster_id":"6839","source":"\u7b80\u00b7\u88c1\u5b9a\u5236","create_time":"2015-10-31 22:58:22","start_time":"2015-11-11 18:00","end_time":"2015-11-11 21:00","sign_start_time":"2015-11-07 08:00","sign_end_time":"2015-11-11 15:00","member_count":"10","max_member":"50","view_count":"11103","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151029\/small_462cecd6a0d9f6a5c4c007e413cf1602.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"9913","type":"10","name":"\u5f92\u6b65\u6700\u7f8e\u534e\u4e1c\u6700\u7f8e\u79cb\u8272\u5854\u5ddd\u3001\u8d4f\u7696\u5357\u79cb\u83ca\uff0c\u54c1\u5b8f\u6751\u5fbd\u5dde\u6587\u5316","location":"\u5b89\u5fbd\u5b8f\u6751\u3001\u5854\u5ddd","poster_id":"6821","source":"\u9633\u5149\u90e8\u843d\u65c5\u884c","create_time":"2015-07-08 17:34:04","start_time":"2015-11-13 19:00","end_time":"2015-11-15 18:30","sign_start_time":"2015-10-11 08:33","sign_end_time":"2015-11-13 15:00","member_count":"6","max_member":"30","view_count":"7095","comment_count":"5","poster":"http:\/\/tongqu.me\/upload\/acts\/20151029\/small_79915c4e0220b1d13229fb1ef0453a34.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10613","type":"10","name":"\u771f\u4ebaCS\u6821\u56ed\u5f00\u6218","location":"\u4ea4\u5927\u95f5\u884c\u6821\u533a\u690d\u7269\u56ed\/\u4e1c\u4e0b\u9662","poster_id":"6833","source":"\u4e0a\u6d77\u4ea4\u5927\u56fd\u9632\u751f","create_time":"2015-10-20 09:32:38","start_time":"2015-11-24 13:51","end_time":"2015-11-25 08:51","sign_start_time":"2015-10-20 08:51","sign_end_time":"2015-11-24 12:00","member_count":"89","max_member":"0","view_count":"3690","comment_count":"21","poster":"http:\/\/tongqu.me\/upload\/acts\/20151029\/small_91322a6df1695e967610bcd25006b251.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10862","type":"2","name":"\u521b\u65b0\u521b\u4e1a\u5927\u8bb2\u5802\u2014\u2014\u8c01\u8bf4\u6211\u4eec\u505a\u4e0d\u5230","location":"\u5149\u5f6a\u697c\u591a\u529f\u80fd\u5385","poster_id":"6963","source":"\u521b\u4e1a\u5b66\u9662\u3001\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u5b66\u751f\u8054\u5408\u4f1a\u8054\u7edc\u4e2d\u5fc3","create_time":"2015-11-07 11:16:14","start_time":"2015-11-12 18:30","end_time":"2015-11-12 20:00","sign_start_time":"2015-11-07 10:00","sign_end_time":"2015-11-12 18:00","member_count":"400","max_member":"400","view_count":"3056","comment_count":"4","poster":"http:\/\/tongqu.me\/upload\/acts\/20151106\/small_fe110106f31a6601dfa30d67cdb4331a.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"9740","type":"10","name":"\u301011.28-29\u3011\u91cd\u8d70\u5fbd\u5546\u4e4b\u8def\uff0c\u5f92\u6b65\u7a7f\u8d8a\u5fbd\u676d\u53e4\u9053","location":"\u5b89\u5fbd \u7ee9\u6eaa\u53bf","poster_id":"6916","source":"\u9633\u5149\u90e8\u843d\u65c5\u884c","create_time":"2015-06-25 09:52:35","start_time":"2015-11-28 07:30","end_time":"2015-11-29 17:50","sign_start_time":"2015-11-03 09:50","sign_end_time":"2015-11-26 09:50","member_count":"1","max_member":"30","view_count":"3522","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151104\/small_768df6d0d375b7bd7a6fa72cbeeebb9d.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10755","type":"8","name":"100\u4f4d\u68a6\u60f3\u8d5e\u52a9\u5546-\u62db\u52df","location":"\u4ea4\u5927","poster_id":"6810","source":"\u8bda\u54c1\u5927\u5b66\u56e2\u961f","create_time":"2015-10-28 16:56:21","start_time":"2015-12-30 23:00","end_time":"2015-12-30 23:01","sign_start_time":"2015-10-28 16:41","sign_end_time":"2015-12-30 22:00","member_count":"2","max_member":"100","view_count":"3309","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151028\/small_3df8c917b30802b9caeef35f97dabc9b.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10871","type":"2","name":"\u521b\u4e1a\u5165\u95e8\u57f9\u8bad\u534e\u5e08\u5927\u4e13\u573a\u7b2c\u4e00\u671f\u514d\u8d39\u5b66","location":"\u7d2b\u7af9\u9ad8\u65b0\u79d1\u6280\u56ed","poster_id":"6989","source":"\u4e0a\u6d77\u5e02\u4eba\u529b\u8d44\u6e90\u4e0e\u793e\u4f1a\u4fdd\u969c\u5c40","create_time":"2015-11-08 14:53:18","start_time":"2015-12-12 14:39","end_time":"2016-02-20 14:39","sign_start_time":"2015-11-11 06:00","sign_end_time":"2015-12-02 14:39","member_count":"1","max_member":"100","view_count":"3728","comment_count":"1","poster":"http:\/\/tongqu.me\/upload\/acts\/20151108\/small_1054ebdc253e4af877a9d7429ea04ed7.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10846","type":"2","name":"\u3010\u201cVoice\u6211\u601d\uff01\u201d\u7b2c17\u671f    \u3011\u2014\u2014\u4e3a\u4ec0\u4e4899%\u51cf\u80a5\u90fd\u4ee5\u5931\u8d25\u544a\u7ec8","location":"\u95f5\u884c\u6821\u533a\u5bc6\u6b47\u6839\u5b66\u9662\u62a5\u544a\u5385","poster_id":"6959","source":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u52b1\u5fd7\u8bb2\u575b","create_time":"2015-11-05 16:52:42","start_time":"2015-11-11 18:15","end_time":"2015-11-11 20:30","sign_start_time":"2015-11-05 16:34","sign_end_time":"2015-11-11 18:14","member_count":"249","max_member":"250","view_count":"2066","comment_count":"2","poster":"http:\/\/tongqu.me\/upload\/acts\/20151106\/small_9e472e0989ab29367f648c9fa3a503b2.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10802","type":"7","name":"\u5fae\u8f6f\u6821\u56ed\u9ed1\u5ba2\u9a6c\u62c9\u677e Penta-Hackathon","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66","poster_id":"6885","source":"Microsoft Research Asia","create_time":"2015-11-03 00:00:01","start_time":"2015-11-21 09:00","end_time":"2015-11-22 16:00","sign_start_time":"2015-11-02 21:45","sign_end_time":"2015-11-17 23:59","member_count":"10","max_member":"120","view_count":"1688","comment_count":"5","poster":"http:\/\/tongqu.me\/upload\/acts\/20151102\/small_5bdbb9411d875ddc3192227b60bac548.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10756","type":"7","name":"\u6821\u8fd0\u4f1a\u4e52\u4e53\u7403\u5e08\u751f\u5bf9\u6297\u8d5b","location":"\u81f4\u8fdc\u6e38\u6cf3\u9986","poster_id":"6811","source":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u4e52\u4e53\u7403\u534f\u4f1a","create_time":"2015-10-28 18:56:39","start_time":"2015-11-20 00:00","end_time":"2015-11-21 04:00","sign_start_time":"2015-10-28 15:20","sign_end_time":"2015-11-19 00:00","member_count":"75","max_member":"80","view_count":"1247","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151028\/small_d537e5d2e06918c66dfe6b36fc9b7ec1.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10884","type":"8","name":"\uff3b\u7535\u9662\u62a5\u540d\u901a\u9053\uff3d\u6821\u8fd0\u4f1a\u5165\u573a\u5f0f\u8865\u62a5\u540d\uff08\u4ec5\u9650\u7537\u751f\uff09","location":"\u7535\u9662\u7fa4\u697c","poster_id":"7005","source":"\u7535\u9662\u5b66\u751f\u4f1a\u4f53\u80b2\u90e8","create_time":"2015-11-09 22:12:29","start_time":"2015-11-11 19:00","end_time":"2015-11-11 22:00","sign_start_time":"2015-11-09 21:30","sign_end_time":"2015-11-11 14:00","member_count":"84","max_member":"0","view_count":"1272","comment_count":"4","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_d61ec150ad45fcac4b8122a3d31bcc82.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10855","type":"8","name":"\uff08\u8865\u8ba2\uff09\u3010\u4ea4\u5927\u51ac\u6b3e\u68d2\u7403\u670d\u3011\u518d\u6b21\u6765\u88ad\uff01\uff01Mark.It\u8bda\u610f\u56de\u5f52\uff01","location":"\u4ea4\u5927\u95f5\u884c","poster_id":"6954","source":"Mark.It Studio","create_time":"2015-11-06 11:10:52","start_time":"2015-11-11 00:00","end_time":"2015-11-11 23:59","sign_start_time":"2015-11-06 11:00","sign_end_time":"2015-11-10 23:59","member_count":"8","max_member":"0","view_count":"1410","comment_count":"6","poster":"http:\/\/tongqu.me\/upload\/acts\/20151106\/small_cecd75ee4fda749c1f1d4996a9bbd611.jpg","time_status":3,"time_status_str":"\u6d3b\u52a8\u8fdb\u884c\u4e2d"},{"actid":"10753","type":"7","name":"\u5168\u56fd\u5927\u5b66\u751f\u673a\u5668\u4eba\u5927\u8d5bRoboMasters\u62a5\u540d","location":"\u6682\u65e0\u5730\u70b9","poster_id":"6813","source":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66Wall\u00b7E\u4ff1\u4e50\u90e8","create_time":"2015-10-28 21:08:12","start_time":"2015-11-15 15:24","end_time":"2015-11-15 15:25","sign_start_time":"2015-10-28 15:23","sign_end_time":"2015-11-15 15:23","member_count":"15","max_member":"0","view_count":"1456","comment_count":"3","poster":"http:\/\/tongqu.me\/upload\/acts\/20151028\/small_020b5191a545fc90e6cb8cfaea4edb06.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10811","type":"2","name":"\u3010\u8f6e\u76d8\u4e13\u573a\u3011\u821e\u53f0\u80cc\u540e\u7684\u76f8\u58f0\u534f\u4f1a","location":"\u9038\u592b\u697c200","poster_id":"6891","source":"SJTUAU-\u793e\u56e2\u8f6e\u76d8","create_time":"2015-11-03 09:14:00","start_time":"2015-11-13 19:01","end_time":"2015-11-13 21:01","sign_start_time":"2015-11-03 09:01","sign_end_time":"2015-11-13 18:01","member_count":"89","max_member":"0","view_count":"846","comment_count":"1","poster":"http:\/\/tongqu.me\/upload\/acts\/20151103\/small_9292d476180b7d1b266155a2f4a4df67.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10788","type":"8","name":"\u8ba4\u8bc6\u4ea4\u5927\uff0c\u767e\u5eff\u8363\u5149\u2014\u2014\u6700\u7f8e\u4ea4\u5927\u7167\u7247\u5f81\u96c6","location":"\u4e0a\u6d77\u4ea4\u5927\u5404\u4e2a\u6821\u533a","poster_id":"6865","source":"15\u5c4a\u7535\u966224\u73ed","create_time":"2015-11-01 09:47:35","start_time":"2015-11-20 09:26","end_time":"2015-11-21 09:26","sign_start_time":"2015-11-01 09:26","sign_end_time":"2015-11-20 09:21","member_count":"33","max_member":"0","view_count":"1136","comment_count":"3","poster":"http:\/\/tongqu.me\/upload\/acts\/20151101\/small_6842cb664eecc5aaae24c281b2ef6d90.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10882","type":"2","name":"\u7535\u9662\u7b2c\u516d\u671f\u201c\u5b66\u8005\u8bb2\u575b\u201d\uff1a\u5168\u7403\u80fd\u6e90\u4e92\u8054\u7f51\u4e13\u9898\u8bb2\u5ea7","location":"\u7535\u96623-200","poster_id":"7008","source":"\u7535\u9662\u535a\u58eb\u751f\u515a\u5efa\u8054\u5e2d\u4f1a","create_time":"2015-11-09 21:35:30","start_time":"2015-11-13 10:00","end_time":"2015-11-13 12:00","sign_start_time":"2015-11-09 21:16","sign_end_time":"2015-11-13 00:00","member_count":"162","max_member":"170","view_count":"807","comment_count":"2","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_2ba1b108f9f3cf3e0130e24cc1fd000a.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10637","type":"8","name":"\u6570\u7406\u65b9\u6cd5\u4e60\u9898\u8bfe15\u79cb","location":"\u4e0a\u9662205","poster_id":"0","source":"\u5f90\u5b97\u73ae","create_time":"2015-10-20 21:21:14","start_time":"2016-01-09 00:01","end_time":"2016-01-09 00:02","sign_start_time":"2015-10-20 00:00","sign_end_time":"2016-01-09 00:00","member_count":"30","max_member":"0","view_count":"1128","comment_count":"1","small":null,"time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10496","type":"9","name":"\u4e07\u4e8b\u5c4b\u306e\u52df\u96c6","location":"\u4e16\u754c\u7684\u5c3d\u5934","poster_id":"6489","source":"\u4ea4\u5927\u4e07\u4e8b\u5c4b","create_time":"2015-10-12 20:01:55","start_time":"2025-10-11 21:22","end_time":"2025-10-11 21:23","sign_start_time":"2015-10-11 21:17","sign_end_time":"2025-10-11 21:17","member_count":"6","max_member":"0","view_count":"940","comment_count":"1","poster":"http:\/\/tongqu.me\/upload\/acts\/20151011\/small_e9aeb2054bbf73d8928bfa38c83c3d1f.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10865","type":"8","name":"\u3010\u53cc11\u6d3b\u52a8\u5012\u8ba1\u65f6\uff01\u3011\u3010\u897f\u88c5\u5b9a\u5236\u7279\u60e0\u5468\u3011\u2014\u2014\u7b80\u00b7\u88c1\u5b9a\u5236\uff0c\u5408\u8eab\u4e0d\u8d35","location":"\u4ea4\u5927\u95f5\u884c\u6821\u533a","poster_id":"6975","source":"\u7b80\u00b7\u88c1\u5b9a\u5236","create_time":"2015-11-07 20:16:49","start_time":"2015-11-11 18:00","end_time":"2015-11-11 21:00","sign_start_time":"2015-11-07 20:14","sign_end_time":"2015-11-11 17:30","member_count":"3","max_member":"50","view_count":"1048","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151107\/small_7d777fc7e41a86578ecf8be69566de7d.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10797","type":"2","name":"\u6c42\u804c\u5b63\u7cfb\u5217\u6c99\u9f99\u4e4b\u2014\u2014\u91d1\u878d\u884c\u4e1a\u804c\u4e1a\u89c4\u5212\u548c\u804c\u4e1a\u63a8\u8350","location":"\u4e0a\u6d77\u4ea4\u5927\u94c1\u751f\u9986100\u53f7","poster_id":"6874","source":"\u4e0a\u6d77\u4ea4\u5927\u5c31\u4e1a\u4e2d\u5fc3","create_time":"2015-11-02 14:34:37","start_time":"2015-11-18 13:30","end_time":"2015-11-18 15:00","sign_start_time":"2015-11-02 14:07","sign_end_time":"2015-11-17 14:07","member_count":"58","max_member":"100","view_count":"619","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151102\/small_7c771866754064bf57f7d58b75f36792.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10829","type":"1","name":"\u4fe1\u7b14\u56fe\u96c5-\u4ea4\u5927\u79d8\u5bc6\u6821\u56ed\u6d82\u8272\u6d3b\u52a8","location":"\u56fe\u4e66\u9986\u4e3b\u9986\u4e00\u697c\u5927\u5385","poster_id":"6915","source":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u56fe\u4e66\u9986","create_time":"2015-11-04 15:17:22","start_time":"2015-11-18 12:00","end_time":"2015-11-18 13:30","sign_start_time":"2015-11-04 16:00","sign_end_time":"2015-11-18 11:30","member_count":"24","max_member":"100","view_count":"595","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151104\/small_bdc667b655b18bd13fa85ba0872b94b2.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10833","type":"2","name":"\u54e5\u4f26\u6bd4\u4e9a\u5927\u5b66\u62db\u751f\u5b98\u8bb2\u5ea7","location":"\u65b0\u56fe\u4fe1\u606f\u697c8\u697c\u62a5\u544a\u5385","poster_id":"6965","source":"\u6d77\u5916\u6df1\u9020\u534f\u4f1aGOA","create_time":"2015-11-04 23:50:30","start_time":"2015-11-11 23:41","end_time":"2015-11-12 23:41","sign_start_time":"2015-11-04 23:41","sign_end_time":"2015-11-10 23:41","member_count":"31","max_member":"200","view_count":"662","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151106\/small_2c4bd08a126b4bae98de7ba924cfdc65.jpg","time_status":6,"time_status_str":"\u62a5\u540d\u5df2\u7ed3\u675f"},{"actid":"10863","type":"10","name":"\u4e07\u4e8b\u5c4b\u5e26\u4f60\u5149\u68cd\u8282\u9b3c\u5c4b\u8d70\u8d77\uff01","location":"\u4e0a\u6d77\u6b22\u4e50\u8c37","poster_id":"6972","source":"\u4ea4\u5927\u4e07\u4e8b\u5c4b","create_time":"2015-11-07 14:44:21","start_time":"2015-11-11 16:00","end_time":"2015-11-11 22:00","sign_start_time":"2015-11-07 11:53","sign_end_time":"2015-11-11 15:59","member_count":"16","max_member":"0","view_count":"572","comment_count":"4","poster":"http:\/\/tongqu.me\/upload\/acts\/20151107\/small_c065f49c256b9c85db0cf6d18bd95a1e.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10706","type":"7","name":"\u7b2c2\u671f \u771f\u4ebaCS\u6821\u56ed\u91ce\u6218","location":"\u690d\u7269\u56ed\/\u4e1c\u4e0b\u9662","poster_id":"6759","source":"\u4e0a\u6d77\u4ea4\u5927\u56fd\u9632\u751f\u91d1\u6208\u4ead","create_time":"2015-10-25 23:20:13","start_time":"2016-01-29 14:00","end_time":"2016-01-29 16:59","sign_start_time":"2015-10-25 19:00","sign_end_time":"2016-01-21 14:00","member_count":"3","max_member":"0","view_count":"741","comment_count":"4","poster":"http:\/\/tongqu.me\/upload\/acts\/20151025\/small_943fce8b61cd729ba073a932bf5ebe66.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10875","type":"7","name":"CMAIT2015\u5168\u56fd\u5927\u5b66\u751f\u79fb\u52a8\u5e94\u7528\u521b\u65b0\u5927\u8d5b","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u95f5\u884c\u6821\u533a\uff08\u4e1c\u5ddd\u8def800\u53f7\uff09\u7f51\u7edc\u4fe1\u606f\u4e2d\u5fc39\u697c","poster_id":"6995","source":"\u4e2d\u56fd\u6559\u80b2\u7535\u89c6\u53f0\u3001\u5149\u660e\u65e5\u62a5\u3001\u4e2d\u56fd\u4e92\u8054\u7f51\u534f\u4f1a\u3001\u957f\u6cbb\u9ad8\u65b0\u533a\u3001\u4e0a\u6d77\u4ea4\u5927","create_time":"2015-11-09 09:52:38","start_time":"2015-11-11 14:00","end_time":"2015-11-11 17:00","sign_start_time":"2015-11-09 09:25","sign_end_time":"2015-11-11 12:00","member_count":"68","max_member":"70","view_count":"838","comment_count":"1","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_c60f4a4e5bffc3bcb2eadd64556dd404.jpg","time_status":6,"time_status_str":"\u62a5\u540d\u5df2\u7ed3\u675f"},{"actid":"10838","type":"4","name":"UC\u6c42\u804c\u5b63\u7cfb\u5217\u6d3b\u52a8","location":"\u7ebf\u4e0a\/\u94c1\u751f\u9986100\u53f7","poster_id":"6928","source":"\u4ea4\u5927\u8054\u5408\u5229\u534e\u4ff1\u4e50\u90e8","create_time":"2015-11-05 12:50:19","start_time":"2015-11-12 20:00","end_time":"2015-11-17 22:00","sign_start_time":"2015-11-05 12:22","sign_end_time":"2015-11-12 12:00","member_count":"13","max_member":"500","view_count":"353","comment_count":"2","poster":"http:\/\/tongqu.me\/upload\/acts\/20151105\/small_41a20e2075459ddd56ca384a5f34c81b.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10572","type":"9","name":"\u8bda\u5fc3\u5bfb\u627e\u73b0\u5728\u60f3\u4e00\u8d77\u521b\u4e1a\u7684\u4f19\u4f34","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66","poster_id":"6602","source":"\u4e2a\u4eba","create_time":"2015-10-15 21:14:34","start_time":"2015-12-01 21:08","end_time":"2016-05-31 21:08","sign_start_time":"2015-10-15 20:08","sign_end_time":"2015-11-30 21:08","member_count":"8","max_member":"100","view_count":"567","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151015\/small_3a08f684133e398f3b676b2d8d89f2f6.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10847","type":"2","name":"Top30\u540d\u6821UT\u558a\u4f60\u6691\u671f\u6765\u4ea4\u6d41\uff01\uff01","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u95f5\u884c\u6821\u533a\u4e1c\u4e0b\u9662310","poster_id":"6958","source":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66ICA&\u5fb7\u514b\u8428\u65af\u5927\u5b66\u5965\u65af\u6c40\u5206\u6821","create_time":"2015-11-06 12:28:54","start_time":"2015-11-12 18:00","end_time":"2015-11-12 19:00","sign_start_time":"2015-11-06 12:30","sign_end_time":"2015-11-12 17:59","member_count":"6","max_member":"100","view_count":"576","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151106\/small_6c3fb4395dac8d6bb01fd6a3ea8b7045.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"}];var g_acts_recommend = [{"actid":"10637","name":"\u6570\u7406\u65b9\u6cd5\u4e60\u9898\u8bfe15\u79cb","start_time":"2016-01-09 00:01","end_time":"2016-01-09 00:02","location":"\u4e0a\u9662205","sign_start_time":"2015-10-20 00:00","sign_end_time":"2016-01-09 00:00","time_status":1,"poster_id":"0","creatorid":"24014","team_id":"0","member_count":"30","max_member":"0","source":"\u5f90\u5b97\u73ae","public":"0","normal":null,"status":"1","type":"8","time_status_str":"\u6b63\u5728\u62a5\u540d","view_count":"1128","view_count_today":"1128"},{"actid":"10882","name":"\u7535\u9662\u7b2c\u516d\u671f\u201c\u5b66\u8005\u8bb2\u575b\u201d\uff1a\u5168\u7403\u80fd\u6e90\u4e92\u8054\u7f51\u4e13\u9898\u8bb2\u5ea7","start_time":"2015-11-13 10:00","end_time":"2015-11-13 12:00","location":"\u7535\u96623-200","sign_start_time":"2015-11-09 21:16","sign_end_time":"2015-11-13 00:00","time_status":1,"poster_id":"7008","creatorid":"51995","team_id":"0","member_count":"162","max_member":"170","source":"\u7535\u9662\u535a\u58eb\u751f\u515a\u5efa\u8054\u5e2d\u4f1a","public":"0","status":"1","type":"2","time_status_str":"\u6b63\u5728\u62a5\u540d","view_count":"807","view_count_today":"807","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151109\/normal_2ba1b108f9f3cf3e0130e24cc1fd000a.jpg"},{"actid":"10496","name":"\u4e07\u4e8b\u5c4b\u306e\u52df\u96c6","start_time":"2025-10-11 21:22","end_time":"2025-10-11 21:23","location":"\u4e16\u754c\u7684\u5c3d\u5934","sign_start_time":"2015-10-11 21:17","sign_end_time":"2025-10-11 21:17","time_status":1,"poster_id":"6489","creatorid":"47842","team_id":"49","member_count":"6","max_member":"0","source":"\u4ea4\u5927\u4e07\u4e8b\u5c4b","public":"0","status":"1","type":"9","time_status_str":"\u6b63\u5728\u62a5\u540d","view_count":"940","view_count_today":"940","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151011\/normal_e9aeb2054bbf73d8928bfa38c83c3d1f.png"},{"actid":"10893","name":"\u6602\u9645\u822a\u7535\u4f01\u4e1a\u5f00\u653e\u65e5","start_time":"2015-11-25 14:30","end_time":"2015-11-25 16:30","location":"\u7d2b\u661f\u8def666\u53f72\u53f7\u697c","sign_start_time":"2015-11-10 18:56","sign_end_time":"2015-11-20 22:00","time_status":1,"poster_id":"7024","creatorid":"20983","team_id":"0","member_count":"41","max_member":"100","source":"\u7535\u9662\u56e2\u59d4","public":"0","status":"1","type":"8","time_status_str":"\u6b63\u5728\u62a5\u540d","view_count":"258","view_count_today":"258","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151110\/normal_41cc320268e8f439002a5082303e1e14.jpg"},{"actid":"10516","name":"\u7231\u62cd\u95ee\u5bfc\u5e08\u56e2\u961f\u62db\u52df","start_time":"2015-12-31 23:40","end_time":"2015-12-31 23:59","location":"\u5f85\u5b9a","sign_start_time":"2015-10-12 22:27","sign_end_time":"2015-12-31 23:30","time_status":1,"poster_id":"6516","creatorid":"46964","team_id":"0","member_count":"10","max_member":"0","source":"\u7231\u62cd\u95ee\u6821\u56ed\u5927\u4f7f\u56e2\u961f","public":"0","status":"1","type":"4","time_status_str":"\u6b63\u5728\u62a5\u540d","view_count":"291","view_count_today":"291","poster":"http:\/\/www.tongqu.me\/upload\/acts\/20151012\/normal_fdad26dc823f4a362944b15080b93422.jpg"}];var g_acts_new = [{"actid":"10904","name":"\u62db\u8058\u6570\u636e\u4ea7\u54c1\u5b9e\u4e60\u751f","type":"4","location":"\u9759\u5b89\u5bfa\u5609\u91cc\u4e2d\u5fc3","poster_id":"7038","source":"\u4e0a\u6d77\u4e16\u50cf\u4f20\u5a92","start_time":"2015-11-29 11:02","end_time":"2015-11-30 11:02","sign_start_time":"2015-11-11 11:02","sign_end_time":"2015-11-28 11:02","member_count":"0","max_member":"0","view_count":"25","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151111\/small_d3cb2c602f15e917575e8d67f9edc78b.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10903","name":"\u3010\u7559\u5b66 MiniWorkshop \u3011 \u5982\u4f55\u8ba9\u4f60\u7684\u9009\u6821\u3001\u5957\u78c1\u6210\u4e3a TOP10%!","type":"2","location":"\u957f\u5b81\u533a\u5b89\u5316\u8def492\u53f7\u6613\u56edB\u5e62301\u5ba4","poster_id":"7037","source":"BeBeyond","start_time":"2015-11-14 14:00","end_time":"2015-11-14 15:00","sign_start_time":"2015-11-11 09:56","sign_end_time":"2015-11-14 09:56","member_count":"0","max_member":"30","view_count":"10","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151111\/small_534aa588b02ba68eb797828226b193f4.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10902","name":"\u3010\u804c\u4e1a\u7cfb\u5217\u6d3b\u52a8\u3011\u91d1\u878d\u3001\u54a8\u8be2\u3001\u4e92\u8054\u7f51\u5404\u4e2a\u7a81\u7834","type":"2","location":"\u957f\u5b81\u533a\u5b89\u5316\u8def492\u53f7\u6613\u56edB\u5e62301\u5ba4","poster_id":"7036","source":"BeBeyond","start_time":"2015-11-14 14:00","end_time":"2015-11-14 15:30","sign_start_time":"2015-11-11 09:54","sign_end_time":"2015-11-14 09:54","member_count":"0","max_member":"30","view_count":"12","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151111\/small_cd69854fc7f8453f96e26e6940a9031b.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10901","name":"\u4ea4\u5927\u91ce\u534f\u9f99\u987b\u5c71\u5f92\u6b65","type":"10","location":"\u6d59\u6c5f\u9f99\u987b\u5c71","poster_id":"7035","source":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u91ce\u5916\u751f\u5b58\u534f\u4f1a","start_time":"2015-11-20 18:00","end_time":"2015-11-22 20:00","sign_start_time":"2015-11-11 12:00","sign_end_time":"2015-11-14 23:59","member_count":"0","max_member":"0","view_count":"81","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_79be10967620dfda566e7882a7a574b9.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10900","name":"\u5f53\u6211\u4eec\u8c08\u8bba\u6027\uff0c\u6211\u4eec\u5728\u8c08\u8bba\u4ec0\u4e48","type":"2","location":"\u6ca7\u6e90\u8def1200\u53f73\u53f7\u697c307\u5ba4\uff0c\u95f5\u884c\u4ea4\u5927\u897f\u95e8\u53f3\u62d050\u7c73","poster_id":"7033","source":"\u95f5\u601d\u82f1\u8bed\u4ff1\u4e50\u90e8","start_time":"2015-11-15 13:30","end_time":"2015-11-15 16:00","sign_start_time":"2015-11-10 23:21","sign_end_time":"2015-11-15 13:00","member_count":"0","max_member":"0","view_count":"128","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_30c5595aca01df876f23c2a3991c72ea.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10898","name":"\u67f3\u5de5\u96c6\u56e2\u4e0a\u6d77\u4ea4\u5927\u6821\u56ed\u62db\u8058\u5ba3\u8bb2\u4f1a","type":"4","location":"\u673a\u68b0\u7fa4\u697cF310","poster_id":"7028","source":"\u5b50\u66f0\u68a6\u5de5\u5382","start_time":"2015-11-18 14:00","end_time":"2015-11-18 16:00","sign_start_time":"2015-11-10 22:57","sign_end_time":"2015-11-18 13:00","member_count":"0","max_member":"0","view_count":"44","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_14acec19b8623bc16db46026dc6de8d1.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10897","name":"\u3010\u5468\u672b\u5f71\u9662\u301111.13-11.15 \u56de\u5230\u672a\u6765\u4e13\u573a","type":"1","location":"\u65b0\u56feC220","poster_id":"7027","source":"800\u53f7\u7535\u5f71\u793e","start_time":"2015-11-15 18:00","end_time":"2015-11-15 20:00","sign_start_time":"2015-11-10 22:15","sign_end_time":"2015-11-15 17:59","member_count":"5","max_member":"70","view_count":"161","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_ec5d7b22eb129a5a9da433de63741169.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10896","name":"\u7f51\u7edc\u65f6\u4ee3\u4e0b\u7684\u65b0\u95fb\u5ba3\u4f20","type":"2","location":"\u4ea4\u5927\u95f5\u884c\u6821\u533a\u8bbf\u5ba2\u4e2d\u5fc3","poster_id":"7026","source":"\u601d\u6e90\u5168\u5a92\u4f53\u4e2d\u5fc3","start_time":"2015-11-14 14:00","end_time":"2015-11-14 16:00","sign_start_time":"2015-11-10 21:15","sign_end_time":"2015-11-14 10:00","member_count":"1","max_member":"5","view_count":"78","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_cb9654c9f3035bd7180934e0ce405703.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10895","name":"SANEI HYTECHS Co., Ltd.\u62db\u8058\u8bbe\u8ba1\u5f00\u53d1\u5de5\u7a0b\u5e08","type":"4","location":"\u7f51\u7533","poster_id":"0","source":"\u4e0a\u6d77\u827e\u6770\u98de\u542f\u7a0b\u65e5\u672c\u9879\u76ee\u7ec4","start_time":"2015-11-30 19:57","end_time":"2015-12-01 19:57","sign_start_time":"2015-11-10 19:57","sign_end_time":"2015-11-25 19:57","member_count":"0","max_member":"0","view_count":"39","comment_count":"0","small":null,"time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10894","name":"\u5f97\u7231(\u4e0a\u6d77)\u4f01\u4e1a\u7ba1\u7406\u54a8\u8be2\u62db\u8058\u6218\u7565\u54a8\u8be2\u987e\u95ee","type":"4","location":"\u7f51\u4e0a\u7533\u8bf7","poster_id":"7025","source":"\u4e0a\u6d77\u827e\u6770\u98de\u542f\u7a0b\u65e5\u672c\u7ec4","start_time":"2015-11-20 19:53","end_time":"2015-11-28 19:53","sign_start_time":"2015-11-10 19:53","sign_end_time":"2015-11-18 19:53","member_count":"0","max_member":"0","view_count":"31","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_4dda14c9e3bd1be3988d0e2f5a1072dd.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10893","name":"\u6602\u9645\u822a\u7535\u4f01\u4e1a\u5f00\u653e\u65e5","type":"8","location":"\u7d2b\u661f\u8def666\u53f72\u53f7\u697c","poster_id":"7024","source":"\u7535\u9662\u56e2\u59d4","start_time":"2015-11-25 14:30","end_time":"2015-11-25 16:30","sign_start_time":"2015-11-10 18:56","sign_end_time":"2015-11-20 22:00","member_count":"41","max_member":"100","view_count":"258","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_41cc320268e8f439002a5082303e1e14.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10892","name":"\u62db\u80582015-12-6\u53f7\u65e5\u8bed\u8003\u8bd5\u76d1\u8003","type":"4","location":"\u95f5\u884c\u6821\u533a","poster_id":"0","source":"\u4ea4\u5927\u56fd\u5916\u8003\u8bd5\u4e2d\u5fc3","start_time":"2015-12-05 18:17","end_time":"2015-12-06 18:17","sign_start_time":"2015-11-10 18:17","sign_end_time":"2015-11-27 18:17","member_count":"8","max_member":"0","view_count":"170","comment_count":"0","small":null,"time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10891","name":"\u5546\u4e1a\u6a21\u5f0f\u521b\u65b0\uff1a\u8bf7\u8df3\u51fa\u60ef\u6027\u601d\u7ef4\u7981\u9522\uff01","type":"2","location":"\u4e0a\u6d77\u5e02\u9759\u5b89\u533a\u65b0\u95f8\u8def1418\u53f74\u697c\u8574\u521d\u8bfe\u5802 \u51a0\u751f\u56ed\u4e92\u8054\u7f51\u91d1\u878d\u56ed\u533a","poster_id":"7019","source":"\u4e0a\u6d77\u5e02\u9759\u5b89\u533a\u91d1\u878d\u548c\u4e13\u4e1a\u670d\u52a1\u4e1a\u529e\u516c\u5ba4","start_time":"2015-11-22 13:00","end_time":"2015-11-22 18:00","sign_start_time":"2015-11-10 16:54","sign_end_time":"2015-11-22 12:00","member_count":"1","max_member":"100","view_count":"55","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_78529ccf526f87c5cf70aa25bc1d98bb.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10889","name":"\u3010\u7559\u5b66 MiniWorkshop \u3011 \u5982\u4f55\u8ba9\u4f60\u7684\u9009\u6821\u3001\u5957\u78c1\u6210\u4e3a TOP10%!","type":"2","location":"\u957f\u5b81\u533a\u5b89\u5316\u8def492\u53f7\u6613\u56edB\u5e62301\u5ba4","poster_id":"7014","source":"BeBeyond","start_time":"2015-11-14 14:00","end_time":"2015-11-14 15:00","sign_start_time":"2015-11-10 12:09","sign_end_time":"2015-11-14 12:09","member_count":"0","max_member":"30","view_count":"38","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_7a1cd714e800effed57d3027414f4967.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10888","name":"\u3010\u804c\u4e1a\u7cfb\u5217\u6d3b\u52a8\u3011\u91d1\u878d\u3001\u54a8\u8be2\u3001\u4e92\u8054\u7f51\u5404\u4e2a\u7a81\u7834","type":"2","location":"\u957f\u5b81\u533a\u5b89\u5316\u8def492\u53f7\u6613\u56edB\u5e62301\u5ba4","poster_id":"7013","source":"BeBeyond","start_time":"2015-11-14 14:00","end_time":"2015-11-14 15:30","sign_start_time":"2015-11-10 11:55","sign_end_time":"2015-11-14 11:55","member_count":"0","max_member":"30","view_count":"40","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_7e2e9f685f46618a6086568a6f073e71.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10886","name":"\u4ea4\u53cb","type":"8","location":"\u56db\u9910","poster_id":"7011","source":"\u4ea4\u5927\u7814\u4f1a\u535a\u58eb\u751f\u90e8","start_time":"2015-11-11 11:00","end_time":"2015-11-11 13:00","sign_start_time":"2015-11-10 07:33","sign_end_time":"2015-11-11 07:33","member_count":"0","max_member":"0","view_count":"257","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151110\/small_6d820029cf8711c2a89a09d8e2029bad.jpg","time_status":4,"time_status_str":"\u6d3b\u52a8\u5df2\u7ed3\u675f"},{"actid":"10885","name":"\u3010\u5468\u56db\uff0811.12\uff09\u7535\u5f71\u6c99\u9f99\u3011\u7528\u5fc3\u68d2","type":"1","location":"\u65b0\u56feC220","poster_id":"7009","source":"800\u53f7\u7535\u5f71\u793e","start_time":"2015-11-12 18:30","end_time":"2015-11-12 21:00","sign_start_time":"2015-11-09 22:50","sign_end_time":"2015-11-12 18:29","member_count":"1","max_member":"70","view_count":"147","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_3ddaf93932406057d7a4a115775955de.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10884","name":"\uff3b\u7535\u9662\u62a5\u540d\u901a\u9053\uff3d\u6821\u8fd0\u4f1a\u5165\u573a\u5f0f\u8865\u62a5\u540d\uff08\u4ec5\u9650\u7537\u751f\uff09","type":"8","location":"\u7535\u9662\u7fa4\u697c","poster_id":"7005","source":"\u7535\u9662\u5b66\u751f\u4f1a\u4f53\u80b2\u90e8","start_time":"2015-11-11 19:00","end_time":"2015-11-11 22:00","sign_start_time":"2015-11-09 21:30","sign_end_time":"2015-11-11 14:00","member_count":"84","max_member":"0","view_count":"1272","comment_count":"4","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_d61ec150ad45fcac4b8122a3d31bcc82.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10883","name":"\u5468\u4e94\u591c\u8dd1","type":"10","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66 \u62d6\u978b\u95e8 \u81f3\u534e\u5e08\u5927\u56fe\u4e66\u9986\u95e8\u53e3\u518d\u81f3 \u62d6\u978b\u95e8","poster_id":"7006","source":"\u6708\u5149\u90e8\u843d","start_time":"2015-11-13 19:00","end_time":"2015-11-13 20:30","sign_start_time":"2015-11-09 21:39","sign_end_time":"2015-11-13 18:59","member_count":"0","max_member":"0","view_count":"80","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_2f6836bf53b0c505b30298e4e4486675.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10882","name":"\u7535\u9662\u7b2c\u516d\u671f\u201c\u5b66\u8005\u8bb2\u575b\u201d\uff1a\u5168\u7403\u80fd\u6e90\u4e92\u8054\u7f51\u4e13\u9898\u8bb2\u5ea7","type":"2","location":"\u7535\u96623-200","poster_id":"7008","source":"\u7535\u9662\u535a\u58eb\u751f\u515a\u5efa\u8054\u5e2d\u4f1a","start_time":"2015-11-13 10:00","end_time":"2015-11-13 12:00","sign_start_time":"2015-11-09 21:16","sign_end_time":"2015-11-13 00:00","member_count":"162","max_member":"170","view_count":"807","comment_count":"2","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_2ba1b108f9f3cf3e0130e24cc1fd000a.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10880","name":"\u201c\u79d1\u5b66\u8ba4\u8bc6\u963b\u71c3\u5242\u201d\u8bb2\u5ea7\u66a8\u5f81\u6587\u6bd4\u8d5b","type":"2","location":"\u9038\u592b\u697c200","poster_id":"7002","source":"\u4e2d\u56fd\u963b\u71c3\u5b66\u4f1a","start_time":"2015-11-12 18:30","end_time":"2015-11-12 20:00","sign_start_time":"2015-11-09 20:45","sign_end_time":"2015-11-12 17:00","member_count":"6","max_member":"60","view_count":"164","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_a2c77099fb2fd00d0cbdfa9b5e967291.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10879","name":"\u7f57\u5c14\u65af-\u7f57\u4f0a\u65af2016\u5e74\u5168\u7403\u7ba1\u57f9\u751f\u9879\u76ee\u5f00\u62db\u5566","type":"4","location":"\u7f51\u7533","poster_id":"6999","source":"\u7f57\u5c14\u65af-\u7f57\u4f0a\u65af","start_time":"2015-11-15 20:40","end_time":"2015-11-15 23:59","sign_start_time":"2015-11-09 16:40","sign_end_time":"2015-11-15 15:40","member_count":"1","max_member":"0","view_count":"255","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_f96a563b1283210fcb102b6bf02a137c.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10878","name":"\u542f\u7a0b\u65e5\u672c\u9879\u76ee\u7ec4\u54a8\u8be2\u987e\u95ee","type":"4","location":"\u7f51\u7533","poster_id":"6998","source":"\u4e0a\u6d77\u827e\u6770\u98de\u516c\u53f8","start_time":"2015-11-18 14:31","end_time":"2015-11-20 14:31","sign_start_time":"2015-11-09 14:31","sign_end_time":"2015-11-17 14:31","member_count":"0","max_member":"0","view_count":"105","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_7d220f2e363b8611ee7a5001adfef727.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10877","name":"\u6df1\u79cb\u5357\u9ec4\u53e4\u9053\u8d4f\u67ab\uff0c\u63a2\u79d8\u56fd\u6e05\u5343\u5e74\u53e4\u5239","type":"10","location":"\u5929\u53f0","poster_id":"6997","source":"\u9752\u6625\u540c\u884c\u6237\u5916\u8054\u76df","start_time":"2015-11-20 19:40","end_time":"2015-11-22 20:40","sign_start_time":"2015-11-09 13:40","sign_end_time":"2015-11-14 13:40","member_count":"0","max_member":"20","view_count":"196","comment_count":"2","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_fb3c551c943fbaf351b40c9878b5ad34.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10876","name":"\u6c11\u65cf\u6587\u5316\u9a91\u6e38\u4f53\u9a8c\u4e4b\u65c5","type":"10","location":"\u6c5f\u5ddd\u8857\u9053\u533a\u57df\u5185","poster_id":"0","source":"\u95f5\u884c\u533a\u6c5f\u5ddd\u8857\u9053\u3001\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u7edf\u6218\u90e8","start_time":"2015-11-16 00:00","end_time":"2015-11-20 00:00","sign_start_time":"2015-11-09 10:25","sign_end_time":"2015-11-15 23:59","member_count":"2","max_member":"20","view_count":"205","comment_count":"2","small":null,"time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10875","name":"CMAIT2015\u5168\u56fd\u5927\u5b66\u751f\u79fb\u52a8\u5e94\u7528\u521b\u65b0\u5927\u8d5b","type":"7","location":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u95f5\u884c\u6821\u533a\uff08\u4e1c\u5ddd\u8def800\u53f7\uff09\u7f51\u7edc\u4fe1\u606f\u4e2d\u5fc39\u697c","poster_id":"6995","source":"\u4e2d\u56fd\u6559\u80b2\u7535\u89c6\u53f0\u3001\u5149\u660e\u65e5\u62a5\u3001\u4e2d\u56fd\u4e92\u8054\u7f51\u534f\u4f1a\u3001\u957f\u6cbb\u9ad8\u65b0\u533a\u3001\u4e0a\u6d77\u4ea4\u5927","start_time":"2015-11-11 14:00","end_time":"2015-11-11 17:00","sign_start_time":"2015-11-09 09:25","sign_end_time":"2015-11-11 12:00","member_count":"68","max_member":"70","view_count":"838","comment_count":"1","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_c60f4a4e5bffc3bcb2eadd64556dd404.jpg","time_status":6,"time_status_str":"\u62a5\u540d\u5df2\u7ed3\u675f"},{"actid":"10874","name":"\u8336\u9999\u4e16\u6ea2\u2014\u2014\u54c1\u8336\u4f1a \u8336\u6587\u5316\u8bb2\u5ea7","type":"1","location":"\u4e8c\u9910\u897f\u9910\u5385","poster_id":"6991","source":"F1503021","start_time":"2015-11-12 19:00","end_time":"2015-11-12 20:30","sign_start_time":"2015-11-08 21:32","sign_end_time":"2015-11-12 18:59","member_count":"17","max_member":"0","view_count":"184","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151108\/small_defdecbbf58d4059e53f3e8668eb515e.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10872","name":"\u3010\u7b2c56\u671f\u9c9c\u60a6\u6d3b\u52a8\u3011\u5929\u6587\u4e0e\u4eba\u6587","type":"2","location":"\u65b0\u56feB118\u57f9\u8bad\u6559\u5ba4","poster_id":"7000","source":"\u4e0a\u6d77\u4ea4\u901a\u5927\u5b66\u56fe\u4e66\u9986\u5b66\u7ba1\u4f1a","start_time":"2015-11-11 14:00","end_time":"2015-11-11 15:30","sign_start_time":"2015-11-08 21:18","sign_end_time":"2015-11-11 12:00","member_count":"6","max_member":"100","view_count":"220","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151109\/small_731f5888344897543bf6a05c02c288ea.jpg","time_status":6,"time_status_str":"\u62a5\u540d\u5df2\u7ed3\u675f"},{"actid":"10871","name":"\u521b\u4e1a\u5165\u95e8\u57f9\u8bad\u534e\u5e08\u5927\u4e13\u573a\u7b2c\u4e00\u671f\u514d\u8d39\u5b66","type":"2","location":"\u7d2b\u7af9\u9ad8\u65b0\u79d1\u6280\u56ed","poster_id":"6989","source":"\u4e0a\u6d77\u5e02\u4eba\u529b\u8d44\u6e90\u4e0e\u793e\u4f1a\u4fdd\u969c\u5c40","start_time":"2015-12-12 14:39","end_time":"2016-02-20 14:39","sign_start_time":"2015-11-11 06:00","sign_end_time":"2015-12-02 14:39","member_count":"1","max_member":"100","view_count":"3728","comment_count":"1","poster":"http:\/\/tongqu.me\/upload\/acts\/20151108\/small_1054ebdc253e4af877a9d7429ea04ed7.png","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"},{"actid":"10869","name":"\u5f71\u89c6\u516c\u53f8\u62db\u8058","type":"4","location":"\u9759\u5b89\u5bfa\u5609\u91cc\u4e2d\u5fc3","poster_id":"6987","source":"\u4e0a\u6d77\u4e16\u50cf\u4f20\u5a92\u6709\u9650\u516c\u53f8","start_time":"2015-11-29 10:47","end_time":"2015-11-30 10:47","sign_start_time":"2015-11-08 10:47","sign_end_time":"2015-11-28 10:47","member_count":"1","max_member":"0","view_count":"382","comment_count":"0","poster":"http:\/\/tongqu.me\/upload\/acts\/20151108\/small_19636e5e4b3737c48c2771b9d6e7879b.jpg","time_status":1,"time_status_str":"\u6b63\u5728\u62a5\u540d"}];var g_home_pic = [{"title":"\u521b\u65b0\u521b\u4e1a\u5927\u8bb2\u5802\u2014\u2014\u8c01\u8bf4\u6211\u4eec\u505a\u4e0d\u5230","link_url":"http:\/\/www.tongqu.me\/index.php\/act\/detail\/view\/10862","school_id":"2002","small":"\/upload\/acts\/20151107\/small_0b240748f25ce1d318179de8e292998b.jpg","normal":"\/upload\/acts\/20151107\/normal_0b240748f25ce1d318179de8e292998b.jpg","origin":"\/upload\/acts\/20151107\/origin_0b240748f25ce1d318179de8e292998b.jpg","id":"434"},{"title":"\u4e07\u4e8b\u5c4b\u5e26\u4f60\u6e38\u6b22\u4e50\u8c37\u9b3c\u5c4b\uff01","link_url":"http:\/\/www.tongqu.me\/index.php\/act\/detail\/view\/10863","school_id":"2002","small":"\/upload\/acts\/20151107\/small_c4522cb3a862643e076e9bcb2e797979.jpg","normal":"\/upload\/acts\/20151107\/normal_c4522cb3a862643e076e9bcb2e797979.jpg","origin":"\/upload\/acts\/20151107\/origin_c4522cb3a862643e076e9bcb2e797979.jpg","id":"433"},{"title":"\u3010\u201cVoice\u6211\u601d\uff01\u201d\u7b2c17\u671f \u3011\u2014\u2014\u4e3a\u4ec0\u4e4899%\u51cf\u80a5\u90fd\u4ee5\u5931\u8d25\u544a\u7ec8","link_url":"http:\/\/www.tongqu.me\/index.php\/act\/10846","school_id":"2002","small":"\/upload\/acts\/20151106\/small_3038557be97d420230308226214ff570.jpg","normal":"\/upload\/acts\/20151106\/normal_3038557be97d420230308226214ff570.jpg","origin":"\/upload\/acts\/20151106\/origin_3038557be97d420230308226214ff570.jpg","id":"432"},{"title":"\uff08\u8865\u8ba2\uff09\u3010\u4ea4\u5927\u51ac\u6b3e\u68d2\u7403\u670d\u3011\u518d\u6b21\u6765\u88ad\uff01\uff01Mark.It\u8bda\u610f\u56de\u5f52\uff01","link_url":"http:\/\/www.tongqu.me\/index.php\/act\/detail\/view\/10855","school_id":"2002","small":"\/upload\/acts\/20151106\/small_789bb92f8cf7a20cd72e871adc9565bc.jpg","normal":"\/upload\/acts\/20151106\/normal_789bb92f8cf7a20cd72e871adc9565bc.jpg","origin":"\/upload\/acts\/20151106\/origin_789bb92f8cf7a20cd72e871adc9565bc.jpg","id":"431"},{"title":"UC\u6c42\u804c\u5b63\u7cfb\u5217\u6d3b\u52a8","link_url":"http:\/\/www.tongqu.me\/index.php\/act\/10838","school_id":"2002","small":"\/upload\/acts\/20151106\/small_35388aadaa1a2f78574f677466a891db.jpg","normal":"\/upload\/acts\/20151106\/normal_35388aadaa1a2f78574f677466a891db.jpg","origin":"\/upload\/acts\/20151106\/origin_35388aadaa1a2f78574f677466a891db.jpg","id":"430"},{"title":"\u821e\u53f0\u80cc\u540e\u7684\u76f8\u58f0\u534f\u4f1a","link_url":"http:\/\/www.tongqu.me\/index.php\/act\/10811","school_id":"2002","small":"\/upload\/acts\/20151104\/small_895c92edf4b14dd06c3c544c4434d831.jpg","normal":"\/upload\/acts\/20151104\/normal_895c92edf4b14dd06c3c544c4434d831.jpg","origin":"\/upload\/acts\/20151104\/origin_895c92edf4b14dd06c3c544c4434d831.jpg","id":"428"},{"title":"yishua","link_url":"http:\/\/www.tongqu.me\/index.php\/act\/detail\/view\/10769","school_id":"2002","small":"\/upload\/acts\/20151029\/small_8b0a4e89b0d8e58e5d0f94caa331f596.jpg","normal":"\/upload\/acts\/20151029\/normal_8b0a4e89b0d8e58e5d0f94caa331f596.jpg","origin":"\/upload\/acts\/20151029\/origin_8b0a4e89b0d8e58e5d0f94caa331f596.jpg","id":"424"}];    </script>
+<!-- end of js var-->
+<div id="global-nav" class="navbar navbar-default navbar-fixed-top" ng-controller="MainNavCtrl" ng-cloak>
+    <div class="nav-content">
+        <div class="nav navbar-nav navbar-header">
+            <li>
+                <img src="/images/logo.png"/>
+            </li>
+            <li>
+                <a href="/" style="text-decoration:none">同去</a>
+            </li>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <a href="/" ng-class="{'active': nav == 'home'}">首页</a>
+            </li>
+            <li>
+                <a href="/index.php/act/type" ng-class="{'active': nav == 'act'}">活动</a>
+            </li>
+            <li>
+                <a href="/index.php/team/browse" ng-class="{'active': nav == 'team'}">团队</a>
+            </li>
+                        <li>
+                <a href="/index.php/app" ng-class="{'active': nav == 'app'}">客户端
+                    <!--<span class="badge bg-red">&nbsp;New!&nbsp;</span>-->
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="!userService.isLogin">
+            <li>
+                <a href="/index.php/user/login">登录</a>
+            </li>
+            <li ng-hide="userService.isLogin">
+                <a href="/index.php/user/register/mobile">注册</a>
+            </li>
+        </ul>
+        <ul id="nav-user" class="nav navbar-nav navbar-right" ng-if="userService.isLogin">
+            <li>
+                <a href="/index.php/user/home">{{userService.data.user_name | tqLimit:8}}</a>
+            </li>
+            <li class="divider">
+            </li>
+            <li dropdown>
+                <a class="dropdown-toggle">
+                    <i class="fa fa-envelope-o"></i>
+                </a>
+                <ul id="notification" class="dropdown-menu" role="menu">
+                    <li><a class="help-block" ng-show="msg.navMsg.length==0">没有任何消息</a></li>
+                    <li ng-repeat="m in msg.navMsg | limitTo:5">
+                        <a target="_blank" ng-href="{{m.href}}" ng-click="read.id(m.msg_id)">
+                            <img class="col-xs-2" ng-src="{{m.sender.avatar}}"/>
+                            <div class="col-xs-10">
+                                <span class="person" ng-bind="m.sender.name"></span>&nbsp;&nbsp;
+                                <span class="action" ng-bind="m.action"></span>
+                                </br>
+                                <div class="detail" ng-bind="m.detail" title="{{m.detail}}"></div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </a>
+                    </li>
+                    <li ng-hide="msg.navMsg.length==0">
+                        <a class="btn btn-default check-all" href="http://www.tongqu.me/index.php/user/message">查看全部</a>
+                    </li>
+                </ul>
+            </li>
+            <li dropdown>
+                <a class="dropdown-toggle">
+                    <i class="fa fa-gear"></i>
+                </a>
+                <ul id="user-setting" class="dropdown-menu" role="menu">
+                    <li><a href="/index.php/user/home">个人中心</a></li>
+                    <li><a href="/index.php/user/logout">退出登录</a></li>
+                </ul>
+            </li>
+            <li dropdown>
+                <a class="dropdown-toggle">
+                    <i class="fa fa-plus"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="/index.php/act/detail/create">发布活动</a></li>
+                    <li><a href="/index.php/team/create">创建团队</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="navbar-form navbar-right form-inline" role="search" id="nav-search"
+              action="http://www.tongqu.me/index.php/search" method="get">
+            <div class="form-group has-feedback">
+                <input type="text" ng-model="selected"
+                       placeholder="活动，团队" ng-enter="search()" class="form-control"
+                       autocomplete="off">
+                <span class="glyphicon glyphicon-search form-control-feedback" ng-click="search()"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="feedback" aria-hidden="true" ng-controller="FeedBackDialogCtrl">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">反馈信息</h4>
+            </div>
+
+            <div class="modal-body">
+                                    请先登录。
+                            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" ng-click="fdbacksub(fdback)">提交反馈</button>
+            </div>
+        </div>
+    </div>
+</div><div class="wrap">
+    <div class="row" id="homepage-slider-con" ng-controller="HomeActSlideCtrl" ng-cloak>
+        <carousel interval="myInterval" id="team-slide">
+            <slide ng-repeat="poster in posters" active="slide.active">
+                <a href="{{poster.link_url}}" target="_blank">
+                    <img class="home-slider-img" ng-src="{{poster.origin}}">
+                </a>
+            </slide>
+        </carousel>
+    </div>
+    <div class="content">
+        <div class="one-type" ng-controller="HomeActNewCtrl" ng-show="acts.length" ng-cloak>
+            <div class="title">
+                <div class="pull-left">最新活动</div>
+                <a class="pull-right" href="/index.php/act/type?type=-1">更多&nbsp;></a>
+                <div style="clear:both"></div>
+            </div>
+            <tq-tab-slide tq-acts="acts" per-page="10"></tq-tab-slide>
+        </div>
+        <div class="one-type" ng-controller="HomeActPopularCtrl" ng-show="acts.length" ng-cloak>
+            <div class="title">
+                <div class="pull-left">热门活动</div>
+                <a class="pull-right" href="/index.php/act/type">更多&nbsp;></a>
+                <div style="clear:both"></div>
+            </div>
+            <tq-tab-slide tq-acts="acts" per-page="10"></tq-tab-slide>
+        </div>
+    </div>
+    <div class="content">
+        <div class="one-type" ng-controller="HomeActRecommendCtrl" ng-show="acts.length" ng-cloak>
+            <div class="title">
+                <div class="pull-left">猜你喜欢</div>
+                <div style="clear:both"></div>
+            </div>
+            <tq-tab-slide tq-acts="acts" per-page="10"></tq-tab-slide>
+        </div>
+    </div>
+</div>
+
+<script type='text/ng-template' id='tqOneAct.html'>
+    <div class="one-home-act" fade exp="$parent.$index >= $parent.start && $parent.$index <= $parent.end" is-fade-in="true" is-fade-out="false" ng-click="showDetail(act.actid)">
+        <div class="poster">
+            <act-poster poster="{{act.poster}}" type="{{act.type}}" delay-load="{{$parent.$index * 100}}"></act-poster>
+        </div>
+        <div class="bottom">
+            <div class="name">{{act.name}}</div>
+            <div class="time" ng-switch="act.time_status">
+                <span ng-switch-when="2">报名：{{act.sim_sign_start_time}}</span>
+                <span ng-switch-when="1">截止：{{act.sim_sign_end_time}}</span>
+                <span ng-switch-when="6">开始：{{act.sim_start_time}}</span>
+                <span ng-switch-default>结束：{{act.sim_end_time}}</span>
+            </div>
+            <div>
+                <div class="member pull-right">已有&nbsp;<span class="tq-orange">{{act.member_count}}</span>&nbsp;人报名</span>
+                </div>
+                <label class="status label pull-left"
+                    ng-class="{'label-danger':act.time_status==0,
+                              'label-success':act.time_status==1,
+                              'label-info':act.time_status==2||act.time_status==3,
+                              'label-default':act.time_status>3}"
+                >
+                    {{actStatus[act.time_status]}}
+                </label>
+                <div style="clear:both">
+            </div>
+        </div>
+    </div>
+</script>
+<div id="go-to">
+    <div title="回到顶部" onclick="go_top()" class="up-down"><i class="fa fa-angle-up"></i></div>
+    <div title="回到底部" onclick="go_bottom()" class="up-down"><i class="fa fa-angle-down"></i></div>
+</div>
+
+    <div id="footer">
+        <div class="content">
+            <div class="pull-left">
+                <p>友情链接:&nbsp;<a target="_blank" href="http://zhai.me">宅米&nbsp;zhai.me</a></p>
+                <p>&copy&nbsp;2015&nbsp;Tongqu&nbsp;沪ICP备11039570号</p>
+                <a href="http://www.dongyueweb.com" target="_blank">Powered&nbsp;by&nbsp;东岳网络工作室</a>
+            </div>
+            <div class="pull-right right-part">
+                <div>
+                    <!--QQ 客服的代码，记的换qq号！-->
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2575386529&site=qq&menu=yes"><img border="0"
+                                                                                                               src="http://wpa.qq.com/pa?p=2:2575386529:41"
+                                                                                                               alt="点击联系同去网客服"
+                                                                                                               title="点击联系同去网客服"/></a>
+                </div>
+                <!--end of QQ 客服 -->
+
+                <div style="margin:-1px -10px 0px 10px">
+                    <iframe scrolling="no" frameborder="0" allowtransparency="true"
+                            src="http://widget.renren.com/plugin/followbutton?page_id=601387858&color=0&model=1"
+                            style="width:150px;height:40px;"></iframe>
+                </div>
+
+                <div>
+                    <a href="http://www.tongqu.me/index.php/contact">联系我们</a>
+                </div>
+
+                <div>
+                    <a href="http://www.tongqu.me/index.php/disclaimer">免责声明</a>
+                </div>
+                <div>
+                    <a href="/index.php/app">移动端下载</a>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+
+<!--include the js files-->
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/jquery/dist/jquery.js?hash=33e0d9"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/bootstrap/dist/js/bootstrap.js?hash=44d449"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular.js?hash=4e8cda"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular-route.js?hash=cf6da4"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular-sanitize.js?hash=fb74af"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular-cookies.js?hash=835d4e"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/ui-bootstrap-tpls-0.11.2.js?hash=7676b7"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/angular/angular-locale_zh-cn.js?hash=ac012f"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/sprintf.js/sprintf.min.js?hash=f71a7c"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/sprintf.js/angular-sprintf.min.js?hash=21d516"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/date-time/moment.js?hash=2a84ee"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/tq.js?hash=e5aecd"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/constant.js?hash=40df5c"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/app.js?hash=da6f1a"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/service.js?hash=051196"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/filters.js?hash=75ae1b"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/controller.js?hash=4ccf4d"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/core/directive.js?hash=8bb5ef"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/directive/act/oneAct.js?hash=100210"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/directive/team/oneTeam.js?hash=2a1054"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/directive/actPoster/actPoster.js?hash=b1ab95"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/message/parser.js?hash=e2e51f"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/message/storage.js?hash=f00fc5"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/message/back.js?hash=507f34"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/message/main.js?hash=6cd8e6"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/directive/tqavatar/tqavatar.js?hash=c1011e"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/lib/weixin/WeixinApi.js?hash=3e7e99"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/ng/directive/tab_slide/directive.js?hash=fd614c"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/app/home_act/controller.js?hash=9816d2"></script>
+            <script type="text/javascript" src="http://www.tongqu.me/js/app/home_act/service.js?hash=d41d8c"></script>
+    <script>
+    // 回到顶部的代码
+    // TODO:把它变成angular的代码
+    var last_height = 0;
+    $(window).scroll(function () {
+        //console.log($(window).scrollTop());
+        if ($(window).scrollTop() > (200)) {
+            $('#go-to').fadeIn();
+        } else {
+            $('#go-to').fadeOut();
+        }
+    });
+
+    // go to top and bottom
+    function go_top() {
+        $("html, body").animate({scrollTop: 0}, 'slow');
+    }
+
+    function go_bottom() {
+        var bottom = $(document).height();
+        $("html, body").animate({scrollTop: bottom}, 'slow');
+    }
+
+    function showFeedback() {
+        $('#feedback').modal('show');
+    }
+</script>
+    <!--百度统计-->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?fcd79bd95b6da3b03dfe6cbc0dd48b21";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+</html>
